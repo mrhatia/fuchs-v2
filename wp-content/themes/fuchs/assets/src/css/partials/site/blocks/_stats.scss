@@ -1,0 +1,109 @@
+.stats-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 110px;
+}
+
+.stats-column {
+	display: flex;
+	gap: 25px;
+	align-items: center;
+	width: 15.8%;
+	position: relative;
+	color: var(--fc_color_primary);
+
+	.stats-number {
+		font-size: var(--fc_font_size_60);
+		margin: 0;
+		line-height: 1;
+		position: relative;
+		top: 4px;
+	}
+
+	.small-text {
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+		color: inherit;
+	}
+
+	span {
+		display: block;
+		font-size: var(--fc_font_size_40);
+		line-height: .75em;
+		letter-spacing: 0;
+		font-weight: 700;
+		color: inherit;
+		margin-top: 10px;
+	}
+
+	p {
+		font-size: var(--fc_font_size_18);
+		margin: 13px 0 0 0;
+		display: block;
+
+	}
+}
+
+.counter-background {
+	float: left;
+	min-width: 186px;
+	color: #f5f6f7;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #dedfe0;
+	height: 1em;
+	display: inline-block !important;
+	vertical-align: middle;
+	line-height: 1em;
+	font-weight: 600;
+	overflow: hidden;
+	font-size: var(--fc_font_size_180);
+	position: absolute;
+	z-index: -1;
+	left: -58px;
+}
+
+.stats-variation {
+	display: grid;
+	@include fluidColumns(4, 250px, 2%);
+	row-gap: var(--fc_space_30);
+
+	.stats-column {
+		width: auto;
+		gap: 20px;
+		display: block;
+		text-align: center;
+
+		span {
+			font-size: var(--fc_space_24);
+
+		}
+
+		.stats-number {
+			width: 170px;
+			height: 170px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #e8e8e9;
+			border-radius: 50%;
+			position: relative;
+			font-size: var(--fc_space_48);
+			font-weight: bold;
+			margin: 0 auto 25px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				border-radius: 50%;
+				border: 4px solid var(--fc_color_primary);
+				mask: conic-gradient(var(--fc_color_primary) calc(var(--percent) * 1%), transparent 0);
+				-webkit-mask: conic-gradient(var(--fc_color_primary) calc(var(--percent) * 1%), transparent 0);
+				transition: mask 1s linear, -webkit-mask 1s linear;
+			}
+		}
+	}
+}

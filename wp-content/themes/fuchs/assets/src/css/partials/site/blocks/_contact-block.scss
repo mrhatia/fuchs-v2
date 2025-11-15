@@ -1,0 +1,151 @@
+.contact-block {
+	display: flow-root;
+	clear: both;
+}
+
+.contact-block-form {
+	width: 48%;
+	float: left;
+	padding: var(--fc_space_96) 0 70px;
+	box-sizing: border-box;
+
+	form {
+
+		max-width: 590px;
+		margin: 0 0 0 auto;
+
+
+	}
+
+	.gfield--type-html,
+	.gfield--type-captcha {
+		display: none;
+	}
+
+	input[type="submit"],
+	button,
+	input[type="button"],
+	input[type="reset"] {
+		margin: 0;
+	}
+}
+
+.contact-block-content {
+	float: right;
+	width: 48%;
+	background-color: var(--fc_color_primary);
+	padding: var(--fc_space_96);
+	box-sizing: border-box;
+
+
+
+	.heading-2 {
+		font-size: var(--fc_font_size_60);
+		margin-bottom: 24px;
+	}
+
+	* {
+		color: var(--fc_white);
+	}
+
+	address {
+		display: block;
+		font-size: 18px;
+		line-height: 2em;
+		letter-spacing: .1em;
+		font-weight: 500;
+		margin: 0 0px 30px 0;
+		font-style: initial;
+		max-width: 300px;
+
+		* {
+			color: var(--fc_white);
+
+		}
+
+	}
+
+	.single-widget {
+		margin-top: 30px;
+
+		svg {
+			filter: invert(1);
+		}
+	}
+
+	p {
+		display: block;
+		font-size: 18px;
+		line-height: 2em;
+		letter-spacing: .1em;
+		font-weight: 500;
+		margin: 0 0px 4px 0;
+		color: var(--fc_white);
+		text-transform: uppercase;
+
+		a,
+		a:visited {
+			color: var(--fc_white);
+			border-bottom: none;
+
+			&.link.email {
+				position: relative;
+				padding-left: 28px;
+				// letter-spacing: -0.5px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 2px;
+					left: 0;
+					background-image: url('../images/email-icon.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 8px;
+					display: inline-block;
+					filter: brightness(0) invert(1);
+				}
+			}
+
+			&.link.phone {
+				position: relative;
+				padding-left: 28px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 0;
+					left: 0;
+					background-image: url('../images/phone-icon.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 8px;
+					display: inline-block;
+					filter: brightness(0) invert(1);
+				}
+			}
+
+			&:hover,
+			&:focus-visible {
+				border-bottom: none;
+				color: var(--fc_orange_dark);
+			}
+		}
+	}
+}
+
+.contact-block-content-inner {
+	max-width: 480px;
+	margin-left: 0;
+}
+
+.wpcf7-not-valid-tip {
+	color: var(--fc_valiation_error_color) !important;
+	position: INITIAL;
+	top: 4px;
+	margin-top: 15px;
+}

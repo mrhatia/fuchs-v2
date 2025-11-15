@@ -1,0 +1,24 @@
+{
+	"name": "acf/theme-image-slider",
+	"title": "Theme Image Slider",
+	"description": "A custom theme image slider block.",
+	"category": "theme-blocks",
+	"icon": "theme-image-slider",
+	"keywords": ["theme-image-slider"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-theme-image-slider.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "theme-image-slider-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

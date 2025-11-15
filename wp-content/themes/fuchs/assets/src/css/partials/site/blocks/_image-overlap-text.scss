@@ -1,0 +1,29 @@
+    .image-overlap-text {
+
+    	min-height: 700px;
+    	position: relative;
+    	overflow: hidden;
+    	display: flex;
+    	align-items: center;
+
+    	.iat-content {
+    		background-color: green;
+    		z-index: 9;
+    		left: calc(50% - 810px);
+    		position: relative;
+    		width: 33%;
+    	}
+
+    	.iat-image {
+    		position: absolute;
+    		right: 0;
+    		top: 0;
+    		height: 100%;
+    		width: calc(100% - 430px);
+
+    		img {
+    			height: 100%;
+    			width: 100%;
+    		}
+    	}
+    }

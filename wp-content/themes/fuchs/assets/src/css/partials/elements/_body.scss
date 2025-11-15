@@ -1,0 +1,35 @@
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+body {
+
+	@include font(sour, reg, family weight);
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	font-size: var(--fc_font_size_18);
+	color: var(--fc_body_color);
+	background-color: var(--fc_body_bg);
+	line-height: 1.5;
+
+	&.have-topbar {
+		padding-top: var(--fc_header-height);
+	}
+
+}
+
+p {
+	margin: 0 0 30px;
+}
+
+::selection {
+	color: var(--fc_highlight_color);
+	background-color: var(--fc_highlight_bg);
+}
+
+
+// strong {
+// 	color: var(--fc_text_strong) !important;
+// }

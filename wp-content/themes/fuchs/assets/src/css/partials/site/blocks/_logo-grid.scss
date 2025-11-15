@@ -1,0 +1,10 @@
+.logo-grid {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 20px;
+}
+
+.single-logo {
+	max-width: 273px;
+	line-height: 0.65;
+}

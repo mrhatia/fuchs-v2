@@ -1,0 +1,74 @@
+/****
+ *
+ * containers
+ *
+****/
+
+.wrapper {
+	max-width: 1300px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.ctn-1100 {
+	.wrapper {
+		max-width: 1100px;
+	}
+}
+
+.ctn-980 {
+	.wrapper {
+		max-width: 980px;
+	}
+}
+
+.ctn-760 {
+	.wrapper {
+		max-width: 760px;
+	}
+}
+
+.ctn-full-width {
+	.wrapper {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+
+.ctn-orange {
+	background-color: var(--fc_orange);
+	padding: var(--fc_space_96) 0;
+
+}
+
+.ctn-green {
+	background-color: var(--fc_green_dark);
+	padding: var(--fc_space_96) 0;
+}
+
+.ctn-orange,
+.ctn-green {
+	.stats-column .small-text{
+		color: var(--fc_white);
+
+	}
+	.stats-column span{
+		color: var(--fc_white);
+	}
+	* {
+		color: var(--fc_white);
+	}
+
+	.stats-variation .stats-column .stats-number::before {
+		// background-color: var(--fc_white);
+		border-color: var(--fc_white);
+	}
+
+	.tabbed-map-nav ul li a.active,
+	.tabbed-map-nav ul li a:hover,
+	.tabbed-map-nav ul li a:visited.active,
+	.tabbed-map-nav ul li a:visited:hover {
+		color: var(--fc_orange);
+	}
+}

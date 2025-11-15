@@ -1,0 +1,377 @@
+:root {
+
+	/*-------------------------------------------------
+	>> Variables for Spaces
+	-------------------------------------------------*/
+	@include spacing(--fc_space_2, 2, 2);
+	@include spacing(--fc_space_4, 4, 4);
+	@include spacing(--fc_space_6, 6, 6);
+	@include spacing(--fc_space_8, 8, 8);
+	@include spacing(--fc_space_12, 12, 10);
+	@include spacing(--fc_space_16, 16, 12);
+	@include spacing(--fc_space_20, 20, 16);
+	@include spacing(--fc_space_24, 24, 20);
+	@include spacing(--fc_space_30, 30, 24);
+	@include spacing(--fc_space_36, 36, 30);
+	@include spacing(--fc_space_48, 48, 36);
+	@include spacing(--fc_space_72, 72, 44);
+	@include spacing(--fc_space_96, 96, 52);
+	@include spacing(--fc_space_128, 128, 64);
+	@include spacing(--fc_space_156, 156, 72);
+	@include spacing(--fc_space_200, 200, 84);
+	@include spacing(--fc_space_236, 236, 98);
+
+	/* -------------------------------------------------
+	>> Variables for Font Sizes
+	------------------------------------------------- */
+
+	@include font_size(--fc_font_size_12, 12, 11);
+	@include font_size(--fc_font_size_14, 14, 13);
+	@include font_size(--fc_font_size_16, 16, 15);
+	@include font_size(--fc_font_size_18, 18, 17);
+	@include font_size(--fc_font_size_20, 20, 18);
+	@include font_size(--fc_font_size_20_16, 20, 16);
+	@include font_size(--fc_font_size_22, 22, 20);
+	@include font_size(--fc_font_size_24, 24, 20);
+	@include font_size(--fc_font_size_26, 26, 22);
+	@include font_size(--fc_font_size_30, 30, 24);
+	@include font_size(--fc_font_size_32, 32, 24);
+	@include font_size(--fc_font_size_40, 40, 26);
+	@include font_size(--fc_font_size_45, 45, 26);
+	@include font_size(--fc_font_size_48, 48, 30);
+	@include font_size(--fc_font_size_60, 60, 45);
+	@include font_size(--fc_font_size_68, 68, 55);
+	@include font_size(--fc_font_size_80, 80, 48);
+	@include font_size(--fc_font_size_82, 82, 55);
+	@include font_size(--fc_font_size_120, 120, 40);
+	@include font_size(--fc_font_size_160, 160, 65);
+	@include font_size(--fc_font_size_180, 180, 70);
+
+
+	/* -------------------------------------------------
+	>> Color variables
+	------------------------------------------------- */
+
+	/*
+	>> Base Colors
+	*/
+
+	// Theme Primary
+	--fc_color_primary: #007857;
+	--fc_green_dark: #016c50;
+	--fc_color_on_primary: #ffffff;
+
+	// Theme Secondary
+	--fc_color_secondary: #0013ff;
+
+	// Theme Dark
+	--fc_black: #000000;
+	--fc_black_1: #14191f;
+	--fc_black_2: #565969;
+
+	// Theme Light
+	--fc_white: #ffffff;
+	--fc_white_1: #f1f1f1;
+	--fc_white_2: #f1e9e9;
+
+	// Theme Colors
+	--fc_gray: #e0e0e0;
+	--fc_gray_1: #e6e6e6;
+	--fc_gray_2: #eee;
+	--fc_gray_3: #999;
+	--fc_gray_4: #565969;
+
+	--fc_blue: #0013ff;
+	--fc_blue_1: #00a4eb;
+	--fc_blue_2: #2ca8dd;
+	--fc_blue_3: #001659;
+	--fc_blue_4: #071f65;
+
+	--fc_navy: #091a17;
+	--fc_navy_1: #15332e;
+	--fc_navy_2: #2f655c;
+
+	--fc_red: #ff0000;
+	--fc_sea_green: #04c3b4;
+
+	--fc_transparent: transparent;
+
+	// Text Variations
+	--fc_regular_text: #14191f;
+	--fc_dark_text: #14191f;
+	--fc_white_text: #f7f7f7;
+	--fc_light_text: #606364;
+
+	// fixed variable Colors
+
+	--fc_success: #198754;
+	--fc_info: #0dcaf0;
+	--fc_warning: #ffc107;
+	--fc_danger: #dc3545;
+	--fc_light: #f8f9fa;
+	--fc_dark: #212529;
+	--fc_orange: #fe8400;
+	--fc_orange_dark: #e27602;
+	--fc_orange_1: #f2976a;
+
+
+	--fc_signal: #d14b3c;
+	--fc_signal_bg: #fbede9;
+
+
+	--fc_color_background: #ffffff;
+	--fc_color_on_background: #565969;
+
+	// Borders
+	--fc_border: #30353c;
+	--fc_border_1: #545454;
+	--fc_border_2: #adadad;
+	--fc_border_3: #e0e0e0;
+	--fc_border_4: #14191f;
+
+
+	/* -------------------------------------------------
+	>> Base Colors
+	>> Base colors are used for essential elements
+	such as the logo, tables, links, blockquote,
+	default buttons styling and this should't conflict
+	with theme colors
+	------------------------------------------------- */
+
+	// text Colors
+	--fc_body_color: var(--fc_color_on_background);
+	--fc_body_bg: var(--fc_color_background);
+	--fc_text_strong: var(--fc_black);
+
+	--fc_dark_text: var(--fc_black);
+	--fc_white_text: var(--fc_white);
+
+	--fc_highlight_color: var(--fc_color_on_primary);
+	--fc_highlight_bg: var(--fc_color_primary);
+
+	--fc_caption: var(--fc_black_2);
+
+	// Headings
+
+	--fc_heading_color: var(--fc_color_primary);
+	--fc_heading_link_color: var(--fc_dark_text);
+	--fc_heading_link_color_hover: var(--fc_dark_text);
+
+	// link colors
+	--fc_link_color: var(--fc_color_primary);
+	--fc_link_color_hover: var(--fc_color_primary);
+	--fc_link_border_color: var(--fc_color_primary);
+	--fc_link_border_color_hover: transparent;
+
+	// lists Colors
+	--fc_list_ul_marker_color: var(--fc_color_primary);
+	--fc_list_ol_marker_color: var(--fc_color_primary);
+	--fc_list_marker_bgcolor: var(--fc_border_4);
+
+
+	// Blockquote Colors
+	--fc_blockquote_color: var(--fc_regular_text);
+	--fc_blockquote_border_color: var(--fc_regular_text);
+	--fc_quote_color: var(--fc_regular_text);
+	--fc_blockqoute_cite_color: var(--fc_light_text);
+
+	// Tables Colors
+	--fc_table_border_color: var(--fc_border);
+	--fc_table_head_border_color: var(--fc_dark_text);
+	--fc_table_foot_border_color: var(--fc_dark_text);
+
+	// Formating
+	--fc_strong_color: var(--fc_regular_text);
+	--fc_underline_border_color: var(--fc_regular_text);
+	--fc_abbr_border_color: var(--fc_regular_text);
+	--fc_delete_color: var(--fc_danger);
+	--fc_insert_color: var(--fc_success);
+	--fc_insert_border_color: var(--fc_success);
+
+	// Code
+	--fc_code_color: var(--fc_white_text);
+	--fc_code_bgcolor: var(--fc_dark_text);
+	--fc_pre_color: var(--fc_white_text);
+	--fc_pre_bgcolor: var(--fc_dark_text);
+	--fc_mark_bgcolor: var(--fc_dark_text);
+	--fc_mark_color: var(--fc_white_text);
+
+	// Graphical elements
+	--fc_hr_color: var(--fc_border_2);
+
+	// Form Fields
+
+	--fc_input_color: var(--fc_regular_text);
+	--fc_input_bg: var(--fc_light_field_bg);
+	--fc_input_border_color: var(--fc_border);
+
+	--fc_input_focus_color: var(--fc_black);
+	--fc_input_focus_bgcolor: var(--fc_white);
+	--fc_input_focus_border_color: var(--fc_border_2);
+
+	--fc_disabled_input_bgcolor: var(--fc_field_bg);
+	--fc_disabled_input_border_color: var(--fc_border_1);
+
+	--fc_placeholder_color: var(--fc_light_text);
+	--fc_range_track_bgcolor: var(--fc_field_bg);
+	--fc_range_thumb_bgcolor: var(--fc_color_primary);
+	--fc_color_field_border_color: var(--fc_border);
+	--fc_color_field_bgcolor: var(--fc_field_bg);
+	--fc_radio_color: var(--fc_regular_text);
+	--fc_radio_border_color: var(--fc_border);
+	--fc_radio_bgcolor: var(--fc_field_bg);
+	--fc_radio_after_bgcolor: var(--fc_color_primary);
+	--fc_checkbox_color: var(--fc_regular_text);
+	--fc_checkbox_border_color: var(--fc_border);
+	--fc_checkbox_bgcolor: var(--fc_field_bg);
+	--fc_checkbox_after_bgcolor: var(--fc_color_primary);
+	--fc_progress_bgcolor: var(--fc_field_bg);
+	--fc_progress_value_bgcolor: var(--fc_color_primary);
+	--fc_meter_bgcolor: var(--fc_field_bg);
+	--fc_meter_value_bgcolor: var(--fc_color_primary);
+
+	// Button
+	--fc_button_color: var(--fc_white_text);
+	--fc_button_bgcolor: var(--fc_color_primary);
+	--fc_button_color_hover: var(--fc_white_text);
+	--fc_button_bgcolor_hover: var(--fc_green_dark);
+	--fc_button_border_color: var(--fc_color_primary);
+	--fc_button_border_color_hover: var(--fc_green_dark);
+
+	--fc_reset_button_bgcolor: var(--fc_button_bgcolor);
+	--fc_reset_button_color: var(--fc_white_text);
+
+	// Buttons layer
+	--fc_theme_btn_color: var(--fc_button_color);
+	--fc_theme_btn_bgcolor: var(--fc_button_bgcolor);
+	--fc_theme_btn_color_hover: var(--fc_button_color_hover);
+	--fc_theme_btn_bgcolor_hover: var(--fc_button_bgcolor_hover);
+	--fc_theme_btn_border_color: var(--fc_button_border_color);
+	--fc_theme_btn_border_color_hover: var(--fc_button_border_color_hover);
+
+	// --fc_wp_btn_color: var(--fc_white_text);
+	// --fc_wp_btn_bgcolor: var(--fc_button_bg);
+
+	// --fc_wp_outline_btn_color: var(--fc_white_text);
+	// --fc_wp_outline_btn_border_color: var(--fc_dark_text);
+	// --fc_wp_outline_btn_bgcolor: var(--fc_dark_text);
+
+	// Date Picker
+	--fc_datepicker_bg_color: var(--fc_gray);
+	--fc_datepicker_select_bgcolor: var(--fc_white);
+	--fc_datepicker_link_color: var(--fc_color_secondary);
+	--fc_datepicker_link_active_color: var(--fc_color_primary);
+	--fc_datepicker_calendar: var(--fc_white_text);
+	--fc_datepicker_th_bgcolor: var(--fc_border_1);
+	--fc_datepicker_even_tr_td_bgcolor: var(--fc_border_1);
+	--fc_datepicker_border_color: var(--fc_border_1);
+	--fc_datepicker_date_color: var(--fc_dark_text);
+
+	// Errors & Confirmation
+	--fc_valiation_error_bg_color: var(--fc_danger_bg);
+	--fc_valiation_message_color: var(--fc_danger);
+	--fc_error_field_border_color: var(--fc_danger);
+	--fc_valiation_error_color: var(--fc_danger);
+	--fc_confirmation_message_bgcolor: var(--fc_success_bg);
+	--fc_confirmation_message_color: var(--fc_dark_text);
+	--fc_confirmation_message_border_color: var(--fc_danger);
+	--fc_required_text_color: var(--fc_danger);
+	--fc_invalid_error_border_color: var(--fc_danger);
+	--fc_hubspot_error_label_color: var(--fc_danger);
+	--fc_hubspot_required_color: var(--fc_danger);
+	--fc_fileupload_rule_color: var(--fc_light_text);
+	--fc_error_menu_color: var(--fc_dark_text);
+
+	// Accessibility
+	--fc_acc_btn_color: var(--fc_white_text);
+	--fc_acc_btn_bgcolor: var(--fc_button_bg);
+	--fc_acc_btn_shadow: var(--fc_danger);
+	--fc_acc_outline: var(--fc_black);
+
+	// Comments Box
+	--fc_comments_reply_btn_bgcolor: var(--fc_button_bg);
+	--fc_comments_reply_btn_color: var(--fc_white_text);
+	--fc_comments_reply_btn_bgcolor_hover: var(--fc_button_bg_hover);
+	--fc_comments_reply_btn_color_hover: var(--fc_white_text);
+	--fc_comment_meta_color: var(--fc_dark_text);
+	--fc_comment_metadata_color: var(--fc_light_text);
+	--fc_comments_list_border_color: var(--fc_border);
+	--fc_widget_comments_meta_color: var(--fc_light_text);
+
+	// Pagination
+	--fc_pagination_bgcolor: var(--fc_blue_1);
+	--fc_pagination_color: var(--fc_white);
+	--fc_pagination_color_hover: var(--fc_white);
+	--fc_pagination_bgcolor_hover: var(--fc_border_1);
+	--fc_pagination_bgcolor_current: var(--fc_border_1);
+	--fc_pagination_color_current: var(--fc_white);
+	--fc_pagination_first_bgcolor: var(--fc_border_1);
+	--fc_pagination_first_color: var(--fc_dark_text);
+	--fc_pagination_border: var(--fc_transparent);
+
+	// Widgets
+	--fc_widget_latest_post_meta_color: var(--fc_danger);
+	--fc_widget_rss_feed_meta_color: var(--fc_danger);
+	--fc_widget_search_button_color: var(--fc_pure_black);
+	--fc_wp_table_block_stripe_bg_color: var(--fc_gray);
+
+	// Breadcrumbs
+	--fc_breadcrumb_color: var(--fc_pure_black);
+	--fc_breadcrumb_link_color: var(--fc_pure_black);
+	--fc_breadcrumb_border_color: transparent;
+	--fc_breadcrumb_border_color_hover: var(--fc_pure_black);
+	--fc_breadcrumb_span_color: var(--fc_pure_black);
+
+	// Header
+	--fc_header_bgcolor: var(--fc_transparent);
+	--fc_header_color: var(--fc_black);
+	--fc_header_color_hover: var(--fc_black);
+	--fc_header_bgcolor_sticky: var(--fc_white);
+	--fc_header_nav_border_color: var(--fc_dark_text);
+
+	--fc_header_submenu_bgcolor: var(--fc_gray);
+	--fc_header_submenu_color: var(--fc_header_color);
+	--fc_header_submenu_color_hover: var(--fc_header_color_hover);
+
+	--fc_header_mobile_color: var(--fc_dark_text);
+	--fc_header_mobile_submenu_color: var(--fc_dark_text);
+
+	--fc_nav_overlay_bgcolor: var(--fc_white);
+	--fc_mobile_nav_icon_bgcolor: var(--fc_dark_text);
+	--fc_abbr_border: var(--fc_dark_text);
+
+	// Top Bar
+	--fc_topbar_bgcolor: var(--fc_color_primary);
+	--fc_topbar_color: var(--fc_white);
+	--fc_topbar_link_color: var(--fc_white);
+
+
+	// Footer
+	--fc_footer_bgcolor: var(--fc_dark_text);
+	--fc_footer_color: var(--fc_white_text);
+
+	--fc_footer_color_hover: var(--fc_white_text);
+
+	--fc_f_nav_color: var(--fc_footer_color);
+	--fc_f_nav_color_hover: var(--fc_footer_color_hover);
+	--fc_f_nav_border_color: var(--fc_footer_color);
+	--fc_f_nav_border_color_hover: var(--fc_footer_color_hover);
+
+	--fc_copyright_color: var(--fc_white_text);
+	--fc_legal_nav_color: var(--fc_white_text);
+	--fc_legal_nav_border_color: var(--fc_white_text);
+	--fc_legal_nav_border_color_hover: var(--fc_white_text);
+	--fc_legal_text_color: var(--fc_white_text);
+
+	// Containers
+	--fc_ctn_red: var(--fc_red);
+	--fc_ctn_black: var(--fc_black);
+	--fc_ctn_sea_green: var(--fc_sea_green);
+
+	// style variations
+
+	--fc_style_bg: #821212;
+	--fc_style_text: #000000;
+	--fc_style_link: #000000;
+	--fc_style_button: #00a4eb;
+}

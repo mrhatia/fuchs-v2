@@ -1,0 +1,24 @@
+{
+	"name": "acf/tabbed-content",
+	"title": "Tabbed Content",
+	"description": "A custom Tabbed Content block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["tabbed-content"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-tabbed-content.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "tabbed-content-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

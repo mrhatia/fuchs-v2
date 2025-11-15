@@ -1,0 +1,77 @@
+// image positions
+
+.image-at-left {
+	.iat-content {
+		order: 2;
+	}
+}
+
+.iat-content {
+	position: relative;
+	width: 45%;
+}
+
+.iat-image {
+	width: 45%;
+}
+
+.image-alongside-text {
+	.kicker {
+		font-size: 12px;
+	}
+
+	h2 {
+		font-size: var(--fc_font_size_60);
+	}
+
+	.iat-image {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.image-alongside-text-variation {
+
+	// p,
+	// .person-info {
+	// 	font-size: var(--fc_font_size_20_16);
+	// }
+
+	.double-comma {
+		color: var(--fc_orange);
+		position: absolute;
+		top: -65px;
+		left: -60px;
+	}
+
+	.person-info {
+		color: var(--fc_orange);
+	}
+}
+
+.iat-two-image {
+	.iat-image {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+	.iat-single-image {
+		width: 47.2%;
+
+		img {
+			aspect-ratio: 302/444;
+
+		}
+	}
+}
+
+.iat-button {
+	line-height: 0.65;
+}

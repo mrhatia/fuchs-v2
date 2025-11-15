@@ -1,0 +1,80 @@
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+h1,
+.heading-1,
+h2,
+.heading-2,
+h3,
+.heading-3,
+h4,
+.heading-4,
+h5,
+.heading-5,
+h6,
+.heading-6,
+.medium-heading {
+
+	@include font(sour, bold);
+	margin: 0 0 20px;
+	color: var(--fc_heading_color);
+	line-height: 1;
+	text-transform: initial;
+
+	a {
+		color: var(--fc_heading_link_color);
+		border-bottom: none;
+
+		&:hover,
+		&:focus-visible {
+			color: var(--fc_heading_link_color_hover);
+		}
+	}
+}
+
+h1,
+.heading-1 {
+	font-size: var(--fc_font_size_180);
+}
+
+h2,
+.heading-2 {
+	font-size: var(--fc_font_size_80);
+	letter-spacing: -0.025rem;
+	@include font(sour, bold);
+}
+
+h3,
+.heading-3 {
+	font-size: var(--fc_font_size_26);
+}
+
+h4,
+.heading-4 {
+	font-size: var(--fc_font_size_24);
+}
+
+h5,
+.heading-5 {
+	font-size: var(--fc_font_size_20);
+}
+
+h6,
+.heading-6 {
+	font-size: var(--fc_font_size_16);
+}
+
+.medium-heading {
+	font-size: var(--fc_font_size_48);
+	letter-spacing: -0.025rem;
+	@include font(sour, bold);
+}
+
+.xlarge-heading {
+	font-size: var(--fc_font_size_82);
+	letter-spacing: -0.025rem;
+	@include font(sour, bold);
+}

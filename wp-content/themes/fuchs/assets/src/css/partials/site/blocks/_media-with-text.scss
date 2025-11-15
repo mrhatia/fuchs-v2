@@ -1,0 +1,94 @@
+.media-with-text-button {
+	line-height: 0.65;
+	margin-top: 32px;
+
+	a.button,
+	a.button:visited,
+	span.button,
+	.is-style-mycustomstyle .wp-element-button {
+		background-color: var(--fc_white);
+		color: var(--fc_orange);
+		border-color: var(--fc_white);
+
+		&:hover {
+			background-color: transparent;
+			color: var(--fc_white);
+		}
+
+	}
+}
+
+.media-with-text-content-box {
+	background-color: var(--fc_orange);
+	padding: calc(var(--fc_space_72) + 8px) calc(var(--fc_space_96) + 4px) calc(var(--fc_space_72) + 12px) calc(var(--fc_space_96) + 10px);
+	box-sizing: border-box;
+	max-width: 622px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 15.9%;
+	height: max-content;
+
+	.kicker {
+		color: var(--fc_white);
+		font-size: 14px;
+		@include font(sour, med);
+		letter-spacing: 0.1em;
+		margin-bottom: 8px;
+
+	}
+
+	.heading-2 {
+		font-size: var(--fc_font_size_60);
+		color: var(--fc_white);
+		@include font(sour, med);
+		letter-spacing: -1.3px;
+		line-height: 0.94;
+		margin-bottom: 21px
+	}
+
+	p {
+		font-size: var(--fc_font_size_18);
+		@include font(sour, reg);
+		color: var(--fc_white);
+		line-height: 26px;
+		margin-bottom: 0;
+	}
+}
+
+.media-with-text-image {
+	width: 67.1%;
+	position: relative;
+
+	img {
+		min-height: 711px;
+		aspect-ratio: 1278/711;
+	}
+
+}
+
+.media-with-text {
+	position: relative;
+	min-height: 711px;
+
+	&.variation {
+		.media-with-text-image {
+			margin-left: auto;
+		}
+
+		.media-with-text-content-box {
+			right: auto;
+			left: 15.9%;
+		}
+	}
+}
+
+.media-with-text-image-text {
+	font-size: var(--fc_font_size_120);
+	@include font(sour, bold);
+	color: var(--fc_orange);
+	line-height: 0.8;
+	position: absolute;
+	bottom: 20%;
+	left: 5%;
+}
