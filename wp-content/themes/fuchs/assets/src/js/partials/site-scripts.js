@@ -455,6 +455,21 @@ jQuery( function() {
 		} );
 	}
 	// STATS
+
+	if ( jQuery( '.tabbed-map-items' ).length > 0 ) {
+		jQuery( '.tabbed-map-nav a' ).on( 'click', function( event ) {
+			event.preventDefault();
+			const tabId = jQuery( this ).attr( 'href' );
+			jQuery( '.tabbed-id-item' ).hide().removeClass( 'active' );
+			jQuery( `.tabbed-id-item${ tabId }` ).fadeIn( 400 ).addClass( 'active' );
+			jQuery( '.tabbed-map-nav a' ).removeClass( 'active' );
+			jQuery( this ).addClass( 'active' );
+			setTimeout( function() {
+				jQuery( '.event-slider' ).slick( 'setPosition' );
+			}, 410 );
+		} );
+	}
+	// STATS
 	if ( jQuery( '.stats-number' ).length > 0 ) {
 		const $statNumbers = jQuery( '.stats-number' );
 

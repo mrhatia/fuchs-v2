@@ -72,3 +72,18 @@
 		color: var(--fc_orange);
 	}
 }
+.ctn-dots{
+		background-image: url(../images/default_pattern.png);
+
+}
+
+.ctn-blue-shape{
+	background-color: var(--fc_blue_3);
+	color: var(--fc_white);
+	padding: var(--fc_space_128) 0;
+	box-sizing: border-box;
+	.heading-2{
+		color: var(--fc_white);
+	}
+
+}
