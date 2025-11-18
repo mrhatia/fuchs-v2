@@ -28,6 +28,23 @@ jQuery( window ).on( 'load', function() {
 
 jQuery( function() {
 	/**
+	 * Search Script
+	 */
+
+	jQuery( '.top-search' ).on( 'click', function() {
+		jQuery( '.search-form-new' ).toggleClass( 'open' );
+		jQuery( '.header-section' ).toggleClass( 'open' );
+		jQuery( '#search-top .keyword' ).focus();
+	} );
+
+	jQuery( '.search-close' ).on( 'click keypress', function( e ) {
+		if ( e.which === 13 || e.which === 1 ) {
+			jQuery( '.search-form-new' ).removeClass( 'open' );
+			jQuery( '.header-section' ).removeClass( 'open' );
+			document.activeElement.blur();
+		}
+	} );
+	/**
 	 * Add Browser Classes
 	 */
 	if ( navigator.userAgent.indexOf( 'Mac OS X' ) !== -1 ) {

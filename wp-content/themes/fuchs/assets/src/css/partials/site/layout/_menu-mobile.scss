@@ -1,5 +1,6 @@
 @use "sass:math";
 
+@media (max-width: 1003px) {
 
 .header-inner {
 	padding: 0px 0;
@@ -432,7 +433,7 @@ li.menu-item-has-children.active>.submenu-icon::before {
 		}
 	}
 }
-
+}
 @media only screen and (min-width: 748px) and (max-width: 1003px) {
 	.logo {
 		width: 250px;

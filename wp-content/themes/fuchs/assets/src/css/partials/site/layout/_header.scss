@@ -86,7 +86,6 @@ header {
 .nav-container {
 	display: flex;
 	align-items: center;
-	margin-top: 8px;
 }
 
 .header-logo a {
@@ -101,7 +100,7 @@ header {
 	position: relative;
 	z-index: 9;
 	line-height: 0;
-	width: 282px;
+	width: 200px;
 	display: flex;
 	align-items: center;
 	transition: all 0.2s ease-in-out;
@@ -113,14 +112,14 @@ header {
 }
 
 .header-inner {
-	padding: 20px 0;
+	padding: 0px 0;
 	box-sizing: border-box;
 
 	@include transition(all, 0.3s, ease-in-out);
 }
 
 .header-section {
-	background-color: var(--fc_white);
+	background-color: var(--fc_color_primary);
 	z-index: 9;
 	width: 100%;
 	position: fixed;
@@ -135,7 +134,8 @@ header {
 
 .header-wrapper {
 	box-sizing: border-box;
-	width: 100%;
+	max-width: 1300px;
+	width: 90%;
 	margin: 0 auto;
 }
 
