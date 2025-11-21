@@ -176,6 +176,7 @@ jQuery( function() {
 			$text.css( 'min-height', $text[ 0 ].scrollHeight + 'px' );
 		}
 	}
+
 	// Menu animation
 	if ( jQuery( '.header-nav li' ).length ) {
 		jQuery( function() {

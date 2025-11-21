@@ -120,31 +120,7 @@ $bst_var_social_profiles = $bst_option_fields['bst_var_social_profiles'] ?? null
 </footer>
 
 <?php wp_footer(); ?>
-<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const swiper = new Swiper('.testimonial-variation', {
-				direction: 'vertical',
-				slidesPerView: 1,
-				loop: true,
-				speed: 800,
-				spaceBetween: 0,
-				autoHeight: true,
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-				},
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},
-				mousewheel: true,
-				keyboard: {
-					enabled: true,
-					onlyInViewport: true,
-				},
-			});
-		});
-	</script>
+
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 	<script>

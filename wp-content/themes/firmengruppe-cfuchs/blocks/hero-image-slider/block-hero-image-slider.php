@@ -46,6 +46,8 @@ BaseTheme::block(
 										<?php } ?>
 
 										<div class="banner-content">
+											<div class="banner-content-inner">
+
 											<?php if ( $background_text ) {  ?>
 												<div class="hero-split-text"><?php echo html_entity_decode( $background_text ); ?></div>
 											<?php } ?>
@@ -72,6 +74,7 @@ BaseTheme::block(
 													<?php } ?>
 												</div>
 											<?php } ?>
+										</div>
 										</div>
 									</div>
 							<?php } ?>

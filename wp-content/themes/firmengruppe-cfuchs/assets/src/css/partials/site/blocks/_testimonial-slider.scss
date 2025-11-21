@@ -92,7 +92,6 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 60px;
-		height: 100% !important;
 		box-sizing: border-box;
 
 
@@ -157,11 +156,10 @@
 			transform: translateY(-50%);
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			gap: 0px;
-			z-index: 2;
-
+			align-items: flex-end;
+        justify-content: center;
+        gap: 10px;
+        z-index: 2;
 			.swiper-pagination-bullet {
 				width: 7px;
 				height: 7px;
@@ -229,4 +227,16 @@
 	.slick-dots {
 		bottom: 0px;
 	}
+}
+.testimonial-variation .swiper-wrapper {
+    height: auto !important;
+}
+
+.testimonial-variation .swiper-slide {
+    height: auto !important;
+}
+
+.testimonial-variation {
+    height: auto !important;
+    overflow: hidden;
 }

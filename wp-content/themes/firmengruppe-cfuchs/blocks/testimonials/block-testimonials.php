@@ -95,49 +95,52 @@ BaseTheme::block(
 					</div>
 				</div>
 			</section>
-			<script>
-				document.addEventListener('DOMContentLoaded', function () {
+		<script>
+document.addEventListener('DOMContentLoaded', function () {
 
-					function initSwiper() {
-					// Destroy existing swiper if it exists to avoid duplicates
-					if (window.testimonialSwiper) {
-						window.testimonialSwiper.destroy(true, true);
-					}
+    function updateHeight(swiper) {
+        const active = swiper.slides[swiper.activeIndex];
+        if (active) {
+            swiper.el.style.height = active.offsetHeight + "px";
+        }
+    }
 
-					window.testimonialSwiper = new Swiper('.testimonial-variation', {
-						effect: 'fade',           // Fade effect
-						fadeEffect: {
-						crossFade: true,       // Smooth cross-fade
-						},
-						direction: window.innerWidth <= 768 ? 'horizontal' : 'vertical', // 👉 Horizontal on mobile
-						slidesPerView: 1,
-						loop: true,
-						speed: 1500,
-						spaceBetween: 0,
-						autoHeight: true,
-					autoplay: {
-							delay: 10000,
-							disableOnInteraction: false,
-						},
-						pagination: {
-						el: '.swiper-pagination',
-						clickable: true,
-						},
-						mousewheel: false,
-						keyboard: {
-						enabled: true,
-						onlyInViewport: true,
-						},
-					});
-					}
+    function initSwiper() {
+        if (window.testimonialSwiper) {
+            window.testimonialSwiper.destroy(true, true);
+        }
 
-					// Initialize swiper on load
-					initSwiper();
+        window.testimonialSwiper = new Swiper(".testimonial-variation", {
+            effect: "fade",
+            fadeEffect: { crossFade: true },
+            loop: true,
+            slidesPerView: 1,
+            speed: 1000,
+            autoHeight: false,
+            autoplay: {
+                delay: 7000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            on: {
+                init() {
+                    updateHeight(this);
+                },
+                slideChangeTransitionEnd() {
+                    updateHeight(this);
+                }
+            }
+        });
+    }
 
-					// Reinitialize on resize (helpful for orientation changes)
-					window.addEventListener('resize', initSwiper);
-				});
-			</script>
+    initSwiper();
+    window.addEventListener("resize", () => updateHeight(window.testimonialSwiper));
+});
+</script>
+
 
 		<?php } ?>
 

@@ -1,7 +1,9 @@
 @use "sass:math";
 
 @media (max-width: 1003px) {
-
+.header-navigation {
+		width: max-content;
+	}
 .header-inner {
 	padding: 0px 0;
 }
@@ -177,6 +179,7 @@ body.have-topbar {
 
 	.header-nav ul li a,
 	a:visited {
+		padding: 0;
 		animation: push_text_right 0.4s cubic-bezier(.175, .885, .32, 1) both;
 	}
 
@@ -199,10 +202,21 @@ header .nav-container {
 
 	.header-nav {
 		text-align: left;
-		height: 520px;
+		height: max-content;
 		overflow: hidden;
 		overflow-y: auto;
 		width: 100%;
+		display: block;
+		ul{
+			display: block;
+			li{
+				width: 100%;
+				border: none !important;
+			}
+			ul{
+				display: none;
+			}
+		}
 
 		&::-webkit-scrollbar {
 			width: 6px;

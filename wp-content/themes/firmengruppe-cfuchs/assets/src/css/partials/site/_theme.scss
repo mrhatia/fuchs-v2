@@ -789,6 +789,49 @@ body {
 	}
 }
 
+// .fuchs-chart-block {
+// 	position: relative;
+// 	width: 500px;
+// 	height: 500px;
+// 	margin: 0 auto;
+// 	padding: 50px 120px;
+
+// 	#fuchsChart {
+// 		width: 100% !important;
+// 		height: 100% !important;
+// 	}
+
+// 	.chart-center {
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+// 		text-align: center;
+
+// 		.center-logo {
+// 			max-width: 230px;
+// 			margin-bottom: 0px;
+// 		}
+
+
+// 	}
+
+// 	.chart-label {
+// 		position: absolute;
+// 		font-size: var(--fc_font_size_24);
+// 		font-weight: 700;
+// 		color: #000;
+// 	}
+
+// 	.label-top         { top: 0; left: 50%; transform: translateX(-50%); }
+// 	.label-top-right   { top: 95px; right: 90px; }
+// 	.label-right       { top: 50%; right: -110px; transform: translateY(-50%); }
+// 	.label-bottom-right{ bottom: 90px; right: 60px; }
+// 	.label-bottom      { bottom: 0; left: 50%; transform: translateX(-50%); }
+// 	.label-bottom-left { bottom: 95px; left: 40px; }
+// 	.label-left        { top: 50%; left: 0; transform: translateY(-50%); }
+// 	.label-top-left    { top: 95px; left: 100px; }
+// }
 .fuchs-chart-block {
 	position: relative;
 	width: 500px;
@@ -812,8 +855,6 @@ body {
 			max-width: 230px;
 			margin-bottom: 0px;
 		}
-
-
 	}
 
 	.chart-label {
@@ -831,4 +872,60 @@ body {
 	.label-bottom-left { bottom: 95px; left: 40px; }
 	.label-left        { top: 50%; left: 0; transform: translateY(-50%); }
 	.label-top-left    { top: 95px; left: 100px; }
+
+	@media (max-width: 1024px) {
+		width: 400px;
+		height: 400px;
+		padding: 40px 80px;
+
+		.chart-center .center-logo {
+			max-width: 180px;
+		}
+
+		.label-top-right   { top: 80px; right: 60px; }
+		.label-right       { right: -80px; }
+		.label-bottom-right{ bottom: 60px; right: 40px; }
+		.label-bottom-left { bottom: 60px; left: 30px; }
+		.label-top-left    { top: 80px; left: 70px; }
+	}
+
+	@media (max-width: 768px) {
+		width: 300px;
+		height: 300px;
+		padding: 30px 50px;
+
+		.chart-center .center-logo {
+			max-width: 140px;
+		}
+
+		.label-top-right   { top: 60px; right: 40px; }
+		.label-right       { right: -60px; }
+		.label-bottom-right{ bottom: 40px; right: 20px; }
+		.label-bottom-left { bottom: 40px; left: 20px; }
+		.label-top-left    { top: 60px; left: 50px; }
+	}
+
+	@media (max-width: 480px) {
+		width: 200px;
+		height: 200px;
+		padding: 20px 70px;
+
+		.chart-center .center-logo {
+			max-width: 100px;
+		}
+
+		.label-top-right   { top: 50px; right: 30px; }
+		.label-right       { right: -50px; }
+		.label-bottom-right{ bottom: 30px; right: 15px; }
+		.label-bottom-left { bottom: 30px; left: 15px; }
+		.label-top-left    { top: 50px; left: 35px; }
+.label-right {
+    width: 23%;
+    word-wrap: break-word;
+    right: -8px;
+}
+		.chart-label {
+			font-size: 16px;
+		}
+	}
 }

@@ -36,6 +36,7 @@ BaseTheme::block(
 					<?php } ?>
 
 					<div class="banner-content">
+						<div class="banner-content-inner">
 						<?php if ( $fh_var_blk_cta_background_text ) {  ?>
 							<div class="hero-split-text"><?php echo html_entity_decode( $fh_var_blk_cta_background_text ); ?></div>
 						<?php } ?>
@@ -56,6 +57,7 @@ BaseTheme::block(
 								<?php echo BaseTheme::button( $fh_var_blk_cta_slide_button_two, 'button green-button' ); ?>
 							<?php } ?>
 						</div>
+					</div>
 					</div>
 				</div>
 

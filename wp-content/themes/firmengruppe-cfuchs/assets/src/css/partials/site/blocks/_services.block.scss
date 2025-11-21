@@ -80,7 +80,7 @@
 	}
 	&:hover{
 		img{
-			transform: translateY(100%);
+			transform: translateY(110%);
 			&:nth-child(2){
 				transform: translate(-50%, 0);
 			}
@@ -114,6 +114,8 @@
 				a,a:visited{
 					color: var(--fc_blue_3);
 					font-size: var(--fc_font_size_18);
+					padding: 0;
+					border: none;
 					&.active{
 						color: var(--fc_orange);
 					}}
@@ -235,6 +237,19 @@
 		.single-image-content {
 			opacity: 1;
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+}
+.map-alongside-media{
+	.wp-block-media-text__content{
+		padding: 0;
+		a,a:visited{
+			    color: var(--fc_body_color);
+				padding: 0;
+				border: none;
+				&:hover{
+					color: var(--fc_orange);
+				}
 		}
 	}
 }
