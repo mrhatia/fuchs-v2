@@ -297,8 +297,8 @@ span.button,
 	padding: 10px 36px;
 	text-decoration: none;
 	color: var(--fc_theme_btn_color);
-	background-color: var(--fc_theme_btn_bgcolor);
-	border: 2px solid var(--fc_button_border_color);
+	background-color: var(--fc_blue_3);
+	border: 2px solid var(--fc_blue_3);
 	transition: all 0.35s ease-in-out;
 	margin-right: 13px;
 	letter-spacing: 0.5px;
@@ -315,9 +315,19 @@ span.button,
 
 	&:hover,
 	&:focus-visible {
-		background-color: var(--fc_theme_btn_bgcolor_hover);
+		background-color: var(--fc_transparent);
 		border: solid 2px var(--fc_theme_btn_border_color_hover);
 		color: var(--fc_theme_btn_color_hover);
+	}
+	&.transparent-button{
+		--fc_theme_btn_color: var(--fc_white);
+		--fc_theme_btn_bgcolor: var(--fc_orange);
+		--fc_button_border_color: var(--fc_orange);
+		background-color: var(--fc_orange);
+		border-color: var(--fc_orange);
+		&:hover{
+			background-color: transparent;
+		}
 	}
 
 	&.orange-button {
@@ -325,10 +335,12 @@ span.button,
 		--fc_theme_btn_color: var(--fc_white);
 		--fc_theme_btn_bgcolor: var(--fc_orange);
 		--fc_button_border_color: var(--fc_transparent);
+		background-color: var(--fc_orange);
+		border-color: var(--fc_orange);
 
 		&:hover {
-			background-color: var(--fc_orange_dark);
-			border-color: var(--fc_orange_dark);
+			background-color: var(--fc_transparent);
+			border-color: var(--fc_blue_3);
 			color: var(--fc_white);
 		}
 	}
@@ -341,8 +353,8 @@ span.button,
 
 		&:hover {
 			box-shadow: rgb(0, 22, 89, 0.5) 0 10px 20px 0;
-			background-color: var(--fc_blue_3);
-			border-color: var(--fc_blue_3);
+			background-color: var(--fc_transparent);
+			border-color: var(--fc_orange);
 			color: var(--fc_white);
 		}
 	}
@@ -626,7 +638,7 @@ body {
 		letter-spacing: -1.7px;
 		width: max-content;
 		z-index: -1;
-		color: var(--fc_orange);
+		color: #4c4c4c3b;
 	}
 
 }

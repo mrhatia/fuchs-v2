@@ -17,30 +17,39 @@
 		@include transition(all, 0.3s, ease-in-out);
 	}
 }
-
+.header-navigation {
+	width: 85%;
+}
 .header-nav {
 	text-align: center;
 	line-height: 1;
-
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	padding-right: 20px;
 	ul {
 		margin: 0;
 		padding: 0;
 		position: relative;
-
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 95%;
 		li {
 			margin: 0 ;
 			padding: 0;
 			display: inline-block;
 			position: relative;
 			line-height: 1;
-
+			border-right: 1px solid var(--fc_white);
 			@include font(sour, reg);
+			width: 16.7%;
 
 			a,
 			a:visited,
 			span.menu-link {
 				padding: 0 0;
-				display: inline-block;
+				display:block;
 				line-height: 1;
 				border: 0;
 				position: relative;
@@ -49,18 +58,15 @@
 				@include font(sour, sbold);
 				letter-spacing: -.02em;
 				line-height: 1.33em;
-				border-right: 1px solid var(--fc_white);
+
 				padding: 28px;
 				box-sizing: border-box;
 
 
 			}
 			&:nth-child(1){
-				a,
-				a:visited,
-				span.menu-link {
-					border-left: 1px solid var(--fc_white);
-				}
+				border-left: 1px solid var(--fc_white);
+
 			}
 
 			span.menu-link {
@@ -68,8 +74,8 @@
 			}
 
 			&.menu-item-has-children>a {
-				padding-right: 15px;
-				background-position: top 6px right;
+				padding-right: 35px;
+				background-position: center right calc(50% - 40px);
 				background-repeat: no-repeat;
 				background-size: 9px;
 				background-image: url(../images/submenu-icon.svg);
@@ -83,7 +89,7 @@
 			&.current-menu-parent>a,
 			a:hover,
 			span.menu-link:hover {
-				color: var(--fc_orange);
+				color: rgba(255, 255, 255, 0.7);
 				&::after {
 					transform-origin: bottom left;
 					transform: scaleX(1);
@@ -92,18 +98,19 @@
 		}
 
 		ul {
-			left: -15px;
-			width: 230px;
+			left:0px;
+			width: 100%;
 			opacity: 0;
-			background-color: var(--fc_header_submenu_bgcolor);
+			background-color: var(--fc_color_primary);
 			visibility: hidden;
 			padding: 20px 0;
 			border-radius: 0;
 			position: absolute;
-			top: 33px;
+			top: 80px;
 			z-index: 9;
 			overflow: hidden;
 			text-align: left;
+			display: block;
 
 			@include transition(all, 0.4s, ease-in-out);
 
@@ -113,6 +120,8 @@
 				display: block;
 				margin: 0 0 14px;
 				padding: 0 15px;
+				width: 100%;
+				border: none !important;
 
 				&:last-child {
 					margin: 0;
@@ -123,11 +132,13 @@
 				span.menu-link {
 					font-size: 18px;
 					display: inline-block;
+					border: none !important;
+					padding: 0;
 					padding-bottom: 2px;
 					line-height: 1;
 					box-sizing: border-box;
 					position: relative;
-					color: var(--fc_header_submenu_color);
+					color: var(--fc_white);
 
 					@include transition(all, 0.3s, ease-in-out);
 					@include font(sour, reg);
@@ -143,7 +154,8 @@
 
 				a:hover,
 				span.menu-link:hover {
-					color: var(--fc_header_submenu_color_hover);
+					color: rgba(255, 255, 255, 0.7);
+
 				}
 
 				&.current-menu-item>a,
