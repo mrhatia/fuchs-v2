@@ -548,8 +548,8 @@ Mixin for transition
   --fc_danger: #dc3545;
   --fc_light: #f8f9fa;
   --fc_dark: #212529;
-  --fc_orange: #fe8400;
-  --fc_orange_dark: #e27602;
+  --fc_orange: #4c4c4c;
+  --fc_orange_dark: #4c4c4c;
   --fc_orange_1: #f2976a;
   --fc_signal: #d14b3c;
   --fc_signal_bg: #fbede9;
@@ -6449,14 +6449,6 @@ Mixin for transition
   }
   .acf-block-preview .hero-split-text .heading-1 {
     font-size: clamp(70px, 0.1364764268 * (100vh - 474px) + 70px, 180px);
-  }
-  .acf-block-preview header .nav-container .header-nav {
-    height: 350px;
-  }
-}
-@media only screen and (min-height: 500px) and (max-height: 550px) and (min-width: 1003px) {
-  .acf-block-preview header .nav-container .header-nav {
-    height: 270px;
   }
 }
 @media only screen and (min-height: 1024px) and (max-height: 1380px) and (min-width: 768px) and (max-width: 1024px) {

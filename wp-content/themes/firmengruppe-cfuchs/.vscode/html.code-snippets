@@ -1,12 +1,16 @@
 {
 	"Wrap in translate html": {
 		"prefix": "wrapDomain",
-		"body": ["<?php esc_html_e( '${TM_SELECTED_TEXT}', 'basetheme_td' ); ?>"],
+		"body": [
+			"<?php esc_html_e( '${TM_SELECTED_TEXT}', 'stonestomper_td' ); ?>"
+		],
 		"description": "Wrap selected text in a set value"
 	},
 	"Output var auto": {
 		"prefix": "outputAuto",
-		"body": ["<?php echo esc_html( $${CLIPBOARD} ); ?>"],
+		"body": [
+			"<?php echo esc_html( $${CLIPBOARD} ); ?>"
+		],
 		"description": "Wrap selected text in a set value"
 	},
 	/* WordPress Core */
@@ -17,7 +21,6 @@
 		],
 		"description": "inserts code for ACF Heading ."
 	},
-
 	"Acf output spacer": {
 		"prefix": "phpAcfSpacer",
 		"body": [
@@ -27,7 +30,10 @@
 	},
 	"Output a variable if condition": {
 		"prefix": "phpIfCheck",
-		"body": ["<?php if ( $${1:var_name} ) { ?>", "<?php } ?>"],
+		"body": [
+			"<?php if ( $${1:var_name} ) { ?>",
+			"<?php } ?>"
+		],
 		"description": "Used to output a variable if condition check."
 	},
 	"Output variable with condition output": {
@@ -52,17 +58,23 @@
 	},
 	"Output Template directory URI": {
 		"prefix": "phpTemplateURI",
-		"body": ["<?php echo esc_url( get_template_directory_uri() ); ?>"],
+		"body": [
+			"<?php echo esc_url( get_template_directory_uri() ); ?>"
+		],
 		"description": "Use this to Output Template directory URI code in a file"
 	},
 	"Output StyleSheet directory URI": {
 		"prefix": "phpStyleURI",
-		"body": ["<?php echo esc_url( get_stylesheet_directory_uri() ); ?>"],
+		"body": [
+			"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>"
+		],
 		"description": "Use this to Output Style directory URI code in a file"
 	},
 	"Output Home URL": {
 		"prefix": "phpHomeURL",
-		"body": ["<?php echo esc_url( home_url() ); ?>"],
+		"body": [
+			"<?php echo esc_url( home_url() ); ?>"
+		],
 		"description": "Use this to Output home url"
 	},
 	"Output PHP Variable": {
@@ -87,7 +99,7 @@
 		"prefix": "phpAcfVariableCall",
 		"body": [
 			"<?php\r",
-			"$${1:var_name} = $${2|bst_fields,bst_option_fields,bst_block_fields,bst_post_field|}['${1:var_name}'] ?? null;",
+			"$${1:var_name} = $${2|sts_fields,sts_option_fields,sts_block_fields,sts_post_field|}['${1:var_name}'] ?? null;",
 			"?>"
 		],
 		"description": "Use this to get the value of a variable with fallback to null value if not value found."
@@ -115,7 +127,9 @@
 	},
 	"Telephone number without Symbols": {
 		"prefix": "phpStripPhone",
-		"body": ["<?php echo preg_replace( '/[^0-9]/', '', $${1:phone} ); ?>"],
+		"body": [
+			"<?php echo preg_replace( '/[^0-9]/', '', $${1:phone} ); ?>"
+		],
 		"description": "Used to display telephone number without symbols"
 	},
 	"Default Image with Get Attachment Image Single": {
@@ -136,7 +150,6 @@
 		],
 		"description": "Default Image with Get Attachment Image URL"
 	},
-
 	"Default Image with Get Attachment Image": {
 		"prefix": "phpPostImage",
 		"body": [
@@ -664,7 +677,7 @@
 			"\t\t\t\t\t\t<div class=\"post-area__excerpt\">",
 			"\t\t\t\t\t\t\t<p>Fermentum dui faucibus in ornare quam viverra orci sagittis. Fringilla est ... </p>",
 			"\t\t\t\t\t\t</div>",
-			"\t\t\t\t\t\t<span class=\"learn-more\">Mehr Infos</span>",
+			"\t\t\t\t\t\t<span class=\"learn-more\">Read more</span>",
 			"\t\t\t\t\t</div>",
 			"\t\t\t\t</a>",
 			"\t\t\t</article>",
@@ -685,27 +698,24 @@
 		],
 		"description": "Use this to display Sliding Carousel in HTML"
 	},
-
 	"BlockTitle": {
 		"prefix": "BlockTitle",
 		"body": [
-			"<?php if ( BaseTheme::is_block_title( $${1:bst_var_blkfetrdtxt_title} ) ) { ?>",
-			"\t<?php BaseTheme::the_block_title( $${1:bst_var_blkfetrdtxt_title}, 'heading-2' ); ?>",
+			"<?php if ( StoneStomper::is_block_title( $${1:sts_var_blkfetrdtxt_title} ) ) { ?>",
+			"\t<?php StoneStomper::the_block_title( $${1:sts_var_blkfetrdtxt_title}, 'heading-2' ); ?>",
 			"<?php } ?>"
 		],
 		"description": "Display block title if it exists"
 	},
-
 	"BlockButton": {
 		"prefix": "BlockButton",
 		"body": [
-			"<?php if ( $${1:bst_var_blkfetrdtxt_btn} ) { ?>",
-			"\t<?php BaseTheme::button( $${1:bst_var_blkfetrdtxt_btn}, 'button' ); ?>",
+			"<?php if ( $${1:sts_var_blkfetrdtxt_btn} ) { ?>",
+			"\t<?php StoneStomper::button( $${1:sts_var_blkfetrdtxt_btn}, 'button' ); ?>",
 			"<?php } ?>"
 		],
 		"description": "Display a button if variable exists"
 	},
-
 	"TernaryCondition": {
 		"prefix": "TernaryCondition",
 		"body": [
@@ -713,22 +723,20 @@
 		],
 		"description": "Get image position class based on key"
 	},
-
 	"FeaturedImage": {
 		"prefix": "FeaturedImage",
 		"body": [
-			"<?php if ( $${1:bst_var_img} ) { ?>",
-			"\t<?php BaseTheme::the_featured_image( $${1:bst_var_img}, 1000 ); ?>",
+			"<?php if ( $${1:sts_var_img} ) { ?>",
+			"\t<?php StoneStomper::the_featured_image( $${1:sts_var_img}, 1000 ); ?>",
 			"<?php } ?>"
 		],
 		"description": "Display featured image if variable exists"
 	},
-
 	"AttachmentImage": {
 		"prefix": "AttachmentImage",
 		"body": [
-			"<?php if ( $${1:bst_var_img} ) { ?>",
-			"\t<?php BaseTheme::the_attachment_image( $${1:bst_var_img}, 500 ); ?>",
+			"<?php if ( $${1:sts_var_img} ) { ?>",
+			"\t<?php StoneStomper::the_attachment_image( $${1:sts_var_img}, 500 ); ?>",
 			"<?php } ?>"
 		],
 		"description": "Display Attachment  image if variable exists"
