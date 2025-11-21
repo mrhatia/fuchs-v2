@@ -5379,8 +5379,8 @@ span.button,
   padding: 10px 36px;
   text-decoration: none;
   color: var(--fc_theme_btn_color);
-  background-color: var(--fc_theme_btn_bgcolor);
-  border: 2px solid var(--fc_button_border_color);
+  background-color: var(--fc_blue_3);
+  border: 2px solid var(--fc_blue_3);
   transition: all 0.35s ease-in-out;
   margin-right: 13px;
   letter-spacing: 0.5px;
@@ -5406,9 +5406,25 @@ span.button:hover,
 span.button:focus-visible,
 .is-style-mycustomstyle .wp-element-button:hover,
 .is-style-mycustomstyle .wp-element-button:focus-visible {
-  background-color: var(--fc_theme_btn_bgcolor_hover);
+  background-color: var(--fc_transparent);
   border: solid 2px var(--fc_theme_btn_border_color_hover);
   color: var(--fc_theme_btn_color_hover);
+}
+a.button.transparent-button,
+a.button:visited.transparent-button,
+span.button.transparent-button,
+.is-style-mycustomstyle .wp-element-button.transparent-button {
+  --fc_theme_btn_color: var(--fc_white);
+  --fc_theme_btn_bgcolor: var(--fc_orange);
+  --fc_button_border_color: var(--fc_orange);
+  background-color: var(--fc_orange);
+  border-color: var(--fc_orange);
+}
+a.button.transparent-button:hover,
+a.button:visited.transparent-button:hover,
+span.button.transparent-button:hover,
+.is-style-mycustomstyle .wp-element-button.transparent-button:hover {
+  background-color: transparent;
 }
 a.button.orange-button,
 a.button:visited.orange-button,
@@ -5422,8 +5438,8 @@ a.button.orange-button:hover,
 a.button:visited.orange-button:hover,
 span.button.orange-button:hover,
 .is-style-mycustomstyle .wp-element-button.orange-button:hover {
-  background-color: var(--fc_orange_dark);
-  border-color: var(--fc_orange_dark);
+  background-color: var(--fc_blue_3);
+  border-color: var(--fc_blue_3);
   color: var(--fc_white);
 }
 a.button.blue-button,
@@ -5439,8 +5455,8 @@ a.button:visited.blue-button:hover,
 span.button.blue-button:hover,
 .is-style-mycustomstyle .wp-element-button.blue-button:hover {
   box-shadow: rgba(0, 22, 89, 0.5) 0 10px 20px 0;
-  background-color: var(--fc_blue_3);
-  border-color: var(--fc_blue_3);
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_orange);
   color: var(--fc_white);
 }
 a.button.header-button,
