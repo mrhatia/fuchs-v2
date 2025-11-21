@@ -118,7 +118,73 @@ $bst_var_social_profiles = $bst_option_fields['bst_var_social_profiles'] ?? null
 	}
 	</script> <?php } ?>
 </footer>
+
 <?php wp_footer(); ?>
+<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const swiper = new Swiper('.testimonial-variation', {
+				direction: 'vertical',
+				slidesPerView: 1,
+				loop: true,
+				speed: 800,
+				spaceBetween: 0,
+				autoHeight: true,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				mousewheel: true,
+				keyboard: {
+					enabled: true,
+					onlyInViewport: true,
+				},
+			});
+		});
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<script>
+		const ctx = document.getElementById('fuchsChart');
+
+		new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: [
+					'Hochbau',
+					'Tiefbau',
+					'Projektentwicklung',
+					'Metallbau',
+					'Kanaltechnik',
+					'Baulogistik',
+					'Gerüstbau',
+					'Invest',
+				],
+				datasets: [
+					{
+						data: [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5], // equal slices
+						backgroundColor: [
+							'#e57c00', '#df7800', '#d87200', '#d26d00',
+							'#cd6800', '#c66300', '#bf5e00', '#b85900',
+						],
+						borderWidth: 2,
+						borderColor: '#ffffff',
+						hoverOffset: 0,
+					},
+				],
+			},
+			options: {
+				cutout: '55%',
+				plugins: {
+					legend: { display: false },
+					tooltip: { enabled: false },
+				},
+			},
+		});
+	</script>
 <?php
 if ( '' !== $bst_var_footer_scripts ) {
 	?>

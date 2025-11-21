@@ -64,9 +64,14 @@ BaseTheme::block(
 								$column_title   	= $column['title'] ?? null;
 								$column_text   = $column['text'] ?? null;
 								$column_icon       = $column['icon'] ?? null;
+								$image       = $column['image'] ?? null;
 								?>
 									<div class="swiper-slide testimonial-single">
 										<div class="testimonial-single-image image-cover  mobile-hide">
+											<?php if ( $image ) { ?>
+												<?php BaseTheme::the_attachment_image( $image, 500 ); ?>
+											<?php } ?>
+
 										</div>
 										<div class="testimonial-single-content">
 											<?php if ( $column_text ) {  ?>

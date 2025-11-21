@@ -4443,10 +4443,6 @@ header {
   height: 100%;
 }
 
-.page-template-template-home {
-  overflow: hidden;
-}
-
 /* dot navigation */
 .dots {
   position: absolute;
