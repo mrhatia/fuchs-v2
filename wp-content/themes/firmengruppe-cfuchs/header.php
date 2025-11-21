@@ -116,18 +116,10 @@ $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
 	<a class="skip-link screen-reader-text"
 		href="#page-section"><?php esc_html_e( 'Skip to content', 'basetheme_td' ); ?></a>
 
-	<?php if ( is_front_page() || is_home() ) : ?>
-		<div class="loader">
-			<div class="loader-inner">
-				<div class="spinner-text" data-title="CFuchs">CFuchs</div>
-			</div>
-		</div>
-	<?php endif; ?>
-
 	<header id="header-section" class="header-section">
 		<!-- Header Start -->
 
-		<div class="header-wrapper header-inner d-flex justify-content-between">
+		<div class="header-wrapper header-inner d-flex align-items-center justify-content-between">
 			<div class="header-logo logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img
 						src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/site-logo.svg"
@@ -147,16 +139,7 @@ $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
 									)
 								);
 							?>
-						<?php if ( $bst_var_header_btn ) { ?>
-							<div class="header-btns desktop-hide">
-								<?php
-								if ( $bst_var_header_btn ) {
-									echo BaseTheme::button( $bst_var_header_btn, 'button header-button' );
-								}
-								?>
 
-							</div>
-						<?php } ?>
 						</div>
 					</div>
 				</div>
@@ -166,8 +149,36 @@ $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
 					<span class="bottom"></span>
 				</div>
 			</div>
+			<div class="header-btns">
+				<a href="#" class="search-icon top-search"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/images/search-icon.svg" alt=""></a>
+			</div>
 
 			<!-- header buttons -->
+		</div>
+		<div class="search-form-new">
+			<div class="search-inner-content">
+				<div class="search-inner-content--text">
+					SEARCH SITE </div>
+				<form role="search" method="get" id="searchform" action="#">
+					<div id="search-top">
+						<input type="text" name="s" class="keyword" onkeyup="fetch()" autocomplete="off"
+							autofocus="autofocus" aria-label="Search" placeholder="Search">
+						<div class="clear"></div>
+					</div>
+				</form>
+				<div class="search-close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57" fill="none">
+						<rect class="bg-path" x="0.922852" y="28.5" width="39" height="39" rx="19.5"
+							transform="rotate(-45 0.922852 28.5)" fill="#F1EEE2"></rect>
+						<g opacity="0.5">
+							<rect class="bg-path-white" x="22.8432" y="23.5503" width="1" height="15"
+								transform="rotate(-45 22.8432 23.5503)" fill="#141414"></rect>
+							<rect class="bg-path-white" x="23.5503" y="34.1567" width="1" height="15"
+								transform="rotate(-135 23.5503 34.1567)" fill="#141414"></rect>
+						</g>
+					</svg>
+				</div>
+			</div>
 		</div>
 		<!-- Header End -->
 	</header>
