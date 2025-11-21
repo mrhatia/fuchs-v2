@@ -5433,6 +5433,8 @@ span.button.orange-button,
   --fc_theme_btn_color: var(--fc_white);
   --fc_theme_btn_bgcolor: var(--fc_orange);
   --fc_button_border_color: var(--fc_transparent);
+  background-color: var(--fc_orange);
+  border-color: var(--fc_orange);
 }
 a.button.orange-button:hover,
 a.button:visited.orange-button:hover,

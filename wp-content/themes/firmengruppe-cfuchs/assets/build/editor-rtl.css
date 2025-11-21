@@ -2716,6 +2716,8 @@ Mixin for transition
   --fc_theme_btn_color: var(--fc_white);
   --fc_theme_btn_bgcolor: var(--fc_orange);
   --fc_button_border_color: var(--fc_transparent);
+  background-color: var(--fc_orange);
+  border-color: var(--fc_orange);
 }
 .acf-block-preview a.button.orange-button:hover,
 .acf-block-preview a.button:visited.orange-button:hover,
