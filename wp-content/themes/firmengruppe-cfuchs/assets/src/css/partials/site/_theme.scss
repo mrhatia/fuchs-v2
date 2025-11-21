@@ -337,7 +337,7 @@ span.button,
 		--fc_button_border_color: var(--fc_transparent);
 
 		&:hover {
-			background-color: var(--fc_blue_3);
+			background-color: var(--fc_transparent);
 			border-color: var(--fc_blue_3);
 			color: var(--fc_white);
 		}

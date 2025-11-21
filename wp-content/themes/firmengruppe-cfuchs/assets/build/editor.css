@@ -2721,7 +2721,7 @@ Mixin for transition
 .acf-block-preview a.button:visited.orange-button:hover,
 .acf-block-preview span.button.orange-button:hover,
 .acf-block-preview .is-style-mycustomstyle .wp-element-button.orange-button:hover {
-  background-color: var(--fc_blue_3);
+  background-color: var(--fc_transparent);
   border-color: var(--fc_blue_3);
   color: var(--fc_white);
 }

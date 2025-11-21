@@ -5438,7 +5438,7 @@ a.button.orange-button:hover,
 a.button:visited.orange-button:hover,
 span.button.orange-button:hover,
 .is-style-mycustomstyle .wp-element-button.orange-button:hover {
-  background-color: var(--fc_blue_3);
+  background-color: var(--fc_transparent);
   border-color: var(--fc_blue_3);
   color: var(--fc_white);
 }
