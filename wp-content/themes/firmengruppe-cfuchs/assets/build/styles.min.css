@@ -4073,14 +4073,16 @@ header {
   margin: auto;
   max-width: 1309px;
   width: calc(90% - 100px);
-  height: -moz-max-content;
-  height: max-content;
-  top: 60%;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
 }
 .hero-inner-slider .banner-content h1,
 .hero-project .banner-content h1 {
   text-transform: uppercase;
+}
+.hero-inner-slider .banner-content .banner-content-inner,
+.hero-project .banner-content .banner-content-inner {
+  position: relative;
 }
 .hero-inner-slider .banner-content h1,
 .hero-inner-slider .banner-content .heading-2,
@@ -5686,7 +5688,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   width: -moz-max-content;
   width: max-content;
   z-index: -1;
-  color: var(--fc_orange);
+  color: rgba(76, 76, 76, 0.231372549);
 }
 
 .iat-image,

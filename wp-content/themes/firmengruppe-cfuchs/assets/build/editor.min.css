@@ -2949,7 +2949,7 @@ Mixin for transition
   width: -moz-max-content;
   width: max-content;
   z-index: -1;
-  color: var(--fc_orange);
+  color: rgba(76, 76, 76, 0.231372549);
 }
 .acf-block-preview .iat-image,
 .acf-block-preview .faq-image,
