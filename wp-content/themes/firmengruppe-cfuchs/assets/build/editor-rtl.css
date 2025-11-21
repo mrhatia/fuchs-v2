@@ -527,11 +527,11 @@ Mixin for transition
   --fc_gray_2: #eee;
   --fc_gray_3: #999;
   --fc_gray_4: #565969;
-  --fc_blue: #0013ff;
+  --fc_blue: #001659;
   --fc_blue_1: #00a4eb;
   --fc_blue_2: #2ca8dd;
-  --fc_blue_3: #001659;
-  --fc_blue_4: #071f65;
+  --fc_blue_3: #4c4c4c;
+  --fc_blue_4: #4c4c4c;
   --fc_navy: #091a17;
   --fc_navy_1: #15332e;
   --fc_navy_2: #2f655c;
@@ -548,8 +548,8 @@ Mixin for transition
   --fc_danger: #dc3545;
   --fc_light: #f8f9fa;
   --fc_dark: #212529;
-  --fc_orange: #4c4c4c;
-  --fc_orange_dark: #4c4c4c;
+  --fc_orange: #007857;
+  --fc_orange_dark: #007857;
   --fc_orange_1: #f2976a;
   --fc_signal: #d14b3c;
   --fc_signal_bg: #fbede9;
@@ -4599,7 +4599,6 @@ Mixin for transition
 }
 .acf-block-preview .services-block .section-head .heading-2 {
   font-size: var(--fc_font_size_80);
-  color: var(--fc_blue_3);
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -4658,9 +4657,6 @@ Mixin for transition
   background-color: transparent;
   transition: all 0.3s ease-in-out;
   margin-top: var(--fc_space_48);
-}
-.acf-block-preview .section-head .heading-2 {
-  color: var(--fc_blue_3);
 }
 .acf-block-preview .logos-items {
   margin-top: var(--fc_space_48);
