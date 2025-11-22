@@ -45,8 +45,9 @@ BaseTheme::block(
 							<?php if ( $bst_var_blk_mat_text ) {  ?>
 								<?php echo html_entity_decode( $bst_var_blk_mat_text ); ?>
 							<?php } ?>
+
 							<?php if ( $bst_var_blk_mat_button ) { ?>
-								<?php echo BaseTheme::button( $bst_var_blk_mat_button, 'button' ); ?>
+								<?php echo BaseTheme::button( $bst_var_blk_mat_button, 'button orange-button' ); ?>
 							<?php } ?>
 						</div>
 						<div class="iat-image column">
