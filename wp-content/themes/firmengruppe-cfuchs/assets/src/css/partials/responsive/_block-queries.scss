@@ -1,6 +1,9 @@
-@media only screen and (min-width: 1346px) and (max-width: 1400px) {
+@media only screen and (min-width: 1300px) and (max-width: 1630px) {
 	.blog-teaser-slider::before {
 		width: 62.1vw;
+	}
+	.header-nav{
+		gap: 20px;
 	}
 }
 
@@ -282,7 +285,7 @@
 
 @media only screen and (min-width: 1360px) and (max-width: 1500px) {
 	.section-head .hero-split-text {
-		left: -11%;
+		left: -0%;
 		width: 100%;
 		line-height: 0.8;
 		top: -78px;
@@ -291,7 +294,7 @@
 
 @media only screen and (min-width: 1003px) and (max-width: 1359px) {
 	.section-head .hero-split-text {
-		left: -7%;
+		left: -0%;
 	}
 }
 

@@ -5747,6 +5747,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   font-weight: 700;
+  text-transform: uppercase;
   margin: 0;
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: bold;
@@ -8279,9 +8280,12 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 /* -------------------------------------------------
 >> Base Responsive queries
 ------------------------------------------------- */
-@media only screen and (min-width: 1346px) and (max-width: 1400px) {
+@media only screen and (min-width: 1300px) and (max-width: 1630px) {
   .blog-teaser-slider::before {
     width: 62.1vw;
+  }
+  .header-nav {
+    gap: 20px;
   }
 }
 @media only screen and (min-width: 1346px) and (max-width: 1800px) {
@@ -8488,7 +8492,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 }
 @media only screen and (min-width: 1360px) and (max-width: 1500px) {
   .section-head .hero-split-text {
-    right: -11%;
+    right: 0%;
     width: 100%;
     line-height: 0.8;
     top: -78px;
@@ -8496,7 +8500,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 }
 @media only screen and (min-width: 1003px) and (max-width: 1359px) {
   .section-head .hero-split-text {
-    right: -7%;
+    right: 0%;
   }
 }
 @media only screen and (min-width: 1003px) and (max-width: 1080px) {
