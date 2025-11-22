@@ -324,8 +324,8 @@ span.button,
 		--fc_theme_btn_color: var(--fc_white);
 		--fc_theme_btn_bgcolor: var(--fc_orange);
 		--fc_button_border_color: var(--fc_orange);
-		background-color: var(--fc_orange);
-		border-color: var(--fc_orange);
+		background-color: var(--fc_transparent);
+		border-color: var(--fc_color_primary);
 
 		&:hover {
 			background-color: transparent;
@@ -1014,11 +1014,11 @@ body {
 		.label-right {
 			width: 23%;
 			word-wrap: break-word;
-			right: -8px;
+			right: -12px;
 		}
 
 		.chart-label {
-			font-size: 16px;
+			font-size: 15px;
 		}
 	}
 }

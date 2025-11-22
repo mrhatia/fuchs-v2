@@ -67,10 +67,10 @@ BaseTheme::block(
 											<?php if($slide_button_one || $slide_button_two){ ?>
 												<div class="hero-buttons button-reveal">
 													<?php if ( $slide_button_one ) { ?>
-														<?php echo BaseTheme::button( $slide_button_one, 'button orange-button' ); ?>
+														<?php echo BaseTheme::button( $slide_button_one, 'button' ); ?>
 													<?php } ?>
 													<?php if ( $slide_button_two ) { ?>
-														<?php echo BaseTheme::button( $slide_button_two, 'button green-button' ); ?>
+														<?php echo BaseTheme::button( $slide_button_two, 'button transparent-button' ); ?>
 													<?php } ?>
 												</div>
 											<?php } ?>

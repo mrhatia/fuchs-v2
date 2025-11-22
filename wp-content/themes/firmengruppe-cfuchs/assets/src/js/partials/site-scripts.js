@@ -7,13 +7,13 @@ import organicTabs from '../vendors/organic-tab';
 import slick from '../vendors/slick.min';
 import gasap from '../vendors/gsap.min';
 import gsapScroll from '../vendors/ScrollTrigger.min';
-// jQuery( document ).on( 'scroll', function() {
-// 	if ( jQuery( document ).scrollTop() > 0 ) {
-// 		jQuery( 'header, body' ).addClass( 'shrink' );
-// 	} else {
-// 		jQuery( 'header, body' ).removeClass( 'shrink' );
-// 	}
-// } );
+jQuery( document ).on( 'scroll', function() {
+	if ( jQuery( document ).scrollTop() > 0 ) {
+		jQuery( 'header, body' ).addClass( 'shrink' );
+	} else {
+		jQuery( 'header, body' ).removeClass( 'shrink' );
+	}
+} );
 
 jQuery( window ).on( 'load', function() {
 	const loader = jQuery( '.loader' );

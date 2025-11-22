@@ -87,6 +87,16 @@ header {
 
 .header-logo a {
 	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 240px;
+	height: 110px;
+	padding: 0;
+	z-index: 100001;
+	img{
+		width: 100%;
+	}
 }
 
 .no-overflow {
@@ -94,19 +104,8 @@ header {
 }
 
 .logo {
-	position: relative;
-	z-index: 9;
 	line-height: 0;
-	width: 201px;
-	display: flex;
-	align-items: center;
-	transition: all 0.2s ease-in-out;
-	background-color: var(--fc_color_primary);
-	margin-left: 20px;
 
-	img {
-		width: 100%;
-	}
 }
 
 .header-inner {
@@ -114,6 +113,13 @@ header {
 	box-sizing: border-box;
 
 	@include transition(all, 0.3s, ease-in-out);
+}
+.header-section.shrink{
+	.header-logo a{
+		transform: scale(0.83) translate(0, -10px);
+		left: -25px;
+		transition: transform .3s, left .3s .3s;
+	}
 }
 
 .header-section {
@@ -125,7 +131,6 @@ header {
 	top: var(--fc_header-top-default);
 
 	&.shrink {
-		background-color: var(--fc_header_bgcolor_sticky);
 		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
 	}
 }
@@ -133,8 +138,9 @@ header {
 .header-wrapper {
 	box-sizing: border-box;
 	max-width: 100%;
-	width: 100%;
+	width: 96%;
 	margin: 0 auto;
+	position: relative;
 }
 
 .header-btns {
