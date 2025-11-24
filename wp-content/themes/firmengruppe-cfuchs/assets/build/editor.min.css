@@ -3945,6 +3945,9 @@ Mixin for transition
   height: auto !important;
   overflow: hidden;
 }
+.acf-block-preview .testimonial-heading .kicker-text {
+  text-transform: uppercase;
+}
 .acf-block-preview .theme-images-slider {
   position: relative;
   display: flex;

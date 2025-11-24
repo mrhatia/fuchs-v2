@@ -63,6 +63,64 @@
             "layout": "horizontal"
         },
         {
+            "key": "field_692432ed3a704",
+            "label": "Kicker Text",
+            "name": "fh_var_blk_tst_kicker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68deb9b15567a",
+                        "operator": "==",
+                        "value": "vslider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_692433293a705",
+            "label": "Testimonials Heading",
+            "name": "fh_var_blk_tst_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68deb9b15567a",
+                        "operator": "==",
+                        "value": "vslider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_68deb9a5db023",
             "label": "Testimonials",
             "name": "fh_var_blk_tst_testimonials",
@@ -198,5 +256,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763729871
+    "modified": 1763980193
 }

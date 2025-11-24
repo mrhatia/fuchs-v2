@@ -17,6 +17,8 @@ BaseTheme::block(
 		// Block variables.
 		$fh_var_blk_tst_slider_variation     = $bst_block_fields['fh_var_blk_tst_slider_variation'] ?? null;
 		$fh_var_blk_tst_testimonials     = $bst_block_fields['fh_var_blk_tst_testimonials'] ?? null;
+		$fh_var_blk_tst_heading     = $bst_block_fields['fh_var_blk_tst_heading'] ?? null;
+		$fh_var_blk_tst_kicker     = $bst_block_fields['fh_var_blk_tst_kicker'] ?? null;
 		?>
 
 		<?php if($fh_var_blk_tst_testimonials && 'hslider' === $fh_var_blk_tst_slider_variation){ ?>
@@ -57,6 +59,20 @@ BaseTheme::block(
 		<?php } else { ?>
 			<section>
 				<div class="wrapper">
+				<div class="section-head testimonial-heading">
+					<?php if ( $fh_var_blk_tst_kicker ) { ?>
+						<div class="kicker">
+							<?php echo $fh_var_blk_tst_kicker; ?>
+						</div>
+					<?php } ?>
+
+					<?php if ( $fh_var_blk_tst_heading ) { ?>
+						<h2 class="heading-2">
+							<?php echo $fh_var_blk_tst_heading; ?>
+						</h2>
+					<?php } ?>
+				</div>
+
 					<div class="swiper testimonial-variation">
 						<div class="swiper-wrapper">
 							<?php foreach ( $fh_var_blk_tst_testimonials as $column ) {

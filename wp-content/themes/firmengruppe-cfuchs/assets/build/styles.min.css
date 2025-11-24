@@ -7030,6 +7030,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   overflow: hidden;
 }
 
+.testimonial-heading .kicker-text {
+  text-transform: uppercase;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Image Alongside Text Block
 -------------------------------------------------*/
