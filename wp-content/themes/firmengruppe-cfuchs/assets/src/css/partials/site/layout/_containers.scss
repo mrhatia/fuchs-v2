@@ -39,11 +39,32 @@
 	}
 }
 
-
 .ctn-orange {
 	background-color: var(--fc_orange);
 	padding: var(--fc_space_96) 0;
+}
 
+.ctn-white {
+	ul {
+		li {
+			&::before {
+				background-color: var(--fc_white) !important;
+			}
+		}
+	}
+	background-color: var(--fc_white);
+	padding: var(--fc_space_96) 0;
+	.section-head {
+		.hero-split-text {
+			color: rgb(0 0 0 / 10%) !important;
+			z-index: 0;
+		}
+		.heading-2 {
+			color: var(--fc_orange);
+			position: relative;
+			z-index: 2;
+		}
+	}
 }
 
 .ctn-green {
@@ -55,7 +76,6 @@
 .ctn-green {
 	.stats-column .small-text {
 		color: var(--fc_white);
-
 	}
 
 	.stats-column span {
@@ -81,7 +101,6 @@
 
 .ctn-dots {
 	background-image: url(../images/default_pattern.png);
-
 }
 
 .ctn-blue-shape {
@@ -95,5 +114,4 @@
 	.heading-2 {
 		color: var(--fc_white);
 	}
-
 }

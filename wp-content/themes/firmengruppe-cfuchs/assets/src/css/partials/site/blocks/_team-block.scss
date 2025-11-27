@@ -22,18 +22,22 @@
 	}
 
 	.member-image {
-
-		@include background-image("/admin/defaults/default-image.webp", center, cover, no-repeat, 310px, 100%);
+		@include background-image(
+			"/admin/defaults/default-image.webp",
+			center,
+			cover,
+			no-repeat,
+			310px,
+			100%
+		);
 	}
 
 	.member-name {
-
 		@include font(sour, bold);
 		margin-bottom: 8px;
 	}
 
 	.designation {
-
 		@include font(sour, reg);
 
 		font-size: var(--fc_font_size_18);
@@ -42,7 +46,6 @@
 }
 
 .black-container {
-
 	* {
 		color: var(--fc_white);
 	}
@@ -172,7 +175,6 @@
 	}
 
 	.member-name-popup {
-
 		@include font(sour, bold);
 
 		color: var(--wp--preset--color--dark_text);
@@ -180,7 +182,6 @@
 	}
 
 	.member-designation {
-
 		@include font(sour, reg);
 
 		color: var(--wp--preset--color--lblack);
@@ -206,11 +207,196 @@
 	}
 }
 
-
 .mfp-content {
 	text-align: center;
 }
 
 .mfp-wrap {
 	z-index: 999999 !important;
+}
+.team-member-image {
+	aspect-ratio: 453 / 512;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+	img {
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.team-member-content {
+	padding: 20px 0 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+	border-radius: 12px;
+}
+
+.team-member-column {
+	position: relative;
+}
+
+.tm-content-left {
+	.heading-6 {
+		font-size: var(--fc_font_size_26);
+		margin-bottom: 0px;
+		a,
+		a:visited {
+			border: 0;
+			padding: 0;
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+	P {
+		margin: 0 0 10px 0;
+	}
+}
+
+.tm-content-right {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 8px;
+		marker: none;
+		list-style: none;
+		margin: 0;
+		li {
+			padding: 0;
+			margin: 0;
+
+			&::before {
+				display: none;
+			}
+			a,
+			a:visited {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				background-color: var(--lr_color_primary);
+				border: 0;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+.member-popup {
+	display: none;
+	height: 100vh;
+	opacity: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: all 0.4s ease-in-out;
+	visibility: visible;
+	width: 100vw;
+}
+.mfp-ready .member-popup {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+.member-popup-inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+.member-popup-left {
+	width: 50.7%;
+	height: 100vh;
+}
+.member-popup-right {
+	background-color: var(--fc_white);
+	height: 100vh;
+	overflow-y: auto;
+	position: relative;
+	text-align: left;
+	width: 49.3%;
+}
+.member-popup-inner .close-icon {
+	background-color: var(--fc_white);
+	border: 1.5px solid var(--fc_color_primary);
+	position: fixed;
+	right: 30px;
+	top: 30px;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	padding: 0;
+	opacity: 1;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	img {
+		width: 16px;
+		height: 16px;
+		margin: 0 auto;
+	}
+	&:hover {
+		background-color: var(--fc_color_primary);
+		img {
+			filter: brightness(0) saturate(100%) invert(100%) sepia(3%)
+				saturate(13%) hue-rotate(96deg) brightness(104%) contrast(100%);
+		}
+	}
+}
+.member-popup-right-inner {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: var(--fc_space_200) 17px 80px 16px;
+	width: 82%;
+}
+.team-member-column {
+	.popup-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		padding: 0;
+		z-index: 1;
+	}
+}
+.team-member-designation {
+	@include font(mon, bold);
+	font-size: 12px;
+	line-height: 1.7;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: var(--fc_red);
+}
+.member-popup-right-inner {
+	.heading-2 {
+		margin-bottom: 4px;
+	}
+}
+.team-member-text {
+	margin-top: 30px;
+	p {
+		margin-bottom: 24px;
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+}
+.team-member-column {
+	&:hover {
+		.team-member-image {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+.team-member-row.three-columns {
+	row-gap: var(--fc_space_48);
 }
