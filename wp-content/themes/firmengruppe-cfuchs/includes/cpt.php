@@ -42,6 +42,25 @@ new WP_Theme_CPT(
 new WP_Theme_CPT(
 	array(
 		'labels'       => array(
+			'singular_capital'   => 'Team',
+			'plural_capital'     => 'Teams',
+			'singular_lowercase' => 'team',
+			'plural_lowercase'   => 'teams',
+			// CPT Slug & Name.
+			'register_key'       => 'team',
+			'slug'               => 'team',
+		),
+		'supports'     => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt' ),
+		'menu_icon'    => 'dashicons-format-quote',
+		'public'       => true,
+		'show_in_menu' => true,
+		'show_ui'      => true,
+	)
+);
+
+new WP_Theme_CPT(
+	array(
+		'labels'       => array(
 			'singular_capital'   => 'Reference',
 			'plural_capital'     => 'References',
 			'singular_lowercase' => 'reference',
