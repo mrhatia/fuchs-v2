@@ -46,6 +46,8 @@ get_header();
 
 ?>
 	<section id="page-section" class="page-section">
+
+
 		<!-- Content Start -->
 		<?php
 		if ( have_posts() ) {

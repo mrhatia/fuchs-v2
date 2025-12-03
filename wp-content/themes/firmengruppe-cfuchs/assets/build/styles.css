@@ -6105,6 +6105,24 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .page-template-template-services .medium-heading {
   color: var(--fc_white);
 }
+.page-template-template-services .member-popup {
+  color: var(--fc_body_color);
+}
+.page-template-template-services .member-popup h1,
+.page-template-template-services .member-popup .heading-1,
+.page-template-template-services .member-popup h2,
+.page-template-template-services .member-popup .heading-2,
+.page-template-template-services .member-popup h3,
+.page-template-template-services .member-popup .heading-3,
+.page-template-template-services .member-popup h4,
+.page-template-template-services .member-popup .heading-4,
+.page-template-template-services .member-popup h5,
+.page-template-template-services .member-popup .heading-5,
+.page-template-template-services .member-popup h6,
+.page-template-template-services .member-popup .heading-6,
+.page-template-template-services .member-popup .medium-heading {
+  color: var(--fc_color_primary);
+}
 .page-template-template-services .blog-teaser-slider::before {
   background: var(--fc_color_primary);
 }
@@ -6628,10 +6646,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   max-width: 100%;
 }
 
-.faq-with-image, .image-alongside-text {
+.faq-with-image {
   position: relative;
 }
-.faq-with-image::after, .image-alongside-text::after {
+.faq-with-image::after {
   content: "";
   position: absolute;
   display: block;

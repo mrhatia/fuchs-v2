@@ -20,161 +20,176 @@ BaseTheme::block(
 		$bst_var_blk_prjstr_projects	= $bst_block_fields['bst_var_blk_prjstr_projects'] ?? null;
 		?>
 
-		<section>
+		<section class="">
 			<div class="wrapper">
-				<div class="section-head">
+					<div class="section-head">
+						<div class="hero-split-text">
+							Projects
+						</div>
+						<h2 class="heading-2">Projects</h2>
+					</div>
+				<div class="team-members-ctn">
+					<div class="team-member-row three-columns">
+						<div class="team-member-column">
+							<a href="#stefen" class="popup-link"></a>
+							<div class="member-popup mfp-hide" id="stefen">
+								<div class="member-popup-inner">
+									<div class="member-popup-left">
+										<div class="member-popup-image image-cover" tabindex="0">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h1-team-img-01.jpg" alt="">
+										</div>
+									</div>
+									<div class="member-popup-right">
+										<div class="close-icon mfp-close" role="button" tabindex="0">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/topbar-cross-icon.svg" alt="">
+										</div>
+										<div class="member-popup-right-inner">
+											<h2 class="heading-2" tabindex="0">
+												Stefen James </h2>
+											<div class="team-member-designation" tabindex="0"> Listing Agent
+												at legend reality</div>
+											<div class="team-member-text">
+												<p>As your dedicated listing agent, I bring deep market knowledge,
+													strategic marketing expertise, and a commitment to
+													delivering exceptional results. From accurately pricing your
+													home to creating impactful marketing campaigns, I handle
+													every detail with care.</p>
+												<p>My goal is to ensure your selling experience is smooth,
+													transparent, and successful — helping you get the best possible
+													price in the shortest amount of time. Whether it's staging
+													advice, negotiation strategies, or constant communication,
+													I'm here to guide you every step of the way.</p>
+												<p> Whether it's staging advice, negotiation strategies, or constant
+													communication, I'm here to guide you every step of the
+													way.</p>
 
-					<?php if ( $bst_var_blk_prjstr_title ) {  ?>
-						<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_blk_prjstr_title ); ?></h1>
-					<?php } ?>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="team-member-image image-cover">
+								<a href="#">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h1-team-img-01.jpg" alt="Member image">
+								</a>
+							</div>
+							<div class="team-member-content">
+								<div class="tm-content-left">
+									<p>Listing Agent</p>
+									<h3 class="heading-6"><a href="#">Stefen James</a></h3>
+								</div>
+							</div>
+
+						</div>
+						<div class="team-member-column">
+							<a href="#tony-cucolo" class="popup-link"></a>
+							<div class="member-popup mfp-hide" id="tony-cucolo">
+								<div class="member-popup-inner">
+									<div class="member-popup-left">
+										<div class="member-popup-image image-cover" tabindex="0">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h1-team-img-02.jpg" alt="">
+										</div>
+									</div>
+									<div class="member-popup-right">
+										<div class="close-icon mfp-close" role="button" tabindex="0">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/topbar-cross-icon.svg" alt="">
+										</div>
+										<div class="member-popup-right-inner">
+											<h2 class="heading-2" tabindex="0">
+												Stefen James </h2>
+											<div class="team-member-designation" tabindex="0"> Listing Agent
+												at legend reality</div>
+											<div class="team-member-text">
+												<p>As your dedicated listing agent, I bring deep market knowledge,
+													strategic marketing expertise, and a commitment to
+													delivering exceptional results. From accurately pricing your
+													home to creating impactful marketing campaigns, I handle
+													every detail with care.</p>
+												<p>My goal is to ensure your selling experience is smooth,
+													transparent, and successful — helping you get the best possible
+													price in the shortest amount of time. Whether it's staging
+													advice, negotiation strategies, or constant communication,
+													I'm here to guide you every step of the way.</p>
+												<p> Whether it's staging advice, negotiation strategies, or constant
+													communication, I'm here to guide you every step of the
+													way.</p>
+
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="team-member-image image-cover">
+								<a href="#">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h1-team-img-02.jpg" alt="Member image">
+								</a>
+							</div>
+							<div class="team-member-content">
+								<div class="tm-content-left">
+									<p>Listing Agent</p>
+									<h3 class="heading-6"><a href="#">Stefen James</a></h3>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="team-member-column">
+							<a href="#stefen-james" class="popup-link"></a>
+							<div class="member-popup mfp-hide" id="stefen-james">
+								<div class="member-popup-inner">
+									<div class="member-popup-left">
+										<div class="member-popup-image image-cover" tabindex="0">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h1-team-img-03.jpg" alt="">
+										</div>
+									</div>
+									<div class="member-popup-right">
+										<div class="close-icon mfp-close" role="button" tabindex="0">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/topbar-cross-icon.svg" alt="">
+										</div>
+										<div class="member-popup-right-inner">
+											<h2 class="heading-2" tabindex="0">
+												Stefen James </h2>
+											<div class="team-member-designation" tabindex="0"> Listing Agent
+												at legend reality</div>
+											<div class="team-member-text">
+												<p>As your dedicated listing agent, I bring deep market knowledge,
+													strategic marketing expertise, and a commitment to
+													delivering exceptional results. From accurately pricing your
+													home to creating impactful marketing campaigns, I handle
+													every detail with care.</p>
+												<p>My goal is to ensure your selling experience is smooth,
+													transparent, and successful — helping you get the best possible
+													price in the shortest amount of time. Whether it's staging
+													advice, negotiation strategies, or constant communication,
+													I'm here to guide you every step of the way.</p>
+												<p> Whether it's staging advice, negotiation strategies, or constant
+													communication, I'm here to guide you every step of the
+													way.</p>
+
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="team-member-image image-cover">
+								<a href="#">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h1-team-img-03.jpg" alt="Member image">
+								</a>
+							</div>
+							<div class="team-member-content">
+								<div class="tm-content-left">
+									<p>Listing Agent</p>
+									<h3 class="heading-6"><a href="#">Stefen James</a></h3>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
 				</div>
-
-				<?php
-				if($bst_var_blk_prjstr_variation === "manual"){
-					$bst_var_post_count = is_array( $bst_var_blk_prjstr_projects ) ? count( $bst_var_blk_prjstr_projects ) : 0;
-					if($bst_var_post_count === 2) {
-						$bst_var_column_class = "have-two-columns";
-					} elseif($bst_var_post_count === 3) {
-						$bst_var_column_class = "four-columns";
-					}
-
-					?>
-
-					<div class="post-archive three-columns <?php echo $bst_var_column_class; ?>">
-						<?php
-							if ( $bst_var_blk_prjstr_projects ) {
-							?>
-								<?php
-									foreach( $bst_var_blk_prjstr_projects as $key =>  $project_id ){
-										list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($project_id);
-										$terms = get_the_terms( $bst_var_post_id, 'category' );
-										?>
-
-										<article id="post-<?php the_ID($bst_var_post_id); ?>" <?php post_class( "post-archive-box column" ); ?>>
-											<div class="post-archive-box-img post-image">
-												<a href="<?php the_permalink($bst_var_post_id); ?>">
-													<?php
-														if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
-															echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
-														} else {
-															echo get_the_post_thumbnail(
-																$bst_var_post_id,
-																'thumb_1000',
-															);
-														}
-													?>
-												</a>
-											</div>
-											<div class="post-content">
-												<div class="post-box-meta d-flex justify-content-between">
-													<div class="ac-post-cat">
-														<?php
-															if ( $terms && ! is_wp_error( $terms ) ) {
-																foreach ( $terms as $term ) {
-																	echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-																}
-															}
-														?>
-													</div>
-												</div>
-												<div class="post-archive-box-title post-title">
-													<h4><a href="<?php the_permalink($bst_var_post_id); ?>"><?php echo get_the_title($bst_var_post_id); ?></a> </h4>
-												</div>
-												<div class="bottom-section-button">
-													<a href="<?php the_permalink($bst_var_post_id); ?>">
-														<span>
-															Mehr Infos
-														</span>
-														<div class="plus-button">
-															+
-														</div>
-													</a>
-												</div>
-											</div>
-										</article>
-
-										<?php
-									}
-								?>
-							<?php
-							} ?>
-
-
-
-					</div>
-
-				<?php } else { ?>
-					<div class="post-archive three-columns">
-						<?php
-							$args = array(
-								'post_type'      => 'project',
-								'posts_per_page' => 3,
-								'orderby'        => 'date',
-								'order'          => 'DESC',
-							);
-
-							$bst_query = new WP_Query( $args );
-
-							if ( $bst_query->have_posts() ) :
-								while ( $bst_query->have_posts() ) : $bst_query->the_post();
-								list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults();
-								$terms = get_the_terms( $bst_var_post_id, 'category' );
-
-								?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-archive-box column' ); ?>>
-										<div class="post-archive-box-img post-image">
-											<a href="<?php the_permalink(); ?>">
-												<?php
-													if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
-														echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
-													} else {
-														echo get_the_post_thumbnail(
-															$bst_var_post_id,
-															'thumb_1000',
-														);
-													}
-												?>
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="post-box-meta d-flex justify-content-between">
-												<div class="ac-post-cat">
-													<?php
-														if ( $terms && ! is_wp_error( $terms ) ) {
-															foreach ( $terms as $term ) {
-																echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-															}
-														}
-													?>
-												</div>
-											</div>
-											<div class="post-archive-box-title post-title">
-												<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h4>
-											</div>
-											<div class="bottom-section-button">
-												<a href="<?php the_permalink(); ?>">
-													<span>
-														Mehr Infos
-													</span>
-													<div class="plus-button">
-														+
-													</div>
-												</a>
-											</div>
-										</div>
-									</article>
-
-								<?php endwhile;
-								wp_reset_postdata();
-							else :
-								echo '<p>No projects found.</p>';
-							endif;
-							?>
-
-
-
-					</div>
-				<?php } ?>
 			</div>
 		</section>
 

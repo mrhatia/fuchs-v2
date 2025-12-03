@@ -3289,6 +3289,24 @@ Mixin for transition
 .acf-block-preview .page-template-template-services .medium-heading {
   color: var(--fc_white);
 }
+.acf-block-preview .page-template-template-services .member-popup {
+  color: var(--fc_body_color);
+}
+.acf-block-preview .page-template-template-services .member-popup h1,
+.acf-block-preview .page-template-template-services .member-popup .heading-1,
+.acf-block-preview .page-template-template-services .member-popup h2,
+.acf-block-preview .page-template-template-services .member-popup .heading-2,
+.acf-block-preview .page-template-template-services .member-popup h3,
+.acf-block-preview .page-template-template-services .member-popup .heading-3,
+.acf-block-preview .page-template-template-services .member-popup h4,
+.acf-block-preview .page-template-template-services .member-popup .heading-4,
+.acf-block-preview .page-template-template-services .member-popup h5,
+.acf-block-preview .page-template-template-services .member-popup .heading-5,
+.acf-block-preview .page-template-template-services .member-popup h6,
+.acf-block-preview .page-template-template-services .member-popup .heading-6,
+.acf-block-preview .page-template-template-services .member-popup .medium-heading {
+  color: var(--fc_color_primary);
+}
 .acf-block-preview .page-template-template-services .blog-teaser-slider::before {
   background: var(--fc_color_primary);
 }
@@ -3562,10 +3580,10 @@ Mixin for transition
 .acf-block-preview .simple-faq .faq-content {
   max-width: 100%;
 }
-.acf-block-preview .faq-with-image, .acf-block-preview .image-alongside-text {
+.acf-block-preview .faq-with-image {
   position: relative;
 }
-.acf-block-preview .faq-with-image::after, .acf-block-preview .image-alongside-text::after {
+.acf-block-preview .faq-with-image::after {
   content: "";
   position: absolute;
   display: block;
