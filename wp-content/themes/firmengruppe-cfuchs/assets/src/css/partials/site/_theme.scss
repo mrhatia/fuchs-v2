@@ -1044,28 +1044,35 @@ body {
 			}
 		}
 	}
-	.faq-head .heading-5,
-	.faq-head .faq-number {
-		color: var(--fc_white);
-	}
-	.faq-head:hover .faq-icon {
-		background-color: var(--fc_white);
+	.faq-icon {
 		svg {
 			path,
 			rect {
-				fill: var(--fc_black);
+				fill: var(--fc_white);
 			}
 		}
 	}
-	.faq-head.active .faq-icon {
-		background-color: var(--fc_white);
-		svg {
-			path,
-			rect {
-				fill: var(--fc_black);
+
+	.faq-head {
+		.heading-5,
+		.faq-number {
+			color: var(--fc_white);
+		}
+
+		&:hover,
+		&.active {
+			.faq-icon {
+				background-color: var(--fc_white);
+				svg {
+					path,
+					rect {
+						fill: var(--fc_black);
+					}
+				}
 			}
 		}
 	}
+
 	h1,
 	.heading-1,
 	h2,
@@ -1081,7 +1088,24 @@ body {
 	.medium-heading {
 		color: var(--fc_white);
 	}
+	a.button,
+	a.button:visited,
+	span.button,
+	.is-style-mycustomstyle .wp-element-button {
+		&.orange-button {
+			--fc_theme_btn_color: var(--fc_white);
+			--fc_theme_btn_bgcolor: var(--fc_transparent);
+			--fc_button_border_color: var(--fc_transparent);
+			background-color: var(--fc_transparent);
+			border-color: var(--fc_white);
 
+			&:hover {
+				background-color: var(--fc_white);
+				border-color: var(--fc_white);
+				color: var(--fc_color_primary);
+			}
+		}
+	}
 	.member-popup {
 		color: var(--fc_body_color);
 
@@ -1156,11 +1180,13 @@ body {
 	.service-single-item {
 		a,
 		a:visited {
+			border-bottom: 3px solid var(--fc_white);
+
 			&:hover {
 				background: rgba(255, 255, 255, 0.1);
 				backdrop-filter: blur(8px);
 				border: 1px solid #e8e8e9;
-				border-bottom: 3px solid var(--fc_orange);
+				border-bottom: 3px solid var(--fc_white);
 				box-shadow: 0 4px 18px rgb(255 255 255 / 5%);
 			}
 		}
