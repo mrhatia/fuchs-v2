@@ -75,7 +75,7 @@
 		margin-bottom: 30px;
 	}
 
-	.copy-right{
+	.copy-right {
 		font-weight: bold;
 		font-size: 16px;
 		margin-top: 20px;
@@ -103,8 +103,6 @@
 		}
 	}
 
-
-
 	// blocks
 
 	.image-alongside-text {
@@ -118,7 +116,6 @@
 		.iat-image {
 			width: 100%;
 		}
-
 	}
 
 	.hero-inner-slider.full-width-image .hero-slide-item {
@@ -132,7 +129,6 @@
 	.testimonial-item-content {
 		width: 100%;
 	}
-
 }
 
 // @media only screen and (max-height: 747px) {
@@ -157,10 +153,8 @@
 			width: 70%;
 			max-width: 220px;
 			margin: 0 auto;
-
 		}
 	}
-
 
 	.section-head {
 		h2 {
@@ -169,10 +163,10 @@
 
 		.hero-split-text {
 			position: absolute;
-			top: -40px;
-			left: -11px;
+			top: -35px;
+
 			opacity: 0.4;
-			width: 100%;
+
 			line-height: 1;
 			font-size: 60px;
 		}
@@ -180,14 +174,11 @@
 }
 
 @media only screen and (max-width: 480px) {
-
 	.single-widget.d-flex.flex-column {
 		h4 {
 			font-size: 14px;
 		}
-
 	}
-
 
 	.footer-widgets .single-widget:nth-child(2) {
 		width: 100%;
@@ -201,7 +192,6 @@
 		// 	margin-bottom: 50px;
 		// }
 	}
-
 
 	.footer-ctn {
 		padding: 60px 0 0;

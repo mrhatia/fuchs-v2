@@ -2,9 +2,10 @@
 	position: relative;
 	padding: 50px 0 50px 15%;
 	box-sizing: border-box;
-	.testimonial-content-item{
-		.heading-3{
-			a,a:visited{
+	.testimonial-content-item {
+		.heading-3 {
+			a,
+			a:visited {
 				pointer-events: none;
 				cursor: initial;
 			}
@@ -12,13 +13,12 @@
 	}
 	.slick-prev:before,
 	.slick-next:before {
-		content: '' !important;
+		content: "" !important;
 	}
 	.slick-prev,
 	.slick-next {
 		color: #ffffff;
 		font-size: 16px;
-
 	}
 	&::before {
 		content: "";
@@ -41,23 +41,17 @@
 			background-color: #0a8e6a;
 		}
 
-
 		&::before {
 			transition: all 0.3s ease-in-out;
 		}
 
 		&:hover {
-
 			&.slick-next {
 				background-color: var(--fc_orange);
 			}
 
 			&.slick-prev {
 				background-color: #0a8e6a;
-			}
-
-			&::before {
-				font-size: 20px;
 			}
 		}
 	}
@@ -86,7 +80,6 @@
 				border-bottom: none;
 			}
 		}
-
 	}
 }
 

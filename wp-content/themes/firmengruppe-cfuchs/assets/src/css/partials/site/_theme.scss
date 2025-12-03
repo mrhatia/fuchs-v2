@@ -329,6 +329,8 @@ span.button,
 
 		&:hover {
 			background-color: transparent;
+			border-color: var(--fc_white);
+			color: var(--fc_white);
 		}
 	}
 
@@ -341,7 +343,7 @@ span.button,
 
 		&:hover {
 			background-color: var(--fc_transparent);
-			border-color: var(--fc_blue_3);
+			border-color: var(--fc_white);
 			color: var(--fc_white);
 		}
 	}
@@ -618,7 +620,7 @@ body {
 	.hero-split-text {
 		position: absolute;
 		top: -137px;
-		left: 0%;
+		left: 6%;
 		visibility: visible;
 		opacity: 1;
 		font-size: var(--fc_font_size_180);
@@ -1020,9 +1022,42 @@ body {
 .page-template-template-services {
 	background-color: var(--fc_color_primary);
 	color: var(--fc_white);
+
+	.blog-teaser-slider {
+		.slick-arrow {
+			&:hover {
+				color: var(--fc_black) !important;
+				&.slick-next {
+					background-color: var(--fc_white);
+				}
+
+				&.slick-prev {
+					background-color: var(--fc_white);
+				}
+			}
+		}
+	}
 	.faq-head .heading-5,
 	.faq-head .faq-number {
 		color: var(--fc_white);
+	}
+	.faq-head:hover .faq-icon {
+		background-color: var(--fc_white);
+		svg {
+			path,
+			rect {
+				fill: var(--fc_black);
+			}
+		}
+	}
+	.faq-head.active .faq-icon {
+		background-color: var(--fc_white);
+		svg {
+			path,
+			rect {
+				fill: var(--fc_black);
+			}
+		}
 	}
 	h1,
 	.heading-1,
@@ -1080,5 +1115,17 @@ body {
 	.services-block {
 		padding: var(--fc_space_128) 0;
 		box-sizing: border-box;
+	}
+	.service-single-item {
+		a,
+		a:visited {
+			&:hover {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(8px);
+				border: 1px solid #e8e8e9;
+				border-bottom: 3px solid var(--fc_orange);
+				box-shadow: 0 4px 18px rgb(255 255 255 / 5%);
+			}
+		}
 	}
 }

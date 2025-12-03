@@ -285,16 +285,8 @@
 
 @media only screen and (min-width: 1360px) and (max-width: 1500px) {
 	.section-head .hero-split-text {
-		left: -0%;
-		width: 100%;
 		line-height: 0.8;
 		top: -78px;
-	}
-}
-
-@media only screen and (min-width: 1003px) and (max-width: 1359px) {
-	.section-head .hero-split-text {
-		left: -0%;
 	}
 }
 
@@ -346,6 +338,12 @@
 }
 
 @media only screen and (max-width: 1003px) {
+	.member-popup-inner .close-icon {
+		right: 20px;
+		top: 20px;
+		width: 40px;
+		height: 40px;
+	}
 	.member-popup-inner {
 		overflow-y: scroll;
 		height: 100dvh;
@@ -358,6 +356,7 @@
 	}
 	.member-popup-left {
 		width: 100%;
+		aspect-ratio: 1/1;
 		height: max-content;
 	}
 	.member-popup-right {
