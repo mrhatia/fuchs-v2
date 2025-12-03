@@ -527,6 +527,8 @@ Mixin for transition
   --fc_gray_2: #eee;
   --fc_gray_3: #999;
   --fc_gray_4: #565969;
+  --fc_gray_5: #595959;
+  --fc_gray_6: #e8e8e9;
   --fc_blue: #001659;
   --fc_blue_1: #00a4eb;
   --fc_blue_2: #2ca8dd;
@@ -547,7 +549,7 @@ Mixin for transition
   --fc_danger: #dc3545;
   --fc_light: #f8f9fa;
   --fc_dark: #212529;
-  --fc_orange: #fe8400;
+  --fc_orange: #007857;
   --fc_orange_dark: #e27602;
   --fc_orange_1: #f2976a;
   --fc_signal: #d14b3c;
@@ -560,6 +562,7 @@ Mixin for transition
   --fc_border_3: #e0e0e0;
   --fc_border_4: #14191f;
   --fc_border_5: rgba(255, 255, 255, 0.3);
+  --fc_border_6: #595959;
   /* -------------------------------------------------
   >> Base Colors
   >> Base colors are used for essential elements
@@ -3037,6 +3040,10 @@ Mixin for transition
   opacity: 0;
   transform: translateY(40px);
 }
+.acf-block-preview .banner-content-inner .hero-split-text {
+  opacity: 0;
+  visibility: hidden;
+}
 @keyframes heroReveal {
   from {
     opacity: 0;
@@ -3053,8 +3060,9 @@ Mixin for transition
     transform: translateX(40px);
   }
   to {
-    opacity: 1;
+    opacity: 0.4;
     transform: translateX(0);
+    visibility: visible;
   }
 }
 .acf-block-preview .hero-slide-item.slick-active .hero-split-text,
@@ -5022,13 +5030,19 @@ Mixin for transition
 }
 .acf-block-preview .service-single-item a:hover,
 .acf-block-preview .service-single-item a:visited:hover {
-  background-color: var(--fc_blue_3);
-  border-color: var(--fc_blue_3);
+  background-color: var(--fc_color_primary);
+  border-bottom: 3px solid var(--fc_orange);
 }
 .acf-block-preview .service-single-item a:hover .small-text,
 .acf-block-preview .service-single-item a:hover .service-title,
 .acf-block-preview .service-single-item a:visited:hover .small-text,
 .acf-block-preview .service-single-item a:visited:hover .service-title {
+  color: var(--fc_white);
+}
+.acf-block-preview .service-single-item a:hover .small-text .heading-4,
+.acf-block-preview .service-single-item a:hover .service-title .heading-4,
+.acf-block-preview .service-single-item a:visited:hover .small-text .heading-4,
+.acf-block-preview .service-single-item a:visited:hover .service-title .heading-4 {
   color: var(--fc_white);
 }
 .acf-block-preview .service-single-item a:hover .plus-button,
@@ -5109,13 +5123,15 @@ Mixin for transition
 .acf-block-preview .image-tabs .tabbed-map-nav ul {
   gap: 40px;
 }
-.acf-block-preview .image-tabs .tabbed-map-nav ul li a, .acf-block-preview .image-tabs .tabbed-map-nav ul li a:visited {
+.acf-block-preview .image-tabs .tabbed-map-nav ul li a,
+.acf-block-preview .image-tabs .tabbed-map-nav ul li a:visited {
   color: var(--fc_blue_3);
   font-size: var(--fc_font_size_18);
   padding: 0;
   border: none;
 }
-.acf-block-preview .image-tabs .tabbed-map-nav ul li a.active, .acf-block-preview .image-tabs .tabbed-map-nav ul li a:visited.active {
+.acf-block-preview .image-tabs .tabbed-map-nav ul li a.active,
+.acf-block-preview .image-tabs .tabbed-map-nav ul li a:visited.active {
   color: var(--fc_orange);
 }
 .acf-block-preview .image-tabs .tabbed-content-single {
@@ -5180,12 +5196,14 @@ Mixin for transition
 .acf-block-preview .map-alongside-media .wp-block-media-text__content {
   padding: 0;
 }
-.acf-block-preview .map-alongside-media .wp-block-media-text__content a, .acf-block-preview .map-alongside-media .wp-block-media-text__content a:visited {
+.acf-block-preview .map-alongside-media .wp-block-media-text__content a,
+.acf-block-preview .map-alongside-media .wp-block-media-text__content a:visited {
   color: var(--fc_body_color);
   padding: 0;
   border: none;
 }
-.acf-block-preview .map-alongside-media .wp-block-media-text__content a:hover, .acf-block-preview .map-alongside-media .wp-block-media-text__content a:visited:hover {
+.acf-block-preview .map-alongside-media .wp-block-media-text__content a:hover,
+.acf-block-preview .map-alongside-media .wp-block-media-text__content a:visited:hover {
   color: var(--fc_orange);
 }
 .acf-block-preview .two-columns-content-tile {
@@ -6166,9 +6184,6 @@ Mixin for transition
   .acf-block-preview .project-info-images .project-info-single-image {
     width: 46.6%;
   }
-  .acf-block-preview .stats-column {
-    width: 25.2%;
-  }
   .acf-block-preview .counter-background {
     right: -25px;
   }
@@ -6230,7 +6245,7 @@ Mixin for transition
     width: 46.6%;
   }
   .acf-block-preview .stats-column {
-    width: 25.2%;
+    width: 24%;
   }
   .acf-block-preview .counter-background {
     right: -25px;
@@ -6546,7 +6561,6 @@ Mixin for transition
   }
   .acf-block-preview .section-head .hero-split-text {
     top: calc(-36px - var(--fc_font_size_80));
-    right: -45px;
     opacity: 0.4;
   }
   .acf-block-preview .hero-inner-slider .hero-split-text,
@@ -6614,7 +6628,6 @@ Mixin for transition
 @media only screen and (min-width: 621px) and (max-width: 747px) {
   .acf-block-preview .section-head .hero-split-text {
     top: -85px;
-    right: -25px;
     opacity: 0.4;
   }
 }

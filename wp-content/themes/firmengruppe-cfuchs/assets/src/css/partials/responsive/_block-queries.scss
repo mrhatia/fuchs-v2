@@ -38,10 +38,6 @@
 		}
 	}
 
-	.stats-column {
-		width: 25.2%;
-	}
-
 	.counter-background {
 		left: -25px;
 	}
@@ -128,7 +124,7 @@
 	}
 
 	.stats-column {
-		width: 25.2%;
+		width: 24%;
 	}
 
 	.counter-background {
@@ -543,7 +539,6 @@
 
 	.section-head .hero-split-text {
 		top: calc(-36px - var(--fc_font_size_80));
-		left: -45px;
 		opacity: 0.4;
 	}
 
@@ -642,7 +637,6 @@
 @media only screen and (min-width: 621px) and (max-width: 747px) {
 	.section-head .hero-split-text {
 		top: -85px;
-		left: -25px;
 		opacity: 0.4;
 	}
 }

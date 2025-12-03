@@ -71,6 +71,30 @@
 .ctn-green {
 	background-color: var(--fc_color_primary);
 	padding: var(--fc_space_96) 0;
+	.section-head {
+		.heading-2 {
+			color: var(--fc_white);
+		}
+	}
+
+	a.button,
+	a.button:visited,
+	span.button,
+	.is-style-mycustomstyle .wp-element-button {
+		&.orange-button {
+			--fc_theme_btn_color: var(--fc_white);
+			--fc_theme_btn_bgcolor: var(--fc_transparent);
+			--fc_button_border_color: var(--fc_transparent);
+			background-color: var(--fc_transparent);
+			border-color: var(--fc_white);
+
+			&:hover {
+				background-color: var(--fc_white);
+				border-color: var(--fc_white);
+				color: var(--fc_color_primary);
+			}
+		}
+	}
 }
 
 .ctn-orange,

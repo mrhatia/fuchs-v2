@@ -489,7 +489,6 @@ button[disabled]:hover {
 	}
 
 	.select-dropdown__button {
-
 		&:focus,
 		&:focus-visible {
 			outline-color: black !important;
@@ -658,7 +657,8 @@ body {
 	}
 
 	&.iat-image-appear:before {
-		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1)
+			forwards;
 	}
 
 	&:before {
@@ -674,7 +674,8 @@ body {
 	}
 
 	&.iat-image-appear:after {
-		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;
+		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99)
+			forwards;
 	}
 }
 
@@ -696,7 +697,12 @@ body {
 	opacity: 0;
 	transform: translateY(40px);
 }
-
+.banner-content-inner {
+	.hero-split-text {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
 @keyframes heroReveal {
 	from {
 		opacity: 0;
@@ -716,8 +722,9 @@ body {
 	}
 
 	to {
-		opacity: 1;
+		opacity: 0.4;
 		transform: translateX(0);
+		visibility: visible;
 	}
 }
 
@@ -740,19 +747,23 @@ body {
 		transform: translateY(40px);
 
 		&:nth-child(1) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s
+				forwards;
 		}
 
 		&:nth-child(2) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s
+				forwards;
 		}
 
 		&:nth-child(3) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s
+				forwards;
 		}
 
 		&:nth-child(4) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s
+				forwards;
 		}
 	}
 }
@@ -1128,7 +1139,6 @@ body {
 	}
 
 	.bottom-section-button {
-
 		a,
 		a:visited {
 			color: var(--fc_white);

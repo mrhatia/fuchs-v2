@@ -1,5 +1,4 @@
 :root {
-
 	/*-------------------------------------------------
 	>> Variables for Spaces
 	-------------------------------------------------*/
@@ -47,7 +46,6 @@
 	@include font_size(--fc_font_size_160, 160, 65);
 	@include font_size(--fc_font_size_180, 180, 70);
 
-
 	/* -------------------------------------------------
 	>> Color variables
 	------------------------------------------------- */
@@ -80,6 +78,8 @@
 	--fc_gray_2: #eee;
 	--fc_gray_3: #999;
 	--fc_gray_4: #565969;
+	--fc_gray_5: #595959;
+	--fc_gray_6: #e8e8e9;
 
 	--fc_blue: #001659;
 	--fc_blue_1: #00a4eb;
@@ -109,14 +109,12 @@
 	--fc_danger: #dc3545;
 	--fc_light: #f8f9fa;
 	--fc_dark: #212529;
-	--fc_orange: #fe8400;
+	--fc_orange: #007857;
 	--fc_orange_dark: #e27602;
 	--fc_orange_1: #f2976a;
 
-
 	--fc_signal: #d14b3c;
 	--fc_signal_bg: #fbede9;
-
 
 	--fc_color_background: #ffffff;
 	--fc_color_on_background: #565969;
@@ -128,7 +126,7 @@
 	--fc_border_3: #e0e0e0;
 	--fc_border_4: #14191f;
 	--fc_border_5: rgba(255, 255, 255, 0.3);
-
+	--fc_border_6: #595959;
 
 	/* -------------------------------------------------
 	>> Base Colors
@@ -167,7 +165,6 @@
 	--fc_list_ul_marker_color: var(--fc_color_primary);
 	--fc_list_ol_marker_color: var(--fc_color_primary);
 	--fc_list_marker_bgcolor: var(--fc_border_4);
-
 
 	// Blockquote Colors
 	--fc_blockquote_color: var(--fc_regular_text);
@@ -344,7 +341,6 @@
 	--fc_topbar_bgcolor: var(--fc_color_primary);
 	--fc_topbar_color: var(--fc_white);
 	--fc_topbar_link_color: var(--fc_white);
-
 
 	// Footer
 	--fc_footer_bgcolor: var(--fc_dark_text);

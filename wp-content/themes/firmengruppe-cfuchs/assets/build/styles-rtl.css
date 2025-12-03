@@ -456,6 +456,8 @@ Mixin for transition
   --fc_gray_2: #eee;
   --fc_gray_3: #999;
   --fc_gray_4: #565969;
+  --fc_gray_5: #595959;
+  --fc_gray_6: #e8e8e9;
   --fc_blue: #001659;
   --fc_blue_1: #00a4eb;
   --fc_blue_2: #2ca8dd;
@@ -476,7 +478,7 @@ Mixin for transition
   --fc_danger: #dc3545;
   --fc_light: #f8f9fa;
   --fc_dark: #212529;
-  --fc_orange: #fe8400;
+  --fc_orange: #007857;
   --fc_orange_dark: #e27602;
   --fc_orange_1: #f2976a;
   --fc_signal: #d14b3c;
@@ -489,6 +491,7 @@ Mixin for transition
   --fc_border_3: #e0e0e0;
   --fc_border_4: #14191f;
   --fc_border_5: rgba(255, 255, 255, 0.3);
+  --fc_border_6: #595959;
   /* -------------------------------------------------
   >> Base Colors
   >> Base colors are used for essential elements
@@ -3328,7 +3331,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  width: 240px;
+  width: 220px;
   height: 110px;
   padding: 0;
   z-index: 100001;
@@ -3358,12 +3361,13 @@ header {
 }
 
 .header-section {
-  background-color: var(--fc_color_primary);
+  background-color: var(--fc_white);
   z-index: 9;
   width: 100%;
   position: fixed;
   transition: all 0.3s ease-in-out;
   top: var(--fc_header-top-default);
+  border: 1px solid var(--fc_gray_6);
 }
 .header-section.shrink {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
@@ -3425,7 +3429,7 @@ header {
   display: flex;
   align-items: center;
   gap: 30px;
-  border-left: 1px solid var(--fc_border_5);
+  border-left: 1px solid var(--fc_gray_6);
 }
 .header-nav ul {
   margin: 0;
@@ -3441,7 +3445,7 @@ header {
   display: inline-block;
   position: relative;
   line-height: 1;
-  border-left: 1px solid var(--fc_border_5);
+  border-left: 1px solid var(--fc_gray_6);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -3455,7 +3459,7 @@ header {
   line-height: 1;
   border: 0;
   position: relative;
-  color: var(--fc_white);
+  color: var(--fc_gray_5);
   font-size: var(--fc_font_size_18);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: 600;
@@ -3466,7 +3470,7 @@ header {
   box-sizing: border-box;
 }
 .header-nav ul li:nth-child(1) {
-  border-right: 1px solid var(--fc_border_5);
+  border-right: 1px solid var(--fc_gray_6);
 }
 .header-nav ul li span.menu-link {
   cursor: pointer;
@@ -3484,7 +3488,7 @@ header {
 .header-nav ul li.current-menu-item > a, .header-nav ul li.current-menu-parent > a,
 .header-nav ul li a:hover,
 .header-nav ul li span.menu-link:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--fc_color_primary);
 }
 .header-nav ul li.current-menu-item > a::after, .header-nav ul li.current-menu-parent > a::after,
 .header-nav ul li a:hover::after,
@@ -3578,7 +3582,7 @@ header {
   position: fixed;
   overflow: hidden;
   height: 91px;
-  top: 79px;
+  top: 82px;
   left: 0;
   right: 0;
   width: 100%;
@@ -3619,8 +3623,7 @@ header {
   margin-bottom: 0;
 }
 .search-form-new .search-inner-content {
-  max-width: 1300px;
-  width: 90%;
+  width: 94%;
   margin: auto;
   position: relative;
   display: flex;
@@ -3670,7 +3673,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: invert(1);
+  filter: brightness(0) saturate(100%) invert(33%) sepia(2%) saturate(3%) hue-rotate(335deg) brightness(102%) contrast(91%);
 }
 
 /*-------------------------------------------------
@@ -4168,7 +4171,6 @@ header {
   top: -116px;
   right: -6%;
   visibility: visible;
-  opacity: 1;
   font-size: var(--fc_font_size_180);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
@@ -4994,6 +4996,27 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .ctn-green {
   background-color: var(--fc_color_primary);
   padding: var(--fc_space_96) 0;
+}
+.ctn-green .section-head .heading-2 {
+  color: var(--fc_white);
+}
+.ctn-green a.button.orange-button,
+.ctn-green a.button:visited.orange-button,
+.ctn-green span.button.orange-button,
+.ctn-green .is-style-mycustomstyle .wp-element-button.orange-button {
+  --fc_theme_btn_color: var(--fc_white);
+  --fc_theme_btn_bgcolor: var(--fc_transparent);
+  --fc_button_border_color: var(--fc_transparent);
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_white);
+}
+.ctn-green a.button.orange-button:hover,
+.ctn-green a.button:visited.orange-button:hover,
+.ctn-green span.button.orange-button:hover,
+.ctn-green .is-style-mycustomstyle .wp-element-button.orange-button:hover {
+  background-color: var(--fc_white);
+  border-color: var(--fc_white);
+  color: var(--fc_color_primary);
 }
 
 .ctn-orange .stats-column .small-text,
@@ -5848,6 +5871,11 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   transform: translateY(40px);
 }
 
+.banner-content-inner .hero-split-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
 @keyframes heroReveal {
   from {
     opacity: 0;
@@ -5864,8 +5892,9 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     transform: translateX(40px);
   }
   to {
-    opacity: 1;
+    opacity: 0.4;
     transform: translateX(0);
+    visibility: visible;
   }
 }
 .hero-slide-item.slick-active .hero-split-text,
@@ -8231,13 +8260,19 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 }
 .service-single-item a:hover,
 .service-single-item a:visited:hover {
-  background-color: var(--fc_blue_3);
-  border-color: var(--fc_blue_3);
+  background-color: var(--fc_color_primary);
+  border-bottom: 3px solid var(--fc_orange);
 }
 .service-single-item a:hover .small-text,
 .service-single-item a:hover .service-title,
 .service-single-item a:visited:hover .small-text,
 .service-single-item a:visited:hover .service-title {
+  color: var(--fc_white);
+}
+.service-single-item a:hover .small-text .heading-4,
+.service-single-item a:hover .service-title .heading-4,
+.service-single-item a:visited:hover .small-text .heading-4,
+.service-single-item a:visited:hover .service-title .heading-4 {
   color: var(--fc_white);
 }
 .service-single-item a:hover .plus-button,
@@ -8323,13 +8358,15 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .image-tabs .tabbed-map-nav ul {
   gap: 40px;
 }
-.image-tabs .tabbed-map-nav ul li a, .image-tabs .tabbed-map-nav ul li a:visited {
+.image-tabs .tabbed-map-nav ul li a,
+.image-tabs .tabbed-map-nav ul li a:visited {
   color: var(--fc_blue_3);
   font-size: var(--fc_font_size_18);
   padding: 0;
   border: none;
 }
-.image-tabs .tabbed-map-nav ul li a.active, .image-tabs .tabbed-map-nav ul li a:visited.active {
+.image-tabs .tabbed-map-nav ul li a.active,
+.image-tabs .tabbed-map-nav ul li a:visited.active {
   color: var(--fc_orange);
 }
 .image-tabs .tabbed-content-single {
@@ -8396,12 +8433,14 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .map-alongside-media .wp-block-media-text__content {
   padding: 0;
 }
-.map-alongside-media .wp-block-media-text__content a, .map-alongside-media .wp-block-media-text__content a:visited {
+.map-alongside-media .wp-block-media-text__content a,
+.map-alongside-media .wp-block-media-text__content a:visited {
   color: var(--fc_body_color);
   padding: 0;
   border: none;
 }
-.map-alongside-media .wp-block-media-text__content a:hover, .map-alongside-media .wp-block-media-text__content a:visited:hover {
+.map-alongside-media .wp-block-media-text__content a:hover,
+.map-alongside-media .wp-block-media-text__content a:visited:hover {
   color: var(--fc_orange);
 }
 
@@ -8789,9 +8828,6 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   .project-info-images .project-info-single-image {
     width: 46.6%;
   }
-  .stats-column {
-    width: 25.2%;
-  }
   .counter-background {
     right: -25px;
   }
@@ -8853,7 +8889,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
     width: 46.6%;
   }
   .stats-column {
-    width: 25.2%;
+    width: 24%;
   }
   .counter-background {
     right: -25px;
@@ -9169,7 +9205,6 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   }
   .section-head .hero-split-text {
     top: calc(-36px - var(--fc_font_size_80));
-    right: -45px;
     opacity: 0.4;
   }
   .hero-inner-slider .hero-split-text,
@@ -9237,7 +9272,6 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 @media only screen and (min-width: 621px) and (max-width: 747px) {
   .section-head .hero-split-text {
     top: -85px;
-    right: -25px;
     opacity: 0.4;
   }
 }
