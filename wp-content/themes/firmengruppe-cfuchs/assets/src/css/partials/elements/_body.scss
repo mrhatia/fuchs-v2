@@ -5,7 +5,6 @@
 ------------------------------------------------- */
 
 body {
-
 	@include font(sour, reg, family weight);
 	transition: all 0.3s ease-in-out;
 	position: relative;
@@ -13,11 +12,11 @@ body {
 	color: var(--fc_body_color);
 	background-color: var(--fc_body_bg);
 	line-height: 1.5;
-
+	overflow: clip;
+	overflow-y: auto;
 	&.have-topbar {
 		padding-top: var(--fc_header-height);
 	}
-
 }
 
 p {
@@ -28,7 +27,6 @@ p {
 	color: var(--fc_highlight_color);
 	background-color: var(--fc_highlight_bg);
 }
-
 
 // strong {
 // 	color: var(--fc_text_strong) !important;

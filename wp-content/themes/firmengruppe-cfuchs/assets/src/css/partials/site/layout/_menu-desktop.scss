@@ -61,7 +61,7 @@
 				@include font(sour, sbold);
 				letter-spacing: -0.02em;
 				line-height: 1.33em;
-
+				text-transform: capitalize;
 				padding: 28px;
 				box-sizing: border-box;
 			}
@@ -203,7 +203,7 @@
 	background-color: var(--fc_color_on_primary);
 	display: none;
 	border-top: 1px solid var(--fc_border_5);
-	border-bottom: 1px solid var(--fc_border_5);
+	border-bottom: 1px solid var(--fc_gray_6);
 	pointer-events: none;
 
 	input {
@@ -292,7 +292,7 @@
 
 .logged-in.admin-bar {
 	.search-form-new {
-		top: 100px;
+		top: 114px;
 	}
 }
 .search-icon {

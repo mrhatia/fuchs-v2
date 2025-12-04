@@ -1,8 +1,5 @@
 .post-box {
-
 	.post-box-img {
-
-
 		a {
 			height: 100%;
 			display: inline-block;
@@ -15,7 +12,6 @@
 		width: 100%;
 		overflow: hidden;
 
-
 		.post-featured-thumb {
 			height: 100%;
 			width: 100%;
@@ -26,12 +22,10 @@
 		margin-bottom: 0;
 	}
 
-
 	.post-box-img:hover img {
 		transform: scale(1.05);
 	}
 }
-
 
 .post-content {
 	margin-top: 15px;
@@ -53,7 +47,6 @@
 }
 
 .have-two-columns {
-
 	.post-box-img,
 	.post-archive-box-img {
 		img {
@@ -63,7 +56,6 @@
 }
 
 .post-box-title {
-
 	h2 a,
 	h4 a {
 		display: -webkit-box;
@@ -83,9 +75,7 @@
 	}
 }
 
-
 .post-box.featured-post {
-
 	.post-box-inner {
 		display: flex;
 		align-items: center;
@@ -139,29 +129,24 @@
 	a {
 		text-decoration: none;
 		border-bottom: none;
-		margin-left: 5px;
+		margin-left: 0px;
 	}
 }
 
 .post-box-excerpt {
-
 	p {
 		margin-bottom: 15px;
 	}
 }
 
 .hero-ctn {
-
 	.post-box-meta {
 		margin-bottom: 15px;
 	}
 }
 
-
 .post-tag {
-
 	a {
-
 		@include font(sour, reg);
 
 		margin-bottom: 8px;
@@ -178,7 +163,6 @@
 		}
 	}
 }
-
 
 // blog nav
 
@@ -210,13 +194,12 @@
 	}
 }
 
-
 // blog resources
 .resources-post-box,
 .post-archive-box-img {
 	border: 0;
 	// overflow: hidden;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 
 	.post-image a {
 		height: 100%;
@@ -230,7 +213,6 @@
 }
 
 .featured-post {
-
 	.rc-post-img {
 		width: 47%;
 		min-height: 400px;
@@ -278,9 +260,7 @@
 	}
 }
 
-
 .post-archive-box-title {
-
 	h4,
 	h4 a {
 		color: var(--fc_body_color);

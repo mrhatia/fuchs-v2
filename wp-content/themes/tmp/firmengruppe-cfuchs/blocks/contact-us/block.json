@@ -1,0 +1,24 @@
+{
+	"name": "acf/contact-us",
+	"title": "Contact Us",
+	"description": "A custom Contact Us block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["contact-us"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-contact-us.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "contact-us-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

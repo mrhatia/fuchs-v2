@@ -1,0 +1,24 @@
+{
+	"name": "acf/cta-section",
+	"title": "Call To Action",
+	"description": "A custom call to action block.",
+	"category": "theme-blocks",
+	"icon": "cta-section",
+	"keywords": ["cta-section"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-cta-section.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "cta-section-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

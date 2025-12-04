@@ -651,6 +651,24 @@
 }
 
 @media only screen and (max-width: 747px) {
+	.map-alongside-media {
+		row-gap: 30px;
+		.wp-block-media-text__content {
+			width: 100%;
+		}
+	}
+	figure.wp-block-media-text__media {
+		width: 100%;
+	}
+	.hero-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		.button {
+			width: 100%;
+			margin: 0;
+		}
+	}
 	.single-image-card {
 		aspect-ratio: 340/340;
 		.single-image {

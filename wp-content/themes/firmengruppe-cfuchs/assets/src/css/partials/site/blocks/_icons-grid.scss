@@ -1,6 +1,7 @@
 .icons-grid {
-
-
+	.icon {
+		margin-bottom: 10px;
+	}
 	.kicker {
 		font-size: 12px;
 		padding-top: 10px;
@@ -11,6 +12,7 @@
 	}
 
 	p {
+		font-size: var(--fc_font_size_16);
 		margin-top: 10px;
 		margin-bottom: 0;
 	}

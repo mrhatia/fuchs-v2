@@ -1,5 +1,6 @@
 .two-columns-content-tile {
-	padding: calc(var(--fc_space_72) - 4px) calc(var(--fc_space_72) + 5px) calc(var(--fc_space_72) + 2px) calc(var(--fc_space_72) + 6px);
+	padding: calc(var(--fc_space_72) - 4px) calc(var(--fc_space_72) + 5px)
+		calc(var(--fc_space_72) + 2px) calc(var(--fc_space_72) + 6px);
 	box-sizing: border-box;
 	position: relative;
 	border-radius: 12px;
@@ -10,6 +11,9 @@
 		color: var(--fc_white);
 	}
 
+	.columns-content-tile-title {
+		font-size: var(--fc_font_size_30);
+	}
 	ol {
 		padding-left: 0;
 

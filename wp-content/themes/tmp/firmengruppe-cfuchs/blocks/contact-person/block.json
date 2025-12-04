@@ -1,0 +1,24 @@
+{
+	"name": "acf/contact-person",
+	"title": "Contact Person",
+	"description": "A custom contact Person block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["contact-person"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-contact-person.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "contact-person-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

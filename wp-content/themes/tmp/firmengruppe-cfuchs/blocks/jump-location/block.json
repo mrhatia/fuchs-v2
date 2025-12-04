@@ -1,0 +1,17 @@
+{
+	"name": "acf/jump-location",
+	"title": "Jump Location",
+	"description": "A custom jump location block.",
+	"category": "theme-blocks",
+	"icon": "jumplink",
+	"keywords": ["'jump','location"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-jump-location.php"
+	},
+
+	"align": "full"
+}

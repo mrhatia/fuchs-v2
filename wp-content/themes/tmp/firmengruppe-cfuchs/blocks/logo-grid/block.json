@@ -1,0 +1,24 @@
+{
+	"name": "acf/logo-grid",
+	"title": "Logo Grid",
+	"description": "A custom logo grid block.",
+	"category": "theme-blocks",
+	"icon": "logo-grid",
+	"keywords": ["logo-grid"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-logo-grid.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "logo-grid-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}
