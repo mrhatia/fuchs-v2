@@ -5030,6 +5030,10 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .ctn-green .stats-column span {
   color: var(--fc_white);
 }
+.ctn-orange *,
+.ctn-green * {
+  color: var(--fc_white);
+}
 .ctn-orange .stats-variation .stats-column .stats-number::before,
 .ctn-green .stats-variation .stats-column .stats-number::before {
   border-color: var(--fc_white);
@@ -8484,6 +8488,9 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   border-radius: 12px;
   background-color: var(--fc_color_primary);
   overflow: hidden;
+}
+.two-columns-content-tile * {
+  color: var(--fc_white);
 }
 .two-columns-content-tile ol {
   padding-left: 0;

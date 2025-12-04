@@ -6,9 +6,10 @@
 	background-color: var(--fc_color_primary);
 	overflow: hidden;
 
-	// * {
-	// 	color: var(--fc_white);
-	// }
+	* {
+		color: var(--fc_white);
+	}
+
 	ol {
 		padding-left: 0;
 

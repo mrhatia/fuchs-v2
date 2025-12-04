@@ -5241,6 +5241,9 @@ Mixin for transition
   background-color: var(--fc_color_primary);
   overflow: hidden;
 }
+.acf-block-preview .two-columns-content-tile * {
+  color: var(--fc_white);
+}
 .acf-block-preview .two-columns-content-tile ol {
   padding-right: 0;
 }
