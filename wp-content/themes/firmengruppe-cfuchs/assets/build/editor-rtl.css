@@ -3276,132 +3276,132 @@ Mixin for transition
     font-size: 15px;
   }
 }
-.acf-block-preview .page-template-template-services {
+.acf-block-preview .single-service.service-detail-single {
   background-color: var(--fc_color_primary);
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .blog-teaser-slider .slick-arrow:hover {
-  color: var(--fc_black) !important;
+.acf-block-preview .single-service.service-detail-single .blog-teaser-slider .slick-arrow:hover {
+  color: var(--fc_color_primary) !important;
 }
-.acf-block-preview .page-template-template-services .blog-teaser-slider .slick-arrow:hover.slick-next {
+.acf-block-preview .single-service.service-detail-single .blog-teaser-slider .slick-arrow:hover.slick-next {
   background-color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .blog-teaser-slider .slick-arrow:hover.slick-prev {
+.acf-block-preview .single-service.service-detail-single .blog-teaser-slider .slick-arrow:hover.slick-prev {
   background-color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .faq-icon svg path,
-.acf-block-preview .page-template-template-services .faq-icon svg rect {
+.acf-block-preview .single-service.service-detail-single .faq-icon svg path,
+.acf-block-preview .single-service.service-detail-single .faq-icon svg rect {
   fill: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .faq-head .heading-5,
-.acf-block-preview .page-template-template-services .faq-head .faq-number {
+.acf-block-preview .single-service.service-detail-single .faq-head .heading-5,
+.acf-block-preview .single-service.service-detail-single .faq-head .faq-number {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .faq-head:hover .faq-icon, .acf-block-preview .page-template-template-services .faq-head.active .faq-icon {
+.acf-block-preview .single-service.service-detail-single .faq-head:hover .faq-icon, .acf-block-preview .single-service.service-detail-single .faq-head.active .faq-icon {
   background-color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .faq-head:hover .faq-icon svg path,
-.acf-block-preview .page-template-template-services .faq-head:hover .faq-icon svg rect, .acf-block-preview .page-template-template-services .faq-head.active .faq-icon svg path,
-.acf-block-preview .page-template-template-services .faq-head.active .faq-icon svg rect {
+.acf-block-preview .single-service.service-detail-single .faq-head:hover .faq-icon svg path,
+.acf-block-preview .single-service.service-detail-single .faq-head:hover .faq-icon svg rect, .acf-block-preview .single-service.service-detail-single .faq-head.active .faq-icon svg path,
+.acf-block-preview .single-service.service-detail-single .faq-head.active .faq-icon svg rect {
   fill: var(--fc_black);
 }
-.acf-block-preview .page-template-template-services h1,
-.acf-block-preview .page-template-template-services .heading-1,
-.acf-block-preview .page-template-template-services h2,
-.acf-block-preview .page-template-template-services .heading-2,
-.acf-block-preview .page-template-template-services h3,
-.acf-block-preview .page-template-template-services .heading-3,
-.acf-block-preview .page-template-template-services h4,
-.acf-block-preview .page-template-template-services .heading-4,
-.acf-block-preview .page-template-template-services h5,
-.acf-block-preview .page-template-template-services .heading-5,
-.acf-block-preview .page-template-template-services h6,
-.acf-block-preview .page-template-template-services .heading-6,
-.acf-block-preview .page-template-template-services .medium-heading {
+.acf-block-preview .single-service.service-detail-single h1,
+.acf-block-preview .single-service.service-detail-single .heading-1,
+.acf-block-preview .single-service.service-detail-single h2,
+.acf-block-preview .single-service.service-detail-single .heading-2,
+.acf-block-preview .single-service.service-detail-single h3,
+.acf-block-preview .single-service.service-detail-single .heading-3,
+.acf-block-preview .single-service.service-detail-single h4,
+.acf-block-preview .single-service.service-detail-single .heading-4,
+.acf-block-preview .single-service.service-detail-single h5,
+.acf-block-preview .single-service.service-detail-single .heading-5,
+.acf-block-preview .single-service.service-detail-single h6,
+.acf-block-preview .single-service.service-detail-single .heading-6,
+.acf-block-preview .single-service.service-detail-single .medium-heading {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services a.button.orange-button,
-.acf-block-preview .page-template-template-services a.button:visited.orange-button,
-.acf-block-preview .page-template-template-services span.button.orange-button,
-.acf-block-preview .page-template-template-services .is-style-mycustomstyle .wp-element-button.orange-button {
+.acf-block-preview .single-service.service-detail-single a.button.orange-button,
+.acf-block-preview .single-service.service-detail-single a.button:visited.orange-button,
+.acf-block-preview .single-service.service-detail-single span.button.orange-button,
+.acf-block-preview .single-service.service-detail-single .is-style-mycustomstyle .wp-element-button.orange-button {
   --fc_theme_btn_color: var(--fc_white);
   --fc_theme_btn_bgcolor: var(--fc_transparent);
   --fc_button_border_color: var(--fc_transparent);
   background-color: var(--fc_transparent);
   border-color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services a.button.orange-button:hover,
-.acf-block-preview .page-template-template-services a.button:visited.orange-button:hover,
-.acf-block-preview .page-template-template-services span.button.orange-button:hover,
-.acf-block-preview .page-template-template-services .is-style-mycustomstyle .wp-element-button.orange-button:hover {
+.acf-block-preview .single-service.service-detail-single a.button.orange-button:hover,
+.acf-block-preview .single-service.service-detail-single a.button:visited.orange-button:hover,
+.acf-block-preview .single-service.service-detail-single span.button.orange-button:hover,
+.acf-block-preview .single-service.service-detail-single .is-style-mycustomstyle .wp-element-button.orange-button:hover {
   background-color: var(--fc_white);
   border-color: var(--fc_white);
-  color: var(--fc_color_primary);
+  color: var(--fc_color_primary) !important;
 }
-.acf-block-preview .page-template-template-services .member-popup {
+.acf-block-preview .single-service.service-detail-single .member-popup {
   color: var(--fc_body_color);
 }
-.acf-block-preview .page-template-template-services .member-popup h1,
-.acf-block-preview .page-template-template-services .member-popup .heading-1,
-.acf-block-preview .page-template-template-services .member-popup h2,
-.acf-block-preview .page-template-template-services .member-popup .heading-2,
-.acf-block-preview .page-template-template-services .member-popup h3,
-.acf-block-preview .page-template-template-services .member-popup .heading-3,
-.acf-block-preview .page-template-template-services .member-popup h4,
-.acf-block-preview .page-template-template-services .member-popup .heading-4,
-.acf-block-preview .page-template-template-services .member-popup h5,
-.acf-block-preview .page-template-template-services .member-popup .heading-5,
-.acf-block-preview .page-template-template-services .member-popup h6,
-.acf-block-preview .page-template-template-services .member-popup .heading-6,
-.acf-block-preview .page-template-template-services .member-popup .medium-heading {
+.acf-block-preview .single-service.service-detail-single .member-popup h1,
+.acf-block-preview .single-service.service-detail-single .member-popup .heading-1,
+.acf-block-preview .single-service.service-detail-single .member-popup h2,
+.acf-block-preview .single-service.service-detail-single .member-popup .heading-2,
+.acf-block-preview .single-service.service-detail-single .member-popup h3,
+.acf-block-preview .single-service.service-detail-single .member-popup .heading-3,
+.acf-block-preview .single-service.service-detail-single .member-popup h4,
+.acf-block-preview .single-service.service-detail-single .member-popup .heading-4,
+.acf-block-preview .single-service.service-detail-single .member-popup h5,
+.acf-block-preview .single-service.service-detail-single .member-popup .heading-5,
+.acf-block-preview .single-service.service-detail-single .member-popup h6,
+.acf-block-preview .single-service.service-detail-single .member-popup .heading-6,
+.acf-block-preview .single-service.service-detail-single .member-popup .medium-heading {
   color: var(--fc_color_primary);
 }
-.acf-block-preview .page-template-template-services .blog-teaser-slider::before {
+.acf-block-preview .single-service.service-detail-single .blog-teaser-slider::before {
   background: var(--fc_color_primary);
 }
-.acf-block-preview .page-template-template-services .section-head .hero-split-text {
+.acf-block-preview .single-service.service-detail-single .section-head .hero-split-text {
   color: rgba(255, 255, 255, 0.3);
 }
-.acf-block-preview .page-template-template-services .ctn-green {
+.acf-block-preview .single-service.service-detail-single .ctn-green {
   padding: 0;
 }
-.acf-block-preview .page-template-template-services .resources-post-box,
-.acf-block-preview .page-template-template-services .post-archive-box-img {
+.acf-block-preview .single-service.service-detail-single .resources-post-box,
+.acf-block-preview .single-service.service-detail-single .post-archive-box-img {
   border: 0;
   margin-bottom: 20px;
 }
-.acf-block-preview .page-template-template-services .post-box-meta a {
+.acf-block-preview .single-service.service-detail-single .post-box-meta a {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .post-archive-box-title h4 a {
+.acf-block-preview .single-service.service-detail-single .post-archive-box-title h4 a {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .service-single-item a .small-text,
-.acf-block-preview .page-template-template-services .service-single-item a:visited .small-text {
+.acf-block-preview .single-service.service-detail-single .service-single-item a .small-text,
+.acf-block-preview .single-service.service-detail-single .service-single-item a:visited .small-text {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .service-single-item a .plus-button,
-.acf-block-preview .page-template-template-services .service-single-item a:visited .plus-button {
+.acf-block-preview .single-service.service-detail-single .service-single-item a .plus-button,
+.acf-block-preview .single-service.service-detail-single .service-single-item a:visited .plus-button {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .bottom-section-button a,
-.acf-block-preview .page-template-template-services .bottom-section-button a:visited {
+.acf-block-preview .single-service.service-detail-single .bottom-section-button a,
+.acf-block-preview .single-service.service-detail-single .bottom-section-button a:visited {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .bottom-section-button a span,
-.acf-block-preview .page-template-template-services .bottom-section-button a:visited span {
+.acf-block-preview .single-service.service-detail-single .bottom-section-button a span,
+.acf-block-preview .single-service.service-detail-single .bottom-section-button a:visited span {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .services-block {
+.acf-block-preview .single-service.service-detail-single .services-block {
   padding: var(--fc_space_128) 0;
   box-sizing: border-box;
 }
-.acf-block-preview .page-template-template-services .service-single-item a,
-.acf-block-preview .page-template-template-services .service-single-item a:visited {
+.acf-block-preview .single-service.service-detail-single .service-single-item a,
+.acf-block-preview .single-service.service-detail-single .service-single-item a:visited {
   border-bottom: 3px solid var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .service-single-item a:hover,
-.acf-block-preview .page-template-template-services .service-single-item a:visited:hover {
+.acf-block-preview .single-service.service-detail-single .service-single-item a:hover,
+.acf-block-preview .single-service.service-detail-single .service-single-item a:visited:hover {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -5240,9 +5240,6 @@ Mixin for transition
   border-radius: 12px;
   background-color: var(--fc_color_primary);
   overflow: hidden;
-}
-.acf-block-preview .two-columns-content-tile * {
-  color: var(--fc_white);
 }
 .acf-block-preview .two-columns-content-tile ol {
   padding-right: 0;

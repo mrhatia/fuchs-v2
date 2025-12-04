@@ -53,15 +53,18 @@
 			}
 		}
 	}
+
 	background-color: var(--fc_white);
 	padding: var(--fc_space_96) 0;
+
 	.section-head {
 		.hero-split-text {
 			color: rgb(0 0 0 / 10%) !important;
 			z-index: 0;
 		}
+
 		.heading-2 {
-			color: var(--fc_orange);
+			color: var(--fc_orange) !important;
 			position: relative;
 			z-index: 2;
 		}
@@ -71,6 +74,7 @@
 .ctn-green {
 	background-color: var(--fc_color_primary);
 	padding: var(--fc_space_96) 0;
+
 	.section-head {
 		.heading-2 {
 			color: var(--fc_white);
@@ -101,15 +105,15 @@
 .ctn-green {
 	.logo-item-single {
 		img {
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
-				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-					&:nth-child(2) {
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
-				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-		}
+			&:nth-child(2) {
+
+				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+			}
 		}
 	}
+
 	.stats-column .small-text {
 		color: var(--fc_white);
 	}
@@ -118,9 +122,9 @@
 		color: var(--fc_white);
 	}
 
-	* {
-		color: var(--fc_white);
-	}
+	// * {
+	// 	color: var(--fc_white);
+	// }
 
 	.stats-variation .stats-column .stats-number::before {
 		// background-color: var(--fc_white);

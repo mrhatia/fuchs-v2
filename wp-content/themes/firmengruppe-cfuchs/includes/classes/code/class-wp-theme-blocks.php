@@ -62,6 +62,7 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'theme-blockquote' );
 		self::register_acf_block( 'media-collage' );
 		self::register_acf_block( 'media-with-map' );
+		self::register_acf_block( 'download-pdf' );
 		self::register_acf_block( 'team' );
 		// Register a block - AcfBlock.
 		self::register_acf_block(

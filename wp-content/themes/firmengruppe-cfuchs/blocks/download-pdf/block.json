@@ -1,0 +1,24 @@
+{
+	"name": "acf/download-pdf",
+	"title": "Download PDF",
+	"description": "A custom Download PDF block.",
+	"category": "theme-blocks",
+	"icon": "download-pdf",
+	"keywords": ["download-pdf"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-download-pdf.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "download-pdf-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

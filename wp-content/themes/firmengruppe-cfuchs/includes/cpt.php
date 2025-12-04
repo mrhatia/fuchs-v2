@@ -42,6 +42,25 @@ new WP_Theme_CPT(
 new WP_Theme_CPT(
 	array(
 		'labels'       => array(
+			'singular_capital'   => 'Service',
+			'plural_capital'     => 'Services',
+			'singular_lowercase' => 'service',
+			'plural_lowercase'   => 'services',
+			// CPT Slug & Name.
+			'register_key'       => 'service',
+			'slug'               => 'service',
+		),
+		'supports'     => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt' ),
+		'menu_icon'    => 'dashicons-format-quote',
+		'public'       => true,
+		'show_in_menu' => true,
+		'show_ui'      => true,
+	)
+);
+
+new WP_Theme_CPT(
+	array(
+		'labels'       => array(
 			'singular_capital'   => 'Team',
 			'plural_capital'     => 'Teams',
 			'singular_lowercase' => 'team',
