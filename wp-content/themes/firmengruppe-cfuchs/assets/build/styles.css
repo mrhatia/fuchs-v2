@@ -3995,9 +3995,6 @@ header {
   }
 }
 @media (max-width: 1003px) and (max-width: 747px) {
-  .header-section {
-    background-color: var(--fc_color_primary);
-  }
   header .nav-container {
     width: 90%;
   }
@@ -4746,9 +4743,10 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 >> Styles for footer
 -------------------------------------------------*/
 .footer-ctn {
-  background-color: #027757;
-  padding: 40px 0 0;
+  background-color: var(--fc_white);
+  padding: var(--fc_space_72) 0 0;
   box-sizing: border-box;
+  border-top: 1px solid var(--fc_gray_6);
 }
 .footer-ctn h1,
 .footer-ctn h2,
@@ -4759,7 +4757,7 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .footer-ctn p,
 .footer-ctn ul,
 .footer-ctn a {
-  color: var(--fc_footer_color);
+  color: var(--fc_color_primary);
 }
 
 .footer-logo {
@@ -4787,7 +4785,7 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   font-size: var(--fc_font_size_18);
 }
 .footer-widgets .social-icons svg path {
-  fill: #ffffff;
+  fill: #007857;
 }
 
 .footer-nav ul {
@@ -4854,7 +4852,7 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 }
 
 .copy-right {
-  color: var(--fc_copyright_color);
+  color: var(--fc_color_primary);
   font-size: var(--copy-right);
 }
 
@@ -4880,7 +4878,7 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .legal-nav ul li a:visited {
   line-height: 1;
   padding-bottom: 2px;
-  color: var(--fc_legal_nav_color);
+  color: var(--fc_black_1);
   position: relative;
   display: block;
   font-size: var(--fc_font_size_18);
@@ -4925,9 +4923,6 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   width: 30px;
   height: 30px;
   margin-right: 20px;
-}
-.social-icons a:hover, .social-icons a:focus-visible {
-  background-color: var(--fc_orange);
 }
 
 .social-icons svg {
@@ -5019,6 +5014,14 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   color: var(--fc_color_primary);
 }
 
+.ctn-orange .logo-item-single img,
+.ctn-green .logo-item-single img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.ctn-orange .logo-item-single img:nth-child(2),
+.ctn-green .logo-item-single img:nth-child(2) {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
 .ctn-orange .stats-column .small-text,
 .ctn-green .stats-column .small-text {
   color: var(--fc_white);
@@ -5060,6 +5063,13 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 }
 .ctn-blue-shape .heading-2 {
   color: var(--fc_white);
+}
+
+.ctn-white-overlap .wrapper {
+  background: var(--fc_white);
+  margin-bottom: calc(-1 * var(--fc_space_200));
+  position: relative;
+  padding: var(--fc_space_72) 0;
 }
 
 /*-------------------------------------------------
@@ -6126,21 +6136,19 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .page-template-template-services .blog-teaser-slider .slick-arrow:hover.slick-prev {
   background-color: var(--fc_white);
 }
+.page-template-template-services .faq-icon svg path,
+.page-template-template-services .faq-icon svg rect {
+  fill: var(--fc_white);
+}
 .page-template-template-services .faq-head .heading-5,
 .page-template-template-services .faq-head .faq-number {
   color: var(--fc_white);
 }
-.page-template-template-services .faq-head:hover .faq-icon {
+.page-template-template-services .faq-head:hover .faq-icon, .page-template-template-services .faq-head.active .faq-icon {
   background-color: var(--fc_white);
 }
 .page-template-template-services .faq-head:hover .faq-icon svg path,
-.page-template-template-services .faq-head:hover .faq-icon svg rect {
-  fill: var(--fc_black);
-}
-.page-template-template-services .faq-head.active .faq-icon {
-  background-color: var(--fc_white);
-}
-.page-template-template-services .faq-head.active .faq-icon svg path,
+.page-template-template-services .faq-head:hover .faq-icon svg rect, .page-template-template-services .faq-head.active .faq-icon svg path,
 .page-template-template-services .faq-head.active .faq-icon svg rect {
   fill: var(--fc_black);
 }
@@ -6158,6 +6166,24 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .page-template-template-services .heading-6,
 .page-template-template-services .medium-heading {
   color: var(--fc_white);
+}
+.page-template-template-services a.button.orange-button,
+.page-template-template-services a.button:visited.orange-button,
+.page-template-template-services span.button.orange-button,
+.page-template-template-services .is-style-mycustomstyle .wp-element-button.orange-button {
+  --fc_theme_btn_color: var(--fc_white);
+  --fc_theme_btn_bgcolor: var(--fc_transparent);
+  --fc_button_border_color: var(--fc_transparent);
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_white);
+}
+.page-template-template-services a.button.orange-button:hover,
+.page-template-template-services a.button:visited.orange-button:hover,
+.page-template-template-services span.button.orange-button:hover,
+.page-template-template-services .is-style-mycustomstyle .wp-element-button.orange-button:hover {
+  background-color: var(--fc_white);
+  border-color: var(--fc_white);
+  color: var(--fc_color_primary);
 }
 .page-template-template-services .member-popup {
   color: var(--fc_body_color);
@@ -6217,13 +6243,17 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   padding: var(--fc_space_128) 0;
   box-sizing: border-box;
 }
+.page-template-template-services .service-single-item a,
+.page-template-template-services .service-single-item a:visited {
+  border-bottom: 3px solid var(--fc_white);
+}
 .page-template-template-services .service-single-item a:hover,
 .page-template-template-services .service-single-item a:visited:hover {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border: 1px solid #e8e8e9;
-  border-bottom: 3px solid var(--fc_orange);
+  border-bottom: 3px solid var(--fc_white);
   box-shadow: 0 4px 18px rgba(255, 255, 255, 0.05);
 }
 
@@ -7825,9 +7855,16 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .blog-teaser-slider .slick-arrow.slick-prev {
   background-color: #0a8e6a;
+  border: 1px solid #0a8e6a;
+}
+.blog-teaser-slider .slick-arrow.slick-next {
+  border: 1px solid var(--fc_white);
 }
 .blog-teaser-slider .slick-arrow::before {
   transition: all 0.3s ease-in-out;
+}
+.blog-teaser-slider .slick-arrow:hover {
+  border: 1px solid var(--fc_white);
 }
 .blog-teaser-slider .slick-arrow:hover.slick-next {
   background-color: var(--fc_orange);
@@ -8277,8 +8314,8 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 }
 .service-single-item a:hover .plus-button,
 .service-single-item a:visited:hover .plus-button {
-  background-color: var(--fc_orange);
-  color: var(--fc_white);
+  background-color: var(--fc_white);
+  color: var(--fc_black);
 }
 .service-single-item a .small-text,
 .service-single-item a:visited .small-text {
@@ -8338,7 +8375,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 }
 
 .logos-section {
-  padding: var(--fc_space_48) 0;
+  padding: var(--fc_space_48) 0 0;
   box-sizing: border-box;
 }
 
@@ -8555,7 +8592,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .masonry-single-item .single-image-content {
   position: absolute;
   inset: 0;
-  background: rgba(0, 35, 90, 0.85);
+  background: rgba(0, 120, 87, 0.62);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -8587,7 +8624,9 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   padding: 10px 20px;
   color: var(--fc_white);
   background: var(--fc_orange);
-  transition: all 0.5s ease 0.6s;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease 0.8s;
   margin-top: var(--fc_space_30);
 }
 .masonry-single-item .single-image-content .plus-button:hover {

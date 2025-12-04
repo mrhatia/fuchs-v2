@@ -99,6 +99,17 @@
 
 .ctn-orange,
 .ctn-green {
+	.logo-item-single {
+		img {
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+					&:nth-child(2) {
+
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+		}
+		}
+	}
 	.stats-column .small-text {
 		color: var(--fc_white);
 	}
@@ -138,5 +149,14 @@
 
 	.heading-2 {
 		color: var(--fc_white);
+	}
+}
+
+.ctn-white-overlap {
+	.wrapper {
+		background: var(--fc_white);
+		margin-bottom: calc(-1 * var(--fc_space_200));
+		position: relative;
+		padding: var(--fc_space_72) 0;
 	}
 }

@@ -3289,21 +3289,19 @@ Mixin for transition
 .acf-block-preview .page-template-template-services .blog-teaser-slider .slick-arrow:hover.slick-prev {
   background-color: var(--fc_white);
 }
+.acf-block-preview .page-template-template-services .faq-icon svg path,
+.acf-block-preview .page-template-template-services .faq-icon svg rect {
+  fill: var(--fc_white);
+}
 .acf-block-preview .page-template-template-services .faq-head .heading-5,
 .acf-block-preview .page-template-template-services .faq-head .faq-number {
   color: var(--fc_white);
 }
-.acf-block-preview .page-template-template-services .faq-head:hover .faq-icon {
+.acf-block-preview .page-template-template-services .faq-head:hover .faq-icon, .acf-block-preview .page-template-template-services .faq-head.active .faq-icon {
   background-color: var(--fc_white);
 }
 .acf-block-preview .page-template-template-services .faq-head:hover .faq-icon svg path,
-.acf-block-preview .page-template-template-services .faq-head:hover .faq-icon svg rect {
-  fill: var(--fc_black);
-}
-.acf-block-preview .page-template-template-services .faq-head.active .faq-icon {
-  background-color: var(--fc_white);
-}
-.acf-block-preview .page-template-template-services .faq-head.active .faq-icon svg path,
+.acf-block-preview .page-template-template-services .faq-head:hover .faq-icon svg rect, .acf-block-preview .page-template-template-services .faq-head.active .faq-icon svg path,
 .acf-block-preview .page-template-template-services .faq-head.active .faq-icon svg rect {
   fill: var(--fc_black);
 }
@@ -3321,6 +3319,24 @@ Mixin for transition
 .acf-block-preview .page-template-template-services .heading-6,
 .acf-block-preview .page-template-template-services .medium-heading {
   color: var(--fc_white);
+}
+.acf-block-preview .page-template-template-services a.button.orange-button,
+.acf-block-preview .page-template-template-services a.button:visited.orange-button,
+.acf-block-preview .page-template-template-services span.button.orange-button,
+.acf-block-preview .page-template-template-services .is-style-mycustomstyle .wp-element-button.orange-button {
+  --fc_theme_btn_color: var(--fc_white);
+  --fc_theme_btn_bgcolor: var(--fc_transparent);
+  --fc_button_border_color: var(--fc_transparent);
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_white);
+}
+.acf-block-preview .page-template-template-services a.button.orange-button:hover,
+.acf-block-preview .page-template-template-services a.button:visited.orange-button:hover,
+.acf-block-preview .page-template-template-services span.button.orange-button:hover,
+.acf-block-preview .page-template-template-services .is-style-mycustomstyle .wp-element-button.orange-button:hover {
+  background-color: var(--fc_white);
+  border-color: var(--fc_white);
+  color: var(--fc_color_primary);
 }
 .acf-block-preview .page-template-template-services .member-popup {
   color: var(--fc_body_color);
@@ -3380,13 +3396,17 @@ Mixin for transition
   padding: var(--fc_space_128) 0;
   box-sizing: border-box;
 }
+.acf-block-preview .page-template-template-services .service-single-item a,
+.acf-block-preview .page-template-template-services .service-single-item a:visited {
+  border-bottom: 3px solid var(--fc_white);
+}
 .acf-block-preview .page-template-template-services .service-single-item a:hover,
 .acf-block-preview .page-template-template-services .service-single-item a:visited:hover {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border: 1px solid #e8e8e9;
-  border-bottom: 3px solid var(--fc_orange);
+  border-bottom: 3px solid var(--fc_white);
   box-shadow: 0 4px 18px rgba(255, 255, 255, 0.05);
 }
 .acf-block-preview .two-columns {
@@ -4628,9 +4648,16 @@ Mixin for transition
 }
 .acf-block-preview .blog-teaser-slider .slick-arrow.slick-prev {
   background-color: #0a8e6a;
+  border: 1px solid #0a8e6a;
+}
+.acf-block-preview .blog-teaser-slider .slick-arrow.slick-next {
+  border: 1px solid var(--fc_white);
 }
 .acf-block-preview .blog-teaser-slider .slick-arrow::before {
   transition: all 0.3s ease-in-out;
+}
+.acf-block-preview .blog-teaser-slider .slick-arrow:hover {
+  border: 1px solid var(--fc_white);
 }
 .acf-block-preview .blog-teaser-slider .slick-arrow:hover.slick-next {
   background-color: var(--fc_orange);
@@ -5047,8 +5074,8 @@ Mixin for transition
 }
 .acf-block-preview .service-single-item a:hover .plus-button,
 .acf-block-preview .service-single-item a:visited:hover .plus-button {
-  background-color: var(--fc_orange);
-  color: var(--fc_white);
+  background-color: var(--fc_white);
+  color: var(--fc_black);
 }
 .acf-block-preview .service-single-item a .small-text,
 .acf-block-preview .service-single-item a:visited .small-text {
@@ -5105,7 +5132,7 @@ Mixin for transition
   transform: translate(50%, 0);
 }
 .acf-block-preview .logos-section {
-  padding: var(--fc_space_48) 0;
+  padding: var(--fc_space_48) 0 0;
   box-sizing: border-box;
 }
 .acf-block-preview .tabbed-content-head {
@@ -5314,7 +5341,7 @@ Mixin for transition
 .acf-block-preview .masonry-single-item .single-image-content {
   position: absolute;
   inset: 0;
-  background: rgba(0, 35, 90, 0.85);
+  background: rgba(0, 120, 87, 0.62);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -5346,7 +5373,9 @@ Mixin for transition
   padding: 10px 20px;
   color: var(--fc_white);
   background: var(--fc_orange);
-  transition: all 0.5s ease 0.6s;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease 0.8s;
   margin-top: var(--fc_space_30);
 }
 .acf-block-preview .masonry-single-item .single-image-content .plus-button:hover {

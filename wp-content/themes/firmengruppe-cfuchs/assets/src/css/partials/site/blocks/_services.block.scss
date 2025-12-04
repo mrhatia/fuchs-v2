@@ -31,8 +31,8 @@
 				}
 			}
 			.plus-button {
-				background-color: var(--fc_orange);
-				color: var(--fc_white);
+				background-color: var(--fc_white);
+				color: var(--fc_black);
 			}
 		}
 		.small-text {
@@ -93,7 +93,7 @@
 	}
 }
 .logos-section {
-	padding: var(--fc_space_48) 0;
+	padding: var(--fc_space_48) 0 0;
 	box-sizing: border-box;
 }
 

@@ -39,6 +39,10 @@
 
 		&.slick-prev {
 			background-color: #0a8e6a;
+			border: 1px solid #0a8e6a;
+		}
+		&.slick-next {
+			border: 1px solid var(--fc_white);
 		}
 
 		&::before {
@@ -46,6 +50,8 @@
 		}
 
 		&:hover {
+			border: 1px solid var(--fc_white);
+
 			&.slick-next {
 				background-color: var(--fc_orange);
 			}
