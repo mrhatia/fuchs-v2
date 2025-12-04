@@ -1,6 +1,6 @@
 {
     "key": "group_692f988ea5e37",
-    "title": "Block - project Team",
+    "title": "Block - Project Team",
     "fields": [
         {
             "key": "field_692f988ea7b00",
@@ -39,33 +39,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_692f988ea7b1a",
-            "label": "Select Slider Variation",
-            "name": "fh_var_blk_tst_slider_variation",
-            "aria-label": "",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "hslider": "Horizontal Slider",
-                "vslider": "Vertical Slider"
-            },
-            "default_value": "hslider",
-            "return_format": "value",
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "layout": "horizontal"
-        },
-        {
             "key": "field_692f988ea7b22",
             "label": "Kicker Text",
-            "name": "fh_var_blk_tst_kicker",
+            "name": "fh_var_blk_team_kicker",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -93,8 +69,8 @@
         },
         {
             "key": "field_692f988ea7b2a",
-            "label": "Testimonials Heading",
-            "name": "fh_var_blk_tst_heading",
+            "label": "Title",
+            "name": "fh_var_blk_team_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -121,11 +97,11 @@
             "append": ""
         },
         {
-            "key": "field_692f988ea7b33",
-            "label": "Testimonials",
-            "name": "fh_var_blk_tst_testimonials",
+            "key": "field_693086e88a166",
+            "label": "Select Variation",
+            "name": "fh_var_blk_team_variation",
             "aria-label": "",
-            "type": "repeater",
+            "type": "button_group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -134,108 +110,55 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_692f988eb12fa",
-                    "label": "Designation",
-                    "name": "kicker",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_692f988ea7b33"
-                },
-                {
-                    "key": "field_692f988eb1309",
-                    "label": "Name",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_692f988ea7b33"
-                },
-                {
-                    "key": "field_692f988eb1318",
-                    "label": "Text",
-                    "name": "text",
-                    "aria-label": "",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "allow_in_bindings": 0,
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 0,
-                    "delay": 0,
-                    "parent_repeater": "field_692f988ea7b33"
-                },
-                {
-                    "key": "field_692f988eb1322",
-                    "label": "Image",
-                    "name": "image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium",
-                    "parent_repeater": "field_692f988ea7b33"
-                }
-            ]
+            "choices": {
+                "manual": "Manual",
+                "recent": "Recent"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_692f988ea7b33",
+            "label": "Select Team Member",
+            "name": "fh_var_blk_team_members",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_693086e88a166",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "team"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -256,5 +179,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764728317
+    "modified": 1764817921
 }

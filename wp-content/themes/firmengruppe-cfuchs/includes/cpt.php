@@ -50,7 +50,7 @@ new WP_Theme_CPT(
 			'register_key'       => 'team',
 			'slug'               => 'team',
 		),
-		'supports'     => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt' ),
+		'supports'     => array( 'title', 'thumbnail', 'author' ),
 		'menu_icon'    => 'dashicons-format-quote',
 		'public'       => true,
 		'show_in_menu' => true,
