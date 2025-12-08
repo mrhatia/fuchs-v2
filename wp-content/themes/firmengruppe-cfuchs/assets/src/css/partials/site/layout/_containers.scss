@@ -103,13 +103,18 @@
 
 .ctn-orange,
 .ctn-green {
+	.section-head .hero-split-text {
+		z-index: 0;
+	}
 	.logo-item-single {
 		img {
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 
 			&:nth-child(2) {
-
-				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+				filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+					saturate(0%) hue-rotate(288deg) brightness(102%)
+					contrast(102%);
 			}
 		}
 	}
@@ -161,6 +166,19 @@
 		background: var(--fc_white);
 		margin-bottom: calc(-1 * var(--fc_space_200));
 		position: relative;
+		padding: var(--fc_space_72) 0;
+	}
+}
+
+.ctn-container-bg {
+	background-image: url(../images/container-image.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: var(--fc_space_72) 0;
+	// box-sizing: border-box;
+	.wrapper {
+		background-color: var(--fc_white);
 		padding: var(--fc_space_72) 0;
 	}
 }

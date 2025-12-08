@@ -55,7 +55,7 @@
 			transition: all 0.3s ease-in-out;
 
 			font-size: var(--fc_font_size_26);
-			color: var(--fc_blue_3);
+			color: var(--fc_color_primary);
 		}
 
 		.plus-button {
@@ -78,7 +78,6 @@
 .logo-item-single {
 	position: relative;
 	overflow: hidden;
-
 	img {
 		transition: all 0.3s ease-in-out;
 
@@ -108,6 +107,20 @@
 .logos-section {
 	padding: var(--fc_space_48) 0 0;
 	box-sizing: border-box;
+	&.variation {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: 30px;
+		padding: 0;
+		.logos-items {
+			width: 64%;
+			margin: 0;
+		}
+		.section-head {
+			width: 35%;
+		}
+	}
 }
 
 .tabbed-content-head {
@@ -206,14 +219,15 @@
 .single-image-card {
 	position: relative;
 	overflow: hidden;
-	border-radius: 14px;
 	cursor: pointer;
 
 	.single-image img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition: transform 0.6s ease, filter 0.6s ease;
+		transition:
+			transform 0.6s ease,
+			filter 0.6s ease;
 		display: block;
 	}
 
@@ -224,27 +238,31 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		background: linear-gradient(
-			135deg,
-			rgba(0, 0, 0, 0.75),
-			rgba(0, 0, 0, 0.3)
-		);
-		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-		transition: clip-path 0.55s ease;
+		background-color: white;
+		transition: all 0.55s ease-in-out;
 		opacity: 0;
 		color: #fff;
+		border: 1px solid #e8e8e9;
+		border-bottom: 4px solid var(--fc_color_primary);
 	}
 
 	.small-text {
 		font-size: 12px;
 		letter-spacing: 1px;
 		margin-bottom: 4px;
-		opacity: 0.8;
+		color: var(--fc_black);
+		opacity: 0;
+		transform: translateY(10px);
+		transition: all 0.5s ease 0.2s;
 	}
 
 	.service-title {
 		font-size: 22px;
 		font-weight: 600;
+		transition: all 0.5s ease 0.5s;
+		color: var(--fc_color_primary);
+		opacity: 0;
+		transform: translateY(10px);
 	}
 
 	.plus-button {
@@ -254,8 +272,11 @@
 		padding: 10px 20px;
 		color: var(--fc_white);
 		background-color: var(--fc_orange);
-		transition: all 0.3s ease-in-out;
-		margin-top: var(--fc_space_48);
+		opacity: 0;
+
+		transform: translateY(10px);
+		margin-top: var(--fc_space_20);
+		transition: all 0.5s ease 0.8s;
 	}
 
 	&:hover {
@@ -266,7 +287,12 @@
 
 		.single-image-content {
 			opacity: 1;
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			.small-text,
+			.service-title,
+			.plus-button {
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 	}
 }

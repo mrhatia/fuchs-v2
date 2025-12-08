@@ -578,7 +578,7 @@ Mixin for transition
   --fc_highlight_color: var(--fc_color_on_primary);
   --fc_highlight_bg: var(--fc_color_primary);
   --fc_caption: var(--fc_black_2);
-  --fc_heading_color: var(--fc_color_primary);
+  --fc_heading_color: var(--fc_gray_5);
   --fc_heading_link_color: var(--fc_dark_text);
   --fc_heading_link_color_hover: var(--fc_dark_text);
   --fc_link_color: var(--fc_color_primary);
@@ -2951,7 +2951,7 @@ Mixin for transition
   position: relative;
 }
 .acf-block-preview .section-head .heading-2 {
-  color: var(--fc_orange);
+  color: var(--fc_gray_5);
 }
 .acf-block-preview .section-head .hero-split-text {
   position: absolute;
@@ -5102,7 +5102,7 @@ Mixin for transition
   font-style: normal;
   transition: all 0.3s ease-in-out;
   font-size: var(--fc_font_size_26);
-  color: var(--fc_blue_3);
+  color: var(--fc_color_primary);
 }
 .acf-block-preview .service-single-item a .plus-button,
 .acf-block-preview .service-single-item a:visited .plus-button {
@@ -5144,6 +5144,20 @@ Mixin for transition
   padding: var(--fc_space_48) 0 0;
   box-sizing: border-box;
 }
+.acf-block-preview .logos-section.variation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+  padding: 0;
+}
+.acf-block-preview .logos-section.variation .logos-items {
+  width: 64%;
+  margin: 0;
+}
+.acf-block-preview .logos-section.variation .section-head {
+  width: 35%;
+}
 .acf-block-preview .tabbed-content-head {
   display: flex;
   flex-wrap: wrap;
@@ -5176,7 +5190,6 @@ Mixin for transition
 .acf-block-preview .single-image-card {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
   cursor: pointer;
 }
 .acf-block-preview .single-image-card .single-image img {
@@ -5194,21 +5207,29 @@ Mixin for transition
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(-135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3));
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  transition: clip-path 0.55s ease;
+  background-color: white;
+  transition: all 0.55s ease-in-out;
   opacity: 0;
   color: #fff;
+  border: 1px solid #e8e8e9;
+  border-bottom: 4px solid var(--fc_color_primary);
 }
 .acf-block-preview .single-image-card .small-text {
   font-size: 12px;
   letter-spacing: 1px;
   margin-bottom: 4px;
-  opacity: 0.8;
+  color: var(--fc_black);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease 0.2s;
 }
 .acf-block-preview .single-image-card .service-title {
   font-size: 22px;
   font-weight: 600;
+  transition: all 0.5s ease 0.5s;
+  color: var(--fc_color_primary);
+  opacity: 0;
+  transform: translateY(10px);
 }
 .acf-block-preview .single-image-card .plus-button {
   width: -moz-max-content;
@@ -5218,8 +5239,10 @@ Mixin for transition
   padding: 10px 20px;
   color: var(--fc_white);
   background-color: var(--fc_orange);
-  transition: all 0.3s ease-in-out;
-  margin-top: var(--fc_space_48);
+  opacity: 0;
+  transform: translateY(10px);
+  margin-top: var(--fc_space_20);
+  transition: all 0.5s ease 0.8s;
 }
 .acf-block-preview .single-image-card:hover .single-image img {
   transform: scale(1.08);
@@ -5227,7 +5250,12 @@ Mixin for transition
 }
 .acf-block-preview .single-image-card:hover .single-image-content {
   opacity: 1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.acf-block-preview .single-image-card:hover .single-image-content .small-text,
+.acf-block-preview .single-image-card:hover .single-image-content .service-title,
+.acf-block-preview .single-image-card:hover .single-image-content .plus-button {
+  opacity: 1;
+  transform: translateY(0);
 }
 .acf-block-preview .map-alongside-media {
   display: flex;
