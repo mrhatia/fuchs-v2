@@ -333,6 +333,19 @@ span.button,
 			color: var(--fc_white);
 		}
 	}
+	&.gray-button {
+		--fc_theme_btn_color: var(--fc_white);
+		--fc_theme_btn_bgcolor: var(--fc_orange);
+		--fc_button_border_color: var(--fc_orange);
+		background-color: var(--fc_gray_5);
+		border-color: var(--fc_gray_5);
+
+		&:hover {
+			background-color: transparent;
+			border-color: var(--fc_gray_5);
+			color: var(--fc_white);
+		}
+	}
 
 	&.orange-button {
 		--fc_theme_btn_color: var(--fc_white);
@@ -1032,6 +1045,42 @@ body {
 .single-service.service-detail-single {
 	background-color: var(--fc_color_primary);
 	color: var(--fc_white);
+	.search-icon {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+			hue-rotate(26deg) brightness(107%) contrast(103%);
+	}
+	.footer-ctn {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		ul,
+		a {
+			color: var(--fc_color_primary);
+			&.button {
+				color: var(--fc_white);
+				&:hover {
+					color: var(--fc_color_primary);
+				}
+			}
+		}
+	}
+	.header-nav {
+		ul {
+			li {
+				a,
+				a:visited {
+					color: var(--fc_white);
+				}
+			}
+		}
+	}
+	.nav-container {
+		background-color: var(--fc_color_primary);
+	}
 
 	.blog-teaser-slider {
 		.slick-arrow {

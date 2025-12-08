@@ -70,7 +70,7 @@ BaseTheme::block(
 														<?php echo BaseTheme::button( $slide_button_one, 'button' ); ?>
 													<?php } ?>
 													<?php if ( $slide_button_two ) { ?>
-														<?php echo BaseTheme::button( $slide_button_two, 'button transparent-button' ); ?>
+														<?php echo BaseTheme::button( $slide_button_two, 'button gray-button' ); ?>
 													<?php } ?>
 												</div>
 											<?php } ?>
