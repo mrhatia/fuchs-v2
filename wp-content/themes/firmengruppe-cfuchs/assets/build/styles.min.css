@@ -5094,14 +5094,13 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 }
 
 .ctn-container-bg {
+  padding: var(--fc_space_72) 0;
+}
+.ctn-container-bg .wrapper {
   background-image: url(images/container-image.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: var(--fc_space_72) 0;
-}
-.ctn-container-bg .wrapper {
-  background-color: var(--fc_white);
   padding: var(--fc_space_72) 0;
 }
 
