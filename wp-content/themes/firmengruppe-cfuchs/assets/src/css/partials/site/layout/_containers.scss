@@ -171,14 +171,13 @@
 }
 
 .ctn-container-bg {
-	background-image: url(../images/container-image.webp);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 	padding: var(--fc_space_72) 0;
 	// box-sizing: border-box;
 	.wrapper {
-		background-color: var(--fc_white);
+		background-image: url(../images/container-image.webp);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 		padding: var(--fc_space_72) 0;
 	}
 }

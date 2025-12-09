@@ -333,6 +333,19 @@ span.button,
 			color: var(--fc_white);
 		}
 	}
+	&.gray-button {
+		--fc_theme_btn_color: var(--fc_white);
+		--fc_theme_btn_bgcolor: var(--fc_orange);
+		--fc_button_border_color: var(--fc_orange);
+		background-color: var(--fc_gray_5);
+		border-color: var(--fc_gray_5);
+
+		&:hover {
+			background-color: transparent;
+			border-color: var(--fc_gray_5);
+			color: var(--fc_white);
+		}
+	}
 
 	&.orange-button {
 		--fc_theme_btn_color: var(--fc_white);
@@ -798,48 +811,6 @@ body {
 	}
 }
 
-// .fuchs-chart-block {
-// 	position: relative;
-// 	width: 500px;
-// 	height: 500px;
-// 	margin: 0 auto;
-// 	padding: 50px 120px;
-
-// 	#fuchsChart {
-// 		width: 100% !important;
-// 		height: 100% !important;
-// 	}
-
-// 	.chart-center {
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		text-align: center;
-
-// 		.center-logo {
-// 			max-width: 230px;
-// 			margin-bottom: 0px;
-// 		}
-
-// 	}
-
-// 	.chart-label {
-// 		position: absolute;
-// 		font-size: var(--fc_font_size_24);
-// 		font-weight: 700;
-// 		color: #000;
-// 	}
-
-// 	.label-top         { top: 0; left: 50%; transform: translateX(-50%); }
-// 	.label-top-right   { top: 95px; right: 90px; }
-// 	.label-right       { top: 50%; right: -110px; transform: translateY(-50%); }
-// 	.label-bottom-right{ bottom: 90px; right: 60px; }
-// 	.label-bottom      { bottom: 0; left: 50%; transform: translateX(-50%); }
-// 	.label-bottom-left { bottom: 95px; left: 40px; }
-// 	.label-left        { top: 50%; left: 0; transform: translateY(-50%); }
-// 	.label-top-left    { top: 95px; left: 100px; }
-// }
 .fuchs-chart-block {
 	position: relative;
 	width: 500px;
@@ -1032,6 +1003,42 @@ body {
 .single-service.service-detail-single {
 	background-color: var(--fc_color_primary);
 	color: var(--fc_white);
+	.search-icon {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+			hue-rotate(26deg) brightness(107%) contrast(103%);
+	}
+	.footer-ctn {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		ul,
+		a {
+			color: var(--fc_color_primary);
+			&.button {
+				color: var(--fc_white);
+				&:hover {
+					color: var(--fc_color_primary);
+				}
+			}
+		}
+	}
+	.header-nav {
+		ul {
+			li {
+				a,
+				a:visited {
+					color: var(--fc_white);
+				}
+			}
+		}
+	}
+	.nav-container {
+		background-color: var(--fc_color_primary);
+	}
 
 	.blog-teaser-slider {
 		.slick-arrow {
