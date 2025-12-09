@@ -333,6 +333,7 @@ span.button,
 			color: var(--fc_white);
 		}
 	}
+
 	&.gray-button {
 		--fc_theme_btn_color: var(--fc_white);
 		--fc_theme_btn_bgcolor: var(--fc_orange);
@@ -502,6 +503,7 @@ button[disabled]:hover {
 	}
 
 	.select-dropdown__button {
+
 		&:focus,
 		&:focus-visible {
 			outline-color: black !important;
@@ -671,8 +673,7 @@ body {
 	}
 
 	&.iat-image-appear:before {
-		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1)
-			forwards;
+		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 	}
 
 	&:before {
@@ -688,8 +689,7 @@ body {
 	}
 
 	&.iat-image-appear:after {
-		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99)
-			forwards;
+		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;
 	}
 }
 
@@ -763,23 +763,19 @@ body {
 		transform: translateY(40px);
 
 		&:nth-child(1) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
 		}
 
 		&:nth-child(2) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
 		}
 
 		&:nth-child(3) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s forwards;
 		}
 
 		&:nth-child(4) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s forwards;
 		}
 	}
 }
@@ -841,51 +837,58 @@ body {
 		font-size: var(--fc_font_size_24);
 		font-weight: 700;
 		color: #000;
+
+		a {
+			text-decoration: none;
+			border-bottom: none;
+		}
+
+
+		&:nth-child(1) {
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:nth-child(2) {
+			top: 95px;
+			right: 90px;
+		}
+
+		&:nth-child(3) {
+			top: 50%;
+			right: -110px;
+			transform: translateY(-50%);
+		}
+
+		&:nth-child(4) {
+			bottom: 90px;
+			right: 60px;
+		}
+
+		&:nth-child(5) {
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:nth-child(6) {
+			bottom: 95px;
+			left: 40px;
+		}
+
+		&:nth-child(7) {
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		&:nth-child(8) {
+			top: 95px;
+			left: 100px;
+		}
 	}
 
-	.label-top {
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.label-top-right {
-		top: 95px;
-		right: 90px;
-	}
-
-	.label-right {
-		top: 50%;
-		right: -110px;
-		transform: translateY(-50%);
-	}
-
-	.label-bottom-right {
-		bottom: 90px;
-		right: 60px;
-	}
-
-	.label-bottom {
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.label-bottom-left {
-		bottom: 95px;
-		left: 40px;
-	}
-
-	.label-left {
-		top: 50%;
-		left: 0;
-		transform: translateY(-50%);
-	}
-
-	.label-top-left {
-		top: 95px;
-		left: 100px;
-	}
 
 	@media (max-width: 1024px) {
 		width: 400px;
@@ -1003,11 +1006,13 @@ body {
 .single-service.service-detail-single {
 	background-color: var(--fc_color_primary);
 	color: var(--fc_white);
+
 	.search-icon {
-		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-			hue-rotate(26deg) brightness(107%) contrast(103%);
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
 	}
+
 	.footer-ctn {
+
 		h1,
 		h2,
 		h3,
@@ -1018,17 +1023,21 @@ body {
 		ul,
 		a {
 			color: var(--fc_color_primary);
+
 			&.button {
 				color: var(--fc_white);
+
 				&:hover {
 					color: var(--fc_color_primary);
 				}
 			}
 		}
 	}
+
 	.header-nav {
 		ul {
 			li {
+
 				a,
 				a:visited {
 					color: var(--fc_white);
@@ -1036,6 +1045,7 @@ body {
 			}
 		}
 	}
+
 	.nav-container {
 		background-color: var(--fc_color_primary);
 	}
@@ -1058,6 +1068,7 @@ body {
 
 	.faq-icon {
 		svg {
+
 			path,
 			rect {
 				fill: var(--fc_white);
@@ -1066,6 +1077,7 @@ body {
 	}
 
 	.faq-head {
+
 		.heading-5,
 		.faq-number {
 			color: var(--fc_white);
@@ -1077,6 +1089,7 @@ body {
 				background-color: var(--fc_white);
 
 				svg {
+
 					path,
 					rect {
 						fill: var(--fc_black);
@@ -1173,6 +1186,7 @@ body {
 	}
 
 	.service-single-item {
+
 		a,
 		a:visited {
 			&:hover {
@@ -1182,12 +1196,14 @@ body {
 			}
 		}
 	}
+
 	.service-single-item a .plus-button,
 	.service-single-item a:visited .plus-button {
 		color: var(--fc_white);
 	}
 
 	.bottom-section-button {
+
 		a,
 		a:visited {
 			color: var(--fc_white);
@@ -1204,6 +1220,7 @@ body {
 	}
 
 	.service-single-item {
+
 		a,
 		a:visited {
 			border-bottom: 3px solid var(--fc_white);

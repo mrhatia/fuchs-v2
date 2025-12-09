@@ -12,6 +12,7 @@
 }
 
 .service-single-item {
+
 	a,
 	a:visited {
 		min-height: 225px;
@@ -78,27 +79,28 @@
 .logo-item-single {
 	position: relative;
 	overflow: hidden;
+	line-height: 0;
+
 	img {
 		transition: all 0.3s ease-in-out;
 
 		&:nth-child(2) {
 			position: absolute;
 			top: 0;
-			left: 50%;
+			left: 0;
 			width: auto;
-			transform: translate(-50%, -100%);
+			transform: translate(0, -100%);
 
-			filter: brightness(0) saturate(100%) invert(32%) sepia(97%)
-				saturate(461%) hue-rotate(116deg) brightness(90%) contrast(105%);
+			filter: brightness(0) saturate(100%) invert(32%) sepia(97%) saturate(461%) hue-rotate(116deg) brightness(90%) contrast(105%);
 		}
 	}
 
 	&:hover {
 		img {
-			transform: translateY(110%);
+			transform: translateY(100%);
 
 			&:nth-child(2) {
-				transform: translate(-50%, 0);
+				transform: translate(0, 0);
 			}
 		}
 	}
@@ -107,16 +109,19 @@
 .logos-section {
 	padding: var(--fc_space_48) 0 0;
 	box-sizing: border-box;
+
 	&.variation {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		row-gap: 30px;
 		padding: 0;
+
 		.logos-items {
 			width: 64%;
 			margin: 0;
 		}
+
 		.section-head {
 			width: 35%;
 		}
@@ -144,6 +149,7 @@
 			gap: 40px;
 
 			li {
+
 				a,
 				a:visited {
 					color: var(--fc_blue_3);
@@ -287,6 +293,7 @@
 
 		.single-image-content {
 			opacity: 1;
+
 			.small-text,
 			.service-title,
 			.plus-button {
@@ -301,9 +308,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
 	.wp-block-media-text__content {
 		padding: 0;
 		width: 48%;
+
 		a,
 		a:visited {
 			color: var(--fc_body_color);
@@ -316,6 +325,7 @@
 		}
 	}
 }
+
 figure.wp-block-media-text__media {
 	width: 48%;
 }

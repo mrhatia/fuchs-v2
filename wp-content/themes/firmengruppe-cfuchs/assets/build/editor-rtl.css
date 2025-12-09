@@ -3164,39 +3164,43 @@ Mixin for transition
   font-weight: 700;
   color: #000;
 }
-.acf-block-preview .fuchs-chart-block .label-top {
+.acf-block-preview .fuchs-chart-block .chart-label a {
+  text-decoration: none;
+  border-bottom: none;
+}
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(1) {
   top: 0;
   right: 50%;
   transform: translateX(50%);
 }
-.acf-block-preview .fuchs-chart-block .label-top-right {
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(2) {
   top: 95px;
   left: 90px;
 }
-.acf-block-preview .fuchs-chart-block .label-right {
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(3) {
   top: 50%;
   left: -110px;
   transform: translateY(-50%);
 }
-.acf-block-preview .fuchs-chart-block .label-bottom-right {
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(4) {
   bottom: 90px;
   left: 60px;
 }
-.acf-block-preview .fuchs-chart-block .label-bottom {
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(5) {
   bottom: 0;
   right: 50%;
   transform: translateX(50%);
 }
-.acf-block-preview .fuchs-chart-block .label-bottom-left {
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(6) {
   bottom: 95px;
   right: 40px;
 }
-.acf-block-preview .fuchs-chart-block .label-left {
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(7) {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
 }
-.acf-block-preview .fuchs-chart-block .label-top-left {
+.acf-block-preview .fuchs-chart-block .chart-label:nth-child(8) {
   top: 95px;
   right: 100px;
 }
@@ -5183,6 +5187,7 @@ Mixin for transition
 .acf-block-preview .logo-item-single {
   position: relative;
   overflow: hidden;
+  line-height: 0;
 }
 .acf-block-preview .logo-item-single img {
   transition: all 0.3s ease-in-out;
@@ -5190,16 +5195,16 @@ Mixin for transition
 .acf-block-preview .logo-item-single img:nth-child(2) {
   position: absolute;
   top: 0;
-  right: 50%;
+  right: 0;
   width: auto;
-  transform: translate(50%, -100%);
+  transform: translate(0, -100%);
   filter: brightness(0) saturate(100%) invert(32%) sepia(97%) saturate(461%) hue-rotate(116deg) brightness(90%) contrast(105%);
 }
 .acf-block-preview .logo-item-single:hover img {
-  transform: translateY(110%);
+  transform: translateY(100%);
 }
 .acf-block-preview .logo-item-single:hover img:nth-child(2) {
-  transform: translate(50%, 0);
+  transform: translate(0, 0);
 }
 .acf-block-preview .logos-section {
   padding: var(--fc_space_48) 0 0;

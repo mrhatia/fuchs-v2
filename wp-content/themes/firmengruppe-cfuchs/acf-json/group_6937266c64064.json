@@ -39,6 +39,32 @@
             "endpoint": 0
         },
         {
+            "key": "field_693800b1ee2d1",
+            "label": "Logo",
+            "name": "fh_var_blk_pie_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
             "key": "field_6937266c6758d",
             "label": "Links",
             "name": "fh_var_blk_pie_links",
@@ -55,7 +81,7 @@
             "layout": "block",
             "pagination": 0,
             "min": 0,
-            "max": 0,
+            "max": 8,
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
@@ -63,7 +89,7 @@
                 {
                     "key": "field_693726cd5f5a6",
                     "label": "Add Link",
-                    "name": "add_link",
+                    "name": "link",
                     "aria-label": "",
                     "type": "link",
                     "instructions": "",
@@ -79,6 +105,32 @@
                     "parent_repeater": "field_6937266c6758d"
                 }
             ]
+        },
+        {
+            "key": "field_693800a2ee2d0",
+            "label": "Background Image",
+            "name": "fh_var_blk_pie_background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -86,7 +138,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/tabbed-content"
+                "value": "acf\/pie-chart"
             }
         ]
     ],
@@ -99,5 +151,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765222166
+    "modified": 1765292622
 }

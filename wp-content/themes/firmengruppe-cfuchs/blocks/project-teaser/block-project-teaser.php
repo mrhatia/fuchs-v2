@@ -22,12 +22,14 @@ BaseTheme::block(
 
 		<section>
 			<div class="wrapper">
-				<div class="section-head">
-
-					<?php if ( $bst_var_blk_prjstr_title ) {  ?>
+				<?php if ( $bst_var_blk_prjstr_title ) {  ?>
+					<div class="section-head">
+						<div class="hero-split-text">
+							<?php echo html_entity_decode( $bst_var_blk_prjstr_title ); ?>
+						</div>
 						<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_blk_prjstr_title ); ?></h1>
-					<?php } ?>
-				</div>
+					</div>
+				<?php } ?>
 
 				<?php
 				if($bst_var_blk_prjstr_variation === "manual"){
