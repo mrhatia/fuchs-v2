@@ -1,0 +1,24 @@
+{
+	"name": "acf/pie-chart",
+	"title": "Pie Chart",
+	"description": "A custom Pie Chart block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["pie-chart"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-pie-chart.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "pie-chart-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}
