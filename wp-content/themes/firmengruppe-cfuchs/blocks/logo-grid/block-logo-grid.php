@@ -20,7 +20,7 @@ BaseTheme::block(
 		$fh_var_blk_logos     = $bst_block_fields['fh_var_blk_icon_columns'] ?? null;
 		?>
 
-			<section class="ctn-green overflow-top-200">
+			<section class="ctn-1700 ctn-green overflow-top-200">
 				<div class="wrapper">
 					<div class="logos-section variation">
 
@@ -30,14 +30,14 @@ BaseTheme::block(
 									<div class="kicker-text"><?php echo html_entity_decode( $fh_var_blk_lgd_kicker ); ?></div>
 								<?php } ?>
 								<?php if ( $fh_var_blk_lgd_title ) {  ?>
-									<h2 class="heading-2"><?php echo html_entity_decode( $fh_var_blk_lgd_title ); ?></h2>
+									<h2 class="heading-3"><?php echo html_entity_decode( $fh_var_blk_lgd_title ); ?></h2>
 								<?php } ?>
 							</div>
 						<?php } ?>
 
 						<?php if($fh_var_blk_logos){ ?>
 
-							<div class="logos-items four-columns">
+							<div class="logos-items logos-four-columns">
 								<?php foreach ( $fh_var_blk_logos as $logo ) {
 									$column_logo       = $logo['logo'] ?? null;
 									$link       = $logo['link'] ?? null;

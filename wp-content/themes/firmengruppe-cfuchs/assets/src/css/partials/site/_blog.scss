@@ -39,7 +39,7 @@
 
 	img {
 		width: 100%;
-		aspect-ratio: 2 / 2;
+		aspect-ratio: 2 / 1.4;
 		// height: 100%;
 		object-fit: cover;
 		transition: all 0.3s ease-in-out;
@@ -47,6 +47,7 @@
 }
 
 .have-two-columns {
+
 	.post-box-img,
 	.post-archive-box-img {
 		img {
@@ -56,6 +57,7 @@
 }
 
 .post-box-title {
+
 	h2 a,
 	h4 a {
 		display: -webkit-box;
@@ -124,6 +126,7 @@
 
 	.ac-post-cat {
 		font-size: var(--fc_font_size_14);
+		text-transform: uppercase;
 	}
 
 	a {
@@ -261,6 +264,7 @@
 }
 
 .post-archive-box-title {
+
 	h4,
 	h4 a {
 		color: var(--fc_body_color);

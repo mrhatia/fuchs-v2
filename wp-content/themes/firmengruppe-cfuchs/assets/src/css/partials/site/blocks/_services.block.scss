@@ -116,10 +116,12 @@
 		justify-content: space-between;
 		row-gap: 30px;
 		padding: 0;
+		align-items: center;
 
 		.logos-items {
-			width: 64%;
+			width: 55%;
 			margin: 0;
+			align-items: center;
 		}
 
 		.section-head {

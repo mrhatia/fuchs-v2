@@ -809,14 +809,19 @@ body {
 
 .fuchs-chart-block {
 	position: relative;
-	width: 500px;
-	height: 500px;
+	width: min(520px, 90vw);
+	aspect-ratio: 1 / 1;
 	margin: 0 auto;
-	padding: 50px 120px;
+
+	a,
+	a:visited {
+		text-decoration: none;
+		border-bottom: none;
+	}
 
 	#fuchsChart {
-		width: 100% !important;
-		height: 100% !important;
+		width: 100%;
+		height: 100%;
 	}
 
 	.chart-center {
@@ -827,178 +832,145 @@ body {
 		text-align: center;
 
 		.center-logo {
-			max-width: 230px;
-			margin-bottom: 0px;
+			width: 42%;
+			max-width: 220px;
 		}
 	}
 
 	.chart-label {
 		position: absolute;
-		font-size: var(--fc_font_size_24);
+		font-size: clamp(14px, 2vw, 20px);
 		font-weight: 700;
-		color: #000;
+		color: #ffffff;
+		white-space: nowrap;
 
-		a {
-			text-decoration: none;
-			border-bottom: none;
-		}
-
-
-		&:nth-child(1) {
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		&:nth-child(2) {
-			top: 95px;
-			right: 90px;
-		}
-
-		&:nth-child(3) {
-			top: 50%;
-			right: -110px;
-			transform: translateY(-50%);
-		}
-
-		&:nth-child(4) {
-			bottom: 90px;
-			right: 60px;
-		}
-
-		&:nth-child(5) {
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		&:nth-child(6) {
-			bottom: 95px;
-			left: 40px;
-		}
-
-		&:nth-child(7) {
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-		}
-
-		&:nth-child(8) {
-			top: 95px;
-			left: 100px;
+		a,
+		a:visited,
+		font {
+			color: #ffffff;
 		}
 	}
 
+	.chart-label:nth-of-type(1) {
+		top: -8%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
-	@media (max-width: 1024px) {
-		width: 400px;
-		height: 400px;
-		padding: 40px 80px;
+	.chart-label:nth-of-type(2) {
+		top: 11%;
+		right: -8%;
+	}
 
-		.chart-center .center-logo {
-			max-width: 180px;
-		}
+	.chart-label:nth-of-type(3) {
+		top: 50%;
+		right: -40%;
+		transform: translateY(-50%);
+	}
 
-		.label-top-right {
-			top: 80px;
-			right: 60px;
-		}
+	.chart-label:nth-of-type(4) {
+		bottom: 10%;
+		right: -10%;
+	}
 
-		.label-right {
-			right: -80px;
-		}
+	.chart-label:nth-of-type(5) {
+		bottom: -7%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
-		.label-bottom-right {
-			bottom: 60px;
-			right: 40px;
-		}
+	.chart-label:nth-of-type(6) {
+		bottom: 10%;
+		left: -11%;
+	}
 
-		.label-bottom-left {
-			bottom: 60px;
-			left: 30px;
-		}
+	.chart-label:nth-of-type(7) {
+		top: 50%;
+		left: -22%;
+		transform: translateY(-50%);
+	}
 
-		.label-top-left {
-			top: 80px;
-			left: 70px;
-		}
+	.chart-label:nth-of-type(8) {
+		top: 10%;
+		left: 0%;
 	}
 
 	@media (max-width: 768px) {
-		width: 300px;
-		height: 300px;
-		padding: 30px 50px;
+		width: min(520px, 96vw);
 
-		.chart-center .center-logo {
-			max-width: 140px;
+		.chart-label {
+			font-size: clamp(13px, 3vw, 16px);
+			white-space: normal;
+			text-align: center;
+			width: 34%;
 		}
 
-		.label-top-right {
-			top: 60px;
-			right: 40px;
+		.chart-label:nth-of-type(1) {
+			top: -17%;
 		}
 
-		.label-right {
-			right: -60px;
+		.chart-label:nth-of-type(2) {
+			top: 0%;
+			right: -23%;
 		}
 
-		.label-bottom-right {
-			bottom: 40px;
-			right: 20px;
+		.chart-label:nth-of-type(3) {
+			right: -26%;
+			width: 44%;
 		}
 
-		.label-bottom-left {
-			bottom: 40px;
-			left: 20px;
+		.chart-label:nth-of-type(4) {
+			right: -6%;
 		}
 
-		.label-top-left {
-			top: 60px;
-			left: 50px;
+		.chart-label:nth-of-type(6) {
+			left: -20%;
+		}
+
+		.chart-label:nth-of-type(7) {
+			left: -26%;
+			width: 44%;
 		}
 	}
 
 	@media (max-width: 480px) {
-		width: 200px;
-		height: 200px;
-		padding: 20px 70px;
 
-		.chart-center .center-logo {
-			max-width: 100px;
-		}
 
-		.label-top-right {
-			top: 50px;
-			right: 30px;
-		}
-
-		.label-right {
-			right: -50px;
-		}
-
-		.label-bottom-right {
-			bottom: 30px;
-			right: 15px;
-		}
-
-		.label-bottom-left {
-			bottom: 30px;
-			left: 15px;
-		}
-
-		.label-top-left {
-			top: 50px;
-			left: 35px;
-		}
-
-		.label-right {
-			width: 23%;
-			word-wrap: break-word;
-			right: -12px;
-		}
+		width: 71%;
 
 		.chart-label {
-			font-size: 15px;
+			width: 40%;
+			font-size: 14px;
+		}
+
+		.chart-label:nth-of-type(3) {
+			right: -28%;
+			width: 52%;
+
+		}
+
+		.chart-label:nth-of-type(4) {
+			right: -19%;
+			bottom: 4%;
+
+		}
+
+		.chart-label:nth-of-type(5) {
+			bottom: 19%;
+
+		}
+
+		.chart-label:nth-of-type(7) {
+			left: -30%;
+			width: 52%;
+		}
+
+		.chart-label:nth-of-type(8) {
+			left: -13%;
+		}
+
+		.chart-center .center-logo {
+			width: 55%;
 		}
 	}
 }

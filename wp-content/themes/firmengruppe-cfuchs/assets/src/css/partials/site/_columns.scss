@@ -18,7 +18,13 @@
 
 .four-columns {
 	display: grid;
-	@include fluidColumns(4, 250px, 4%);
+	@include fluidColumns(4, 250px, 1.5%);
+	row-gap: var(--fc_space_30);
+}
+
+.logos-four-columns {
+	display: grid;
+	@include fluidColumns(4, 200px, 4%);
 	row-gap: var(--fc_space_30);
 }
 

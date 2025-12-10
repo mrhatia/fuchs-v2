@@ -16,6 +16,7 @@ BaseTheme::block(
 
 		// Block variables.
 		$bst_var_blk_mat_design_variation        = $bst_block_fields['bst_var_blk_mat_design_variation'] ?? null;
+		$bst_var_blk_map_kicker        = $bst_block_fields['bst_var_blk_map_kicker'] ?? null;
 		$bst_var_blk_map_title        = $bst_block_fields['bst_var_blk_map_title'] ?? null;
 		$bst_var_blk_map_text        = $bst_block_fields['bst_var_blk_map_text'] ?? null;
 		$bst_var_blk_map_button        = $bst_block_fields['bst_var_blk_map_button'] ?? null;
@@ -31,10 +32,15 @@ BaseTheme::block(
 			<div class="wrapper">
 				<div class="map-alongside-media wp-block-media-text has-media-on-the-right is-stacked-on-mobile">
 					<div class="wp-block-media-text__content">
+						<div class="section-head">
+							<?php if ( $bst_var_blk_map_kicker ) {  ?>
+								<div class="hero-split-text"><?php echo html_entity_decode( $bst_var_blk_map_kicker ); ?></div>
+							<?php } ?>
+							<?php if ( $bst_var_blk_map_title ) {  ?>
+								<h2 class="wp-block-heading"><?php echo html_entity_decode( $bst_var_blk_map_title ); ?></h2>
+							<?php } ?>
+						</div>
 
-						<?php if ( $bst_var_blk_map_title ) {  ?>
-							<h2 class="wp-block-heading" tabindex="0"><strong tabindex="0"><?php echo html_entity_decode( $bst_var_blk_map_title ); ?></strong></h2>
-						<?php } ?>
 						<?php if ( $bst_var_blk_map_text ) {  ?>
 							<?php echo html_entity_decode( $bst_var_blk_map_text ); ?>
 						<?php } ?>
@@ -47,7 +53,7 @@ BaseTheme::block(
 								<?php if ( $bst_var_blk_map_latitude && $bst_var_blk_map_longitude ){ ?>
 								<style>
 									#map {
-									height: 500px;
+									height: 400px;
 									width: 100%;
 									}
 								</style>

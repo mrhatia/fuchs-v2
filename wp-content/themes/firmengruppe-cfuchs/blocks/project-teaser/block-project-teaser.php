@@ -70,13 +70,7 @@ BaseTheme::block(
 											<div class="post-content">
 												<div class="post-box-meta d-flex justify-content-between">
 													<div class="ac-post-cat">
-														<?php
-															if ( $terms && ! is_wp_error( $terms ) ) {
-																foreach ( $terms as $term ) {
-																	echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-																}
-															}
-														?>
+														<?php echo get_the_date( 'j. F. Y', $bst_var_post_id ); ?>
 													</div>
 												</div>
 												<div class="post-archive-box-title post-title">
@@ -141,13 +135,7 @@ BaseTheme::block(
 										<div class="post-content">
 											<div class="post-box-meta d-flex justify-content-between">
 												<div class="ac-post-cat">
-													<?php
-														if ( $terms && ! is_wp_error( $terms ) ) {
-															foreach ( $terms as $term ) {
-																echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-															}
-														}
-													?>
+													<?php echo get_the_date( 'j. F. Y', $bst_var_post_id ); ?>
 												</div>
 											</div>
 											<div class="post-archive-box-title post-title">

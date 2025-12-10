@@ -20,7 +20,7 @@ BaseTheme::block(
 		$fh_var_blk_pie_background_image        = $bst_block_fields['fh_var_blk_pie_background_image'] ?? null;
 		?>
 
-		<section class="ctn-container-bg">
+		<section class="ctn-1700 ctn-container-bg">
 			<div class="wrapper">
 				<div class="fuchs-chart-block">
 					<?php if ( $fh_var_blk_pie_logo ) { ?>
