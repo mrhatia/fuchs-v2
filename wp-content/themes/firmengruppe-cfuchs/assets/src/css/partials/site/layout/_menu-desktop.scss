@@ -1,7 +1,8 @@
 @media (min-width: 1024px) {
-	.header-nav ul li:hover > ul,
+
+	.header-nav ul li:hover>ul,
 	.menu-item-has-children ul.focused,
-	.header-nav ul li a:focus-visible + ul {
+	.header-nav ul li a:focus-visible+ul {
 		opacity: 1;
 		visibility: visible;
 		overflow: visible;
@@ -16,19 +17,22 @@
 		@include transition(all, 0.3s, ease-in-out);
 	}
 }
+
 .header-navigation {
 	width: calc(100% - 201px);
 }
+
 .menu-header-menu-container {
-	width: 95%;
+	width: -webkit-fill-available;
 }
+
 .header-nav {
 	text-align: center;
 	line-height: 1;
 	display: flex;
 	align-items: center;
-	gap: 30px;
-	border-right: 1px solid var(--fc_gray_6);
+	border-right: 1px solid var(--fc_color_primary);
+
 
 	ul {
 		margin: 0;
@@ -44,7 +48,7 @@
 			display: inline-block;
 			position: relative;
 			line-height: 1;
-			border-right: 1px solid var(--fc_gray_6);
+			border-right: 1px solid var(--fc_color_primary);
 			@include font(sour, reg);
 			width: 16.7%;
 
@@ -65,15 +69,16 @@
 				padding: 28px;
 				box-sizing: border-box;
 			}
+
 			&:nth-child(1) {
-				border-left: 1px solid var(--fc_gray_6);
+				border-left: 1px solid var(--fc_color_primary);
 			}
 
 			span.menu-link {
 				cursor: pointer;
 			}
 
-			&.menu-item-has-children > a {
+			&.menu-item-has-children>a {
 				padding-right: 35px;
 				background-position: center right calc(50% - 40px);
 				background-repeat: no-repeat;
@@ -85,11 +90,12 @@
 				}
 			}
 
-			&.current-menu-item > a,
-			&.current-menu-parent > a,
+			&.current-menu-item>a,
+			&.current-menu-parent>a,
 			a:hover,
 			span.menu-link:hover {
 				color: var(--fc_color_primary);
+
 				&::after {
 					transform-origin: bottom left;
 					transform: scaleX(1);
@@ -157,8 +163,8 @@
 					color: rgba(255, 255, 255, 0.7);
 				}
 
-				&.current-menu-item > a,
-				&.current-menu-parent > a,
+				&.current-menu-item>a,
+				&.current-menu-parent>a,
 				a:hover,
 				span.menu-link:hover {
 					border: 0;
@@ -203,7 +209,7 @@
 	background-color: var(--fc_color_on_primary);
 	display: none;
 	border-top: 1px solid var(--fc_border_5);
-	border-bottom: 1px solid var(--fc_gray_6);
+	border-bottom: 1px solid var(--fc_color_primary);
 	pointer-events: none;
 
 	input {
@@ -295,10 +301,10 @@
 		top: 114px;
 	}
 }
+
 .search-icon {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	filter: brightness(0) saturate(100%) invert(33%) sepia(2%) saturate(3%)
-		hue-rotate(335deg) brightness(102%) contrast(91%);
+	filter: brightness(0) saturate(100%) invert(33%) sepia(2%) saturate(3%) hue-rotate(335deg) brightness(102%) contrast(91%);
 }

@@ -121,7 +121,7 @@ $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
 	<header id="header-section" class="header-section">
 		<!-- Header Start -->
 
-		<div class="header-wrapper header-inner d-flex align-items-center justify-content-between">
+		<div class="header-wrapper header-inner d-flex align-items-stretch justify-content-between">
 			<div class="header-logo logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img
 						src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/site-logo.svg"

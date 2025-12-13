@@ -830,6 +830,18 @@ body {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
+		width: 285px;
+		height: 285px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		border-radius: 50%;
+		box-shadow: 1px 1px 42px 8px rgba(0, 0, 0, 0.34);
+
+		img {
+			width: 90%;
+		}
 
 		.center-logo {
 			width: 42%;
@@ -983,6 +995,10 @@ body {
 		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
 	}
 
+	.header-section {
+		border-color: var(--fc_white);
+	}
+
 	.footer-ctn {
 
 		h1,
@@ -1009,6 +1025,7 @@ body {
 	.header-nav {
 		ul {
 			li {
+				border-color: var(--fc_white);
 
 				a,
 				a:visited {
