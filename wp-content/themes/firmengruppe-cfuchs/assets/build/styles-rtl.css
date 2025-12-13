@@ -6159,8 +6159,12 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     font-size: 14px;
   }
   .fuchs-chart-block .chart-label:nth-of-type(3) {
-    left: -28%;
-    width: 52%;
+    left: -20%;
+    width: 32%;
+  }
+  .fuchs-chart-block .chart-label:nth-of-type(3) a,
+  .fuchs-chart-block .chart-label:nth-of-type(3) a:visited {
+    word-break: break-all;
   }
   .fuchs-chart-block .chart-label:nth-of-type(4) {
     left: -19%;
@@ -8479,6 +8483,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   position: relative;
   overflow: hidden;
   line-height: 0;
+  max-width: 160px;
 }
 .logo-item-single img {
   transition: all 0.3s ease-in-out;
@@ -9489,6 +9494,10 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (max-width: 747px) {
+  .fuchs-chart-block .chart-center {
+    width: 115px;
+    height: 115px;
+  }
   .logos-section.variation .section-head {
     width: 100%;
   }
@@ -9582,6 +9591,7 @@ figure.wp-block-media-text__media {
   .logos-items a .logo-item-single,
   .logos-items a:visited .logo-item-single {
     width: 100%;
+    max-width: 130px;
   }
   .fuchs-chart-block .label-left {
     right: -9px;

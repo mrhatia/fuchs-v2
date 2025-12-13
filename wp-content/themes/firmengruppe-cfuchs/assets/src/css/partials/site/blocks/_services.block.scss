@@ -12,7 +12,6 @@
 }
 
 .service-single-item {
-
 	a,
 	a:visited {
 		min-height: 225px;
@@ -80,7 +79,7 @@
 	position: relative;
 	overflow: hidden;
 	line-height: 0;
-
+	max-width: 160px;
 	img {
 		transition: all 0.3s ease-in-out;
 
@@ -91,7 +90,8 @@
 			width: auto;
 			transform: translate(0, -100%);
 
-			filter: brightness(0) saturate(100%) invert(32%) sepia(97%) saturate(461%) hue-rotate(116deg) brightness(90%) contrast(105%);
+			filter: brightness(0) saturate(100%) invert(32%) sepia(97%)
+				saturate(461%) hue-rotate(116deg) brightness(90%) contrast(105%);
 		}
 	}
 
@@ -151,7 +151,6 @@
 			gap: 40px;
 
 			li {
-
 				a,
 				a:visited {
 					color: var(--fc_blue_3);

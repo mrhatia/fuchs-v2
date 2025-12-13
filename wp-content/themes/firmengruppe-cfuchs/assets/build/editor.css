@@ -3263,8 +3263,12 @@ Mixin for transition
     font-size: 14px;
   }
   .acf-block-preview .fuchs-chart-block .chart-label:nth-of-type(3) {
-    right: -28%;
-    width: 52%;
+    right: -20%;
+    width: 32%;
+  }
+  .acf-block-preview .fuchs-chart-block .chart-label:nth-of-type(3) a,
+  .acf-block-preview .fuchs-chart-block .chart-label:nth-of-type(3) a:visited {
+    word-break: break-all;
   }
   .acf-block-preview .fuchs-chart-block .chart-label:nth-of-type(4) {
     right: -19%;
@@ -5185,6 +5189,7 @@ Mixin for transition
   position: relative;
   overflow: hidden;
   line-height: 0;
+  max-width: 160px;
 }
 .acf-block-preview .logo-item-single img {
   transition: all 0.3s ease-in-out;
@@ -6782,6 +6787,10 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 747px) {
+  .acf-block-preview .fuchs-chart-block .chart-center {
+    width: 115px;
+    height: 115px;
+  }
   .acf-block-preview .logos-section.variation .section-head {
     width: 100%;
   }
@@ -6875,6 +6884,7 @@ Mixin for transition
   .acf-block-preview .logos-items a .logo-item-single,
   .acf-block-preview .logos-items a:visited .logo-item-single {
     width: 100%;
+    max-width: 130px;
   }
   .acf-block-preview .fuchs-chart-block .label-left {
     left: -9px;
