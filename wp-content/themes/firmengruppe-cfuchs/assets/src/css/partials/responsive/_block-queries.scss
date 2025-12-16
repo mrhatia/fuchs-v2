@@ -8,6 +8,35 @@
 	// }
 }
 
+@media only screen and (min-width: 1600px) and (max-width: 1870px) {
+	.ctn-container-bg .wrapper {
+		background-size: contain;
+	}
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+	.ctn-container-bg .wrapper {
+		background-size: contain;
+		background-image: url(../images/background-container-shape-1.png);
+	}
+}
+@media only screen and (min-width: 1100px) and (max-width: 1399px) {
+	.ctn-container-bg .wrapper {
+		background-size: contain;
+		background-image: url(../images/background-container-shape-2.png);
+	}
+}
+@media only screen and (min-width: 748px) and (max-width: 1098px) {
+	.ctn-container-bg .wrapper {
+		background-size: contain;
+		background-image: url(../images/background-container-shape-3.png);
+	}
+}
+@media only screen and (min-width: 280px) and (max-width: 748px) {
+	.ctn-container-bg .wrapper {
+		background-size: initial;
+		background-image: url(../images/background-container-shape-4.png);
+	}
+}
 @media only screen and (min-width: 1346px) and (max-width: 1800px) {
 	.contact-block-form form {
 		max-width: 580px;
