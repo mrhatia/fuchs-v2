@@ -5128,7 +5128,6 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   background-position: center;
   background-repeat: no-repeat;
   padding: 177px 0;
-  border: 20px solid white;
   box-shadow: 1px 17px 54px -28px rgba(0, 0, 0, 0.55);
   /* border-radius: 50px; */
   box-sizing: border-box;
