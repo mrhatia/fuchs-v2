@@ -315,9 +315,9 @@ span.button,
 
 	&:hover,
 	&:focus-visible {
-		background-color: var(--fc_transparent);
+		background-color: var(--fc_white);
 		border: solid 2px var(--fc_theme_btn_border_color_hover);
-		color: var(--fc_theme_btn_color_hover);
+		color: var(--fc_color_primary);
 	}
 
 	&.transparent-button {
@@ -1001,7 +1001,11 @@ body {
 	}
 
 	.header-section {
-		border-color: var(--fc_white);
+		border-color: rgba(255, 255, 255, 0.4);
+		background-color: rgba(255, 255, 255, 0.4);
+		.logo {
+			background-color: var(--fc_white);
+		}
 	}
 
 	.footer-ctn {
@@ -1029,7 +1033,7 @@ body {
 	.header-nav {
 		ul {
 			li {
-				border-color: var(--fc_white);
+				border-color: rgba(255, 255, 255, 0.4);
 
 				a,
 				a:visited {

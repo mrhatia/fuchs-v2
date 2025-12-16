@@ -2693,9 +2693,9 @@ Mixin for transition
 .acf-block-preview span.button:focus-visible,
 .acf-block-preview .is-style-mycustomstyle .wp-element-button:hover,
 .acf-block-preview .is-style-mycustomstyle .wp-element-button:focus-visible {
-  background-color: var(--fc_transparent);
+  background-color: var(--fc_white);
   border: solid 2px var(--fc_theme_btn_border_color_hover);
-  color: var(--fc_theme_btn_color_hover);
+  color: var(--fc_color_primary);
 }
 .acf-block-preview a.button.transparent-button,
 .acf-block-preview a.button:visited.transparent-button,
@@ -3296,7 +3296,11 @@ Mixin for transition
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
 }
 .acf-block-preview .single-service.service-detail-single .header-section {
-  border-color: var(--fc_white);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.acf-block-preview .single-service.service-detail-single .header-section .logo {
+  background-color: var(--fc_white);
 }
 .acf-block-preview .single-service.service-detail-single .footer-ctn h1,
 .acf-block-preview .single-service.service-detail-single .footer-ctn h2,
@@ -3332,7 +3336,7 @@ Mixin for transition
   color: var(--fc_color_primary);
 }
 .acf-block-preview .single-service.service-detail-single .header-nav ul li {
-  border-color: var(--fc_white);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 .acf-block-preview .single-service.service-detail-single .header-nav ul li a,
 .acf-block-preview .single-service.service-detail-single .header-nav ul li a:visited {
@@ -4086,10 +4090,11 @@ Mixin for transition
 }
 .acf-block-preview .iat-content {
   position: relative;
-  width: 45%;
+  width: 46%;
 }
 .acf-block-preview .iat-image {
-  width: 45%;
+  width: 50%;
+  aspect-ratio: 650/425;
 }
 .acf-block-preview .image-alongside-text .kicker {
   font-size: 12px;
@@ -4472,6 +4477,55 @@ Mixin for transition
 }
 .acf-block-preview .tabbed-text-columns .tabbed-image {
   width: 68%;
+}
+.acf-block-preview .filter-body.tabbed-map-nav {
+  margin-left: auto;
+}
+.acf-block-preview .four-column-variation .single-image {
+  aspect-ratio: 310/310;
+}
+.acf-block-preview .four-column-variation .single-image-card .single-image-content {
+  background-color: rgba(0, 120, 87, 0.8);
+  border-color: rgba(0, 120, 87, 0.8);
+  padding-bottom: 30px;
+}
+.acf-block-preview .four-column-variation .single-image-card .single-image-content .small-text,
+.acf-block-preview .four-column-variation .single-image-card .single-image-content .service-title {
+  color: var(--fc_white);
+}
+.acf-block-preview .four-column-variation .single-image-card .single-image-content .plus-button {
+  display: none;
+}
+.acf-block-preview .feature-block.variation {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.acf-block-preview .feature-block.variation .hero-split-text {
+  z-index: 1;
+}
+.acf-block-preview .feature-block.variation p {
+  max-width: 40%;
+  color: var(--fc_body_color);
+}
+.acf-block-preview .feature-block.variation .feature-buttons {
+  line-height: 0.65;
+}
+.acf-block-preview .feature-block.variation .feature-buttons a.button:hover, .acf-block-preview .feature-block.variation .feature-buttons a.button:focus-visible,
+.acf-block-preview .feature-block.variation .feature-buttons a.button:visited:hover,
+.acf-block-preview .feature-block.variation .feature-buttons a.button:visited:focus-visible,
+.acf-block-preview .feature-block.variation .feature-buttons span.button:hover,
+.acf-block-preview .feature-block.variation .feature-buttons span.button:focus-visible,
+.acf-block-preview .feature-block.variation .feature-buttons .is-style-mycustomstyle .wp-element-button:hover,
+.acf-block-preview .feature-block.variation .feature-buttons .is-style-mycustomstyle .wp-element-button:focus-visible {
+  background-color: var(--fc_white);
+  color: var(--fc_color_primary);
+}
+.acf-block-preview section:has(.feature-block.variation):not(:has(section .feature-block.variation)) {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .acf-block-preview .offering-block {
   display: flex;
@@ -6548,6 +6602,9 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 1003px) {
+  .acf-block-preview .feature-block.variation p {
+    max-width: 100%;
+  }
   .acf-block-preview .member-popup-inner .close-icon {
     right: 20px;
     top: 20px;

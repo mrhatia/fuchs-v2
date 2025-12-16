@@ -335,6 +335,9 @@
 }
 
 @media only screen and (max-width: 1003px) {
+	.feature-block.variation p {
+		max-width: 100%;
+	}
 	.member-popup-inner .close-icon {
 		right: 20px;
 		top: 20px;

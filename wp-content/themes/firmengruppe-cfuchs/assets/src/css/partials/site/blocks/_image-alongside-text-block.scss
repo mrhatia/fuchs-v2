@@ -8,11 +8,12 @@
 
 .iat-content {
 	position: relative;
-	width: 45%;
+	width: 46%;
 }
 
 .iat-image {
-	width: 45%;
+	width: 50%;
+	aspect-ratio: 650/425;
 }
 
 .image-alongside-text {
@@ -32,7 +33,6 @@
 }
 
 .image-alongside-text-variation {
-
 	// p,
 	// .person-info {
 	// 	font-size: var(--fc_font_size_20_16);
@@ -67,7 +67,6 @@
 
 		img {
 			aspect-ratio: 302/444;
-
 		}
 	}
 }

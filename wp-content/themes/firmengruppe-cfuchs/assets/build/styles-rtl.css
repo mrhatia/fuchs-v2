@@ -4175,6 +4175,17 @@ header {
   margin-top: 30px;
   line-height: 0.65;
 }
+.hero-inner-slider .hero-buttons a.button:hover,
+.hero-inner-slider .hero-buttons a.button:visited:hover,
+.hero-inner-slider .hero-buttons span.button:hover,
+.hero-inner-slider .hero-buttons .is-style-mycustomstyle .wp-element-button:hover,
+.hero-project .hero-buttons a.button:hover,
+.hero-project .hero-buttons a.button:visited:hover,
+.hero-project .hero-buttons span.button:hover,
+.hero-project .hero-buttons .is-style-mycustomstyle .wp-element-button:hover {
+  background-color: transparent;
+  color: var(--fc_white);
+}
 .hero-inner-slider .hero-split-text,
 .hero-project .hero-split-text {
   position: absolute;
@@ -5559,9 +5570,9 @@ span.button:hover,
 span.button:focus-visible,
 .is-style-mycustomstyle .wp-element-button:hover,
 .is-style-mycustomstyle .wp-element-button:focus-visible {
-  background-color: var(--fc_transparent);
+  background-color: var(--fc_white);
   border: solid 2px var(--fc_theme_btn_border_color_hover);
-  color: var(--fc_theme_btn_color_hover);
+  color: var(--fc_color_primary);
 }
 a.button.transparent-button,
 a.button:visited.transparent-button,
@@ -6193,7 +6204,11 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
 }
 .single-service.service-detail-single .header-section {
-  border-color: var(--fc_white);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.single-service.service-detail-single .header-section .logo {
+  background-color: var(--fc_white);
 }
 .single-service.service-detail-single .footer-ctn h1,
 .single-service.service-detail-single .footer-ctn h2,
@@ -6229,7 +6244,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   color: var(--fc_color_primary);
 }
 .single-service.service-detail-single .header-nav ul li {
-  border-color: var(--fc_white);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 .single-service.service-detail-single .header-nav ul li a,
 .single-service.service-detail-single .header-nav ul li a:visited {
@@ -7274,11 +7289,12 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 
 .iat-content {
   position: relative;
-  width: 45%;
+  width: 46%;
 }
 
 .iat-image {
-  width: 45%;
+  width: 50%;
+  aspect-ratio: 650/425;
 }
 
 .image-alongside-text .kicker {
@@ -7699,6 +7715,59 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .tabbed-text-columns .tabbed-image {
   width: 68%;
+}
+
+.filter-body.tabbed-map-nav {
+  margin-right: auto;
+}
+
+.four-column-variation .single-image {
+  aspect-ratio: 310/310;
+}
+.four-column-variation .single-image-card .single-image-content {
+  background-color: rgba(0, 120, 87, 0.8);
+  border-color: rgba(0, 120, 87, 0.8);
+  padding-bottom: 30px;
+}
+.four-column-variation .single-image-card .single-image-content .small-text,
+.four-column-variation .single-image-card .single-image-content .service-title {
+  color: var(--fc_white);
+}
+.four-column-variation .single-image-card .single-image-content .plus-button {
+  display: none;
+}
+
+.feature-block.variation {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feature-block.variation .hero-split-text {
+  z-index: 1;
+}
+.feature-block.variation p {
+  max-width: 40%;
+  color: var(--fc_body_color);
+}
+.feature-block.variation .feature-buttons {
+  line-height: 0.65;
+}
+.feature-block.variation .feature-buttons a.button:hover, .feature-block.variation .feature-buttons a.button:focus-visible,
+.feature-block.variation .feature-buttons a.button:visited:hover,
+.feature-block.variation .feature-buttons a.button:visited:focus-visible,
+.feature-block.variation .feature-buttons span.button:hover,
+.feature-block.variation .feature-buttons span.button:focus-visible,
+.feature-block.variation .feature-buttons .is-style-mycustomstyle .wp-element-button:hover,
+.feature-block.variation .feature-buttons .is-style-mycustomstyle .wp-element-button:focus-visible {
+  background-color: var(--fc_white);
+  color: var(--fc_color_primary);
+}
+
+section:has(.feature-block.variation):not(:has(section .feature-block.variation)) {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*-------------------------------------------------
@@ -9255,6 +9324,9 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (max-width: 1003px) {
+  .feature-block.variation p {
+    max-width: 100%;
+  }
   .member-popup-inner .close-icon {
     left: 20px;
     top: 20px;
