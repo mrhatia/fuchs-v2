@@ -6387,6 +6387,137 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   box-shadow: 0 4px 18px rgba(255, 255, 255, 0.05);
 }
 
+.breadcrumbs__inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#breadcrumbs {
+  background-color: #edf1f3;
+  padding: 20px 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+#breadcrumbs a,
+#breadcrumbs a:visited {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+#breadcrumbs svg {
+  margin: 0;
+}
+
+.breadcrumbs__separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+}
+
+.breadcrumbs__item--current {
+  color: var(--fc_color_primary);
+}
+
+.project-meta {
+  border-top: 1px solid var(--fc_gray_2);
+  border-bottom: 1px solid var(--fc_gray_2);
+}
+
+.project-meta__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.project-meta__list svg {
+  width: 23px;
+  height: 20px;
+}
+.project-meta__list li {
+  margin: 0;
+  padding: 28px 32px;
+  box-sizing: border-box;
+}
+.project-meta__list li:nth-child(2) {
+  border-right: 1px solid var(--fc_gray_2);
+  border-left: 1px solid var(--fc_gray_2);
+}
+.project-meta__list li a,
+.project-meta__list li a:visited,
+.project-meta__list li span {
+  display: flex;
+  align-items: center;
+}
+.project-meta__list li a svg,
+.project-meta__list li a:visited svg,
+.project-meta__list li span svg {
+  margin: 0 0 0 12px;
+}
+.project-meta__list li a.project-meta__icon,
+.project-meta__list li a:visited.project-meta__icon,
+.project-meta__list li span.project-meta__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.project-meta__list li a.project-meta__pill,
+.project-meta__list li a:visited.project-meta__pill,
+.project-meta__list li span.project-meta__pill {
+  color: var(--fc_color_primary);
+}
+
+.project-meta__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .project-meta__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-meta__list li:nth-child(2) {
+    border-left: none;
+  }
+  .project-meta__list li:nth-child(odd) {
+    border-left: 1px solid var(--fc_gray_2);
+  }
+}
+/* Mobile */
+@media (max-width: 640px) {
+  #breadcrumbs {
+    padding: 15px 0;
+  }
+  #breadcrumbs .breadcrumbs__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #breadcrumbs a,
+  #breadcrumbs a:visited {
+    font-size: 14px;
+  }
+  .breadcrumbs__separator {
+    margin: 0 8px;
+  }
+  .project-meta__list {
+    grid-template-columns: 1fr;
+  }
+  .project-meta__list li {
+    padding: 20px;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--fc_gray_2);
+  }
+  .project-meta__list li:last-child {
+    border-bottom: none;
+  }
+}
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
@@ -7987,28 +8118,57 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 /*-------------------------------------------------
 >> Basic styles for logo grid
 -------------------------------------------------*/
-.highlight-quote .highlight-blockquote {
+.highlight-quote {
   position: relative;
-  font-size: 40px;
+  font-size: var(--fc_font_size_26);
   font-weight: 700;
-  color: var(--fc_color_primary);
   border-bottom: 5px solid var(--fc_color_primary);
   border-top: 1px solid var(--fc_border_3);
   border-right: 1px solid var(--fc_border_3);
   border-left: 1px solid var(--fc_border_3);
-  padding: 50px 50px 50px 100px;
+  padding: 50px 40px 50px 100px;
 }
-.highlight-quote .highlight-blockquote::after {
+.highlight-quote blockquote {
+  max-width: 887px;
+  color: var(--fc_color_primary);
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+.highlight-quote::after {
   position: absolute;
-  content: '"';
-  font-size: 100px;
-  top: 30px;
+  content: "";
+  top: auto;
+  bottom: 49px;
   left: 40px;
-  color: var(--fc_orange);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA3MCA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMzEuMjA0OEMwIDIxLjgzOCAyLjQ2MzE5IDE0LjI5NTIgNy4zOTA1OCA4LjU3NTUxQzEyLjMxNyAyLjg2MDg3IDE5LjUwMTYgMCAyOC45NDQ1IDBWMTMuMDJDMjEuNjg4OCAxMy4wMiAxOC4wNjUxIDE3LjcwNDkgMTguMDY1MSAyNy4wNzI4VjMwLjE3M0gzMS4yMDI4VjU1Ljc5NzFINC4zMTA1OEMxLjQzNjUyIDQ3LjUzMSAwIDM5LjMzNTkgMCAzMS4yMDQ4Wk0zOS4wMDMyIDMxLjIwNDhDMzkuMDAzMiAyMS44MzggNDEuNDMwOSAxNC4yOTUyIDQ2LjI5MDMgOC41NzU1MUM1MS4xNDU3IDIuODYwODcgNTguMjk4OCAwIDY3Ljc0MTcgMFYxMy4wMkM2MC42MjQxIDEzLjAyIDU3LjA2NzIgMTcuNzA0OSA1Ny4wNjcyIDI3LjA3MjhWMzAuMTczSDcwVjU1Ljc5NzFINDMuMTA4OEM0MC4zNjg3IDQ3LjM5NTEgMzkuMDAzMiAzOS4xOTcgMzkuMDAzMiAzMS4yMDQ4WiIgZmlsbD0iIzAwNzg1NyIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 57px;
 }
 .highlight-quote p {
   font-size: 18px;
   text-align: justify;
+}
+
+.map-block .wp-block-media-text__media {
+  width: 100%;
+  margin: 0;
+}
+
+.icons-grid.two-variation .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+.icons-grid.two-variation .column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.icons-grid-content {
+  width: 80%;
 }
 
 /*-------------------------------------------------
@@ -9324,6 +9484,10 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (max-width: 1003px) {
+  .breadcrumbs__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
   .feature-block.variation p {
     max-width: 100%;
   }
@@ -9566,6 +9730,14 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (max-width: 747px) {
+  .icons-grid-content {
+    width: 100%;
+  }
+  .icons-grid.two-variation .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
   .fuchs-chart-block .chart-center {
     width: 115px;
     height: 115px;
@@ -9699,12 +9871,16 @@ figure.wp-block-media-text__media {
   .icons-three-columns .column {
     padding: 0;
   }
-  .highlight-quote .highlight-blockquote {
+  .highlight-quote {
     font-size: 20px;
     padding: 50px 15px;
   }
-  .highlight-quote .highlight-blockquote::after {
-    top: -20px;
+  .highlight-quote::after {
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 47px;
+    background-size: contain;
   }
   .wrapper {
     width: 90%;

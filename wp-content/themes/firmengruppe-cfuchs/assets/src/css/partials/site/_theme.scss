@@ -1226,3 +1226,132 @@ body {
 		}
 	}
 }
+
+.breadcrumbs__inner {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1300px;
+	width: 90%;
+	margin: 0 auto;
+}
+#breadcrumbs {
+	background-color: #edf1f3;
+	padding: 20px 0;
+	box-sizing: border-box;
+	margin: 0;
+	a,
+	a:visited {
+		font-size: 16px;
+		font-weight: 400;
+		margin: 0;
+	}
+	svg {
+		margin: 0;
+	}
+}
+.breadcrumbs__separator {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 15px;
+}
+.breadcrumbs__item--current {
+	color: var(--fc_color_primary);
+}
+.project-meta {
+	border-top: 1px solid var(--fc_gray_2);
+	border-bottom: 1px solid var(--fc_gray_2);
+}
+.project-meta__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0px;
+	max-width: 1300px;
+	margin: 0 auto;
+	svg {
+		width: 23px;
+		height: 20px;
+	}
+	li {
+		margin: 0;
+		&:nth-child(2) {
+			border-left: 1px solid var(--fc_gray_2);
+			border-right: 1px solid var(--fc_gray_2);
+		}
+		padding: 28px 32px;
+		box-sizing: border-box;
+		a,
+		a:visited,
+		span {
+			display: flex;
+			align-items: center;
+			svg {
+				margin: 0 12px 0 0;
+			}
+			&.project-meta__icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+			}
+			&.project-meta__pill {
+				color: var(--fc_color_primary);
+			}
+		}
+	}
+}
+
+.project-meta__item {
+	display: flex;
+	flex-wrap: wrap;
+}
+/* Tablet */
+@media (max-width: 1024px) {
+	.project-meta__list {
+		grid-template-columns: repeat(2, 1fr);
+
+		li {
+			&:nth-child(2) {
+				border-right: none;
+			}
+
+			&:nth-child(odd) {
+				border-right: 1px solid var(--fc_gray_2);
+			}
+		}
+	}
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+	#breadcrumbs {
+		padding: 15px 0;
+		.breadcrumbs__inner {
+			width: 90%;
+			margin: 0 auto;
+		}
+		a,
+		a:visited {
+			font-size: 14px;
+		}
+	}
+
+	.breadcrumbs__separator {
+		margin: 0 8px;
+	}
+
+	.project-meta__list {
+		grid-template-columns: 1fr;
+
+		li {
+			padding: 20px;
+			border-right: none !important;
+			border-left: none !important;
+			border-bottom: 1px solid var(--fc_gray_2);
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}

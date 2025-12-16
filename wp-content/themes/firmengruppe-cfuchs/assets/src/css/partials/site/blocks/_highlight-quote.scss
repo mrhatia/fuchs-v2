@@ -1,28 +1,55 @@
 .highlight-quote {
-	.highlight-blockquote {
-		position: relative;
-		font-size: 40px;
-		font-weight: 700;
+	position: relative;
+	font-size: var(--fc_font_size_26);
+	font-weight: 700;
+	border-bottom: 5px solid var(--fc_color_primary);
+	border-top: 1px solid var(--fc_border_3);
+	border-left: 1px solid var(--fc_border_3);
+	border-right: 1px solid var(--fc_border_3);
+	padding: 50px 100px 50px 40px;
+	blockquote {
+		max-width: 887px;
 		color: var(--fc_color_primary);
-		border-bottom: 5px solid var(--fc_color_primary);
-		border-top: 1px solid var(--fc_border_3);
-		border-left: 1px solid var(--fc_border_3);
-		border-right: 1px solid var(--fc_border_3);
-		padding: 50px 100px 50px 50px;
-
-		&::after {
-			position: absolute;
-			content: '"';
-			font-size: 100px;
-			top: 30px;
-			right: 40px;
-			color: var(--fc_orange);
-		}
+		padding: 0;
+		border: none;
+		margin: 0;
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		top: auto;
+		bottom: 49px;
+		right: 40px;
+		background-image: url(../images/quote-icon.svg);
+		background-repeat: no-repeat;
+		width: 70px;
+		height: 57px;
 	}
 
 	p {
 		font-size: 18px;
 		text-align: justify;
 	}
+}
+.map-block {
+	.wp-block-media-text__media {
+		width: 100%;
+		margin: 0;
+	}
+}
 
+.icons-grid.two-variation {
+	.icon {
+		width: 50px;
+		height: 50px;
+		margin: 0;
+	}
+	.column {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+}
+.icons-grid-content {
+	width: 80%;
 }

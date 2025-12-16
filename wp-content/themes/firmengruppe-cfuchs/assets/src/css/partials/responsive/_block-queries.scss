@@ -335,6 +335,10 @@
 }
 
 @media only screen and (max-width: 1003px) {
+	.breadcrumbs__inner {
+		width: 90%;
+		margin: 0 auto;
+	}
 	.feature-block.variation p {
 		max-width: 100%;
 	}
@@ -660,6 +664,14 @@
 }
 
 @media only screen and (max-width: 747px) {
+	.icons-grid-content {
+		width: 100%;
+	}
+	.icons-grid.two-variation .icon {
+		width: 50px;
+		height: 50px;
+		margin: 0 auto;
+	}
 	.fuchs-chart-block .chart-center {
 		width: 115px;
 		height: 115px;
@@ -834,13 +846,17 @@
 		}
 	}
 
-	.highlight-quote .highlight-blockquote {
+	.highlight-quote {
 		font-size: 20px;
 		padding: 50px 15px;
 	}
 
-	.highlight-quote .highlight-blockquote::after {
-		top: -20px;
+	.highlight-quote::after {
+		bottom: 20px;
+		right: 20px;
+		width: 50px;
+		height: 47px;
+		background-size: contain;
 	}
 
 	.wrapper {
