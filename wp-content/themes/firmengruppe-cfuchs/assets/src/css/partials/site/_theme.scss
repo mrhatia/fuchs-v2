@@ -252,13 +252,7 @@ ul.list-none li {
 		color: var(--fc_breadcrumb_link_color);
 		font-weight: 700;
 		margin: 0 10px;
-		border-bottom: 1px solid var(--fc_breadcrumb_border_color);
 		font-size: var(--fc_font_size_14);
-
-		&:hover,
-		&:focus-visible {
-			border-bottom: 1px solid var(--fc_breadcrumb_border_color_hover);
-		}
 	}
 }
 
@@ -503,7 +497,6 @@ button[disabled]:hover {
 	}
 
 	.select-dropdown__button {
-
 		&:focus,
 		&:focus-visible {
 			outline-color: black !important;
@@ -673,7 +666,8 @@ body {
 	}
 
 	&.iat-image-appear:before {
-		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1)
+			forwards;
 	}
 
 	&:before {
@@ -689,7 +683,8 @@ body {
 	}
 
 	&.iat-image-appear:after {
-		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;
+		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99)
+			forwards;
 	}
 }
 
@@ -763,19 +758,23 @@ body {
 		transform: translateY(40px);
 
 		&:nth-child(1) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s
+				forwards;
 		}
 
 		&:nth-child(2) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s
+				forwards;
 		}
 
 		&:nth-child(3) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s
+				forwards;
 		}
 
 		&:nth-child(4) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s
+				forwards;
 		}
 	}
 }
@@ -992,7 +991,8 @@ body {
 	color: var(--fc_white);
 
 	.search-icon {
-		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+			hue-rotate(26deg) brightness(107%) contrast(103%);
 	}
 
 	.header-section {
@@ -1005,7 +1005,6 @@ body {
 	}
 
 	.footer-ctn {
-
 		h1,
 		h2,
 		h3,
@@ -1062,7 +1061,6 @@ body {
 
 	.faq-icon {
 		svg {
-
 			path,
 			rect {
 				fill: var(--fc_white);
@@ -1071,7 +1069,6 @@ body {
 	}
 
 	.faq-head {
-
 		.heading-5,
 		.faq-number {
 			color: var(--fc_white);
@@ -1083,7 +1080,6 @@ body {
 				background-color: var(--fc_white);
 
 				svg {
-
 					path,
 					rect {
 						fill: var(--fc_black);
@@ -1180,7 +1176,6 @@ body {
 	}
 
 	.service-single-item {
-
 		a,
 		a:visited {
 			&:hover {
@@ -1197,7 +1192,6 @@ body {
 	}
 
 	.bottom-section-button {
-
 		a,
 		a:visited {
 			color: var(--fc_white);
@@ -1214,7 +1208,6 @@ body {
 	}
 
 	.service-single-item {
-
 		a,
 		a:visited {
 			border-bottom: 3px solid var(--fc_white);
@@ -1248,7 +1241,12 @@ body {
 	a:visited {
 		font-size: 16px;
 		font-weight: 400;
+		border-bottom: 1px solid var(--fc_transparent);
+		transition: all 0.3s ease-in-out;
 		margin: 0;
+		&:hover {
+			border-color: var(--fc_blue_3);
+		}
 	}
 
 	svg {

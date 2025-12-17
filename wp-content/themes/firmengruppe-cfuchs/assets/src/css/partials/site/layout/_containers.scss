@@ -109,6 +109,9 @@
 
 .ctn-orange,
 .ctn-green {
+	.counter-background {
+		z-index: 0;
+	}
 	.section-head .hero-split-text {
 		z-index: 0;
 		color: rgb(255 255 255 / 23%);

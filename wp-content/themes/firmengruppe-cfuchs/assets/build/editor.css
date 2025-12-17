@@ -2639,11 +2639,7 @@ Mixin for transition
   color: var(--fc_breadcrumb_link_color);
   font-weight: 700;
   margin: 0 10px;
-  border-bottom: 1px solid var(--fc_breadcrumb_border_color);
   font-size: var(--fc_font_size_14);
-}
-.acf-block-preview #breadcrumbs a:hover, .acf-block-preview #breadcrumbs a:focus-visible, .acf-block-preview #breadcrumbs:visited:hover, .acf-block-preview #breadcrumbs:visited:focus-visible {
-  border-bottom: 1px solid var(--fc_breadcrumb_border_color_hover);
 }
 .acf-block-preview .single-post #breadcrumbs span span span span span span {
   color: var(--fc_breadcrumb_span_color);
@@ -3061,10 +3057,6 @@ Mixin for transition
 .acf-block-preview .hero-reveal {
   opacity: 0;
   transform: translateY(40px);
-}
-.acf-block-preview .banner-content-inner .hero-split-text {
-  opacity: 0;
-  visibility: hidden;
 }
 @keyframes heroReveal {
   from {
@@ -3497,7 +3489,13 @@ Mixin for transition
 .acf-block-preview #breadcrumbs a:visited {
   font-size: 16px;
   font-weight: 400;
+  border-bottom: 1px solid var(--fc_transparent);
+  transition: all 0.3s ease-in-out;
   margin: 0;
+}
+.acf-block-preview #breadcrumbs a:hover,
+.acf-block-preview #breadcrumbs a:visited:hover {
+  border-color: var(--fc_blue_3);
 }
 .acf-block-preview #breadcrumbs svg {
   margin: 0;
@@ -5388,6 +5386,11 @@ Mixin for transition
 }
 .acf-block-preview .logos-items {
   margin-top: var(--fc_space_48);
+}
+.acf-block-preview .logos-items a,
+.acf-block-preview .logos-items a:visited {
+  border: none;
+  text-decoration: none;
 }
 .acf-block-preview .logo-item-single {
   position: relative;

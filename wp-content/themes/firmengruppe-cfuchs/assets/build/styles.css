@@ -5056,6 +5056,10 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   color: var(--fc_color_primary);
 }
 
+.ctn-orange .counter-background,
+.ctn-green .counter-background {
+  z-index: 0;
+}
 .ctn-orange .section-head .hero-split-text,
 .ctn-green .section-head .hero-split-text {
   z-index: 0;
@@ -5498,11 +5502,7 @@ ul.list-none li::before {
   color: var(--fc_breadcrumb_link_color);
   font-weight: 700;
   margin: 0 10px;
-  border-bottom: 1px solid var(--fc_breadcrumb_border_color);
   font-size: var(--fc_font_size_14);
-}
-#breadcrumbs a:hover, #breadcrumbs a:focus-visible, #breadcrumbs:visited:hover, #breadcrumbs:visited:focus-visible {
-  border-bottom: 1px solid var(--fc_breadcrumb_border_color_hover);
 }
 
 .single-post #breadcrumbs span span span span span span {
@@ -5960,11 +5960,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   transform: translateY(40px);
 }
 
-.banner-content-inner .hero-split-text {
-  opacity: 0;
-  visibility: hidden;
-}
-
 @keyframes heroReveal {
   from {
     opacity: 0;
@@ -6403,7 +6398,13 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 #breadcrumbs a:visited {
   font-size: 16px;
   font-weight: 400;
+  border-bottom: 1px solid var(--fc_transparent);
+  transition: all 0.3s ease-in-out;
   margin: 0;
+}
+#breadcrumbs a:hover,
+#breadcrumbs a:visited:hover {
+  border-color: var(--fc_blue_3);
 }
 #breadcrumbs svg {
   margin: 0;
@@ -8704,6 +8705,11 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 
 .logos-items {
   margin-top: var(--fc_space_48);
+}
+.logos-items a,
+.logos-items a:visited {
+  border: none;
+  text-decoration: none;
 }
 
 .logo-item-single {
