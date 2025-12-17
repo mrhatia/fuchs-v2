@@ -54,7 +54,8 @@
             },
             "choices": {
                 "three-columns": "Three Columns",
-                "four-columns": "Four Columns"
+                "four-columns": "Four Columns",
+                "left-align-icon": "Three Columns- Left Align Icons"
             },
             "default_value": "three-columns",
             "return_format": "value",
@@ -256,5 +257,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759691207
+    "modified": 1765986601
 }

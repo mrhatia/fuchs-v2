@@ -137,6 +137,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_68df09a8de8d6",
                     "sub_fields": [
                         {
                             "key": "field_68df0ad83376c",
@@ -165,8 +166,7 @@
                             "preview_size": "medium",
                             "parent_repeater": "field_68df0ac63376b"
                         }
-                    ],
-                    "parent_repeater": "field_68df09a8de8d6"
+                    ]
                 },
                 {
                     "key": "field_68df0af03376d",
@@ -197,6 +197,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_68df09a8de8d6",
                     "sub_fields": [
                         {
                             "key": "field_68df0e6f33770",
@@ -269,8 +270,7 @@
                             "append": "",
                             "parent_repeater": "field_68df0af03376d"
                         }
-                    ],
-                    "parent_repeater": "field_68df09a8de8d6"
+                    ]
                 },
                 {
                     "key": "field_68df0e8c33771",
@@ -410,8 +410,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1760757561
+    "modified": 1765979975
 }

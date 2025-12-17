@@ -1,0 +1,24 @@
+{
+	"name": "acf/reference-teaser",
+	"title": "Reference Teaser",
+	"description": "A custom reference teaser block.",
+	"category": "theme-blocks",
+	"icon": "reference-teaser",
+	"keywords": ["reference-teaser"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-reference-teaser.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "reference-teaser-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

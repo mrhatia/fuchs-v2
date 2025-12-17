@@ -1,0 +1,24 @@
+{
+	"name": "acf/featured-section",
+	"title": "Featured Section",
+	"description": "A custom Featured Section block.",
+	"category": "theme-blocks",
+	"icon": "featured-section",
+	"keywords": ["featured-section"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-featured-section.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "featured-section-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

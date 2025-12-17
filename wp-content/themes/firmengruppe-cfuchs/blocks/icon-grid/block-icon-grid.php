@@ -60,7 +60,7 @@ BaseTheme::block(
 					</div>
 				</div>
 			</section>
-		<?php } else {
+		<?php } else if($fh_var_blk_icon_columns && $fh_var_blk_icon_design_variation === "three-columns"){
 			$fh_var_blk_icon_kicker     = $bst_block_fields['fh_var_blk_icon_kicker'] ?? null;
 			$fh_var_blk_icon_title     = $bst_block_fields['fh_var_blk_icon_title'] ?? null;
 
@@ -108,6 +108,49 @@ BaseTheme::block(
 										<?php if ( $column_text ) {  ?>
 											<?php echo html_entity_decode( $column_text ); ?>
 										<?php } ?>
+									</div>
+							<?php } ?>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		<?php } else {
+			$fh_var_blk_icon_kicker     = $bst_block_fields['fh_var_blk_icon_kicker'] ?? null;
+			$fh_var_blk_icon_title     = $bst_block_fields['fh_var_blk_icon_title'] ?? null;
+
+			?>
+			<section class="ctn-green">
+				<div class="wrapper">
+					<div class="icons-grid two-variation">
+						<div class="icons-three-columns">
+							<?php
+								foreach ( $fh_var_blk_icon_columns as $column ) {
+									$column_kicker      = $column['kicker'] ?? null;
+									$column_title   	= $column['title'] ?? null;
+									$column_text   = $column['text'] ?? null;
+
+									$column_icon       = $column['icon'] ?? null;
+
+									?>
+									<div class="column">
+										<?php if ( $column_icon ) { ?>
+											<div class="icon" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
+												<?php BaseTheme::the_attachment_image( $column_icon, 400 ); ?>
+											</div>
+										<?php } ?>
+
+										<div class="icons-grid-content">
+
+											<?php if ( $column_title ) {  ?>
+
+												<h3 class="heading-4"><?php echo html_entity_decode( $column_title ); ?></h3>
+											<?php } ?>
+
+											<?php if ( $column_text ) {  ?>
+												<?php echo html_entity_decode( $column_text ); ?>
+											<?php } ?>
+										</div>
 									</div>
 							<?php } ?>
 

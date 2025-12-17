@@ -81,6 +81,30 @@
             "append": ""
         },
         {
+            "key": "field_6942942e06e99",
+            "label": "Select Design Variation",
+            "name": "fh_var_blk_lgd_design_variation",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "two-columns": "Two Columns",
+                "full-width": "Full Width"
+            },
+            "default_value": "two-columns",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_68deb6b105e98",
             "label": "Logo Columns",
             "name": "fh_var_blk_icon_columns",
@@ -168,5 +192,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765375162
+    "modified": 1765971293
 }

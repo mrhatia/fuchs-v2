@@ -1,58 +1,58 @@
 <?php
 /**
- * Template part for displaying single overview
+ * Block Name: Reference Teaser
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * The template for displaying the custom gutenberg block named Reference Teaser.
+ *
+ * @link https://www.advancedcustomfields.com/resources/blocks/
  *
  * @package FUCHS Package
  * @since 1.0.0
- */
+*/
 
-list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults();
-// Post Tags & Categories.
-$bst_var_post_tags       = get_the_tags( $bst_var_post_id );
-$bst_var_post_categories = get_categories( $bst_var_post_id );
+BaseTheme::block(
+	$block,
+	function ( $bst_block_id, $bst_block_name, $bst_block_fields, $bst_option_fields ) {
 
+		// Block variables.
+		$bst_var_blk_prjstr_title     = $bst_block_fields['bst_var_blk_prjstr_title'] ?? null;
+		$bst_var_blk_prjstr_variation     = $bst_block_fields['bst_var_blk_prjstr_variation'] ?? null;
+		$bst_var_blk_prjstr_projects	= $bst_block_fields['bst_var_blk_prjstr_projects'] ?? null;
+		?>
 
-$bst_var_post_title = get_the_title();
-$bst_var_sngl_related_title = $bst_fields['bst_var_sngl_related_title'] ?? "WEITERE AKTUELLE PROJEKTE";
-$bst_var_sngl_variation = $bst_fields['bst_var_sngl_variation'] ?? null;
-$bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ?? null;
-
-
-
-
-?>
-
-<div class="">
-
-	<?php get_template_part( 'partials/content' ); ?>
-
-	<div class="gl-s96"></div>
-
-	<div class="page-section">
 		<section>
 			<div class="wrapper">
-				<?php if ( $bst_var_sngl_related_title ) {  ?>
-					<h3 class=""><?php echo html_entity_decode( $bst_var_sngl_related_title ); ?></h3>
+				<?php if ( $bst_var_blk_prjstr_title ) {  ?>
+					<div class="section-head">
+						<div class="hero-split-text">
+							<?php echo html_entity_decode( $bst_var_blk_prjstr_title ); ?>
+						</div>
+						<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_blk_prjstr_title ); ?></h1>
+					</div>
 				<?php } ?>
+
 				<?php
-				if($bst_var_sngl_variation === "manual"){
+				if($bst_var_blk_prjstr_variation === "manual"){
+					$bst_var_post_count = is_array( $bst_var_blk_prjstr_projects ) ? count( $bst_var_blk_prjstr_projects ) : 0;
+					if($bst_var_post_count === 2) {
+						$bst_var_column_class = "have-two-columns";
+					} elseif($bst_var_post_count === 3) {
+						$bst_var_column_class = "four-columns";
+					}
+
 					?>
 
-					<div class="post-archive three-columns">
+					<div class="post-archive three-columns <?php echo $bst_var_column_class; ?>">
 						<?php
-							if ( $bst_var_sngl_related_projects ) {
+							if ( $bst_var_blk_prjstr_projects ) {
 							?>
 								<?php
-									foreach( $bst_var_sngl_related_projects as $key =>  $project_id ){
+									foreach( $bst_var_blk_prjstr_projects as $key =>  $project_id ){
 										list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($project_id);
 										$terms = get_the_terms( $bst_var_post_id, 'category' );
-
-
 										?>
 
-										<article id="post-<?php the_ID($bst_var_post_id); ?>" <?php post_class( 'post-archive-box column' ); ?>>
+										<article id="post-<?php the_ID($bst_var_post_id); ?>" <?php post_class( "post-archive-box column" ); ?>>
 											<div class="post-archive-box-img post-image">
 												<a href="<?php the_permalink($bst_var_post_id); ?>">
 													<?php
@@ -70,13 +70,7 @@ $bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ??
 											<div class="post-content">
 												<div class="post-box-meta d-flex justify-content-between">
 													<div class="ac-post-cat">
-														<?php
-															if ( $terms && ! is_wp_error( $terms ) ) {
-																foreach ( $terms as $term ) {
-																	echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-																}
-															}
-														?>
+														<?php echo get_the_date( 'j. F. Y', $bst_var_post_id ); ?>
 													</div>
 												</div>
 												<div class="post-archive-box-title post-title">
@@ -100,16 +94,13 @@ $bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ??
 								?>
 							<?php
 							} ?>
-
-
-
 					</div>
 
 				<?php } else { ?>
 					<div class="post-archive three-columns">
 						<?php
 							$args = array(
-								'post_type'      => 'overview',
+								'post_type'      => 'reference',
 								'posts_per_page' => 3,
 								'orderby'        => 'date',
 								'order'          => 'DESC',
@@ -141,13 +132,7 @@ $bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ??
 										<div class="post-content">
 											<div class="post-box-meta d-flex justify-content-between">
 												<div class="ac-post-cat">
-													<?php
-														if ( $terms && ! is_wp_error( $terms ) ) {
-															foreach ( $terms as $term ) {
-																echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-															}
-														}
-													?>
+													<?php echo get_the_date( 'j. F. Y', $bst_var_post_id ); ?>
 												</div>
 											</div>
 											<div class="post-archive-box-title post-title">
@@ -179,7 +164,8 @@ $bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ??
 				<?php } ?>
 			</div>
 		</section>
-	</div>
-	<div class="gl-s30"></div>
 
-</div>
+
+		<?php
+	}
+);

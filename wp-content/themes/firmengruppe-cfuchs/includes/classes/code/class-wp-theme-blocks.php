@@ -45,6 +45,7 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'testimonials' );
 		self::register_acf_block( 'icon-grid' );
 		self::register_acf_block( 'services-links' );
+		self::register_acf_block( 'reference-teaser' );
 		self::register_acf_block( 'services-teaser' );
 		self::register_acf_block( 'logo-grid' );
 		self::register_acf_block( 'tabbed-content' );
@@ -64,13 +65,14 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'media-with-map' );
 		self::register_acf_block( 'download-pdf' );
 		self::register_acf_block( 'pie-chart' );
+		self::register_acf_block( 'featured-section' );
 		self::register_acf_block( 'team' );
 		// Register a block - AcfBlock.
-		self::register_acf_block(
-			'acfblock',
-			true,
-			array( 'assets/build/vendors/owl.carousel.min.js', 'assets/build/vendors/organic-tab.js' ), // name will be wp-theme-owl and wp-theme-organic-tab.
-		);
+		// self::register_acf_block(
+		// 	'acfblock',
+		// 	true,
+		// 	array( 'assets/build/vendors/owl.carousel.min.js', 'assets/build/vendors/organic-tab.js' ), // name will be wp-theme-owl and wp-theme-organic-tab.
+		// );
 		// [register_here].
 	}
 
