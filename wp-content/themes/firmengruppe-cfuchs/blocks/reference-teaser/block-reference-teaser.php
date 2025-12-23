@@ -20,151 +20,135 @@ BaseTheme::block(
 		$bst_var_blk_prjstr_projects	= $bst_block_fields['bst_var_blk_prjstr_projects'] ?? null;
 		?>
 
-		<section>
+		<section class="ctn-full-width">
 			<div class="wrapper">
-				<?php if ( $bst_var_blk_prjstr_title ) {  ?>
-					<div class="section-head">
-						<div class="hero-split-text">
-							<?php echo html_entity_decode( $bst_var_blk_prjstr_title ); ?>
-						</div>
-						<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_blk_prjstr_title ); ?></h1>
-					</div>
-				<?php } ?>
+				<div class="category-main">
 
-				<?php
-				if($bst_var_blk_prjstr_variation === "manual"){
-					$bst_var_post_count = is_array( $bst_var_blk_prjstr_projects ) ? count( $bst_var_blk_prjstr_projects ) : 0;
-					if($bst_var_post_count === 2) {
-						$bst_var_column_class = "have-two-columns";
-					} elseif($bst_var_post_count === 3) {
-						$bst_var_column_class = "four-columns";
-					}
+					<?php
+					$terms = get_terms([
+						'taxonomy'   => 'reference-category',
+						'hide_empty' => true,
+					]);
 
+					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
 					?>
 
-					<div class="post-archive three-columns <?php echo $bst_var_column_class; ?>">
-						<?php
-							if ( $bst_var_blk_prjstr_projects ) {
-							?>
-								<?php
-									foreach( $bst_var_blk_prjstr_projects as $key =>  $project_id ){
-										list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($project_id);
-										$terms = get_the_terms( $bst_var_post_id, 'category' );
-										?>
+					<div class="category-nav">
+						<ul>
+							<?php foreach ( $terms as $index => $term ) : ?>
+								<li>
+									<a href="#<?php echo esc_attr( $term->slug ); ?>" class="<?php echo $index === 0 ? 'active' : ''; ?>">
+										<?php echo esc_html( $term->name ); ?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
 
-										<article id="post-<?php the_ID($bst_var_post_id); ?>" <?php post_class( "post-archive-box column" ); ?>>
-											<div class="post-archive-box-img post-image">
-												<a href="<?php the_permalink($bst_var_post_id); ?>">
-													<?php
-														if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
-															echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
-														} else {
-															echo get_the_post_thumbnail(
-																$bst_var_post_id,
-																'thumb_1000',
-															);
-														}
-													?>
-												</a>
+					<div class="category-items">
+
+						<?php foreach ( $terms as $term ){
+							$term_image = get_field( 'bst_var_ctref_image', $term );
+							?>
+
+							<div id="<?php echo esc_attr( $term->slug ); ?>" class="category-single-item">
+
+								<div class="category-single-left">
+									<div class="category-image-card">
+
+										<?php if ( $term_image ) : ?>
+											<div class="single-image">
+												<?php if ( $term_image ) { ?>
+													<?php BaseTheme::the_attachment_image( $term_image, 1000 ); ?>
+												<?php } ?>
 											</div>
-											<div class="post-content">
-												<div class="post-box-meta d-flex justify-content-between">
-													<div class="ac-post-cat">
-														<?php echo get_the_date( 'j. F. Y', $bst_var_post_id ); ?>
-													</div>
-												</div>
-												<div class="post-archive-box-title post-title">
-													<h4><a href="<?php the_permalink($bst_var_post_id); ?>"><?php echo get_the_title($bst_var_post_id); ?></a> </h4>
-												</div>
-												<div class="bottom-section-button">
-													<a href="<?php the_permalink($bst_var_post_id); ?>">
-														<span>
-															Mehr Infos
-														</span>
-														<div class="plus-button">
-															+
-														</div>
-													</a>
-												</div>
+										<?php endif; ?>
+
+										<div class="single-image-content">
+											<div class="small-text">
+												EXPLORE THE FEATURES
 											</div>
-										</article>
+
+											<div class="service-title">
+												<?php echo esc_html( $term->name ); ?>
+											</div>
+
+											<?php if ( $term->description ) : ?>
+												<div class="service-text">
+													<p><?php echo esc_html( $term->description ); ?></p>
+												</div>
+											<?php endif; ?>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="category-single-right">
+									<div class="project-heading">
+										<p>
+											Select <?php echo esc_html( $term->name ); ?> Projects
+										</p>
+									</div>
+
+									<div class="category-single-inne-items">
 
 										<?php
-									}
-								?>
-							<?php
-							} ?>
-					</div>
+										$posts_query = new WP_Query([
+											'post_type'      => 'reference',
+											'posts_per_page' => -1,
+											'tax_query'      => [
+												[
+													'taxonomy' => 'reference-category',
+													'field'    => 'term_id',
+													'terms'    => $term->term_id,
+												],
+											],
+										]);
 
-				<?php } else { ?>
-					<div class="post-archive three-columns">
-						<?php
-							$args = array(
-								'post_type'      => 'reference',
-								'posts_per_page' => 3,
-								'orderby'        => 'date',
-								'order'          => 'DESC',
-							);
+										if ( $posts_query->have_posts() ) :
+											while ( $posts_query->have_posts() ) : $posts_query->the_post();
+										?>
 
-							$bst_query = new WP_Query( $args );
+										<div class="category-image-card">
+											<div class="single-image">
+												<?php the_post_thumbnail( 'large' ); ?>
+											</div>
 
-							if ( $bst_query->have_posts() ) :
-								while ( $bst_query->have_posts() ) : $bst_query->the_post();
-								list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults();
-								$terms = get_the_terms( $bst_var_post_id, 'category' );
+											<div class="single-image-content">
+												<div class="small-text">
+													EXPLORE THE FEATURES
+												</div>
 
-								?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-archive-box column' ); ?>>
-										<div class="post-archive-box-img post-image">
-											<a href="<?php the_permalink(); ?>">
-												<?php
-													if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
-														echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
-													} else {
-														echo get_the_post_thumbnail(
-															$bst_var_post_id,
-															'thumb_1000',
-														);
-													}
-												?>
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="post-box-meta d-flex justify-content-between">
-												<div class="ac-post-cat">
-													<?php echo get_the_date( 'j. F. Y', $bst_var_post_id ); ?>
+												<div class="service-title">
+													<?php the_title(); ?>
+												</div>
+
+												<div class="service-text">
+													<p><?php echo wp_trim_words( get_the_excerpt(), 25 ); ?></p>
 												</div>
 											</div>
-											<div class="post-archive-box-title post-title">
-												<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h4>
-											</div>
-											<div class="bottom-section-button">
-												<a href="<?php the_permalink(); ?>">
-													<span>
-														Mehr Infos
-													</span>
-													<div class="plus-button">
-														+
-													</div>
-												</a>
-											</div>
 										</div>
-									</article>
 
-								<?php endwhile;
-								wp_reset_postdata();
-							else :
-								echo '<p>No projects found.</p>';
-							endif;
-							?>
+										<?php
+											endwhile;
+											wp_reset_postdata();
+										endif;
+										?>
 
+									</div>
+								</div>
 
+							</div>
+
+						<?php } ?>
 
 					</div>
-				<?php } ?>
+
+					<?php endif; ?>
+
+				</div>
 			</div>
 		</section>
-
 
 		<?php
 	}

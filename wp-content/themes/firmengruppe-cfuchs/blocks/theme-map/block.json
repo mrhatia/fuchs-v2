@@ -1,0 +1,24 @@
+{
+	"name": "acf/theme-map",
+	"title": "Theme Map",
+	"description": "A custom Theme Map block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["theme-map"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-theme-map.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "theme-map-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

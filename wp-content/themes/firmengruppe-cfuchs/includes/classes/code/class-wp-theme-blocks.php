@@ -42,6 +42,7 @@ class WP_Theme_Blocks {
 		// Register a block - Media Alongside Text.
 		self::register_acf_block( 'section-head' );
 		self::register_acf_block( 'theme-quote' );
+		self::register_acf_block( 'theme-map' );
 		self::register_acf_block( 'testimonials' );
 		self::register_acf_block( 'icon-grid' );
 		self::register_acf_block( 'services-links' );

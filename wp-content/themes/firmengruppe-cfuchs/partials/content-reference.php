@@ -15,7 +15,7 @@ $bst_var_post_categories = get_categories( $bst_var_post_id );
 
 
 $bst_var_post_title = get_the_title();
-$bst_var_sngl_related_title = $bst_fields['bst_var_sngl_related_title'] ?? "WEITERE AKTUELLE PROJEKTE";
+$bst_var_sngl_related_title = $bst_fields['bst_var_sngl_related_title'] ?? "Referenzen";
 $bst_var_sngl_variation = $bst_fields['bst_var_sngl_variation'] ?? null;
 $bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ?? null;
 
@@ -151,12 +151,17 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 
 <div class="page-section">
 	<?php get_template_part( 'partials/content' ); ?>
-	<div class="gl-s96"></div>
+	<div class="gl-s128"></div>
 	<section>
 		<div class="wrapper">
-			<?php if ( $bst_var_sngl_related_title ) {  ?>
-				<h3 class=""><?php echo html_entity_decode( $bst_var_sngl_related_title ); ?></h3>
-			<?php } ?>
+
+			<div class="section-head">
+
+				<div class="hero-split-text">Latest</div>
+				<h2 class="heading-2">
+					Referenzen
+				</h2>
+			</div>
 			<?php
 			if($bst_var_sngl_variation === "manual"){
 				?>
@@ -230,7 +235,7 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 				<div class="post-archive three-columns">
 					<?php
 						$args = array(
-							'post_type'      => 'overview',
+							'post_type'      => 'reference',
 							'posts_per_page' => 3,
 							'orderby'        => 'date',
 							'order'          => 'DESC',
@@ -300,4 +305,6 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 			<?php } ?>
 		</div>
 	</section>
+	<div class="gl-s96"></div>
+
 </div>
