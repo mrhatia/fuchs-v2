@@ -62,7 +62,7 @@
 		-webkit-line-clamp: 4;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
-		color: var(--fc_body_color);
+		color: var(--fc_white);
 		border-bottom: none;
 
 		&:last-child {
@@ -88,10 +88,6 @@
 			width: 45%;
 			margin-top: 0;
 			margin-left: 30px;
-
-			h2 a {
-				color: var(--fc_body_color);
-			}
 		}
 
 		span.button {
@@ -261,12 +257,6 @@
 	}
 }
 
-.post-archive-box-title {
-	h4,
-	h4 a {
-		color: var(--fc_body_color);
-	}
-}
 .category-nav {
 	position: sticky;
 	top: 81px;

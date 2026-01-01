@@ -10,7 +10,8 @@ body {
 	position: relative;
 	font-size: var(--fc_font_size_18);
 	color: var(--fc_body_color);
-	background-color: var(--fc_body_bg);
+	background-color: var(--fc_color_primary);
+	color: var(--fc_white);
 	line-height: 1.5;
 	overflow: clip;
 	overflow-y: auto;

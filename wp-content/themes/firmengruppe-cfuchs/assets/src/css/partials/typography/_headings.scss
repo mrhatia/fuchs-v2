@@ -17,10 +17,9 @@ h5,
 h6,
 .heading-6,
 .medium-heading {
-
 	@include font(sour, bold);
 	margin: 0 0 20px;
-	color: var(--fc_heading_color);
+	color: var(--fc_white);
 	line-height: 1;
 	text-transform: initial;
 

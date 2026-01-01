@@ -79,7 +79,8 @@ header {
 
 	img {
 		width: 14px;
-		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg) brightness(102%) contrast(103%);
+		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg)
+			brightness(102%) contrast(103%);
 	}
 }
 
@@ -124,12 +125,19 @@ header {
 		transform: scale(0.83) translate(0, -10px);
 		right: 16%;
 		/* left: auto; */
-		transition: transform 0.3s, right 0.3s 0.3s;
+		transition:
+			transform 0.3s,
+			right 0.3s 0.3s;
 	}
 }
 
 .header-section {
-	background-color: var(--fc_white);
+	border-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.4);
+
+	.logo {
+		background-color: var(--fc_white);
+	}
 	z-index: 9;
 	width: 100%;
 	position: fixed;
@@ -158,7 +166,7 @@ header {
 	align-items: center;
 	min-width: 79.4px;
 	height: 79.4px;
-
+	background-color: var(--fc_white);
 }
 
 .hide-topbar {
