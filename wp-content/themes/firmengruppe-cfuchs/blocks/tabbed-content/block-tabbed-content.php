@@ -24,31 +24,11 @@ BaseTheme::block(
 				<section>
 					<div class="wrapper">
 						<div class="tabbed-content-main image-tabs tabbed-map-items four-column-variation">
-
-							<!-- Tab Navigation -->
-							 <div class="tabbed-content-head">
-								<div class="filter-body tabbed-map-nav">
-									<ul role="list" class="select-dropdown-list topic-select-select-dd-menus">
-										<?php foreach ( $fh_var_blk_tbc_tabs as $index => $tab ) :
-											$tab_label = $tab['tab_label'] ?? '';
-											$tab_id = 'tab-' . str_pad( $index + 1, 2, '0', STR_PAD_LEFT );
-										?>
-											<li class="dropdown-list-title select-dropdown__checkbox">
-												<a href="#<?php echo esc_attr( $tab_id ); ?>" class="<?php echo $index === 0 ? 'active' : ''; ?>">
-													<?php echo esc_html( $tab_label ); ?>
-												</a>
-											</li>
-										<?php endforeach; ?>
-									</ul>
-								</div>
-							 </div>
-
-							<div class="gl-s36"></div>
 							<!-- Tab Content -->
 							<div class="tabbed-map-content-inner">
 								<?php foreach ( $fh_var_blk_tbc_tabs as $index => $tab ) :
-									$tab_id              = 'tab-' . str_pad( $index + 1, 2, '0', STR_PAD_LEFT );
-									$active_class        = $index === 0 ? 'active' : '';
+
+
 
 									$tab_images          = $tab['add_images'] ?? [];
 									$kicker         = $tab['kicker'] ?? '';
@@ -56,7 +36,7 @@ BaseTheme::block(
 									$tab_text            = $tab['text'] ?? '';
 									$button            = $tab['button'] ?? '';
 								?>
-									<div id="<?php echo esc_attr( $tab_id ); ?>" class="tabbed-content-single tabbed-id-item <?php echo esc_attr( $active_class ); ?>" style="<?php echo $index === 0 ? '' : 'display:none;'; ?>">
+									<div class="tabbed-content-single tabbed-id-item" style="<?php echo $index === 0 ? '' : 'display:none;'; ?>">
 										<div class="image-alongside-text iat-two-image image-at-right d-flex justify-content-between flex-wrap align-items-center">
 											<div class="iat-content column">
 												<!-- dynamic content -->

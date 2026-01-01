@@ -6702,7 +6702,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   margin-top: 1px;
 }
 
-.pill {
+.filter__pills .pill {
   padding: 6px 12px;
   border-radius: 9999px;
   background-color: #e6ecef;
@@ -6716,22 +6716,45 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   gap: 6px;
   align-items: center;
   justify-content: center;
+  list-style: none;
 }
-.pill svg {
+.filter__pills .pill::before {
+  display: none !important;
+}
+.filter__pills .pill img {
   width: 14px;
   height: 14px;
   margin: 0;
   position: relative;
   top: 1px;
 }
-.pill:hover {
+.filter__pills .pill:hover {
   background-color: #dde6ea;
   border-color: #9fb1bb;
 }
-.pill.is-active {
-  background-color: #3a4c55;
+.filter__pills .pill.active {
+  background-color: #007857;
   color: #ffffff;
-  border-color: #3a4c55;
+  border-color: #007857;
+}
+.filter__pills .pill-small {
+  padding: 3px 11px 0px;
+  border-radius: 9999px;
+  background-color: #e6ecef;
+  border: 1px solid #d0d9de;
+  font-size: 12px;
+  color: #3a4c55;
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin: 0;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.filter__pills .pill-small::before {
+  display: none !important;
 }
 
 .divider {
@@ -6746,6 +6769,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   background-color: #ffc8c7;
   color: #dc0500;
   border-color: #ffc8c7;
+}
+
+.load-more-button {
+  margin-top: var(--fc_space_48);
 }
 
 /*-------------------------------------------------

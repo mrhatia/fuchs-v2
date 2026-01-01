@@ -9,7 +9,11 @@
  */
 
 list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults();
-$terms = get_the_terms( $bst_var_post_id, 'type' );
+$terms_region = get_the_terms( $bst_var_post_id, 'region' );
+
+
+$terms_cat = get_the_terms( $bst_var_post_id, 'reference-category' );
+
 
 ?>
 
@@ -32,8 +36,8 @@ $terms = get_the_terms( $bst_var_post_id, 'type' );
 		<div class="post-box-meta d-flex justify-content-between">
 			<div class="ac-post-cat">
 				<?php
-					if ( $terms && ! is_wp_error( $terms ) ) {
-						foreach ( $terms as $term ) {
+					if ( $terms_region && ! is_wp_error( $terms_region ) ) {
+						foreach ( $terms_region as $term ) {
 							echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
 						}
 					}
@@ -42,6 +46,20 @@ $terms = get_the_terms( $bst_var_post_id, 'type' );
 		</div>
 		<div class="post-box-title post-title">
 			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h4>
+		</div>
+		<div class="post-box-meta d-flex justify-content-between">
+			<div class="ac-post-cat">
+				<ul class="filter__pills">
+
+					<?php
+						if ( $terms_cat && ! is_wp_error( $terms_cat ) ) {
+							foreach ( $terms_cat as $term ) {
+								echo '<li class="pill-small"><a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> </li>';
+							}
+						}
+					?>
+				</ul>
+			</div>
 		</div>
 	</div>
 </article>

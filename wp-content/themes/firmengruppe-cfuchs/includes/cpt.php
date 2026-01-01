@@ -101,6 +101,20 @@ new WP_Theme_CPT(
 				'singular_name' => 'category',
 				'plural_name'   => 'Categories',
 			),
+			array(
+				'slug'          => 'region',
+				'register_key'  => 'region', // if not given default is slug value.
+				'name'          => 'region',
+				'singular_name' => 'region',
+				'plural_name'   => 'Regions',
+			),
+			array(
+				'slug'          => 'status',
+				'register_key'  => 'status', // if not given default is slug value.
+				'name'          => 'status',
+				'singular_name' => 'status',
+				'plural_name'   => 'Statuses',
+			),
 		),
 	)
 );

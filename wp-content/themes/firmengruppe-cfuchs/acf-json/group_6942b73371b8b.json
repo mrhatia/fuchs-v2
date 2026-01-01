@@ -55,52 +55,11 @@
             "layout": "block",
             "pagination": 0,
             "min": 0,
-            "max": 0,
+            "max": 1,
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
-                {
-                    "key": "field_6942b73377710",
-                    "label": "Tab Label",
-                    "name": "tab_label",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6942b73374172"
-                },
-                {
-                    "key": "field_6942bb239f519",
-                    "label": "Expand Options",
-                    "name": "",
-                    "aria-label": "",
-                    "type": "accordion",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "open": 0,
-                    "multi_expand": 0,
-                    "endpoint": 0,
-                    "parent_repeater": "field_6942b73374172"
-                },
                 {
                     "key": "field_6942b7a6b8950",
                     "label": "Kicker",
@@ -228,6 +187,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_6942b73374172",
                     "sub_fields": [
                         {
                             "key": "field_6942b73388f93",
@@ -256,8 +216,7 @@
                             "preview_size": "medium",
                             "parent_repeater": "field_6942b73377721"
                         }
-                    ],
-                    "parent_repeater": "field_6942b73374172"
+                    ]
                 }
             ]
         }
@@ -280,5 +239,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765984783
+    "display_title": "",
+    "modified": 1767247586
 }

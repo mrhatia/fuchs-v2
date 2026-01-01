@@ -1,63 +1,116 @@
-jQuery( function() {
-	const loadMoreBtn = jQuery( '#load-more-reference' );
-	const container = jQuery( '#reference-container' );
+jQuery(function (jQuery) {
 
-	if ( ! loadMoreBtn.length || ! container.length ) {
-		return;
-	}
+	let currentPage = 1;
+	let currentCategory = '';
+	let currentRegion = '';
+	let currentStatus = '';
+	let currentSearch = '';
 
-	loadMoreBtn.on( 'click', function( e ) {
-		e.preventDefault();
+	const container = jQuery('#reference-container');
 
-		const button = jQuery( this );
-		// data-page stores current page that has already been loaded (1 initially)
-		const currentPage = parseInt( button.attr( 'data-page' ) ) || 1;
+	/* ======================
+	   AJAX FUNCTION
+	====================== */
+	function fetchPosts(reset = false) {
 
-		button.prop( 'disabled', true ).text( 'Loading...' ).addClass( 'loading' );
-
-		jQuery.ajax( {
+		jQuery.ajax({
 			url: fuchs_ajax_obj.ajax_url,
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				action: 'fuchs_load_more_reference',
+				action: 'ajax_filter',
 				page: currentPage,
+				category: currentCategory,
+				region: currentRegion,
+				status: currentStatus,
+				search: currentSearch,
 			},
-			success( res ) {
-				if ( ! res || typeof res !== 'object' ) {
-					console.error( 'Unexpected AJAX response:', res );
-					button.prop( 'disabled', false ).text( 'Mehr' ).removeClass( 'loading' );
-					return;
-				}
+			beforeSend() {
+				jQuery('#load-more-reference').text('Loading...');
+			},
+			success(res) {
 
-				if ( res.success && res.data ) {
-					const html = res.data.html || '';
-					const newPaged = parseInt( res.data.paged ) || ( currentPage + 1 );
-					const maxPage = parseInt( res.data.max_page ) || newPaged;
-
-					if ( html.trim() !== '' ) {
-						container.append( html );
-						// update the stored page to the page we just loaded
-						button.attr( 'data-page', newPaged );
-						// if we've reached the last page, remove the button
-						if ( newPaged >= maxPage ) {
-							button.parent().remove(); // remove .load-more wrapper
-						} else {
-							button.prop( 'disabled', false ).text( 'Mehr' ).removeClass( 'loading' );
-						}
-					} else {
-						// no HTML returned (no more posts)
-						button.parent().remove();
-					}
+				if (reset) {
+					container.html(res.data.html);
 				} else {
-					console.error( 'AJAX returned failure:', res );
-					button.prop( 'disabled', false ).text( 'Mehr' ).removeClass( 'loading' );
+					container.append(res.data.html);
 				}
-			},
-			error( xhr, status, err ) {
-				console.error( 'AJAX error', status, err, xhr.responseText );
-				button.prop( 'disabled', false ).text( 'Mehr' ).removeClass( 'loading' );
-			},
-		} );
-	} );
-} );
+
+				// Load More handling
+				if (currentPage >= res.data.max_page) {
+					jQuery('#load-more-reference').parent().remove();
+				} else {
+					if (!jQuery('#load-more-reference').length) {
+						container.after(`
+							<div class="load-more load-more-button d-flex justify-content-center">
+								<a href="#" class="button green-button" id="load-more-reference">Mehr</a>
+							</div>
+						`);
+					}
+					jQuery('#load-more-reference').text('Mehr');
+				}
+			}
+		});
+	}
+
+	/* ======================
+	   CATEGORY FILTER
+	====================== */
+	jQuery(document).on('click', '.categories-select-item', function () {
+		currentCategory = jQuery(this).data('value') || '';
+		currentPage = 1;
+
+		jQuery('.categories-select-item').removeClass('active');
+		jQuery(this).addClass('active');
+
+		fetchPosts(true);
+	});
+
+	/* ======================
+	   REGION FILTER
+	====================== */
+	jQuery(document).on('click', '.regions-select-item', function () {
+		currentRegion = jQuery(this).data('value') || '';
+		currentPage = 1;
+
+		jQuery('.regions-select-item').removeClass('active');
+		jQuery(this).addClass('active');
+
+		fetchPosts(true);
+	});
+
+	/* ======================
+	   STATUS FILTER
+	====================== */
+	jQuery(document).on('click', '.status-select-item', function () {
+		currentStatus = jQuery(this).data('value') || '';
+		currentPage = 1;
+
+		jQuery('.status-select-item').removeClass('active');
+		jQuery(this).addClass('active');
+
+		fetchPosts(true);
+	});
+
+	/* ======================
+	   SEARCH
+	====================== */
+	jQuery('#filter').on('submit', function (e) {
+		e.preventDefault();
+
+		currentSearch = jQuery('#s').val();
+		currentPage = 1;
+
+		fetchPosts(true);
+	});
+
+	/* ======================
+	   LOAD MORE
+	====================== */
+	jQuery(document).on('click', '#load-more-reference', function (e) {
+		e.preventDefault();
+		currentPage++;
+		fetchPosts(false);
+	});
+
+});
