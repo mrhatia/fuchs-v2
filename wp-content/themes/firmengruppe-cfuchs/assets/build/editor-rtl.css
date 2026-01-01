@@ -1144,7 +1144,7 @@ Mixin for transition
   font-weight: bold;
   font-style: normal;
   margin: 0 0 20px;
-  color: var(--fc_heading_color);
+  color: var(--fc_white);
   line-height: 1;
   text-transform: initial;
 }
@@ -2968,7 +2968,7 @@ Mixin for transition
   position: relative;
 }
 .acf-block-preview .section-head .heading-2 {
-  color: var(--fc_gray_5);
+  color: var(--fc_white);
 }
 .acf-block-preview .section-head .hero-split-text {
   position: absolute;
@@ -2990,7 +2990,7 @@ Mixin for transition
   width: -moz-max-content;
   width: max-content;
   z-index: -1;
-  color: rgba(76, 76, 76, 0.231372549);
+  color: rgba(255, 255, 255, 0.7215686275);
   text-transform: uppercase;
 }
 .acf-block-preview .iat-image,
@@ -4603,7 +4603,7 @@ Mixin for transition
   font-size: 14px;
   margin-bottom: 5px;
   text-transform: uppercase;
-  color: var(--fc_gray_4);
+  color: #dddddd;
   letter-spacing: 1.5px;
   display: block;
 }
@@ -4612,7 +4612,7 @@ Mixin for transition
   font-weight: bold;
   font-style: normal;
   font-size: var(--fc_font_size_26);
-  color: var(--fc_color_primary);
+  color: var(--fc_white);
   margin: 0;
 }
 .acf-block-preview .testimonial-variation.swiper .swiper-pagination .swiper-pagination-bullet {
@@ -4853,6 +4853,7 @@ Mixin for transition
 }
 .acf-block-preview .filter-body.tabbed-map-nav {
   margin-right: auto;
+  margin-bottom: -20px;
 }
 .acf-block-preview .four-column-variation .single-image {
   aspect-ratio: 310/310;
@@ -5578,7 +5579,7 @@ Mixin for transition
   min-height: 225px;
   display: block;
   border: 1px solid #e8e8e9;
-  border-bottom: 3px solid var(--fc_orange);
+  border-bottom: 3px solid var(--fc_orange_dark);
   padding: 35px 32px;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
@@ -5586,7 +5587,8 @@ Mixin for transition
 .acf-block-preview .service-single-item a:hover,
 .acf-block-preview .service-single-item a:visited:hover {
   background-color: var(--fc_color_primary);
-  border-bottom: 3px solid var(--fc_orange);
+  border: 1px solid #e8e8e9;
+  border-bottom: 3px solid var(--fc_orange_dark);
 }
 .acf-block-preview .service-single-item a:hover .small-text,
 .acf-block-preview .service-single-item a:hover .service-title,
@@ -5602,13 +5604,13 @@ Mixin for transition
 }
 .acf-block-preview .service-single-item a:hover .plus-button,
 .acf-block-preview .service-single-item a:visited:hover .plus-button {
-  background-color: var(--fc_white);
-  color: var(--fc_black);
+  background-color: var(--fc_orange_dark);
+  color: var(--fc_white);
 }
 .acf-block-preview .service-single-item a .small-text,
 .acf-block-preview .service-single-item a:visited .small-text {
   font-size: 12px;
-  color: #565969;
+  color: #e3e3e3;
   text-transform: uppercase;
   line-height: 1.3;
   letter-spacing: 0.1em;
@@ -5630,7 +5632,7 @@ Mixin for transition
   border-radius: 2px;
   font-size: 20px;
   padding: 10px 20px;
-  color: var(--fc_blue_3);
+  color: var(--fc_white);
   background-color: transparent;
   transition: all 0.3s ease-in-out;
   margin-top: var(--fc_space_48);
@@ -5703,14 +5705,14 @@ Mixin for transition
 }
 .acf-block-preview .image-tabs .tabbed-map-nav ul li a,
 .acf-block-preview .image-tabs .tabbed-map-nav ul li a:visited {
-  color: var(--fc_blue_3);
+  color: var(--fc_white);
   font-size: var(--fc_font_size_18);
   padding: 0;
   border: none;
 }
 .acf-block-preview .image-tabs .tabbed-map-nav ul li a.active,
 .acf-block-preview .image-tabs .tabbed-map-nav ul li a:visited.active {
-  color: var(--fc_orange);
+  color: var(--fc_orange_dark);
 }
 .acf-block-preview .image-tabs .tabbed-content-single {
   max-width: 100%;
@@ -5794,18 +5796,20 @@ Mixin for transition
   padding: 0;
   width: 48%;
 }
-.acf-block-preview .map-alongside-media .wp-block-media-text__content a,
-.acf-block-preview .map-alongside-media .wp-block-media-text__content a:visited {
-  color: var(--fc_body_color);
-  padding: 0;
-  border: none;
-}
-.acf-block-preview .map-alongside-media .wp-block-media-text__content a:hover,
-.acf-block-preview .map-alongside-media .wp-block-media-text__content a:visited:hover {
-  color: var(--fc_orange);
-}
 .acf-block-preview figure.wp-block-media-text__media {
   width: 48%;
+}
+.acf-block-preview .services-logo {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 130px;
+  height: 130px;
+  line-height: 0.65;
+  top: auto;
+  left: 20px;
+  right: auto;
+  bottom: 20px;
 }
 .acf-block-preview .two-columns-content-tile {
   padding: calc(var(--fc_space_72) - 4px) calc(var(--fc_space_72) + 6px) calc(var(--fc_space_72) + 2px) calc(var(--fc_space_72) + 5px);

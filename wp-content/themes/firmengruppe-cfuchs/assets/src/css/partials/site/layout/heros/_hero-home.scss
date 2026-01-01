@@ -286,18 +286,18 @@
 		a,
 		a:visited {
 			span {
-				color: var(--fc_black);
+				color: var(--fc_white);
 			}
 
 			&:hover,
 			&:focus-visible {
 				.plus-button {
-					background-color: var(--fc_color_primary);
-					color: var(--fc_white);
+					background-color: var(--fc_white);
+					color: var(--fc_black);
 				}
 
 				span {
-					color: var(--fc_color_primary);
+					color: var(--fc_white);
 				}
 			}
 		}
