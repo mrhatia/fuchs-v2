@@ -6465,6 +6465,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   border-bottom: 1px solid var(--fc_transparent);
   transition: all 0.3s ease-in-out;
   margin: 0;
+  color: var(--fc_black);
 }
 #breadcrumbs a:hover,
 #breadcrumbs a:visited:hover {
@@ -6680,13 +6681,13 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .filter-search input[type=search] {
   font-size: 1.5rem;
   border: none;
-  color: #3a4c55;
+  color: #ffffff;
 }
 .filter-search input[type=search]::-moz-placeholder {
-  color: #3a4c55 !important;
+  color: #ffffff !important;
 }
 .filter-search input[type=search]::placeholder {
-  color: #3a4c55 !important;
+  color: #ffffff !important;
 }
 .filter-search__inner {
   max-width: 1280px;
@@ -6817,6 +6818,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   justify-content: center;
   list-style: none;
 }
+.filter__pills .pill-small a,
+.filter__pills .pill-small a:visited {
+  color: var(--fc_black);
+}
 .filter__pills .pill-small::before {
   display: none !important;
 }
@@ -6945,6 +6950,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   text-decoration: none;
   border-bottom: none;
   margin-right: 0px;
+  color: var(--fc_white_2);
 }
 
 .post-box-excerpt p {
@@ -8659,7 +8665,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
   position: relative;
   font-size: var(--fc_font_size_26);
   font-weight: 700;
-  border-bottom: 5px solid var(--fc_color_primary);
+  border-bottom: 5px solid var(--fc_white);
   border-top: 1px solid var(--fc_border_3);
   border-right: 1px solid var(--fc_border_3);
   border-left: 1px solid var(--fc_border_3);
@@ -8667,7 +8673,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 }
 .highlight-quote blockquote {
   max-width: 887px;
-  color: var(--fc_color_primary);
+  color: var(--fc_white);
   padding: 0;
   border: none;
   margin: 0;
@@ -8682,6 +8688,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
   background-repeat: no-repeat;
   width: 70px;
   height: 57px;
+  filter: brightness(0) saturate(100%) invert(82%) sepia(94%) saturate(31%) hue-rotate(140deg) brightness(115%) contrast(100%);
 }
 .highlight-quote p {
   font-size: 18px;
@@ -8706,6 +8713,10 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 
 .icons-grid-content {
   width: 80%;
+}
+
+body.logged-in .category-nav {
+  top: 114px;
 }
 
 /*-------------------------------------------------

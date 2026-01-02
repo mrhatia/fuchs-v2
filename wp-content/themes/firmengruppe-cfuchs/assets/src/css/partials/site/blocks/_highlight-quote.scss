@@ -2,14 +2,14 @@
 	position: relative;
 	font-size: var(--fc_font_size_26);
 	font-weight: 700;
-	border-bottom: 5px solid var(--fc_color_primary);
+	border-bottom: 5px solid var(--fc_white);
 	border-top: 1px solid var(--fc_border_3);
 	border-left: 1px solid var(--fc_border_3);
 	border-right: 1px solid var(--fc_border_3);
 	padding: 50px 100px 50px 40px;
 	blockquote {
 		max-width: 887px;
-		color: var(--fc_color_primary);
+		color: var(--fc_white);
 		padding: 0;
 		border: none;
 		margin: 0;
@@ -24,6 +24,8 @@
 		background-repeat: no-repeat;
 		width: 70px;
 		height: 57px;
+		filter: brightness(0) saturate(100%) invert(82%) sepia(94%)
+			saturate(31%) hue-rotate(140deg) brightness(115%) contrast(100%);
 	}
 
 	p {
@@ -52,4 +54,9 @@
 }
 .icons-grid-content {
 	width: 80%;
+}
+body.logged-in {
+	.category-nav {
+		top: 114px;
+	}
 }

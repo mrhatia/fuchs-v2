@@ -1248,6 +1248,7 @@ body {
 		border-bottom: 1px solid var(--fc_transparent);
 		transition: all 0.3s ease-in-out;
 		margin: 0;
+		color: var(--fc_black);
 
 		&:hover {
 			border-color: var(--fc_blue_3);
@@ -1488,10 +1489,10 @@ body {
 	input[type="search"] {
 		font-size: 1.5rem;
 		border: none;
-		color: #3a4c55;
+		color: #ffffff;
 
 		&::placeholder {
-			color: #3a4c55 !important;
+			color: #ffffff !important;
 		}
 	}
 
@@ -1642,7 +1643,10 @@ body {
 		align-items: center;
 		justify-content: center;
 		list-style: none;
-
+		a,
+		a:visited {
+			color: var(--fc_black);
+		}
 		&::before {
 			display: none !important;
 		}

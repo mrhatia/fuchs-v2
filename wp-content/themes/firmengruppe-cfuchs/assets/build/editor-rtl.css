@@ -3500,6 +3500,7 @@ Mixin for transition
   border-bottom: 1px solid var(--fc_transparent);
   transition: all 0.3s ease-in-out;
   margin: 0;
+  color: var(--fc_black);
 }
 .acf-block-preview #breadcrumbs a:hover,
 .acf-block-preview #breadcrumbs a:visited:hover {
@@ -3706,13 +3707,13 @@ Mixin for transition
 .acf-block-preview .filter-search input[type=search] {
   font-size: 1.5rem;
   border: none;
-  color: #3a4c55;
+  color: #ffffff;
 }
 .acf-block-preview .filter-search input[type=search]::-moz-placeholder {
-  color: #3a4c55 !important;
+  color: #ffffff !important;
 }
 .acf-block-preview .filter-search input[type=search]::placeholder {
-  color: #3a4c55 !important;
+  color: #ffffff !important;
 }
 .acf-block-preview .filter-search__inner {
   max-width: 1280px;
@@ -3840,6 +3841,10 @@ Mixin for transition
   align-items: center;
   justify-content: center;
   list-style: none;
+}
+.acf-block-preview .filter__pills .pill-small a,
+.acf-block-preview .filter__pills .pill-small a:visited {
+  color: var(--fc_black);
 }
 .acf-block-preview .filter__pills .pill-small::before {
   display: none !important;
@@ -5103,7 +5108,7 @@ Mixin for transition
   position: relative;
   font-size: var(--fc_font_size_26);
   font-weight: 700;
-  border-bottom: 5px solid var(--fc_color_primary);
+  border-bottom: 5px solid var(--fc_white);
   border-top: 1px solid var(--fc_border_3);
   border-right: 1px solid var(--fc_border_3);
   border-left: 1px solid var(--fc_border_3);
@@ -5111,7 +5116,7 @@ Mixin for transition
 }
 .acf-block-preview .highlight-quote blockquote {
   max-width: 887px;
-  color: var(--fc_color_primary);
+  color: var(--fc_white);
   padding: 0;
   border: none;
   margin: 0;
@@ -5126,6 +5131,7 @@ Mixin for transition
   background-repeat: no-repeat;
   width: 70px;
   height: 57px;
+  filter: brightness(0) saturate(100%) invert(82%) sepia(94%) saturate(31%) hue-rotate(140deg) brightness(115%) contrast(100%);
 }
 .acf-block-preview .highlight-quote p {
   font-size: 18px;
@@ -5147,6 +5153,9 @@ Mixin for transition
 }
 .acf-block-preview .icons-grid-content {
   width: 80%;
+}
+.acf-block-preview body.logged-in .category-nav {
+  top: 114px;
 }
 .acf-block-preview .blog-teaser-slider {
   position: relative;
