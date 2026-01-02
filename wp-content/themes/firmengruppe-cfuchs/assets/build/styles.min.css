@@ -6839,6 +6839,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   margin-top: var(--fc_space_48);
 }
 
+.hide-section {
+  display: none;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/

@@ -3859,6 +3859,9 @@ Mixin for transition
 .acf-block-preview .load-more-button {
   margin-top: var(--fc_space_48);
 }
+.acf-block-preview .hide-section {
+  display: none;
+}
 .acf-block-preview .two-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(clamp(350px, 50% - 2%, 100%), 100%), 1fr));
