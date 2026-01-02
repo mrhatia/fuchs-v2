@@ -85,6 +85,7 @@ export default function Edit( props ) {
 							options={ [
 								{ label: 'Container Green', value: 'ctn-green', display: '#016c50' },
 								{ label: 'Container Orange', value: 'ctn-orange', display: '#fe8400' },
+								{ label: 'Container White', value: 'ctn-white', display: '#ffffff' },
 							] }
 						/>
 					</PanelBody>

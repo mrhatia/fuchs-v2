@@ -309,6 +309,10 @@ function Edit(props) {
               label: 'Container Orange',
               value: 'ctn-orange',
               display: '#fe8400'
+            }, {
+              label: 'Container White',
+              value: 'ctn-white',
+              display: '#ffffff'
             }]
           })
         })]

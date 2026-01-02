@@ -63,6 +63,10 @@
 	background-color: var(--fc_white);
 	padding: var(--fc_space_96) 0;
 
+	* {
+		color: var(--fc_body_color) !important;
+	}
+
 	.section-head {
 		.hero-split-text {
 			color: rgb(0 0 0 / 10%) !important;
@@ -112,6 +116,7 @@
 	.counter-background {
 		z-index: 0;
 	}
+
 	.section-head .hero-split-text {
 		z-index: 0;
 		color: rgb(255 255 255 / 23%);
@@ -119,13 +124,10 @@
 
 	.logo-item-single {
 		img {
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
-				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 
 			&:nth-child(2) {
-				filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
-					saturate(0%) hue-rotate(288deg) brightness(102%)
-					contrast(102%);
+				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 			}
 		}
 	}

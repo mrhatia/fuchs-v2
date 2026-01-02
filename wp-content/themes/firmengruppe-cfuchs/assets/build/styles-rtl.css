@@ -5030,6 +5030,9 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .ctn-white ul li::before {
   background-color: var(--fc_white) !important;
 }
+.ctn-white * {
+  color: var(--fc_body_color) !important;
+}
 .ctn-white .section-head .hero-split-text {
   color: rgba(0, 0, 0, 0.1) !important;
   z-index: 0;
