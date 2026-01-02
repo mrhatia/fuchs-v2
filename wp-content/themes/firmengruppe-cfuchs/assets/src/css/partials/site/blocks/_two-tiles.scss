@@ -8,7 +8,7 @@
 	overflow: hidden;
 
 	* {
-		color: var(--fc_white);
+		color: var(--fc_white) !important;
 	}
 
 	.columns-content-tile-title {

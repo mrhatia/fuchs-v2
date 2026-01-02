@@ -5825,7 +5825,7 @@ Mixin for transition
   overflow: hidden;
 }
 .acf-block-preview .two-columns-content-tile * {
-  color: var(--fc_white);
+  color: var(--fc_white) !important;
 }
 .acf-block-preview .two-columns-content-tile .columns-content-tile-title {
   font-size: var(--fc_font_size_30);
