@@ -1152,7 +1152,7 @@ a {
 .page-section a, .page-section:visited {
   color: var(--fc_white);
   border-bottom: 1px solid var(--fc_white);
-  padding-bottom: 2px;
+  padding-bottom: 0px;
 }
 .page-section a:hover, .page-section a:focus-visible, .page-section a:active, .page-section:visited:hover, .page-section:visited:focus-visible, .page-section:visited:active {
   color: var(--fc_white);
@@ -3356,6 +3356,7 @@ header {
   position: relative;
   height: auto;
   display: block;
+  transform: scale(1.024);
 }
 
 .header-inner {
@@ -4363,16 +4364,16 @@ header {
 }
 .hero-inner-slider:not(.archive-hero, .full-width-image) .slick-prev {
   right: 0px;
-  background-color: rgb(255, 255, 255);
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjAwMDEgMi42NjY3NUwyLjY2Njc1IDE2LjAwMDFMMTYuMDAwMSAyOS4zMzM0IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzIwMTBfMikiPgo8cGF0aCBkPSJNMTUuMzMzNSAyLjY2Njc1TDIuMDAwMTcgMTYuMDAwMUwxNS4zMzM1IDI5LjMzMzQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjAxMF8yIj4KPHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgMTggMCkiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K);
+  background-color: var(--fc_orange);
 }
 .hero-inner-slider:not(.archive-hero, .full-width-image) .slick-prev:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
 .hero-inner-slider:not(.archive-hero, .full-width-image) .slick-next {
   right: 66px;
-  background-color: var(--fc_orange);
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNjY2NjcgMi42NjY3NUwxNiAxNi4wMDAxTDIuNjY2NjcgMjkuMzMzNCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+  background-color: rgb(255, 255, 255);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNjY2NjcgMi42NjY3NUwxNiAxNi4wMDAxTDIuNjY2NjcgMjkuMzMzNCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
 }
 .hero-inner-slider:not(.archive-hero, .full-width-image) .slick-next:hover {
   background-color: rgba(255, 140, 0, 0.8);
@@ -4996,6 +4997,10 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .masonry-gallery-main .ctn-1100 .wrapper {
   max-width: 100%;
 }
+.wrapper .wrapper,
+.masonry-gallery-main .wrapper {
+  width: 100%;
+}
 
 .ctn-1100 .wrapper {
   max-width: 1100px;
@@ -5027,11 +5032,49 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   background-color: var(--fc_white);
   padding: var(--fc_space_96) 0;
 }
+.ctn-white.no-padding-top {
+  padding-top: 0;
+}
+.ctn-white .wrapper .wrapper {
+  width: 100%;
+}
 .ctn-white ul li::before {
   background-color: var(--fc_white) !important;
 }
 .ctn-white * {
   color: var(--fc_body_color) !important;
+}
+.ctn-white a.button,
+.ctn-white a.button:visited,
+.ctn-white span.button,
+.ctn-white .is-style-mycustomstyle .wp-element-button {
+  background-color: var(--fc_color_primary);
+  border-color: var(--fc_color_primary);
+  color: var(--fc_white) !important;
+}
+.ctn-white a.button:hover,
+.ctn-white a.button:visited:hover,
+.ctn-white span.button:hover,
+.ctn-white .is-style-mycustomstyle .wp-element-button:hover {
+  background-color: var(--fc_white);
+  border-color: var(--fc_color_primary);
+  color: var(--fc_color_primary) !important;
+}
+.ctn-white a.button.orange-button,
+.ctn-white a.button:visited.orange-button,
+.ctn-white span.button.orange-button,
+.ctn-white .is-style-mycustomstyle .wp-element-button.orange-button {
+  background-color: var(--fc_color_primary);
+  border-color: var(--fc_color_primary);
+  color: var(--fc_white) !important;
+}
+.ctn-white a.button.orange-button:hover,
+.ctn-white a.button:visited.orange-button:hover,
+.ctn-white span.button.orange-button:hover,
+.ctn-white .is-style-mycustomstyle .wp-element-button.orange-button:hover {
+  background-color: var(--fc_white);
+  border-color: var(--fc_color_primary);
+  color: var(--fc_color_primary) !important;
 }
 .ctn-white .section-head .hero-split-text {
   color: rgba(0, 0, 0, 0.1) !important;
@@ -5584,6 +5627,14 @@ span.button:focus-visible,
   background-color: var(--fc_white);
   border: solid 2px var(--fc_theme_btn_border_color_hover);
   color: var(--fc_color_primary);
+}
+a.button.white-button,
+a.button:visited.white-button,
+span.button.white-button,
+.is-style-mycustomstyle .wp-element-button.white-button {
+  background-color: var(--fc_white);
+  border-color: var(--fc_white);
+  color: var(--fc_regular_text);
 }
 a.button.transparent-button,
 a.button:visited.transparent-button,
@@ -8838,7 +8889,6 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   align-items: center;
   width: 15.8%;
   position: relative;
-  color: var(--fc_color_primary);
 }
 .stats-column .stats-number {
   font-size: var(--fc_font_size_60);
@@ -8851,7 +8901,6 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
-  color: inherit;
 }
 .stats-column span {
   display: block;
@@ -8859,7 +8908,6 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   line-height: 0.75em;
   letter-spacing: 0;
   font-weight: 700;
-  color: inherit;
   margin-top: 10px;
 }
 .stats-column p {
@@ -9132,7 +9180,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   min-height: 225px;
   display: block;
   border: 1px solid #e8e8e9;
-  border-bottom: 3px solid var(--fc_orange_dark);
+  border-bottom: 3px solid var(--fc_white);
   padding: 35px 32px;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
@@ -10008,6 +10056,12 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (max-width: 1003px) {
+  .services-logo {
+    width: 100px;
+    height: 100px;
+    left: 10px;
+    bottom: 10px;
+  }
   .filter-search__label {
     color: #e11c2a;
     width: 32px;

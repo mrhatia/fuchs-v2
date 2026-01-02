@@ -364,6 +364,12 @@
 }
 
 @media only screen and (max-width: 1003px) {
+	.services-logo {
+		width: 100px;
+		height: 100px;
+		right: 10px;
+		bottom: 10px;
+	}
 	.filter-search__label {
 		color: #e11c2a;
 		width: 32px;

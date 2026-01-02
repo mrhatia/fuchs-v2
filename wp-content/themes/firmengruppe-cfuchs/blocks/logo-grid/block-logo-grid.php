@@ -66,7 +66,7 @@ BaseTheme::block(
 				</div>
 			</section>
 		<?php } else { ?>
-			<section class="ctn-1700 ctn-green overflow-top-200">
+			<section class="ctn-1700 overflow-top-200">
 				<div class="wrapper">
 					<div class="logos-section variation">
 

@@ -11,7 +11,6 @@
 	align-items: center;
 	width: 15.8%;
 	position: relative;
-	color: var(--fc_color_primary);
 
 	.stats-number {
 		font-size: var(--fc_font_size_60);
@@ -25,16 +24,15 @@
 		text-transform: uppercase;
 		font-weight: 500;
 		font-size: 14px;
-		color: inherit;
 	}
 
 	span {
 		display: block;
 		font-size: var(--fc_font_size_20);
-		line-height: .75em;
+		line-height: 0.75em;
 		letter-spacing: 0;
 		font-weight: 700;
-		color: inherit;
+
 		margin-top: 10px;
 	}
 
@@ -42,7 +40,6 @@
 		font-size: var(--fc_font_size_18);
 		margin: 13px 0 0 0;
 		display: block;
-
 	}
 }
 
@@ -78,7 +75,6 @@
 
 		span {
 			font-size: var(--fc_space_24);
-
 		}
 
 		.stats-number {
@@ -100,9 +96,17 @@
 				inset: 0;
 				border-radius: 50%;
 				border: 4px solid var(--fc_color_primary);
-				mask: conic-gradient(var(--fc_color_primary) calc(var(--percent) * 1%), transparent 0);
-				-webkit-mask: conic-gradient(var(--fc_color_primary) calc(var(--percent) * 1%), transparent 0);
-				transition: mask 1s linear, -webkit-mask 1s linear;
+				mask: conic-gradient(
+					var(--fc_color_primary) calc(var(--percent) * 1%),
+					transparent 0
+				);
+				-webkit-mask: conic-gradient(
+					var(--fc_color_primary) calc(var(--percent) * 1%),
+					transparent 0
+				);
+				transition:
+					mask 1s linear,
+					-webkit-mask 1s linear;
 			}
 		}
 	}
