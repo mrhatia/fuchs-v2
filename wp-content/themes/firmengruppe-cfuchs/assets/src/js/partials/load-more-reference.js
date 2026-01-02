@@ -7,6 +7,90 @@ jQuery(function (jQuery) {
 	let currentSearch = '';
 
 	const container = jQuery('#reference-container');
+	const section = jQuery('#reference-posts-container');
+
+	/* ======================
+	   URL HELPERS
+	====================== */
+	function updateURL() {
+		const params = new URLSearchParams();
+
+		// IMPORTANT: s ko empty bhi allow karo
+		if (
+			currentSearch !== '' ||
+			currentCategory ||
+			currentRegion ||
+			currentStatus
+		) {
+			params.set('s', currentSearch);
+		}
+
+		if (currentCategory) params.set('category', currentCategory);
+		if (currentRegion) params.set('region', currentRegion);
+		if (currentStatus) params.set('status', currentStatus);
+
+		const newURL = params.toString()
+			? `${window.location.pathname}?${params.toString()}`
+			: window.location.pathname;
+
+		history.pushState(null, '', newURL);
+	}
+
+	function toggleSectionVisibility(fromURL = false) {
+		const params = new URLSearchParams(window.location.search);
+
+		// agar URL me ?s exist karta hai (even empty) → show
+		if (
+			params.has('s') ||
+			currentCategory ||
+			currentRegion ||
+			currentStatus
+		) {
+			section.removeClass('hide-section');
+		} else {
+			section.addClass('hide-section');
+		}
+	}
+
+	/* ======================
+	   READ PARAMS ON LOAD
+	====================== */
+	function initFromURL() {
+		const params = new URLSearchParams(window.location.search);
+
+		currentSearch   = params.has('s') ? params.get('s') || '' : '';
+		currentCategory = params.get('category') || '';
+		currentRegion   = params.get('region') || '';
+		currentStatus   = params.get('status') || '';
+
+		if (params.has('s')) {
+			jQuery('#s').val(currentSearch);
+		}
+
+		if (currentCategory) {
+			jQuery(`.categories-select-item[data-value="${currentCategory}"]`).addClass('active');
+		}
+
+		if (currentRegion) {
+			jQuery(`.regions-select-item[data-value="${currentRegion}"]`).addClass('active');
+		}
+
+		if (currentStatus) {
+			jQuery(`.status-select-item[data-value="${currentStatus}"]`).addClass('active');
+		}
+
+		toggleSectionVisibility(true);
+
+		// agar URL me ?s hai (even empty) ya koi filter hai → AJAX call
+		if (
+			params.has('s') ||
+			currentCategory ||
+			currentRegion ||
+			currentStatus
+		) {
+			fetchPosts(true);
+		}
+	}
 
 	/* ======================
 	   AJAX FUNCTION
@@ -36,7 +120,6 @@ jQuery(function (jQuery) {
 					container.append(res.data.html);
 				}
 
-				// Load More handling
 				if (currentPage >= res.data.max_page) {
 					jQuery('#load-more-reference').parent().remove();
 				} else {
@@ -63,6 +146,8 @@ jQuery(function (jQuery) {
 		jQuery('.categories-select-item').removeClass('active');
 		jQuery(this).addClass('active');
 
+		updateURL();
+		toggleSectionVisibility();
 		fetchPosts(true);
 	});
 
@@ -76,6 +161,8 @@ jQuery(function (jQuery) {
 		jQuery('.regions-select-item').removeClass('active');
 		jQuery(this).addClass('active');
 
+		updateURL();
+		toggleSectionVisibility();
 		fetchPosts(true);
 	});
 
@@ -89,18 +176,22 @@ jQuery(function (jQuery) {
 		jQuery('.status-select-item').removeClass('active');
 		jQuery(this).addClass('active');
 
+		updateURL();
+		toggleSectionVisibility();
 		fetchPosts(true);
 	});
 
 	/* ======================
-	   SEARCH
+	   SEARCH SUBMIT
 	====================== */
 	jQuery('#filter').on('submit', function (e) {
 		e.preventDefault();
 
-		currentSearch = jQuery('#s').val();
+		currentSearch = jQuery('#s').val() || '';
 		currentPage = 1;
 
+		updateURL();
+		toggleSectionVisibility();
 		fetchPosts(true);
 	});
 
@@ -112,5 +203,10 @@ jQuery(function (jQuery) {
 		currentPage++;
 		fetchPosts(false);
 	});
+
+	/* ======================
+	   INIT
+	====================== */
+	initFromURL();
 
 });

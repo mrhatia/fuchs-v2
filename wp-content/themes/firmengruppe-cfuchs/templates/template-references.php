@@ -187,11 +187,6 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 										);
 										if ( $terms ) {
 											?>
-												<li role="listitem" tabindex="0"
-													class="pill select-dropdown__checkbox select-sort-item categories-select-item"
-													data-label="Item one" data-value="" data-type="categories">
-													<div class="select-inner-title">All categories</div>
-												</li>
 												<?php
 												foreach ( $terms as $key => $term ) {
 													?>
@@ -296,7 +291,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 		</section>
 
 		<div class="gl-s72"></div>
-		<section id="page-section" class="page-section">
+		<section id="reference-posts-container" class="page-section hide-section">
 			<!-- Content Start -->
 			<?php
 			// WP_Query for initial load (12 posts)
@@ -336,7 +331,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 		</section>
 
 		<!-- Seection Bottom -->
-		 <div class="wp-block-group alignfull is-style-rivets-outside is-layout-constrained wp-block-group-is-layout-constrained">
+		 <div class="wp-block-group alignfull is-style-rivets-outside center-align is-layout-constrained wp-block-group-is-layout-constrained">
 
 			<h2 class="wp-block-heading has-text-align-center">Explore Our Projects</h2>
 
@@ -355,9 +350,11 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 
 
 
-			<p></p><div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-			<div class="wp-block-button is-style-arrow-right"><a class="wp-block-button__link wp-element-button" href="/referenzen?s=">View More Projects</a></div>
-			</div><p></p>
+
+			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex justify-content-center">
+				<div class="wp-block-button  is-style-arrow-right">
+					<a class="wp-block-button__link wp-element-button" href="/referenzen?s=">View More Projects</a>
+				</div>
 			</div>
 		</div>
 
