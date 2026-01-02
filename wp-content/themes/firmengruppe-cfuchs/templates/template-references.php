@@ -187,6 +187,11 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 										);
 										if ( $terms ) {
 											?>
+											<li class="pill select-dropdown__checkbox select-sort-item categories-select-item active"
+												data-value="">
+												<div class="select-inner-title">Clear</div>
+											</li>
+
 												<?php
 												foreach ( $terms as $key => $term ) {
 													?>
@@ -225,6 +230,10 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 										);
 										if ( $terms ) {
 											?>
+												<li class="pill select-dropdown__checkbox select-sort-item regions-select-item active"
+													data-value="">
+													<div class="select-inner-title">Clear Regions</div>
+												</li>
 
 												<?php
 												foreach ( $terms as $key => $term ) {
@@ -258,12 +267,17 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 										<?php
 										$terms = get_terms(
 											array(
-												'taxonomy'   => 'status',
+												'taxonomy'   => 'current-status',
 												'hide_empty' => true, // Set to true to hide empty terms.
 											)
 										);
 										if ( $terms ) {
 											?>
+											<li class="pill select-dropdown__checkbox select-sort-item status-select-item active"
+												data-value="">
+												<div class="select-inner-title">Clear Status</div>
+											</li>
+
 												<?php
 												foreach ( $terms as $key => $term ) {
 													?>
@@ -284,9 +298,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 
 						</div>
 					</div>
-
 				</form>
-
 			</div>
 		</section>
 
@@ -325,42 +337,48 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 
 			<?php if ($bst_query->found_posts > 9) : ?>
 				<div class="load-more load-more-button d-flex justify-content-center">
-					<a href="#" class="button green-button" id="load-more-reference" data-page="1">Mehr</a>
+					<a href="#" class="button white-button" id="load-more-reference" data-page="1">Mehr</a>
 				</div>
+		<div class="gl-s72"></div>
+
 			<?php endif; ?>
 		</section>
-
-		<!-- Seection Bottom -->
-		 <div class="wp-block-group alignfull is-style-rivets-outside center-align is-layout-constrained wp-block-group-is-layout-constrained">
-
-			<h2 class="wp-block-heading has-text-align-center">Explore Our Projects</h2>
+		<div id="reference-content-section">
 
 
+			<!-- Seection Bottom -->
+			<div class="wp-block-group alignfull is-style-rivets-outside center-align is-layout-constrained wp-block-group-is-layout-constrained">
 
-			<div class="wp-block-group is-style-default is-layout-constrained wp-block-group-is-layout-constrained">
-			<p>Since 1898, Bechtel has helped customers complete more than 25,000 projects in 160 countries on all seven continents. And today, global demand for engineering and construction is accelerating at an astonishing pace. It is estimated that three-quarters of the infrastructure needed for 2050 has yet to be built, paving the way for the largest construction wave in history.&nbsp;</p>
+				<h2 class="wp-block-heading has-text-align-center">Explore Our Projects</h2>
 
 
 
-			<p>Bechtel teams are meeting this moment.&nbsp;&nbsp;</p>
+					<div class="wp-block-group is-style-default is-layout-constrained wp-block-group-is-layout-constrained">
+					<p>Since 1898, Bechtel has helped customers complete more than 25,000 projects in 160 countries on all seven continents. And today, global demand for engineering and construction is accelerating at an astonishing pace. It is estimated that three-quarters of the infrastructure needed for 2050 has yet to be built, paving the way for the largest construction wave in history.&nbsp;</p>
 
 
 
-			<p>We have worked across a diverse set of markets delivering pragmatic solutions to tackle some of the world’s most complex challenges. Whether revitalizing chipmaking with advanced semiconductor manufacturing facilities, expanding transit systems and connecting communities, advancing renewable and nuclear energy, or securing critical mineral supply chains, our teams draw on our generations of knowledge to design and build resilient, sustainable infrastructure.&nbsp;</p>
+					<p>Bechtel teams are meeting this moment.&nbsp;&nbsp;</p>
+
+
+
+					<p>We have worked across a diverse set of markets delivering pragmatic solutions to tackle some of the world’s most complex challenges. Whether revitalizing chipmaking with advanced semiconductor manufacturing facilities, expanding transit systems and connecting communities, advancing renewable and nuclear energy, or securing critical mineral supply chains, our teams draw on our generations of knowledge to design and build resilient, sustainable infrastructure.&nbsp;</p>
 
 
 
 
-			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex justify-content-center">
-				<div class="wp-block-button  is-style-arrow-right">
-					<a class="wp-block-button__link wp-element-button" href="/referenzen?s=">View More Projects</a>
+					<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex justify-content-center">
+						<div class="wp-block-button  is-style-arrow-right">
+							<a class="button white-button" href="<?php echo get_permalink(); ?>?s=">View More Projects</a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<?php
-				get_template_part( 'partials/content', 'page' );
-		?>
+			<?php
+					get_template_part( 'partials/content', 'page' );
+			?>
+		</div>
 	</section>
 
 

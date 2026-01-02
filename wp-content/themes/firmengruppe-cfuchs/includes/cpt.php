@@ -109,11 +109,11 @@ new WP_Theme_CPT(
 				'plural_name'   => 'Regions',
 			),
 			array(
-				'slug'          => 'status',
-				'register_key'  => 'status', // if not given default is slug value.
-				'name'          => 'status',
+				'slug'          => 'current-status',
+				'register_key'  => 'current-status', // if not given default is slug value.
+				'name'          => 'Current Status',
 				'singular_name' => 'status',
-				'plural_name'   => 'Statuses',
+				'plural_name'   => 'Status',
 			),
 		),
 	)
