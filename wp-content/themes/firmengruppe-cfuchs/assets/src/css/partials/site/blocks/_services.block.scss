@@ -339,3 +339,40 @@ figure.wp-block-media-text__media {
 	left: auto;
 	bottom: 20px;
 }
+
+.apprentice-block {
+	.hero-split-text {
+		z-index: 1;
+	}
+}
+.play-button {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	font-size: 16px;
+	letter-spacing: 0.02em;
+	font-weight: 500;
+	color: #fff;
+	svg {
+		margin: 0;
+
+		fill: var(--fc_white);
+	}
+	a,
+	a:visited {
+		width: 64px;
+		height: 64px;
+		margin: 0;
+		background-color: var(--fc_color_primary);
+		padding: 0;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.feature-block.apprentice-block {
+	min-height: 525px;
+	padding-top: 60px;
+	box-sizing: border-box;
+}

@@ -4775,6 +4775,52 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   height: calc(100vh - 32px);
 }
 
+.video-hero {
+  height: 90vh;
+  position: relative;
+}
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video-hero .banner-content {
+  position: absolute;
+  inset: 0;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  text-align: center;
+  top: auto;
+  bottom: 15%;
+}
+.video-hero .banner-content .hero-split-text {
+  position: absolute;
+  top: -116px;
+  right: -6%;
+  visibility: visible;
+  font-size: var(--fc_font_size_180);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  font-weight: 700;
+  margin: 0;
+  font-family: "Source Sans 3", arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: -1.7px;
+  opacity: 0.4 !important;
+  text-transform: uppercase;
+}
+
+.video-hero-background {
+  width: 100%;
+  height: 100%;
+}
+
 /*-------------------------------------------------
 >> Styles for footer
 -------------------------------------------------*/
@@ -5635,6 +5681,14 @@ span.button.white-button,
   background-color: var(--fc_white);
   border-color: var(--fc_white);
   color: var(--fc_regular_text);
+}
+a.button.white-button:hover,
+a.button:visited.white-button:hover,
+span.button.white-button:hover,
+.is-style-mycustomstyle .wp-element-button.white-button:hover {
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_white);
+  color: var(--fc_white);
 }
 a.button.transparent-button,
 a.button:visited.transparent-button,
@@ -6671,6 +6725,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    margin: 0;
   }
 }
 
@@ -6885,6 +6940,29 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     transform: rotate(-360deg);
   }
 }
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--fc_space_30) 0;
+  box-sizing: border-box;
+}
+
+.short-filter {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.short-filter select {
+  color: var(--fc_white);
+  border: none;
+  background-image: none;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
@@ -8050,6 +8128,32 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   line-height: 0.65;
 }
 
+.introduction-team {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.introduction-team .introduction-team-left {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.introduction-team .introduction-team-left .section-head {
+  max-width: 650px;
+}
+.introduction-team .introduction-team-left .section-head .hero-split-text {
+  font-size: var(--fc_font_size_160);
+}
+
+.introduction-team-image {
+  width: 50%;
+  display: flex;
+}
+.introduction-team-image img {
+  max-width: 762px;
+  margin-right: auto;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Image Alongside Text Block
 -------------------------------------------------*/
@@ -8692,11 +8796,48 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 .section-head-simple {
   max-width: 100%;
 }
-.section-head-simple h2 {
-  text-transform: uppercase;
-}
 .section-head-simple .shd-text {
   word-break: break-word;
+}
+
+.what-we-offer {
+  position: relative;
+  padding: var(--fc_space_96) 0;
+  box-sizing: border-box;
+}
+.what-we-offer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -56.2vw;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(248, 248, 249, 0.0392156863);
+  z-index: -1;
+}
+.what-we-offer .section-head-simple {
+  margin-bottom: var(--fc_space_48);
+}
+.what-we-offer .column .icon {
+  margin-bottom: 20px;
+}
+.what-we-offer .column p {
+  max-width: 300px;
+}
+
+.applicants-questions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.applicants-image {
+  width: 60%;
+}
+
+.applicants-content {
+  width: 38%;
+  padding: var(--fc_space_200) var(--fc_space_128);
+  box-sizing: border-box;
 }
 
 /*-------------------------------------------------
@@ -9474,6 +9615,42 @@ figure.wp-block-media-text__media {
   bottom: 20px;
 }
 
+.apprentice-block .hero-split-text {
+  z-index: 1;
+}
+
+.play-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: #fff;
+}
+.play-button svg {
+  margin: 0;
+  fill: var(--fc_white);
+}
+.play-button a,
+.play-button a:visited {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  background-color: var(--fc_color_primary);
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-block.apprentice-block {
+  min-height: 525px;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
 .two-columns-content-tile {
   padding: calc(var(--fc_space_72) - 4px) calc(var(--fc_space_72) + 6px) calc(var(--fc_space_72) + 2px) calc(var(--fc_space_72) + 5px);
   box-sizing: border-box;
@@ -9839,6 +10016,23 @@ figure.wp-block-media-text__media {
   .blog-teaser-slider::before {
     width: 62.1vw;
   }
+  .what-we-offer::after {
+    right: -55vw;
+  }
+  .applicants-image {
+    width: 50%;
+  }
+  .introduction-team .introduction-team-left {
+    padding-right: 5.5%;
+    box-sizing: border-box;
+  }
+  .applicants-content {
+    width: 50%;
+    padding: var(--fc_space_200) 60px;
+  }
+  .feature-block.apprentice-block {
+    min-height: 400px;
+  }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
   .ctn-container-bg .wrapper {
@@ -9849,6 +10043,30 @@ figure.wp-block-media-text__media {
   .ctn-container-bg .wrapper {
     background-size: contain;
     background-image: url(images/background-container-shape-1.png);
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1299px) {
+  .applicants-image {
+    width: 49%;
+  }
+  .applicants-content {
+    width: 51%;
+    padding: var(--fc_space_200) 50px;
+  }
+  .feature-block.apprentice-block {
+    min-height: 325px;
+  }
+}
+@media only screen and (min-width: 1004px) and (max-width: 1099px) {
+  .applicants-image {
+    width: 49%;
+  }
+  .applicants-content {
+    width: 51%;
+    padding: var(--fc_space_200) 50px;
+  }
+  .feature-block.apprentice-block {
+    min-height: 325px;
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1399px) {
@@ -10108,6 +10326,28 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (max-width: 1003px) {
+  .feature-block.apprentice-block {
+    min-height: 300px;
+    padding-top: 40px;
+  }
+  .applicants-image {
+    width: 100%;
+  }
+  .applicants-content {
+    width: 100%;
+    padding: 50px 5.5%;
+  }
+  .what-we-offer::after {
+    display: none;
+  }
+  .introduction-team .introduction-team-left {
+    width: 100%;
+    padding: 80px 5.5% 30px;
+    box-sizing: border-box;
+  }
+  .introduction-team-image {
+    width: 100%;
+  }
   .services-logo {
     width: 100px;
     height: 100px;

@@ -427,3 +427,46 @@ section:has(.slide.has-green-bg.active):not(
 		height: calc(100vh - 32px);
 	}
 }
+.video-hero {
+	height: 90vh;
+	position: relative;
+
+	video {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		object-fit: cover;
+	}
+	.banner-content {
+		position: absolute;
+		inset: 0;
+		width: max-content;
+		height: max-content;
+		margin: auto;
+		text-align: center;
+		top: auto;
+		bottom: 15%;
+		.hero-split-text {
+			position: absolute;
+			top: -116px;
+			left: -6%;
+			visibility: visible;
+			font-size: var(--fc_font_size_180);
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke-width: 1px;
+			font-weight: 700;
+			margin: 0;
+			font-family: "Source Sans 3", arial, sans-serif;
+			font-weight: bold;
+			font-style: normal;
+			letter-spacing: -1.7px;
+			opacity: 0.4 !important;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.video-hero-background {
+	width: 100%;
+	height: 100%;
+}

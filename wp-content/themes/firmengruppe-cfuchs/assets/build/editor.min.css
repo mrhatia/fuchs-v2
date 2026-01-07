@@ -2708,6 +2708,14 @@ Mixin for transition
   border-color: var(--fc_white);
   color: var(--fc_regular_text);
 }
+.acf-block-preview a.button.white-button:hover,
+.acf-block-preview a.button:visited.white-button:hover,
+.acf-block-preview span.button.white-button:hover,
+.acf-block-preview .is-style-mycustomstyle .wp-element-button.white-button:hover {
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_white);
+  color: var(--fc_white);
+}
 .acf-block-preview a.button.transparent-button,
 .acf-block-preview a.button:visited.transparent-button,
 .acf-block-preview span.button.transparent-button,
@@ -3703,6 +3711,7 @@ Mixin for transition
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    margin: 0;
   }
 }
 .acf-block-preview .filter-search {
@@ -3900,6 +3909,27 @@ Mixin for transition
   to {
     transform: rotate(360deg);
   }
+}
+.acf-block-preview .search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--fc_space_30) 0;
+  box-sizing: border-box;
+}
+.acf-block-preview .short-filter {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.acf-block-preview .short-filter select {
+  color: var(--fc_white);
+  border: none;
+  background-image: none;
 }
 .acf-block-preview .two-columns {
   display: grid;
@@ -4554,6 +4584,30 @@ Mixin for transition
 .acf-block-preview .iat-button {
   line-height: 0.65;
 }
+.acf-block-preview .introduction-team {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.acf-block-preview .introduction-team .introduction-team-left {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.acf-block-preview .introduction-team .introduction-team-left .section-head {
+  max-width: 650px;
+}
+.acf-block-preview .introduction-team .introduction-team-left .section-head .hero-split-text {
+  font-size: var(--fc_font_size_160);
+}
+.acf-block-preview .introduction-team-image {
+  width: 50%;
+  display: flex;
+}
+.acf-block-preview .introduction-team-image img {
+  max-width: 762px;
+  margin-left: auto;
+}
 .acf-block-preview .testimonial-item {
   background-color: var(--fc_white);
   border: 1px solid #e8e8e9;
@@ -5135,11 +5189,44 @@ Mixin for transition
 .acf-block-preview .section-head-simple {
   max-width: 100%;
 }
-.acf-block-preview .section-head-simple h2 {
-  text-transform: uppercase;
-}
 .acf-block-preview .section-head-simple .shd-text {
   word-break: break-word;
+}
+.acf-block-preview .what-we-offer {
+  position: relative;
+  padding: var(--fc_space_96) 0;
+  box-sizing: border-box;
+}
+.acf-block-preview .what-we-offer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -56.2vw;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(248, 248, 249, 0.0392156863);
+  z-index: -1;
+}
+.acf-block-preview .what-we-offer .section-head-simple {
+  margin-bottom: var(--fc_space_48);
+}
+.acf-block-preview .what-we-offer .column .icon {
+  margin-bottom: 20px;
+}
+.acf-block-preview .what-we-offer .column p {
+  max-width: 300px;
+}
+.acf-block-preview .applicants-questions {
+  display: flex;
+  flex-wrap: wrap;
+}
+.acf-block-preview .applicants-image {
+  width: 60%;
+}
+.acf-block-preview .applicants-content {
+  width: 38%;
+  padding: var(--fc_space_200) var(--fc_space_128);
+  box-sizing: border-box;
 }
 .acf-block-preview .highlight-quote {
   position: relative;
@@ -5861,6 +5948,39 @@ Mixin for transition
   right: 20px;
   left: auto;
   bottom: 20px;
+}
+.acf-block-preview .apprentice-block .hero-split-text {
+  z-index: 1;
+}
+.acf-block-preview .play-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: #fff;
+}
+.acf-block-preview .play-button svg {
+  margin: 0;
+  fill: var(--fc_white);
+}
+.acf-block-preview .play-button a,
+.acf-block-preview .play-button a:visited {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  background-color: var(--fc_color_primary);
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.acf-block-preview .feature-block.apprentice-block {
+  min-height: 525px;
+  padding-top: 60px;
+  box-sizing: border-box;
 }
 .acf-block-preview .two-columns-content-tile {
   padding: calc(var(--fc_space_72) - 4px) calc(var(--fc_space_72) + 5px) calc(var(--fc_space_72) + 2px) calc(var(--fc_space_72) + 6px);
@@ -6821,6 +6941,23 @@ Mixin for transition
   .acf-block-preview .blog-teaser-slider::before {
     width: 62.1vw;
   }
+  .acf-block-preview .what-we-offer::after {
+    left: -55vw;
+  }
+  .acf-block-preview .applicants-image {
+    width: 50%;
+  }
+  .acf-block-preview .introduction-team .introduction-team-left {
+    padding-left: 5.5%;
+    box-sizing: border-box;
+  }
+  .acf-block-preview .applicants-content {
+    width: 50%;
+    padding: var(--fc_space_200) 60px;
+  }
+  .acf-block-preview .feature-block.apprentice-block {
+    min-height: 400px;
+  }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
   .acf-block-preview .ctn-container-bg .wrapper {
@@ -6831,6 +6968,30 @@ Mixin for transition
   .acf-block-preview .ctn-container-bg .wrapper {
     background-size: contain;
     background-image: url(images/background-container-shape-1.png);
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1299px) {
+  .acf-block-preview .applicants-image {
+    width: 49%;
+  }
+  .acf-block-preview .applicants-content {
+    width: 51%;
+    padding: var(--fc_space_200) 50px;
+  }
+  .acf-block-preview .feature-block.apprentice-block {
+    min-height: 325px;
+  }
+}
+@media only screen and (min-width: 1004px) and (max-width: 1099px) {
+  .acf-block-preview .applicants-image {
+    width: 49%;
+  }
+  .acf-block-preview .applicants-content {
+    width: 51%;
+    padding: var(--fc_space_200) 50px;
+  }
+  .acf-block-preview .feature-block.apprentice-block {
+    min-height: 325px;
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1399px) {
@@ -7090,6 +7251,28 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 1003px) {
+  .acf-block-preview .feature-block.apprentice-block {
+    min-height: 300px;
+    padding-top: 40px;
+  }
+  .acf-block-preview .applicants-image {
+    width: 100%;
+  }
+  .acf-block-preview .applicants-content {
+    width: 100%;
+    padding: 50px 5.5%;
+  }
+  .acf-block-preview .what-we-offer::after {
+    display: none;
+  }
+  .acf-block-preview .introduction-team .introduction-team-left {
+    width: 100%;
+    padding: 80px 5.5% 30px;
+    box-sizing: border-box;
+  }
+  .acf-block-preview .introduction-team-image {
+    width: 100%;
+  }
   .acf-block-preview .services-logo {
     width: 100px;
     height: 100px;

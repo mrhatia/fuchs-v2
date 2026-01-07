@@ -6,6 +6,27 @@
 	// .header-nav {
 	// 	gap: 20px;
 	// }
+	.applicants-content {
+		// padding: var(--fc_space_200) 40px;
+	}
+	.what-we-offer::after {
+		left: -55vw;
+	}
+	.applicants-image {
+		width: 50%;
+	}
+	.introduction-team .introduction-team-left {
+		padding-left: 5.5%;
+		box-sizing: border-box;
+	}
+
+	.applicants-content {
+		width: 50%;
+		padding: var(--fc_space_200) 60px;
+	}
+	.feature-block.apprentice-block {
+		min-height: 400px;
+	}
 }
 
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
@@ -17,6 +38,30 @@
 	.ctn-container-bg .wrapper {
 		background-size: contain;
 		background-image: url(../images/background-container-shape-1.png);
+	}
+}
+@media only screen and (min-width: 1100px) and (max-width: 1299px) {
+	.applicants-image {
+		width: 49%;
+	}
+	.applicants-content {
+		width: 51%;
+		padding: var(--fc_space_200) 50px;
+	}
+	.feature-block.apprentice-block {
+		min-height: 325px;
+	}
+}
+@media only screen and (min-width: 1004px) and (max-width: 1099px) {
+	.applicants-image {
+		width: 49%;
+	}
+	.applicants-content {
+		width: 51%;
+		padding: var(--fc_space_200) 50px;
+	}
+	.feature-block.apprentice-block {
+		min-height: 325px;
 	}
 }
 @media only screen and (min-width: 1100px) and (max-width: 1399px) {
@@ -364,6 +409,29 @@
 }
 
 @media only screen and (max-width: 1003px) {
+	.feature-block.apprentice-block {
+		min-height: 300px;
+		padding-top: 40px;
+	}
+	.applicants-image {
+		width: 100%;
+	}
+	.applicants-content {
+		width: 100%;
+		padding: 50px 5.5%;
+	}
+	.what-we-offer::after {
+		display: none;
+	}
+	.introduction-team .introduction-team-left {
+		width: 100%;
+		padding: 80px 5.5% 30px;
+		box-sizing: border-box;
+	}
+	.introduction-team-image {
+		width: 100%;
+	}
+
 	.services-logo {
 		width: 100px;
 		height: 100px;
