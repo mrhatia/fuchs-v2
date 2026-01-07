@@ -655,4 +655,5 @@ jQuery( function() {
 		updateSlides();
 		startAutoplay();
 	}
+	// Chart
 } );
