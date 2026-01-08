@@ -1,0 +1,24 @@
+{
+	"name": "acf/video-banner",
+	"title": "Video Banner",
+	"description": "A custom video banner block.",
+	"category": "theme-blocks",
+	"icon": "video-banner",
+	"keywords": ["video-banner"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-video-banner.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "video-banner-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

@@ -118,3 +118,60 @@ new WP_Theme_CPT(
 		),
 	)
 );
+new WP_Theme_CPT(
+	array(
+		'labels' => array(
+			'singular_capital'   => 'Job',
+			'plural_capital'     => 'Jobs',
+			'singular_lowercase' => 'job',
+			'plural_lowercase'   => 'jobs',
+
+			// CPT key MUST be lowercase
+			'register_key' => 'job',
+			'slug'         => 'job',
+		),
+
+		'supports'     => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt' ),
+		'menu_icon'    => 'dashicons-id',
+		'public'       => true,
+		'show_ui'      => true,
+		'show_in_menu' => true,
+
+		'taxonomies' => array(
+
+			array(
+				'slug'              => 'job-category',
+				'register_key'      => 'job-category',
+				'name'              => 'Job Category',
+				'singular_name'     => 'Job Category',
+				'plural_name'       => 'Job Categories',
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'hierarchical'      => true,
+			),
+
+			array(
+				'slug'              => 'job-region',
+				'register_key'      => 'job-region',
+				'name'              => 'Job Region',
+				'singular_name'     => 'Job Region',
+				'plural_name'       => 'Job Regions',
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'hierarchical'      => true,
+			),
+
+			array(
+				'slug'              => 'job-status',
+				'register_key'      => 'job-status',
+				'name'              => 'Job Status',
+				'singular_name'     => 'Job Status',
+				'plural_name'       => 'Job Status',
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'hierarchical'      => false,
+			),
+		),
+	)
+);
+

@@ -1,0 +1,24 @@
+{
+	"name": "acf/service-info",
+	"title": "Service Info",
+	"description": "A custom Service Info block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["service-info"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-service-info.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "service-info-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

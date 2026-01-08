@@ -111,6 +111,8 @@
 	margin-bottom: 30px;
 }
 
+
+
 .editor-styles-wrapper {
 	@include font(sour, reg, family weight);
 	transition: all 0.3s ease-in-out;
@@ -119,6 +121,10 @@
 	color: var(--fc_body_color);
 	background-color: var(--fc_body_bg);
 	line-height: 1.5;
+
+	.editor-post-title {
+		color: var(--fc_body_color) !important;
+	}
 
 	.acf-block-body {
 		margin-block-end: 50px !important;

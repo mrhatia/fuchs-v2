@@ -68,6 +68,9 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'pie-chart' );
 		self::register_acf_block( 'featured-section' );
 		self::register_acf_block( 'team' );
+		self::register_acf_block( 'video-banner' );
+		self::register_acf_block( 'service-info' );
+		self::register_acf_block( 'job-offers' );
 		// Register a block - AcfBlock.
 		// self::register_acf_block(
 		// 	'acfblock',

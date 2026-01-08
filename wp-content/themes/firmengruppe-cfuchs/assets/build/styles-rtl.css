@@ -4801,7 +4801,8 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .video-hero .banner-content .hero-split-text {
   position: absolute;
   top: -116px;
-  right: -6%;
+  right: 50%;
+  transform: translateX(50%);
   visibility: visible;
   font-size: var(--fc_font_size_180);
   -webkit-text-fill-color: transparent;
@@ -6305,6 +6306,21 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   .fuchs-chart-block .chart-center .center-logo {
     width: 55%;
   }
+}
+
+.chart-center {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 8px);
+  transform: translate(50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: white;
+  z-index: -1;
 }
 
 .single-service.service-detail-single {
