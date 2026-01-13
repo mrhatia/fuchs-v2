@@ -7226,25 +7226,37 @@ Mixin for transition
   margin: 0 !important;
 }
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
+  .acf-block-preview .section-head-simple .kicker-text {
+    font-size: 14px;
+  }
+  .acf-block-preview .section-head-simple .heading-3 {
+    font-size: 60px;
+  }
   .acf-block-preview .blog-teaser-slider::before {
     width: 62.1vw;
   }
   .acf-block-preview .what-we-offer::after {
-    right: -55vw;
+    right: -45vw;
   }
   .acf-block-preview .applicants-image {
-    width: 50%;
+    width: 60%;
   }
   .acf-block-preview .introduction-team .introduction-team-left {
     padding-right: 5.5%;
     box-sizing: border-box;
   }
   .acf-block-preview .applicants-content {
-    width: 50%;
-    padding: var(--fc_space_200) 60px;
+    width: 40%;
+    padding: 78px 60px 95px;
+  }
+  .acf-block-preview .applicants-content .heading-2 {
+    font-size: 60px;
   }
   .acf-block-preview .feature-block.apprentice-block {
     min-height: 400px;
+  }
+  .acf-block-preview .introduction-team-image img {
+    max-width: 545px;
   }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {

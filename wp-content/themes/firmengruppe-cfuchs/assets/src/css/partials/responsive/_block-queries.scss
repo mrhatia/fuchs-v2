@@ -1,4 +1,12 @@
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
+	.section-head-simple {
+		.kicker-text {
+			font-size: 14px;
+		}
+		.heading-3 {
+			font-size: 60px;
+		}
+	}
 	.blog-teaser-slider::before {
 		width: 62.1vw;
 	}
@@ -10,10 +18,11 @@
 		// padding: var(--fc_space_200) 40px;
 	}
 	.what-we-offer::after {
-		left: -55vw;
+		left: -45vw;
 	}
+
 	.applicants-image {
-		width: 50%;
+		width: 60%;
 	}
 	.introduction-team .introduction-team-left {
 		padding-left: 5.5%;
@@ -21,11 +30,17 @@
 	}
 
 	.applicants-content {
-		width: 50%;
-		padding: var(--fc_space_200) 60px;
+		width: 40%;
+		padding: 78px 60px 95px;
+		.heading-2 {
+			font-size: 60px;
+		}
 	}
 	.feature-block.apprentice-block {
 		min-height: 400px;
+	}
+	.introduction-team-image img {
+		max-width: 545px;
 	}
 }
 

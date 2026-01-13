@@ -3373,7 +3373,7 @@ header {
 }
 
 .header-section {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.4);
   z-index: 9;
   width: 100%;
@@ -3464,7 +3464,7 @@ header {
   display: inline-block;
   position: relative;
   line-height: 1;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -10307,25 +10307,37 @@ figure.wp-block-media-text__media {
 >> Base Responsive queries
 ------------------------------------------------- */
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
+  .section-head-simple .kicker-text {
+    font-size: 14px;
+  }
+  .section-head-simple .heading-3 {
+    font-size: 60px;
+  }
   .blog-teaser-slider::before {
     width: 62.1vw;
   }
   .what-we-offer::after {
-    right: -55vw;
+    right: -45vw;
   }
   .applicants-image {
-    width: 50%;
+    width: 60%;
   }
   .introduction-team .introduction-team-left {
     padding-right: 5.5%;
     box-sizing: border-box;
   }
   .applicants-content {
-    width: 50%;
-    padding: var(--fc_space_200) 60px;
+    width: 40%;
+    padding: 78px 60px 95px;
+  }
+  .applicants-content .heading-2 {
+    font-size: 60px;
   }
   .feature-block.apprentice-block {
     min-height: 400px;
+  }
+  .introduction-team-image img {
+    max-width: 545px;
   }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
