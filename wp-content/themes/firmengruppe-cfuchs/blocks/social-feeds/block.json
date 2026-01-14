@@ -1,0 +1,24 @@
+{
+	"name": "acf/social-feeds",
+	"title": "Social Feeds",
+	"description": "A custom Social Feeds block.",
+	"category": "theme-blocks",
+	"icon": "social-feeds",
+	"keywords": ["social-feeds"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-social-feeds.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "social-feeds-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

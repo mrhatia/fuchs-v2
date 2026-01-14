@@ -71,6 +71,8 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'video-banner' );
 		self::register_acf_block( 'service-info' );
 		self::register_acf_block( 'job-offers' );
+		self::register_acf_block( 'social-feeds' );
+		self::register_acf_block( 'theme-video' );
 		// Register a block - AcfBlock.
 		// self::register_acf_block(
 		// 	'acfblock',

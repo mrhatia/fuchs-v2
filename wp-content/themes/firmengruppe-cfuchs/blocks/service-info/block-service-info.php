@@ -25,7 +25,7 @@ BaseTheme::block(
 		$bst_var_blk_mat_img_location = $bst_block_fields['bst_var_blk_mat_img_position'] ?? null;
 
 		?>
-<div class="gl-s96"></div>
+
 	<!-- Service Info -->
 	<section class="ctn-full-width">
 		<div class="wrapper">

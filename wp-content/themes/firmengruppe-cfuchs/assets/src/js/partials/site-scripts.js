@@ -7,6 +7,8 @@ import organicTabs from '../vendors/organic-tab';
 import slick from '../vendors/slick.min';
 import gasap from '../vendors/gsap.min';
 import gsapScroll from '../vendors/ScrollTrigger.min';
+import Lity from '../vendors/lity.js';
+
 jQuery( document ).on( 'scroll', function() {
 	if ( jQuery( document ).scrollTop() > 0 ) {
 		jQuery( 'header, body' ).addClass( 'shrink' );
