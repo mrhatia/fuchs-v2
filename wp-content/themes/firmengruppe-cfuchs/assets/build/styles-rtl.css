@@ -3366,7 +3366,7 @@ header {
 }
 
 .header-section.shrink .header-logo a {
-  transform: scale(0.83) translate(0, -10px);
+  transform: scale(0.75) translate(0, -17px);
   left: 16%;
   /* left: auto; */
   transition: transform 0.3s, left 0.3s 0.3s;
@@ -3404,7 +3404,7 @@ header {
   justify-content: center;
   align-items: center;
   min-width: 79.4px;
-  height: 79.4px;
+  height: 68px;
   background-color: var(--fc_white);
 }
 
@@ -3486,7 +3486,7 @@ header {
   letter-spacing: -0.02em;
   line-height: 1.33em;
   text-transform: capitalize;
-  padding: 28px;
+  padding: 21px 28px;
   box-sizing: border-box;
 }
 .header-nav ul li:nth-child(1) {
@@ -5077,6 +5077,9 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .ctn-white {
   background-color: var(--fc_white);
   padding: var(--fc_space_96) 0;
+}
+.ctn-white .logo-item-single img {
+  filter: initial !important;
 }
 .ctn-white.no-padding-top {
   padding-top: 0;
@@ -9972,9 +9975,11 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   width: auto;
   transform: translate(0, -100%);
   filter: none;
+  filter: brightness(0) invert(1);
 }
 .logo-item-single:hover img {
   transform: translateY(100%);
+  filter: brightness(0) invert(1);
 }
 .logo-item-single:hover img:nth-child(2) {
   transform: translate(0, 0);

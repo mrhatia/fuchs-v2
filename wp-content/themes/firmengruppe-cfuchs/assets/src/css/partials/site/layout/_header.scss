@@ -123,7 +123,7 @@ header {
 
 .header-section.shrink {
 	.header-logo a {
-		transform: scale(0.83) translate(0, -10px);
+		transform: scale(0.75) translate(0, -17px);
 		right: 16%;
 		/* left: auto; */
 		transition:
@@ -166,7 +166,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	min-width: 79.4px;
-	height: 79.4px;
+	height: 68px;
 	background-color: var(--fc_white);
 }
 

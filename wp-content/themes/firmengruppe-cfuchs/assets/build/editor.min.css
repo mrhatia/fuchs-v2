@@ -6285,9 +6285,11 @@ Mixin for transition
   width: auto;
   transform: translate(0, -100%);
   filter: none;
+  filter: brightness(0) invert(1);
 }
 .acf-block-preview .logo-item-single:hover img {
   transform: translateY(100%);
+  filter: brightness(0) invert(1);
 }
 .acf-block-preview .logo-item-single:hover img:nth-child(2) {
   transform: translate(0, 0);
