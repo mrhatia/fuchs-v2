@@ -112,7 +112,8 @@
 	&:hover {
 		img {
 			transform: translateY(100%);
-			filter: brightness(0) invert(1);
+			filter: brightness(0) saturate(100%) invert(49%) sepia(79%)
+				saturate(2862%) hue-rotate(10deg) brightness(99%) contrast(98%);
 
 			&:nth-child(2) {
 				transform: translate(0, 0);
