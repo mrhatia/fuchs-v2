@@ -3401,7 +3401,6 @@ header {
   background-color: var(--fc_white);
 }
 .header-section.shrink {
-  top: -1px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
