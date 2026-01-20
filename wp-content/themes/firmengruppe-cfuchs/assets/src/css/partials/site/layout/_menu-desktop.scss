@@ -46,7 +46,7 @@
 			display: inline-block;
 			position: relative;
 			line-height: 1;
-			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-left: 1px solid rgba(255, 255, 255, 0.5);
 			@include font(sour, reg);
 			width: 16.7%;
 
@@ -64,8 +64,11 @@
 				letter-spacing: -0.02em;
 				line-height: 1.33em;
 				text-transform: capitalize;
-				padding: 21px 28px;
+				padding: 20px 28px;
 				box-sizing: border-box;
+				background-position: 520px 0;
+				transition: 15s linear;
+				background-repeat: repeat;
 			}
 
 			&:nth-child(1) {
@@ -93,7 +96,8 @@
 			a:hover,
 			span.menu-link:hover {
 				color: var(--fc_white);
-
+				background-image: url(../images/default_pattern-shape.png);
+				transition: 15s linear;
 				&::after {
 					transform-origin: bottom left;
 					transform: scaleX(1);
