@@ -7426,6 +7426,10 @@ Mixin for transition
   margin: 0 !important;
 }
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
+  .acf-block-preview .introduction-team .introduction-team-left .section-head .hero-split-text {
+    top: clamp(-5rem, -3.464vw - 2.229rem, -3.125rem);
+    font-size: 140px;
+  }
   .acf-block-preview .section-head-simple .kicker-text {
     font-size: 14px;
   }
@@ -7436,12 +7440,13 @@ Mixin for transition
     width: 62.1vw;
   }
   .acf-block-preview .what-we-offer::after {
-    left: -45vw;
+    left: -43.6vw;
   }
   .acf-block-preview .applicants-image {
     width: 60%;
   }
   .acf-block-preview .introduction-team .introduction-team-left {
+    padding: 2% 0;
     padding-left: 5.5%;
     box-sizing: border-box;
   }
@@ -7457,6 +7462,11 @@ Mixin for transition
   }
   .acf-block-preview .introduction-team-image img {
     max-width: 545px;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1370px) {
+  .acf-block-preview .what-we-offer::after {
+    left: -614px;
   }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
@@ -8032,6 +8042,9 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 747px) {
+  .acf-block-preview .logo::before {
+    display: none;
+  }
   .acf-block-preview .icons-grid-content {
     width: 100%;
   }

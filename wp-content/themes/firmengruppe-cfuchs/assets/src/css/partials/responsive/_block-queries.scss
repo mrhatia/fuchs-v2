@@ -1,4 +1,9 @@
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
+	.introduction-team .introduction-team-left .section-head .hero-split-text {
+		top: clamp(-5rem, -3.464vw - 2.229rem, -3.125rem);
+
+		font-size: 140px;
+	}
 	.section-head-simple {
 		.kicker-text {
 			font-size: 14px;
@@ -18,13 +23,14 @@
 		// padding: var(--fc_space_200) 40px;
 	}
 	.what-we-offer::after {
-		left: -45vw;
+		left: -43.6vw;
 	}
 
 	.applicants-image {
 		width: 60%;
 	}
 	.introduction-team .introduction-team-left {
+		padding: 2% 0;
 		padding-left: 5.5%;
 		box-sizing: border-box;
 	}
@@ -43,7 +49,11 @@
 		max-width: 545px;
 	}
 }
-
+@media only screen and (min-width: 1300px) and (max-width: 1370px) {
+	.what-we-offer::after {
+		left: -614px;
+	}
+}
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
 	.ctn-container-bg .wrapper {
 		background-size: contain;
@@ -789,6 +799,11 @@
 }
 
 @media only screen and (max-width: 747px) {
+	.logo {
+		&::before {
+			display: none;
+		}
+	}
 	.icons-grid-content {
 		width: 100%;
 	}
