@@ -799,6 +799,11 @@
 }
 
 @media only screen and (max-width: 747px) {
+	.logo {
+		&::before {
+			display: none;
+		}
+	}
 	.icons-grid-content {
 		width: 100%;
 	}

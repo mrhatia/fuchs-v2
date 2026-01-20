@@ -8042,6 +8042,9 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 747px) {
+  .acf-block-preview .logo::before {
+    display: none;
+  }
   .acf-block-preview .icons-grid-content {
     width: 100%;
   }
