@@ -79,8 +79,7 @@ header {
 
 	img {
 		width: 14px;
-		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg)
-			brightness(102%) contrast(103%);
+		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg) brightness(102%) contrast(103%);
 	}
 }
 
@@ -94,9 +93,10 @@ header {
 	padding: 0;
 	z-index: 100001;
 
-	img {
-		width: 100%;
-	}
+	// img {
+	// 	width: 90%;
+	// 	margin-top: 4px;
+	// }
 }
 
 .no-overflow {
@@ -139,6 +139,7 @@ header {
 	.logo {
 		background-color: var(--fc_white);
 	}
+
 	z-index: 9;
 	width: 100%;
 	position: fixed;
@@ -168,6 +169,7 @@ header {
 	min-width: 79.4px;
 	height: 68px;
 	background-color: var(--fc_white);
+	width: 154px;
 }
 
 .hide-topbar {

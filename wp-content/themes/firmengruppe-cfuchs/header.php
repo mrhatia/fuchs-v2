@@ -25,6 +25,9 @@ $bst_var_header_btn     = $bst_option_fields['bst_var_header_btn'] ?? null;
 $bst_var_tbar_vsblty   = $bst_option_fields['bst_var_tbar_vsblty'] ?? null;
 $bst_var_tbar_text     = $bst_option_fields['bst_var_tbar_text'] ?? null;
 $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
+
+$bst_var_social_profiles = $bst_option_fields['bst_var_social_profiles'] ?? null;
+
 // Page variables - Advanced custom fields variables.
 
 ?>
@@ -141,9 +144,14 @@ $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
 									)
 								);
 							?>
-					<div class="header-btns">
-							<a href="#" class="search-icon top-search"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/images/search-icon.svg" alt=""></a>
-						</div>
+							<div class="header-btns">
+								<a href="#" class="search-icon top-search"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/images/search-icon.svg" alt=""></a>
+								<div class="menu-btn-desktop">
+									<span class="top"></span>
+									<span class="middle"></span>
+									<span class="bottom"></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -184,5 +192,73 @@ $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
 		</div>
 		<!-- Header End -->
 	</header>
+
+	<section class="mkdf-side-menu ps ps--active-y">
+		<a class="mkdf-close-side-menu mkdf-close-side-menu-predefined" href="javascript:void(0);">
+			<svg class="mkdf-close-icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 14"
+				style="enable-background:new 0 0 18 14;" xml:space="preserve">
+				<style type="text/css">
+					.st0 {
+						fill: #FFFFFF;
+					}
+				</style>
+				<path class="st0" d="M15.5,2c0.4-0.4,0.4-1.1,0-1.5c-0.2-0.2-0.5-0.3-0.8-0.3c0,0,0,0,0,0c-0.3,0-0.6,0.1-0.8,0.3L2.5,12
+							c-0.2,0.2-0.3,0.5-0.3,0.8c0,0.3,0.1,0.6,0.3,0.8C2.9,14,3.6,14,4,13.5L15.5,2z"></path>
+				<path class="st0" d="M15.5,2c0.4-0.4,0.4-1.1,0-1.5c-0.2-0.2-0.5-0.3-0.8-0.3c0,0,0,0,0,0c-0.3,0-0.6,0.1-0.8,0.3L2.5,12
+							c-0.2,0.2-0.3,0.5-0.3,0.8c0,0.3,0.1,0.6,0.3,0.8C2.9,14,3.6,14,4,13.5L15.5,2z"></path>
+				<path class="st0" d="M2.5,2C2,1.6,2,0.9,2.5,0.5c0.2-0.2,0.5-0.3,0.8-0.3c0,0,0,0,0,0c0.3,0,0.6,0.1,0.8,0.3L15.5,12
+							c0.2,0.2,0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8c-0.4,0.4-1.1,0.4-1.5,0L2.5,2z"></path>
+				<path class="st0" d="M2.5,2C2,1.6,2,0.9,2.5,0.5c0.2-0.2,0.5-0.3,0.8-0.3c0,0,0,0,0,0c0.3,0,0.6,0.1,0.8,0.3L15.5,12
+							c0.2,0.2,0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8c-0.4,0.4-1.1,0.4-1.5,0L2.5,2z"></path>
+			</svg> </a>
+		<div id="text-13" class="widget mkdf-sidearea widget_text">
+			<div class="mkdf-widget-title-holder">
+				<h4 class="mkdf-widget-title">Quick contact info</h4>
+			</div>
+			<div class="textwidget">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni voluptatem rem odit. Repudiandae odit sed tempore nesciunt et optio modi.</p>
+			</div>
+		</div>
+		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+			<span class="mkdf-icon-element mkdf-custom-image">
+				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
+					alt="icon_widget_image">
+			</span>
+			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
+		</div>
+		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+			<span class="mkdf-icon-element mkdf-custom-image">
+				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
+					alt="icon_widget_image">
+			</span>
+			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
+		</div>
+		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+			<span class="mkdf-icon-element mkdf-custom-image">
+				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
+					alt="icon_widget_image">
+			</span>
+			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
+		</div>
+		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+			<span class="mkdf-icon-element mkdf-custom-image">
+				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
+					alt="icon_widget_image">
+			</span>
+			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
+		</div>
+		<div class="widget mkdf-social-icons-group-widget mkdf-square-icons text-align-center">
+			<div class="social-icons soial-icons-header d-flex">
+				<?php BaseTheme::the_social_icons( $bst_var_social_profiles ); ?>
+			</div>
+		</div>
+		<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+			<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+		</div>
+		<div class="ps__rail-y" style="top: 0px; right: 0px; height: 736px;">
+			<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 686px;"></div>
+		</div>
+	</section>
 	<!-- Main Area Start -->
 	<main id="main-section" class="main-section">

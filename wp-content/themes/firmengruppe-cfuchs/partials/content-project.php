@@ -18,10 +18,6 @@ $bst_var_post_title = get_the_title();
 $bst_var_sngl_related_title = $bst_fields['bst_var_sngl_related_title'] ?? "WEITERE AKTUELLE PROJEKTE";
 $bst_var_sngl_variation = $bst_fields['bst_var_sngl_variation'] ?? null;
 $bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ?? null;
-
-
-
-
 ?>
 
 <div class="">
@@ -105,9 +101,6 @@ $bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ??
 								?>
 							<?php
 							} ?>
-
-
-
 					</div>
 
 				<?php } else { ?>

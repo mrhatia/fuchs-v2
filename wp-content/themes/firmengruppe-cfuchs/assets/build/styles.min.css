@@ -3340,9 +3340,6 @@ header {
   padding: 0;
   z-index: 100001;
 }
-.header-logo a img {
-  width: 100%;
-}
 
 .no-overflow {
   overflow: hidden;
@@ -3406,6 +3403,7 @@ header {
   min-width: 79.4px;
   height: 68px;
   background-color: var(--fc_white);
+  width: 154px;
 }
 
 .hide-topbar header {
@@ -3703,6 +3701,138 @@ header {
 /*-------------------------------------------------
 >> Styles for mobile menu
 -------------------------------------------------*/
+.soial-icons-header.social-icons {
+  margin-top: 50px;
+}
+.soial-icons-header.social-icons a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px 0 0;
+  font-size: 15px;
+  color: #fff;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border-right-width: 0;
+  float: left;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.mkdf-icon-element {
+  width: 30px;
+}
+
+.mkdf-icon-widget-holder {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  margin-bottom: 20px;
+}
+
+.mkdf-close-side-menu {
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 0;
+  top: 7.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mkdf-close-side-menu .mkdf-close-icon-svg {
+  width: 20px;
+  margin: 0;
+}
+.mkdf-close-side-menu .mkdf-close-icon-svg path {
+  fill: var(--fc_color_primary);
+}
+
+.mkdf-side-menu {
+  position: fixed;
+  top: 0;
+  right: -405px;
+  width: 420px;
+  height: 100%;
+  min-height: 100%;
+  padding: 10% 45px 36px;
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden;
+  visibility: hidden;
+  z-index: 9999;
+  -webkit-backface-visibility: hidden;
+  box-sizing: border-box;
+  box-shadow: -3px 0 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.side-menu-opened .mkdf-side-menu {
+  right: 0;
+  visibility: visible;
+  background-color: var(--fc_green_dark);
+}
+
+.search-icon {
+  display: flex;
+  min-width: 70px;
+  height: 100%;
+}
+
+.menu-btn-desktop {
+  top: 0px;
+  right: 0;
+  min-width: 70px;
+  height: 100%;
+  cursor: pointer;
+  z-index: 9999;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--fc_color_primary);
+  padding: 0 23px;
+  box-sizing: border-box;
+}
+.menu-btn-desktop span {
+  height: 2px;
+  width: 100%;
+  background-color: var(--fc_white);
+  opacity: 1;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn-desktop span:first-child {
+  width: 50%;
+  margin: 0 auto 0 0;
+}
+.menu-btn-desktop span:last-child {
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+.menu-btn-desktop:hover span:first-child, .menu-btn-desktop:focus-visible span:first-child {
+  width: 100%;
+}
+.menu-btn-desktop:hover span:last-child, .menu-btn-desktop:focus-visible span:last-child {
+  width: 100%;
+}
+.menu-btn-desktop.active span:first-child {
+  width: 100%;
+  transform: translateY(5.1px) translateX(0) rotate(-45deg);
+}
+.menu-btn-desktop.active span:last-child {
+  width: 100%;
+  transform: translateY(-7px) translateX(0) rotate(45deg);
+}
+.menu-btn-desktop.active span.middle {
+  opacity: 0;
+}
+
 @media (max-width: 1003px) {
   .header-navigation {
     width: -moz-max-content;
