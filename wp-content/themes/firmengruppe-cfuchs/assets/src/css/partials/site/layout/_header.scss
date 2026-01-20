@@ -79,7 +79,8 @@ header {
 
 	img {
 		width: 14px;
-		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg) brightness(102%) contrast(103%);
+		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(220deg)
+			brightness(102%) contrast(103%);
 	}
 }
 
@@ -189,7 +190,7 @@ header {
 	align-items: center;
 	min-width: 79.4px;
 	height: 66px;
-	background-color: var(--fc_white);
+	background-color: var(--fc_green_dark);
 	width: 154px;
 }
 

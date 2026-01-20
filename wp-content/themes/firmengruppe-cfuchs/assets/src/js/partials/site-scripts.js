@@ -42,7 +42,7 @@ jQuery( function() {
 	} );
 
 	jQuery( '.top-search' ).on( 'click', function() {
-		jQuery( '.search-form-new' ).toggleClass( 'side-menu-opened' );
+		jQuery( '.search-form-new' ).toggleClass( 'open' );
 		jQuery( '.header-section' ).toggleClass( 'open' );
 		jQuery( '#search-top .keyword' ).focus();
 	} );
