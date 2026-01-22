@@ -158,8 +158,8 @@ header {
 .header-section {
 	border-color: rgba(255, 255, 255, 0.1);
 	background-color: rgba(255, 255, 255, 0.4);
-	border-top: 1px solid rgba(255, 255, 255, 0.5);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	.logo {
 		background-color: var(--fc_white);
 	}
@@ -190,8 +190,9 @@ header {
 	align-items: center;
 	min-width: 79.4px;
 	height: 66px;
-	background-color: var(--fc_green_dark);
+	background-color: var(--fc_color_primary);
 	width: 154px;
+	border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hide-topbar {

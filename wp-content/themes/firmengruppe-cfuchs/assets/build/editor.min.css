@@ -7426,9 +7426,12 @@ Mixin for transition
   margin: 0 !important;
 }
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
+  .acf-block-preview .introduction-team .introduction-team-left .section-head {
+    max-width: 608px;
+  }
   .acf-block-preview .introduction-team .introduction-team-left .section-head .hero-split-text {
     top: clamp(-5rem, -3.464vw - 2.229rem, -3.125rem);
-    font-size: 140px;
+    font-size: 110px;
   }
   .acf-block-preview .section-head-simple .kicker-text {
     font-size: 14px;
@@ -7440,10 +7443,11 @@ Mixin for transition
     width: 62.1vw;
   }
   .acf-block-preview .what-we-offer::after {
-    left: -43.6vw;
+    left: -55.5vw;
+    width: 100vw;
   }
   .acf-block-preview .applicants-image {
-    width: 60%;
+    width: 50%;
   }
   .acf-block-preview .introduction-team .introduction-team-left {
     padding: 2% 0;
@@ -7451,7 +7455,7 @@ Mixin for transition
     box-sizing: border-box;
   }
   .acf-block-preview .applicants-content {
-    width: 40%;
+    width: 50%;
     padding: 78px 60px 95px;
   }
   .acf-block-preview .applicants-content .heading-2 {
@@ -7460,13 +7464,15 @@ Mixin for transition
   .acf-block-preview .feature-block.apprentice-block {
     min-height: 400px;
   }
-  .acf-block-preview .introduction-team-image img {
-    max-width: 545px;
-  }
 }
 @media only screen and (min-width: 1300px) and (max-width: 1370px) {
   .acf-block-preview .what-we-offer::after {
-    left: -614px;
+    left: clamp(-47.125rem, -52.857vw - 1.866rem, -44.812rem);
+    width: 100vw;
+  }
+  .acf-block-preview .introduction-team .introduction-team-left .section-head .hero-split-text {
+    top: -60px;
+    font-size: 110px;
   }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
@@ -7481,6 +7487,15 @@ Mixin for transition
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
+  .acf-block-preview .what-we-offer::after {
+    left: -50.2vw;
+  }
+  .acf-block-preview .introduction-team .introduction-team-left {
+    padding-left: 5%;
+  }
+  .acf-block-preview .introduction-team-image {
+    width: 45%;
+  }
   .acf-block-preview .applicants-image {
     width: 49%;
   }

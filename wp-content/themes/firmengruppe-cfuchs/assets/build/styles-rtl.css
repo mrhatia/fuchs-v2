@@ -3389,8 +3389,8 @@ header {
 .header-section {
   border-color: rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.4);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 9;
   width: 100%;
   position: fixed;
@@ -3420,8 +3420,9 @@ header {
   align-items: center;
   min-width: 79.4px;
   height: 66px;
-  background-color: var(--fc_green_dark);
+  background-color: var(--fc_color_primary);
   width: 154px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hide-topbar header {
@@ -3480,7 +3481,7 @@ header {
   display: inline-block;
   position: relative;
   line-height: 1;
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -10687,9 +10688,12 @@ figure.wp-block-media-text__media {
 >> Base Responsive queries
 ------------------------------------------------- */
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
+  .introduction-team .introduction-team-left .section-head {
+    max-width: 608px;
+  }
   .introduction-team .introduction-team-left .section-head .hero-split-text {
     top: clamp(-5rem, -3.464vw - 2.229rem, -3.125rem);
-    font-size: 140px;
+    font-size: 110px;
   }
   .section-head-simple .kicker-text {
     font-size: 14px;
@@ -10701,10 +10705,11 @@ figure.wp-block-media-text__media {
     width: 62.1vw;
   }
   .what-we-offer::after {
-    right: -43.6vw;
+    right: -55.5vw;
+    width: 100vw;
   }
   .applicants-image {
-    width: 60%;
+    width: 50%;
   }
   .introduction-team .introduction-team-left {
     padding: 2% 0;
@@ -10712,7 +10717,7 @@ figure.wp-block-media-text__media {
     box-sizing: border-box;
   }
   .applicants-content {
-    width: 40%;
+    width: 50%;
     padding: 78px 60px 95px;
   }
   .applicants-content .heading-2 {
@@ -10721,13 +10726,15 @@ figure.wp-block-media-text__media {
   .feature-block.apprentice-block {
     min-height: 400px;
   }
-  .introduction-team-image img {
-    max-width: 545px;
-  }
 }
 @media only screen and (min-width: 1300px) and (max-width: 1370px) {
   .what-we-offer::after {
-    right: -614px;
+    right: clamp(-47.125rem, -52.857vw - 1.866rem, -44.812rem);
+    width: 100vw;
+  }
+  .introduction-team .introduction-team-left .section-head .hero-split-text {
+    top: -60px;
+    font-size: 110px;
   }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
@@ -10742,6 +10749,15 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
+  .what-we-offer::after {
+    right: -50.2vw;
+  }
+  .introduction-team .introduction-team-left {
+    padding-right: 5%;
+  }
+  .introduction-team-image {
+    width: 45%;
+  }
   .applicants-image {
     width: 49%;
   }
