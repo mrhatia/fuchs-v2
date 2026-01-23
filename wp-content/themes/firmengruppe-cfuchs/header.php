@@ -175,12 +175,14 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 		</div>
 		<div class="search-form-new">
 			<div class="search-inner-content">
-				<div class="search-inner-content--text">
-					SEARCH SITE </div>
+			<div class="search-inner-icon-main">
+								<a href="#" class="search-icon top-search"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/images/search-icon.svg" alt=""></a>
+
+			</div>
 				<form role="search" method="get" id="searchform" action="#">
 					<div id="search-top">
 						<input type="text" name="s" class="keyword" onkeyup="fetch()" autocomplete="off"
-							autofocus="autofocus" aria-label="Search" placeholder="Search">
+							autofocus="autofocus" aria-label="Search" placeholder="Type your search">
 						<div class="clear"></div>
 					</div>
 				</form>
