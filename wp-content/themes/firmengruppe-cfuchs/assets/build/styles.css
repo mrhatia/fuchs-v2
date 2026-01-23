@@ -10762,14 +10762,44 @@ figure.wp-block-media-text__media {
     min-height: 400px;
   }
 }
-@media only screen and (min-width: 1300px) and (max-width: 1370px) {
+@media only screen and (min-width: 1441px) and (max-width: 1836px) {
   .what-we-offer::after {
-    left: clamp(-47.125rem, -52.857vw - 1.866rem, -44.812rem);
-    width: 100vw;
+    left: clamp(-64.375rem, -60.253vw + 4.766rem, -49.5rem);
   }
-  .introduction-team .introduction-team-left .section-head .hero-split-text {
-    top: -60px;
-    font-size: 110px;
+  .introduction-team-image {
+    width: clamp(45rem, 10.633vw + 35.424rem, 47.625rem);
+    margin: 0 0 0 auto;
+  }
+  .introduction-team-image img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+  }
+  .applicants-image {
+    width: clamp(45rem, 89.873vw - 35.942rem, 67.188rem);
+  }
+  .applicants-content {
+    width: 41%;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1441px) {
+  .what-we-offer::after {
+    left: clamp(-49.5rem, -55vw + 0rem, -44.687rem);
+  }
+  .introduction-team-image {
+    width: clamp(40.625rem, 50vw + 0rem, 45rem);
+    margin: 0 0 0 auto;
+  }
+  .introduction-team-image img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+  }
+  .applicants-image {
+    width: clamp(40.625rem, 50vw + 0rem, 45rem);
+  }
+  .applicants-content {
+    width: 49%;
   }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
@@ -10784,9 +10814,6 @@ figure.wp-block-media-text__media {
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
-  .what-we-offer::after {
-    left: -50.2vw;
-  }
   .introduction-team .introduction-team-left {
     padding-left: 5%;
   }

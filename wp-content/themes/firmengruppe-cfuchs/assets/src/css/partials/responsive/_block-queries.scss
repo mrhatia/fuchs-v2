@@ -2,19 +2,23 @@
 	.introduction-team .introduction-team-left .section-head {
 		max-width: 608px;
 	}
+
 	.introduction-team .introduction-team-left .section-head .hero-split-text {
 		top: clamp(-5rem, -3.464vw - 2.229rem, -3.125rem);
 
 		font-size: 110px;
 	}
+
 	.section-head-simple {
 		.kicker-text {
 			font-size: 14px;
 		}
+
 		.heading-3 {
 			font-size: 60px;
 		}
 	}
+
 	.blog-teaser-slider::before {
 		width: 62.1vw;
 	}
@@ -25,6 +29,7 @@
 	.applicants-content {
 		// padding: var(--fc_space_200) 40px;
 	}
+
 	.what-we-offer::after {
 		left: -55.5vw;
 		width: 100vw;
@@ -33,6 +38,7 @@
 	.applicants-image {
 		width: 50%;
 	}
+
 	.introduction-team .introduction-team-left {
 		padding: 2% 0;
 		padding-left: 5.5%;
@@ -42,86 +48,147 @@
 	.applicants-content {
 		width: 50%;
 		padding: 78px 60px 95px;
+
 		.heading-2 {
 			font-size: 60px;
 		}
 	}
+
 	.feature-block.apprentice-block {
 		min-height: 400px;
 	}
 }
-@media only screen and (min-width: 1300px) and (max-width: 1370px) {
+
+
+
+@media only screen and (min-width: 1441px) and (max-width: 1836px) {
 	.what-we-offer::after {
-		left: clamp(-47.125rem, -52.857vw + -1.866rem, -44.812rem);
-		width: 100vw;
+		left: clamp(-64.375rem, -60.253vw + 4.766rem, -49.5rem);
+		;
 	}
-	.introduction-team .introduction-team-left .section-head .hero-split-text {
-		top: -60px;
-		font-size: 110px;
+
+	.introduction-team-image {
+		width: clamp(45rem, 10.633vw + 35.424rem, 47.625rem);
+		margin: 0 0 0 auto;
+
+		img {
+			max-width: 100%;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.applicants-image {
+		width: clamp(45rem, 89.873vw + -35.942rem, 67.188rem);
+		;
+	}
+
+	.applicants-content {
+		width: 41%;
 	}
 }
+@media only screen and (min-width: 1300px) and (max-width: 1441px) {
+	.what-we-offer::after {
+		left:clamp(-49.5rem, -55vw + 0rem, -44.687rem);
+		;
+	}
+
+	.introduction-team-image {
+		width: clamp(40.625rem, 50vw + 0rem, 45rem);
+		margin: 0 0 0 auto;
+
+		img {
+			max-width: 100%;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.applicants-image {
+		width: clamp(40.625rem, 50vw + 0rem, 45rem);
+		;
+	}
+
+
+    .applicants-content {
+        width: 49%;}
+}
+
+
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
 	.ctn-container-bg .wrapper {
 		background-size: contain;
 	}
 }
+
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
 	.ctn-container-bg .wrapper {
 		background-size: contain;
 		background-image: url(../images/background-container-shape-1.png);
 	}
 }
+
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
-	.what-we-offer::after {
-		left: -50.2vw;
-	}
+
+
 	.introduction-team .introduction-team-left {
 		padding-left: 5%;
 	}
+
 	.introduction-team-image {
 		width: 45%;
 	}
+
 	.applicants-image {
 		width: 49%;
 	}
+
 	.applicants-content {
 		width: 51%;
 		padding: var(--fc_space_200) 50px;
 	}
+
 	.feature-block.apprentice-block {
 		min-height: 325px;
 	}
 }
+
 @media only screen and (min-width: 1004px) and (max-width: 1099px) {
 	.applicants-image {
 		width: 49%;
 	}
+
 	.applicants-content {
 		width: 51%;
 		padding: var(--fc_space_200) 50px;
 	}
+
 	.feature-block.apprentice-block {
 		min-height: 325px;
 	}
 }
+
 @media only screen and (min-width: 1100px) and (max-width: 1399px) {
 	.ctn-container-bg .wrapper {
 		background-size: contain;
 		background-image: url(../images/background-container-shape-2.png);
 	}
 }
+
 @media only screen and (min-width: 748px) and (max-width: 1098px) {
 	.ctn-container-bg .wrapper {
 		background-size: contain;
 		background-image: url(../images/background-container-shape-3.png);
 	}
 }
+
 @media only screen and (min-width: 280px) and (max-width: 748px) {
 	.ctn-container-bg .wrapper {
 		background-size: initial;
 		background-image: url(../images/background-container-shape-4.png);
 	}
 }
+
 @media only screen and (min-width: 1346px) and (max-width: 1800px) {
 	.contact-block-form form {
 		max-width: 580px;
@@ -453,21 +520,26 @@
 		min-height: 300px;
 		padding-top: 40px;
 	}
+
 	.applicants-image {
 		width: 100%;
 	}
+
 	.applicants-content {
 		width: 100%;
 		padding: 50px 5.5%;
 	}
+
 	.what-we-offer::after {
 		display: none;
 	}
+
 	.introduction-team .introduction-team-left {
 		width: 100%;
 		padding: 80px 5.5% 30px;
 		box-sizing: border-box;
 	}
+
 	.introduction-team-image {
 		width: 100%;
 	}
@@ -478,20 +550,25 @@
 		right: 10px;
 		bottom: 10px;
 	}
+
 	.filter-search__label {
 		color: #e11c2a;
 		width: 32px;
 	}
+
 	.filter__header {
 		display: none;
 	}
+
 	.breadcrumbs__inner {
 		width: 90%;
 		margin: 0 auto;
 	}
+
 	.feature-block.variation p {
 		max-width: 100%;
 	}
+
 	.member-popup-inner .close-icon {
 		right: 20px;
 		top: 20px;
@@ -819,18 +896,22 @@
 			display: none;
 		}
 	}
+
 	.icons-grid-content {
 		width: 100%;
 	}
+
 	.icons-grid.two-variation .icon {
 		width: 50px;
 		height: 50px;
 		margin: 0 auto;
 	}
+
 	.fuchs-chart-block .chart-center {
 		width: 115px;
 		height: 115px;
 	}
+
 	.logos-section.variation .section-head {
 		width: 100%;
 	}
@@ -958,6 +1039,7 @@
 	}
 
 	.service-single-item {
+
 		a,
 		a:visited {
 			min-height: 160px;
@@ -1170,6 +1252,7 @@
 		display: block;
 
 		li {
+
 			a,
 			a:visited {
 				font-size: 24px;
@@ -1279,6 +1362,7 @@
 	}
 
 	.hero-inner-slider {
+
 		.slick-prev,
 		.slick-next {
 			display: none !important;
@@ -1356,6 +1440,7 @@
 
 	.hero-default {
 		&.with-image {
+
 			.hero-default-content,
 			.hero-default-image {
 				width: 100%;
@@ -1372,6 +1457,7 @@
 	ul.children,
 	ol.children {
 		li {
+
 			&.depth-2,
 			&.depth-3,
 			&.depth-4,
@@ -1556,21 +1642,17 @@
 @media only screen and (min-height: 500px) and (max-height: 780px) and (min-width: 1003px) {
 	.home-hero-content {
 		.heading-2 {
-			font-size: clamp(
-				52 * 1px,
-				28 / 806 * (100vh - 474 * 1px) + 52 * 1px,
-				80 * 1px
-			);
+			font-size: clamp(52 * 1px,
+					28 / 806 * (100vh - 474 * 1px) + 52 * 1px,
+					80 * 1px);
 		}
 	}
 
 	.hero-split-text {
 		.heading-1 {
-			font-size: clamp(
-				70 * 1px,
-				110 / 806 * (100vh - 474 * 1px) + 70 * 1px,
-				180 * 1px
-			);
+			font-size: clamp(70 * 1px,
+					110 / 806 * (100vh - 474 * 1px) + 70 * 1px,
+					180 * 1px);
 		}
 	}
 }
