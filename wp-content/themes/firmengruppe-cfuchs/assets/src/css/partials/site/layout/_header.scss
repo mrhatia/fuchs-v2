@@ -127,6 +127,15 @@ header {
 	}
 }
 
+.header-section.open {
+
+	.logo {
+		&::before {
+			height: 100%;
+		}
+	}
+}
+
 .header-inner {
 	padding: 0px 0;
 	box-sizing: border-box;

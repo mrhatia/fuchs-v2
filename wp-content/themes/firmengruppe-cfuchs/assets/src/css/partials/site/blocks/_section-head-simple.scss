@@ -1,47 +1,58 @@
 .section-head-simple {
 	max-width: 100%;
 
-	h2 {
-	}
+	h2 {}
 
 	.shd-text {
 		word-break: break-word;
 	}
 }
-.what-we-offer {
+
+.what-we-offer-section {
+
 	position: relative;
-	padding: var(--fc_space_96) 0;
-	box-sizing: border-box;
+
 	&::after {
 		content: "";
 		position: absolute;
 		top: 0;
-		left: -56.2vw;
-		width: 100vw;
+		left: 0;
+		width: 60.3%;
 		height: 100%;
 		background-color: #f8f8f90a;
 		z-index: -1;
 	}
+}
+
+.what-we-offer {
+	padding: var(--fc_space_96) 0;
+	box-sizing: border-box;
+
 
 	.section-head-simple {
 		margin-bottom: var(--fc_space_48);
 	}
+
 	.column {
 		.icon {
 			margin-bottom: 20px;
 		}
+
 		p {
 			max-width: 300px;
 		}
 	}
 }
+
 .applicants-questions {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .applicants-image {
-	width: 60%;
+	width: 60.3%;
 }
+
 .applicants-content {
 	width: 38%;
 	padding: var(--fc_space_200) var(--fc_space_128);

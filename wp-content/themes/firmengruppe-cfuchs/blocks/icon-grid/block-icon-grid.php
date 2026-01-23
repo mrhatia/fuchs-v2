@@ -163,7 +163,7 @@ BaseTheme::block(
 			$fh_var_blk_icon_title     = $bst_block_fields['fh_var_blk_icon_title'] ?? null;
 
 			?>
-			<section>
+			<section class="what-we-offer-section">
 				<div class="wrapper">
 					<div class="what-we-offer">
 						<?php if($fh_var_blk_icon_kicker || $fh_var_blk_icon_title){ ?>

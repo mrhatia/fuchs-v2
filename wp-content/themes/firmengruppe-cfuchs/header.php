@@ -153,7 +153,7 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 								);
 							?>
 							<div class="header-btns">
-								<a href="#" class="search-icon top-search"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/images/search-icon.svg" alt=""></a>
+								<a href="javascript:void(0);" class="search-icon top-search"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/images/search-icon.svg" alt=""></a>
 								<div class="menu-btn-desktop">
 									<span class="top"></span>
 									<span class="middle"></span>

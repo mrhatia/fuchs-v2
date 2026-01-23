@@ -4823,13 +4823,11 @@ Mixin for transition
 }
 .acf-block-preview .introduction-team .introduction-team-left .section-head .hero-split-text {
   font-size: var(--fc_font_size_160);
+  left: -15%;
 }
 .acf-block-preview .introduction-team-image {
-  width: 50%;
+  width: 39.7%;
   display: flex;
-}
-.acf-block-preview .introduction-team-image img {
-  max-width: 762px;
   margin-left: auto;
 }
 .acf-block-preview .pie-container {
@@ -5687,20 +5685,22 @@ Mixin for transition
 .acf-block-preview .section-head-simple .shd-text {
   word-break: break-word;
 }
-.acf-block-preview .what-we-offer {
+.acf-block-preview .what-we-offer-section {
   position: relative;
-  padding: var(--fc_space_96) 0;
-  box-sizing: border-box;
 }
-.acf-block-preview .what-we-offer::after {
+.acf-block-preview .what-we-offer-section::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -56.2vw;
-  width: 100vw;
+  left: 0;
+  width: 60.3%;
   height: 100%;
   background-color: rgba(248, 248, 249, 0.0392156863);
   z-index: -1;
+}
+.acf-block-preview .what-we-offer {
+  padding: var(--fc_space_96) 0;
+  box-sizing: border-box;
 }
 .acf-block-preview .what-we-offer .section-head-simple {
   margin-bottom: var(--fc_space_48);
@@ -5716,7 +5716,7 @@ Mixin for transition
   flex-wrap: wrap;
 }
 .acf-block-preview .applicants-image {
-  width: 60%;
+  width: 60.3%;
 }
 .acf-block-preview .applicants-content {
   width: 38%;
@@ -7444,8 +7444,10 @@ Mixin for transition
     max-width: 608px;
   }
   .acf-block-preview .introduction-team .introduction-team-left .section-head .hero-split-text {
-    top: clamp(-5rem, -3.464vw - 2.229rem, -3.125rem);
+    top: -38px;
+    left: -5%;
     font-size: 110px;
+    line-height: 0.8;
   }
   .acf-block-preview .section-head-simple .kicker-text {
     font-size: 14px;
@@ -7460,16 +7462,12 @@ Mixin for transition
     left: -55.5vw;
     width: 100vw;
   }
-  .acf-block-preview .applicants-image {
-    width: 50%;
-  }
   .acf-block-preview .introduction-team .introduction-team-left {
     padding: 2% 0;
     padding-left: 5.5%;
     box-sizing: border-box;
   }
   .acf-block-preview .applicants-content {
-    width: 50%;
     padding: 78px 60px 95px;
   }
   .acf-block-preview .applicants-content .heading-2 {
@@ -7477,46 +7475,6 @@ Mixin for transition
   }
   .acf-block-preview .feature-block.apprentice-block {
     min-height: 400px;
-  }
-}
-@media only screen and (min-width: 1441px) and (max-width: 1836px) {
-  .acf-block-preview .what-we-offer::after {
-    left: clamp(-64.375rem, -60.253vw + 4.766rem, -49.5rem);
-  }
-  .acf-block-preview .introduction-team-image {
-    width: clamp(45rem, 10.633vw + 35.424rem, 47.625rem);
-    margin: 0 0 0 auto;
-  }
-  .acf-block-preview .introduction-team-image img {
-    max-width: 100%;
-    height: 100%;
-    width: 100%;
-  }
-  .acf-block-preview .applicants-image {
-    width: clamp(45rem, 89.873vw - 35.942rem, 67.188rem);
-  }
-  .acf-block-preview .applicants-content {
-    width: 41%;
-  }
-}
-@media only screen and (min-width: 1300px) and (max-width: 1441px) {
-  .acf-block-preview .what-we-offer::after {
-    left: clamp(-49.5rem, -55vw + 0rem, -44.687rem);
-  }
-  .acf-block-preview .introduction-team-image {
-    width: clamp(40.625rem, 50vw + 0rem, 45rem);
-    margin: 0 0 0 auto;
-  }
-  .acf-block-preview .introduction-team-image img {
-    max-width: 100%;
-    height: 100%;
-    width: 100%;
-  }
-  .acf-block-preview .applicants-image {
-    width: clamp(40.625rem, 50vw + 0rem, 45rem);
-  }
-  .acf-block-preview .applicants-content {
-    width: 49%;
   }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
@@ -7534,15 +7492,16 @@ Mixin for transition
   .acf-block-preview .introduction-team .introduction-team-left {
     padding-left: 5%;
   }
-  .acf-block-preview .introduction-team-image {
-    width: 45%;
+  .acf-block-preview .introduction-team .introduction-team-left .section-head .hero-split-text {
+    top: -80px;
+    left: -5%;
+    font-size: 110px;
   }
-  .acf-block-preview .applicants-image {
-    width: 49%;
+  .acf-block-preview .what-we-offer {
+    padding: 50px 0;
   }
   .acf-block-preview .applicants-content {
-    width: 51%;
-    padding: var(--fc_space_200) 50px;
+    padding: 50px 40px;
   }
   .acf-block-preview .feature-block.apprentice-block {
     min-height: 325px;
