@@ -54,7 +54,8 @@
             },
             "choices": {
                 "regular": "Regular",
-                "large-image": "Large Image"
+                "large-image": "Large Image",
+                "design-3": "Large Image Design 2"
             },
             "default_value": "regular",
             "return_format": "value",
@@ -148,7 +149,15 @@
             "type": "button_group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68e2b6f6eb58b",
+                        "operator": "!=",
+                        "value": "design-3"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -269,5 +278,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1760050306
+    "display_title": "",
+    "modified": 1769130428
 }

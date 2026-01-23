@@ -1236,6 +1236,9 @@ Mixin for transition
   font-weight: bold;
   font-style: normal;
 }
+.editor-styles-wrapper .size-72 {
+  font-size: var(--fc_font_size_72);
+}
 .editor-styles-wrapper i,
 .editor-styles-wrapper em,
 .editor-styles-wrapper var,
@@ -4141,6 +4144,15 @@ Mixin for transition
   background-color: var(--fc_white);
   z-index: -1;
 }
+.acf-block-preview .mkdf-icon-text p {
+  margin-bottom: 0;
+}
+.acf-block-preview .mkdf-icon-text a {
+  color: rgb(156, 165, 175);
+}
+.acf-block-preview .mkdf-icon-text a:hover {
+  color: var(--fc_orange);
+}
 .acf-block-preview .two-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(clamp(350px, 50% - 2%, 100%), 100%), 1fr));
@@ -4803,6 +4815,8 @@ Mixin for transition
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  top: 30px;
 }
 .acf-block-preview .introduction-team .introduction-team-left .section-head {
   max-width: 650px;

@@ -26,7 +26,7 @@ BaseTheme::block(
 
 		?>
 
-<?php if($bst_var_blk_mat_design_variation === "regular"){
+		<?php if($bst_var_blk_mat_design_variation === "regular"){
 			$bst_var_blk_mat_img_location        = ("left" == $bst_var_blk_mat_img_location) ? " image-at-left " : " image-at-right ";
 			$bst_var_blk_mat_has_two_images        = ($bst_var_blk_mat_image_two) ? " iat-two-image " : "";
 
@@ -65,7 +65,7 @@ BaseTheme::block(
 					</div>
 				</div>
 			</section>
-		<?php } else {
+		<?php } else if($bst_var_blk_mat_design_variation === "large-image"){
 			$bst_var_blk_mat_img_location        = ("left" == $bst_var_blk_mat_img_location) ? "media-with-text-variation" : "variation";
 			?>
 			<section class="ctn-full-width">
@@ -91,6 +91,33 @@ BaseTheme::block(
 								<div class="media-with-text-button">
 									<?php echo BaseTheme::button( $bst_var_blk_mat_button, 'button' ); ?>
 								</div>
+							<?php } ?>
+						</div>
+					</div>
+				</div>
+			</section>
+		<?php } else { ?>
+			<!-- Big Iat block -->
+			<section class="ctn-full-width">
+				<div class="wrapper">
+					<div class="applicants-questions">
+						<?php if ( $bst_var_blk_mat_image ) { ?>
+							<div class="applicants-image image-cover">
+								<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
+							</div>
+						<?php } ?>
+						<div class="applicants-content">
+							<?php if ( $bst_var_blk_mat_kicker ) {  ?>
+								<div class="kicker-text"><?php echo html_entity_decode( $bst_var_blk_mat_kicker ); ?></div>
+							<?php } ?>
+							<?php if ( $bst_var_blk_mat_title ) {  ?>
+								<h2 class="heading-3"><?php echo html_entity_decode( $bst_var_blk_mat_title ); ?></h2>
+							<?php } ?>
+							<?php if ( $bst_var_blk_mat_text ) {  ?>
+								<?php echo html_entity_decode( $bst_var_blk_mat_text ); ?>
+							<?php } ?>
+							<?php if ( $bst_var_blk_mat_button ) { ?>
+								<?php echo BaseTheme::button( $bst_var_blk_mat_button, 'button white-button' ); ?>
 							<?php } ?>
 						</div>
 					</div>

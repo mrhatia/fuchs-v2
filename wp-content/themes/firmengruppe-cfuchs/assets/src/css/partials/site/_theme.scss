@@ -2015,3 +2015,19 @@ body {
 		z-index: -1;
 	}
 }
+
+
+
+.mkdf-icon-text {
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: rgb(156, 165, 175);
+
+		&:hover {
+			color: var(--fc_orange);
+		}
+	}
+}

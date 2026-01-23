@@ -955,6 +955,10 @@ h6,
   font-style: normal;
 }
 
+.size-72 {
+  font-size: var(--fc_font_size_72);
+}
+
 /*-------------------------------------------------
 >> Styles for content tags
 -------------------------------------------------*/
@@ -7353,6 +7357,16 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   z-index: -1;
 }
 
+.mkdf-icon-text p {
+  margin-bottom: 0;
+}
+.mkdf-icon-text a {
+  color: rgb(156, 165, 175);
+}
+.mkdf-icon-text a:hover {
+  color: var(--fc_orange);
+}
+
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
@@ -8527,6 +8541,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  top: 30px;
 }
 .introduction-team .introduction-team-left .section-head {
   max-width: 650px;

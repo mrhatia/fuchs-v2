@@ -55,7 +55,8 @@
             "choices": {
                 "three-columns": "Three Columns",
                 "four-columns": "Four Columns",
-                "left-align-icon": "Three Columns- Left Align Icons"
+                "left-align-icon": "Three Columns- Left Align Icons",
+                "design-4": "Design Four"
             },
             "default_value": "three-columns",
             "return_format": "value",
@@ -77,6 +78,13 @@
                         "field": "field_68e2c038b6014",
                         "operator": "==",
                         "value": "three-columns"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_68e2c038b6014",
+                        "operator": "==",
+                        "value": "design-4"
                     }
                 ]
             ],
@@ -106,6 +114,13 @@
                         "field": "field_68e2c038b6014",
                         "operator": "==",
                         "value": "three-columns"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_68e2c038b6014",
+                        "operator": "==",
+                        "value": "design-4"
                     }
                 ]
             ],
@@ -257,5 +272,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765986601
+    "display_title": "",
+    "modified": 1769129547
 }

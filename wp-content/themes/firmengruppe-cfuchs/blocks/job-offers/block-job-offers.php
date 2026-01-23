@@ -236,7 +236,6 @@ BaseTheme::block(
 				<div class="load-more load-more-button d-flex justify-content-center">
 					<a href="#" class="button white-button" id="load-more-jobs" data-page="1">Mehr</a>
 				</div>
-				<div class="gl-s72"></div>
 			<?php endif; ?>
 		</section>
 

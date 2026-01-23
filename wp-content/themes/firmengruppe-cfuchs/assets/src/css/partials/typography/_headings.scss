@@ -77,3 +77,7 @@ h6,
 	letter-spacing: -0.025rem;
 	@include font(sour, bold);
 }
+
+.size-72 {
+	font-size: var(--fc_font_size_72);
+}

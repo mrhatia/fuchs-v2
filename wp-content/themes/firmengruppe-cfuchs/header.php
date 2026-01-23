@@ -28,6 +28,14 @@ $bst_var_tbar_btn      = $bst_option_fields['bst_var_tbar_btn'] ?? null;
 
 $bst_var_social_profiles = $bst_option_fields['bst_var_social_profiles'] ?? null;
 
+$header_drawer_options      = $bst_option_fields['bst_var_header_drawer_options'] ?? null;
+$bst_var_hdrwo_title = $header_drawer_options['title'] ?? null;
+$bst_var_hdrwo_text = $header_drawer_options['text'] ?? null;
+$bst_var_hdrwo_timings = $header_drawer_options['timings'] ?? null;
+$bst_var_hdrwo_address = $header_drawer_options['address'] ?? null;
+$bst_var_hdrwo_contact_details = $header_drawer_options['contact_details'] ?? null;
+$bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
+
 // Page variables - Advanced custom fields variables.
 
 ?>
@@ -213,41 +221,59 @@ $bst_var_social_profiles = $bst_option_fields['bst_var_social_profiles'] ?? null
 							c0.2,0.2,0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8c-0.4,0.4-1.1,0.4-1.5,0L2.5,2z"></path>
 			</svg> </a>
 		<div id="text-13" class="widget mkdf-sidearea widget_text">
-			<div class="mkdf-widget-title-holder">
-				<h4 class="mkdf-widget-title">Quick contact info</h4>
+			<?php if ( $bst_var_hdrwo_title ) {  ?>
+				<div class="clamkdf-widget-title-holderss_name"><h4 class="mkdf-widget-title"><?php echo html_entity_decode( $bst_var_hdrwo_title ); ?></h4></div>
+			<?php } ?>
+			<?php if ( $bst_var_hdrwo_text ) {  ?>
+				<div class="textwidget">
+					<?php echo html_entity_decode( $bst_var_hdrwo_text ); ?>
+				</div>
+			<?php } ?>
+
+		</div>
+		<!-- Timings -->
+		<?php if ( $bst_var_hdrwo_timings ) {  ?>
+
+			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+				<span class="mkdf-icon-element mkdf-custom-image">
+					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
+						alt="icon_widget_image">
+				</span>
+				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_timings ); ?></span>
 			</div>
-			<div class="textwidget">
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni voluptatem rem odit. Repudiandae odit sed tempore nesciunt et optio modi.</p>
+		<?php } ?>
+
+		<!-- Address -->
+		<?php if ( $bst_var_hdrwo_address ) {  ?>
+			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+				<span class="mkdf-icon-element mkdf-custom-image">
+					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-01.png"
+						alt="icon_widget_image">
+				</span>
+				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_address ); ?></span>
 			</div>
-		</div>
-		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
-			<span class="mkdf-icon-element mkdf-custom-image">
-				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
-					alt="icon_widget_image">
-			</span>
-			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
-		</div>
-		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
-			<span class="mkdf-icon-element mkdf-custom-image">
-				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
-					alt="icon_widget_image">
-			</span>
-			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
-		</div>
-		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
-			<span class="mkdf-icon-element mkdf-custom-image">
-				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
-					alt="icon_widget_image">
-			</span>
-			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
-		</div>
-		<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
-			<span class="mkdf-icon-element mkdf-custom-image">
-				<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
-					alt="icon_widget_image">
-			</span>
-			<span class="mkdf-icon-text ">Monday-Friday: 9am to 5pm; <br> Satuday: 10ap to 2pm</span>
-		</div>
+		<?php } ?>
+		<!-- Phone -->
+		<?php if ( $bst_var_hdrwo_contact_details ) {  ?>
+			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+				<span class="mkdf-icon-element mkdf-custom-image">
+					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-03.png"
+						alt="icon_widget_image">
+				</span>
+				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_contact_details ); ?></span>
+			</div>
+		<?php } ?>
+		<!-- Email -->
+		<?php if ( $bst_var_hdrwo_email_address ) {  ?>
+			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
+				<span class="mkdf-icon-element mkdf-custom-image">
+					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-02.png"
+						alt="icon_widget_image">
+				</span>
+				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_email_address ); ?></span>
+			</div>
+		<?php } ?>
+
 		<div class="widget mkdf-social-icons-group-widget mkdf-square-icons text-align-center">
 			<div class="social-icons soial-icons-header d-flex">
 				<?php BaseTheme::the_social_icons( $bst_var_social_profiles ); ?>

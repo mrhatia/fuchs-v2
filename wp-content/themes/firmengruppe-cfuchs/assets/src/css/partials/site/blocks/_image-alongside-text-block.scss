@@ -74,26 +74,34 @@
 .iat-button {
 	line-height: 0.65;
 }
+
 .introduction-team {
 	display: flex;
 	flex-wrap: wrap;
 
 	align-items: center;
+
 	.introduction-team-left {
 		width: 50%;
 		display: flex;
 		justify-content: flex-end;
+		position: relative;
+		top: 30px;
+
 		.section-head {
 			max-width: 650px;
+
 			.hero-split-text {
 				font-size: var(--fc_font_size_160);
 			}
 		}
 	}
 }
+
 .introduction-team-image {
 	width: 50%;
 	display: flex;
+
 	img {
 		max-width: 762px;
 		margin-left: auto;
@@ -103,6 +111,7 @@
 .pie-container {
 	transition: padding 0.7s ease;
 	padding: 0% 13%;
+
 	.row {
 		display: flex;
 		-ms-flex-wrap: wrap;
@@ -171,27 +180,24 @@
 // Responsive Text Mixin
 
 @function strip-unit($number) {
-	@if type-of($number) == "number" and not unitless($number) {
+	@if type-of($number)=="number" and not unitless($number) {
 		@return $number / ($number * 0 + 1);
 	}
 
 	@return $number;
 }
+
 // Responsive text mixin
-@mixin responsiveText(
-	$minSize,
+@mixin responsiveText($minSize,
 	$maxSize: 28px,
 	$minWidth: 450px,
-	$maxWidth: 900px
-) {
+	$maxWidth: 900px) {
 	$mxS: strip-unit($maxSize);
 	$mnS: strip-unit($minSize);
 	$mxW: strip-unit($maxWidth);
 	$mnW: strip-unit($minWidth);
 
-	font-size: calc(
-		#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW})
-	);
+	font-size: calc(#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW}));
 
 	@media screen and (max-width: $minWidth) {
 		font-size: $minSize;
@@ -248,6 +254,7 @@
 				#segmentTitle {
 					padding: 2px 4px 4px;
 				}
+
 				#segmentText {
 					padding: 2px 4px 4px;
 					line-height: 16px;
@@ -256,6 +263,7 @@
 		}
 	}
 }
+
 @media (min-width: 360.02px) and (max-width: 442px) {
 	div.pie-container {
 		padding: 10px 10%;
@@ -278,6 +286,7 @@
 				#segmentTitle {
 					padding: 4px;
 				}
+
 				#segmentText {
 					padding: 4px;
 					line-height: 18px;
@@ -286,6 +295,7 @@
 		}
 	}
 }
+
 // Small/XS devices (portrait phones, less than 576px)
 @media (min-width: 442.02px) and (max-width: 575.98px) {
 	div.pie-container {
@@ -309,6 +319,7 @@
 				#segmentTitle {
 					padding: 4px;
 				}
+
 				#segmentText {
 					padding: 0 4px 4px;
 					line-height: 21px;
@@ -317,6 +328,7 @@
 		}
 	}
 }
+
 // Small devices (smart phones/notebook phone, less than 638px wide)
 @media (min-width: 576px) and (max-width: 637.98px) {
 	div.pie-container {
@@ -340,6 +352,7 @@
 				#segmentTitle {
 					padding: 8px;
 				}
+
 				#segmentText {
 					padding: 0 8px 8px;
 					line-height: 24px;
@@ -348,6 +361,7 @@
 		}
 	}
 }
+
 // Bootstrap col-md Breakpoint at 767px
 @media (min-width: 638px) and (max-width: 767px) {
 	div.pie-container {
@@ -371,6 +385,7 @@
 				#segmentTitle {
 					padding: 15px;
 				}
+
 				#segmentText {
 					padding: 15px;
 					line-height: 27px;
@@ -379,6 +394,7 @@
 		}
 	}
 }
+
 // Medium-Small Devices (tablets and smaller, 767px to 965px)
 @media (min-width: 767.02px) and (max-width: 965px) {
 	div.pie-container {
@@ -395,6 +411,7 @@
 			#segmentTitle {
 				padding: 8px;
 			}
+
 			#segmentText {
 				padding: 0 8px 8px;
 				line-height: 23px;
@@ -402,6 +419,7 @@
 		}
 	}
 }
+
 // Medium-Large Devices (laptop, 965px to 1314px)
 @media (min-width: 965.02px) and (max-width: 1314px) {
 	div.pie-container {
@@ -433,6 +451,7 @@
 		#pieChart {
 			counter-reset: break-point 70;
 		}
+
 		#pieText .panel {
 			#segmentText {
 				padding-top: 10px;
@@ -440,11 +459,13 @@
 		}
 	}
 }
+
 @media (min-width: 768px) {
 	.col-md-5 {
 		flex: 0 0 41.666667%;
 		max-width: 41.666667%;
 	}
+
 	.col-md-7 {
 		flex: 0 0 54%;
 		max-width: 54%;
