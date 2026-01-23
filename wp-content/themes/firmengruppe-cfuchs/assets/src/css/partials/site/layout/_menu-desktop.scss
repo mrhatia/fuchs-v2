@@ -1,8 +1,7 @@
 @media (min-width: 1024px) {
-
-	.header-nav ul li:hover>ul,
+	.header-nav ul li:hover > ul,
 	.menu-item-has-children ul.focused,
-	.header-nav ul li a:focus-visible+ul {
+	.header-nav ul li a:focus-visible + ul {
 		opacity: 1;
 		visibility: visible;
 		overflow: visible;
@@ -80,7 +79,7 @@
 				cursor: pointer;
 			}
 
-			&.menu-item-has-children>a {
+			&.menu-item-has-children > a {
 				padding-right: 35px;
 				background-position: center right calc(50% - 40px);
 				background-repeat: no-repeat;
@@ -92,8 +91,8 @@
 				}
 			}
 
-			&.current-menu-item>a,
-			&.current-menu-parent>a,
+			&.current-menu-item > a,
+			&.current-menu-parent > a,
 			a:hover,
 			span.menu-link:hover {
 				color: var(--fc_white);
@@ -167,8 +166,8 @@
 					color: rgba(255, 255, 255, 0.7);
 				}
 
-				&.current-menu-item>a,
-				&.current-menu-parent>a,
+				&.current-menu-item > a,
+				&.current-menu-parent > a,
 				a:hover,
 				span.menu-link:hover {
 					border: 0;
@@ -222,9 +221,10 @@
 		border-right: 1px solid #e8e8e9;
 
 		.search-icon {
-			filter: brightness(0) saturate(100%) invert(34%) sepia(7%) saturate(1108%) hue-rotate(193deg) brightness(95%) contrast(85%);
+			filter: brightness(0) saturate(100%) invert(34%) sepia(7%)
+				saturate(1108%) hue-rotate(193deg) brightness(95%) contrast(85%);
 
-			img{
+			img {
 				max-width: 18px;
 				margin: 0 auto;
 			}
@@ -257,8 +257,6 @@
 			color: var(--cph_black_30);
 		}
 	}
-
-
 
 	form {
 		width: 95%;
@@ -307,9 +305,9 @@
 			opacity: 1 !important;
 		}
 
-			.bg-path-white {
+		.bg-path-white {
 			fill: var(--fc_white);
-			}
+		}
 	}
 
 	&:hover {
@@ -319,7 +317,7 @@
 			}
 
 			.bg-path-white {
-			fill: var(--fc_white);
+				fill: var(--fc_white);
 			}
 		}
 	}
@@ -327,7 +325,7 @@
 
 .logged-in.admin-bar {
 	.search-form-new {
-		top: 100px;
+		top: 32px;
 	}
 }
 
@@ -335,7 +333,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(101%);
+	filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+		hue-rotate(202deg) brightness(106%) contrast(101%);
 }
 
 .nav-container {
