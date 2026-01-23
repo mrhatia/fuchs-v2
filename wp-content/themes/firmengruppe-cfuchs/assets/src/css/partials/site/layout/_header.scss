@@ -87,8 +87,8 @@ header {
 	display: inline-block;
 	position: absolute;
 	top: 0;
-	right: -1px;
-	width: 190px;
+	right: 20px;
+	width: 150px;
 	height: 80px;
 	padding: 0;
 	z-index: 100001;
@@ -105,7 +105,7 @@ header {
 
 .logo {
 	line-height: 0;
-	width: 16%;
+	width: 16.85%;
 	min-width: 280px;
 	text-align: center;
 	position: relative;
@@ -146,8 +146,8 @@ header {
 		}
 
 		a {
+			right: 25%;
 			transform: scale(0.8) translate(0, -10px);
-			right: 7%;
 
 			transition:
 				transform 0.3s,
@@ -157,10 +157,11 @@ header {
 }
 
 .header-section {
-	border-color: rgba(255, 255, 255, 0.1);
+	border-color: #e8e8e952;
 	background-color: rgba(255, 255, 255, 0.4);
-	border-top: 1px solid rgba(255, 255, 255, 0.3);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	border-top: 1px solid #e8e8e952;
+	border-bottom: 1px solid #e8e8e952;
+
 
 	.logo {
 		background-color: var(--fc_white);

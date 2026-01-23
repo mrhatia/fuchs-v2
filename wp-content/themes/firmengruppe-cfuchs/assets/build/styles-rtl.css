@@ -3338,8 +3338,8 @@ header {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: -1px;
-  width: 190px;
+  left: 20px;
+  width: 150px;
   height: 80px;
   padding: 0;
   z-index: 100001;
@@ -3355,7 +3355,7 @@ header {
 
 .logo {
   line-height: 0;
-  width: 16%;
+  width: 16.85%;
   min-width: 280px;
   text-align: center;
   position: relative;
@@ -3385,16 +3385,16 @@ header {
   transform: scale(0.8) translate(0, -10px);
 }
 .header-section.shrink .header-logo a {
+  left: 25%;
   transform: scale(0.8) translate(0, -10px);
-  left: 7%;
   transition: transform 0.3s, left 0.3s 0.3s;
 }
 
 .header-section {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(232, 232, 233, 0.3215686275);
   background-color: rgba(255, 255, 255, 0.4);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(232, 232, 233, 0.3215686275);
+  border-bottom: 1px solid rgba(232, 232, 233, 0.3215686275);
   z-index: 9;
   width: 100%;
   position: fixed;
@@ -3485,7 +3485,7 @@ header {
   display: inline-block;
   position: relative;
   line-height: 1;
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(232, 232, 233, 0.3215686275);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -3514,7 +3514,7 @@ header {
   background-repeat: repeat;
 }
 .header-nav ul li:nth-child(1) {
-  border-right: 1px solid var(--fc_white);
+  border-right: 1px solid rgba(232, 232, 233, 0.3215686275);
 }
 .header-nav ul li span.menu-link {
   cursor: pointer;
