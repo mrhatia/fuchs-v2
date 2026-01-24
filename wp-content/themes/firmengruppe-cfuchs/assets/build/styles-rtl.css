@@ -3504,7 +3504,7 @@ header {
   border: 0;
   position: relative;
   color: var(--fc_white);
-  font-size: var(--fc_font_size_18);
+  font-size: var(--fc_font_size_16);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -3832,6 +3832,9 @@ header {
   min-width: 70px;
   height: 100%;
 }
+.search-icon img {
+  width: 20px;
+}
 
 .menu-btn-desktop {
   top: 0px;
@@ -3847,7 +3850,7 @@ header {
   gap: 4px;
   transition: all 0.3s ease-in-out;
   background-color: var(--fc_white);
-  padding: 0 23px;
+  padding: 0 25px;
   box-sizing: border-box;
 }
 .menu-btn-desktop span {
