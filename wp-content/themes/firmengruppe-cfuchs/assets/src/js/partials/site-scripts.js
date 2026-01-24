@@ -475,9 +475,9 @@ jQuery( function() {
 	// 	}
 	// } );
 
-	if ( jQuery( '.image-alongside-text .iat-image, .offering-block-image ,.faq-image ,.media-with-text-content-box' ).length > 0 ) {
+	if ( jQuery( '.image-alongside-text .iat-image, .applicants-image, .applicants-content, .offering-block-image ,.faq-image ,.media-with-text-content-box' ).length > 0 ) {
 		gsap.registerPlugin( ScrollTrigger );
-		gsap.utils.toArray( '.image-alongside-text .iat-image, .offering-block-image ,.faq-image ,.media-with-text-content-box' ).forEach( ( el ) => {
+		gsap.utils.toArray( '.image-alongside-text .iat-image, .applicants-image, .applicants-content, .offering-block-image ,.faq-image ,.media-with-text-content-box' ).forEach( ( el ) => {
 			gsap.from( el, {
 				scrollTrigger: {
 					trigger: el,

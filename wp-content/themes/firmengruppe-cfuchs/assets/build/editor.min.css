@@ -3028,6 +3028,8 @@ Mixin for transition
 }
 .acf-block-preview .iat-image,
 .acf-block-preview .faq-image,
+.acf-block-preview .applicants-image,
+.acf-block-preview .applicants-content,
 .acf-block-preview .offering-block-image,
 .acf-block-preview .media-with-text-content-box {
   position: relative;
@@ -3036,6 +3038,10 @@ Mixin for transition
 .acf-block-preview .iat-image:after, .acf-block-preview .iat-image:before,
 .acf-block-preview .faq-image:after,
 .acf-block-preview .faq-image:before,
+.acf-block-preview .applicants-image:after,
+.acf-block-preview .applicants-image:before,
+.acf-block-preview .applicants-content:after,
+.acf-block-preview .applicants-content:before,
 .acf-block-preview .offering-block-image:after,
 .acf-block-preview .offering-block-image:before,
 .acf-block-preview .media-with-text-content-box:after,
@@ -3050,12 +3056,16 @@ Mixin for transition
 }
 .acf-block-preview .iat-image.iat-image-appear:before,
 .acf-block-preview .faq-image.iat-image-appear:before,
+.acf-block-preview .applicants-image.iat-image-appear:before,
+.acf-block-preview .applicants-content.iat-image-appear:before,
 .acf-block-preview .offering-block-image.iat-image-appear:before,
 .acf-block-preview .media-with-text-content-box.iat-image-appear:before {
   animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 .acf-block-preview .iat-image:before,
 .acf-block-preview .faq-image:before,
+.acf-block-preview .applicants-image:before,
+.acf-block-preview .applicants-content:before,
 .acf-block-preview .offering-block-image:before,
 .acf-block-preview .media-with-text-content-box:before {
   background-color: var(--fc_color_primary);
@@ -3064,6 +3074,8 @@ Mixin for transition
 }
 .acf-block-preview .iat-image::after,
 .acf-block-preview .faq-image::after,
+.acf-block-preview .applicants-image::after,
+.acf-block-preview .applicants-content::after,
 .acf-block-preview .offering-block-image::after,
 .acf-block-preview .media-with-text-content-box::after {
   background-color: var(--fc_orange);
@@ -3072,6 +3084,8 @@ Mixin for transition
 }
 .acf-block-preview .iat-image.iat-image-appear:after,
 .acf-block-preview .faq-image.iat-image-appear:after,
+.acf-block-preview .applicants-image.iat-image-appear:after,
+.acf-block-preview .applicants-content.iat-image-appear:after,
 .acf-block-preview .offering-block-image.iat-image-appear:after,
 .acf-block-preview .media-with-text-content-box.iat-image-appear:after {
   animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;

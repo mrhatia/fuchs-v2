@@ -6202,6 +6202,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 
 .iat-image,
 .faq-image,
+.applicants-image,
+.applicants-content,
 .offering-block-image,
 .media-with-text-content-box {
   position: relative;
@@ -6210,6 +6212,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .iat-image:after, .iat-image:before,
 .faq-image:after,
 .faq-image:before,
+.applicants-image:after,
+.applicants-image:before,
+.applicants-content:after,
+.applicants-content:before,
 .offering-block-image:after,
 .offering-block-image:before,
 .media-with-text-content-box:after,
@@ -6224,12 +6230,16 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .iat-image.iat-image-appear:before,
 .faq-image.iat-image-appear:before,
+.applicants-image.iat-image-appear:before,
+.applicants-content.iat-image-appear:before,
 .offering-block-image.iat-image-appear:before,
 .media-with-text-content-box.iat-image-appear:before {
   animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 .iat-image:before,
 .faq-image:before,
+.applicants-image:before,
+.applicants-content:before,
 .offering-block-image:before,
 .media-with-text-content-box:before {
   background-color: var(--fc_color_primary);
@@ -6238,6 +6248,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .iat-image::after,
 .faq-image::after,
+.applicants-image::after,
+.applicants-content::after,
 .offering-block-image::after,
 .media-with-text-content-box::after {
   background-color: var(--fc_orange);
@@ -6246,6 +6258,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .iat-image.iat-image-appear:after,
 .faq-image.iat-image-appear:after,
+.applicants-image.iat-image-appear:after,
+.applicants-content.iat-image-appear:after,
 .offering-block-image.iat-image-appear:after,
 .media-with-text-content-box.iat-image-appear:after {
   animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;

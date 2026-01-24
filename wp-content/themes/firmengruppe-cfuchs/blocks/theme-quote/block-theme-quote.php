@@ -39,7 +39,7 @@ BaseTheme::block(
 						<div class="double-comma xlarge-heading">❝</div>
 					</div>
 					<?php if ( $bst_var_blk_quote_image ) { ?>
-						<div class="iat-image column iat-image-appear">
+						<div class="iat-image column">
 							<?php BaseTheme::the_attachment_image( $bst_var_blk_quote_image, 1000 ); ?>
 						</div>
 					<?php } ?>
