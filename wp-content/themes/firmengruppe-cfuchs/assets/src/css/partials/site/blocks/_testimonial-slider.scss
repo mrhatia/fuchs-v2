@@ -238,3 +238,34 @@
 		text-transform: uppercase;
 	}
 }
+.testimonial-item-content {
+	.heading-3 {
+		font-size: var(--fc_space_48);
+	}
+}
+.testimonial-slider {
+	.testimonial-item {
+		&:hover {
+			.testimonial-item-content {
+				.small-text,
+				.heading-3 {
+					color: white;
+				}
+			}
+		}
+		&.slick-current {
+			.testimonial-item-content {
+				.small-text,
+				.heading-3 {
+					color: white;
+				}
+			}
+		}
+	}
+	.testimonial-item-content {
+		.small-text,
+		.heading-3 {
+			color: #565969;
+		}
+	}
+}

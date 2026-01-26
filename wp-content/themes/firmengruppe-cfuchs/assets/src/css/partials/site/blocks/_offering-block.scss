@@ -4,7 +4,6 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 80px;
-
 }
 
 .offering-block-left {
@@ -28,8 +27,7 @@
 
 	a,
 	a:visited {
-
-		color: var(--fc_body_color);
+		color: var(--fc_white);
 		display: block;
 		background-repeat: no-repeat;
 		background-position: center left;
@@ -42,7 +40,7 @@
 	a,
 	a:visited {
 		&.link {
-			color: var(--fc_body_color);
+			color: var(--fc_white);
 			display: block;
 			padding-left: 30px;
 			background-repeat: no-repeat;
@@ -65,17 +63,13 @@
 
 	.kicker {
 		font-size: 14px;
-		color: var(--fc_gray_4);
-
 	}
 
 	.heading-2 {
 		@include font(sour, bold);
 		font-size: var(--fc_font_size_60);
-		color: var(--fc_color_primary);
 		letter-spacing: -1.2px;
 		margin-bottom: 16px;
-
 	}
 
 	p {
@@ -83,10 +77,22 @@
 		@include font(sour, reg);
 		margin-bottom: 20px;
 	}
-
 }
 
 .offering-button {
 	line-height: 0.65;
 	margin-top: 30px;
+	a.button {
+		border: solid 2px var(--fc_white);
+		background-color: var(--fc_white);
+		color: var(--fc_regular_text);
+		margin: 0;
+		&:hover {
+			color: var(--fc_white);
+			background-color: transparent;
+		}
+		&:nth-child(n + 2) {
+			margin-top: 20px;
+		}
+	}
 }

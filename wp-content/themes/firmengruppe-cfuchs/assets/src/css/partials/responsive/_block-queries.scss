@@ -60,8 +60,6 @@
 	}
 }
 
-
-
 @media only screen and (min-width: 1441px) and (max-width: 1836px) {
 	// .what-we-offer::after {
 	// 	left: clamp(-64.375rem, -60.253vw + 4.766rem, -49.5rem);
@@ -111,12 +109,10 @@
 	// 	;
 	// }
 
-
 	// .applicants-content {
 	// 	width: 49%;
 	// }
 }
-
 
 @media only screen and (min-width: 1600px) and (max-width: 1870px) {
 	.ctn-container-bg .wrapper {
@@ -132,8 +128,6 @@
 }
 
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
-
-
 	.introduction-team .introduction-team-left {
 		padding-left: 5%;
 	}
@@ -1052,7 +1046,6 @@
 	}
 
 	.service-single-item {
-
 		a,
 		a:visited {
 			min-height: 160px;
@@ -1265,7 +1258,6 @@
 		display: block;
 
 		li {
-
 			a,
 			a:visited {
 				font-size: 24px;
@@ -1375,7 +1367,6 @@
 	}
 
 	.hero-inner-slider {
-
 		.slick-prev,
 		.slick-next {
 			display: none !important;
@@ -1453,7 +1444,6 @@
 
 	.hero-default {
 		&.with-image {
-
 			.hero-default-content,
 			.hero-default-image {
 				width: 100%;
@@ -1470,7 +1460,6 @@
 	ul.children,
 	ol.children {
 		li {
-
 			&.depth-2,
 			&.depth-3,
 			&.depth-4,
@@ -1655,17 +1644,21 @@
 @media only screen and (min-height: 500px) and (max-height: 780px) and (min-width: 1003px) {
 	.home-hero-content {
 		.heading-2 {
-			font-size: clamp(52 * 1px,
-					28 / 806 * (100vh - 474 * 1px) + 52 * 1px,
-					80 * 1px);
+			font-size: clamp(
+				52 * 1px,
+				28 / 806 * (100vh - 474 * 1px) + 52 * 1px,
+				80 * 1px
+			);
 		}
 	}
 
 	.hero-split-text {
 		.heading-1 {
-			font-size: clamp(70 * 1px,
-					110 / 806 * (100vh - 474 * 1px) + 70 * 1px,
-					180 * 1px);
+			font-size: clamp(
+				70 * 1px,
+				110 / 806 * (100vh - 474 * 1px) + 70 * 1px,
+				180 * 1px
+			);
 		}
 	}
 }
