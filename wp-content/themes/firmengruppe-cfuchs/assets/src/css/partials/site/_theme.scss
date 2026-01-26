@@ -509,7 +509,6 @@ button[disabled]:hover {
 	}
 
 	.select-dropdown__button {
-
 		&:focus,
 		&:focus-visible {
 			outline-color: black !important;
@@ -681,7 +680,8 @@ body {
 	}
 
 	&.iat-image-appear:before {
-		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1)
+			forwards;
 	}
 
 	&:before {
@@ -697,7 +697,8 @@ body {
 	}
 
 	&.iat-image-appear:after {
-		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;
+		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99)
+			forwards;
 	}
 }
 
@@ -771,19 +772,23 @@ body {
 		transform: translateY(40px);
 
 		&:nth-child(1) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s
+				forwards;
 		}
 
 		&:nth-child(2) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s
+				forwards;
 		}
 
 		&:nth-child(3) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s
+				forwards;
 		}
 
 		&:nth-child(4) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s
+				forwards;
 		}
 	}
 }
@@ -1010,13 +1015,13 @@ body {
 	z-index: -1;
 }
 
-
 .single-service.service-detail-single {
 	background-color: var(--fc_color_primary);
 	color: var(--fc_white);
 
 	.search-icon {
-		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+			hue-rotate(26deg) brightness(107%) contrast(103%);
 	}
 
 	.header-section {
@@ -1029,7 +1034,6 @@ body {
 	}
 
 	.footer-ctn {
-
 		h1,
 		h2,
 		h3,
@@ -1086,7 +1090,6 @@ body {
 
 	.faq-icon {
 		svg {
-
 			path,
 			rect {
 				fill: var(--fc_white);
@@ -1095,7 +1098,6 @@ body {
 	}
 
 	.faq-head {
-
 		.heading-5,
 		.faq-number {
 			color: var(--fc_white);
@@ -1107,7 +1109,6 @@ body {
 				background-color: var(--fc_white);
 
 				svg {
-
 					path,
 					rect {
 						fill: var(--fc_black);
@@ -1131,25 +1132,6 @@ body {
 	.heading-6,
 	.medium-heading {
 		color: var(--fc_white);
-	}
-
-	a.button,
-	a.button:visited,
-	span.button,
-	.is-style-mycustomstyle .wp-element-button {
-		&.orange-button {
-			--fc_theme_btn_color: var(--fc_white);
-			--fc_theme_btn_bgcolor: var(--fc_transparent);
-			--fc_button_border_color: var(--fc_transparent);
-			background-color: var(--fc_transparent);
-			border-color: var(--fc_white);
-
-			&:hover {
-				background-color: var(--fc_white);
-				border-color: var(--fc_white);
-				color: var(--fc_color_primary) !important;
-			}
-		}
 	}
 
 	.member-popup {
@@ -1204,7 +1186,6 @@ body {
 	}
 
 	.service-single-item {
-
 		a,
 		a:visited {
 			&:hover {
@@ -1221,7 +1202,6 @@ body {
 	}
 
 	.bottom-section-button {
-
 		a,
 		a:visited {
 			color: var(--fc_white);
@@ -1238,7 +1218,6 @@ body {
 	}
 
 	.service-single-item {
-
 		a,
 		a:visited {
 			border-bottom: 3px solid var(--fc_white);
@@ -1768,8 +1747,6 @@ body {
 	}
 }
 
-
-
 /*! Lity - v2.2.2 - 2016-12-14
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2016 Jan Sorgalla; Licensed MIT */
@@ -1992,16 +1969,12 @@ body {
 	max-width: 964px;
 }
 
-
-
-
 // theme style
 
 .fuc_social-feeds {
 	background-color: white;
 	padding: 26px;
 }
-
 
 .bottom-white-overlap {
 	position: relative;
@@ -2017,8 +1990,6 @@ body {
 		z-index: -1;
 	}
 }
-
-
 
 .mkdf-icon-text {
 	p {

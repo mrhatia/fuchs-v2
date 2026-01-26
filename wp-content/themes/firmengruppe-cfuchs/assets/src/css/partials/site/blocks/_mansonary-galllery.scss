@@ -48,7 +48,7 @@
 			transition: transform 0.5s ease;
 		}
 
-		&:hover img {
+		img {
 			transform: scale(1.1);
 		}
 	}
@@ -60,7 +60,20 @@
 		height: 100%;
 		border: none;
 		padding: 0;
-		&:hover .single-image-content {
+		&:hover {
+			.single-image-content {
+				.small-text {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+				.plus-button {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
+		}
+
+		.single-image-content {
 			opacity: 1;
 			visibility: visible;
 		}
@@ -83,7 +96,7 @@
 			font-size: 12px;
 			color: var(--fc_white);
 			opacity: 0;
-			transform: translateY(10px);
+			transform: translateY(0px);
 			transition: all 0.5s ease 0.2s;
 		}
 
@@ -91,8 +104,8 @@
 			font-size: var(--fc_font_size_26);
 			color: var(--fc_white);
 			margin-top: 5px;
-			opacity: 0;
-			transform: translateY(10px);
+			opacity: 1;
+			transform: translateY(0px);
 			transition: all 0.5s ease 0.5s;
 		}
 
@@ -107,17 +120,6 @@
 			transform: translateY(10px);
 			transition: all 0.5s ease 0.8s;
 			margin-top: var(--fc_space_30);
-
-			&:hover {
-				transform: scale(1.1);
-			}
 		}
-	}
-
-	a:hover .single-image-content .small-text,
-	a:hover .single-image-content .service-title,
-	a:hover .single-image-content .plus-button {
-		opacity: 1;
-		transform: translateY(0);
 	}
 }
