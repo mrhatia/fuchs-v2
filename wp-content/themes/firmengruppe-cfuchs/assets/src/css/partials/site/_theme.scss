@@ -701,6 +701,20 @@ body {
 	}
 }
 
+.applicants-image,
+.applicants-content {
+
+	&:before {
+		background-color: var(--fc_white);
+
+	}
+
+	&::after {
+		background-color: var(--fc_white);
+
+	}
+}
+
 @keyframes iat-image-animation {
 	0% {
 		transform: translateX(-101%);

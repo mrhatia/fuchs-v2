@@ -84,7 +84,7 @@
 	height: 100%;
 
 	img {
-		width: 20px;
+		width: 18px;
 	}
 }
 
@@ -102,7 +102,7 @@
 	gap: 4px;
 	@include transition(all, 0.3s, ease-in-out);
 	background-color: var(--fc_white);
-	padding: 0 25px;
+	padding: 0 26px;
 	box-sizing: border-box;
 
 	span {

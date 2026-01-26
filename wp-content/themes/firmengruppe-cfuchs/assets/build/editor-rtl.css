@@ -3090,6 +3090,14 @@ Mixin for transition
 .acf-block-preview .media-with-text-content-box.iat-image-appear:after {
   animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;
 }
+.acf-block-preview .applicants-image:before,
+.acf-block-preview .applicants-content:before {
+  background-color: var(--fc_white);
+}
+.acf-block-preview .applicants-image::after,
+.acf-block-preview .applicants-content::after {
+  background-color: var(--fc_white);
+}
 @keyframes iat-image-animation {
   0% {
     transform: translateX(101%);
@@ -5728,6 +5736,7 @@ Mixin for transition
 .acf-block-preview .applicants-questions {
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
 }
 .acf-block-preview .applicants-image {
   width: 60.3%;
@@ -5736,6 +5745,11 @@ Mixin for transition
   width: 38%;
   padding: var(--fc_space_200) var(--fc_space_128);
   box-sizing: border-box;
+  background-color: white;
+  color: var(--fc_color_primary);
+}
+.acf-block-preview .applicants-content .heading-3 {
+  color: var(--fc_color_primary);
 }
 .acf-block-preview .highlight-quote {
   position: relative;

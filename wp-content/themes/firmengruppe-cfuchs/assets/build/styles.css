@@ -3833,7 +3833,7 @@ header {
   height: 100%;
 }
 .search-icon img {
-  width: 20px;
+  width: 18px;
 }
 
 .menu-btn-desktop {
@@ -3850,7 +3850,7 @@ header {
   gap: 4px;
   transition: all 0.3s ease-in-out;
   background-color: var(--fc_white);
-  padding: 0 25px;
+  padding: 0 26px;
   box-sizing: border-box;
 }
 .menu-btn-desktop span {
@@ -6263,6 +6263,15 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .offering-block-image.iat-image-appear:after,
 .media-with-text-content-box.iat-image-appear:after {
   animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;
+}
+
+.applicants-image:before,
+.applicants-content:before {
+  background-color: var(--fc_white);
+}
+.applicants-image::after,
+.applicants-content::after {
+  background-color: var(--fc_white);
 }
 
 @keyframes iat-image-animation {
@@ -9553,6 +9562,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 .applicants-questions {
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
 }
 
 .applicants-image {
@@ -9563,6 +9573,11 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
   width: 38%;
   padding: var(--fc_space_200) var(--fc_space_128);
   box-sizing: border-box;
+  background-color: white;
+  color: var(--fc_color_primary);
+}
+.applicants-content .heading-3 {
+  color: var(--fc_color_primary);
 }
 
 /*-------------------------------------------------

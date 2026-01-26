@@ -47,6 +47,7 @@
 .applicants-questions {
 	display: flex;
 	flex-wrap: wrap;
+	background-color: white;
 }
 
 .applicants-image {
@@ -57,4 +58,10 @@
 	width: 38%;
 	padding: var(--fc_space_200) var(--fc_space_128);
 	box-sizing: border-box;
+	background-color: white;
+	color: var(--fc_color_primary);
+
+	.heading-3 {
+		color: var(--fc_color_primary);
+	}
 }

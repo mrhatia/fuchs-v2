@@ -117,7 +117,7 @@ BaseTheme::block(
 								<?php echo html_entity_decode( $bst_var_blk_mat_text ); ?>
 							<?php } ?>
 							<?php if ( $bst_var_blk_mat_button ) { ?>
-								<?php echo BaseTheme::button( $bst_var_blk_mat_button, 'button white-button' ); ?>
+								<?php echo BaseTheme::button( $bst_var_blk_mat_button, 'button' ); ?>
 							<?php } ?>
 						</div>
 					</div>
