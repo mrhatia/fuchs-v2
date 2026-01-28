@@ -425,6 +425,7 @@ Mixin for transition
   --fc_font_size_26: clamp(22 * 1px, 4 / 806 * (100vw - 474 * 1px) + 22 * 1px, 26 * 1px);
   --fc_font_size_30: clamp(24 * 1px, 6 / 806 * (100vw - 474 * 1px) + 24 * 1px, 30 * 1px);
   --fc_font_size_32: clamp(24 * 1px, 8 / 806 * (100vw - 474 * 1px) + 24 * 1px, 32 * 1px);
+  --fc_font_size_38: clamp(24 * 1px, 14 / 806 * (100vw - 474 * 1px) + 24 * 1px, 38 * 1px);
   --fc_font_size_40: clamp(26 * 1px, 14 / 806 * (100vw - 474 * 1px) + 26 * 1px, 40 * 1px);
   --fc_font_size_45: clamp(26 * 1px, 19 / 806 * (100vw - 474 * 1px) + 26 * 1px, 45 * 1px);
   --fc_font_size_48: clamp(30 * 1px, 18 / 806 * (100vw - 474 * 1px) + 30 * 1px, 48 * 1px);
@@ -5933,6 +5934,21 @@ span.button.orange-button:hover,
   border-color: var(--fc_white);
   color: var(--fc_white);
 }
+a.button.dark-orange-button,
+a.button:visited.dark-orange-button,
+span.button.dark-orange-button,
+.is-style-mycustomstyle .wp-element-button.dark-orange-button {
+  background-color: #ff5f14;
+  border-color: #ff5f14;
+}
+a.button.dark-orange-button:hover,
+a.button:visited.dark-orange-button:hover,
+span.button.dark-orange-button:hover,
+.is-style-mycustomstyle .wp-element-button.dark-orange-button:hover {
+  background-color: transparent;
+  border-color: var(--fc_white);
+  color: var(--fc_white);
+}
 a.button.blue-button,
 a.button:visited.blue-button,
 span.button.blue-button,
@@ -9317,6 +9333,231 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.company-value-chart {
+  display: flex;
+  flex-wrap: wrap;
+}
+.company-value-chart .item {
+  width: 25%;
+  box-sizing: border-box;
+  position: relative;
+}
+.company-value-chart .item .heading-2 {
+  margin: 0;
+}
+.company-value-chart .item.company-value-chart {
+  padding: 75px 20px;
+  background: white;
+}
+.company-value-chart .item.simple-text {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.company-value-chart .item.content-main {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+.company-value-chart .item.content-main .heading-4 {
+  font-size: var(--fc_font_size_38);
+}
+.company-value-chart .item.content-main p {
+  font-size: var(--fc_font_size_16);
+}
+
+.project-management-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+.project-management-block .item {
+  position: relative;
+}
+.project-management-block .item:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  padding: 80px 90px;
+}
+.project-management-block .item:nth-child(1) .content {
+  max-width: 520px;
+}
+.project-management-block .item:nth-child(1) .content .heading-3 {
+  margin-bottom: 20px;
+}
+.project-management-block .item:nth-child(1) .content p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+.project-management-block .item:nth-child(1) .content p b {
+  display: block;
+}
+.project-management-block .item:nth-child(2) {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.project-management-block .item:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.project-management-block .item:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background: #0b2d5c;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  color: #fff;
+}
+.project-management-block .image-cover {
+  width: 100%;
+  height: 100%;
+}
+.project-management-block .image-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.map-block-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.map-block-main .item {
+  width: 25%;
+}
+.map-block-main .item:nth-child(2) {
+  width: 50%;
+}
+.map-block-main .item:nth-child(2) iframe {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project-design {
+  display: grid;
+  grid-template-columns: 952px 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+  width: 100%;
+  min-height: 100vh;
+}
+.project-design .item {
+  position: relative;
+  overflow: hidden;
+}
+.project-design .item:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.project-design .item:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: #f36a21;
+  display: flex;
+  align-items: center;
+}
+.project-design .item:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.project-design .item:nth-child(4) {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.project-design .image-cover {
+  width: 100%;
+  height: 100%;
+}
+.project-design .image-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.project-design .content {
+  padding: 50px 50px;
+  box-sizing: border-box;
+  color: var(--fc_white);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.project-design .content .kicker-text {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.project-design .content .heading-4 {
+  font-size: 26px;
+}
+.project-design .content .bottom-section-button a {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.project-design .content .bottom-section-button a .plus-button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fc_white);
+}
+.project-design .content .bottom-section-button a .plus-button:hover {
+  background-color: #fff;
+  border-color: var(--fc_white);
+  color: var(--fc_color_primary);
+}
+
+.animation-item {
+  position: relative;
+  overflow: hidden;
+  opacity: 1 !important;
+  will-change: transform;
+}
+.animation-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f6f6f6;
+  transform: translateX(0);
+  z-index: 1;
+  will-change: transform;
+}
+.animation-item.active::after {
+  animation: reveal 1.6s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+@keyframes reveal {
+  to {
+    transform: translateX(-110%);
+  }
+}
+.opacity-item {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.item .image-cover {
+  width: 100%;
+  height: 100%;
 }
 
 /*-------------------------------------------------

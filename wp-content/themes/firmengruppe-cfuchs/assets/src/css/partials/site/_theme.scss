@@ -367,7 +367,15 @@ span.button,
 			color: var(--fc_white);
 		}
 	}
-
+	&.dark-orange-button {
+		background-color: #ff5f14;
+		border-color: #ff5f14;
+		&:hover {
+			background-color: transparent;
+			border-color: var(--fc_white);
+			color: var(--fc_white);
+		}
+	}
 	&.blue-button {
 		--fc_theme_btn_color: var(--fc_white);
 		--fc_theme_btn_bgcolor: var(--fc_blue_3);
@@ -704,15 +712,12 @@ body {
 
 .applicants-image,
 .applicants-content {
-
 	&:before {
 		background-color: var(--fc_white);
-
 	}
 
 	&::after {
 		background-color: var(--fc_white);
-
 	}
 }
 
