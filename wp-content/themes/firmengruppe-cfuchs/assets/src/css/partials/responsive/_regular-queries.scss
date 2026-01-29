@@ -164,9 +164,9 @@
 		.hero-split-text {
 			position: absolute;
 			top: -35px;
-
+			width: 100%;
 			opacity: 0.4;
-
+			word-break: break-all;
 			line-height: 1;
 			font-size: 60px;
 		}

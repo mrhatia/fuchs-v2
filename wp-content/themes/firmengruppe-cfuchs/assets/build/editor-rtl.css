@@ -5630,6 +5630,8 @@ Mixin for transition
 }
 .acf-block-preview .map-block-main .item {
   width: 25%;
+  aspect-ratio: 476/476;
+  max-height: 476px;
 }
 .acf-block-preview .map-block-main .item:nth-child(2) {
   width: 50%;
@@ -5645,7 +5647,6 @@ Mixin for transition
   grid-template-columns: 952px 1fr 1fr;
   grid-template-rows: 50vh 50vh;
   width: 100%;
-  min-height: 100vh;
 }
 .acf-block-preview .project-design .item {
   position: relative;
@@ -7710,6 +7711,23 @@ Mixin for transition
 .acf-block-preview .wpcf7-response-output {
   margin: 0 !important;
 }
+@media only screen and (min-width: 1300px) and (max-width: 1440px) {
+  .acf-block-preview .company-value-chart .item.content-main {
+    padding: 30px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main .heading-4 {
+    font-size: 28px;
+  }
+  .acf-block-preview .company-value-chart .item.company-value-chart {
+    padding: 97px 20px;
+  }
+  .acf-block-preview .project-management-block .item:nth-child(1) {
+    padding: 50px 40px;
+  }
+  .acf-block-preview .project-design {
+    grid-template-columns: 620px 1fr 1fr;
+  }
+}
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
   .acf-block-preview .introduction-team .introduction-team-left .section-head {
     max-width: 608px;
@@ -7760,6 +7778,24 @@ Mixin for transition
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
+  .acf-block-preview .project-design {
+    grid-template-columns: 48vw 1fr 1fr;
+  }
+  .acf-block-preview .project-management-block .item:nth-child(1) {
+    padding: 50px 50px;
+  }
+  .acf-block-preview .company-value-chart .item.company-value-chart {
+    padding: 111px 20px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main {
+    padding: 40px 20px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main .heading-4 {
+    font-size: 30px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main p {
+    margin-bottom: 20px;
+  }
   .acf-block-preview .introduction-team .introduction-team-left {
     padding-right: 5%;
   }
@@ -7779,6 +7815,28 @@ Mixin for transition
   }
 }
 @media only screen and (min-width: 1004px) and (max-width: 1099px) {
+  .acf-block-preview .project-design .content {
+    padding: 40px 30px;
+  }
+  .acf-block-preview .project-design {
+    grid-template-columns: 440px 1fr 1fr;
+  }
+  .acf-block-preview .project-management-block .item:nth-child(1) {
+    padding: 50px 40px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main .heading-4 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .acf-block-preview .company-value-chart .item.company-value-chart {
+    padding: 160px 20px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main {
+    padding: 40px 20px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main p {
+    margin-bottom: 16px;
+  }
   .acf-block-preview .applicants-image {
     width: 49%;
   }
@@ -8241,6 +8299,42 @@ Mixin for transition
   }
   .acf-block-preview .testimonial-variation.swiper .swiper-pagination {
     bottom: 0 !important;
+  }
+  .acf-block-preview .project-management-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .acf-block-preview .project-management-block .item {
+    width: 100%;
+  }
+  .acf-block-preview .company-value-chart .item.simple-text {
+    padding: 40px 24px;
+  }
+  .acf-block-preview .company-value-chart .item {
+    width: 100%;
+    min-height: 374px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main {
+    padding: 30px 24px;
+  }
+  .acf-block-preview .project-management-block .item:nth-child(1) {
+    padding: 20px 24px;
+    min-height: 374px;
+  }
+  .acf-block-preview .map-block-main .item {
+    width: 100%;
+    min-height: 374px;
+  }
+  .acf-block-preview .map-block-main .item:nth-child(2) {
+    width: 100%;
+  }
+  .acf-block-preview .project-design {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .acf-block-preview .project-design .item {
+    width: 100%;
+    min-height: 374px;
   }
 }
 @media only screen and (min-width: 748px) and (max-width: 1003px) {
