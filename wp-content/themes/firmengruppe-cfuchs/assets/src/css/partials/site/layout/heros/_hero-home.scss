@@ -111,7 +111,6 @@
 		}
 
 		.bottom-section {
-
 			a,
 			a:visited {
 				span {
@@ -244,7 +243,6 @@
 }
 
 .bottom-section-button {
-
 	a,
 	a:visited {
 		padding: 0;
@@ -285,7 +283,6 @@
 
 .post-archive-box {
 	.bottom-section-button {
-
 		a,
 		a:visited {
 			span {
@@ -307,7 +304,9 @@
 	}
 }
 
-section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.active)) {
+section:has(.slide.has-green-bg.active):not(
+		:has(section .slide.has-green-bg.active)
+	) {
 	.dot {
 		background-color: var(--fc_white);
 	}
@@ -319,7 +318,6 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 }
 
 .bottom-section {
-
 	p,
 	.slide-tagline,
 	.bottom-section-button {
@@ -342,16 +340,17 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 	}
 
 	.bottom-section {
-
 		p,
 		.slide-tagline,
 		.bottom-section-button {
-			animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 1.3s;
+			animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1)
+				forwards 1.3s;
 		}
 	}
 
 	.top-section {
-		animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 1.3s;
+		animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards
+			1.3s;
 	}
 }
 
@@ -383,7 +382,8 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .slide {
 	&.active {
 		.home-hero-slide-overlay {
-			animation: overlayEnter 1.3s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
+			animation: overlayEnter 1.3s cubic-bezier(0.85, 0, 0.15, 1) 0.2s
+				forwards;
 		}
 	}
 
@@ -446,8 +446,7 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 		height: max-content;
 		margin: auto;
 		text-align: center;
-		top: auto;
-		bottom: 15%;
+		top: 10%;
 
 		.hero-split-text {
 			position: absolute;

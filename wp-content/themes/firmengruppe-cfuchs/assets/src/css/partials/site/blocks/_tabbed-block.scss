@@ -119,6 +119,8 @@ section:has(.feature-block.variation):not(
 }
 
 /// Block
+///
+///
 .company-value-chart {
 	display: flex;
 	flex-wrap: wrap;
@@ -228,6 +230,8 @@ section:has(.feature-block.variation):not(
 	flex-wrap: wrap;
 	.item {
 		width: 25%;
+		aspect-ratio: 476/476;
+		max-height: 476px;
 		&:nth-child(2) {
 			width: 50%;
 			iframe {
@@ -243,7 +247,6 @@ section:has(.feature-block.variation):not(
 	grid-template-columns: 952px 1fr 1fr;
 	grid-template-rows: 50vh 50vh;
 	width: 100%;
-	min-height: 100vh;
 
 	.item {
 		position: relative;

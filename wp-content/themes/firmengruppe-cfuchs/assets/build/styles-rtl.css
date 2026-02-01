@@ -4980,8 +4980,7 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   height: max-content;
   margin: auto;
   text-align: center;
-  top: auto;
-  bottom: 15%;
+  top: 10%;
 }
 .video-hero .banner-content .hero-split-text {
   position: absolute;
@@ -9434,6 +9433,8 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 }
 .map-block-main .item {
   width: 25%;
+  aspect-ratio: 476/476;
+  max-height: 476px;
 }
 .map-block-main .item:nth-child(2) {
   width: 50%;
@@ -9450,7 +9451,6 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
   grid-template-columns: 952px 1fr 1fr;
   grid-template-rows: 50vh 50vh;
   width: 100%;
-  min-height: 100vh;
 }
 .project-design .item {
   position: relative;
@@ -11012,7 +11012,9 @@ body.shrink .single-service-hero-section .service-logo {
   .section-head .hero-split-text {
     position: absolute;
     top: -35px;
+    width: 100%;
     opacity: 0.4;
+    word-break: break-all;
     line-height: 1;
     font-size: 60px;
   }
@@ -11035,6 +11037,23 @@ body.shrink .single-service-hero-section .service-logo {
 /* -------------------------------------------------
 >> Base Responsive queries
 ------------------------------------------------- */
+@media only screen and (min-width: 1300px) and (max-width: 1440px) {
+  .company-value-chart .item.content-main {
+    padding: 30px;
+  }
+  .company-value-chart .item.content-main .heading-4 {
+    font-size: 28px;
+  }
+  .company-value-chart .item.company-value-chart {
+    padding: 97px 20px;
+  }
+  .project-management-block .item:nth-child(1) {
+    padding: 50px 40px;
+  }
+  .project-design {
+    grid-template-columns: 620px 1fr 1fr;
+  }
+}
 @media only screen and (min-width: 1300px) and (max-width: 1630px) {
   .introduction-team .introduction-team-left .section-head {
     max-width: 608px;
@@ -11085,6 +11104,24 @@ body.shrink .single-service-hero-section .service-logo {
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
+  .project-design {
+    grid-template-columns: 48vw 1fr 1fr;
+  }
+  .project-management-block .item:nth-child(1) {
+    padding: 50px 50px;
+  }
+  .company-value-chart .item.company-value-chart {
+    padding: 111px 20px;
+  }
+  .company-value-chart .item.content-main {
+    padding: 40px 20px;
+  }
+  .company-value-chart .item.content-main .heading-4 {
+    font-size: 30px;
+  }
+  .company-value-chart .item.content-main p {
+    margin-bottom: 20px;
+  }
   .introduction-team .introduction-team-left {
     padding-right: 5%;
   }
@@ -11104,6 +11141,28 @@ body.shrink .single-service-hero-section .service-logo {
   }
 }
 @media only screen and (min-width: 1004px) and (max-width: 1099px) {
+  .project-design .content {
+    padding: 40px 30px;
+  }
+  .project-design {
+    grid-template-columns: 440px 1fr 1fr;
+  }
+  .project-management-block .item:nth-child(1) {
+    padding: 50px 40px;
+  }
+  .company-value-chart .item.content-main .heading-4 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .company-value-chart .item.company-value-chart {
+    padding: 160px 20px;
+  }
+  .company-value-chart .item.content-main {
+    padding: 40px 20px;
+  }
+  .company-value-chart .item.content-main p {
+    margin-bottom: 16px;
+  }
   .applicants-image {
     width: 49%;
   }
@@ -11372,6 +11431,9 @@ body.shrink .single-service-hero-section .service-logo {
   }
 }
 @media only screen and (max-width: 1003px) {
+  .project-design .content {
+    padding: 40px 30px;
+  }
   .feature-block.apprentice-block {
     min-height: 300px;
     padding-top: 40px;
@@ -11566,6 +11628,42 @@ body.shrink .single-service-hero-section .service-logo {
   }
   .testimonial-variation.swiper .swiper-pagination {
     bottom: 0 !important;
+  }
+  .project-management-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project-management-block .item {
+    width: 100%;
+  }
+  .company-value-chart .item.simple-text {
+    padding: 40px 24px;
+  }
+  .company-value-chart .item {
+    width: 100%;
+    min-height: 374px;
+  }
+  .company-value-chart .item.content-main {
+    padding: 30px 24px;
+  }
+  .project-management-block .item:nth-child(1) {
+    padding: 20px 24px;
+    min-height: 374px;
+  }
+  .map-block-main .item {
+    width: 100%;
+    min-height: 374px;
+  }
+  .map-block-main .item:nth-child(2) {
+    width: 100%;
+  }
+  .project-design {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project-design .item {
+    width: 100%;
+    min-height: 374px;
   }
 }
 @media only screen and (min-width: 748px) and (max-width: 1003px) {
