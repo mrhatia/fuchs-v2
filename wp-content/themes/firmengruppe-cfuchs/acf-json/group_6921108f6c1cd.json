@@ -156,6 +156,33 @@
                     "return_format": "array",
                     "allow_in_bindings": 0,
                     "parent_repeater": "field_69211175562d3"
+                },
+                {
+                    "key": "field_697c488b75e19",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_69211175562d3"
                 }
             ]
         }
@@ -178,5 +205,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763775421
+    "display_title": "",
+    "modified": 1769752729
 }

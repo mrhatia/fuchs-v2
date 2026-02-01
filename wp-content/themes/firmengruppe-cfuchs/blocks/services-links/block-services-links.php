@@ -41,6 +41,7 @@ BaseTheme::block(
 							foreach ( $fh_var_blk_srvlnk_links as $column ) {
 								$column_kicker      = $column['kicker'] ?? null;
 								$column_link   	= $column['link'] ?? null;
+								$column_icon   	= $column['icon'] ?? null;
 								?>
 
 									<div class="service-single-item">
@@ -51,6 +52,11 @@ BaseTheme::block(
 											<div class="service-title">
 												<h3 class="heading-4"><?php echo html_entity_decode( $column_link['title'] ); ?></h3>
 											</div>
+											<?php if ( $column_icon ) { ?>
+												<div class="services-logo">
+													<?php BaseTheme::the_attachment_image( $column_icon, 500 ); ?>
+												</div>
+											<?php } ?>
 											<div class="plus-button">
 												+
 											</div>

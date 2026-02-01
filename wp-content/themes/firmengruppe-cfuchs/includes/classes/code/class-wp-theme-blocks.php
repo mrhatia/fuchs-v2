@@ -73,6 +73,8 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'job-offers' );
 		self::register_acf_block( 'social-feeds' );
 		self::register_acf_block( 'theme-video' );
+		self::register_acf_block( 'about-us' );
+
 		// Register a block - AcfBlock.
 		// self::register_acf_block(
 		// 	'acfblock',

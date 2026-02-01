@@ -1,0 +1,24 @@
+{
+	"name": "acf/about-us",
+	"title": "About Us",
+	"description": "A custom About Us block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["about-us"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-about-us.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "about-us-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}
