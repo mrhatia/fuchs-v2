@@ -8888,7 +8888,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .testimonial-item {
   background-color: var(--fc_white);
   border: 1px solid #e8e8e9;
-  border-bottom: 4px solid var(--fc_orange);
+  border-bottom: 4px solid var(--fc_orange_dark);
   display: flex !important;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -8899,8 +8899,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   margin: 0 15px;
 }
 .testimonial-item:hover, .testimonial-item.slick-current {
-  background-color: var(--fc_color_primary);
-  border-color: var(--fc_color_primary);
+  background-color: var(--fc_orange_dark);
+  border-color: var(--fc_orange_dark);
 }
 .testimonial-item:hover .small-text,
 .testimonial-item:hover .heading-3,
@@ -9116,6 +9116,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .testimonial-slider .testimonial-item-content .small-text,
 .testimonial-slider .testimonial-item-content .heading-3 {
   color: #565969;
+}
+
+.testimonial-slider .slick-dots li {
+  background-color: var(--fc_white);
 }
 
 /*-------------------------------------------------
@@ -10654,6 +10658,7 @@ figure.wp-block-media-text__media {
 
 .single-service-hero-section {
   position: relative;
+  padding-bottom: 100px;
 }
 .single-service-hero-section .service-logo {
   position: absolute;
@@ -10664,13 +10669,23 @@ figure.wp-block-media-text__media {
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
+.single-service-hero-section .service-logo.left-side {
+  right: auto;
+  transform: translateX(-120%);
+  bottom: 0;
+}
 .single-service-hero-section .service-logo img {
   max-width: 330px;
+  width: 100%;
+  height: 100%;
 }
 
 body.shrink .single-service-hero-section .service-logo {
   /* swipe to right */
   transform: translateX(120%);
+}
+body.shrink .single-service-hero-section .service-logo.left-side {
+  transform: translateX(0);
 }
 
 .two-columns-content-tile {
@@ -10780,6 +10795,10 @@ body.shrink .single-service-hero-section .service-logo {
   height: 100%;
   border: none;
   padding: 0;
+}
+.masonry-single-item a:hover .single-image-content,
+.masonry-single-item a:visited:hover .single-image-content {
+  background-color: transparent;
 }
 .masonry-single-item a:hover .single-image-content .small-text,
 .masonry-single-item a:visited:hover .single-image-content .small-text {

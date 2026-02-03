@@ -81,6 +81,11 @@ $bst_var_pagetitle          = $bst_fields['fh_var_osngl_serv_title'] ?? get_the_
 			</div>
 		</div>
 	</div>
+					<?php if ( $fh_var_osngl_serv_logo ) { ?>
+					<div class="service-logo left-side">
+						<?php BaseTheme::the_attachment_image( $fh_var_osngl_serv_logo, 500 ); ?>
+					</div>
+				<?php } ?>
 </section>
 
 <div class="page-section">

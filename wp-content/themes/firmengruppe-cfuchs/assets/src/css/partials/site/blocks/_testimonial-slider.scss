@@ -1,7 +1,7 @@
 .testimonial-item {
 	background-color: var(--fc_white);
 	border: 1px solid #e8e8e9;
-	border-bottom: 4px solid var(--fc_orange);
+	border-bottom: 4px solid var(--fc_orange_dark);
 	display: flex !important;
 	flex-wrap: wrap;
 	align-items: flex-start;
@@ -13,8 +13,8 @@
 
 	&:hover,
 	&.slick-current {
-		background-color: var(--fc_color_primary);
-		border-color: var(--fc_color_primary);
+		background-color: var(--fc_orange_dark);
+		border-color: var(--fc_orange_dark);
 		// box-shadow: 0 15px 30px 0 rgb(0, 120, 87, 0.5);
 
 		.small-text,
@@ -266,6 +266,13 @@
 		.small-text,
 		.heading-3 {
 			color: #565969;
+		}
+	}
+}
+.testimonial-slider {
+	.slick-dots {
+		li {
+			background-color: var(--fc_white);
 		}
 	}
 }
