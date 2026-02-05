@@ -8885,31 +8885,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 /*-------------------------------------------------
 >> Basic styles for Image Alongside Text Block
 -------------------------------------------------*/
-.testimonial-item {
-  background-color: var(--fc_white);
-  border: 1px solid #e8e8e9;
-  border-bottom: 4px solid var(--fc_orange_dark);
-  display: flex !important;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding: 38px 29px 46px;
-  box-sizing: border-box;
-  gap: 24px;
-  transition: all 0.3s ease-in-out;
-  margin: 0 15px;
-}
-.testimonial-item:hover, .testimonial-item.slick-current {
-  background-color: var(--fc_orange_dark);
-  border-color: var(--fc_orange_dark);
-}
-.testimonial-item:hover .small-text,
-.testimonial-item:hover .heading-3,
-.testimonial-item:hover p, .testimonial-item.slick-current .small-text,
-.testimonial-item.slick-current .heading-3,
-.testimonial-item.slick-current p {
-  color: var(--fc_white);
-}
-
 .testimonial-item-image {
   max-width: 80px;
   aspect-ratio: 100/100;
@@ -8947,6 +8922,37 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   font-size: var(--fc_font_size_18);
   color: #565969;
   margin: 0;
+}
+
+.testimonial-item {
+  background-color: var(--fc_green_dark);
+  border: 1px solid #e8e8e9;
+  border-bottom: 4px solid var(--fc_white);
+  color: var(--fc_white);
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 38px 29px 46px;
+  box-sizing: border-box;
+  gap: 24px;
+  transition: all 0.3s ease-in-out;
+  margin: 0 15px;
+}
+.testimonial-item .small-text,
+.testimonial-item .heading-3,
+.testimonial-item p {
+  color: var(--fc_white);
+}
+.testimonial-item:hover, .testimonial-item.slick-current {
+  background-color: var(--fc_white);
+  border-color: var(--fc_green_dark);
+}
+.testimonial-item:hover .small-text,
+.testimonial-item:hover .heading-3,
+.testimonial-item:hover p, .testimonial-item.slick-current .small-text,
+.testimonial-item.slick-current .heading-3,
+.testimonial-item.slick-current p {
+  color: var(--fc_body_color);
 }
 
 .testimonial-variation.swiper {
@@ -9107,15 +9113,15 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 
 .testimonial-slider .testimonial-item:hover .testimonial-item-content .small-text,
 .testimonial-slider .testimonial-item:hover .testimonial-item-content .heading-3 {
-  color: white;
+  color: #565969;
 }
 .testimonial-slider .testimonial-item.slick-current .testimonial-item-content .small-text,
 .testimonial-slider .testimonial-item.slick-current .testimonial-item-content .heading-3 {
-  color: white;
+  color: #565969;
 }
 .testimonial-slider .testimonial-item-content .small-text,
 .testimonial-slider .testimonial-item-content .heading-3 {
-  color: #565969;
+  color: white;
 }
 
 .testimonial-slider .slick-dots li {

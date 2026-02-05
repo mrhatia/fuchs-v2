@@ -5121,30 +5121,6 @@ Mixin for transition
     max-width: 54%;
   }
 }
-.acf-block-preview .testimonial-item {
-  background-color: var(--fc_white);
-  border: 1px solid #e8e8e9;
-  border-bottom: 4px solid var(--fc_orange_dark);
-  display: flex !important;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding: 38px 29px 46px;
-  box-sizing: border-box;
-  gap: 24px;
-  transition: all 0.3s ease-in-out;
-  margin: 0 15px;
-}
-.acf-block-preview .testimonial-item:hover, .acf-block-preview .testimonial-item.slick-current {
-  background-color: var(--fc_orange_dark);
-  border-color: var(--fc_orange_dark);
-}
-.acf-block-preview .testimonial-item:hover .small-text,
-.acf-block-preview .testimonial-item:hover .heading-3,
-.acf-block-preview .testimonial-item:hover p, .acf-block-preview .testimonial-item.slick-current .small-text,
-.acf-block-preview .testimonial-item.slick-current .heading-3,
-.acf-block-preview .testimonial-item.slick-current p {
-  color: var(--fc_white);
-}
 .acf-block-preview .testimonial-item-image {
   max-width: 80px;
   aspect-ratio: 100/100;
@@ -5181,6 +5157,36 @@ Mixin for transition
   font-size: var(--fc_font_size_18);
   color: #565969;
   margin: 0;
+}
+.acf-block-preview .testimonial-item {
+  background-color: var(--fc_green_dark);
+  border: 1px solid #e8e8e9;
+  border-bottom: 4px solid var(--fc_white);
+  color: var(--fc_white);
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 38px 29px 46px;
+  box-sizing: border-box;
+  gap: 24px;
+  transition: all 0.3s ease-in-out;
+  margin: 0 15px;
+}
+.acf-block-preview .testimonial-item .small-text,
+.acf-block-preview .testimonial-item .heading-3,
+.acf-block-preview .testimonial-item p {
+  color: var(--fc_white);
+}
+.acf-block-preview .testimonial-item:hover, .acf-block-preview .testimonial-item.slick-current {
+  background-color: var(--fc_white);
+  border-color: var(--fc_green_dark);
+}
+.acf-block-preview .testimonial-item:hover .small-text,
+.acf-block-preview .testimonial-item:hover .heading-3,
+.acf-block-preview .testimonial-item:hover p, .acf-block-preview .testimonial-item.slick-current .small-text,
+.acf-block-preview .testimonial-item.slick-current .heading-3,
+.acf-block-preview .testimonial-item.slick-current p {
+  color: var(--fc_body_color);
 }
 .acf-block-preview .testimonial-variation.swiper {
   position: relative;
@@ -5331,15 +5337,15 @@ Mixin for transition
 }
 .acf-block-preview .testimonial-slider .testimonial-item:hover .testimonial-item-content .small-text,
 .acf-block-preview .testimonial-slider .testimonial-item:hover .testimonial-item-content .heading-3 {
-  color: white;
+  color: #565969;
 }
 .acf-block-preview .testimonial-slider .testimonial-item.slick-current .testimonial-item-content .small-text,
 .acf-block-preview .testimonial-slider .testimonial-item.slick-current .testimonial-item-content .heading-3 {
-  color: white;
+  color: #565969;
 }
 .acf-block-preview .testimonial-slider .testimonial-item-content .small-text,
 .acf-block-preview .testimonial-slider .testimonial-item-content .heading-3 {
-  color: #565969;
+  color: white;
 }
 .acf-block-preview .testimonial-slider .slick-dots li {
   background-color: var(--fc_white);
