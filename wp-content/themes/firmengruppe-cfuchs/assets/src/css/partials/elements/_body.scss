@@ -15,6 +15,7 @@ body {
 	line-height: 1.5;
 	overflow: clip;
 	overflow-y: auto;
+
 	&.have-topbar {
 		padding-top: var(--fc_header-height);
 	}

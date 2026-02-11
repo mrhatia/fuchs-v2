@@ -351,9 +351,7 @@ jQuery( function() {
 		} );
 	}
 	if ( jQuery( '.hero-inner-slider' ).length ) {
-		const slideCount = jQuery( '.hero-inner-slider' ).children().length;
 
-		if ( slideCount > 1 ) {
 			jQuery( '.hero-inner-slider' ).slick( {
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -369,7 +367,6 @@ jQuery( function() {
 				pauseOnFocus: false,
 				swipe: false,
 			} );
-		}
 	}
 
 	if ( jQuery( '.testimonial-slider' ).length > 0 ) {
