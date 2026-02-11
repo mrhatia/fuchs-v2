@@ -286,3 +286,21 @@
 		z-index: -1;
 	}
 }
+
+
+
+
+// Accordian plugins css
+
+.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby {
+	border: none;
+	background-color: transparent;
+
+	.ctn-green {
+		padding: 0;
+	}
+
+	.icons-three-columns {
+		row-gap: var(--fc_space_72);
+	}
+}

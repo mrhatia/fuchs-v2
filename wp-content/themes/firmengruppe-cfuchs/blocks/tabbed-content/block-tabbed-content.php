@@ -53,7 +53,7 @@ BaseTheme::block(
 
 												<?php if ( $button ) { ?>
 													<div class="iat-button">
-														<?php echo BaseTheme::button( $button, 'button' ); ?>
+														<?php echo BaseTheme::button( $button, 'button white-button' ); ?>
 													</div>
 												<?php } ?>
 											</div>

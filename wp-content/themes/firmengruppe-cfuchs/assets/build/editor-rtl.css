@@ -4430,6 +4430,16 @@ Mixin for transition
   pointer-events: none;
   z-index: -1;
 }
+.acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby {
+  border: none;
+  background-color: transparent;
+}
+.acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby .ctn-green {
+  padding: 0;
+}
+.acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby .icons-three-columns {
+  row-gap: var(--fc_space_72);
+}
 .acf-block-preview .team-members {
   display: flex;
   flex-wrap: wrap;
@@ -8146,7 +8156,7 @@ Mixin for transition
   }
 }
 @media only screen and (min-width: 1004px) {
-  .acf-block-preview .testimonial-item-content {
+  .acf-block-preview .has-no-icon .testimonial-item-content {
     width: 100%;
   }
 }
