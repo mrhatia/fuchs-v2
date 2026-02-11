@@ -303,4 +303,10 @@
 	.icons-three-columns {
 		row-gap: var(--fc_space_72);
 	}
+
+	.pds-accordion__title {
+		.rich-text mark {
+			margin-right: 20px;
+		}
+	}
 }
