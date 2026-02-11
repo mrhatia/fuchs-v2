@@ -7455,8 +7455,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   opacity: 1;
   position: absolute;
   right: 0;
-  top: 17px;
-  transition: all 0.3s ease-in-out;
+  top: 40px !important;
+  transition: all 0.3s ease-in-out !important;
 }
 .pds-accordion__icon::before, .pds-accordion__icon::after {
   content: "";
@@ -7466,7 +7466,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   background-color: #ffffff;
   width: 13px;
   height: 1px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
 }
 .pds-accordion__icon::after {
   transform: rotate(90deg);
@@ -7477,7 +7477,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 
 .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state) {
-  transform: initial !important;
+  transform: translateY(-50%) rotate(0deg) !important;
   background-color: white;
 }
 .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::before, .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::after {

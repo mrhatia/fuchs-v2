@@ -4212,8 +4212,8 @@ Mixin for transition
   opacity: 1;
   position: absolute;
   right: 0;
-  top: 17px;
-  transition: all 0.3s ease-in-out;
+  top: 40px !important;
+  transition: all 0.3s ease-in-out !important;
 }
 .acf-block-preview .pds-accordion__icon::before, .acf-block-preview .pds-accordion__icon::after {
   content: "";
@@ -4223,7 +4223,7 @@ Mixin for transition
   background-color: #ffffff;
   width: 13px;
   height: 1px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
 }
 .acf-block-preview .pds-accordion__icon::after {
   transform: rotate(90deg);
@@ -4233,7 +4233,7 @@ Mixin for transition
   margin: 0;
 }
 .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state) {
-  transform: initial !important;
+  transform: translateY(-50%) rotate(0deg) !important;
   background-color: white;
 }
 .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::before, .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::after {
