@@ -2028,3 +2028,24 @@ body {
 		margin: 0;
 	}
 }
+.pds-accordion__heading {
+	font-size: var(--fc_font_size_20);
+	@include font(sour, bold);
+	color: var(--fc_white);
+	line-height: 1;
+	text-transform: initial;
+}
+.pds-accordion__item {
+	.pds-accordion__title {
+		padding: 30px 70px 36px 0 !important;
+		box-sizing: border-box;
+	}
+	&:nth-child(n + 2) {
+		border-top: 1px solid #e8e8e9;
+	}
+}
+.pds-accordion__icon {
+	svg {
+		margin: 0;
+	}
+}
