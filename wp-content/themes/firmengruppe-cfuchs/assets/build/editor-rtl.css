@@ -4173,6 +4173,9 @@ Mixin for transition
 .acf-block-preview .mkdf-icon-text a:hover {
   color: var(--fc_orange);
 }
+.acf-block-preview .animation-chart svg {
+  margin: 0;
+}
 .acf-block-preview .two-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(clamp(350px, 50% - 2%, 100%), 100%), 1fr));

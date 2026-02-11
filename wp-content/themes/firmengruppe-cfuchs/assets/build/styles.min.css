@@ -7413,6 +7413,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   color: var(--fc_orange);
 }
 
+.animation-chart svg {
+  margin: 0;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
