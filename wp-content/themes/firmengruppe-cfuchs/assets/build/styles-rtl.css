@@ -8222,6 +8222,9 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby .icons-three-columns {
   row-gap: var(--fc_space_72);
 }
+.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby .pds-accordion__title .rich-text mark {
+  margin-left: 20px;
+}
 
 /*-------------------------------------------------
 >> Basic styles for Team Block
