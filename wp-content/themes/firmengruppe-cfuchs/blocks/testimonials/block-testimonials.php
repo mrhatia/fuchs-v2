@@ -30,9 +30,10 @@ BaseTheme::block(
 								$column_title   	= $column['title'] ?? null;
 								$column_text   = $column['text'] ?? null;
 								$column_icon       = $column['image'] ?? null;
+								$has_column_icon	   = ($column_icon) ? " has-icon " : "has-no-icon";
 								?>
 
-								<div class="testimonial-item">
+								<div class="testimonial-item <?php echo $has_column_icon; ?>">
 									<?php if ( $column_icon ) { ?>
 										<div class="testimonial-item-image image-cover">
 											<?php BaseTheme::the_attachment_image( $column_icon, 500 ); ?>

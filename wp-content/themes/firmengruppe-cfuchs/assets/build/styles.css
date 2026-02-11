@@ -8142,6 +8142,17 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   z-index: -1;
 }
 
+.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby {
+  border: none;
+  background-color: transparent;
+}
+.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby .ctn-green {
+  padding: 0;
+}
+.plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby .icons-three-columns {
+  row-gap: var(--fc_space_72);
+}
+
 /*-------------------------------------------------
 >> Basic styles for Team Block
 -------------------------------------------------*/
@@ -11455,7 +11466,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
 }
 @media only screen and (min-width: 1004px) {
-  .testimonial-item-content {
+  .has-no-icon .testimonial-item-content {
     width: 100%;
   }
 }
