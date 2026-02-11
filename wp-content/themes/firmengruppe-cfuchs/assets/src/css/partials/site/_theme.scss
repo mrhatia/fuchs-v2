@@ -2029,23 +2029,76 @@ body {
 	}
 }
 .pds-accordion__heading {
-	font-size: var(--fc_font_size_20);
+	font-size: var(--fc_font_size_26);
 	@include font(sour, bold);
 	color: var(--fc_white);
 	line-height: 1;
 	text-transform: initial;
 }
 .pds-accordion__item {
+	position: relative;
 	.pds-accordion__title {
 		padding: 30px 70px 36px 0 !important;
 		box-sizing: border-box;
+		cursor: pointer;
+		&:hover {
+			.pds-accordion__icon {
+				background-color: var(--fc_white);
+
+				&::before,
+				&::after {
+					background-color: var(--fc_black);
+				}
+			}
+		}
 	}
 	&:nth-child(n + 2) {
 		border-top: 1px solid #e8e8e9;
 	}
 }
 .pds-accordion__icon {
+	background-color: transparent;
+	width: 50px !important;
+	height: 50px !important;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	position: absolute;
+	right: 0;
+	top: 17px;
+	transition: all 0.3s ease-in-out;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		background-color: #ffffff;
+		width: 13px;
+		height: 1px;
+		transition: all 0.3s ease-in-out;
+	}
+	&::after {
+		transform: rotate(90deg);
+	}
 	svg {
+		display: none !important;
 		margin: 0;
+	}
+}
+.plethoraplugins-accordion.plethoraplugins-theme__minimal
+	.is-open
+	> .pds-accordion__title
+	.pds-accordion__icon:not(.pds-accordion__icon--two-state) {
+	transform: initial !important;
+	background-color: white;
+	&::before,
+	&::after {
+		background-color: var(--fc_black);
+	}
+	&::after {
+		opacity: 0;
 	}
 }

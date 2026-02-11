@@ -7418,7 +7418,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 
 .pds-accordion__heading {
-  font-size: var(--fc_font_size_20);
+  font-size: var(--fc_font_size_26);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -7427,16 +7427,64 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   text-transform: initial;
 }
 
+.pds-accordion__item {
+  position: relative;
+}
 .pds-accordion__item .pds-accordion__title {
   padding: 30px 0 36px 70px !important;
   box-sizing: border-box;
+  cursor: pointer;
+}
+.pds-accordion__item .pds-accordion__title:hover .pds-accordion__icon {
+  background-color: var(--fc_white);
+}
+.pds-accordion__item .pds-accordion__title:hover .pds-accordion__icon::before, .pds-accordion__item .pds-accordion__title:hover .pds-accordion__icon::after {
+  background-color: var(--fc_black);
 }
 .pds-accordion__item:nth-child(n+2) {
   border-top: 1px solid #e8e8e9;
 }
 
+.pds-accordion__icon {
+  background-color: transparent;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 17px;
+  transition: all 0.3s ease-in-out;
+}
+.pds-accordion__icon::before, .pds-accordion__icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background-color: #ffffff;
+  width: 13px;
+  height: 1px;
+  transition: all 0.3s ease-in-out;
+}
+.pds-accordion__icon::after {
+  transform: rotate(-90deg);
+}
 .pds-accordion__icon svg {
+  display: none !important;
   margin: 0;
+}
+
+.plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state) {
+  transform: initial !important;
+  background-color: white;
+}
+.plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::before, .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::after {
+  background-color: var(--fc_black);
+}
+.plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::after {
+  opacity: 0;
 }
 
 /*-------------------------------------------------
