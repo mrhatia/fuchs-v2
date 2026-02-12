@@ -743,7 +743,7 @@ jQuery( function() {
 						scrollTrigger: {
 							trigger: parent,
 							start: 'top 85%',
-							toggleActions: 'play none none none',
+							toggleActions: 'play reverse play reverse',
 						},
 						defaults: { ease: 'power3.out' },
 					} );

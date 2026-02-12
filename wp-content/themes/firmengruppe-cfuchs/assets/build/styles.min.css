@@ -7487,6 +7487,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   opacity: 0;
 }
 
+.padding-0 {
+  padding: 0 !important;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/

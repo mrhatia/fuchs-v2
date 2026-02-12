@@ -4242,6 +4242,9 @@ Mixin for transition
 .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::after {
   opacity: 0;
 }
+.acf-block-preview .padding-0 {
+  padding: 0 !important;
+}
 .acf-block-preview .two-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(clamp(350px, 50% - 2%, 100%), 100%), 1fr));
