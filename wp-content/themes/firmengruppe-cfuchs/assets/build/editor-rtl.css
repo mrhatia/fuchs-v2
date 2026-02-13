@@ -6889,6 +6889,7 @@ Mixin for transition
   left: auto;
   transform: translateX(120%);
   bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 8px 30px;
 }
 .acf-block-preview .single-service-hero-section .service-logo img {
   max-width: 330px;
