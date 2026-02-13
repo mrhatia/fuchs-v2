@@ -720,7 +720,6 @@ jQuery( function() {
 			once: true,
 		} );
 	} );
-
 	if ( jQuery( '.animation-chart' ).length ) {
 		gsap.utils.toArray( '.animation-chart' ).forEach( ( parent ) => {
 			const textGroups = Array.from( parent.querySelectorAll( '.text-animation' ) );
@@ -734,13 +733,23 @@ jQuery( function() {
 				} );
 			};
 
-			reset(); // initial hide
+			reset();
+
+			const sortedGroups = textGroups.slice().sort( ( a, b ) => {
+				const aRect = a.getBoundingClientRect();
+				const bRect = b.getBoundingClientRect();
+				const rowDiff = aRect.top - bRect.top;
+				if ( Math.abs( rowDiff ) < 5 ) {
+					return aRect.left - bRect.left;
+				}
+				return aRect.top - bRect.top;
+			} );
 
 			const tl = gsap.timeline( {
 				defaults: { ease: 'power3.out', duration: 0.5 },
 			} );
 
-			textGroups.forEach( ( textGroup, index ) => {
+			sortedGroups.forEach( ( textGroup, index ) => {
 				const line = parent.querySelector( '.chart-line#' + textGroup.id );
 				if ( line ) {
 					tl.to( textGroup, { opacity: 1 }, index * 0.2 );
