@@ -351,22 +351,21 @@ jQuery( function() {
 		} );
 	}
 	if ( jQuery( '.hero-inner-slider' ).length ) {
-
-			jQuery( '.hero-inner-slider' ).slick( {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				dots: true,
-				arrows: true,
-				infinite: true,
-				autoplay: true,
-				autoplaySpeed: 4000,
-				speed: 1200,
-				fade: true,
-				cssEase: 'ease-in-out',
-				pauseOnHover: false,
-				pauseOnFocus: false,
-				swipe: false,
-			} );
+		jQuery( '.hero-inner-slider' ).slick( {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: true,
+			arrows: true,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			speed: 1200,
+			fade: true,
+			cssEase: 'ease-in-out',
+			pauseOnHover: false,
+			pauseOnFocus: false,
+			swipe: false,
+		} );
 	}
 
 	if ( jQuery( '.testimonial-slider' ).length > 0 ) {
@@ -721,7 +720,36 @@ jQuery( function() {
 			once: true,
 		} );
 	} );
+	// if ( jQuery( '.animation-chart' ).length ) {
+	// 	gsap.utils.toArray( '.animation-chart' ).forEach( ( parent ) => {
+	// 		const textGroups = Array.from( parent.querySelectorAll( '.text-animation' ) );
+	// 		const lines = Array.from( parent.querySelectorAll( '.chart-line' ) );
 
+	// 		gsap.set( textGroups, { opacity: 0 } );
+	// 		lines.forEach( ( line ) => {
+	// 			const length = line.getTotalLength();
+	// 			gsap.set( line, { strokeDasharray: length, strokeDashoffset: length } );
+	// 		} );
+
+	// 		const tl = gsap.timeline( {
+	// 			scrollTrigger: {
+	// 				trigger: parent,
+	// 				start: 'top 85%',
+	// 				toggleActions: 'play reverse play reverse',
+	// 			},
+	// 			defaults: { ease: 'power3.out' },
+	// 		} );
+
+	// 		textGroups.forEach( ( textGroup, index ) => {
+	// 			const id = textGroup.id;
+	// 			const line = parent.querySelector( '.chart-line#' + id );
+	// 			if ( line ) {
+	// 				tl.to( textGroup, { opacity: 1, duration: 0.8 }, index * 0.3 );
+	// 				tl.to( line, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.out' }, index * 0.3 + 0.1 );
+	// 			}
+	// 		} );
+	// 	} );
+	// }
 	if ( jQuery( '.animation-chart' ).length ) {
 		gsap.utils.toArray( '.animation-chart' ).forEach( ( parent ) => {
 			const textGroups = Array.from( parent.querySelectorAll( '.text-animation' ) );
@@ -733,21 +761,28 @@ jQuery( function() {
 				gsap.set( line, { strokeDasharray: length, strokeDashoffset: length } );
 			} );
 
-			const shuffledGroups = gsap.utils.shuffle( textGroups );
+			textGroups.sort( ( a, b ) => {
+				const aRect = a.getBoundingClientRect();
+				const bRect = b.getBoundingClientRect();
+				if ( aRect.top === bRect.top ) {
+					return aRect.left - bRect.left;
+				}
+				return aRect.top - bRect.top;
+			} );
 
-			shuffledGroups.forEach( ( textGroup, index ) => {
+			const tl = gsap.timeline( {
+				scrollTrigger: {
+					trigger: parent,
+					start: 'top 85%',
+					toggleActions: 'play reverse play reverse',
+				},
+				defaults: { ease: 'power3.out' },
+			} );
+
+			textGroups.forEach( ( textGroup, index ) => {
 				const id = textGroup.id;
 				const line = parent.querySelector( '.chart-line#' + id );
 				if ( line ) {
-					const tl = gsap.timeline( {
-						scrollTrigger: {
-							trigger: parent,
-							start: 'top 85%',
-							toggleActions: 'play reverse play reverse',
-						},
-						defaults: { ease: 'power3.out' },
-					} );
-
 					tl.to( textGroup, { opacity: 1, duration: 0.8 }, index * 0.3 );
 					tl.to( line, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.out' }, index * 0.3 + 0.1 );
 				}
