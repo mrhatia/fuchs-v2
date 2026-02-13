@@ -9228,13 +9228,14 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   position: absolute;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA3MCA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMzEuMjA0OEMwIDIxLjgzOCAyLjQ2MzE5IDE0LjI5NTIgNy4zOTA1OCA4LjU3NTUxQzEyLjMxNyAyLjg2MDg3IDE5LjUwMTYgMCAyOC45NDQ1IDBWMTMuMDJDMjEuNjg4OCAxMy4wMiAxOC4wNjUxIDE3LjcwNDkgMTguMDY1MSAyNy4wNzI4VjMwLjE3M0gzMS4yMDI4VjU1Ljc5NzFINC4zMTA1OEMxLjQzNjUyIDQ3LjUzMSAwIDM5LjMzNTkgMCAzMS4yMDQ4Wk0zOS4wMDMyIDMxLjIwNDhDMzkuMDAzMiAyMS44MzggNDEuNDMwOSAxNC4yOTUyIDQ2LjI5MDMgOC41NzU1MUM1MS4xNDU3IDIuODYwODcgNTguMjk4OCAwIDY3Ljc0MTcgMFYxMy4wMkM2MC42MjQxIDEzLjAyIDU3LjA2NzIgMTcuNzA0OSA1Ny4wNjcyIDI3LjA3MjhWMzAuMTczSDcwVjU1Ljc5NzFINDMuMTA4OEM0MC4zNjg3IDQ3LjM5NTEgMzkuMDAzMiAzOS4xOTcgMzkuMDAzMiAzMS4yMDQ4WiIgZmlsbD0iIzAwNzg1NyIvPgo8L3N2Zz4K);
   background-repeat: no-repeat;
-  width: 154px;
-  height: 131px;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
   top: 30px;
   left: 30px;
   z-index: 1;
   background-position: top left;
-  filter: brightness(0) saturate(100%) invert(58%) sepia(58%) saturate(4685%) hue-rotate(7deg) brightness(96%) contrast(98%);
+  filter: brightness(0) invert(1);
 }
 .testimonial-item.slick-current::after, .testimonial-item:hover::after {
   filter: initial;
