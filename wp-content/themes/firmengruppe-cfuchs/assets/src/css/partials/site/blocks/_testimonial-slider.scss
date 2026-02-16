@@ -25,6 +25,7 @@
 		letter-spacing: 0;
 		color: var(--fc_color_primary);
 		margin-bottom: 17px;
+		font-size: var(--fc_font_size_26);
 	}
 
 	p {
@@ -36,9 +37,9 @@
 }
 
 .testimonial-item {
-	background-color: var(--fc_green_dark);
+	background-color: var(--fc_orange);
 	border: 1px solid #e8e8e9;
-	border-bottom: 4px solid var(--fc_white);
+	border-bottom: 4px solid #f98504;
 	color: var(--fc_white);
 	display: flex !important;
 	flex-wrap: wrap;
@@ -58,8 +59,7 @@
 	&:hover,
 	&.slick-current {
 		background-color: var(--fc_white);
-		border-color: var(--fc_green_dark);
-		// box-shadow: 0 15px 30px 0 rgb(0, 120, 87, 0.5);
+		border-color: var(--fc_white);
 
 		.small-text,
 		.heading-3,
@@ -207,10 +207,13 @@
 
 .testimonial-slider {
 	margin: 0 !important;
-	padding-bottom: 47px;
+	padding-bottom: 25px;
 	box-sizing: border-box;
 	cursor: grab;
-
+	.slick-list {
+		padding-bottom: 30px;
+		box-sizing: border-box;
+	}
 	.slick-track {
 		display: flex;
 		align-items: stretch;
@@ -249,17 +252,10 @@
 	}
 }
 
-.testimonial-item-content {
-	.heading-3 {
-		font-size: var(--fc_space_48);
-	}
-}
-
 .testimonial-slider {
 	.testimonial-item {
 		&:hover {
 			.testimonial-item-content {
-
 				.small-text,
 				.heading-3 {
 					color: #565969;
@@ -268,8 +264,8 @@
 		}
 
 		&.slick-current {
+			box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
 			.testimonial-item-content {
-
 				.small-text,
 				.heading-3 {
 					color: #565969;
@@ -279,7 +275,6 @@
 	}
 
 	.testimonial-item-content {
-
 		.small-text,
 		.heading-3 {
 			color: white;
@@ -303,11 +298,11 @@
 		position: absolute;
 		background-image: url(../images/quote-icon.svg);
 		background-repeat: no-repeat;
-		width: 50px;
-		height: 50px;
+		width: 40px;
+		height: 40px;
 		background-size: contain;
-		top: 30px;
-		right: 30px;
+		top: 58px;
+		right: 50px;
 		z-index: 1;
 		background-position: top right;
 		filter: brightness(0) invert(1);
@@ -315,8 +310,12 @@
 
 	&.slick-current,
 	&:hover {
+		box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
+
 		&::after {
-			filter: initial;
+			filter: brightness(0) saturate(100%) invert(47%) sepia(95%)
+				saturate(698%) hue-rotate(358deg) brightness(102%)
+				contrast(102%);
 		}
 	}
 }

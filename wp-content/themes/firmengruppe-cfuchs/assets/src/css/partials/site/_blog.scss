@@ -310,11 +310,11 @@
 				border: none;
 
 				&:hover {
-					color: var(--fc_dark-gray);
+					color: var(--fc_orange_dark);
 				}
 
 				&.active {
-					color: var(--fc_color_primary);
+					// color: var(--fc_color_primary);
 				}
 			}
 		}
@@ -437,8 +437,8 @@
 		.small-text,
 		.service-title,
 		.service-text {
-			opacity: 0;
-			transform: translateY(10px);
+			// opacity: 0;
+			// transform: translateY(10px);
 			transition:
 				opacity 0.4s ease,
 				transform 0.4s ease;
@@ -529,6 +529,13 @@
 
 		.service-text p {
 			font-size: var(--fc_font_size_14);
+		}
+	}
+}
+.wp-block-media-text__content {
+	.section-head {
+		.hero-split-text {
+			font-size: var(--fc_font_size_160);
 		}
 	}
 }

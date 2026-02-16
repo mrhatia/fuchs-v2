@@ -45,7 +45,7 @@ BaseTheme::block(
 							<?php echo html_entity_decode( $bst_var_blk_map_text ); ?>
 						<?php } ?>
 						<?php if ( $bst_var_blk_map_button ) { ?>
-							<?php echo BaseTheme::button( $bst_var_blk_map_button, 'button' ); ?>
+							<?php echo BaseTheme::button( $bst_var_blk_map_button, 'button white-button' ); ?>
 						<?php } ?>
 
 					</div>

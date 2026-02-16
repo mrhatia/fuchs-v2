@@ -126,7 +126,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 				<form id="filter" class="filter__form listings__form" action="/projects">
 
 					<div class="filter-search" action="/projects">
-						<div class="filter-search__inner">
+						<div class="filter-search__inner" style="display:none;">
 							<label class="filter-search__label" for="s">
 								<svg class="svg-inline--fa fa-magnifying-glass filter-search__icon" aria-hidden="true"
 									focusable="false" data-prefix="fal" data-icon="magnifying-glass" role="img"
@@ -162,7 +162,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 							</button>
 						</div>
 					</div>
-					<div class="filter" data-count="3" data-taxonomies="market,region,project-status">
+					<div class="filter" data-count="3" data-taxonomies="market,region,project-status" style="display:block !important;">
 						<input type="hidden" name="paged" value="1">
 						<div class="filter__inner filter__inner--tags">
 
@@ -347,7 +347,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 
 
 			<!-- Seection Bottom -->
-			<div class="wp-block-group alignfull is-style-rivets-outside center-align is-layout-constrained wp-block-group-is-layout-constrained">
+			<!-- <div class="wp-block-group alignfull is-style-rivets-outside center-align is-layout-constrained wp-block-group-is-layout-constrained">
 
 				<h2 class="wp-block-heading has-text-align-center">Explore Our Projects</h2>
 
@@ -373,7 +373,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<?php
 					get_template_part( 'partials/content', 'page' );
