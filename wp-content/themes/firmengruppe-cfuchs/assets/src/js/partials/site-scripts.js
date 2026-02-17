@@ -746,14 +746,14 @@ jQuery( function() {
 			} );
 
 			const tl = gsap.timeline( {
-				defaults: { ease: 'power3.out', duration: 0.5 },
+				defaults: { ease: 'power3.out', duration: 1 },
 			} );
 
 			sortedGroups.forEach( ( textGroup, index ) => {
 				const line = parent.querySelector( '.chart-line#' + textGroup.id );
 				if ( line ) {
-					tl.to( textGroup, { opacity: 1 }, index * 0.2 );
-					tl.to( line, { strokeDashoffset: 0, ease: 'power2.out' }, index * 0.2 );
+					tl.to( textGroup, { opacity: 1 }, index * 0.4 );
+					tl.to( line, { strokeDashoffset: 0, ease: 'power2.out' }, index * 0.4 );
 				}
 			} );
 

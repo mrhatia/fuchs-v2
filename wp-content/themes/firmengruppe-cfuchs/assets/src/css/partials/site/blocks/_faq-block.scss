@@ -3,7 +3,7 @@
 		border-top: 1px solid #e8e8e9;
 	}
 
-	>a {
+	> a {
 		border: none;
 		display: block;
 		font-size: 24px;
@@ -77,7 +77,6 @@
 }
 
 .top-latters-area {
-
 	a,
 	a:visited {
 		display: inline-block;
@@ -139,6 +138,9 @@
 	align-items: start;
 	gap: 4%;
 	justify-content: space-between;
+	.faq-head {
+		background-image: none;
+	}
 }
 
 .faq-image {
@@ -186,19 +188,19 @@
 	transition: all 0.3s ease-in-out;
 	align-items: center;
 	gap: 30px;
+	background-image: url(../images/default_pattern.png);
 
 	&.active {
 		padding: 30px 70px 14px 0;
-
+		background-image: none;
 		.faq-icon {
-			background-color: var(--fc_color_primary);
-			box-shadow: 0 10px 20px 0 rgb(0, 120, 88, 0.5);
+			background-color: var(--fc_white);
+			box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
 
 			svg {
-
 				path,
 				rect {
-					fill: var(--fc_white);
+					fill: var(--fc_black);
 				}
 			}
 		}
@@ -206,14 +208,13 @@
 
 	&:hover {
 		.faq-icon {
-			background-color: var(--fc_color_primary);
-			box-shadow: 0 10px 20px 0 rgb(0, 120, 88, 0.5);
+			background-color: var(--fc_white);
+			box-shadow: 0 10px 20px 0 rgba(237, 255, 250, 0.5);
 
 			svg {
-
 				path,
 				rect {
-					fill: var(--fc_white);
+					fill: var(--fc_black);
 				}
 			}
 		}
@@ -223,7 +224,7 @@
 	.faq-number {
 		font-size: var(--fc_font_size_26);
 		margin: 0;
-		color: var(--fc_black);
+		color: var(--fc_white);
 		@include font(sour, bold);
 	}
 }
@@ -249,7 +250,7 @@
 		path,
 		rect {
 			transition: all 0.3s ease-in-out;
-			fill: var(--fc_color_primary);
+			fill: var(--fc_white);
 		}
 	}
 }
@@ -287,9 +288,6 @@
 	}
 }
 
-
-
-
 // Accordian plugins css
 
 .plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby {
@@ -308,5 +306,10 @@
 		.rich-text mark {
 			margin-right: 20px;
 		}
+	}
+}
+.faq-with-image {
+	.faq-head {
+		background-image: none;
 	}
 }

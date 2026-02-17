@@ -4176,6 +4176,11 @@ Mixin for transition
 .acf-block-preview .animation-chart svg {
   margin: 0;
 }
+.acf-block-preview .animation-chart svg g path,
+.acf-block-preview .animation-chart svg g rect {
+  fill: var(--fc_white);
+  color: var(--fc_white);
+}
 .acf-block-preview .pds-accordion__heading {
   font-size: var(--fc_font_size_26);
   font-family: "Source Sans 3", arial, sans-serif;
@@ -4192,9 +4197,11 @@ Mixin for transition
   padding: 30px 70px 36px 0 !important;
   box-sizing: border-box;
   cursor: pointer;
+  background-image: url(images/default_pattern.png) !important;
 }
 .acf-block-preview .pds-accordion__item .pds-accordion__title:hover .pds-accordion__icon {
   background-color: var(--fc_white);
+  box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
 }
 .acf-block-preview .pds-accordion__item .pds-accordion__title:hover .pds-accordion__icon::before, .acf-block-preview .pds-accordion__item .pds-accordion__title:hover .pds-accordion__icon::after {
   background-color: var(--fc_black);
@@ -4235,6 +4242,7 @@ Mixin for transition
 .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state) {
   transform: translateY(-50%) rotate(0deg) !important;
   background-color: white;
+  box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
 }
 .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::before, .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open > .pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state)::after {
   background-color: var(--fc_black);
@@ -4244,6 +4252,9 @@ Mixin for transition
 }
 .acf-block-preview .padding-0 {
   padding: 0 !important;
+}
+.acf-block-preview .pds-js-accordion-item.is-open .pds-accordion__title {
+  background-image: none !important;
 }
 .acf-block-preview .two-columns {
   display: grid;
@@ -4391,6 +4402,9 @@ Mixin for transition
   gap: 4%;
   justify-content: space-between;
 }
+.acf-block-preview .faq-with-image-variation .faq-head {
+  background-image: none;
+}
 .acf-block-preview .faq-image {
   width: 40%;
 }
@@ -4426,31 +4440,33 @@ Mixin for transition
   transition: all 0.3s ease-in-out;
   align-items: center;
   gap: 30px;
+  background-image: url(images/default_pattern.png);
 }
 .acf-block-preview .faq-head.active {
   padding: 30px 70px 14px 0;
+  background-image: none;
 }
 .acf-block-preview .faq-head.active .faq-icon {
-  background-color: var(--fc_color_primary);
-  box-shadow: 0 10px 20px 0 rgba(0, 120, 88, 0.5);
+  background-color: var(--fc_white);
+  box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
 }
 .acf-block-preview .faq-head.active .faq-icon svg path,
 .acf-block-preview .faq-head.active .faq-icon svg rect {
-  fill: var(--fc_white);
+  fill: var(--fc_black);
 }
 .acf-block-preview .faq-head:hover .faq-icon {
-  background-color: var(--fc_color_primary);
-  box-shadow: 0 10px 20px 0 rgba(0, 120, 88, 0.5);
+  background-color: var(--fc_white);
+  box-shadow: 0 10px 20px 0 rgba(237, 255, 250, 0.5);
 }
 .acf-block-preview .faq-head:hover .faq-icon svg path,
 .acf-block-preview .faq-head:hover .faq-icon svg rect {
-  fill: var(--fc_white);
+  fill: var(--fc_black);
 }
 .acf-block-preview .faq-head .heading-5,
 .acf-block-preview .faq-head .faq-number {
   font-size: var(--fc_font_size_26);
   margin: 0;
-  color: var(--fc_black);
+  color: var(--fc_white);
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -4476,7 +4492,7 @@ Mixin for transition
 .acf-block-preview .faq-icon svg path,
 .acf-block-preview .faq-icon svg rect {
   transition: all 0.3s ease-in-out;
-  fill: var(--fc_color_primary);
+  fill: var(--fc_white);
 }
 .acf-block-preview .simple-faq .faq-items {
   width: 100%;
@@ -4514,6 +4530,9 @@ Mixin for transition
 }
 .acf-block-preview .plethoraplugins-accordion.plethoraplugins-theme__minimal.plethoraplugins-theme__tabby .pds-accordion__title .rich-text mark {
   margin-right: 20px;
+}
+.acf-block-preview .faq-with-image .faq-head {
+  background-image: none;
 }
 .acf-block-preview .team-members {
   display: flex;
