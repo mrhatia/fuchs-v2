@@ -120,7 +120,7 @@ BaseTheme::block(
 			$fh_var_blk_icon_title     = $bst_block_fields['fh_var_blk_icon_title'] ?? null;
 
 			?>
-			<section class="ctn-green">
+			<section >
 				<div class="wrapper">
 					<div class="icons-grid two-variation">
 						<div class="icons-three-columns">

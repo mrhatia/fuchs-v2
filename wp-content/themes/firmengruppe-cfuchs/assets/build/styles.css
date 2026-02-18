@@ -3529,7 +3529,6 @@ header {
   background-position: center right calc(50% - 40px);
   background-repeat: no-repeat;
   background-size: 9px;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAyMiAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzYwXzEzOCkiPgo8cGF0aCBkPSJNMS43NzM5MyAxLjc3Njg2TDEwLjk5ODEgMTAuOTk5OUwyMC4yMjEyIDEuNzc2ODYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMi41Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfNjBfMTM4Ij4KPHJlY3Qgd2lkdGg9IjIyIiBoZWlnaHQ9IjEzIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=);
 }
 .header-nav ul li.menu-item-has-children > a::after {
   width: calc(100% - 15px);
@@ -8993,6 +8992,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     max-width: 54%;
   }
 }
+.single-image .iat-single-image {
+  width: 100% !important;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Image Alongside Text Block
 -------------------------------------------------*/
@@ -10957,10 +10960,15 @@ body.shrink .single-service-hero-section .service-logo.left-side {
 }
 .masonry-single-item a:hover .single-image-content,
 .masonry-single-item a:visited:hover .single-image-content {
-  background-color: transparent;
+  background: rgba(0, 120, 87, 0.8);
 }
 .masonry-single-item a:hover .single-image-content .small-text,
 .masonry-single-item a:visited:hover .single-image-content .small-text {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.masonry-single-item a:hover .single-image-content .service-title,
+.masonry-single-item a:visited:hover .single-image-content .service-title {
   opacity: 1;
   transform: translateY(0px);
 }

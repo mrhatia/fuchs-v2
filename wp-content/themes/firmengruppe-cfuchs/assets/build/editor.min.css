@@ -5225,6 +5225,9 @@ Mixin for transition
     max-width: 54%;
   }
 }
+.acf-block-preview .single-image .iat-single-image {
+  width: 100% !important;
+}
 .acf-block-preview .testimonial-item-image {
   max-width: 80px;
   aspect-ratio: 100/100;
@@ -7050,10 +7053,15 @@ Mixin for transition
 }
 .acf-block-preview .masonry-single-item a:hover .single-image-content,
 .acf-block-preview .masonry-single-item a:visited:hover .single-image-content {
-  background-color: transparent;
+  background: rgba(0, 120, 87, 0.8);
 }
 .acf-block-preview .masonry-single-item a:hover .single-image-content .small-text,
 .acf-block-preview .masonry-single-item a:visited:hover .single-image-content .small-text {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.acf-block-preview .masonry-single-item a:hover .single-image-content .service-title,
+.acf-block-preview .masonry-single-item a:visited:hover .single-image-content .service-title {
   opacity: 1;
   transform: translateY(0px);
 }

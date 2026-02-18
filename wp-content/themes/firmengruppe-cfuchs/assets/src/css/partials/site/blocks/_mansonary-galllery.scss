@@ -62,8 +62,12 @@
 		padding: 0;
 		&:hover {
 			.single-image-content {
-				background-color: transparent;
+				background: rgba(0, 120, 87, 0.8);
 				.small-text {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+				.service-title {
 					opacity: 1;
 					transform: translateY(0px);
 				}

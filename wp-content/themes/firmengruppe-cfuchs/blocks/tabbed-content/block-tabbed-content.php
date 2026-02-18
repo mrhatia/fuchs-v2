@@ -59,17 +59,25 @@ BaseTheme::block(
 											</div>
 
 											<?php if($tab_images){ ?>
-												<div class="iat-image column">
+											<?php
+												$images_count = is_array( $tab_images ) ? count( array_filter( $tab_images ) ) : 0;
+												?>
+
+												<div class="iat-image column <?php echo ( $images_count === 1 ) ? 'single-image' : ''; ?>">
+
 													<?php foreach ( $tab_images as $img ) :
 														$tab_image = $img['image'] ?? null;
 														if ( $tab_image ) : ?>
-															<div class="iat-single-image image-cover">
 
+															<div class="iat-single-image image-cover">
 																<?php BaseTheme::the_attachment_image( $tab_image, 1000 ); ?>
 															</div>
+
 														<?php endif; ?>
 													<?php endforeach; ?>
+
 												</div>
+
 											<?php } ?>
 										</div>
 									</div>
