@@ -93,6 +93,11 @@ new WP_Theme_CPT(
 		'public'       => true,
 		'show_in_menu' => true,
 		'show_ui'      => true,
+		'has_archive' => true,
+		'rewrite' => [
+			'slug' => 'reference',
+		],
+		'show_in_rest' => true,
 		'taxonomies'   => array(
 			array(
 				'slug'          => 'reference-category',

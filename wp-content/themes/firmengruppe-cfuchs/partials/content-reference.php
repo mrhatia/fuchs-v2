@@ -78,28 +78,41 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 	</div>
 </section>
 <!-- Breadcrumbs -->
+<!-- Breadcrumbs -->
 <section class="ctn-full-width">
 	<div class="wrapper">
 		<nav id="breadcrumbs" class="breadcrumbs">
 			<div class="breadcrumbs__inner">
-				<span class="breadcrumbs__item"><a href="https://www.bechtel.com">Home</a></span>
+
+				<!-- Home -->
+				<span class="breadcrumbs__item">
+					<a href="<?php echo esc_url( home_url('/') ); ?>">Home</a>
+				</span>
+
 				<div class="breadcrumbs__separator">
-					<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"
-						fill="none">
+					<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13" fill="none">
 						<path d="M0.75 0.75L6.25 6.25L0.75 11.75" stroke="black" stroke-width="1.5"
 							stroke-linecap="round" stroke-linejoin="round" />
 					</svg>
-				</div><span class="breadcrumbs__item"><a
-						href="https://www.bechtel.com/projects/">Projects</a></span>
+				</div>
+
+				<!-- Reference (static path) -->
+				<span class="breadcrumbs__item">
+					<a href="<?php echo esc_url( home_url('/referenzen/') ); ?>">REFERENZEN</a>
+				</span>
+
 				<div class="breadcrumbs__separator">
-					<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"
-						fill="none">
+					<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13" fill="none">
 						<path d="M0.75 0.75L6.25 6.25L0.75 11.75" stroke="black" stroke-width="1.5"
 							stroke-linecap="round" stroke-linejoin="round" />
 					</svg>
-				</div><span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">Sabine Pass
-					Liquefaction
-					Project</span>
+				</div>
+
+				<!-- Current page / post -->
+				<span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+					<?php echo esc_html( get_the_title() ); ?>
+				</span>
+
 			</div>
 		</nav>
 	</div>

@@ -49,6 +49,7 @@ BaseTheme::block(
 
 						<?php foreach ( $terms as $term ){
 							$term_image = get_field( 'bst_var_ctref_image', $term );
+							$bst_var_ctref_kicker = get_field( 'bst_var_ctref_kicker', $term );
 							?>
 
 							<div id="<?php echo esc_attr( $term->slug ); ?>" class="category-single-item">
@@ -65,9 +66,11 @@ BaseTheme::block(
 										<?php endif; ?>
 
 										<div class="single-image-content">
-											<div class="small-text">
-												EXPLORE THE FEATURES
-											</div>
+											<?php if($bst_var_ctref_kicker){ ?>
+												<div class="small-text">
+													<?php echo esc_html( $bst_var_ctref_kicker ); ?>
+												</div>
+											<?php } ?>
 
 											<div class="service-title">
 												<?php echo esc_html( $term->name ); ?>
@@ -107,17 +110,22 @@ BaseTheme::block(
 
 										if ( $posts_query->have_posts() ) :
 											while ( $posts_query->have_posts() ) : $posts_query->the_post();
-										?>
+												list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults( $posts_query->the_post() );
+												$bst_var_trcho_kicker = $bst_fields['bst_var_trcho_kicker'] ?? null;
 
-										<div class="category-image-card">
+										?>
+									<div class="category-image-card">
+										<a href="<?php the_permalink(); ?>" class="category-image-card">
 											<div class="single-image">
 												<?php the_post_thumbnail( 'large' ); ?>
 											</div>
 
 											<div class="single-image-content">
-												<div class="small-text">
-													EXPLORE THE FEATURES
-												</div>
+												<?php if($bst_var_trcho_kicker){ ?>
+													<div class="small-text">
+														<?php echo esc_html( $bst_var_trcho_kicker ); ?>
+													</div>
+												<?php } ?>
 
 												<div class="service-title">
 													<?php the_title(); ?>
@@ -127,7 +135,8 @@ BaseTheme::block(
 													<p><?php echo wp_trim_words( get_the_excerpt(), 25 ); ?></p>
 												</div>
 											</div>
-										</div>
+										</a>
+									</div>
 
 										<?php
 											endwhile;

@@ -3,6 +3,27 @@
     "title": "Category - Reference Options",
     "fields": [
         {
+            "key": "field_69978fe2eaa6c",
+            "label": "Kicker",
+            "name": "bst_var_ctref_kicker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_694318210a3a6",
             "label": "Image",
             "name": "bst_var_ctref_image",
@@ -47,5 +68,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1766004864
+    "display_title": "",
+    "modified": 1771540521
 }

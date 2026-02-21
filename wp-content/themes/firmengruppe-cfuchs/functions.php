@@ -148,3 +148,6 @@ function fuchs_enqueue_ajax_scripts() {
     ));
 }
 add_action('wp_enqueue_scripts', 'fuchs_enqueue_ajax_scripts');
+
+
+

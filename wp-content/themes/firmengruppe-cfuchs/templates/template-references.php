@@ -93,7 +93,33 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 			</section>
 		<?php } ?>
 		<!-- Breadcrumbs -->
-		<section class="ctn-full-width">
+		 <section class="ctn-full-width">
+			<div class="wrapper">
+				<nav id="breadcrumbs" class="breadcrumbs">
+					<div class="breadcrumbs__inner">
+
+						<!-- Home -->
+						<span class="breadcrumbs__item">
+							<a href="<?php echo esc_url( home_url('/') ); ?>">Home</a>
+						</span>
+
+						<div class="breadcrumbs__separator">
+							<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13" fill="none">
+								<path d="M0.75 0.75L6.25 6.25L0.75 11.75" stroke="black" stroke-width="1.5"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<!-- Reference (static path) -->
+						<span class="breadcrumbs__item">
+							<a href="<?php echo esc_url( home_url('/referenzen/') ); ?>">REFERENZEN</a>
+						</span>
+
+					</div>
+				</nav>
+			</div>
+		</section>
+		<!-- <section class="ctn-full-width">
 			<div class="wrapper">
 				<nav id="breadcrumbs" class="breadcrumbs">
 					<div class="breadcrumbs__inner">
@@ -118,7 +144,7 @@ $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 					</div>
 				</nav>
 			</div>
-		</section>
+		</section> -->
 
 		<!-- Menu Links -->
 	 	<section class="ctn-full-width">
