@@ -14,6 +14,40 @@
 		border: none;
 		margin: 0;
 	}
+	&.orange-bg {
+		background-color: var(--fc_orange_dark);
+		border-color: var(--fc_orange_dark);
+		&::after {
+			bottom: 90px;
+		}
+		p,
+		blockquote {
+			color: var(--fc_white);
+			font-size: var(--fc_font_size_26);
+			text-align: initial;
+		}
+		cite {
+			font-size: var(--fc_font_size_12);
+			color: var(--fc_white);
+			font-style: normal;
+			text-transform: initial;
+			&::after,
+			&::before {
+				display: none !important;
+			}
+		}
+	}
+	&.tag-science {
+		&::after {
+			background-image: url(../images/link.svg);
+		}
+		p,
+		blockquote {
+			color: var(--fc_white);
+			font-size: var(--fc_font_size_26);
+			text-align: initial;
+		}
+	}
 	&::after {
 		position: absolute;
 		content: "";

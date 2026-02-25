@@ -30,11 +30,7 @@ $bst_var_pagetitle          = $bst_fields['fh_var_osngl_serv_title'] ?? get_the_
 		<div class="hero-inner-slider slider-disable">
 
 			<div class="hero-slide-item">
-				<?php if ( $fh_var_osngl_serv_logo ) { ?>
-					<div class="service-logo">
-						<?php BaseTheme::the_attachment_image( $fh_var_osngl_serv_logo, 500 ); ?>
-					</div>
-				<?php } ?>
+
 				<div class="hero-slide-image" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
 					<?php
 						if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
@@ -89,6 +85,6 @@ $bst_var_pagetitle          = $bst_fields['fh_var_osngl_serv_title'] ?? get_the_
 </section>
 
 <div class="page-section">
-	<div class="gl-s128"></div>
+	<div class="gl-s96"></div>
 	<?php get_template_part( 'partials/content' ); ?>
 </div>

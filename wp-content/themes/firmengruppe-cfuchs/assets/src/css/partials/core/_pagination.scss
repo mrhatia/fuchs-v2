@@ -18,13 +18,13 @@
 	span[role="button"],
 	a:visited,
 	span.current {
-		background-color: var(--fc_pagination_bgcolor);
+		background-color: var(--transparent);
 		color: var(--fc_pagination_color);
 		border: 1px solid var(--fc_pagination_border);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: var(--fc_font_size_20);
+		font-size: var(--fc_font_size_16);
 		line-height: 20px;
 		cursor: pointer;
 		@include font(sour, reg);
@@ -34,29 +34,29 @@
 
 		&:hover,
 		&:focus-visible {
-			background-color: var(--fc_pagination_bgcolor_hover);
-			color: var(--fc_pagination_color_hover);
-		}
-	}
-
-	span.current {
-		background-color: var(--fc_pagination_bgcolor_current);
-		color: var(--fc_pagination_color_current);
-
-		&:hover,
-		&:focus-visible {
-			background-color: var(--fc_pagination_bgcolor_current);
+			background-color: var(--fc_orange_dark);
 			color: var(--fc_pagination_color_current);
 		}
 	}
 
-	>span.current {
+	span.current {
+		background-color: var(--fc_orange_dark);
+		color: var(--fc_pagination_color_current);
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--fc_orange_dark);
+			color: var(--fc_pagination_color_current);
+		}
+	}
+
+	> span.current {
 		border: none;
 
 		&:hover,
 		&:focus-visible {
-			background-color: var(--fc_pagination_first_bgcolor);
-			color: var(--fc_pagination_first_color);
+			background-color: var(--fc_orange_dark);
+			color: var(--fc_pagination_color_current);
 		}
 	}
 }

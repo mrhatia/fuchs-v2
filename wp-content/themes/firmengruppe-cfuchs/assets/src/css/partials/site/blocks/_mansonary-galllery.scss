@@ -47,10 +47,6 @@
 			display: block;
 			transition: transform 0.5s ease;
 		}
-
-		img {
-			transform: scale(1.1);
-		}
 	}
 
 	a,
@@ -61,8 +57,13 @@
 		border: none;
 		padding: 0;
 		&:hover {
+			.masonry-image {
+				img {
+					transform: scale(1.02) translateX(10px);
+				}
+			}
 			.single-image-content {
-				background: rgba(0, 120, 87, 0.8);
+				background: rgb(0 120 87 / 30%);
 				.small-text {
 					opacity: 1;
 					transform: translateY(0px);
@@ -112,6 +113,9 @@
 			opacity: 1;
 			transform: translateY(0px);
 			transition: all 0.5s ease 0.5s;
+			.heading-4 {
+				font-size: var(--fc_font_size_26);
+			}
 		}
 
 		.plus-button {

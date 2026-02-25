@@ -367,6 +367,22 @@ jQuery( function() {
 			swipe: false,
 		} );
 	}
+	if ( jQuery( '.blog-slider-image-slider' ).length ) {
+		jQuery( '.blog-slider-image-slider' ).slick( {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			speed: 1200,
+			cssEase: 'ease-in-out',
+			pauseOnHover: false,
+			pauseOnFocus: false,
+			swipe: false,
+		} );
+	}
 
 	if ( jQuery( '.testimonial-slider' ).length > 0 ) {
 		jQuery( '.testimonial-slider' ).slick( {
