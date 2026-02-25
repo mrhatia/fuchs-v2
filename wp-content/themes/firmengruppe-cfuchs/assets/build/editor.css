@@ -7090,7 +7090,7 @@ Mixin for transition
 }
 .acf-block-preview .masonry-single-item a:hover .single-image-content,
 .acf-block-preview .masonry-single-item a:visited:hover .single-image-content {
-  background: rgba(0, 120, 87, 0.3);
+  background: rgba(0, 120, 87, 0.9);
 }
 .acf-block-preview .masonry-single-item a:hover .single-image-content .small-text,
 .acf-block-preview .masonry-single-item a:visited:hover .single-image-content .small-text {
@@ -7115,7 +7115,7 @@ Mixin for transition
 .acf-block-preview .masonry-single-item .single-image-content {
   position: absolute;
   inset: 0;
-  background: rgba(0, 120, 87, 0.62);
+  background: rgba(0, 120, 87, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
