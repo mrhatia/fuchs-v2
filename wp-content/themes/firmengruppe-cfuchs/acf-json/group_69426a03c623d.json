@@ -138,7 +138,7 @@
             "taxonomy": "",
             "filters": [
                 "search",
-                "taxonomy"
+                "post_type"
             ],
             "return_format": "id",
             "min": "",
@@ -193,5 +193,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765963122
+    "display_title": "",
+    "modified": 1771989910
 }
