@@ -1176,10 +1176,6 @@ body {
 		}
 	}
 
-	.blog-teaser-slider::before {
-		background: var(--fc_color_primary);
-	}
-
 	.section-head .hero-split-text {
 		color: rgba(255, 255, 255, 0.3);
 	}
@@ -2053,7 +2049,7 @@ body {
 	position: relative;
 
 	.pds-accordion__title {
-		padding: 30px 70px 36px 0 !important;
+		padding: 30px 70px 36px 36px !important;
 		box-sizing: border-box;
 		cursor: pointer;
 		background-image: url(../images/default_pattern.png) !important;
