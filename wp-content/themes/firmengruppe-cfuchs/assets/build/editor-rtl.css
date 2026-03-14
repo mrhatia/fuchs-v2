@@ -4199,7 +4199,7 @@ Mixin for transition
   position: relative;
 }
 .acf-block-preview .pds-accordion__item .pds-accordion__title {
-  padding: 30px 0 36px 70px !important;
+  padding: 30px 36px 36px 70px !important;
   box-sizing: border-box;
   cursor: pointer;
   background-image: url(images/default_pattern.png) !important;
@@ -4888,6 +4888,10 @@ Mixin for transition
 .acf-block-preview .member-popup-image {
   width: 100%;
   height: 100%;
+}
+.acf-block-preview .member-popup-image img {
+  -o-object-position: top;
+     object-position: top;
 }
 .acf-block-preview .image-at-left .iat-content {
   order: 2;
@@ -6706,7 +6710,7 @@ Mixin for transition
 }
 .acf-block-preview .service-single-item a .small-text,
 .acf-block-preview .service-single-item a:visited .small-text {
-  font-size: 12px;
+  font-size: 14px;
   color: #e3e3e3;
   text-transform: uppercase;
   line-height: 1.3;

@@ -57,7 +57,7 @@ BaseTheme::block(
 					</div>
 				</div>
 			</section>
-		<?php } else { ?>
+		<?php } else if($fh_var_blk_tst_testimonials && 'vslider' === $fh_var_blk_tst_slider_variation){ ?>
 			<section>
 				<div class="wrapper">
 				<div class="section-head testimonial-heading">
@@ -112,53 +112,70 @@ BaseTheme::block(
 					</div>
 				</div>
 			</section>
-		<script>
-document.addEventListener('DOMContentLoaded', function () {
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
 
-    function updateHeight(swiper) {
-        const active = swiper.slides[swiper.activeIndex];
-        if (active) {
-            swiper.el.style.height = active.offsetHeight + "px";
-        }
-    }
+					function updateHeight(swiper) {
+						const active = swiper.slides[swiper.activeIndex];
+						if (active) {
+							swiper.el.style.height = active.offsetHeight + "px";
+						}
+					}
 
-    function initSwiper() {
-        if (window.testimonialSwiper) {
-            window.testimonialSwiper.destroy(true, true);
-        }
+					function initSwiper() {
+						if (window.testimonialSwiper) {
+							window.testimonialSwiper.destroy(true, true);
+						}
 
-        window.testimonialSwiper = new Swiper(".testimonial-variation", {
-            effect: "fade",
-            fadeEffect: { crossFade: true },
-            loop: true,
-            slidesPerView: 1,
-            speed: 1000,
-            autoHeight: false,
-            autoplay: {
-                delay: 7000,
-                disableOnInteraction: false
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            on: {
-                init() {
-                    updateHeight(this);
-                },
-                slideChangeTransitionEnd() {
-                    updateHeight(this);
-                }
-            }
-        });
-    }
+						window.testimonialSwiper = new Swiper(".testimonial-variation", {
+							effect: "fade",
+							fadeEffect: { crossFade: true },
+							loop: true,
+							slidesPerView: 1,
+							speed: 1000,
+							autoHeight: false,
+							autoplay: {
+								delay: 7000,
+								disableOnInteraction: false
+							},
+							pagination: {
+								el: ".swiper-pagination",
+								clickable: true
+							},
+							on: {
+								init() {
+									updateHeight(this);
+								},
+								slideChangeTransitionEnd() {
+									updateHeight(this);
+								}
+							}
+						});
+					}
 
-    initSwiper();
-    window.addEventListener("resize", () => updateHeight(window.testimonialSwiper));
-});
-</script>
+					initSwiper();
+					window.addEventListener("resize", () => updateHeight(window.testimonialSwiper));
+				});
+			</script>
+		<?php } else {
+			$fh_var_blk_tst_testimonial_text     = $bst_block_fields['fh_var_blk_tst_testimonial_text'] ?? null;
+			$fh_var_blk_tst_testimonial_author     = $bst_block_fields['fh_var_blk_tst_testimonial_author'] ?? null;
+			?>
+			<section>
+				<div class="wrapper">
+					<div class="highlight-quote orange-bg">
+						<?php if ( $fh_var_blk_tst_testimonial_text ) { ?>
+							<?php echo html_entity_decode( $fh_var_blk_tst_testimonial_text ); ?>
+						<?php } ?>
 
-
+						<?php if ( $fh_var_blk_tst_testimonial_author ) { ?>
+							<cite>
+								<?php echo html_entity_decode( $fh_var_blk_tst_testimonial_author ); ?>
+							</cite>
+						<?php } ?>
+					</div>
+				</div>
+				</section>
 		<?php } ?>
 
 		<?php

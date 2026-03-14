@@ -273,7 +273,7 @@ class WP_Theme_Boilerplate {
 						}
 					}
 				} else {
-					for ( $i = $paged; $i <= $pages; $i++ ) {
+					for ( $i = 1; $i <= $pages; $i++ ){
 						if ( 1 !== $pages && $i <= $showitems + ( $paged - 1 ) ) {
 							if ( $paged > $i ) {
 								echo ( $paged === $i ) ? '<span role="button" class="' . esc_html( $pagination_unique_classes ) . ' current">' . esc_html( $i ) . '</span>' : '<a href="' . esc_url( get_pagenum_link( $i ) ) . '" rel="prev" class="' . esc_html( $pagination_unique_classes ) . ' inactive">' . esc_html( $i ) . '</a>';

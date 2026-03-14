@@ -3,6 +3,27 @@
     "title": "Template Blog - Hero Options",
     "fields": [
         {
+            "key": "field_699fbe37b5924",
+            "label": "Kicker",
+            "name": "bst_var_tblgho_kicker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_62651a1fb45be",
             "label": "Title",
             "name": "bst_var_tblgho_title",
@@ -23,11 +44,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_62651a1fb81bf",
-            "label": "Feature Post",
-            "name": "bst_var_tblgho_feature_post",
+            "key": "field_699fbe46b5925",
+            "label": "Text",
+            "name": "bst_var_tblgho_text",
             "aria-label": "",
-            "type": "relationship",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,22 +57,38 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "post"
-            ],
-            "post_status": "",
-            "taxonomy": "",
-            "filters": [
-                "search"
-            ],
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_699fbe59b5926",
+            "label": "Image",
+            "name": "bst_var_tblgho_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "return_format": "id",
-            "min": "",
-            "max": 1,
-            "elements": [
-                "featured_image"
-            ],
-            "bidirectional": 0,
-            "bidirectional_target": []
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -72,5 +109,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704377579
+    "display_title": "",
+    "modified": 1772076680
 }

@@ -47,8 +47,8 @@ BaseTheme::block(
 									?>
 
 									<div class="team-member-column">
-										<a href="#member-<?php echo the_ID($bst_var_post_id); ?>" class="popup-link"></a>
-										<div class="member-popup mfp-hide" id="member-<?php echo the_ID($bst_var_post_id); ?>">
+										<a href="#member-<?php echo $team_id; ?>" class="popup-link"></a>
+										<div class="member-popup mfp-hide" id="member-<?php echo $team_id; ?>">
 											<div class="member-popup-inner">
 												<div class="member-popup-left">
 													<div class="member-popup-image image-cover" tabindex="0">
@@ -84,7 +84,7 @@ BaseTheme::block(
 											</div>
 										</div>
 										<div class="team-member-image image-cover">
-											<a href="#">
+											<a href="#member-<?php echo $team_id; ?>">
 												<?php
 													if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
 														echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
@@ -102,7 +102,7 @@ BaseTheme::block(
 												<?php if($bst_var_cpt_team_designation){ ?>
 													<p><?php echo html_entity_decode($bst_var_cpt_team_designation); ?></p>
 												<?php } ?>
-												<h3 class="heading-6"><a href="#"><?php echo $bst_var_cpt_team_name; ?></a></h3>
+												<h3 class="heading-6"><a href="#member-<?php echo $team_id; ?>"><?php echo $bst_var_cpt_team_name; ?></a></h3>
 											</div>
 										</div>
 
