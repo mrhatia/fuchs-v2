@@ -6669,9 +6669,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .single-service.service-detail-single .member-popup .medium-heading {
   color: var(--fc_color_primary);
 }
-.single-service.service-detail-single .blog-teaser-slider::before {
-  background: var(--fc_color_primary);
-}
 .single-service.service-detail-single .section-head .hero-split-text {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -8449,6 +8446,13 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   background-image: none;
 }
 
+.simple-faq .faq-head {
+  padding: 30px 36px 36px 70px;
+}
+.simple-faq .faq-icon {
+  left: 15px;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Team Block
 -------------------------------------------------*/
@@ -9475,6 +9479,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   filter: brightness(0) saturate(100%) invert(47%) sepia(95%) saturate(698%) hue-rotate(358deg) brightness(102%) contrast(102%);
 }
 
+.blog-teaser-item .testimonial-image-item img {
+  aspect-ratio: 533/350;
+}
+
 /*-------------------------------------------------
 >> Basic styles for Image Alongside Text Block
 -------------------------------------------------*/
@@ -10364,7 +10372,7 @@ body.logged-in .category-nav {
   width: 90%;
 }
 .blog-teaser-slider .blog-teaser-item h2 {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .blog-teaser-slider .blog-teaser-item h2 a {
   color: inherit;
@@ -10373,6 +10381,10 @@ body.logged-in .category-nav {
 
 section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   overflow: hidden;
+}
+
+.blog-teaser-item .testimonial-content-item .heading-3 {
+  font-size: var(--fc_font_size_26);
 }
 
 /*-------------------------------------------------
