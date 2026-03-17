@@ -4896,6 +4896,23 @@ Mixin for transition
   -o-object-position: top;
      object-position: top;
 }
+.acf-block-preview .member-contact-info {
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-top: 26px;
+}
+.acf-block-preview .member-contact-info .link-green {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.acf-block-preview .member-contact-info .link-green.phone {
+  width: 35px;
+}
+.acf-block-preview .member-contact-info .link-green:hover {
+  transform: scale(1.1);
+}
 .acf-block-preview .image-at-left .iat-content {
   order: 2;
 }
@@ -6252,7 +6269,7 @@ Mixin for transition
 }
 .acf-block-preview .blog-teaser-slider {
   position: relative;
-  padding: 50px 15% 50px 0;
+  padding: 0 15% 0 0;
   box-sizing: border-box;
 }
 .acf-block-preview .blog-teaser-slider .testimonial-content-item .heading-3 a,

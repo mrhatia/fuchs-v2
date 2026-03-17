@@ -153,7 +153,7 @@ $cat_column_three_option     = $bst_fields['fh_var_thr_column_three_option'] ?? 
 		</section> -->
 
 		<!-- Menu Links -->
-	 	<section class="ctn-full-width">
+	 	<!-- <section class="ctn-full-width">
 			<div class="wrapper">
 				<form id="filter" class="filter__form listings__form" action="/projects">
 
@@ -345,7 +345,7 @@ $cat_column_three_option     = $bst_fields['fh_var_thr_column_three_option'] ?? 
 					</div>
 				</form>
 			</div>
-		</section>
+		</section> -->
 
 		<div class="gl-s72"></div>
 		<section id="reference-posts-container" class="page-section hide-section">

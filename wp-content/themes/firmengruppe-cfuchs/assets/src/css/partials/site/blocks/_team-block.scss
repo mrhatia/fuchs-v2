@@ -430,3 +430,23 @@
 		object-position: top;
 	}
 }
+
+.member-contact-info {
+	column-gap: 25px;
+	margin-top: 26px;
+
+	.link-green {
+		width: 40px;
+		display: flex;
+		align-items: center;
+		transition: all 0.3s ease-in-out;
+
+		&.phone {
+			width: 35px;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

@@ -4459,7 +4459,7 @@ header {
 .hero-slide-image::before {
   content: "";
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.6;
   top: 0;
   left: 0;
   width: 100%;
@@ -5341,6 +5341,31 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .ctn-green a.button:visited.orange-button:hover,
 .ctn-green span.button.orange-button:hover,
 .ctn-green .is-style-mycustomstyle .wp-element-button.orange-button:hover {
+  background-color: var(--fc_white);
+  border-color: var(--fc_white);
+  color: var(--fc_color_primary);
+}
+
+.ctn-green-inner {
+  background-color: var(--fc_green_dark);
+}
+.ctn-green-inner .section-head .heading-2 {
+  color: var(--fc_white);
+}
+.ctn-green-inner a.button.orange-button,
+.ctn-green-inner a.button:visited.orange-button,
+.ctn-green-inner span.button.orange-button,
+.ctn-green-inner .is-style-mycustomstyle .wp-element-button.orange-button {
+  --fc_theme_btn_color: var(--fc_white);
+  --fc_theme_btn_bgcolor: var(--fc_transparent);
+  --fc_button_border_color: var(--fc_transparent);
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_white);
+}
+.ctn-green-inner a.button.orange-button:hover,
+.ctn-green-inner a.button:visited.orange-button:hover,
+.ctn-green-inner span.button.orange-button:hover,
+.ctn-green-inner .is-style-mycustomstyle .wp-element-button.orange-button:hover {
   background-color: var(--fc_white);
   border-color: var(--fc_white);
   color: var(--fc_color_primary);
@@ -8841,6 +8866,24 @@ body #daextlwcnf-cookie-settings-button-2:hover {
      object-position: top;
 }
 
+.member-contact-info {
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-top: 26px;
+}
+.member-contact-info .link-green {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.member-contact-info .link-green.phone {
+  width: 35px;
+}
+.member-contact-info .link-green:hover {
+  transform: scale(1.1);
+}
+
 /*-------------------------------------------------
 >> Basic styles for Image Alongside Text Block
 -------------------------------------------------*/
@@ -10306,7 +10349,7 @@ body.logged-in .category-nav {
 -------------------------------------------------*/
 .blog-teaser-slider {
   position: relative;
-  padding: 50px 0 50px 15%;
+  padding: 0 0 0 15%;
   box-sizing: border-box;
 }
 .blog-teaser-slider .testimonial-content-item .heading-3 a,

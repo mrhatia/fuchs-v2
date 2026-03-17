@@ -67,6 +67,34 @@
             "append": ""
         },
         {
+            "key": "field_69b5f2a9edf87",
+            "label": "Background Text",
+            "name": "fh_var_blk_srvtile_bgtext",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_692f91a6c9132",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_692f91a6c9132",
             "label": "Add Columns",
             "name": "fh_var_blk_srvtile_links",
@@ -176,5 +204,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764726269
+    "display_title": "",
+    "modified": 1773531943
 }

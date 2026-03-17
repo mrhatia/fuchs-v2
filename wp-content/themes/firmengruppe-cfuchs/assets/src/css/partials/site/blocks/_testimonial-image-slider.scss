@@ -1,9 +1,11 @@
 .blog-teaser-slider {
 	position: relative;
-	padding: 50px 0 50px 15%;
+	padding: 0 0 0 15%;
 	box-sizing: border-box;
+
 	.testimonial-content-item {
 		.heading-3 {
+
 			a,
 			a:visited {
 				pointer-events: none;
@@ -11,15 +13,18 @@
 			}
 		}
 	}
+
 	.slick-prev:before,
 	.slick-next:before {
 		content: "" !important;
 	}
+
 	.slick-prev,
 	.slick-next {
 		color: #ffffff;
 		font-size: 16px;
 	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -41,6 +46,7 @@
 			background-color: #0a8e6a;
 			border: 1px solid #0a8e6a;
 		}
+
 		&.slick-next {
 			border: 1px solid var(--fc_white);
 		}
@@ -92,6 +98,7 @@
 section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 	overflow: hidden;
 }
+
 .blog-teaser-item {
 	.testimonial-content-item {
 		.heading-3 {

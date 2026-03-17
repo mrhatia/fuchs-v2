@@ -43,6 +43,8 @@ BaseTheme::block(
 									list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($team_id);
 										$bst_var_cpt_team_designation = $bst_fields['bst_var_cpt_team_designation'];
 										$bst_var_cpt_team_bio = $bst_fields['bst_var_cpt_team_bio'];
+										$bst_var_cpt_team_email = $bst_fields['bst_var_cpt_team_email'] ?? null;
+										$bst_var_cpt_team_phone = $bst_fields['bst_var_cpt_team_phone'] ?? null;
 										$bst_var_cpt_team_name = get_the_title( $bst_var_post_id );
 									?>
 
@@ -78,6 +80,18 @@ BaseTheme::block(
 																<?php echo html_entity_decode($bst_var_cpt_team_bio); ?>
 															</div>
 														<?php } ?>
+														<div class="member-contact-info d-flex align-content-center">
+															<?php if($bst_var_cpt_team_email) { ?>
+																<div class="email link-green">
+																	<a href="mailto:<?php echo $bst_var_cpt_team_email; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""></a>
+																</div>
+															<?php } ?>
+															<?php if($bst_var_cpt_team_phone) { ?>
+																<div class="phone link-green">
+																	<a href="tel:<?php echo $bst_var_cpt_team_phone; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""></a>
+																</div>
+															<?php } ?>
+														</div>
 													</div>
 												</div>
 
