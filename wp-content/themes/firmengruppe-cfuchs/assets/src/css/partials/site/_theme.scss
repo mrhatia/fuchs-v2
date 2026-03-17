@@ -702,7 +702,7 @@ body {
 	}
 
 	&::after {
-		background-color: var(--fc_orange);
+		background-color: var(--fc_orange_dark);
 		z-index: 2;
 		transform: translateX(-101%);
 	}
@@ -2131,5 +2131,13 @@ body {
 .pds-js-accordion-item.is-open {
 	.pds-accordion__title {
 		background-image: none !important;
+	}
+}
+.image-alongside-text {
+	.iat-single-image {
+		aspect-ratio: 635/423;
+		img {
+			aspect-ratio: 635/423;
+		}
 	}
 }

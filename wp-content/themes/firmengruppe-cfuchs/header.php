@@ -134,9 +134,18 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 
 		<div class="header-wrapper header-inner d-flex align-items-stretch justify-content-between">
 			<div class="header-logo logo">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img
+				<a class="fuchs-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<img
 						src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/site-logo.svg"
-						alt="Site Logo" /></a>
+						alt="Site Logo" />
+
+					</a>
+				<a class="c-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<img
+						src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/C-logo.svg"
+						alt="Site Logo" />
+
+					</a>
 			</div>
 			<div class="right-header header-navigation">
 				<div class="nav-overlay">
