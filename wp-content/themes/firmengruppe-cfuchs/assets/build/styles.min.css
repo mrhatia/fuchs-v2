@@ -4478,7 +4478,7 @@ header {
 .hero-slide-image::before {
   content: "";
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.6;
   top: 0;
   left: 0;
   width: 100%;
@@ -5360,6 +5360,31 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .ctn-green a.button:visited.orange-button:hover,
 .ctn-green span.button.orange-button:hover,
 .ctn-green .is-style-mycustomstyle .wp-element-button.orange-button:hover {
+  background-color: var(--fc_white);
+  border-color: var(--fc_white);
+  color: var(--fc_color_primary);
+}
+
+.ctn-green-inner {
+  background-color: var(--fc_green_dark);
+}
+.ctn-green-inner .section-head .heading-2 {
+  color: var(--fc_white);
+}
+.ctn-green-inner a.button.orange-button,
+.ctn-green-inner a.button:visited.orange-button,
+.ctn-green-inner span.button.orange-button,
+.ctn-green-inner .is-style-mycustomstyle .wp-element-button.orange-button {
+  --fc_theme_btn_color: var(--fc_white);
+  --fc_theme_btn_bgcolor: var(--fc_transparent);
+  --fc_button_border_color: var(--fc_transparent);
+  background-color: var(--fc_transparent);
+  border-color: var(--fc_white);
+}
+.ctn-green-inner a.button.orange-button:hover,
+.ctn-green-inner a.button:visited.orange-button:hover,
+.ctn-green-inner span.button.orange-button:hover,
+.ctn-green-inner .is-style-mycustomstyle .wp-element-button.orange-button:hover {
   background-color: var(--fc_white);
   border-color: var(--fc_white);
   color: var(--fc_color_primary);
@@ -8060,18 +8085,27 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .bottom-right {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 18px;
+}
+.bottom-right .social-share {
+  display: flex;
+  -moz-column-gap: 13px;
+       column-gap: 13px;
+  align-items: center;
 }
 .bottom-right a,
 .bottom-right a:visited {
-  font-size: var(--fc_font_size_12);
-  line-height: 2.33em;
-  letter-spacing: 0.1em;
-  color: var(--fc_white);
+  border-bottom: 0;
+  line-height: 0;
 }
-.bottom-right a:hover,
-.bottom-right a:visited:hover {
-  color: var(--fc_orange_dark);
+.bottom-right a svg,
+.bottom-right a:visited svg {
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0;
+}
+.bottom-right a:hover svg,
+.bottom-right a:visited:hover svg {
+  opacity: 0.7;
 }
 
 .blog-like {
@@ -8852,6 +8886,28 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .member-popup-image {
   width: 100%;
   height: 100%;
+}
+.member-popup-image img {
+  -o-object-position: top;
+     object-position: top;
+}
+
+.member-contact-info {
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-top: 26px;
+}
+.member-contact-info .link-green {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.member-contact-info .link-green.phone {
+  width: 35px;
+}
+.member-contact-info .link-green:hover {
+  transform: scale(1.1);
 }
 
 /*-------------------------------------------------
@@ -10319,7 +10375,7 @@ body.logged-in .category-nav {
 -------------------------------------------------*/
 .blog-teaser-slider {
   position: relative;
-  padding: 50px 0 50px 15%;
+  padding: 0 0 0 15%;
   box-sizing: border-box;
 }
 .blog-teaser-slider .testimonial-content-item .heading-3 a,
@@ -10820,7 +10876,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 }
 .service-single-item a .small-text,
 .service-single-item a:visited .small-text {
-  font-size: 12px;
+  font-size: 14px;
   color: #e3e3e3;
   text-transform: uppercase;
   line-height: 1.3;

@@ -18,7 +18,7 @@ BaseTheme::block(
 			$fh_var_blk_srvtile_links     = $bst_block_fields['fh_var_blk_srvtile_links'] ?? null;
 
 			$fh_var_blk_srvtile_kicker     = $bst_block_fields['fh_var_blk_srvtile_kicker'] ?? null;
-			$fh_var_blk_srvtile_title     = $bst_block_fields['fh_var_blk_srvtile_title'] ?? null;
+			$fh_var_blk_srvtile_bgtext     = $bst_block_fields['fh_var_blk_srvtile_bgtext'] ?? null;
 
 			?>
 
@@ -26,10 +26,10 @@ BaseTheme::block(
 				<div class="wrapper">
 					<div class="masonry-gallery-main">
 
-						<?php if($fh_var_blk_srvtile_kicker || $fh_var_blk_srvtile_title){ ?>
+						<?php if($fh_var_blk_srvtile_kicker || $fh_var_blk_srvtile_bgtext){ ?>
 							<div class="section-head">
-								<?php if ( $fh_var_blk_srvtile_kicker ) {  ?>
-									<div class="hero-split-text"><?php echo html_entity_decode( $fh_var_blk_srvtile_kicker ); ?></div>
+								<?php if ( $fh_var_blk_srvtile_bgtext ) {  ?>
+									<div class="hero-split-text"><?php echo html_entity_decode( $fh_var_blk_srvtile_bgtext ); ?></div>
 								<?php } ?>
 								<?php if ( $fh_var_blk_srvtile_kicker ) {  ?>
 									<h2 class="heading-2"><?php echo html_entity_decode( $fh_var_blk_srvtile_kicker ); ?></h2>

@@ -54,7 +54,8 @@
             },
             "choices": {
                 "hslider": "Horizontal Slider",
-                "vslider": "Vertical Slider"
+                "vslider": "Vertical Slider",
+                "noslider": "Simple (No Slider)"
             },
             "default_value": "hslider",
             "return_format": "value",
@@ -63,7 +64,7 @@
             "layout": "horizontal"
         },
         {
-            "key": "field_692432ed3a704",
+            "key": "field_692435b6798cc",
             "label": "Kicker Text",
             "name": "fh_var_blk_tst_kicker",
             "aria-label": "",
@@ -92,7 +93,7 @@
             "append": ""
         },
         {
-            "key": "field_692433293a705",
+            "key": "field_692435d3798cd",
             "label": "Testimonials Heading",
             "name": "fh_var_blk_tst_heading",
             "aria-label": "",
@@ -128,7 +129,15 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68deb9b15567a",
+                        "operator": "!=",
+                        "value": "noslider"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -236,6 +245,64 @@
                     "parent_repeater": "field_68deb9a5db023"
                 }
             ]
+        },
+        {
+            "key": "field_699fc818adaa5",
+            "label": "Text",
+            "name": "fh_var_blk_tst_testimonial_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68deb9b15567a",
+                        "operator": "==",
+                        "value": "noslider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_699fc837adaa6",
+            "label": "Author",
+            "name": "fh_var_blk_tst_testimonial_author",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68deb9b15567a",
+                        "operator": "==",
+                        "value": "noslider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -256,5 +323,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763980193
+    "display_title": "",
+    "modified": 1772079329
 }

@@ -43,12 +43,14 @@ BaseTheme::block(
 									list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($team_id);
 										$bst_var_cpt_team_designation = $bst_fields['bst_var_cpt_team_designation'];
 										$bst_var_cpt_team_bio = $bst_fields['bst_var_cpt_team_bio'];
+										$bst_var_cpt_team_email = $bst_fields['bst_var_cpt_team_email'] ?? null;
+										$bst_var_cpt_team_phone = $bst_fields['bst_var_cpt_team_phone'] ?? null;
 										$bst_var_cpt_team_name = get_the_title( $bst_var_post_id );
 									?>
 
 									<div class="team-member-column">
-										<a href="#member-<?php echo the_ID($bst_var_post_id); ?>" class="popup-link"></a>
-										<div class="member-popup mfp-hide" id="member-<?php echo the_ID($bst_var_post_id); ?>">
+										<a href="#member-<?php echo $team_id; ?>" class="popup-link"></a>
+										<div class="member-popup mfp-hide" id="member-<?php echo $team_id; ?>">
 											<div class="member-popup-inner">
 												<div class="member-popup-left">
 													<div class="member-popup-image image-cover" tabindex="0">
@@ -78,13 +80,25 @@ BaseTheme::block(
 																<?php echo html_entity_decode($bst_var_cpt_team_bio); ?>
 															</div>
 														<?php } ?>
+														<div class="member-contact-info d-flex align-content-center">
+															<?php if($bst_var_cpt_team_email) { ?>
+																<div class="email link-green">
+																	<a href="mailto:<?php echo $bst_var_cpt_team_email; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""></a>
+																</div>
+															<?php } ?>
+															<?php if($bst_var_cpt_team_phone) { ?>
+																<div class="phone link-green">
+																	<a href="tel:<?php echo $bst_var_cpt_team_phone; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""></a>
+																</div>
+															<?php } ?>
+														</div>
 													</div>
 												</div>
 
 											</div>
 										</div>
 										<div class="team-member-image image-cover">
-											<a href="#">
+											<a href="#member-<?php echo $team_id; ?>">
 												<?php
 													if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
 														echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
@@ -102,7 +116,7 @@ BaseTheme::block(
 												<?php if($bst_var_cpt_team_designation){ ?>
 													<p><?php echo html_entity_decode($bst_var_cpt_team_designation); ?></p>
 												<?php } ?>
-												<h3 class="heading-6"><a href="#"><?php echo $bst_var_cpt_team_name; ?></a></h3>
+												<h3 class="heading-6"><a href="#member-<?php echo $team_id; ?>"><?php echo $bst_var_cpt_team_name; ?></a></h3>
 											</div>
 										</div>
 

@@ -61,6 +61,7 @@
 			filter: initial !important;
 		}
 	}
+
 	&.no-padding-top {
 		padding-top: 0;
 	}
@@ -157,6 +158,35 @@
 	}
 }
 
+.ctn-green-inner {
+	background-color: var(--fc_green_dark);
+
+	.section-head {
+		.heading-2 {
+			color: var(--fc_white);
+		}
+	}
+
+	a.button,
+	a.button:visited,
+	span.button,
+	.is-style-mycustomstyle .wp-element-button {
+		&.orange-button {
+			--fc_theme_btn_color: var(--fc_white);
+			--fc_theme_btn_bgcolor: var(--fc_transparent);
+			--fc_button_border_color: var(--fc_transparent);
+			background-color: var(--fc_transparent);
+			border-color: var(--fc_white);
+
+			&:hover {
+				background-color: var(--fc_white);
+				border-color: var(--fc_white);
+				color: var(--fc_color_primary);
+			}
+		}
+	}
+}
+
 .ctn-orange,
 .ctn-green {
 	.counter-background {
@@ -170,13 +200,10 @@
 
 	.logo-item-single {
 		img {
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
-				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 
 			&:nth-child(2) {
-				filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
-					saturate(0%) hue-rotate(288deg) brightness(102%)
-					contrast(102%);
+				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 			}
 		}
 	}

@@ -1,0 +1,24 @@
+{
+	"name": "acf/blog-video-teaser",
+	"title": "Blog Video Teaser",
+	"description": "A custom blog video teaser block.",
+	"category": "theme-blocks",
+	"icon": "blog-video-teaser",
+	"keywords": ["blog-video-teaser"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-blog-video-teaser.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "blog-video-teaser-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}
