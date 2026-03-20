@@ -1,0 +1,24 @@
+{
+	"name": "acf/einblicke-teaser",
+	"title": "Einblicke Teaser",
+	"description": "A custom einblicke teaser block.",
+	"category": "theme-blocks",
+	"icon": "einblicke-teaser",
+	"keywords": ["einblicke-teaser"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-einblicke-teaser.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "einblicke-teaser-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

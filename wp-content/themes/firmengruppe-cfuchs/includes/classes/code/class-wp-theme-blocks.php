@@ -47,6 +47,7 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'icon-grid' );
 		self::register_acf_block( 'services-links' );
 		self::register_acf_block( 'reference-teaser' );
+		self::register_acf_block( 'einblicke-teaser' );
 		self::register_acf_block( 'services-teaser' );
 		self::register_acf_block( 'logo-grid' );
 		self::register_acf_block( 'tabbed-content' );
