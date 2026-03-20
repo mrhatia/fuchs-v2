@@ -4175,11 +4175,14 @@ Mixin for transition
 .acf-block-preview .mkdf-icon-text a:hover {
   color: var(--fc_orange);
 }
-.acf-block-preview .animation-chart svg {
+.acf-block-preview .animation-chart svg,
+.acf-block-preview .animation-chart-new svg {
   margin: 0;
 }
 .acf-block-preview .animation-chart svg g path,
-.acf-block-preview .animation-chart svg g rect {
+.acf-block-preview .animation-chart svg g rect,
+.acf-block-preview .animation-chart-new svg g path,
+.acf-block-preview .animation-chart-new svg g rect {
   fill: var(--fc_white);
   color: var(--fc_white);
 }

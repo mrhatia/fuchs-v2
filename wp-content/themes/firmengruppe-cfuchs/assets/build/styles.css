@@ -7459,11 +7459,14 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   color: var(--fc_orange);
 }
 
-.animation-chart svg {
+.animation-chart svg,
+.animation-chart-new svg {
   margin: 0;
 }
 .animation-chart svg g path,
-.animation-chart svg g rect {
+.animation-chart svg g rect,
+.animation-chart-new svg g path,
+.animation-chart-new svg g rect {
   fill: var(--fc_white);
   color: var(--fc_white);
 }
