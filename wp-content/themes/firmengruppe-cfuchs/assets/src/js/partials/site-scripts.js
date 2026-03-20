@@ -785,3 +785,44 @@ jQuery( function() {
 		} );
 	}
 } );
+jQuery( document ).ready( function() {
+	gsap.registerPlugin( ScrollTrigger );
+
+	gsap.utils.toArray( '.animation-chart-new' ).forEach( ( parent ) => {
+		const textGroups = parent.querySelectorAll( '.text-animation' );
+		const lines = parent.querySelectorAll( '.chart-line' );
+
+		const reset = () => {
+			gsap.set( textGroups, { autoAlpha: 0 } );
+			lines.forEach( ( line ) => {
+				const path = line.querySelector( 'path' );
+				if ( path ) {
+					const length = path.getTotalLength();
+					gsap.set( path, { strokeDasharray: length, strokeDashoffset: length } );
+				}
+			} );
+		};
+
+		reset();
+
+		const tl = gsap.timeline( { defaults: { duration: 1, ease: 'power3.out' } } );
+		textGroups.forEach( ( text, i ) => {
+			const line = lines[ i ]?.querySelector( 'path' );
+			tl.to( text, { autoAlpha: 1 }, i * 0.4 );
+			if ( line ) {
+				tl.to( line, { strokeDashoffset: 0 }, i * 0.4 );
+			}
+		} );
+
+		ScrollTrigger.create( {
+			trigger: parent,
+			start: 'top 90%',
+			end: 'bottom 10%',
+			onEnter: () => tl.restart(),
+			onEnterBack: () => tl.restart(),
+			onLeave: reset,
+			onLeaveBack: reset,
+			invalidateOnRefresh: true,
+		} );
+	} );
+} );
