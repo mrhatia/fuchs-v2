@@ -435,11 +435,25 @@
 	column-gap: 25px;
 	margin-top: 26px;
 
+	&.white-bg {
+		background-color: var(--fc_white);
+		padding: 16px;
+		border-radius: 12px;
+		display: inline-flex;
+		box-sizing: border-box;
+		margin-top: 0;
+	}
+
 	.link-green {
 		width: 40px;
 		display: flex;
 		align-items: center;
 		transition: all 0.3s ease-in-out;
+
+		a {
+			border-bottom: none;
+			line-height: 0;
+		}
 
 		&.phone {
 			width: 35px;

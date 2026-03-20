@@ -1,0 +1,24 @@
+{
+	"name": "acf/about-supervisor",
+	"title": "About Supervisor",
+	"description": "A custom About Supervisor block.",
+	"category": "theme-blocks",
+	"icon": "iat",
+	"keywords": ["about-supervisor"],
+	"supports": {
+		"align": true
+	},
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "block-about-supervisor.php"
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"preview": "about-supervisor-preview.webp"
+			}
+		}
+	},
+	"align": "full"
+}

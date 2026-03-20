@@ -3354,7 +3354,7 @@ header {
   height: 100%;
 }
 
-.header-logo::before {
+.page-template-template-home .header-logo::before {
   content: "";
   position: absolute;
   right: 0;
@@ -3365,6 +3365,33 @@ header {
   transform: translateY(0);
   transition: transform 0.4s ease;
 }
+.page-template-template-home .header-logo a.fuchs-logo {
+  left: 25%;
+  transform: scale(0.8) translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+.page-template-template-home .header-logo a.c-logo {
+  transform: scale(1) translateX(30px);
+  opacity: 1;
+  width: 88px;
+}
+.page-template-template-home .header-section.shrink .header-logo::before {
+  transform: translateY(-14px);
+}
+.page-template-template-home .header-section.shrink .header-logo a.fuchs-logo {
+  opacity: 1;
+  transform: scale(0.8) translateY(-10px);
+  pointer-events: auto;
+}
+.page-template-template-home .header-section.shrink .header-logo a.c-logo {
+  left: 38%;
+  transform: scale(0.8) translate(30px, -10px);
+  opacity: 0;
+  width: 88px;
+  pointer-events: none;
+}
+
 .header-logo a {
   display: inline-block;
   position: absolute;
@@ -3375,36 +3402,16 @@ header {
   z-index: 100001;
   transition: transform 0.4s ease, opacity 0.4s ease, left 0.4s ease, width 0.4s ease;
 }
-.header-logo a.fuchs-logo {
-  left: 25%;
-  transform: scale(0.8) translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-}
-.header-logo a.c-logo {
-  transform: scale(1) translateX(30px);
-  opacity: 1;
-  width: 88px;
-}
 .header-logo img {
   width: 100%;
   height: 100%;
 }
 
-.header-section.shrink .header-logo::before {
-  transform: translateY(-14px);
-}
-.header-section.shrink .header-logo a.fuchs-logo {
+body:not(.page-template-template-home) .header-section .header-logo a.fuchs-logo {
+  left: 25%;
   opacity: 1;
   transform: scale(0.8) translateY(-10px);
   pointer-events: auto;
-}
-.header-section.shrink .header-logo a.c-logo {
-  left: 38%;
-  transform: scale(0.8) translate(30px, -10px);
-  opacity: 0;
-  width: 88px;
-  pointer-events: none;
 }
 
 .header-inner {
@@ -3555,8 +3562,6 @@ header {
 .header-nav ul li a:hover,
 .header-nav ul li span.menu-link:hover {
   color: var(--fc_white);
-  background-image: url(images/default_pattern-shape.png);
-  transition: 15s linear;
 }
 .header-nav ul li.current-menu-item > a::after, .header-nav ul li.current-menu-parent > a::after,
 .header-nav ul li a:hover::after,
@@ -8900,11 +8905,23 @@ body #daextlwcnf-cookie-settings-button-2:hover {
        column-gap: 25px;
   margin-top: 26px;
 }
+.member-contact-info.white-bg {
+  background-color: var(--fc_white);
+  padding: 16px;
+  border-radius: 12px;
+  display: inline-flex;
+  box-sizing: border-box;
+  margin-top: 0;
+}
 .member-contact-info .link-green {
   width: 40px;
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
+}
+.member-contact-info .link-green a {
+  border-bottom: none;
+  line-height: 0;
 }
 .member-contact-info .link-green.phone {
   width: 35px;

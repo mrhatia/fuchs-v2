@@ -4910,11 +4910,23 @@ Mixin for transition
        column-gap: 25px;
   margin-top: 26px;
 }
+.acf-block-preview .member-contact-info.white-bg {
+  background-color: var(--fc_white);
+  padding: 16px;
+  border-radius: 12px;
+  display: inline-flex;
+  box-sizing: border-box;
+  margin-top: 0;
+}
 .acf-block-preview .member-contact-info .link-green {
   width: 40px;
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
+}
+.acf-block-preview .member-contact-info .link-green a {
+  border-bottom: none;
+  line-height: 0;
 }
 .acf-block-preview .member-contact-info .link-green.phone {
   width: 35px;

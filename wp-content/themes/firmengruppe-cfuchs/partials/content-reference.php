@@ -125,12 +125,18 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 	<section>
 		<div class="wrapper">
 
-			<div class="section-head">
-
-				<div class="hero-split-text">Latest</div>
-				<h2 class="heading-2">
-					Referenzen
-				</h2>
+			<div class="section-head d-flex justify-content-between align-items-start">
+				<div class="head-left-section">
+					<div class="hero-split-text">Latest</div>
+					<h2 class="heading-2">
+						Referenzen
+					</h2>
+				</div>
+				<div class="head-right-section">
+					<a href="<?php echo esc_url( home_url('/referenzen/') ); ?>" class="button white-button">
+						Alle Referenzen
+					</a>
+				</div>
 			</div>
 			<?php
 			if($bst_var_sngl_variation === "manual"){
