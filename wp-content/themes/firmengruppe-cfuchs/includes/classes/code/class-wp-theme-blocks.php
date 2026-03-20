@@ -75,6 +75,7 @@ class WP_Theme_Blocks {
 		self::register_acf_block( 'theme-video' );
 		self::register_acf_block( 'blog-video-teaser' );
 		self::register_acf_block( 'about-us' );
+		self::register_acf_block( 'about-supervisor' );
 
 		// Register a block - AcfBlock.
 		// self::register_acf_block(

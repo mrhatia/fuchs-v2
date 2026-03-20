@@ -125,6 +125,38 @@ new WP_Theme_CPT(
 );
 new WP_Theme_CPT(
 	array(
+		'labels'       => array(
+			'singular_capital'   => 'Einblicke',
+			'plural_capital'     => 'Einblickes',
+			'singular_lowercase' => 'einblicke',
+			'plural_lowercase'   => 'einblickes',
+			// CPT Slug & Name.
+			'register_key'       => 'einblicke',
+			'slug'               => 'einblicke',
+		),
+		'supports'     => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt' ),
+		'menu_icon'    => 'dashicons-format-quote',
+		'public'       => true,
+		'show_in_menu' => true,
+		'show_ui'      => true,
+		'has_archive' => true,
+		'rewrite' => [
+			'slug' => 'einblicke',
+		],
+		'show_in_rest' => true,
+		'taxonomies'   => array(
+			array(
+				'slug'          => 'einblicke-category',
+				'register_key'  => 'einblicke-category', // if not given default is slug value.
+				'name'          => 'einblicke-category',
+				'singular_name' => 'category',
+				'plural_name'   => 'Categories',
+			),
+		),
+	)
+);
+new WP_Theme_CPT(
+	array(
 		'labels' => array(
 			'singular_capital'   => 'Job',
 			'plural_capital'     => 'Jobs',
