@@ -3,7 +3,7 @@
 		border-top: 1px solid #e8e8e9;
 	}
 
-	> a {
+	>a {
 		border: none;
 		display: block;
 		font-size: 24px;
@@ -77,6 +77,7 @@
 }
 
 .top-latters-area {
+
 	a,
 	a:visited {
 		display: inline-block;
@@ -138,6 +139,7 @@
 	align-items: start;
 	gap: 4%;
 	justify-content: space-between;
+
 	.faq-head {
 		background-image: none;
 	}
@@ -193,11 +195,13 @@
 	&.active {
 		padding: 30px 70px 14px 0;
 		background-image: none;
+
 		.faq-icon {
 			background-color: var(--fc_white);
 			box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
 
 			svg {
+
 				path,
 				rect {
 					fill: var(--fc_black);
@@ -212,6 +216,7 @@
 			box-shadow: 0 10px 20px 0 rgba(237, 255, 250, 0.5);
 
 			svg {
+
 				path,
 				rect {
 					fill: var(--fc_black);
@@ -308,15 +313,18 @@
 		}
 	}
 }
+
 .faq-with-image {
 	.faq-head {
 		background-image: none;
 	}
 }
+
 .simple-faq {
 	.faq-head {
 		padding: 30px 70px 36px 36px;
 	}
+
 	.faq-icon {
 		right: 15px;
 	}

@@ -46,16 +46,16 @@ BaseTheme::block(
 									<?php echo BaseTheme::button( $bst_var_blk_asup_button, 'button white-button' ); ?>
 								</div>
 							<?php } ?>
-							<div class="member-contact-info white-bg d-flex align-content-center">
+							<div class="member-contact-info d-flex align-content-center">
 								<?php if ( $bst_var_blk_asup_email ) {  ?>
-									<div class="email link-green">
+									<div class="email white-icon link-green">
 										<a href="mailto:<?php echo html_entity_decode( $bst_var_blk_asup_email ); ?>" class="gmail">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt="">
 										</a>
 									</div>
 								<?php } ?>
 								<?php if ( $bst_var_blk_asup_phone ) {  ?>
-									<div class="phone link-green">
+									<div class="phone white-icon link-green">
 										<a href="tel:<?php echo html_entity_decode( $bst_var_blk_asup_phone ); ?>" class="phone">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt="">
 										</a>

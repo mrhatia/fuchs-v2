@@ -782,7 +782,6 @@ html {
   -webkit-font-smoothing: antialiased;
   text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.004);
   scroll-padding: 100px;
-  scroll-behavior: smooth;
 }
 
 article,
@@ -1114,8 +1113,6 @@ body {
   background-color: var(--fc_color_primary);
   color: var(--fc_white);
   line-height: 1.5;
-  overflow: clip;
-  overflow-y: auto;
 }
 body.have-topbar {
   padding-top: var(--fc_header-height);
@@ -5467,7 +5464,6 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
   z-index: 1;
 }
 .ctn-container-bg .wrapper {
-  background-image: url(images/background-container-shape.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -8904,14 +8900,17 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   -moz-column-gap: 25px;
        column-gap: 25px;
   margin-top: 26px;
+  display: inline-flex;
+  box-sizing: border-box;
+  margin-top: 0;
 }
 .member-contact-info.white-bg {
   background-color: var(--fc_white);
   padding: 16px;
   border-radius: 12px;
-  display: inline-flex;
-  box-sizing: border-box;
-  margin-top: 0;
+}
+.member-contact-info .white-icon img {
+  filter: brightness(0) invert(1);
 }
 .member-contact-info .link-green {
   width: 40px;
@@ -11627,7 +11626,6 @@ body.shrink .single-service-hero-section .service-logo.left-side {
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .ctn-container-bg .wrapper {
     background-size: contain;
-    background-image: url(images/background-container-shape-1.png);
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
@@ -11704,19 +11702,16 @@ body.shrink .single-service-hero-section .service-logo.left-side {
 @media only screen and (min-width: 1100px) and (max-width: 1399px) {
   .ctn-container-bg .wrapper {
     background-size: contain;
-    background-image: url(images/background-container-shape-2.png);
   }
 }
 @media only screen and (min-width: 748px) and (max-width: 1098px) {
   .ctn-container-bg .wrapper {
     background-size: contain;
-    background-image: url(images/background-container-shape-3.png);
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 748px) {
   .ctn-container-bg .wrapper {
     background-size: initial;
-    background-image: url(images/background-container-shape-4.png);
   }
 }
 @media only screen and (min-width: 1346px) and (max-width: 1800px) {

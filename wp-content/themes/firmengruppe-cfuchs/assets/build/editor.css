@@ -4909,14 +4909,17 @@ Mixin for transition
   -moz-column-gap: 25px;
        column-gap: 25px;
   margin-top: 26px;
+  display: inline-flex;
+  box-sizing: border-box;
+  margin-top: 0;
 }
 .acf-block-preview .member-contact-info.white-bg {
   background-color: var(--fc_white);
   padding: 16px;
   border-radius: 12px;
-  display: inline-flex;
-  box-sizing: border-box;
-  margin-top: 0;
+}
+.acf-block-preview .member-contact-info .white-icon img {
+  filter: brightness(0) invert(1);
 }
 .acf-block-preview .member-contact-info .link-green {
   width: 40px;
@@ -8065,7 +8068,6 @@ Mixin for transition
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .acf-block-preview .ctn-container-bg .wrapper {
     background-size: contain;
-    background-image: url(images/background-container-shape-1.png);
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1299px) {
@@ -8142,19 +8144,16 @@ Mixin for transition
 @media only screen and (min-width: 1100px) and (max-width: 1399px) {
   .acf-block-preview .ctn-container-bg .wrapper {
     background-size: contain;
-    background-image: url(images/background-container-shape-2.png);
   }
 }
 @media only screen and (min-width: 748px) and (max-width: 1098px) {
   .acf-block-preview .ctn-container-bg .wrapper {
     background-size: contain;
-    background-image: url(images/background-container-shape-3.png);
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 748px) {
   .acf-block-preview .ctn-container-bg .wrapper {
     background-size: initial;
-    background-image: url(images/background-container-shape-4.png);
   }
 }
 @media only screen and (min-width: 1346px) and (max-width: 1800px) {

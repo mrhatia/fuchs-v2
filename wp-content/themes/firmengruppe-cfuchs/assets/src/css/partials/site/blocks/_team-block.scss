@@ -434,14 +434,21 @@
 .member-contact-info {
 	column-gap: 25px;
 	margin-top: 26px;
+	display: inline-flex;
+	box-sizing: border-box;
+	margin-top: 0;
 
 	&.white-bg {
 		background-color: var(--fc_white);
 		padding: 16px;
 		border-radius: 12px;
-		display: inline-flex;
-		box-sizing: border-box;
-		margin-top: 0;
+	}
+
+	.white-icon {
+		img {
+
+			filter: brightness(0) invert(1);
+		}
 	}
 
 	.link-green {

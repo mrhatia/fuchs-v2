@@ -98,7 +98,7 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 
 				<!-- Reference (static path) -->
 				<span class="breadcrumbs__item">
-					<a href="<?php echo esc_url( home_url('/einblicke/') ); ?>">EINBLICKE</a>
+					<a href="<?php echo esc_url( home_url('/einblicke/') ); ?>">Zurück zu den Einblicken</a>
 				</span>
 
 				<div class="breadcrumbs__separator">
@@ -119,6 +119,7 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 </section>
 
 
+
 <div class="page-section">
 	<?php get_template_part( 'partials/content' ); ?>
 	<div class="gl-s128"></div>
@@ -133,11 +134,38 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 					</h2>
 				</div>
 				<div class="head-right-section">
-					<a href="<?php echo esc_url( home_url('/einblicke/') ); ?>" class="button white-button">
-						Alle Einblickes
+					<a href="<?php echo esc_url( home_url('/service/hochbau/#einblicke-section') ); ?>"
+					class="button white-button js-back-link">
+						Zurück zu den Einblicken
 					</a>
 				</div>
+
 			</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const btn = document.querySelector(".js-back-link");
+
+	if (!btn) return;
+
+	const referrer = document.referrer;
+
+	// Check if user came from same domain
+	if (referrer && referrer.includes(window.location.origin)) {
+
+		let finalUrl = referrer;
+
+		// Remove existing hash (if any) and add our section
+		if (finalUrl.includes('#')) {
+			finalUrl = finalUrl.split('#')[0];
+		}
+
+		finalUrl += '#einblicke-section';
+
+		btn.setAttribute("href", finalUrl);
+	}
+});
+</script>
 			<?php
 			if($bst_var_sngl_variation === "manual"){
 				?>

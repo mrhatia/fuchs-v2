@@ -22,7 +22,7 @@ BaseTheme::block(
 
 			?>
 
-			<section class="ctn-full-width">
+			<section class="ctn-full-width" id="einblicke-section">
 				<div class="wrapper">
 					<div class="masonry-gallery-main">
 
