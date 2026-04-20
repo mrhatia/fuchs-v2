@@ -520,6 +520,7 @@ button[disabled]:hover {
 	}
 
 	.select-dropdown__button {
+
 		&:focus,
 		&:focus-visible {
 			outline-color: black !important;
@@ -691,8 +692,7 @@ body {
 	}
 
 	&.iat-image-appear:before {
-		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1)
-			forwards;
+		animation: iat-image-animation 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 	}
 
 	&:before {
@@ -708,8 +708,7 @@ body {
 	}
 
 	&.iat-image-appear:after {
-		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99)
-			forwards;
+		animation: iat-image-animation 1.2s 0.2s cubic-bezier(1, 0, 0.54, 0.99) forwards;
 	}
 }
 
@@ -794,23 +793,19 @@ body {
 		transform: translateY(40px);
 
 		&:nth-child(1) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
 		}
 
 		&:nth-child(2) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
 		}
 
 		&:nth-child(3) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 0.9s forwards;
 		}
 
 		&:nth-child(4) {
-			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s
-				forwards;
+			animation: heroReveal 1.4s cubic-bezier(0.23, 1, 0.32, 1) 1.2s forwards;
 		}
 	}
 }
@@ -1042,8 +1037,7 @@ body {
 	color: var(--fc_white);
 
 	.search-icon {
-		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-			hue-rotate(26deg) brightness(107%) contrast(103%);
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
 	}
 
 	.header-section {
@@ -1056,6 +1050,7 @@ body {
 	}
 
 	.footer-ctn {
+
 		h1,
 		h2,
 		h3,
@@ -1112,6 +1107,7 @@ body {
 
 	.faq-icon {
 		svg {
+
 			path,
 			rect {
 				fill: var(--fc_white);
@@ -1120,6 +1116,7 @@ body {
 	}
 
 	.faq-head {
+
 		.heading-5,
 		.faq-number {
 			color: var(--fc_white);
@@ -1131,6 +1128,7 @@ body {
 				background-color: var(--fc_white);
 
 				svg {
+
 					path,
 					rect {
 						fill: var(--fc_black);
@@ -1204,6 +1202,7 @@ body {
 	}
 
 	.service-single-item {
+
 		a,
 		a:visited {
 			&:hover {
@@ -1220,6 +1219,7 @@ body {
 	}
 
 	.bottom-section-button {
+
 		a,
 		a:visited {
 			color: var(--fc_white);
@@ -1236,6 +1236,7 @@ body {
 	}
 
 	.service-single-item {
+
 		a,
 		a:visited {
 			border-bottom: 3px solid var(--fc_white);
@@ -1412,7 +1413,8 @@ body {
 	border-bottom: 1px solid #dbe2e6;
 	overflow: hidden;
 	transition: max-height 450ms ease-out;
-	display: none;
+	// display: none;
+	display: block;
 
 	&--hidden {
 		max-height: 0;
@@ -2029,6 +2031,7 @@ body {
 		margin: 0;
 
 		g {
+
 			path,
 			rect {
 				fill: var(--fc_white);
@@ -2108,10 +2111,7 @@ body {
 	}
 }
 
-.plethoraplugins-accordion.plethoraplugins-theme__minimal
-	.is-open
-	> .pds-accordion__title
-	.pds-accordion__icon:not(.pds-accordion__icon--two-state) {
+.plethoraplugins-accordion.plethoraplugins-theme__minimal .is-open>.pds-accordion__title .pds-accordion__icon:not(.pds-accordion__icon--two-state) {
 	transform: translateY(-50%) rotate(0deg) !important;
 	background-color: white;
 	box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.5);
@@ -2135,9 +2135,11 @@ body {
 		background-image: none !important;
 	}
 }
+
 .image-alongside-text {
 	.iat-single-image {
 		aspect-ratio: 635/423;
+
 		img {
 			aspect-ratio: 635/423;
 		}

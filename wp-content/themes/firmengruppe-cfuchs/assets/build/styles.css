@@ -123,7 +123,6 @@
 /*!********************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./assets/src/css/vendors/slick-theme.css ***!
   \********************************************************************************************************************************************************************************************/
-@charset 'UTF-8';
 /* Arrows */
 .slick-prev,
 .slick-next {
@@ -1769,6 +1768,7 @@ textarea {
 
 .wpcf7-form label {
   width: 100%;
+  color: var(--fc_white);
 }
 
 /* -------------------------------------------------
@@ -3351,52 +3351,17 @@ header {
   height: 100%;
 }
 
-.page-template-template-home .header-logo::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100.5%;
-  height: 80px;
-  background-color: var(--fc_white);
-  transform: translateY(0);
-  transition: transform 0.4s ease;
-}
-.page-template-template-home .header-logo a.fuchs-logo {
-  right: 25%;
-  transform: scale(0.8) translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-}
-.page-template-template-home .header-logo a.c-logo {
-  transform: scale(1) translateX(-30px);
-  opacity: 1;
-  width: 88px;
-}
-.page-template-template-home .header-section.shrink .header-logo::before {
-  transform: translateY(-14px);
-}
-.page-template-template-home .header-section.shrink .header-logo a.fuchs-logo {
-  opacity: 1;
-  transform: scale(0.8) translateY(-10px);
-  pointer-events: auto;
-}
-.page-template-template-home .header-section.shrink .header-logo a.c-logo {
-  right: 38%;
-  transform: scale(0.8) translate(-30px, -10px);
-  opacity: 0;
-  width: 88px;
-  pointer-events: none;
-}
-
 .header-logo a {
   display: inline-block;
   position: absolute;
   top: 0;
-  right: 20px;
   width: 150px;
   height: 80px;
   z-index: 100001;
+  right: 25%;
+  opacity: 1;
+  transform: scale(0.8) translateY(-10px);
+  pointer-events: auto;
   transition: transform 0.4s ease, opacity 0.4s ease, right 0.4s ease, width 0.4s ease;
 }
 .header-logo img {
@@ -3404,7 +3369,7 @@ header {
   height: 100%;
 }
 
-body:not(.page-template-template-home) .header-section .header-logo a.fuchs-logo {
+.header-section .header-logo a.fuchs-logo {
   right: 25%;
   opacity: 1;
   transform: scale(0.8) translateY(-10px);
@@ -6912,7 +6877,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   border-bottom: 1px solid #dbe2e6;
   overflow: hidden;
   transition: max-height 450ms ease-out;
-  display: none;
+  display: block;
 }
 .filter--hidden {
   max-height: 0;

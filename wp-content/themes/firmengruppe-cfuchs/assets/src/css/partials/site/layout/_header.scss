@@ -105,61 +105,61 @@ header {
 	}
 }
 
-.page-template-template-home {
-	.header-logo {
+// .page-template-template-home {
+// 	.header-logo {
 
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100.5%;
-			height: 80px;
-			background-color: var(--fc_white);
-			transform: translateY(0);
-			transition: transform 0.4s ease;
-		}
+// 		&::before {
+// 			content: "";
+// 			position: absolute;
+// 			left: 0;
+// 			top: 0;
+// 			width: 100.5%;
+// 			height: 80px;
+// 			background-color: var(--fc_white);
+// 			transform: translateY(0);
+// 			transition: transform 0.4s ease;
+// 		}
 
-		a {
+// 		a {
 
-			&.fuchs-logo {
-				right: 25%;
-				transform: scale(0.8) translateY(-10px);
-				opacity: 0;
-				pointer-events: none;
-			}
+// 			&.fuchs-logo {
+// 				right: 25%;
+// 				transform: scale(0.8) translateY(-10px);
+// 				opacity: 0;
+// 				pointer-events: none;
+// 			}
 
-			&.c-logo {
-				transform: scale(1) translateX(-30px);
-				opacity: 1;
-				width: 88px;
-			}
-		}
+// 			&.c-logo {
+// 				transform: scale(1) translateX(-30px);
+// 				opacity: 1;
+// 				width: 88px;
+// 			}
+// 		}
 
-	}
+// 	}
 
-	.header-section.shrink {
-		.header-logo {
-			&::before {
-				transform: translateY(-14px);
-			}
+// 	.header-section.shrink {
+// 		.header-logo {
+// 			&::before {
+// 				transform: translateY(-14px);
+// 			}
 
-			a.fuchs-logo {
-				opacity: 1;
-				transform: scale(0.8) translateY(-10px);
-				pointer-events: auto;
-			}
+// 			a.fuchs-logo {
+// 				opacity: 1;
+// 				transform: scale(0.8) translateY(-10px);
+// 				pointer-events: auto;
+// 			}
 
-			a.c-logo {
-				right: 38%;
-				transform: scale(0.8) translate(-30px, -10px);
-				opacity: 0;
-				width: 88px;
-				pointer-events: none;
-			}
-		}
-	}
-}
+// 			a.c-logo {
+// 				right: 38%;
+// 				transform: scale(0.8) translate(-30px, -10px);
+// 				opacity: 0;
+// 				width: 88px;
+// 				pointer-events: none;
+// 			}
+// 		}
+// 	}
+// }
 
 .header-logo {
 
@@ -178,10 +178,15 @@ header {
 		display: inline-block;
 		position: absolute;
 		top: 0;
-		right: 20px;
 		width: 150px;
 		height: 80px;
 		z-index: 100001;
+
+		right: 25%;
+		opacity: 1;
+		transform: scale(0.8) translateY(-10px);
+		pointer-events: auto;
+
 		transition:
 			transform 0.4s ease,
 			opacity 0.4s ease,
@@ -198,17 +203,14 @@ header {
 }
 
 
-body:not(.page-template-template-home) {
+.header-section {
+	.header-logo {
 
-	.header-section {
-		.header-logo {
-
-			a.fuchs-logo {
-				right: 25%;
-				opacity: 1;
-				transform: scale(0.8) translateY(-10px);
-				pointer-events: auto;
-			}
+		a.fuchs-logo {
+			right: 25%;
+			opacity: 1;
+			transform: scale(0.8) translateY(-10px);
+			pointer-events: auto;
 		}
 	}
 }

@@ -140,12 +140,6 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 						alt="Site Logo" />
 
 					</a>
-					<?php if(is_page_template( 'templates/template-home.php' )){ ?>
-						<a class="c-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/C-logo.svg"
-							alt="Site Logo" />
-						</a>
-					<?php } ?>
 			</div>
 			<div class="right-header header-navigation">
 				<div class="nav-overlay">
