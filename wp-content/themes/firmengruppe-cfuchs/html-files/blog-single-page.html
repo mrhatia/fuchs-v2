@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Blog Single - BaseTheme</title>
+	<link rel="stylesheet" href="../assets/build/styles.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.0.2/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12.0.2/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+</head>
+
+<body>
+	<header class="header-section">
+		<div class="header-wrapper header-inner d-flex align-items-center justify-content-between">
+			<div class="header-logo logo">
+				<a href="#"><img src="../assets/src/images/site-logo.svg" alt="Site Logo" /></a>
+			</div>
+			<div class="right-header header-navigation">
+				<div class="nav-overlay">
+					<div class="nav-container">
+						<div class="header-nav">
+							<ul>
+								<li><a href="toolkit.html">Home</a></li>
+								<li class="menu-item current-menu-item menu-item-has-children">
+									<a href="#" tabindex="0" style="animation-delay: 540ms;">Forms</a>
+									<ul>
+										<li><a href="gravity-form.html" tabindex="0"
+												style="animation-delay: 610ms;">Gravity Form</a></li>
+										<li><a href="hubspot-form.html" tabindex="0"
+												style="animation-delay: 680ms;">Hubspot Form</a></li>
+									</ul>
+								</li>
+								<li><a href="./basetheme/wordpress-blocks.html">Portfolio</a></li>
+								<li><a href="./basetheme/wordpress-blocks.html">Blog</a></li>
+								<li><a href="./basetheme/wordpress-blocks.html">Shop</a></li>
+								<li><a href="./basetheme/wordpress-blocks.html">Elements</a></li>
+
+							</ul>
+							<div class="header-btns desktop-hide">
+								<a href="#" class="button" title="Get In touch">Get In touch</a>
+							</div>
+							<div class="header-btns">
+								<a href="#" class="search-icon top-search"><img
+										src="../assets/src/images/search-icon.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu-btn">
+					<span class="top"></span>
+					<span class="middle"></span>
+					<span class="bottom"></span>
+				</div>
+			</div>
+
+		</div>
+		<div class="search-form-new">
+			<div class="search-inner-content">
+				<div class="search-inner-content--text">
+					SEARCH SITE </div>
+				<form role="search" method="get" id="searchform" action="#">
+					<div id="search-top">
+						<input type="text" name="s" class="keyword" onkeyup="fetch()" autocomplete="off"
+							autofocus="autofocus" aria-label="Search" placeholder="Search">
+						<div class="clear"></div>
+					</div>
+				</form>
+				<div class="search-close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57" fill="none">
+						<rect class="bg-path" x="0.922852" y="28.5" width="39" height="39" rx="19.5"
+							transform="rotate(-45 0.922852 28.5)" fill="#F1EEE2"></rect>
+						<g opacity="0.5">
+							<rect class="bg-path-white" x="22.8432" y="23.5503" width="1" height="15"
+								transform="rotate(-45 22.8432 23.5503)" fill="#141414"></rect>
+							<rect class="bg-path-white" x="23.5503" y="34.1567" width="1" height="15"
+								transform="rotate(-135 23.5503 34.1567)" fill="#141414"></rect>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main id="main-section" class="main-section">
+		<section class="ctn-full-width">
+			<div class="wrapper">
+				<div class="hero-inner-slider blog-sub-page">
+					<div class="hero-slide-item">
+						<div class="banner-content">
+							<div class="banner-content-inner">
+								<div class="kicker">Explore the Features</div>
+								<h1 class="heading-2">Single Blog page </h1>
+								<p>Etiam scelerisque tortor at lectus dapibus, nec fermentum.</p>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="ctn-full-width">
+			<div class="wrapper">
+				<nav id="breadcrumbs" class="breadcrumbs">
+					<div class="breadcrumbs__inner">
+						<span class="breadcrumbs__item"><a href="https://www.bechtel.com" tabindex="0">Home</a></span>
+						<div class="breadcrumbs__separator">
+							<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"
+								fill="none">
+								<path d="M0.75 0.75L6.25 6.25L0.75 11.75" stroke="black" stroke-width="1.5"
+									stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</div><span class="breadcrumbs__item"><a href="https://www.bechtel.com/projects/"
+								tabindex="0">Projects</a></span>
+						<div class="breadcrumbs__separator">
+							<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"
+								fill="none">
+								<path d="M0.75 0.75L6.25 6.25L0.75 11.75" stroke="black" stroke-width="1.5"
+									stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</div><span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">Sabine Pass
+							Liquefaction
+							Project</span>
+					</div>
+				</nav>
+			</div>
+		</section>
+		<div class="gl-s128"></div>
+		<section>
+			<div class="wrapper">
+				<div class="blog-single-post">
+					<div class="blog-single-image image-cover">
+						<img src="../assets/src/images/uploads/blog-post-img-01.jpg" alt="">
+					</div>
+					<div class="blog-single-post-content">
+						<div class="blog-publish-date">
+							<a href="#">
+								1. January. 2019
+							</a>
+						</div>
+						<div class="blog-content-title">
+							<h2 class="heading-3">
+								Perfect Factory Floor</h2>
+						</div>
+						<div class="blog-content-text">
+							<p>
+								Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
+								ut metus varius laoreet.
+								Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+								ultricies nisi. Nam eget dui.
+								Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+								sit amet adipiscing sem neque
+								sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas
+								nec odio et ante tincidunt tempus.
+								Donec vitae sapien ut liber. venenatis faucibus. Nullam quis ante. Ut enim.
+
+							</p>
+						</div>
+						<div class="highlight-quote">
+							<p>
+								Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+								faucibus. Nullam quis.
+
+							</p>
+
+						</div>
+						<div class="blog-content-text">
+							<p>
+								Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+								massa quis enim. Donec pede justo,
+								fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
+								a, venenatis vitae, justo. Nullam
+								dictum felis eu pede mollis pretium. Integer tincidunt. Lorem ipsum dolor sit amet,
+								consectetuer adipiscing elit. Aenean
+								commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis
+								dis parturient montes, nascetur
+								ridiculus mus. Aenean imperdiet. Etiam ultricies. Ut enim.
+
+
+							</p>
+						</div>
+						<div class="blog-subpost-bottom">
+							<div class="bottom-section-button">
+								<div class="tag">
+									<a href="#">
+										Design
+									</a>
+								</div>
+							</div>
+							<div class="bottom-right">
+								<div class="blog-like">
+									<svg width="64px" height="64px" viewBox="0 0 16 16" fill="none"
+										xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+										<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+										<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+										</g>
+										<g id="SVGRepo_iconCarrier">
+											<path
+												d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z"
+												fill="#ffffff"></path>
+										</g>
+									</svg>
+									<a href="#"><span>37</span>Likes</a>
+
+								</div>
+								<div class="comments-holder">
+									<svg width="64px" height="64px" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+										<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+										<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+										</g>
+										<g id="SVGRepo_iconCarrier">
+											<path
+												d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z"
+												stroke="#ffffff" stroke-width="1.5"></path>
+										</g>
+									</svg>
+									<a href="#">
+										Comments </a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="gl-s128"></div>
+	</main>
+	<footer id="footer-section" class="footer-section">
+		<!-- Footer Start -->
+		<div class="footer-ctn">
+			<div class="wrapper">
+				<div class="footer-widgets d-flex justify-content-between flex-wrap">
+					<div class="single-widget">
+						<div class="footer-logo">
+							<a href="#">
+								<img src="../assets/src/images/site-logo.svg" alt="Logo">
+							</a>
+						</div>
+
+
+					</div>
+					<div class="single-widget d-flex flex-column">
+						<h4>FOLGE UNS</h4>
+						<div class="social-icons d-flex">
+							<a href="#" class="facebook flex-center"><img src="../assets/src/images/facebook-icon.svg"
+									alt="Facebook Icon"></a>
+							<a href="#" class="instagram flex-center"><img src="../assets/src/images/instagram-icon.svg"
+									alt="Instagram Icon"></a>
+							<a href="#" class="linkdhin flex-center"><img src="../assets/src/images/twitter-icon.svg"
+									alt="Twitter Icon"></a>
+							<a href="#" class="tweeter flex-center"><img src="../assets/src/images/linkedin-icon.svg"
+									alt="LinkedIn Icon"></a>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="gl-s72"></div>
+				<div class="footer-bottom d-flex align-items-center justify-content-between">
+
+					<div class="legal-nav">
+						<div class="menu-legal-nav-container">
+							<ul id="menu-legal-nav" class="menu">
+								<li>
+									<a href="#">Impressum</a>
+								</li>
+								<li><a href="#">Datenschutz</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="copy-right">© 2025 Fuchs Projektentwicklungs GmbH</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="../assets/src/js/vendors/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/build/scripts.min.js"></script>
+
+
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const swiper = new Swiper('.testimonial-variation', {
+				direction: 'vertical',
+				slidesPerView: 1,
+				loop: true,
+				speed: 800,
+				spaceBetween: 0,
+				autoHeight: true,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				mousewheel: true,
+				keyboard: {
+					enabled: true,
+					onlyInViewport: true,
+				},
+			});
+		});
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<script>
+		const ctx = document.getElementById('fuchsChart');
+
+		new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: [
+					'Hochbau',
+					'Tiefbau',
+					'Projektentwicklung',
+					'Metallbau',
+					'Kanaltechnik',
+					'Baulogistik',
+					'Gerüstbau',
+					'Invest',
+				],
+				datasets: [
+					{
+						data: [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5], // equal slices
+						backgroundColor: [
+							'#e57c00', '#df7800', '#d87200', '#d26d00',
+							'#cd6800', '#c66300', '#bf5e00', '#b85900',
+						],
+						borderWidth: 2,
+						borderColor: '#ffffff',
+						hoverOffset: 0,
+					},
+				],
+			},
+			options: {
+				cutout: '55%',
+				plugins: {
+					legend: { display: false },
+					tooltip: { enabled: false },
+				},
+			},
+		});
+	</script>
+
+
+</body>
+
+</html>

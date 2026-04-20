@@ -8188,6 +8188,67 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   margin: 0;
 }
 
+.blog-single-post-content {
+  margin-top: 40px;
+}
+.blog-single-post-content .blog-publish-date a,
+.blog-single-post-content .blog-publish-date a:visited {
+  color: var(--fc_white);
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+  font-size: var(--fc_font_size_14);
+  line-height: 2em;
+}
+.blog-single-post-content .blog-publish-date a:hover,
+.blog-single-post-content .blog-publish-date a:visited:hover {
+  color: var(--fc_orange_dark);
+}
+.blog-single-post-content .blog-content-title .heading-3 {
+  font-size: var(--fc_font_size_60);
+}
+.blog-single-post-content .blog-content-text p {
+  display: block;
+  margin-bottom: 40px;
+}
+.blog-single-post-content .highlight-quote {
+  margin: 10px 0 40px;
+  font-size: var(--fc_font_size_26);
+}
+.blog-single-post-content .highlight-quote p {
+  max-width: 754px;
+  margin: 0;
+  font-size: var(--fc_font_size_26);
+}
+.blog-single-post-content .bottom-section-button .tag a,
+.blog-single-post-content .bottom-section-button .tag a:visited {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  padding: 11px 24px;
+  background-color: #f2f3f5;
+  margin-right: 15px;
+  color: #000;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.blog-single-post-content .bottom-section-button .tag a:hover,
+.blog-single-post-content .bottom-section-button .tag a:visited:hover {
+  background-color: var(--fc_orange_dark);
+  color: #fff;
+}
+.blog-single-post-content .bottom-right a,
+.blog-single-post-content .bottom-right a:visited {
+  font-size: 12px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.blog-single-post-content .bottom-right a:hover,
+.blog-single-post-content .bottom-right a:visited:hover {
+  color: var(--fc_orange_dark);
+}
+
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
