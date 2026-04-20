@@ -8,6 +8,7 @@ import slick from '../vendors/slick.min';
 import gasap from '../vendors/gsap.min';
 import gsapScroll from '../vendors/ScrollTrigger.min';
 import Lity from '../vendors/lity.js';
+import masonry from '../vendors/masonry.min';
 
 jQuery( document ).on( 'scroll', function() {
 	if ( jQuery( document ).scrollTop() > 0 ) {
@@ -69,7 +70,10 @@ jQuery( function() {
 	if ( jQuery( '.header-wrapper' ).length > 0 ) {
 		function updateHeaderHeight() {
 			jQuery( '.header-wrapper' ).each( function() {
-				jQuery( this ).css( '--fc_header-wrapper-default', jQuery( this ).outerHeight() + 'px' );
+				jQuery( this ).css(
+					'--fc_header-wrapper-default',
+					jQuery( this ).outerHeight() + 'px',
+				);
 			} );
 		}
 		updateHeaderHeight();
@@ -105,12 +109,16 @@ jQuery( function() {
 	jQuery( '.header-nav' ).on( 'click', '.submenu-icon', function() {
 		const parentLi = jQuery( this ).closest( 'li' );
 
-		parentLi.siblings( '.active' )
-			.removeClass( 'active' )
-			.find( 'ul' ).slideUp();
+		parentLi.siblings( '.active' ).removeClass( 'active' ).find( 'ul' ).slideUp();
 
-		parentLi.toggleClass( 'active' ).find( 'ul' ).stop( true, true ).slideToggle();
-		parentLi.parents( 'ul' ).toggleClass( 'disabled-menu', parentLi.hasClass( 'active' ) );
+		parentLi
+			.toggleClass( 'active' )
+			.find( 'ul' )
+			.stop( true, true )
+			.slideToggle();
+		parentLi
+			.parents( 'ul' )
+			.toggleClass( 'disabled-menu', parentLi.hasClass( 'active' ) );
 	} );
 
 	jQuery( '.submenu-icon' ).hover(
@@ -121,36 +129,44 @@ jQuery( function() {
 		function() {
 			// mouseleave
 			jQuery( this ).prev().css( 'color', '' );
-		}
+		},
 	);
 
 	/**
 	 *  Accessibility for Simple menu & Mega menu
 	 */
 	jQuery( '.menu-item-has-children > a' ).on( 'focus blur', function( event ) {
-		jQuery( this ).siblings( '.sub-menu, .mega-menu' ).toggleClass( 'focused', event.type === 'focus' );
+		jQuery( this )
+			.siblings( '.sub-menu, .mega-menu' )
+			.toggleClass( 'focused', event.type === 'focus' );
 	} );
 
 	jQuery( '.sub-menu a, .mega-menu a' ).on( 'focus blur', function( event ) {
-		jQuery( this ).closest( '.sub-menu, .mega-menu' ).toggleClass( 'focused', event.type === 'focus' );
+		jQuery( this )
+			.closest( '.sub-menu, .mega-menu' )
+			.toggleClass( 'focused', event.type === 'focus' );
 	} );
 
 	/**
 	 * Script for Accessibility of html Tags
 	 */
-	jQuery( 'h1, h2, h3, h4, h5, h6,p,li,blockquote,cite,strong,dt,dd,th,td,b,i,u,s,em,small,sup,del,ins,abbr,mark,details,pre,kbd,samp,var,address,code,q,figure,figcaption,caption,.top-bar-text,.top-bar-cross,.copy-right,.post-author-img,.post-author-name,.post-meta-date,.post-date' ).each( function() {
+	jQuery(
+		'h1, h2, h3, h4, h5, h6,p,li,blockquote,cite,strong,dt,dd,th,td,b,i,u,s,em,small,sup,del,ins,abbr,mark,details,pre,kbd,samp,var,address,code,q,figure,figcaption,caption,.top-bar-text,.top-bar-cross,.copy-right,.post-author-img,.post-author-name,.post-meta-date,.post-date',
+	).each( function() {
 		jQuery( this ).attr( {
 			tabindex: 0,
 		} );
 	} );
-	jQuery( '.header-nav li, .blog-nav li, .footer-nav li, .legal-nav li' ).each( function() {
-		const link = jQuery( this ).find( 'a' );
-		if ( link.length > 0 ) {
-			jQuery( this ).removeAttr( 'tabindex' );
-		} else {
-			jQuery( this ).attr( 'tabindex', '0' );
-		}
-	} );
+	jQuery( '.header-nav li, .blog-nav li, .footer-nav li, .legal-nav li' ).each(
+		function() {
+			const link = jQuery( this ).find( 'a' );
+			if ( link.length > 0 ) {
+				jQuery( this ).removeAttr( 'tabindex' );
+			} else {
+				jQuery( this ).attr( 'tabindex', '0' );
+			}
+		},
+	);
 	jQuery( 'form p' ).each( function() {
 		jQuery( this ).removeAttr( 'tabindex' );
 	} );
@@ -195,7 +211,9 @@ jQuery( function() {
 
 			jQuery( '.header-nav li ' ).each( function( i ) {
 				const delay = base + i * step;
-				jQuery( this ).find( 'a' ).css( 'animation-delay', delay + 'ms' );
+				jQuery( this )
+					.find( 'a' )
+					.css( 'animation-delay', delay + 'ms' );
 			} );
 		} );
 	}
@@ -239,8 +257,12 @@ jQuery( function() {
 			gsap.set( slides.eq( current ), { x: '0%', zIndex: 1 } );
 			gsap.set( slides.eq( prev ), { zIndex: 2 } );
 
-			const prevOverlay = slides.eq( prev ).find( '.home-hero-slide-overlay' );
-			const newOverlay = slides.eq( current ).find( '.home-hero-slide-overlay' );
+			const prevOverlay = slides
+				.eq( prev )
+				.find( '.home-hero-slide-overlay' );
+			const newOverlay = slides
+				.eq( current )
+				.find( '.home-hero-slide-overlay' );
 
 			// Reset new slide overlay to 50%
 			gsap.set( newOverlay, { width: '50%' } );
@@ -399,7 +421,6 @@ jQuery( function() {
 					breakpoint: 768,
 					settings: {
 						slidesToShow: 1,
-
 					},
 				},
 			],
@@ -447,14 +468,15 @@ jQuery( function() {
 			touchThreshold: 200,
 			autoplay: true,
 			autoplaySpeed: 3000,
-			prevArrow: '<button type="button" class="slick-prev">← zurück</button>',
-			nextArrow: '<button type="button" class="slick-next">vor →</button>',
+			prevArrow:
+				'<button type="button" class="slick-prev">← zurück</button>',
+			nextArrow:
+				'<button type="button" class="slick-next">vor →</button>',
 			responsive: [
 				{
 					breakpoint: 768,
 					settings: {
 						slidesToShow: 1,
-
 					},
 				},
 			],
@@ -491,45 +513,68 @@ jQuery( function() {
 	// 	}
 	// } );
 
-	if ( jQuery( '.image-alongside-text .iat-image, .applicants-image, .applicants-content, .offering-block-image ,.faq-image ,.media-with-text-content-box' ).length > 0 ) {
+	if (
+		jQuery(
+			'.image-alongside-text .iat-image, .applicants-image, .applicants-content, .offering-block-image ,.faq-image ,.media-with-text-content-box',
+		).length > 0
+	) {
 		gsap.registerPlugin( ScrollTrigger );
-		gsap.utils.toArray( '.image-alongside-text .iat-image, .applicants-image, .applicants-content, .offering-block-image ,.faq-image ,.media-with-text-content-box' ).forEach( ( el ) => {
-			gsap.from( el, {
-				scrollTrigger: {
-					trigger: el,
-					start: 'top 80%',
-					toggleClass: { targets: el, className: 'iat-image-appear' },
-					once: true,
-				},
-			} );
-		} );
-	}
-	if ( jQuery( '.hero-inner-slider.full-width-image .hero-split-text' ).length > 0 ) {
-		gsap.registerPlugin( ScrollTrigger );
-
-		jQuery( function() {
-			jQuery( '.hero-inner-slider.full-width-image .hero-split-text' ).each( function() {
-				const el = jQuery( this );
-				const text = el.text().trim();
-				const wrapped = text.split( '' ).map( function( char ) {
-					return '<span>' + ( char === ' ' ? '&nbsp;' : char ) + '</span>';
-				} ).join( '' );
-				el.html( wrapped );
-
-				gsap.to( el.find( 'span' ), {
-					x: '0%',
-					opacity: 1,
-					ease: 'power3.out',
-					duration: 0.9,
-					stagger: 0.09,
+		gsap.utils
+			.toArray(
+				'.image-alongside-text .iat-image, .applicants-image, .applicants-content, .offering-block-image ,.faq-image ,.media-with-text-content-box',
+			)
+			.forEach( ( el ) => {
+				gsap.from( el, {
 					scrollTrigger: {
-						trigger: el[ 0 ],
+						trigger: el,
 						start: 'top 80%',
-						toggleActions: 'play none none none',
+						toggleClass: {
+							targets: el,
+							className: 'iat-image-appear',
+						},
 						once: true,
 					},
 				} );
 			} );
+	}
+	if (
+		jQuery( '.hero-inner-slider.full-width-image .hero-split-text' ).length >
+		0
+	) {
+		gsap.registerPlugin( ScrollTrigger );
+
+		jQuery( function() {
+			jQuery( '.hero-inner-slider.full-width-image .hero-split-text' ).each(
+				function() {
+					const el = jQuery( this );
+					const text = el.text().trim();
+					const wrapped = text
+						.split( '' )
+						.map( function( char ) {
+							return (
+								'<span>' +
+								( char === ' ' ? '&nbsp;' : char ) +
+								'</span>'
+							);
+						} )
+						.join( '' );
+					el.html( wrapped );
+
+					gsap.to( el.find( 'span' ), {
+						x: '0%',
+						opacity: 1,
+						ease: 'power3.out',
+						duration: 0.9,
+						stagger: 0.09,
+						scrollTrigger: {
+							trigger: el[ 0 ],
+							start: 'top 80%',
+							toggleActions: 'play none none none',
+							once: true,
+						},
+					} );
+				},
+			);
 		} );
 	}
 
@@ -582,7 +627,10 @@ jQuery( function() {
 			const totalFrames = duration / ( 1000 / 60 );
 			const increment = ( targetValue - startValue ) / totalFrames;
 			let animatedValue = startValue;
-			const formatValue = ( value ) => Number.isInteger( targetValue ) ? Math.round( value ) : value.toFixed( 1 );
+			const formatValue = ( value ) =>
+				Number.isInteger( targetValue )
+					? Math.round( value )
+					: value.toFixed( 1 );
 			const updateCounter = () => {
 				animatedValue += increment;
 				if ( animatedValue >= targetValue ) {
@@ -611,7 +659,12 @@ jQuery( function() {
 
 		const isInViewport = ( element ) => {
 			const rect = element[ 0 ].getBoundingClientRect();
-			return rect.bottom >= 0 && rect.top <= ( window.innerHeight || document.documentElement.clientHeight );
+			return (
+				rect.bottom >= 0 &&
+				rect.top <=
+					( window.innerHeight ||
+						document.documentElement.clientHeight )
+			);
 		};
 
 		jQuery( window )
@@ -638,7 +691,13 @@ jQuery( function() {
 
 		function updateSlides() {
 			slides.forEach( ( slide ) => {
-				gsap.to( slide, { x: 0, scale: 0.6, opacity: 0, zIndex: 1, duration: 0.5 } );
+				gsap.to( slide, {
+					x: 0,
+					scale: 0.6,
+					opacity: 0,
+					zIndex: 1,
+					duration: 0.5,
+				} );
 			} );
 
 			const leftIndex = ( current - 1 + total ) % total;
@@ -646,9 +705,30 @@ jQuery( function() {
 
 			const offset = window.innerWidth < 768 ? 40 : 60; // % offset for smaller screens
 
-			gsap.to( slides[ current ], { x: 0, scale: 1, opacity: 1, zIndex: 3, duration: 0.8, ease: 'power3.out' } );
-			gsap.to( slides[ leftIndex ], { x: `-${ offset }%`, scale: 0.6, opacity: 1, zIndex: 2, duration: 0.8, ease: 'power3.out' } );
-			gsap.to( slides[ rightIndex ], { x: `${ offset }%`, scale: 0.6, opacity: 1, zIndex: 2, duration: 0.8, ease: 'power3.out' } );
+			gsap.to( slides[ current ], {
+				x: 0,
+				scale: 1,
+				opacity: 1,
+				zIndex: 3,
+				duration: 0.8,
+				ease: 'power3.out',
+			} );
+			gsap.to( slides[ leftIndex ], {
+				x: `-${ offset }%`,
+				scale: 0.6,
+				opacity: 1,
+				zIndex: 2,
+				duration: 0.8,
+				ease: 'power3.out',
+			} );
+			gsap.to( slides[ rightIndex ], {
+				x: `${ offset }%`,
+				scale: 0.6,
+				opacity: 1,
+				zIndex: 2,
+				duration: 0.8,
+				ease: 'power3.out',
+			} );
 		}
 
 		function nextSlide() {
@@ -685,29 +765,39 @@ jQuery( function() {
 	jQuery( document ).ready( function() {
 		jQuery( '.header-nav li a, .header-nav li span.menu-link' ).hover(
 			function() {
-				jQuery( this ).stop().animate(
-					{ bgX: 0 },
-					{
-						duration: 15000,
-						easing: 'linear',
-						step( now ) {
-							jQuery( this ).css( 'background-position', now + 'px 0' );
+				jQuery( this )
+					.stop()
+					.animate(
+						{ bgX: 0 },
+						{
+							duration: 15000,
+							easing: 'linear',
+							step( now ) {
+								jQuery( this ).css(
+									'background-position',
+									now + 'px 0',
+								);
+							},
 						},
-					}
-				);
+					);
 			},
 			function() {
-				jQuery( this ).stop().animate(
-					{ bgX: 520 },
-					{
-						duration: 15000,
-						easing: 'linear',
-						step( now ) {
-							jQuery( this ).css( 'background-position', now + 'px 0' );
+				jQuery( this )
+					.stop()
+					.animate(
+						{ bgX: 520 },
+						{
+							duration: 15000,
+							easing: 'linear',
+							step( now ) {
+								jQuery( this ).css(
+									'background-position',
+									now + 'px 0',
+								);
+							},
 						},
-					}
-				);
-			}
+					);
+			},
 		);
 	} );
 	gsap.utils.toArray( '.opacity-item' ).forEach( ( item ) => {
@@ -724,7 +814,7 @@ jQuery( function() {
 					start: 'top 85%',
 					toggleActions: 'play none none none',
 				},
-			}
+			},
 		);
 	} );
 
@@ -738,14 +828,19 @@ jQuery( function() {
 	} );
 	if ( jQuery( '.animation-chart' ).length ) {
 		gsap.utils.toArray( '.animation-chart' ).forEach( ( parent ) => {
-			const textGroups = Array.from( parent.querySelectorAll( '.text-animation' ) );
+			const textGroups = Array.from(
+				parent.querySelectorAll( '.text-animation' ),
+			);
 			const lines = Array.from( parent.querySelectorAll( '.chart-line' ) );
 
 			const reset = () => {
 				gsap.set( textGroups, { opacity: 0 } );
 				lines.forEach( ( line ) => {
 					const length = line.getTotalLength();
-					gsap.set( line, { strokeDasharray: length, strokeDashoffset: length } );
+					gsap.set( line, {
+						strokeDasharray: length,
+						strokeDashoffset: length,
+					} );
 				} );
 			};
 
@@ -766,10 +861,16 @@ jQuery( function() {
 			} );
 
 			sortedGroups.forEach( ( textGroup, index ) => {
-				const line = parent.querySelector( '.chart-line#' + textGroup.id );
+				const line = parent.querySelector(
+					'.chart-line#' + textGroup.id,
+				);
 				if ( line ) {
 					tl.to( textGroup, { opacity: 1 }, index * 0.4 );
-					tl.to( line, { strokeDashoffset: 0, ease: 'power2.out' }, index * 0.4 );
+					tl.to(
+						line,
+						{ strokeDashoffset: 0, ease: 'power2.out' },
+						index * 0.4,
+					);
 				}
 			} );
 
@@ -798,14 +899,19 @@ jQuery( document ).ready( function() {
 				const path = line.querySelector( 'path' );
 				if ( path ) {
 					const length = path.getTotalLength();
-					gsap.set( path, { strokeDasharray: length, strokeDashoffset: length } );
+					gsap.set( path, {
+						strokeDasharray: length,
+						strokeDashoffset: length,
+					} );
 				}
 			} );
 		};
 
 		reset();
 
-		const tl = gsap.timeline( { defaults: { duration: 1, ease: 'power3.out' } } );
+		const tl = gsap.timeline( {
+			defaults: { duration: 1, ease: 'power3.out' },
+		} );
 		textGroups.forEach( ( text, i ) => {
 			const line = lines[ i ]?.querySelector( 'path' );
 			tl.to( text, { autoAlpha: 1 }, i * 0.4 );
@@ -827,21 +933,27 @@ jQuery( document ).ready( function() {
 	} );
 } );
 
+document.addEventListener( 'DOMContentLoaded', function() {
+	if ( window.location.hash === '#einblicke-section' ) {
+		const el = document.querySelector( '#einblicke-section' );
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
-	if (window.location.hash === "#einblicke-section") {
-		const el = document.querySelector("#einblicke-section");
-
-		if (el) {
-			setTimeout(() => {
-				el.scrollIntoView({
-					behavior: "smooth",
-					block: "start"
-				});
-			}, 200); // delay helps when content loads late
+		if ( el ) {
+			setTimeout( () => {
+				el.scrollIntoView( {
+					behavior: 'smooth',
+					block: 'start',
+				} );
+			}, 200 ); // delay helps when content loads late
 		}
 	}
-});
+} );
 
+jQuery( document ).ready( function() {
+	jQuery( '.blog-subposts' ).length > 0 &&
+		jQuery( window ).width() > 1003 &&
+		jQuery( '.blog-subposts' ).masonry( {
+			itemSelector: '.blog-subpost',
+			columnWidth: '.blog-subpost',
+			gutter: 30,
+		} );
+} );

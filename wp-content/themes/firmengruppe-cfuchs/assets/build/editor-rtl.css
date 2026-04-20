@@ -8396,6 +8396,9 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 1003px) {
+  .acf-block-preview .blog-subposts .blog-subpost:nth-child(n+4) {
+    margin-top: 0;
+  }
   .acf-block-preview body.shrink .single-service-hero-section .service-logo.left-side {
     transform: translateX(-20px);
   }
