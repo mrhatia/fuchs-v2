@@ -122,191 +122,43 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 
 <div class="page-section">
 	<?php get_template_part( 'partials/content' ); ?>
-	<div class="gl-s128"></div>
+	<div class="gl-s96"></div>
 	<section>
 		<div class="wrapper">
 
-			<div class="section-head d-flex justify-content-between align-items-start">
-				<div class="head-left-section">
-					<div class="hero-split-text">Latest</div>
-					<h2 class="heading-2">
-						Einblickes
-					</h2>
-				</div>
-				<div class="head-right-section">
+			<div class="section-head d-flex justify-content-center align-items-start">
+				<div class="jump-button">
 					<a href="<?php echo esc_url( home_url('/service/hochbau/#einblicke-section') ); ?>"
 					class="button white-button js-back-link">
 						Zurück zu den Einblicken
 					</a>
 				</div>
-
 			</div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-	const btn = document.querySelector(".js-back-link");
+			<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const btn = document.querySelector(".js-back-link");
 
-	if (!btn) return;
+				if (!btn) return;
 
-	const referrer = document.referrer;
+				const referrer = document.referrer;
 
-	// Check if user came from same domain
-	if (referrer && referrer.includes(window.location.origin)) {
+				// Check if user came from same domain
+				if (referrer && referrer.includes(window.location.origin)) {
 
-		let finalUrl = referrer;
+					let finalUrl = referrer;
 
-		// Remove existing hash (if any) and add our section
-		if (finalUrl.includes('#')) {
-			finalUrl = finalUrl.split('#')[0];
-		}
+					// Remove existing hash (if any) and add our section
+					if (finalUrl.includes('#')) {
+						finalUrl = finalUrl.split('#')[0];
+					}
 
-		finalUrl += '#einblicke-section';
+					finalUrl += '#einblicke-section';
 
-		btn.setAttribute("href", finalUrl);
-	}
-});
-</script>
-			<?php
-			if($bst_var_sngl_variation === "manual"){
-				?>
-
-				<div class="post-archive three-columns">
-					<?php
-						if ( $bst_var_sngl_related_projects ) {
-						?>
-							<?php
-								foreach( $bst_var_sngl_related_projects as $key =>  $project_id ){
-									list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($project_id);
-									$terms = get_the_terms( $bst_var_post_id, 'category' );
-
-
-									?>
-
-									<article id="post-<?php the_ID($bst_var_post_id); ?>" <?php post_class( 'post-archive-box column' ); ?>>
-										<div class="post-archive-box-img post-image">
-											<a href="<?php the_permalink($bst_var_post_id); ?>">
-												<?php
-													if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
-														echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
-													} else {
-														echo get_the_post_thumbnail(
-															$bst_var_post_id,
-															'thumb_1000',
-														);
-													}
-												?>
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="post-box-meta d-flex justify-content-between">
-												<div class="ac-post-cat">
-													<?php
-														if ( $terms && ! is_wp_error( $terms ) ) {
-															foreach ( $terms as $term ) {
-																echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-															}
-														}
-													?>
-												</div>
-											</div>
-											<div class="post-archive-box-title post-title">
-												<h4><a href="<?php the_permalink($bst_var_post_id); ?>"><?php echo get_the_title($bst_var_post_id); ?></a> </h4>
-											</div>
-											<div class="bottom-section-button">
-												<a href="<?php the_permalink($bst_var_post_id); ?>">
-													<span>
-														Mehr Infos
-													</span>
-													<div class="plus-button">
-														+
-													</div>
-												</a>
-											</div>
-										</div>
-									</article>
-
-									<?php
-								}
-							?>
-						<?php
-						} ?>
-
-
-
-				</div>
-
-			<?php } else { ?>
-				<div class="post-archive three-columns">
-					<?php
-						$args = array(
-							'post_type'      => 'einblicke',
-							'posts_per_page' => 3,
-							'orderby'        => 'date',
-							'order'          => 'DESC',
-						);
-
-						$bst_query = new WP_Query( $args );
-
-						if ( $bst_query->have_posts() ) :
-							while ( $bst_query->have_posts() ) : $bst_query->the_post();
-							list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults();
-							$terms = get_the_terms( $bst_var_post_id, 'category' );
-
-							?>
-								<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-archive-box column' ); ?>>
-									<div class="post-archive-box-img post-image">
-										<a href="<?php the_permalink(); ?>">
-											<?php
-												if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
-													echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
-												} else {
-													echo get_the_post_thumbnail(
-														$bst_var_post_id,
-														'thumb_1000',
-													);
-												}
-											?>
-										</a>
-									</div>
-									<div class="post-content">
-										<div class="post-box-meta d-flex justify-content-between">
-											<div class="ac-post-cat">
-												<?php
-													if ( $terms && ! is_wp_error( $terms ) ) {
-														foreach ( $terms as $term ) {
-															echo '<a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a> ';
-														}
-													}
-												?>
-											</div>
-										</div>
-										<div class="post-archive-box-title post-title">
-											<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h4>
-										</div>
-										<div class="bottom-section-button">
-											<a href="<?php the_permalink(); ?>">
-												<span>
-													Mehr Infos
-												</span>
-												<div class="plus-button">
-													+
-												</div>
-											</a>
-										</div>
-									</div>
-								</article>
-
-							<?php endwhile;
-							wp_reset_postdata();
-						else :
-							echo '<p>No projects found.</p>';
-						endif;
-						?>
-
-
-
-				</div>
-			<?php } ?>
+					btn.setAttribute("href", finalUrl);
+				}
+			});
+			</script>
 		</div>
 	</section>
 	<div class="gl-s96"></div>

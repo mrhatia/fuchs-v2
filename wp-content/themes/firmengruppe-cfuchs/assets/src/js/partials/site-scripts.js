@@ -627,9 +627,9 @@ jQuery( function() {
 			.trigger( 'scroll' );
 	}
 	// Animation
-	jQuery( '.filter-search' ).one( 'click', function() {
-		jQuery( '.filter' ).slideDown( 400 );
-	} );
+	// jQuery( '.filter-search' ).one( 'click', function() {
+	// 	jQuery( '.filter' ).slideDown( 400 );
+	// } );
 	if ( jQuery( '.gallery-slide' ).length > 0 ) {
 		const slides = document.querySelectorAll( '.gallery-slide' );
 		const total = slides.length;
