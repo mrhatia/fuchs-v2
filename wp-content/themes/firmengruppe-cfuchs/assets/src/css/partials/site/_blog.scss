@@ -839,3 +839,33 @@
 		}
 	}
 }
+
+.blog-subposts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: flex-start;
+	.blog-subpost {
+		&:nth-child(n + 4) {
+			margin-top: 30px;
+		}
+		max-width: 411px;
+		transition: all 0.3s ease-in-out;
+		width: 100%;
+		.blog-slider-image-slider .item {
+			aspect-ratio: initial;
+			width: auto;
+			height: auto;
+			img {
+				width: auto;
+				height: auto;
+				object-fit: initial;
+			}
+		}
+		.blog-content-title {
+			.heading-3 {
+				font-size: var(--fc_font_size_26);
+			}
+		}
+	}
+}

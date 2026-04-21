@@ -7723,6 +7723,34 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .blog-single-post-content .bottom-right a:visited:hover {
   color: var(--fc_orange_dark);
 }
+.blog-subposts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+.blog-subposts .blog-subpost:nth-child(n+4) {
+  margin-top: 30px;
+}
+.blog-subposts .blog-subpost {
+  max-width: 411px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.blog-subposts .blog-subpost .blog-slider-image-slider .item {
+  aspect-ratio: initial;
+  width: auto;
+  height: auto;
+}
+.blog-subposts .blog-subpost .blog-slider-image-slider .item img {
+  width: auto;
+  height: auto;
+  -o-object-fit: initial;
+     object-fit: initial;
+}
+.blog-subposts .blog-subpost .blog-content-title .heading-3 {
+  font-size: var(--fc_font_size_26);
+}
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
@@ -11324,6 +11352,9 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
 }
 @media only screen and (max-width: 1003px) {
+  .blog-subposts .blog-subpost:nth-child(n+4) {
+    margin-top: 0;
+  }
   body.shrink .single-service-hero-section .service-logo.left-side {
     transform: translateX(-20px);
   }
