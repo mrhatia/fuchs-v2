@@ -22,9 +22,8 @@ list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults(
 ?>
 	<section id="page-section" class="page-section">
 		<!-- Content Start -->
-<?php
-				get_template_part( 'partials/content', 'page' );
-
+		<?php
+			get_template_part( 'partials/content', 'page' );
 		?>
 	</section>
 

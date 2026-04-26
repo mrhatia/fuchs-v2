@@ -26,7 +26,7 @@ $bst_var_trcho_feature_post = $bst_fields['bst_var_trcho_feature_post'] ?? null;
 
 $fh_var_tho_slides     = $bst_fields['fh_var_tho_slides'] ?? null;
 
-	$slide_count = count( $fh_var_tho_slides );
+$slide_count = count( $fh_var_tho_slides );
 $slider_class = ( $slide_count <= 1 ) ? 'slider-disable' : '';
 
 

@@ -16,21 +16,26 @@ BaseTheme::block(
 
 		// Block variables.
 
-
+		$cat_column_one_option     = $bst_block_fields['fh_var_thr_column_one_option'] ?? null;
+		$cat_column_two_option     = $bst_block_fields['fh_var_thr_column_two_option'] ?? null;
+		$cat_column_three_option     = $bst_block_fields['fh_var_thr_column_three_option'] ?? null;
 		?>
-<section class="ctn-full-width">
+
+		<section class="ctn-full-width">
 			<div class="wrapper">
 				<form id="filter" class="filter__form listings__form" action="/projects">
-
 					<div class="filter" data-count="3" data-taxonomies="market,region,project-status">
 						<input type="hidden" name="paged" value="1">
 						<div class="filter__inner filter__inner--tags">
 
 							<div class="filter__col">
 
-								<div class="filter__header">
-									<h3 class="filter__heading">Markets</h3>
-								</div>
+
+								<?php if($cat_column_one_option['title']){ ?>
+									<div class="filter__header">
+										<h3 class="filter__heading"><?php echo html_entity_decode($cat_column_one_option['title']); ?></h3>
+									</div>
+								<?php } ?>
 
 
 								<div class="select-dropdown select-type" id="dropdown-categories-select" data-design="select"
@@ -47,10 +52,12 @@ BaseTheme::block(
 										);
 										if ( $terms ) {
 											?>
-											<li class="pill select-dropdown__checkbox select-sort-item categories-select-item active"
-												data-value="">
-												<div class="select-inner-title">Clear</div>
-											</li>
+											<?php if($cat_column_one_option['clear_button_label']){ ?>
+												<li class="pill select-dropdown__checkbox select-sort-item categories-select-item active"
+													data-value="">
+													<div class="select-inner-title"><?php echo html_entity_decode($cat_column_one_option['clear_button_label']); ?></div>
+												</li>
+											<?php } ?>
 
 												<?php
 												foreach ( $terms as $key => $term ) {
@@ -71,9 +78,12 @@ BaseTheme::block(
 							</div>
 							<div class="filter__col">
 
-								<div class="filter__header">
-									<h3 class="filter__heading">Regions</h3>
-								</div>
+
+								<?php if($cat_column_two_option['title']){ ?>
+									<div class="filter__header">
+										<h3 class="filter__heading"><?php echo html_entity_decode($cat_column_two_option['title']); ?></h3>
+									</div>
+								<?php } ?>
 
 
 								<div class="select-dropdown select-type" id="dropdown-regions-select" data-design="select"
@@ -90,10 +100,12 @@ BaseTheme::block(
 										);
 										if ( $terms ) {
 											?>
-												<li class="pill select-dropdown__checkbox select-sort-item regions-select-item active"
-													data-value="">
-													<div class="select-inner-title">Clear Regions</div>
-												</li>
+												<?php if($cat_column_two_option['clear_button_label']){ ?>
+													<li class="pill select-dropdown__checkbox select-sort-item regions-select-item active"
+														data-value="">
+														<div class="select-inner-title"><?php echo html_entity_decode($cat_column_two_option['clear_button_label']); ?></div>
+													</li>
+												<?php } ?>
 
 												<?php
 												foreach ( $terms as $key => $term ) {
@@ -113,10 +125,11 @@ BaseTheme::block(
 								</div>
 							</div>
 							<div class="filter__col">
-
-								<div class="filter__header">
-									<h3 class="filter__heading">Status</h3>
-								</div>
+								<?php if($cat_column_three_option['title']){ ?>
+									<div class="filter__header">
+										<h3 class="filter__heading"><?php echo html_entity_decode($cat_column_three_option['title']); ?></h3>
+									</div>
+								<?php } ?>
 
 
 								<div class="select-dropdown select-type" id="dropdown-status-select" data-design="select"
@@ -133,10 +146,12 @@ BaseTheme::block(
 										);
 										if ( $terms ) {
 											?>
-											<li class="pill select-dropdown__checkbox select-sort-item status-select-item active"
-												data-value="">
-												<div class="select-inner-title">Clear Status</div>
-											</li>
+											<?php if($cat_column_three_option['clear_button_label']){ ?>
+												<li class="pill select-dropdown__checkbox select-sort-item status-select-item active"
+													data-value="">
+													<div class="select-inner-title"><?php echo html_entity_decode($cat_column_three_option['clear_button_label']); ?></div>
+												</li>
+											<?php } ?>
 
 												<?php
 												foreach ( $terms as $key => $term ) {

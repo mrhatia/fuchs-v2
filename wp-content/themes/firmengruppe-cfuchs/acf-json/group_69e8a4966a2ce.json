@@ -1,18 +1,36 @@
 {
-    "key": "group_699fcaf9d587e",
-    "title": "Option - Single Post",
+    "key": "group_69e8a4966a2ce",
+    "title": "Option - Single Job",
     "fields": [
         {
-            "key": "field_69e88b44db96c",
-            "label": "Kicker",
-            "name": "bst_var_osngl_kicker",
+            "key": "field_69e8a4966c64d",
+            "label": "Secondary Navigation Options",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_69e8a4966c659",
+            "label": "Column One Label",
+            "name": "bst_var_osngref_column_one_label",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -24,16 +42,16 @@
             "append": ""
         },
         {
-            "key": "field_69e88b78db96e",
-            "label": "Title",
-            "name": "bst_var_posttitle",
+            "key": "field_69e8a4966c660",
+            "label": "Column Two Label",
+            "name": "bst_var_osngref_column_two_label",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "31",
                 "class": "",
                 "id": ""
             },
@@ -45,46 +63,22 @@
             "append": ""
         },
         {
-            "key": "field_69e88b56db96d",
-            "label": "Text",
-            "name": "bst_var_post_text",
+            "key": "field_69e8a4966c668",
+            "label": "Column Three Label",
+            "name": "",
             "aria-label": "",
-            "type": "textarea",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_699fcb0b21ae2",
-            "label": "Add Select Video",
-            "name": "bst_var_osngl_video",
-            "aria-label": "",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ". MP4, . WebM, MOV",
-            "allow_in_bindings": 0
+            "message": "It will show the current status automatically",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -92,7 +86,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "job"
             }
         ]
     ],
@@ -106,5 +100,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1776847829
+    "modified": 1776854218
 }
