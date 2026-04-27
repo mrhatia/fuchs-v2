@@ -49,6 +49,7 @@ BaseTheme::block(
 								$term_image = get_field( 'bst_var_ctref_image', $term );
 								$bst_var_ctref_kicker = get_field( 'bst_var_ctref_kicker', $term );
 								$bst_var_ctref_block_label = get_field( 'bst_var_ctref_block_label', $term );
+								$bst_var_ctref_block_button = get_field( 'bst_var_ctref_block_button', $term );
 								?>
 
 								<div id="<?php echo esc_attr( $term->slug ); ?>" class="category-single-item">
@@ -119,29 +120,35 @@ BaseTheme::block(
 													$bst_var_trcho_kicker = $bst_fields['bst_var_trcho_kicker'] ?? null;
 
 											?>
-										<div class="category-image-card">
-											<a href="<?php the_permalink(); ?>" class="category-image-card">
-												<div class="single-image">
-													<?php the_post_thumbnail( 'large' ); ?>
-												</div>
+												<div class="category-image-card">
+													<a href="<?php the_permalink(); ?>" class="category-image-card">
+														<!-- if has no thumbnail image then outut default image -->
 
-												<div class="single-image-content">
-													<?php if($bst_var_trcho_kicker){ ?>
-														<div class="small-text">
-															<?php echo esc_html( $bst_var_trcho_kicker ); ?>
+														<div class="single-image">
+															<?php if ( has_post_thumbnail() ) : ?>
+																<?php the_post_thumbnail('large'); ?>
+															<?php else : ?>
+																<img src="<?php echo get_template_directory_uri(); ?>/assets/build/images/default-image.webp" alt="Default Image">
+															<?php endif; ?>
 														</div>
-													<?php } ?>
 
-													<div class="service-title">
-														<?php the_title(); ?>
-													</div>
+														<div class="single-image-content">
+															<?php if($bst_var_trcho_kicker){ ?>
+																<div class="small-text">
+																	<?php echo esc_html( $bst_var_trcho_kicker ); ?>
+																</div>
+															<?php } ?>
 
-													<div class="service-text">
-														<p><?php echo wp_trim_words( get_the_excerpt(), 25 ); ?></p>
-													</div>
+															<div class="service-title">
+																<?php the_title(); ?>
+															</div>
+
+															<div class="service-text">
+																<p><?php echo wp_trim_words( get_the_excerpt(), 25 ); ?></p>
+															</div>
+														</div>
+													</a>
 												</div>
-											</a>
-										</div>
 
 											<?php
 												endwhile;
@@ -150,6 +157,12 @@ BaseTheme::block(
 											?>
 
 										</div>
+										<?php if ( $bst_var_ctref_block_button ) { ?>
+											<div class="gl-s48"></div>
+											<div class="cards-button">
+												<?php echo BaseTheme::button( $bst_var_ctref_block_button, 'button white-button' ); ?>
+											</div>
+										<?php } ?>
 									</div>
 
 								</div>
@@ -238,6 +251,7 @@ BaseTheme::block(
 								$term_image               = get_field( 'bst_var_ctref_image', $term );
 								$bst_var_ctref_kicker     = get_field( 'bst_var_ctref_kicker', $term );
 								$bst_var_ctref_block_label = get_field( 'bst_var_ctref_block_label', $term );
+								$bst_var_ctref_block_button = get_field( 'bst_var_ctref_block_button', $term );
 							?>
 
 								<div id="<?php echo esc_attr( $term->slug ); ?>" class="category-single-item">
@@ -312,9 +326,13 @@ BaseTheme::block(
 													<div class="category-image-card">
 														<a href="<?php the_permalink(); ?>" class="category-image-card">
 
-															<div class="single-image">
-																<?php the_post_thumbnail( 'large' ); ?>
-															</div>
+																<div class="single-image">
+																	<?php if ( has_post_thumbnail() ) : ?>
+																		<?php the_post_thumbnail('large'); ?>
+																	<?php else : ?>
+																		<img src="<?php echo get_template_directory_uri(); ?>/assets/build/images/default-image.webp" alt="Default Image">
+																	<?php endif; ?>
+																</div>
 
 															<div class="single-image-content">
 
@@ -340,6 +358,13 @@ BaseTheme::block(
 											?>
 
 										</div>
+										<?php if ( $bst_var_ctref_block_button ) { ?>
+											<div class="gl-s48"></div>
+
+											<div class="cards-button">
+												<?php echo BaseTheme::button( $bst_var_ctref_block_button, 'button white-button' ); ?>
+											</div>
+										<?php } ?>
 									</div>
 
 								</div>

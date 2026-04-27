@@ -47,6 +47,7 @@
 }
 
 .have-two-columns {
+
 	.post-box-img,
 	.post-archive-box-img {
 		img {
@@ -56,6 +57,7 @@
 }
 
 .post-box-title {
+
 	h2 a,
 	h4 a {
 		display: -webkit-box;
@@ -261,7 +263,7 @@
 .category-nav {
 	position: sticky;
 	top: 67px;
-	z-index: 99;
+	z-index: 8;
 	padding: 1.75rem 0 1.15rem;
 	box-sizing: border-box;
 	background-color: #edf1f3;
@@ -349,10 +351,15 @@
 	}
 }
 
+.cards-button {
+	line-height: 0;
+}
+
 .category-image-card {
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
+
 
 	.single-image {
 		line-height: 0.65;
@@ -476,6 +483,7 @@
 }
 
 @media (max-width: 1024px) {
+
 	.category-single-left,
 	.category-single-right {
 		width: 100%;
@@ -636,6 +644,7 @@
 	align-items: center;
 
 	.bottom-section-button {
+
 		a,
 		a:visited {
 			&:hover {
@@ -715,6 +724,7 @@
 }
 
 .blog-slider-image-slider {
+
 	.slick-prev,
 	.slick-next {
 		transform: initial;
@@ -774,7 +784,9 @@
 
 .blog-single-post-content {
 	margin-top: 40px;
+
 	.blog-publish-date {
+
 		a,
 		a:visited {
 			color: var(--fc_white);
@@ -788,13 +800,16 @@
 			}
 		}
 	}
+
 	.blog-content-title .heading-3 {
 		font-size: var(--fc_font_size_60);
 	}
+
 	.blog-content-text p {
 		display: block;
 		margin-bottom: 40px;
 	}
+
 	.highlight-quote {
 		margin: 10px 0 40px;
 		font-size: var(--fc_font_size_26);
@@ -805,8 +820,10 @@
 			font-size: var(--fc_font_size_26);
 		}
 	}
+
 	.bottom-section-button {
 		.tag {
+
 			a,
 			a:visited {
 				font-size: 14px;
@@ -820,6 +837,7 @@
 				border-radius: 2px;
 				box-sizing: border-box;
 				transition: all 0.3s ease-in-out;
+
 				&:hover {
 					background-color: var(--fc_orange_dark);
 					color: #fff;
@@ -827,12 +845,15 @@
 			}
 		}
 	}
+
 	.bottom-right {
+
 		a,
 		a:visited {
 			font-size: 12px;
 			color: white;
 			transition: all 0.3s ease-in-out;
+
 			&:hover {
 				color: var(--fc_orange_dark);
 			}
@@ -845,23 +866,28 @@
 	flex-wrap: wrap;
 	gap: 30px;
 	justify-content: flex-start;
+
 	.blog-subpost {
 		&:nth-child(n + 4) {
 			margin-top: 30px;
 		}
+
 		max-width: 411px;
 		transition: all 0.3s ease-in-out;
 		width: 100%;
+
 		.blog-slider-image-slider .item {
 			aspect-ratio: initial;
 			width: auto;
 			height: auto;
+
 			img {
 				width: auto;
 				height: auto;
 				object-fit: initial;
 			}
 		}
+
 		.blog-content-title {
 			.heading-3 {
 				font-size: var(--fc_font_size_26);

@@ -39,6 +39,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_69eeb883f6271",
+            "label": "Title",
+            "name": "bst_var_blk_bltsr_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_68ea7dc987afe",
             "label": "Select Variation",
             "name": "bst_var_blk_bltsr_variation",
@@ -147,5 +168,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1760199925
+    "display_title": "",
+    "modified": 1777252505
 }

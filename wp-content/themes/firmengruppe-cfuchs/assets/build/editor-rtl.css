@@ -2810,6 +2810,8 @@ Mixin for transition
 }
 .acf-block-preview .section-head .heading-2 {
   color: var(--fc_white);
+  z-index: 1;
+  position: relative;
 }
 .acf-block-preview .section-head .hero-split-text {
   position: absolute;
@@ -2830,7 +2832,7 @@ Mixin for transition
   letter-spacing: -1.7px;
   width: -moz-max-content;
   width: max-content;
-  z-index: -1;
+  z-index: 0;
   color: rgba(255, 255, 255, 0.7215686275);
   text-transform: uppercase;
 }
@@ -4884,11 +4886,11 @@ Mixin for transition
   background-color: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  width: 100%;
+  width: 100% !important;
   height: 60%;
   border-radius: 7px;
   box-sizing: border-box;
-  padding: 0 16px;
+  padding: 30px 20px;
   float: right;
   transition: height 0.7s ease, padding 0.7s ease;
   perspective: 650px;
@@ -4906,9 +4908,11 @@ Mixin for transition
 .acf-block-preview #segmentText {
   text-align: right;
 }
+.acf-block-preview #segmentImage {
+  height: 50px;
+}
 .acf-block-preview #segmentTitle {
   transition: padding 0.7s ease;
-  padding: 20px;
   font-size: calc(19px + (35 - 19) * (100vw - 200px) / (1314 - 200));
 }
 @media screen and (max-width: 200px) {
@@ -4924,7 +4928,6 @@ Mixin for transition
 .acf-block-preview #segmentText {
   width: 100%;
   transition: padding 0.7s ease, line-height 0.7s ease;
-  padding: 15px 20px 20px;
   font-size: calc(14px + (21 - 14) * (100vw - 200px) / (1314 - 200));
 }
 @media screen and (max-width: 200px) {

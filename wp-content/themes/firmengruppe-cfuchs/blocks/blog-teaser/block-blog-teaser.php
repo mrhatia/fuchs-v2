@@ -15,13 +15,25 @@ BaseTheme::block(
 	function ( $bst_block_id, $bst_block_name, $bst_block_fields, $bst_option_fields ) {
 
 		// Block variables.
+		$bst_var_blk_bltsr_title     = $bst_block_fields['bst_var_blk_bltsr_title'] ?? null;
 		$bst_var_blk_bltsr_variation     = $bst_block_fields['bst_var_blk_bltsr_variation'] ?? null;
 		$bst_var_blk_bltsr_blog_posts	= $bst_block_fields['bst_var_blk_bltsr_blog_posts'] ?? null;
 		?>
 
 		<?php if($bst_var_blk_bltsr_variation === "manual" && $bst_var_blk_bltsr_blog_posts){ ?>
 			<section class="ctn-green-inner">
+				<div class="gl-s128"></div>
+
 				<div class="wrapper">
+					<?php if ( $bst_var_blk_bltsr_title ) {  ?>
+						<div class="section-head">
+							<div class="hero-split-text">
+								<?php echo html_entity_decode( $bst_var_blk_bltsr_title ); ?>
+							</div>
+							<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_blk_bltsr_title ); ?></h1>
+						</div>
+						<div class="gl-s72"></div>
+					<?php } ?>
 					<div class="blog-teaser-slider">
 
 						<?php foreach( $bst_var_blk_bltsr_blog_posts as $key =>  $post_id ){
@@ -47,6 +59,16 @@ BaseTheme::block(
 										<?php if(has_excerpt($bst_var_post_id)){ ?>
 											<p><?php echo html_entity_decode(get_the_excerpt($bst_var_post_id)) ?></p>
 										<?php } ?>
+										<div class="bottom-section-button">
+											<a href="<?php the_permalink($bst_var_post_id); ?>">
+												<span>
+													Mehr Infos
+												</span>
+												<div class="plus-button">
+													+
+												</div>
+											</a>
+										</div>
 									</div>
 								</div>
 
@@ -56,10 +78,24 @@ BaseTheme::block(
 
 					</div>
 				</div>
+				<div class="gl-s128"></div>
+
 			</section>
 		<?php } else { ?>
-				<section class="ctn-green">
+				<section class="ctn-green-inner">
+				<div class="gl-s128"></div>
+
 				<div class="wrapper">
+					<?php if ( $bst_var_blk_bltsr_title ) {  ?>
+						<div class="section-head">
+							<div class="hero-split-text">
+								<?php echo html_entity_decode( $bst_var_blk_bltsr_title ); ?>
+							</div>
+							<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_blk_bltsr_title ); ?></h1>
+						</div>
+												<div class="gl-s72"></div>
+
+					<?php } ?>
 					<div class="blog-teaser-slider">
 
 						<?php
@@ -95,6 +131,16 @@ BaseTheme::block(
 											<?php if(has_excerpt($bst_var_post_id)){ ?>
 												<p><?php echo html_entity_decode(get_the_excerpt($bst_var_post_id)) ?></p>
 											<?php } ?>
+											<div class="bottom-section-button">
+													<a href="<?php the_permalink($bst_var_post_id); ?>">
+														<span>
+															Mehr Infos
+														</span>
+														<div class="plus-button">
+															+
+														</div>
+													</a>
+												</div>
 										</div>
 									</div>
 
@@ -106,6 +152,8 @@ BaseTheme::block(
 							?>
 					</div>
 				</div>
+				<div class="gl-s128"></div>
+
 			</section>
 		<?php } ?>
 

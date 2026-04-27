@@ -36,6 +36,7 @@ BaseTheme::block(
 						<div id="pieText" class="col-md-7 text-container">
 							<div class="panel">
 								<div class="content-wrapper">
+									<img id="segmentImage" src="" alt="" />
 									<h1 id="segmentTitle">Select Fragment</h1>
 									<p id="segmentText">Detailed information about internal systems and business
 										operations.</p>
@@ -54,7 +55,7 @@ BaseTheme::block(
 		<style>
 			.color-white { color: #ffffff; }
 			.color-black { color: #000000; }
-			.color-green { color: #016c50; }
+			.color-green { color: #f2976a; }
 			.color-orange { color: #e27602; }
 		</style>
 
@@ -65,8 +66,9 @@ BaseTheme::block(
 					{
 						Title: 'Hochbau',
 						Amount: 1300,
-						Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum metus vel odio convallis condimentum. Integer ullamcorper ipsum vel dui varius congue. Nulla facilisi. Morbi molestie tortor libero, ac placerat urna mollis ac. Vestibulum id ipsum mauris.',
-						Class: 'color-green'
+						Description: 'Lorem ipsum...',
+						Class: 'color-green',
+						Image: 'http://fuchs-v2.local/wp-content/themes/firmengruppe-cfuchs/assets/build/images/site-logo.svg' // 👈 add this
 					},
 					{
 						Title: 'Tiefbau',
@@ -124,7 +126,7 @@ BaseTheme::block(
 
 				const color=d3.scaleOrdinal()
 				.domain(titles)
-				.range(data.map(d=>d.Class==='color-white'?'#ffffff':d.Class==='color-green'?'#016c50':'#e27602'));
+				.range(data.map(d=>d.Class==='color-white'?'#e1831e':d.Class==='color-green'?'#ffffff':'#e27602'));
 
 				const pie=d3.pie().sort(null).value(d=>+d.Amount);
 				let prevSegment=null;
@@ -163,26 +165,61 @@ BaseTheme::block(
 				.attr('d',arc)
 				.style('fill',d=>color(d.data.Title))
 				.on('click',function(d){
-				if(!buttonToggle){return;}
-				buttonToggle=false;
-				switchToggle();
-				change(d,this);
+					if(!buttonToggle){return;}
+					buttonToggle=false;
+					switchToggle();
+					change(d,this);
 
-				const tl=new TimelineLite();
-				tl.to('.content-wrapper',0.5,{rotationX:'90deg',opacity:0,onComplete:()=>jQuery('.content-wrapper').hide()})
-				.to('.panel',0.5,{
-				width:'0%',
-				opacity:0.05,
-				onComplete:()=>{
-				const sliceColor=color(d.data.Title);
-				const textColor=(sliceColor.toLowerCase()==='#ffffff')?'color-black':'color-white';
-				const textHex=(sliceColor.toLowerCase()==='#ffffff')?'#000000':'#ffffff';
-				jQuery('#segmentTitle').replaceWith(`<h1 id="segmentTitle" class="${textColor}" style="color:${textHex}">${d.data.Title} - ${Math.round((d.data.Amount/total)*1000)/10}%</h1>`);
-				jQuery('#segmentText').replaceWith(`<p id="segmentText" class="${textColor}" style="color:${textHex}">${d.data.Description}</p>`);
-				jQuery('.panel').css('background-color',ColorLuminance(sliceColor,-0.3));
-				}}).to('.panel',0.5,{width:'100%',opacity:1,onComplete:()=>jQuery('.content-wrapper').show()})
-				.to('.content-wrapper',0.5,{rotationX:'0deg',opacity:1});
+
+					const tl=new TimelineLite();
+					tl.to('.content-wrapper',0.5,{rotationX:'90deg',opacity:0,onComplete:()=>jQuery('.content-wrapper').hide()})
+					.to('.panel',0.5,{
+					width:'0%',
+					opacity:0.05,
+					onComplete:()=>{
+					const sliceColor=color(d.data.Title);
+					const textColor=(sliceColor.toLowerCase()==='#ffffff')?'color-black':'color-white';
+					const textHex=(sliceColor.toLowerCase()==='#ffffff')?'#000000':'#ffffff';
+					jQuery('#segmentTitle').replaceWith(`<h1 id="segmentTitle" class="${textColor}" style="color:${textHex}">${d.data.Title} - ${Math.round((d.data.Amount/total)*1000)/10}%</h1>`);
+					jQuery('#segmentText').replaceWith(`<p id="segmentText" class="${textColor}" style="color:${textHex}">${d.data.Description}</p>`);
+					// update image
+					const imgEl = jQuery('#segmentImage');
+
+					if (d.data.Image) {
+						imgEl.attr('src', d.data.Image).show();
+					} else {
+						imgEl.attr('src', '').hide(); // hide if no image
+					}
+
+					jQuery('.panel').css('background-color',ColorLuminance(sliceColor,-0.3));
+					}}).to('.panel',0.5,{width:'100%',opacity:1,onComplete:()=>jQuery('.content-wrapper').show()})
+					.to('.content-wrapper',0.5,{rotationX:'0deg',opacity:1});
 				});
+
+				// ✅ Auto select first slice on load
+				setTimeout(() => {
+					const first = svg.selectAll('path').nodes()[0];
+					const firstData = pie(data)[0];
+
+					if (first) {
+						change(firstData, first);
+
+						const sliceColor = color(firstData.data.Title);
+						const textColor = (sliceColor.toLowerCase() === '#ffffff') ? 'color-black' : 'color-white';
+						const textHex = (sliceColor.toLowerCase() === '#ffffff') ? '#000000' : '#ffffff';
+
+						jQuery('#segmentTitle').html(
+							`${firstData.data.Title} - ${Math.round((firstData.data.Amount/total)*1000)/10}%`
+						).attr('class', textColor).css('color', textHex);
+
+						jQuery('#segmentText').html(firstData.data.Description)
+							.attr('class', textColor).css('color', textHex);
+
+						jQuery('#segmentImage').attr('src', firstData.data.Image);
+
+						jQuery('.panel').css('background-color', ColorLuminance(sliceColor, -0.3));
+					}
+				}, 500);
 
 				svg.selectAll('.pie-label')
 				.data(pie(data))

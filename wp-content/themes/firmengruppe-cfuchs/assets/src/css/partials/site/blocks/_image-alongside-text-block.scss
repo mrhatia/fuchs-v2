@@ -151,11 +151,11 @@
 		background-color: rgb(255 255 255 / 9%);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
-		width: 100%;
+		width: 100% !important;
 		height: 60%;
 		border-radius: 7px;
 		box-sizing: border-box;
-		padding: 0 16px;
+		padding: 30px 20px;
 		float: left;
 		transition:
 			height 0.7s ease,
@@ -177,7 +177,7 @@
 // Responsive Text Mixin
 
 @function strip-unit($number) {
-	@if type-of($number) == "number" and not unitless($number) {
+	@if type-of($number)=="number" and not unitless($number) {
 		@return $number / ($number * 0 + 1);
 	}
 
@@ -185,21 +185,16 @@
 }
 
 // Responsive text mixin
-@mixin responsiveText(
-	$minSize,
+@mixin responsiveText($minSize,
 	$maxSize: 28px,
 	$minWidth: 450px,
-	$maxWidth: 900px
-) {
+	$maxWidth: 900px) {
 	$mxS: strip-unit($maxSize);
 	$mnS: strip-unit($minSize);
 	$mxW: strip-unit($maxWidth);
 	$mnW: strip-unit($minWidth);
 
-	font-size: calc(
-		#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) /
-			(#{$mxW} - #{$mnW})
-	);
+	font-size: calc(#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW}));
 
 	@media screen and (max-width: $minWidth) {
 		font-size: $minSize;
@@ -215,10 +210,13 @@
 	text-align: left;
 }
 
+#segmentImage {
+	height: 50px;
+}
+
 #segmentTitle {
 	//width: 100%;
 	transition: padding 0.7s ease;
-	padding: 20px;
 	@include responsiveText(19px, 35px, 200px, 1314px);
 }
 
@@ -227,7 +225,6 @@
 	transition:
 		padding 0.7s ease,
 		line-height 0.7s ease;
-	padding: 15px 20px 20px;
 	@include responsiveText(14px, 21px, 200px, 1314px);
 	line-height: 28px;
 	margin: 0;
