@@ -121,7 +121,7 @@ BaseTheme::block(
 
 											?>
 												<div class="category-image-card">
-													<a href="<?php the_permalink(); ?>" class="category-image-card">
+													<a href="<?php the_permalink(); ?>" class="card-link">
 														<!-- if has no thumbnail image then outut default image -->
 
 														<div class="single-image">
@@ -324,7 +324,7 @@ BaseTheme::block(
 											?>
 
 													<div class="category-image-card">
-														<a href="<?php the_permalink(); ?>" class="category-image-card">
+														<a href="<?php the_permalink(); ?>" class="card-link">
 
 																<div class="single-image">
 																	<?php if ( has_post_thumbnail() ) : ?>

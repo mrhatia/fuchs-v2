@@ -15,9 +15,12 @@ BaseTheme::block(
 	function ( $bst_block_id, $bst_block_name, $bst_block_fields, $bst_option_fields ) {
 
 		// Block variables.
-		$fh_var_blk_pie_links        = $bst_block_fields['fh_var_blk_pie_links'] ?? null;
 		$fh_var_blk_pie_logo        = $bst_block_fields['fh_var_blk_pie_logo'] ?? null;
-		$fh_var_blk_pie_background_image        = $bst_block_fields['fh_var_blk_pie_background_image'] ?? null;
+
+		$fh_var_blk_pie_chart_tabs        = $bst_block_fields['fh_var_blk_pie_chart_tabs'] ?? null;
+
+
+
 		?>
 
 
@@ -62,57 +65,33 @@ BaseTheme::block(
 				<script>
 				function midAngle(d){return(d.startAngle+d.endAngle)/2;}
 
+
 				const data = [
+				<?php if( $fh_var_blk_pie_chart_tabs ): ?>
+					<?php foreach( $fh_var_blk_pie_chart_tabs as $item ):
+						$label = $item['label'] ?? '';
+						$value = $item['value'] ?? 0;
+						$title = $item['title'] ?? '';
+						$text  = $item['text'] ?? '';
+						$logo  = $item['logo'] ?? '';
+
+						// fallback color rotation (same behavior maintain karne ke liye)
+						static $i = 0;
+						$colors = ['color-green','color-white','color-orange'];
+						$class = $colors[$i % 3];
+						$i++;
+					?>
 					{
-						Title: 'Hochbau',
-						Amount: 1300,
-						Description: 'Lorem ipsum...',
-						Class: 'color-green',
-						Image: 'http://fuchs-v2.local/wp-content/themes/firmengruppe-cfuchs/assets/build/images/site-logo.svg' // 👈 add this
+						Title: '<?php echo esc_js($title ? $title : $label); ?>',
+						Amount: <?php echo (int)$value; ?>,
+						Description: '<?php echo esc_js($text); ?>',
+						Class: '<?php echo $class; ?>',
+						Image: '<?php echo esc_url($logo); ?>'
 					},
-					{
-						Title: 'Tiefbau',
-						Amount: 1000,
-						Description: 'In hac habitasse platea dictumst. Curabitur lacus neque, congue ac quam a, sagittis accumsan mauris. Suspendisse et nisl eros. Fusce nulla mi, tincidunt non faucibus vitae, aliquam vel dolor. Maecenas imperdiet, elit eget condimentum fermentum, sem lorem fringilla felis, vitae cursus lorem elit in risus.',
-						Class: 'color-white'
-					},
-					{
-						Title: 'Projektentwicklung',
-						Amount: 1750,
-						Description: 'Aenean faucibus, risus sed eleifend rutrum, leo diam porttitor mauris, a eleifend ipsum ipsum ac ex. Nam scelerisque feugiat augue ac porta. Morbi massa ante, interdum sed nulla nec, finibus cursus augue. Phasellus nunc neque, blandit a nunc ut, mattis elementum arcu.',
-						Class: 'color-orange'
-					},
-					{
-						Title: 'Metallbau',
-						Amount: 600,
-						Description: 'Laboriosam pariatur recusandae ipsum nisi, saepe doloremque nobis eaque omnis commodi dolor porro? Error, deserunt veritatis officiis porro libero et suscipit ad. Ipsum dolor sit amet consectetur adipisicing elit.',
-						Class: 'color-green'
-					},
-					{
-						Title: 'Kanaltechnik',
-						Amount: 2000,
-						Description: 'Sit amet consectetur adipisicing elit. Nemo totam perspiciatis tenetur quod ipsam voluptas et consequatur labore harum obcaecati alias voluptate id sit, praesentium ratione nostrum maxime reprehenderit.',
-						Class: 'color-white'
-					},
-					{
-						Title: 'Baulogistik',
-						Amount: 1500,
-						Description: 'Consectetur adipisicing elit. Architecto illum quidem eligendi, consectetur corporis esse enim eveniet distinctio beatae dignissimos recusandae.',
-						Class: 'color-orange'
-					},
-					{
-						Title: 'Gerüstbau',
-						Amount: 750,
-						Description: 'Beatae, aperiam voluptas aut atque laborum dolorem fuga. Corporis aperiam, illo nobis suscipit perferendis natus doloremque.',
-						Class: 'color-green'
-					},
-					{
-						Title: 'Invest',
-						Amount: 400,
-						Description: 'Amet consectetur, adipisicing elit. Ipsum perferendis rem illo explicabo voluptate, voluptatum id expedita sapiente magni laboriosam.',
-						Class: 'color-white'
-					}
+					<?php endforeach; ?>
+				<?php endif; ?>
 				];
+
 
 				const width=parseInt(d3.select('#pieChart').style('width'),10);
 				const height=width;
@@ -126,7 +105,7 @@ BaseTheme::block(
 
 				const color=d3.scaleOrdinal()
 				.domain(titles)
-				.range(data.map(d=>d.Class==='color-white'?'#e1831e':d.Class==='color-green'?'#ffffff':'#e27602'));
+				.range(data.map(d=>d.Class==='color-white'?'#e1831e':d.Class==='color-green'?'#e37806':'#be6200'));
 
 				const pie=d3.pie().sort(null).value(d=>+d.Amount);
 				let prevSegment=null;
@@ -191,7 +170,7 @@ BaseTheme::block(
 						imgEl.attr('src', '').hide(); // hide if no image
 					}
 
-					jQuery('.panel').css('background-color',ColorLuminance(sliceColor,-0.3));
+					jQuery('.panel').css('background-color',ColorLuminance(sliceColor));
 					}}).to('.panel',0.5,{width:'100%',opacity:1,onComplete:()=>jQuery('.content-wrapper').show()})
 					.to('.content-wrapper',0.5,{rotationX:'0deg',opacity:1});
 				});
@@ -209,7 +188,7 @@ BaseTheme::block(
 						const textHex = (sliceColor.toLowerCase() === '#ffffff') ? '#000000' : '#ffffff';
 
 						jQuery('#segmentTitle').html(
-							`${firstData.data.Title} - ${Math.round((firstData.data.Amount/total)*1000)/10}%`
+							`${firstData.data.Title}`
 						).attr('class', textColor).css('color', textHex);
 
 						jQuery('#segmentText').html(firstData.data.Description)
@@ -217,7 +196,7 @@ BaseTheme::block(
 
 						jQuery('#segmentImage').attr('src', firstData.data.Image);
 
-						jQuery('.panel').css('background-color', ColorLuminance(sliceColor, -0.3));
+						jQuery('.panel').css('background-color', ColorLuminance(sliceColor));
 					}
 				}, 500);
 
@@ -256,4 +235,3 @@ BaseTheme::block(
 			</script>
 	<?php }
 );
-

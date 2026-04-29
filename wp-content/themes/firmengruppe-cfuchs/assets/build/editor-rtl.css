@@ -4084,6 +4084,17 @@ Mixin for transition
 .acf-block-preview .image-alongside-text .iat-single-image img {
   aspect-ratio: 635/423;
 }
+.acf-block-preview .cfuchs-map-section {
+  padding: 0 !important;
+}
+.acf-block-preview .cfuchs-map-section .cfuchs-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+}
+.acf-block-preview .cfuchs-map-section .cfuchs-legend {
+  display: none;
+}
 .acf-block-preview {
   /*-------------------------------------------------
   >> Basic styles for Blog post
@@ -4909,7 +4920,8 @@ Mixin for transition
   text-align: right;
 }
 .acf-block-preview #segmentImage {
-  height: 50px;
+  height: 45px;
+  margin-bottom: 15px;
 }
 .acf-block-preview #segmentTitle {
   transition: padding 0.7s ease;

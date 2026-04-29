@@ -2147,3 +2147,19 @@ body {
 		}
 	}
 }
+
+
+.cfuchs-map-section {
+	padding: 0 !important;
+
+	.cfuchs-container {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0 0;
+	}
+
+	.cfuchs-legend {
+
+		display: none;
+	}
+}

@@ -66,8 +66,8 @@
         },
         {
             "key": "field_6937266c6758d",
-            "label": "Links",
-            "name": "fh_var_blk_pie_links",
+            "label": "Tabs",
+            "name": "fh_var_blk_pie_chart_tabs",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -81,17 +81,17 @@
             "layout": "block",
             "pagination": 0,
             "min": 0,
-            "max": 8,
+            "max": 0,
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_693726cd5f5a6",
-                    "label": "Add Link",
-                    "name": "link",
+                    "key": "field_69f14be938cfb",
+                    "label": "Label",
+                    "name": "label",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -100,37 +100,110 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6937266c6758d"
+                },
+                {
+                    "key": "field_69f14bfd38cfc",
+                    "label": "Value",
+                    "name": "value",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6937266c6758d"
+                },
+                {
+                    "key": "field_69f14c0938cfd",
+                    "label": "Logo",
+                    "name": "logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6937266c6758d"
+                },
+                {
+                    "key": "field_69f14c1c38cfe",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6937266c6758d"
+                },
+                {
+                    "key": "field_69f14c3038cff",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "parent_repeater": "field_6937266c6758d"
                 }
             ]
-        },
-        {
-            "key": "field_693800a2ee2d0",
-            "label": "Background Image",
-            "name": "fh_var_blk_pie_background_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
         }
     ],
     "location": [
@@ -151,5 +224,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765292622
+    "display_title": "",
+    "modified": 1777424078
 }

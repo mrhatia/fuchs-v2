@@ -360,6 +360,10 @@
 	overflow: hidden;
 	cursor: pointer;
 
+	a.card-link {
+		display: inline-block;
+	}
+
 
 	.single-image {
 		line-height: 0.65;
@@ -378,6 +382,11 @@
 	.single-image-content {
 		position: absolute;
 		inset: 0;
+		bottom: 0;
+		left: 0;
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
 		padding: 20px;
 		display: flex;
 		flex-direction: column;
@@ -717,12 +726,6 @@
 	}
 }
 
-.blog-subpost {
-	&:nth-child(n + 2) {
-		margin-top: var(--fc_space_58);
-	}
-}
-
 .blog-slider-image-slider {
 
 	.slick-prev,
@@ -864,14 +867,12 @@
 .blog-subposts {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 40px;
 	justify-content: flex-start;
 
-	.blog-subpost {
-		&:nth-child(n + 4) {
-			margin-top: 30px;
-		}
 
+	.blog-subpost {
+		margin-bottom: 30px;
 		max-width: 411px;
 		transition: all 0.3s ease-in-out;
 		width: 100%;

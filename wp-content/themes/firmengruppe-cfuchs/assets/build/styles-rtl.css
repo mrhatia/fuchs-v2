@@ -3212,19 +3212,11 @@ header {
 >> Styles for desktop menu
 -------------------------------------------------*/
 @media (min-width: 1024px) {
-  .header-nav ul li:hover > ul,
-  .menu-item-has-children ul.focused,
-  .header-nav ul li a:focus-visible + ul {
-    opacity: 1;
-    visibility: visible;
-    overflow: visible;
-  }
   .header-nav ul ul {
-    animation-delay: 0.6s;
+    height: 0;
+    overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
   }
 }
 .header-navigation {
@@ -3311,10 +3303,7 @@ header {
 .header-nav ul ul {
   right: 0px;
   width: 100%;
-  opacity: 0;
   background-color: var(--fc_color_primary);
-  visibility: hidden;
-  padding: 20px 0;
   border-radius: 0;
   position: absolute;
   top: 64px;
@@ -3333,8 +3322,12 @@ header {
   width: 100%;
   border: none !important;
 }
+.header-nav ul ul li:first-child {
+  padding-top: 20px;
+}
 .header-nav ul ul li:last-child {
   margin: 0;
+  padding-bottom: 20px;
 }
 .header-nav ul ul li a,
 .header-nav ul ul li a:visited,
@@ -3353,6 +3346,18 @@ header {
   font-weight: 400;
   font-style: normal;
 }
+.header-nav ul ul li a::before,
+.header-nav ul ul li a:visited::before,
+.header-nav ul ul li span.menu-link::before {
+  content: "+";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  color: var(--fc_white);
+  font-size: 24px;
+}
 .header-nav ul ul li a::after,
 .header-nav ul ul li a:visited::after,
 .header-nav ul ul li span.menu-link::after {
@@ -3364,6 +3369,19 @@ header {
 .header-nav ul ul li a:hover,
 .header-nav ul ul li span.menu-link:hover {
   color: rgba(255, 255, 255, 0.7);
+  padding-right: 20px;
+}
+.header-nav ul ul li a:hover::before,
+.header-nav ul ul li span.menu-link:hover::before {
+  opacity: 1;
+}
+.header-nav ul ul li.current-menu-item > a, .header-nav ul ul li.current-menu-parent > a {
+  color: var(--fc_orange_dark) !important;
+  padding-right: 20px;
+}
+.header-nav ul ul li.current-menu-item > a::before, .header-nav ul ul li.current-menu-parent > a::before {
+  opacity: 1;
+  color: var(--fc_orange_dark);
 }
 .header-nav ul ul li.current-menu-item > a, .header-nav ul ul li.current-menu-parent > a,
 .header-nav ul ul li a:hover,
@@ -7073,6 +7091,17 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .image-alongside-text .iat-single-image img {
   aspect-ratio: 635/423;
 }
+.cfuchs-map-section {
+  padding: 0 !important;
+}
+.cfuchs-map-section .cfuchs-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+}
+.cfuchs-map-section .cfuchs-legend {
+  display: none;
+}
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
@@ -7348,6 +7377,9 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   overflow: hidden;
   cursor: pointer;
 }
+.category-image-card a.card-link {
+  display: inline-block;
+}
 .category-image-card .single-image {
   line-height: 0.65;
 }
@@ -7362,6 +7394,11 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .category-image-card .single-image-content {
   position: absolute;
   inset: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -7616,9 +7653,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   height: 17px;
   margin: 0;
 }
-.blog-subpost:nth-child(n+2) {
-  margin-top: var(--fc_space_58);
-}
 .blog-slider-image-slider .slick-prev,
 .blog-slider-image-slider .slick-next {
   transform: initial;
@@ -7731,13 +7765,11 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .blog-subposts {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   justify-content: flex-start;
 }
-.blog-subposts .blog-subpost:nth-child(n+4) {
-  margin-top: 30px;
-}
 .blog-subposts .blog-subpost {
+  margin-bottom: 30px;
   max-width: 411px;
   transition: all 0.3s ease-in-out;
   width: 100%;
@@ -8573,7 +8605,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   text-align: right;
 }
 #segmentImage {
-  height: 50px;
+  height: 45px;
+  margin-bottom: 15px;
 }
 #segmentTitle {
   transition: padding 0.7s ease;

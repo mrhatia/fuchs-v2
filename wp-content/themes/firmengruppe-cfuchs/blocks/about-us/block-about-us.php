@@ -1,170 +1,202 @@
 <?php
 /**
  * Block Name: Image Collage
- *
- * The template for displaying the custom gutenberg block named Image Collage.
- *
- * @link https://www.advancedcustomfields.com/resources/blocks/
- *
- * @package FUCHS Package
- * @since 1.0.0
  */
 
 BaseTheme::block(
 	$block,
 	function ( $bst_block_id, $bst_block_name, $bst_block_fields, $bst_option_fields ) {
 
-		// Block variables.
-
-		$bst_var_blk_coll_title        = $bst_block_fields['bst_var_blk_coll_title'] ?? null;
-		$bst_var_blk_coll_text        = $bst_block_fields['bst_var_blk_coll_text'] ?? null;
-		$bst_var_blk_coll_sub_title        = $bst_block_fields['bst_var_blk_coll_sub_title'] ?? null;
-		$bst_var_blk_coll_project_info        = $bst_block_fields['bst_var_blk_coll_project_info'] ?? null;
-		$bst_var_blk_coll_collage_images        = $bst_block_fields['bst_var_blk_coll_collage_images'] ?? null;
-
-
+		$bst_var_blk_about_box = $bst_block_fields['bst_var_blk_about_box'] ?? null;
 		?>
 
-		<section class="ctn-full-width">
-			<div class="wrapper">
-				<div class="company-value-chart">
-					<div class="item opacity-item company-value-chart">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/value-chart.png" alt="">
-						</div>
-					</div>
-					<div class="item  simple-text  animation-item" style="background-color: #ff5f14;">
-						<h2 class="heading-2">
-							Unsere Werte
-						</h2>
-					</div>
-					<div class="item opacity-item" style="background-color: #007857;">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h8-img-03.jpg" alt="">
-						</div>
-					</div>
-					<div class="item content-main  animation-item" style="background-color: #007857;">
-						<div class="content">
-							<h2 class="heading-4">
-								Was die Firmengruppe
-								CFuchs auszeichnet
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo ligula eget
-								dolor
-								Aenean massa. Cum sociis
-								Theme natoque penatibus et magnis dis parturient montes , nascetur .
-							</p>
-							<a href="#" class="button dark-orange-button">Mehr</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="ctn-full-width">
-			<div class="wrapper">
-				<div class="project-management-block">
-					<div class="item">
-						<div class="content">
-							<h2 class="heading-3">
-								Über Uns
-							</h2>
-							<p>
-								Mit über 120 Jahren Erfahrung am Immobilienmarkt in Nürnberg 17 und mehr als 1.200
-								realisierten Wohnungen wissen wir:
-								Auch in herausfordernden Zeiten behalten unsere Immobilien ihren Wert.
+		<?php if($bst_var_blk_about_box){ ?>
 
-								Sie erfüllen sowohl die Renditeerwartungen unserer Investoren als auch die Ansprüche von
-								Selbstnutzern – weil wir unsere
-								Projekte klug planen und für die Anforderungen von morgen bauen.
-							</p>
-							<p>
-								<b>
-									Matthias Hämmer
-								</b>
-								Geschäftsführer
-							</p>
-						</div>
-					</div>
-					<div class="item opacity-item">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h8-img-04.jpg" alt="">
-						</div>
-					</div>
-					<div class="item opacity-item">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h8-img-05.jpg" alt="">
-						</div>
-					</div>
-					<div class="item animation-item" style="background: white;">
+			<section class="ctn-full-width">
+				<div class="wrapper">
 
-					</div>
+					<?php
+					// ✅ SECTION CLASSES
+					$section_classes = [
+						'company-value-chart',
+						'project-management-block',
+						'map-block-main',
+						'project-design'
+					];
 
-				</div>
-			</div>
-		</section>
-		<section class="ctn-full-width">
-			<div class="wrapper">
-				<div class="map-block-main">
-					<div class="item animation-item" style="background: white;">
+					// ✅ ITEMS PER GROUP
+					$group_sizes = [4, 4, 3, 4];
 
-					</div>
-					<div class="item">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
-							width="100%" height="200" frameborder="0" style="border:0"></iframe>
-					</div>
-					<div class="item animation-item">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h8-img-06.jpg" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="ctn-full-width">
-			<div class="wrapper">
-				<div class="project-design">
-					<div class="item opacity-item">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h8-img-07.jpg" alt="">
-						</div>
-					</div>
-					<div class="item animation-item">
-						<div class="content">
-							<div class="kicker-text">
-								Explore the Features
+					$current_group = 0;
+					$items_in_group = 0;
+					$section_open = false;
+
+					foreach( $bst_var_blk_about_box as $box ){
+
+						$design    = $box['bst_var_blk_about_box_design'] ?? null;
+						$image     = $box['image'] ?? null;
+						$kicker    = $box['kicker'] ?? null;
+						$title     = $box['title'] ?? null;
+						$text      = $box['text'] ?? null;
+						$icon    = $box['icon'] ?? null;
+						$button    = $box['button'] ?? null;
+						$shortcode = $box['shortcode'] ?? null;
+						$map       = $box['map'] ?? null;
+
+						// 🔴 SHORTCODE BREAK
+						if($design === 'shortcode' && $shortcode){
+
+							if($section_open){
+								echo '</div>';
+								$section_open = false;
+							}
+
+							echo do_shortcode($shortcode);
+							continue;
+						}
+
+						// 🟢 OPEN SECTION
+						if(!$section_open){
+
+							$current_class = $section_classes[$current_group] ?? end($section_classes);
+
+							echo '<div class="'.$current_class.'">';
+							$section_open = true;
+						}
+						?>
+
+						<!-- ================= ITEMS ================= -->
+
+						<?php if($design === 'image' && $image){ ?>
+							<div class="item opacity-item">
+								<div class="image-cover">
+									<?php BaseTheme::the_attachment_image($image, 1000); ?>
+								</div>
 							</div>
-							<h2 class="heading-4">
-								Product design
-							</h2>
-							<div class="bottom-section-button">
-								<a href="http://fuchs-2.local/project/1raum-glockenhof/" tabindex="0">
-									<span>
-										Find out more
-									</span>
-									<div class="plus-button">
-										+
-									</div>
-								</a>
+						<?php } ?>
+
+						<?php if($design === 'title' && $title){ ?>
+							<div class="item simple-text animation-item" style="background-color: #ff5f14;">
+								<h2 class="heading-2">
+									<?php echo html_entity_decode($title); ?>
+								</h2>
 							</div>
-						</div>
-					</div>
-					<div class="item opacity-item">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/h8-img-08.jpg" alt="">
-						</div>
-					</div>
-					<div class="item opacity-item">
-						<div class="image-cover">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/uploads/Bildschirmfoto 2026-01-26 um 19.41.54.png" alt="">
-						</div>
-					</div>
+						<?php } ?>
+
+						<?php if($design === 'content'){ ?>
+							<div class="item content-main animation-item">
+								<div class="content">
+									<?php if($title){ ?>
+										<h2 class="heading-4"><?php echo html_entity_decode($title); ?></h2>
+									<?php } ?>
+									<?php if($text){ echo html_entity_decode($text); } ?>
+									<?php if($button){
+										echo BaseTheme::button($button, 'button dark-orange-button');
+									} ?>
+								</div>
+							</div>
+						<?php } ?>
+
+						<?php if($design === 'link-box'){ ?>
+							<div class="item animation-item active">
+								<div class="content">
+									<?php if($kicker){ ?>
+										<div class="kicker-text">
+											<?php echo html_entity_decode($kicker); ?>
+										</div>
+									<?php } ?>
+									<?php if($title){ ?>
+										<h2 class="heading-4"><?php echo html_entity_decode($title); ?></h2>
+									<?php } ?>
+									<?php if($button){ ?>
+										<div class="bottom-section-button">
+											<a href="<?php echo esc_url($button['url']); ?>">
+												<span><?php echo html_entity_decode($button['title']); ?></span>
+												<div class="plus-button">+</div>
+											</a>
+										</div>
+									<?php } ?>
+								</div>
+							</div>
+						<?php } ?>
+						<?php if($design === 'icon-text'){ ?>
+							<div class="item content-main animation-item active d-flex flex-column align-items-center justify-content-center">
+								<div class="content center-align">
+									<?php if($icon){ ?>
+										<div class="icon">
+											<?php BaseTheme::the_attachment_image($icon, 100); ?>
+										</div>
+									<?php } ?>
+									<?php if($kicker){ ?>
+										<div class="kicker-text">
+											<?php echo html_entity_decode($kicker); ?>
+										</div>
+									<?php } ?>
+									<?php if($title){ ?>
+										<h2 class="heading-4"><?php echo html_entity_decode($title); ?></h2>
+									<?php } ?>
+
+									<?php if($text){ echo html_entity_decode($text); } ?>
+
+
+								</div>
+							</div>
+						<?php } ?>
+
+						<?php if($design === 'about'){ ?>
+							<div class="item about-us-box">
+								<div class="content">
+									<?php if($title){ ?>
+										<h2 class="heading-3"><?php echo html_entity_decode($title); ?></h2>
+									<?php } ?>
+									<?php if($text){ echo html_entity_decode($text); } ?>
+								</div>
+							</div>
+						<?php } ?>
+
+						<?php if($design === 'empty-box'){ ?>
+							<div class="item animation-item active" style="background:white;"></div>
+						<?php } ?>
+
+						<?php if($design === 'map' && $map){ ?>
+							<div class="item">
+								<iframe
+									src="<?php echo esc_url($map); ?>"
+									width="100%"
+									height="200"
+									style="border:0;"
+									loading="lazy">
+								</iframe>
+							</div>
+						<?php } ?>
+
+						<?php
+						// ================= LOGIC =================
+
+						$items_in_group++;
+
+						// ✅ CLOSE GROUP WHEN COMPLETE
+						if($items_in_group == ($group_sizes[$current_group] ?? 4)){
+
+							echo '</div>';
+							$section_open = false;
+
+							$items_in_group = 0;
+							$current_group++;
+						}
+					}
+
+					// close last open section
+					if($section_open){
+						echo '</div>';
+					}
+					?>
+
 				</div>
-			</div>
-		</section>
+			</section>
+
+		<?php } ?>
 
 		<?php
 	}
 );
-
