@@ -4403,8 +4403,6 @@ header {
 .hero-home.slides {
   position: relative;
   width: 100%;
-  max-height: 100%;
-  height: 100vh;
   overflow: hidden;
 }
 .hero-home.slides::after {
@@ -4417,11 +4415,92 @@ header {
   background-image: url(images/hero-shape.png);
   z-index: 1;
 }
+.hero-home.slides .slide:nth-child(3n+1) {
+  background-color: var(--fc_orange_dark);
+}
+.hero-home.slides .slide:nth-child(3n+1) .split-text-right .heading-1 {
+  color: var(--fc_white);
+  -webkit-text-fill-color: var(--fc_white);
+}
+.hero-home.slides .slide:nth-child(3n+1) .bottom-section-button .plus-button {
+  color: #e27602;
+}
+.hero-home.slides .slide:nth-child(3n+2) {
+  background-color: var(--fc_white);
+}
+.hero-home.slides .slide:nth-child(3n+2) .home-hero-slide .home-hero-image {
+  right: auto;
+  left: 0;
+}
+.hero-home.slides .slide:nth-child(3n+2) .hero-split-text .split-text-right .heading-1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  color: #d0d0d0;
+}
+.hero-home.slides .slide:nth-child(3n+2) .hero-split-text .split-text-left .heading-1 {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-stroke-width: 2px;
+}
+.hero-home.slides .slide:nth-child(3n+2) .home-hero-content .heading-2 {
+  color: var(--fc_color_primary);
+}
+.hero-home.slides .slide:nth-child(3n+2) .bottom-section p {
+  color: var(--fc_color_primary);
+}
+.hero-home.slides .slide:nth-child(3n+2) .bottom-section-button a span,
+.hero-home.slides .slide:nth-child(3n+2) .bottom-section-button a:visited span {
+  color: var(--fc_color_primary);
+}
+.hero-home.slides .slide:nth-child(3n+2) .home-hero-content .kicker {
+  color: var(--fc_color_primary);
+}
+.hero-home.slides .slide:nth-child(3n+2) .bottom-section,
+.hero-home.slides .slide:nth-child(3n+2) .top-section {
+  width: 50%;
+  position: relative;
+  left: calc(50% + 40px);
+}
+.hero-home.slides .slide:nth-child(3n+2) .bottom-section-button .plus-button {
+  background-color: var(--fc_orange_dark);
+  color: #ffffff;
+}
+.hero-home.slides .slide:nth-child(3n+3) {
+  background-color: var(--fc_color_primary);
+}
+.hero-home.slides .slide:nth-child(3n+3) .bottom-section-button a:hover .plus-button,
+.hero-home.slides .slide:nth-child(3n+3) .bottom-section-button a:focus-visible .plus-button,
+.hero-home.slides .slide:nth-child(3n+3) .bottom-section-button a:visited:hover .plus-button,
+.hero-home.slides .slide:nth-child(3n+3) .bottom-section-button a:visited:focus-visible .plus-button {
+  box-shadow: 0px 4px 16px 0px #ffffff;
+}
+.hero-home.slides .slide:nth-child(3n+3) .split-text-right .heading-1 {
+  color: var(--fc_white);
+  -webkit-text-fill-color: var(--fc_white);
+}
+.hero-home {
+  position: relative;
+}
+.hero-home .slide {
+  position: relative;
+  /* change from absolute */
+  width: 100%;
+  height: 668px;
+  /* allow natural height */
+  transform: none !important;
+}
+.hero-home .home-hero-slide {
+  position: relative;
+}
+.hero-home .home-hero-slide-overlay {
+  display: none;
+  /* overlay animation remove */
+}
 .slide.active {
   z-index: 1;
 }
 .slide .heading-2 {
-  color: var(--fc_color_primary);
   max-width: 637px;
 }
 .slide.has-green-bg {
@@ -4467,13 +4546,19 @@ header {
   color: var(--fc_white);
 }
 .slide .home-hero-content {
-  padding-top: var(--fc_space_156);
+  padding-top: 114px;
   box-sizing: border-box;
-  width: 68%;
+  width: 69%;
   margin: 0 auto 0;
   position: relative;
   z-index: 3;
   height: 100%;
+}
+.home-hero-content .kicker {
+  margin-bottom: 1px;
+}
+.home-hero-content .heading-2 {
+  text-transform: uppercase;
 }
 /* dot navigation */
 .dots {
@@ -4510,8 +4595,7 @@ header {
   position: relative;
   width: -moz-max-content;
   width: max-content;
-  margin: 90px auto 0;
-  opacity: 0;
+  margin: 20px auto 0;
   visibility: hidden;
 }
 .hero-split-text h2 {
@@ -4553,7 +4637,7 @@ header {
 .bottom-section {
   margin-top: calc(var(--fc_space_128) - 3px);
   position: absolute;
-  bottom: 70px;
+  bottom: 102px;
   left: 0;
 }
 .bottom-section p {
@@ -4562,7 +4646,6 @@ header {
   font-style: normal;
   font-size: 12px;
   margin: 0 0 7px;
-  color: var(--fc_black_2);
   text-transform: uppercase;
   letter-spacing: 1.2px;
   animation-delay: 540ms;
@@ -4622,30 +4705,29 @@ header {
 section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.active)) .dot {
   background-color: var(--fc_white);
 }
-.top-section {
-  opacity: 0;
-}
-.bottom-section p,
-.bottom-section .slide-tagline,
-.bottom-section .bottom-section-button {
-  opacity: 0;
-}
-.slide.active .hero-split-text {
+.slide.active .hero-split-text,
+.slide .hero-split-text {
   opacity: 1;
   visibility: visible;
 }
-.slide.active .hero-split-text .split-text-right .heading-1 {
+.slide.active .hero-split-text .split-text-right .heading-1,
+.slide .hero-split-text .split-text-right .heading-1 {
   transform: translateX(-50%) !important;
 }
-.slide.active .hero-split-text .split-text-left .heading-1 {
+.slide.active .hero-split-text .split-text-left .heading-1,
+.slide .hero-split-text .split-text-left .heading-1 {
   transform: translateX(0%);
 }
 .slide.active .bottom-section p,
 .slide.active .bottom-section .slide-tagline,
-.slide.active .bottom-section .bottom-section-button {
+.slide.active .bottom-section .bottom-section-button,
+.slide .bottom-section p,
+.slide .bottom-section .slide-tagline,
+.slide .bottom-section .bottom-section-button {
   animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 1.3s;
 }
-.slide.active .top-section {
+.slide.active .top-section,
+.slide .top-section {
   animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 1.3s;
 }
 @keyframes mkdfUncoverRight {
@@ -4689,9 +4771,6 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
     width: 100%;
     transform: translateX(100vw);
   }
-}
-.logged-in.admin-bar .hero-home.slides {
-  height: calc(100vh - 32px);
 }
 .video-hero {
   height: 90vh;
@@ -11200,9 +11279,6 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
   .slide .home-hero-content {
     width: 90%;
-  }
-  .bottom-section {
-    margin-top: calc(var(--fc_space_128) - 75px);
   }
   .slide:nth-child(5) .bottom-section {
     margin-top: calc(var(--fc_space_128) - 75px);

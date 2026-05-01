@@ -8310,9 +8310,6 @@ Mixin for transition
   .acf-block-preview .slide .home-hero-content {
     width: 90%;
   }
-  .acf-block-preview .bottom-section {
-    margin-top: calc(var(--fc_space_128) - 75px);
-  }
   .acf-block-preview .slide:nth-child(5) .bottom-section {
     margin-top: calc(var(--fc_space_128) - 75px);
   }

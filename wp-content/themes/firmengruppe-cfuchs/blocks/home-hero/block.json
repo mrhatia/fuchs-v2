@@ -1,7 +1,7 @@
 {
 	"name": "acf/home-hero",
-	"title": "Home Hero",
-	"description": "A custom home-hero block.",
+	"title": "Collage Images",
+	"description": "A custom Block - Collage Images block.",
 	"category": "theme-blocks",
 	"icon": "home-hero",
 	"keywords": ["home-hero"],

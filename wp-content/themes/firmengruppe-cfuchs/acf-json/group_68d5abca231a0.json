@@ -1,6 +1,6 @@
 {
     "key": "group_68d5abca231a0",
-    "title": "Block - Home Hero",
+    "title": "Block - Collage Images",
     "fields": [
         {
             "key": "field_68d5abca2811b",
@@ -263,5 +263,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759076681
+    "display_title": "",
+    "modified": 1777520595
 }

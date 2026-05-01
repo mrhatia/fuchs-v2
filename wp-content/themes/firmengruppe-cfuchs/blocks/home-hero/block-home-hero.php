@@ -1,8 +1,8 @@
 <?php
 /**
- * Block Name: Faq
+ * Block Name: Collage Images
  *
- * The template for displaying the custom gutenberg block named Faq.
+ * The template for displaying the custom gutenberg block named Collage Images.
  *
  * @link https://www.advancedcustomfields.com/resources/blocks/
  *
@@ -33,9 +33,8 @@ BaseTheme::block(
 								$slide_title_right   		= $slide['slide_title_right'] ?? null;
 								$slide_text   = $slide['text'] ?? null;
 								$slide_button = $slide['button'] ?? null;
-								$slide_bg_color = $slide['slide_bg_color'] ?? null;
 								?>
-								<div class="slide <?php if ( $slide_bg_color ) { echo " has-green-bg "; } if($slide_image){ echo " has-image "; } ?> ">
+								<div class="slide <?php if($slide_image){ echo " has-image "; } ?> ">
 									<div class="home-hero-slide">
 										<?php if ( $slide_image ) { ?>
 											<div class="home-hero-image <?php if($slide_image_mobile){ echo " mobile-hide ";  } ?> " tabindex="0" role="img" aria-label="Image illustrating the content of this block">
