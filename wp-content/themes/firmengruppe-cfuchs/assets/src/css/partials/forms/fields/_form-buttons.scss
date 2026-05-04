@@ -20,10 +20,9 @@ input[type="reset"] {
 	@include transition(all, 0.4s, ease-in-out);
 
 	background-color: var(--fc_button_bgcolor);
-	border: 1px solid var(--fc_button_bgcolor);
+	border: 1px solid var(--fc_white);
 	color: var(--fc_button_color);
 	outline: none;
-
 
 	@include font(sour, bold);
 

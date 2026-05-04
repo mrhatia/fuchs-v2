@@ -56,6 +56,27 @@
 }
 
 .ctn-white {
+	input[type="text"],
+	input[type="number"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="search"],
+	input[type="password"],
+	input[type="time"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="week"],
+	input[type="month"],
+	input[type="file"],
+	input[type="range"],
+	input[list],
+	input[type="string"],
+	select,
+	textarea,
+	.gform-text-input-reset {
+		color: var(--fc_black);
+	}
 	.logo-item-single {
 		img {
 			filter: initial !important;
@@ -200,10 +221,13 @@
 
 	.logo-item-single {
 		img {
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+				saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 
 			&:nth-child(2) {
-				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+				filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+					saturate(0%) hue-rotate(288deg) brightness(102%)
+					contrast(102%);
 			}
 		}
 	}

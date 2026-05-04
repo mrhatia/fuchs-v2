@@ -1566,7 +1566,7 @@ textarea,
   border: none;
   border-bottom: 1px solid #e8e8e9;
   background-color: var(--fc_input_bgcolor);
-  color: var(--fc_input_color);
+  color: var(--fc_white);
   outline: none;
   padding: 0 0 0px;
   margin: 0;
@@ -1720,7 +1720,7 @@ input[type=reset] {
   box-sizing: border-box;
   transition: all 0.4s ease-in-out;
   background-color: var(--fc_button_bgcolor);
-  border: 1px solid var(--fc_button_bgcolor);
+  border: 1px solid var(--fc_white);
   color: var(--fc_button_color);
   outline: none;
   font-family: "Source Sans 3", arial, sans-serif;
@@ -3774,7 +3774,7 @@ header {
   }
   .nav-overlay {
     position: fixed;
-    background-color: rgba(0, 120, 87, 0.9);
+    background-color: rgb(0, 120, 87);
     right: 0;
     width: 100%;
     height: 100vh;
@@ -3803,7 +3803,8 @@ header {
   }
   .nav-overlay.open .header-nav ul li a,
   .nav-overlay.open a:visited {
-    padding: 0;
+    transition: all 0.3s ease-in-out;
+    padding: 0 !important;
     animation: push_text_right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1) both;
   }
   .nav-overlay.open .header-btns {
@@ -5050,6 +5051,27 @@ section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.act
 .ctn-orange {
   background-color: var(--fc_orange);
   padding: var(--fc_space_96) 0;
+}
+.ctn-white input[type=text],
+.ctn-white input[type=number],
+.ctn-white input[type=email],
+.ctn-white input[type=tel],
+.ctn-white input[type=url],
+.ctn-white input[type=search],
+.ctn-white input[type=password],
+.ctn-white input[type=time],
+.ctn-white input[type=date],
+.ctn-white input[type=datetime-local],
+.ctn-white input[type=week],
+.ctn-white input[type=month],
+.ctn-white input[type=file],
+.ctn-white input[type=range],
+.ctn-white input[list],
+.ctn-white input[type=string],
+.ctn-white select,
+.ctn-white textarea,
+.ctn-white .gform-text-input-reset {
+  color: var(--fc_black);
 }
 .ctn-white .logo-item-single img {
   filter: initial !important;
@@ -7867,6 +7889,16 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .blog-subposts .blog-subpost .blog-content-title .heading-3 {
   font-size: var(--fc_font_size_26);
 }
+.archive-hero .banner-content {
+  padding-top: 160px;
+  display: block;
+}
+.section-head-simple h2 span {
+  color: var(--fc_white) !important;
+}
+.testimonial-item-content {
+  padding-left: 55px;
+}
 /*-------------------------------------------------
 >> Basic styles for Blog post
 -------------------------------------------------*/
@@ -8162,6 +8194,31 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .simple-faq .faq-icon {
   left: 15px;
+}
+.faq-content ul li::before {
+  background-color: white;
+}
+.iat-content p span {
+  color: var(--fc_white) !important;
+}
+.iat-content a.button,
+.iat-content a.button:visited,
+.iat-content span.button,
+.iat-content .is-style-mycustomstyle .wp-element-button {
+  background-color: var(--fc_white);
+  color: var(--fc_orange);
+  border-color: var(--fc_white);
+}
+.iat-content a.button:hover,
+.iat-content a.button:visited:hover,
+.iat-content span.button:hover,
+.iat-content .is-style-mycustomstyle .wp-element-button:hover {
+  background-color: transparent;
+  color: var(--fc_white);
+}
+.simple-faq .faq-content {
+  padding: 0 36px 33px;
+  box-sizing: border-box;
 }
 /*-------------------------------------------------
 >> Basic styles for Team Block
@@ -8611,7 +8668,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  top: 30px;
 }
 .introduction-team .introduction-team-left .section-head {
   max-width: 650px;
@@ -8992,6 +9048,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   right: 150px;
   z-index: -1;
   opacity: 0.1;
+  filter: invert(1);
 }
 .testimonial-variation.swiper .swiper-wrapper {
   height: 100%;
@@ -10054,6 +10111,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 }
 .project-info-content .heading-3 {
   margin-bottom: 21px;
+  font-size: var(--fc_font_size_26);
 }
 .project-info-content p {
   font-size: var(--fc_font_size_18);
@@ -10068,18 +10126,20 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   letter-spacing: 0.1em;
   font-weight: 500;
   margin: 0 0 6px 7px;
-  color: var(--fc_black_2);
+  color: var(--fc_white);
   text-transform: uppercase;
 }
 .project-info-content .info-single-detail p a,
 .project-info-content .info-single-detail p a:visited {
-  color: var(--fc_black_2);
+  color: var(--fc_white);
   border-bottom: none;
+  opacity: 0.7;
 }
 .project-info-content .info-single-detail p a:hover, .project-info-content .info-single-detail p a:focus-visible,
 .project-info-content .info-single-detail p a:visited:hover,
 .project-info-content .info-single-detail p a:visited:focus-visible {
   border-bottom: none;
+  opacity: 1;
   color: var(--fc_orange_dark);
 }
 .project-info-single:nth-child(n+2) {
@@ -10105,6 +10165,9 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .contact-block .wp-block-media-text__content p a:visited:focus-visible {
   border-bottom: none;
   color: var(--fc_orange_dark);
+}
+.faq-image-variation .heading-3 {
+  font-size: var(--fc_font_size_48);
 }
 /*-------------------------------------------------
 >> Basic styles for STATS
@@ -11081,6 +11144,12 @@ body.shrink .single-service-hero-section .service-logo.left-side {
 >> Base Responsive queries
 ------------------------------------------------- */
 @media only screen and (min-width: 1300px) and (max-width: 1440px) {
+  .blog-subposts {
+    gap: 20px;
+  }
+  .blog-subposts .blog-subpost {
+    max-width: 370px;
+  }
   .company-value-chart .item.content-main {
     padding: 30px;
   }
@@ -11182,7 +11251,33 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     min-height: 325px;
   }
 }
+@media only screen and (min-width: 1180px) and (max-width: 1344px) {
+  .cfuchs-heading-ghost {
+    right: -1%;
+  }
+  .blog-subposts {
+    gap: 15px;
+  }
+  .blog-subposts .blog-subpost {
+    max-width: 330px;
+  }
+  .logo {
+    min-width: 220px;
+  }
+}
 @media only screen and (min-width: 1004px) and (max-width: 1099px) {
+  .cfuchs-heading-ghost {
+    right: -1%;
+  }
+  .header-nav ul li a,
+  .header-nav ul li a:visited,
+  .header-nav ul li span.menu-link {
+    font-size: 12px;
+  }
+  .logo {
+    width: 13%;
+    min-width: 202px;
+  }
   .project-design .content {
     padding: 40px 30px;
   }
@@ -11214,21 +11309,6 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
   .feature-block.apprentice-block {
     min-height: 325px;
-  }
-}
-@media only screen and (min-width: 1100px) and (max-width: 1399px) {
-  .ctn-container-bg .wrapper {
-    background-size: contain;
-  }
-}
-@media only screen and (min-width: 748px) and (max-width: 1098px) {
-  .ctn-container-bg .wrapper {
-    background-size: contain;
-  }
-}
-@media only screen and (min-width: 280px) and (max-width: 748px) {
-  .ctn-container-bg .wrapper {
-    background-size: initial;
   }
 }
 @media only screen and (min-width: 1346px) and (max-width: 1800px) {
@@ -11434,6 +11514,10 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
 }
 @media only screen and (min-width: 1003px) and (max-width: 1080px) {
+  .introduction-team-left {
+    padding-right: 5vw;
+    box-sizing: border-box;
+  }
   .section-head .hero-split-text {
     top: -116px;
   }
@@ -11467,6 +11551,9 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
 }
 @media only screen and (max-width: 1003px) {
+  .faq-with-image-variation .faq-image-variation {
+    width: 100%;
+  }
   .blog-subposts .blog-subpost:nth-child(n+4) {
     margin-top: 0;
   }
@@ -11507,6 +11594,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     width: 100%;
     padding: 80px 5.5% 30px;
     box-sizing: border-box;
+    justify-content: flex-start;
   }
   .introduction-team-image {
     width: 100%;
@@ -11696,7 +11784,10 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
   .company-value-chart .item {
     width: 100%;
-    min-height: 374px;
+    min-height: 340px;
+  }
+  .project-management-block .item:nth-child(1) .content .heading-3 {
+    font-size: 46px;
   }
   .company-value-chart .item.content-main {
     padding: 30px 24px;
@@ -11722,12 +11813,33 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
 }
 @media only screen and (min-width: 748px) and (max-width: 1003px) {
+  .about-us-box p:last-of-type {
+    margin: 0;
+  }
+  .cfuchs-tl-row {
+    padding-bottom: 45px !important;
+  }
+  .cfuchs-tl-rail {
+    padding-bottom: 0px !important;
+  }
+  .cfuchs-heading-ghost {
+    right: -2% !important;
+    font-size: 80px !important;
+  }
+  .blog-subposts .blog-subpost {
+    margin-bottom: 30px;
+    max-width: 315px;
+  }
+  .header-logo a {
+    height: 100px;
+  }
   .gallery-slider {
     height: 450px;
   }
   .section-head .hero-split-text {
     top: calc(-36px - var(--fc_font_size_80));
     opacity: 0.4;
+    font-size: 98px;
   }
   .hero-inner-slider .hero-split-text,
   .hero-project .hero-split-text {
@@ -11806,6 +11918,59 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
 }
 @media only screen and (max-width: 747px) {
+  .blog-single-post-content {
+    margin-top: 20px;
+  }
+  .cfuchs-section {
+    padding-bottom: 20px !important;
+  }
+  .cfuchs-tl-row {
+    padding: 96px 0 42px !important;
+  }
+  .cfuchs-tl-modal__close {
+    margin: 0 !important;
+  }
+  .cfuchs-tl-modal__title {
+    font-size: 20px !important;
+  }
+  .cfuchs-tl-modal__desc {
+    font-size: 14px !important;
+  }
+  .cfuchs-tl-modal__year {
+    font-size: 42px !important;
+  }
+  .cfuchs-tl-modal__body {
+    padding: 20px !important;
+  }
+  .cfuchs-container + .cfuchs-container {
+    margin-top: 30px !important;
+  }
+  .cfuchs-heading-ghost {
+    font-size: 68px !important;
+  }
+  .services-block .section-head {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .hero-home.slides .slide:nth-child(3n+2) .bottom-section,
+  .hero-home.slides .slide:nth-child(3n+2) .top-section {
+    right: calc(50% + 15px);
+  }
+  .simple-faq .faq-head {
+    padding: 30px 18px 36px 60px;
+  }
+  .simple-faq .faq-content {
+    padding: 0 0 30px;
+  }
+  .header-section .header-logo a.fuchs-logo {
+    transform: scale(0.8) translateY(0px);
+  }
+  .section-head {
+    flex-wrap: wrap;
+  }
+  .head-right-section {
+    margin-bottom: 30px;
+  }
   .logo::before {
     display: none;
   }
