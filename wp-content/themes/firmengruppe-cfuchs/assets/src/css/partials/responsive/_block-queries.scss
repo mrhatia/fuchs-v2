@@ -1034,6 +1034,15 @@
 }
 
 @media only screen and (max-width: 747px) {
+	.cfuchs-tl-node[data-type="secondary"] .cfuchs-tl-label {
+		top: calc(50% + 16px) !important;
+	}
+	.cfuchs-tl-node[data-type="main"] .cfuchs-tl-label {
+		top: -49px !important;
+	}
+	.cfuchs-tl-node[data-type="secondary"] .cfuchs-tl-year {
+		margin-top: -43px !important;
+	}
 	.blog-single-post-content {
 		margin-top: 20px;
 	}
