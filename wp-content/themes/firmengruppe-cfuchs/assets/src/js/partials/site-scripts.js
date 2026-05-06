@@ -677,6 +677,10 @@ jQuery( function() {
 	if ( jQuery( '.stats-number' ).length > 0 ) {
 		const $statNumbers = jQuery( '.stats-number' );
 
+		function easeOutCubic( t ) {
+			return 1 - Math.pow( 1 - t, 3 );
+		}
+
 		function animateCounter( $element ) {
 			const text = $element.text();
 			const numericText = text.match( /[0-9.]+/ )[ 0 ];
@@ -686,48 +690,61 @@ jQuery( function() {
 			if ( isNaN( targetValue ) ) {
 				return;
 			}
-			const startValue = 0;
-			const duration = 1800;
-			const totalFrames = duration / ( 1000 / 60 );
-			const increment = ( targetValue - startValue ) / totalFrames;
-			let animatedValue = startValue;
+
+			const startTime = performance.now();
+			const duration = 3200;
+
 			const formatValue = ( value ) =>
 				Number.isInteger( targetValue )
 					? Math.round( value )
 					: value.toFixed( 1 );
-			const updateCounter = () => {
-				animatedValue += increment;
-				if ( animatedValue >= targetValue ) {
-					$element.text( prefix + formatValue( targetValue ) + suffix );
-				} else {
-					$element.text( prefix + formatValue( animatedValue ) + suffix );
+
+			function updateCounter( currentTime ) {
+				const elapsed = currentTime - startTime;
+				const progress = Math.min( elapsed / duration, 1 );
+				const eased = easeOutCubic( progress );
+				const currentValue = eased * targetValue;
+
+				$element.text( prefix + formatValue( currentValue ) + suffix );
+
+				if ( progress < 1 ) {
 					requestAnimationFrame( updateCounter );
+				} else {
+					$element.text( prefix + formatValue( targetValue ) + suffix );
 				}
-			};
+			}
+
 			requestAnimationFrame( updateCounter );
-			const value = parseInt( $element.text().trim() );
-			let current = 0;
-			const durationFill = 1500;
-			const step = value / ( durationFill / 16 );
-			function animateFill() {
-				current += step;
-				if ( current < value ) {
-					$element.css( '--percent', current );
+
+			const value = parseInt( targetValue );
+			const start = performance.now();
+			const durationFill = 3000;
+
+			function animateFill( now ) {
+				const elapsed = now - start;
+				const progress = Math.min( elapsed / durationFill, 1 );
+				const eased = easeOutCubic( progress );
+				const current = eased * value;
+
+				$element.css( '--percent', current );
+
+				if ( progress < 1 ) {
 					requestAnimationFrame( animateFill );
 				} else {
 					$element.css( '--percent', value );
 				}
 			}
-			animateFill();
+
+			requestAnimationFrame( animateFill );
 		}
 
 		const isInViewport = ( element ) => {
 			const rect = element[ 0 ].getBoundingClientRect();
 			return (
 				rect.bottom >= 0 &&
-				rect.top <=
-					( window.innerHeight ||
-						document.documentElement.clientHeight )
+			rect.top <=
+				( window.innerHeight ||
+					document.documentElement.clientHeight )
 			);
 		};
 
