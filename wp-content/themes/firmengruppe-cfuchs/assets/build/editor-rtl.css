@@ -4283,6 +4283,12 @@ Mixin for transition
 .acf-block-preview .faq-items {
   width: 55.8%;
 }
+.acf-block-preview .faq-items.only-one-faq-style .faq-number {
+  opacity: 0 !important;
+}
+.acf-block-preview .faq-items.only-one-faq-style .faq-head {
+  background-image: url(images/default-pattern-orange.png);
+}
 .acf-block-preview .faq-items-variation {
   width: 70%;
 }
@@ -4299,7 +4305,7 @@ Mixin for transition
 }
 .acf-block-preview .faq-head.active {
   padding: 30px 0 14px 70px;
-  background-image: none;
+  background-image: none !important;
 }
 .acf-block-preview .faq-head.active .faq-icon {
   background-color: var(--fc_white);

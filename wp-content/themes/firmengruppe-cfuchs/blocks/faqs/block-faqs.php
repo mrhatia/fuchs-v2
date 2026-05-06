@@ -41,9 +41,12 @@ BaseTheme::block(
 						<?php } ?>
 						</div>
 
-						<?php if($bst_var_faq_faqs){ ?>
+						<?php if($bst_var_faq_faqs){
+							$faq_count = count($bst_var_faq_faqs);
+							$faq_items_class = ($faq_count == 1) ? "only-one-faq-style" : "";
+							?>
 
-							<div class="faq-items faq-items-variation">
+							<div class="faq-items faq-items-variation <?php echo $faq_items_class; ?>">
 									<?php foreach ( $bst_var_faq_faqs as $key => $faq ) {
 									$faq_question      = $faq['question'] ?? null;
 									$faq_answer      = $faq['answer'] ?? null;
@@ -89,9 +92,12 @@ BaseTheme::block(
 								<?php BaseTheme::the_attachment_image( $bst_var_faq_image, 1200 ); ?>
 							</div>
 						<?php } ?>
-						<?php if($bst_var_faq_faqs){ ?>
+						<?php if($bst_var_faq_faqs){
+							$faq_count = count($bst_var_faq_faqs);
+							$faq_items_class = ($faq_count == 1) ? "only-one-faq-style" : "";
+							?>
 
-							<div class="faq-items">
+							<div class="faq-items <?php echo $faq_items_class; ?>">
 								<?php foreach ( $bst_var_faq_faqs as $key => $faq ) {
 									$faq_question      = $faq['question'] ?? null;
 									$faq_answer      = $faq['answer'] ?? null;

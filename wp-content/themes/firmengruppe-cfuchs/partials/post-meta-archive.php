@@ -15,16 +15,23 @@ $bst_var_post_tag = get_the_tags( get_the_ID() );
 
 ?>
 
-
-<div class="post-box-meta d-flex justify-content-between">
+<div class="post-box-meta news-meta-archive">
 	<div class="post-date">
-		<?php the_time( BASETHEME_PROJECT_DTFORMAT ); ?>
+		<?php echo strtolower( get_the_date('j. F. Y') ); ?>
 	</div>
-	<?php if ( $bst_var_post_tag ) { ?>
+	<?php
+	// Categories
+	$categories = get_the_category();
+
+	if ( ! empty( $categories ) ) { ?>
 		<div class="ac-post-cat">
-		<?php foreach ( $bst_var_post_tag as $bst_var_category ) { ?>
-			<a href="<?php echo esc_url( get_category_link( $bst_var_category ) ); ?>"><?php echo esc_html( $bst_var_category->name ); ?></a>
-		<?php } ?>
+
+			<?php
+				foreach ( $categories as $category ) {
+					echo ' / <span>' . esc_html( $category->name ) . '</span>';
+				}
+			?>
 		</div>
 	<?php } ?>
+
 </div>

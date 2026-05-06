@@ -9,6 +9,8 @@ import gasap from '../vendors/gsap.min';
 import gsapScroll from '../vendors/ScrollTrigger.min';
 import Lity from '../vendors/lity.js';
 import masonry from '../vendors/masonry.min';
+import imagesLoaded from '../vendors/imagesloaded.pkgd.min';
+
 
 jQuery( document ).on( 'scroll', function() {
 	if ( jQuery( document ).scrollTop() > 0 ) {
@@ -438,15 +440,28 @@ jQuery( function() {
 			dots: false,
 			arrows: true,
 			infinite: true,
-			autoplay: true,
-			autoplaySpeed: 4000,
-			speed: 1200,
+			autoplay: false,
+			autoplaySpeed: 3500,
+			speed: 800,
 			cssEase: 'ease-in-out',
 			pauseOnHover: false,
 			pauseOnFocus: false,
 			swipe: false,
 		} );
 	}
+
+	jQuery(document).on('click', '.slick-arrow, .slick-prev, .slick-next', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+});
+
+jQuery(document).on('mouseenter', '.slick-prev', function() {
+	jQuery(this).closest('.blog-slider-image-slider').addClass('prev-hover');
+});
+
+jQuery(document).on('mouseleave', '.slick-prev', function() {
+	jQuery(this).closest('.blog-slider-image-slider').removeClass('prev-hover');
+});
 
 	if ( jQuery( '.testimonial-slider' ).length > 0 ) {
 		jQuery( '.testimonial-slider' ).slick( {
@@ -990,12 +1005,20 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	}
 } );
 
-jQuery( document ).ready( function() {
-	jQuery( '.blog-subposts' ).length > 0 &&
-		jQuery( window ).width() > 1003 &&
-		jQuery( '.blog-subposts' ).masonry( {
-			itemSelector: '.blog-subpost',
-			columnWidth: '.blog-subpost',
-			gutter: 30,
-		} );
-} );
+jQuery(document).ready(function($) {
+
+	if ( jQuery('.blog-subposts').length && jQuery(window).width() > 1003 ) {
+
+		var $grid = jQuery('.blog-subposts');
+
+		$grid.imagesLoaded(function() {
+			$grid.masonry({
+				itemSelector: '.blog-subpost',
+				columnWidth: '.blog-subpost',
+				gutter: 30,
+			});
+		});
+
+	}
+
+});

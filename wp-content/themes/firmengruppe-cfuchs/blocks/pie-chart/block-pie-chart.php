@@ -159,7 +159,7 @@ BaseTheme::block(
 					const sliceColor=color(d.data.Title);
 					const textColor=(sliceColor.toLowerCase()==='#ffffff')?'color-black':'color-white';
 					const textHex=(sliceColor.toLowerCase()==='#ffffff')?'#000000':'#ffffff';
-					jQuery('#segmentTitle').replaceWith(`<h1 id="segmentTitle" class="${textColor}" style="color:${textHex}">${d.data.Title} - ${Math.round((d.data.Amount/total)*1000)/10}%</h1>`);
+					jQuery('#segmentTitle').replaceWith(`<h1 id="segmentTitle" class="${textColor}" style="color:${textHex}">${d.data.Title} </h1>`);
 					jQuery('#segmentText').replaceWith(`<p id="segmentText" class="${textColor}" style="color:${textHex}">${d.data.Description}</p>`);
 					// update image
 					const imgEl = jQuery('#segmentImage');

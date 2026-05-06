@@ -29,8 +29,8 @@ new WP_Theme_CPT(
 		'show_ui'      => true,
 		'taxonomies'   => array(
 			array(
-				'slug'          => 'category',
-				'register_key'  => 'category', // if not given default is slug value.
+				'slug'          => 'project-category',
+				'register_key'  => 'project-category', // if not given default is slug value.
 				'name'          => 'Category',
 				'singular_name' => 'Category',
 				'plural_name'   => 'Categories',

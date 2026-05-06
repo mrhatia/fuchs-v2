@@ -85,6 +85,34 @@
             "max_size": "",
             "mime_types": ". MP4, . WebM, MOV",
             "allow_in_bindings": 0
+        },
+        {
+            "key": "field_69f9fd053c6f2",
+            "label": "Add Images",
+            "name": "bst_var_osngl_images",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -106,5 +134,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1776847829
+    "modified": 1777990943
 }

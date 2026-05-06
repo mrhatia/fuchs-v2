@@ -62,7 +62,7 @@ $bst_var_post_catagories = get_categories( $bst_var_post_id );
 			// WP_Query .
 			$bst_args = array(
 				'post_type'      => array( 'post' ),
-				'posts_per_page' => get_option( 'posts_per_page' ), // how many posts you need.
+				'posts_per_page' => -1, // how many posts you need.
 				'paged'          => ( get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ),
 			);
 			// The Query.

@@ -7291,7 +7291,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   margin-bottom: 15px;
 }
 .post-box-meta .post-date {
-  margin-right: 20px;
+  margin-right: 3px;
   font-size: var(--fc_font_size_14);
 }
 .post-box-meta .ac-post-cat {
@@ -7303,6 +7303,13 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   border-bottom: none;
   margin-left: 0px;
   color: var(--fc_white_2);
+}
+.news-meta-archive {
+  text-transform: uppercase;
+}
+.news-meta-archive .post-date,
+.news-meta-archive .ac-post-cat {
+  display: inline-block;
 }
 .post-box-excerpt p {
   margin-bottom: 15px;
@@ -7634,6 +7641,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .blog-subpost-content {
   margin-top: 30px;
+  color: #ffffff;
 }
 .blog-info-top {
   display: flex;
@@ -7689,6 +7697,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 .blog-subpost-bottom {
   display: flex;
@@ -7759,6 +7768,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   transform: initial;
   margin: 0;
   top: 50%;
+  transform: translateY(-50%);
   bottom: 0px;
   width: 66px;
   height: 69px;
@@ -7775,20 +7785,22 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .blog-slider-image-slider .slick-prev {
   left: 0px;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzIwMTBfMikiPgo8cGF0aCBkPSJNMTUuMzMzNSAyLjY2Njc1TDIuMDAwMTcgMTYuMDAwMUwxNS4zMzM1IDI5LjMzMzQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjAxMF8yIj4KPHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgMTggMCkiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K);
-  background-color: var(--fc_orange);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjAwMDEgMi42NjY3NUwyLjY2Njc1IDE2LjAwMDFMMTYuMDAwMSAyOS4zMzM0IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K);
+  background-color: white;
 }
 .blog-slider-image-slider .slick-prev:hover {
-  background-color: var(--fc_orange);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzIwMTBfMikiPgo8cGF0aCBkPSJNMTUuMzMzNSAyLjY2Njc1TDIuMDAwMTcgMTYuMDAwMUwxNS4zMzM1IDI5LjMzMzQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjAxMF8yIj4KPHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgMTggMCkiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K);
+  background-color: var(--fc_orange_dark);
 }
 .blog-slider-image-slider .slick-next {
   left: auto;
   right: 0;
-  background-color: rgb(255, 255, 255);
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNjY2NjcgMi42NjY3NUwxNiAxNi4wMDAxTDIuNjY2NjcgMjkuMzMzNCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNjY2NjcgMi42NjY3NUwxNiAxNi4wMDAxTDIuNjY2NjcgMjkuMzMzNCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+  background-color: var(--fc_orange_dark);
 }
-.blog-slider-image-slider .slick-next:hover {
-  background-color: rgb(255, 255, 255);
+.blog-slider-image-slider.prev-hover .slick-next {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNjY2NjcgMi42NjY3NUwxNiAxNi4wMDAxTDIuNjY2NjcgMjkuMzMzNCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+  background-color: white;
 }
 .blog-slider-image-slider .item {
   width: 100%;
@@ -7859,10 +7871,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   color: white;
   transition: all 0.3s ease-in-out;
 }
-.blog-single-post-content .bottom-right a:hover,
-.blog-single-post-content .bottom-right a:visited:hover {
-  color: var(--fc_orange_dark);
-}
 .blog-subposts {
   display: flex;
   flex-wrap: wrap;
@@ -7870,19 +7878,28 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   justify-content: flex-start;
 }
 .blog-subposts .blog-subpost {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   max-width: 411px;
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
+.blog-subposts .blog-subpost .heading-3 {
+  transition: all 0.3s ease-in-out;
+}
+.blog-subposts .blog-subpost a:hover .heading-3 {
+  color: var(--fc_orange_dark);
+}
+.blog-subposts .blog-subpost a:hover .plus-button {
+  background-color: var(--fc_orange_dark);
+}
 .blog-subposts .blog-subpost .blog-slider-image-slider .item {
   aspect-ratio: initial;
   width: auto;
-  height: auto;
+  height: 100%;
 }
 .blog-subposts .blog-subpost .blog-slider-image-slider .item img {
   width: auto;
-  height: auto;
+  height: 100%;
   -o-object-fit: initial;
      object-fit: initial;
 }
@@ -8083,6 +8100,12 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .faq-items {
   width: 55.8%;
 }
+.faq-items.only-one-faq-style .faq-number {
+  opacity: 0 !important;
+}
+.faq-items.only-one-faq-style .faq-head {
+  background-image: url(images/default-pattern-orange.png);
+}
 .faq-items-variation {
   width: 70%;
 }
@@ -8099,7 +8122,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 }
 .faq-head.active {
   padding: 30px 70px 14px 0;
-  background-image: none;
+  background-image: none !important;
 }
 .faq-head.active .faq-icon {
   background-color: var(--fc_white);
