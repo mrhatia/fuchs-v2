@@ -11,7 +11,6 @@ import Lity from '../vendors/lity.js';
 import masonry from '../vendors/masonry.min';
 import imagesLoaded from '../vendors/imagesloaded.pkgd.min';
 
-
 jQuery( document ).on( 'scroll', function() {
 	if ( jQuery( document ).scrollTop() > 0 ) {
 		jQuery( 'header, body' ).addClass( 'shrink' );
@@ -36,47 +35,45 @@ jQuery( function() {
 	 * Search Script
 	 */
 
+	jQuery( '.header-nav ul li' ).hover(
+		function() {
+			const $submenu = jQuery( this ).children( 'ul' );
 
-	jQuery('.header-nav ul li').hover(
-		function () {
-			let $submenu = jQuery(this).children('ul');
-
-			if ($submenu.length) {
-				$submenu.stop(true, true);
+			if ( $submenu.length ) {
+				$submenu.stop( true, true );
 
 				// get natural height
-				let fullHeight = $submenu.get(0).scrollHeight;
+				const fullHeight = $submenu.get( 0 ).scrollHeight;
 
 				$submenu
-					.css({
+					.css( {
 						visibility: 'visible',
 						opacity: 1,
 						overflow: 'hidden',
-						height: 0
-					})
-					.animate({
-						height: fullHeight
-					}, 300);
+						height: 0,
+					} )
+					.animate( {
+						height: fullHeight,
+					}, 300 );
 			}
 		},
-		function () {
-			let $submenu = jQuery(this).children('ul');
+		function() {
+			const $submenu = jQuery( this ).children( 'ul' );
 
-			if ($submenu.length) {
-				$submenu.stop(true, true);
+			if ( $submenu.length ) {
+				$submenu.stop( true, true );
 
-				$submenu.animate({
-					height: 0
-				}, 250, function () {
-					$submenu.css({
+				$submenu.animate( {
+					height: 0,
+				}, 250, function() {
+					$submenu.css( {
 						visibility: 'hidden',
-						opacity: 0
-					});
-				});
+						opacity: 0,
+					} );
+				} );
 			}
 		}
 	);
-
 
 	jQuery( '.menu-btn-desktop' ).on( 'click', function() {
 		jQuery( 'body' ).toggleClass( 'side-menu-opened' );
@@ -261,6 +258,16 @@ jQuery( function() {
 			} );
 		} );
 	}
+	gsap.registerPlugin( ScrollTrigger );
+
+	gsap.utils.toArray( '.hero-home.slides .slide' ).forEach( ( slide ) => {
+		ScrollTrigger.create( {
+			trigger: slide,
+			start: 'top 75%',
+			once: true,
+			onEnter: () => slide.classList.add( 'active' ),
+		} );
+	} );
 	// if ( jQuery( '.hero-home' ).length ) {
 	// 	const slides = jQuery( '.slide' );
 	// 	const dots = jQuery( '.dot' );
@@ -450,18 +457,18 @@ jQuery( function() {
 		} );
 	}
 
-	jQuery(document).on('click', '.slick-arrow, .slick-prev, .slick-next', function(e) {
-	e.preventDefault();
-	e.stopPropagation();
-});
+	jQuery( document ).on( 'click', '.slick-arrow, .slick-prev, .slick-next', function( e ) {
+		e.preventDefault();
+		e.stopPropagation();
+	} );
 
-jQuery(document).on('mouseenter', '.slick-prev', function() {
-	jQuery(this).closest('.blog-slider-image-slider').addClass('prev-hover');
-});
+	jQuery( document ).on( 'mouseenter', '.slick-prev', function() {
+		jQuery( this ).closest( '.blog-slider-image-slider' ).addClass( 'prev-hover' );
+	} );
 
-jQuery(document).on('mouseleave', '.slick-prev', function() {
-	jQuery(this).closest('.blog-slider-image-slider').removeClass('prev-hover');
-});
+	jQuery( document ).on( 'mouseleave', '.slick-prev', function() {
+		jQuery( this ).closest( '.blog-slider-image-slider' ).removeClass( 'prev-hover' );
+	} );
 
 	if ( jQuery( '.testimonial-slider' ).length > 0 ) {
 		jQuery( '.testimonial-slider' ).slick( {
@@ -1005,20 +1012,16 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	}
 } );
 
-jQuery(document).ready(function($) {
+jQuery( document ).ready( function( $ ) {
+	if ( jQuery( '.blog-subposts' ).length && jQuery( window ).width() > 1003 ) {
+		const $grid = jQuery( '.blog-subposts' );
 
-	if ( jQuery('.blog-subposts').length && jQuery(window).width() > 1003 ) {
-
-		var $grid = jQuery('.blog-subposts');
-
-		$grid.imagesLoaded(function() {
-			$grid.masonry({
+		$grid.imagesLoaded( function() {
+			$grid.masonry( {
 				itemSelector: '.blog-subpost',
 				columnWidth: '.blog-subpost',
 				gutter: 30,
-			});
-		});
-
+			} );
+		} );
 	}
-
-});
+} );
