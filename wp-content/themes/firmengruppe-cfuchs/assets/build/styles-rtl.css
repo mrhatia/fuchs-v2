@@ -10233,11 +10233,17 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .jobs-items .category-image-card {
   cursor: initial;
 }
+.jobs-items .category-image-card .single-image-content {
+  padding: 30px;
+}
 .jobs-items .category-single-right .category-image-card {
   margin-top: 0;
 }
-.jobs-items .category-single-right .single-image img {
-  aspect-ratio: initial;
+.jobs-items .category-single-right .category-image-card:nth-child(n+2) {
+  margin-top: 30px;
+}
+.jobs-items .category-single-right .category-image-card:nth-child(n+3) .single-image-content {
+  position: initial;
 }
 .category-single-button {
   margin-top: 30px;
@@ -10254,6 +10260,16 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .service-text ul li:last-of-type {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+.author-image {
+  width: 100%;
+  height: 100%;
+  line-height: 0.65;
+  margin-bottom: 20px;
+}
+.author-image img {
+  width: 200px;
+  height: 200px;
 }
 /*-------------------------------------------------
 >> Basic styles for STATS

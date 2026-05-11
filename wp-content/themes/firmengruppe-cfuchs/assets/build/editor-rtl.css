@@ -6409,11 +6409,17 @@ Mixin for transition
 .acf-block-preview .jobs-items .category-image-card {
   cursor: initial;
 }
+.acf-block-preview .jobs-items .category-image-card .single-image-content {
+  padding: 30px;
+}
 .acf-block-preview .jobs-items .category-single-right .category-image-card {
   margin-top: 0;
 }
-.acf-block-preview .jobs-items .category-single-right .single-image img {
-  aspect-ratio: initial;
+.acf-block-preview .jobs-items .category-single-right .category-image-card:nth-child(n+2) {
+  margin-top: 30px;
+}
+.acf-block-preview .jobs-items .category-single-right .category-image-card:nth-child(n+3) .single-image-content {
+  position: initial;
 }
 .acf-block-preview .category-single-button {
   margin-top: 30px;
@@ -6430,6 +6436,16 @@ Mixin for transition
 .acf-block-preview .service-text ul li:last-of-type {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+.acf-block-preview .author-image {
+  width: 100%;
+  height: 100%;
+  line-height: 0.65;
+  margin-bottom: 20px;
+}
+.acf-block-preview .author-image img {
+  width: 200px;
+  height: 200px;
 }
 .acf-block-preview {
   /*-------------------------------------------------
