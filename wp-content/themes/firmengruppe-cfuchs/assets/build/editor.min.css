@@ -6403,6 +6403,34 @@ Mixin for transition
 .acf-block-preview .faq-image-variation .heading-3 {
   font-size: var(--fc_font_size_48);
 }
+.acf-block-preview .jobs-items {
+  margin-top: 0;
+}
+.acf-block-preview .jobs-items .category-image-card {
+  cursor: initial;
+}
+.acf-block-preview .jobs-items .category-single-right .category-image-card {
+  margin-top: 0;
+}
+.acf-block-preview .jobs-items .category-single-right .single-image img {
+  aspect-ratio: initial;
+}
+.acf-block-preview .category-single-button {
+  margin-top: 30px;
+  width: 100%;
+}
+.acf-block-preview .category-single-button a, .acf-block-preview .category-single-button a:visited {
+  width: 100%;
+  text-align: center;
+}
+.acf-block-preview .service-text ul {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.acf-block-preview .service-text ul li:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 .acf-block-preview {
   /*-------------------------------------------------
   >> Basic styles for STATS

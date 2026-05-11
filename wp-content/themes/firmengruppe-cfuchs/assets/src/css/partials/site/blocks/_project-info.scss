@@ -101,3 +101,37 @@
 		font-size: var(--fc_font_size_48);
 	}
 }
+
+.jobs-items {
+	margin-top: 0;
+	.category-image-card{
+		cursor: initial;
+	}
+	.category-single-right .category-image-card {
+    margin-top: 0;
+}
+.category-single-right .single-image img{
+	aspect-ratio: initial;
+}
+}
+.category-single-button{
+	margin-top: 30px;
+	width: 100%;
+	a,a:visited{
+		width: 100%;
+		text-align: center;
+	}
+}
+.service-text{
+	ul{
+		margin-top: 20px;
+		margin-bottom: 0;
+		li{
+			&:last-of-type{
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+
+	}
+}
