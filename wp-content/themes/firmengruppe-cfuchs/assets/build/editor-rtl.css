@@ -6418,14 +6418,21 @@ Mixin for transition
 .acf-block-preview .jobs-items .category-single-right .category-image-card:nth-child(n+2) {
   margin-top: 30px;
 }
-.acf-block-preview .jobs-items .category-single-right .category-image-card:nth-child(n+3) .single-image-content {
-  position: initial;
+.acf-block-preview .contact-person-card .link-green,
+.acf-block-preview .contact-person-card .link-green.phone {
+  width: 25px;
+}
+.acf-block-preview .contact-person-card.member-contact-info {
+  margin-top: 10px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 .acf-block-preview .category-single-button {
   margin-top: 30px;
   width: 100%;
 }
-.acf-block-preview .category-single-button a, .acf-block-preview .category-single-button a:visited {
+.acf-block-preview .category-single-button a,
+.acf-block-preview .category-single-button a:visited {
   width: 100%;
   text-align: center;
 }

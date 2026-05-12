@@ -10242,14 +10242,21 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .jobs-items .category-single-right .category-image-card:nth-child(n+2) {
   margin-top: 30px;
 }
-.jobs-items .category-single-right .category-image-card:nth-child(n+3) .single-image-content {
-  position: initial;
+.contact-person-card .link-green,
+.contact-person-card .link-green.phone {
+  width: 25px;
+}
+.contact-person-card.member-contact-info {
+  margin-top: 10px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 .category-single-button {
   margin-top: 30px;
   width: 100%;
 }
-.category-single-button a, .category-single-button a:visited {
+.category-single-button a,
+.category-single-button a:visited {
   width: 100%;
   text-align: center;
 }
