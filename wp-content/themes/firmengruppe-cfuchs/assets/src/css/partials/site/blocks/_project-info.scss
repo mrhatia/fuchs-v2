@@ -134,7 +134,6 @@
 }
 
 .contact-person-card {
-
 	.link-green,
 	.link-green.phone {
 		width: 25px;
@@ -168,7 +167,6 @@
 				margin-bottom: 0;
 			}
 		}
-
 	}
 }
 
@@ -182,5 +180,59 @@
 		width: 200px;
 		height: 200px;
 	}
+}
+.jobs-items {
+	.category-single-left {
+		top: 67px;
+	}
+}
 
+.iat-single-image,
+.team-member-image {
+	a,
+	a:visited {
+		display: block;
+		position: relative;
+		&:hover {
+			.reveal-content {
+				opacity: 1;
+			}
+		}
+	}
+}
+.team-member-image {
+	position: relative;
+	&:hover {
+		.reveal-content {
+			opacity: 1;
+		}
+	}
+}
+.reveal-content {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+	color: white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(0 0 0 / 70%);
+	font-size: var(--fc_font_size_45);
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+
+	.button {
+		margin: 0;
+		pointer-events: none;
+	}
+	h3,
+	h4 {
+		margin: 0;
+	}
+	h4 {
+		font-size: var(--fc_font_size_38);
+	}
 }

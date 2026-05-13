@@ -4786,12 +4786,13 @@ Mixin for transition
      object-position: top;
 }
 .acf-block-preview .member-contact-info {
-  -moz-column-gap: 25px;
-       column-gap: 25px;
   margin-top: 26px;
-  display: inline-flex;
+  display: block;
   box-sizing: border-box;
   margin-top: 0;
+}
+.acf-block-preview .member-contact-info img {
+  max-width: 35px;
 }
 .acf-block-preview .member-contact-info.white-bg {
   background-color: var(--fc_white);
@@ -4802,20 +4803,46 @@ Mixin for transition
   filter: brightness(0) invert(1);
 }
 .acf-block-preview .member-contact-info .link-green {
-  width: 40px;
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
-.acf-block-preview .member-contact-info .link-green a {
+.acf-block-preview .member-contact-info .link-green a,
+.acf-block-preview .member-contact-info .link-green a:visited {
   border-bottom: none;
   line-height: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--fc_color_primary);
+  transition: all 0.3s ease-in-out;
 }
-.acf-block-preview .member-contact-info .link-green.phone {
-  width: 35px;
+.acf-block-preview .member-contact-info .link-green a:hover,
+.acf-block-preview .member-contact-info .link-green a:visited:hover {
+  color: var(--fc_orange_dark);
 }
-.acf-block-preview .member-contact-info .link-green:hover {
+.acf-block-preview .member-contact-info .phone {
+  margin-top: 15px;
+}
+.acf-block-preview .single-service-hero-section video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+.acf-block-preview .iat-content .member-contact-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.acf-block-preview .iat-content .member-contact-info .link-green:hover {
   transform: scale(1.1);
+}
+.acf-block-preview .iat-content .member-contact-info .phone {
+  margin: 0;
 }
 .acf-block-preview {
   /*-------------------------------------------------
@@ -6453,6 +6480,55 @@ Mixin for transition
 .acf-block-preview .author-image img {
   width: 200px;
   height: 200px;
+}
+.acf-block-preview .jobs-items .category-single-left {
+  top: 67px;
+}
+.acf-block-preview .iat-single-image a,
+.acf-block-preview .iat-single-image a:visited,
+.acf-block-preview .team-member-image a,
+.acf-block-preview .team-member-image a:visited {
+  display: block;
+  position: relative;
+}
+.acf-block-preview .iat-single-image a:hover .reveal-content,
+.acf-block-preview .iat-single-image a:visited:hover .reveal-content,
+.acf-block-preview .team-member-image a:hover .reveal-content,
+.acf-block-preview .team-member-image a:visited:hover .reveal-content {
+  opacity: 1;
+}
+.acf-block-preview .team-member-image {
+  position: relative;
+}
+.acf-block-preview .team-member-image:hover .reveal-content {
+  opacity: 1;
+}
+.acf-block-preview .reveal-content {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: var(--fc_font_size_45);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.acf-block-preview .reveal-content .button {
+  margin: 0;
+  pointer-events: none;
+}
+.acf-block-preview .reveal-content h3,
+.acf-block-preview .reveal-content h4 {
+  margin: 0;
+}
+.acf-block-preview .reveal-content h4 {
+  font-size: var(--fc_font_size_38);
 }
 .acf-block-preview {
   /*-------------------------------------------------
@@ -8973,6 +9049,20 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 747px) {
+  .acf-block-preview .jobs-items .category-image-card .single-image-content {
+    padding: 16px;
+  }
+  .acf-block-preview .service-text ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .acf-block-preview .service-text ul li {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .acf-block-preview .service-text ul li:last-of-type {
+    margin: 0;
+  }
   .acf-block-preview .cfuchs-tl-node[data-type=secondary] .cfuchs-tl-label {
     top: calc(50% + 16px) !important;
   }

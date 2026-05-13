@@ -1034,6 +1034,20 @@
 }
 
 @media only screen and (max-width: 747px) {
+	.jobs-items .category-image-card .single-image-content {
+		padding: 16px;
+	}
+	.service-text ul {
+		margin-top: 10px;
+		margin-bottom: 0;
+		li {
+			margin-bottom: 8px;
+			font-size: 13px;
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
 	.cfuchs-tl-node[data-type="secondary"] .cfuchs-tl-label {
 		top: calc(50% + 16px) !important;
 	}
