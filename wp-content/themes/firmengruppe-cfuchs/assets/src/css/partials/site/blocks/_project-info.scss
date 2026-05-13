@@ -134,6 +134,7 @@
 }
 
 .contact-person-card {
+
 	.link-green,
 	.link-green.phone {
 		width: 25px;
@@ -181,33 +182,13 @@
 		height: 200px;
 	}
 }
+
 .jobs-items {
 	.category-single-left {
 		top: 67px;
 	}
 }
 
-.iat-single-image,
-.team-member-image {
-	a,
-	a:visited {
-		display: block;
-		position: relative;
-		&:hover {
-			.reveal-content {
-				opacity: 1;
-			}
-		}
-	}
-}
-.team-member-image {
-	position: relative;
-	&:hover {
-		.reveal-content {
-			opacity: 1;
-		}
-	}
-}
 .reveal-content {
 	position: absolute;
 	inset: 0;
@@ -228,11 +209,43 @@
 		margin: 0;
 		pointer-events: none;
 	}
+
 	h3,
 	h4 {
 		margin: 0;
 	}
+
 	h4 {
 		font-size: var(--fc_font_size_38);
+	}
+}
+
+.iat-single-image,
+.team-member-image {
+
+	a,
+	a:visited {
+		display: block;
+		position: relative;
+
+		&:hover {
+			.reveal-content {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.team-member-image {
+	position: relative;
+
+	.reveal-content {
+		z-index: 0;
+	}
+
+	&:hover {
+		.reveal-content {
+			opacity: 1;
+		}
 	}
 }

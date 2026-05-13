@@ -32,6 +32,14 @@
 	}
 }
 
+.about-supervisor-section {
+	.iat-content {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 .image-alongside-text-variation {
 	// p,
 	// .person-info {
@@ -176,7 +184,7 @@
 // Responsive Text Mixin
 
 @function strip-unit($number) {
-	@if type-of($number) == "number" and not unitless($number) {
+	@if type-of($number)=="number" and not unitless($number) {
 		@return $number / ($number * 0 + 1);
 	}
 
@@ -184,20 +192,16 @@
 }
 
 // Responsive text mixin
-@mixin responsiveText(
-	$minSize,
+@mixin responsiveText($minSize,
 	$maxSize: 28px,
 	$minWidth: 450px,
-	$maxWidth: 900px
-) {
+	$maxWidth: 900px) {
 	$mxS: strip-unit($maxSize);
 	$mnS: strip-unit($minSize);
 	$mxW: strip-unit($maxWidth);
 	$mnW: strip-unit($minWidth);
 
-	font-size: calc(
-		#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW})
-	);
+	font-size: calc(#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW}));
 
 	@media screen and (max-width: $minWidth) {
 		font-size: $minSize;

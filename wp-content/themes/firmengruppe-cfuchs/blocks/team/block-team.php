@@ -49,11 +49,57 @@ BaseTheme::block(
 									?>
 
 									<div class="team-member-column">
-										<a href="#member-<?php echo $team_id; ?>" class="popup-link"></a>
-										<div class="member-popup mfp-hide" id="member-<?php echo $team_id; ?>">
-											<div class="member-popup-inner">
-												<div class="member-popup-left">
-													<div class="member-popup-image image-cover" tabindex="0">
+
+											<div class="member-popup mfp-hide" id="member-<?php echo $team_id; ?>">
+												<div class="member-popup-inner">
+													<div class="member-popup-left">
+														<div class="member-popup-image image-cover" tabindex="0">
+															<?php
+																if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
+																	echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
+																} else {
+																	echo get_the_post_thumbnail(
+																		$bst_var_post_id,
+																		'thumb_1000',
+																	);
+																}
+															?>
+														</div>
+													</div>
+													<div class="member-popup-right">
+														<div class="close-icon mfp-close" role="button" tabindex="0">
+															<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/topbar-cross-icon.svg" alt="">
+														</div>
+														<div class="member-popup-right-inner">
+															<h2 class="heading-2" tabindex="0"><?php echo $bst_var_cpt_team_name; ?> </h2>
+															<?php if($bst_var_cpt_team_designation){ ?>
+																<div class="team-member-designation" tabindex="0"><?php echo html_entity_decode($bst_var_cpt_team_designation); ?></div>
+															<?php } ?>
+															<?php if($bst_var_cpt_team_bio){ ?>
+																<div class="team-member-text">
+																	<?php echo html_entity_decode($bst_var_cpt_team_bio); ?>
+																</div>
+															<?php } ?>
+															<div class="member-contact-info d-flex align-content-center">
+																<?php if($bst_var_cpt_team_email) { ?>
+																	<div class="email link-green">
+																		<a href="mailto:<?php echo $bst_var_cpt_team_email; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""> <?php echo $bst_var_cpt_team_email; ?></a>
+																	</div>
+																<?php } ?>
+																<?php if($bst_var_cpt_team_phone) { ?>
+																	<div class="phone link-green">
+																		<a href="tel:<?php echo $bst_var_cpt_team_phone; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""> <?php echo $bst_var_cpt_team_phone; ?></a>
+																	</div>
+																<?php } ?>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+											<a href="#member-<?php echo $team_id; ?>" class="popup-link">
+												<div class="team-member-image image-cover">
+
 														<?php
 															if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
 																echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
@@ -64,61 +110,21 @@ BaseTheme::block(
 																);
 															}
 														?>
-													</div>
-												</div>
-												<div class="member-popup-right">
-													<div class="close-icon mfp-close" role="button" tabindex="0">
-														<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/topbar-cross-icon.svg" alt="">
-													</div>
-													<div class="member-popup-right-inner">
-														<h2 class="heading-2" tabindex="0"><?php echo $bst_var_cpt_team_name; ?> </h2>
-														<?php if($bst_var_cpt_team_designation){ ?>
-															<div class="team-member-designation" tabindex="0"><?php echo html_entity_decode($bst_var_cpt_team_designation); ?></div>
-														<?php } ?>
-														<?php if($bst_var_cpt_team_bio){ ?>
-															<div class="team-member-text">
-																<?php echo html_entity_decode($bst_var_cpt_team_bio); ?>
-															</div>
-														<?php } ?>
-														<div class="member-contact-info d-flex align-content-center">
-															<?php if($bst_var_cpt_team_email) { ?>
-																<div class="email link-green">
-																	<a href="mailto:<?php echo $bst_var_cpt_team_email; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""></a>
-																</div>
-															<?php } ?>
-															<?php if($bst_var_cpt_team_phone) { ?>
-																<div class="phone link-green">
-																	<a href="tel:<?php echo $bst_var_cpt_team_phone; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""></a>
-																</div>
-															<?php } ?>
+															<div class="reveal-content">
+															<span class="button white-button" tabindex="0">Contact
+																now</span>
 														</div>
-													</div>
 												</div>
-
-											</div>
-										</div>
-										<div class="team-member-image image-cover">
-											<a href="#member-<?php echo $team_id; ?>">
-												<?php
-													if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
-														echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
-													} else {
-														echo get_the_post_thumbnail(
-															$bst_var_post_id,
-															'thumb_1000',
-														);
-													}
-												?>
 											</a>
-										</div>
-										<div class="team-member-content">
-											<div class="tm-content-left">
-												<?php if($bst_var_cpt_team_designation){ ?>
-													<p><?php echo html_entity_decode($bst_var_cpt_team_designation); ?></p>
-												<?php } ?>
-												<h3 class="heading-6"><a href="#member-<?php echo $team_id; ?>"><?php echo $bst_var_cpt_team_name; ?></a></h3>
+
+											<div class="team-member-content">
+												<div class="tm-content-left">
+													<?php if($bst_var_cpt_team_designation){ ?>
+														<p><?php echo html_entity_decode($bst_var_cpt_team_designation); ?></p>
+													<?php } ?>
+													<h3 class="heading-6"><a href="#member-<?php echo $team_id; ?>"><?php echo $bst_var_cpt_team_name; ?></a></h3>
+												</div>
 											</div>
-										</div>
 
 									</div>
 								<?php }
