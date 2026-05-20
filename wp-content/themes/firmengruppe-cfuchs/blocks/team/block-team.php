@@ -45,6 +45,7 @@ BaseTheme::block(
 										$bst_var_cpt_team_bio = $bst_fields['bst_var_cpt_team_bio'];
 										$bst_var_cpt_team_email = $bst_fields['bst_var_cpt_team_email'] ?? null;
 										$bst_var_cpt_team_phone = $bst_fields['bst_var_cpt_team_phone'] ?? null;
+										$bst_var_cpt_team_popup_button_label = $bst_fields['bst_var_cpt_team_popup_button_label'] ?? 'Mehr';
 										$bst_var_cpt_team_name = get_the_title( $bst_var_post_id );
 									?>
 
@@ -110,8 +111,7 @@ BaseTheme::block(
 															}
 														?>
 															<div class="reveal-content">
-															<span class="button white-button" tabindex="0">Contact
-																now</span>
+															<span class="button white-button" tabindex="0"><?php echo $bst_var_cpt_team_popup_button_label; ?></span>
 														</div>
 												</div>
 											</a>

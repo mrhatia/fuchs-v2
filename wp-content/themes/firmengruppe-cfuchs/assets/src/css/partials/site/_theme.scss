@@ -301,7 +301,7 @@ span.button,
 	line-height: 1.5;
 	@include font(sour, med);
 	font-size: var(--fc_font_size_16);
-	text-transform: capitalize;
+	// text-transform: capitalize;
 
 	&:last-child {
 		margin-right: 0;

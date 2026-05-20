@@ -5635,7 +5635,6 @@ span.button,
   font-weight: 500;
   font-style: normal;
   font-size: var(--fc_font_size_16);
-  text-transform: capitalize;
 }
 a.button:last-child,
 a.button:visited:last-child,
@@ -7552,7 +7551,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   color: var(--fc_white);
   border: 1px solid #e8e8e9;
   transition: background-color 0.4s ease, opacity 0.4s ease;
@@ -8210,7 +8209,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   justify-content: center;
   position: absolute;
   left: 0;
-  top: 17px;
+  top: 27px;
   transition: all 0.3s ease-in-out;
 }
 .faq-icon svg {
@@ -10851,7 +10850,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.369);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.55s ease-in-out;
   opacity: 1;
   color: #fff;

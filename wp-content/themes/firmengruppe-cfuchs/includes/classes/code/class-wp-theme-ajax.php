@@ -145,13 +145,20 @@ class WP_Theme_Ajax {
 
 		ob_start();
 
+		$no_jobs_message = sanitize_text_field(
+			$_POST['no_jobs_message'] ?? 'No Jobs Found.'
+		);
+
 		if ( $query->have_posts() ) {
+
 			while ( $query->have_posts() ) {
 				$query->the_post();
 				get_template_part( 'partials/content', 'archive-jobs' );
 			}
+
 		} else {
-			echo '<div class="heading-4 center-align">No jobs found.</div>';
+
+			echo '<div class="heading-4 center-align">' . html_entity_decode( $no_jobs_message ) . '</div>';
 		}
 
 		wp_reset_postdata();

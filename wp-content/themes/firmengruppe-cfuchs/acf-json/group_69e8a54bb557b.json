@@ -199,6 +199,27 @@
                     "append": ""
                 }
             ]
+        },
+        {
+            "key": "field_6a0dd867a96d2",
+            "label": "No Jobs Found Message",
+            "name": "fh_var_thr_no_jobs_found_message",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -220,5 +241,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1776854572
+    "modified": 1779292395
 }

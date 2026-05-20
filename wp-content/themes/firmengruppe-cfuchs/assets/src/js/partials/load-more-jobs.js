@@ -77,6 +77,10 @@ jQuery(function () {
 				region: currentRegion,
 				status: currentStatus,
 				search: currentSearch,
+				no_jobs_message:
+					typeof noJobsMessage !== 'undefined'
+						? noJobsMessage
+						: 'No Jobs Found.',
 			},
 			success(res) {
 				reset

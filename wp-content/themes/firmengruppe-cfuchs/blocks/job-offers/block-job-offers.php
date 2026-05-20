@@ -19,7 +19,12 @@ BaseTheme::block(
 		$cat_column_one_option     = $bst_block_fields['fh_var_thr_column_one_option'] ?? null;
 		$cat_column_two_option     = $bst_block_fields['fh_var_thr_column_two_option'] ?? null;
 		$cat_column_three_option     = $bst_block_fields['fh_var_thr_column_three_option'] ?? null;
+		$fh_var_thr_no_jobs_found_message     = $bst_block_fields['fh_var_thr_no_jobs_found_message'] ?? 'No Jobs Found.';
 		?>
+
+		<script>
+			const noJobsMessage = <?php echo wp_json_encode( $fh_var_thr_no_jobs_found_message ); ?>;
+		</script>
 
 		<section class="ctn-full-width">
 			<div class="wrapper">
@@ -202,7 +207,7 @@ BaseTheme::block(
 							get_template_part('partials/content', 'archive-jobs');
 						endwhile;
 					else :
-						echo '<p>No jobs found.</p>';
+						echo $fh_var_thr_no_jobs_found_message;
 					endif;
 					?>
 				</div>

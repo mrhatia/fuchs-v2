@@ -85,7 +85,7 @@ BaseTheme::block(
 
 										const map = new google.maps.Map(document.getElementById("map"), {
 										center: clientLocation,
-										zoom: 13.5,
+										zoom: 13,
 										styles: styledMap
 										});
 

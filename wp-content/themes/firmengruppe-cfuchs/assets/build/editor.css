@@ -2474,7 +2474,6 @@ Mixin for transition
   font-weight: 500;
   font-style: normal;
   font-size: var(--fc_font_size_16);
-  text-transform: capitalize;
 }
 .acf-block-preview a.button:last-child,
 .acf-block-preview a.button:visited:last-child,
@@ -4348,7 +4347,7 @@ Mixin for transition
   justify-content: center;
   position: absolute;
   right: 0;
-  top: 17px;
+  top: 27px;
   transition: all 0.3s ease-in-out;
 }
 .acf-block-preview .faq-icon svg {
@@ -7025,7 +7024,7 @@ Mixin for transition
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.369);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.55s ease-in-out;
   opacity: 1;
   color: #fff;

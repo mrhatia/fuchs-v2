@@ -84,6 +84,27 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6a0dd5b0098c7",
+            "label": "Popup Button Label",
+            "name": "bst_var_cpt_team_popup_button_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -105,5 +126,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773712581
+    "modified": 1779291693
 }
