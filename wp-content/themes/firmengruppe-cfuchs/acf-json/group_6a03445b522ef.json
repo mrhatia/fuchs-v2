@@ -187,6 +187,27 @@
             "allow_in_bindings": 0
         },
         {
+            "key": "field_6a06822774b93",
+            "label": "Sub Boxes Title",
+            "name": "fh_var_osngl_job_sub_boxes_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6a0348da66221",
             "label": "Add Sub Boxes",
             "name": "fh_var_osngl_job_sub_boxes",
@@ -415,5 +436,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1778602060
+    "modified": 1778811591
 }

@@ -68,7 +68,6 @@ BaseTheme::block(
 													</div>
 													<div class="member-popup-right">
 														<div class="close-icon mfp-close" role="button" tabindex="0">
-															<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/topbar-cross-icon.svg" alt="">
 														</div>
 														<div class="member-popup-right-inner">
 															<h2 class="heading-2" tabindex="0"><?php echo $bst_var_cpt_team_name; ?> </h2>

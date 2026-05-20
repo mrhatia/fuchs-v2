@@ -47,6 +47,7 @@
 }
 
 .have-two-columns {
+
 	.post-box-img,
 	.post-archive-box-img {
 		img {
@@ -56,6 +57,7 @@
 }
 
 .post-box-title {
+
 	h2 a,
 	h4 a {
 		display: -webkit-box;
@@ -358,6 +360,10 @@
 	}
 }
 
+.job-single-cards-heading {
+	margin-bottom: 40px;
+}
+
 .cards-button {
 	line-height: 0;
 }
@@ -369,10 +375,17 @@
 
 	a.card-link {
 		display: inline-block;
+		width: 100%;
 	}
 
 	.single-image {
 		line-height: 0.65;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
 
 		img {
 			width: 100%;
@@ -386,12 +399,12 @@
 	}
 
 	.single-image-content {
-		position: absolute;
-		inset: 0;
-		bottom: 0;
-		left: 0;
+		// position: absolute;
+		// inset: 0;
+		// bottom: 0;
+		// left: 0;
 		box-sizing: border-box;
-		height: 100%;
+		min-height: 475px;
 		width: 100%;
 		padding: 20px;
 		display: flex;
@@ -413,6 +426,11 @@
 
 	.service-title {
 		font-size: var(--fc_font_size_30);
+		font-weight: 600;
+	}
+
+	.service-title-right {
+		font-size: var(--fc_font_size_38);
 		font-weight: 600;
 	}
 
@@ -498,6 +516,7 @@
 }
 
 @media (max-width: 1024px) {
+
 	.category-single-left,
 	.category-single-right {
 		width: 100%;
@@ -660,6 +679,7 @@
 	align-items: center;
 
 	.bottom-section-button {
+
 		a,
 		a:visited {
 			&:hover {
@@ -733,6 +753,7 @@
 }
 
 .blog-slider-image-slider {
+
 	.slick-prev,
 	.slick-next {
 		transform: initial;
@@ -799,6 +820,7 @@
 	margin-top: 40px;
 
 	.blog-publish-date {
+
 		a,
 		a:visited {
 			color: var(--fc_white);
@@ -835,6 +857,7 @@
 
 	.bottom-section-button {
 		.tag {
+
 			a,
 			a:visited {
 				font-size: 14px;
@@ -858,6 +881,7 @@
 	}
 
 	.bottom-right {
+
 		a,
 		a:visited {
 			font-size: 12px;

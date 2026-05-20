@@ -347,16 +347,23 @@
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 
-	img {
+	&:before {
+		content: "";
+		position: absolute;
 		width: 16px;
 		height: 16px;
-		margin: 0 auto;
+		// background-color: var(--fc_color_primary);
+		// transform: rotate(45deg);
+		background-image: url("../images/topbar-cross-icon.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 	}
 
 	&:hover {
 		background-color: var(--fc_color_primary);
 
-		img {
+		&::before {
 			filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(13%) hue-rotate(96deg) brightness(104%) contrast(100%);
 		}
 	}
@@ -388,7 +395,7 @@
 	line-height: 1.7;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
-	color: var(--fc_red);
+	color: var(--fc_orange_dark);
 }
 
 .member-popup-right-inner {

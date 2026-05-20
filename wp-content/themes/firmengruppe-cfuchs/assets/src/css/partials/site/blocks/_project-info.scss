@@ -137,11 +137,24 @@
 
 	.link-green,
 	.link-green.phone {
-		width: 25px;
+
+		img {
+			max-width: 28px;
+		}
+	}
+
+	.link-green {
+		a {
+			color: var(--fc_white);
+
+			&:hover {
+				color: var(--fc_orange_dark);
+			}
+		}
 	}
 
 	&.member-contact-info {
-		margin-top: 10px;
+		margin-top: 20px;
 		column-gap: 15px;
 	}
 }

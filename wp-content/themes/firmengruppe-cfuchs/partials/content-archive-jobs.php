@@ -16,8 +16,8 @@ $terms_cat = get_the_terms( $bst_var_post_id, 'job-category' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'single-image-card' ); ?>>
+	<a href="<?php the_permalink(); ?>">
 	<div class="single-image">
-		<a href="<?php the_permalink(); ?>">
 			<?php
 				if ( ! has_post_thumbnail( $bst_var_post_id ) ) {
 					echo '<img class="" src="' . esc_url( get_template_directory_uri() ) . '/assets/build/images/admin/defaults/default-image.webp" >';
@@ -28,7 +28,6 @@ $terms_cat = get_the_terms( $bst_var_post_id, 'job-category' );
 					);
 				}
 			?>
-		</a>
 	</div>
 	<div class="single-image-content">
 		<div class="small-text">
@@ -43,8 +42,11 @@ $terms_cat = get_the_terms( $bst_var_post_id, 'job-category' );
 		<div class="service-title">
 			<?php the_title(); ?>
 		</div>
-		<a href="<?php the_permalink(); ?>" class="plus-button">
+		<span class="plus-button">
 			+
-		</a>
+		</span>
 	</div>
+		</a>
+
+
 </article>

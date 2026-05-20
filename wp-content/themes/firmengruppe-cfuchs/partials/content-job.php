@@ -23,6 +23,7 @@ $fh_var_osngl_job_video          = $bst_fields['fh_var_osngl_job_video'] ?? null
 $fh_var_osngl_job_box_title          = $bst_fields['fh_var_osngl_job_box_title'] ?? null;
 $fh_var_osngl_job_box_image          = $bst_fields['fh_var_osngl_job_box_image'] ?? null;
 $fh_var_osngl_job_button          = $bst_fields['fh_var_osngl_job_button'] ?? null;
+$fh_var_osngl_job_sub_boxes_title          = $bst_fields['fh_var_osngl_job_sub_boxes_title'] ?? null;
 $fh_var_osngl_job_sub_boxes          = $bst_fields['fh_var_osngl_job_sub_boxes'] ?? null;
 
 
@@ -39,7 +40,7 @@ $fh_var_osngl_job_sub_boxes          = $bst_fields['fh_var_osngl_job_sub_boxes']
 				<div class="hero-slide-image" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
 					<?php
 						if ( $fh_var_osngl_job_video ) { ?>
-							<video src="<?php echo esc_url($fh_var_osngl_job_video); ?>" autoplay muted loop></video>
+							<video src="<?php echo esc_url($fh_var_osngl_job_video); ?>" autoplay loop playsinline></video>
 						<?php } else {
 							echo get_the_post_thumbnail(
 								$bst_var_post_id,
@@ -88,7 +89,7 @@ $fh_var_osngl_job_sub_boxes          = $bst_fields['fh_var_osngl_job_sub_boxes']
 									<?php } ?>
 									<div class="single-image-content">
 										<?php if ( $fh_var_osngl_job_box_title ) { ?>
-											<div class="service-title">
+											<div class="service-title-right">
 												<?php echo esc_html( $fh_var_osngl_job_box_title ); ?>
 											</div>
 										<?php } ?>
@@ -103,6 +104,13 @@ $fh_var_osngl_job_sub_boxes          = $bst_fields['fh_var_osngl_job_sub_boxes']
 
 							</div>
 							<div class="category-single-right">
+								<?php if($fh_var_osngl_job_sub_boxes_title){ ?>
+									<div class="project-heading job-single-cards-heading">
+										<p tabindex="0">
+											<?php echo html_entity_decode( $fh_var_osngl_job_sub_boxes_title ); ?>
+										</p>
+									</div>
+								<?php } ?>
 
 								<?php if ( $fh_var_osngl_job_sub_boxes ) { ?>
 									<div class="category-single-inne-items">
@@ -157,23 +165,21 @@ $fh_var_osngl_job_sub_boxes          = $bst_fields['fh_var_osngl_job_sub_boxes']
 																<?php echo html_entity_decode( $box['text'] ); ?>
 															</div>
 														<?php } ?>
-															<div class="member-contact-info contact-person-card d-flex align-content-center">
-															<?php if ( $box['email'] ) {  ?>
-																<div class="email white-icon link-green">
-																	<a href="mailto:<?php echo html_entity_decode( $box['email'] ); ?>" class="gmail">
-																		<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt="">
-																	</a>
-																</div>
-															<?php } ?>
-															<?php if ( $box['phone'] ) {  ?>
-																<div class="phone white-icon link-green">
-																	<a href="tel:<?php echo html_entity_decode( $box['phone'] ); ?>" class="phone">
-																		<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt="">
-																	</a>
-																</div>
-															<?php } ?>
 
-														</div>
+
+															<div class="member-contact-info contact-person-card d-flex align-content-center">
+																<?php if($box['email']) { ?>
+																	<div class="email white-icon link-green">
+																		<a href="mailto:<?php echo html_entity_decode( $box['email'] ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""> <?php echo $box['email']; ?></a>
+																	</div>
+																<?php } ?>
+																<?php if($box['phone']) { ?>
+																	<div class="phone white-icon link-green">
+																		<a href="tel:<?php echo html_entity_decode( $box['phone'] ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""> <?php echo $box['phone']; ?></a>
+																	</div>
+																<?php } ?>
+															</div>
+
 
 
 

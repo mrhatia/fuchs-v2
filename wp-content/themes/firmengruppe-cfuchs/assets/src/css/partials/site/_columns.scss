@@ -32,4 +32,16 @@
 	display: grid;
 	@include fluidColumns(5, 200px, 2%);
 	row-gap: var(--fc_space_30);
+
+	&.images-items {
+		.single-image {
+			height: 100%;
+
+			img {
+				object-fit: cover;
+
+			}
+
+		}
+	}
 }
