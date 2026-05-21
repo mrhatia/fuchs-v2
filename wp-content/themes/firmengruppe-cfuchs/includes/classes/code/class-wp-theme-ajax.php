@@ -151,9 +151,15 @@ class WP_Theme_Ajax {
 
 		if ( $query->have_posts() ) {
 
+
 			while ( $query->have_posts() ) {
 				$query->the_post();
 				get_template_part( 'partials/content', 'archive-jobs' );
+			}
+			if($query->post_count == 1 ){
+				echo '<div class="job-post"></div> <div class="job-post"></div>';
+			} else if($query->post_count == 2 ){
+				echo '<div class="job-post"></div>';
 			}
 
 		} else {
