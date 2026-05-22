@@ -436,7 +436,7 @@ Mixin for transition
   --fc_font_size_60: clamp(45 * 1px, 15 / 806 * (100vw - 474 * 1px) + 45 * 1px, 60 * 1px);
   --fc_font_size_68: clamp(55 * 1px, 13 / 806 * (100vw - 474 * 1px) + 55 * 1px, 68 * 1px);
   --fc_font_size_72: clamp(58 * 1px, 14 / 806 * (100vw - 474 * 1px) + 58 * 1px, 72 * 1px);
-  --fc_font_size_80: clamp(48 * 1px, 32 / 806 * (100vw - 474 * 1px) + 48 * 1px, 80 * 1px);
+  --fc_font_size_80: clamp(42 * 1px, 38 / 806 * (100vw - 474 * 1px) + 42 * 1px, 80 * 1px);
   --fc_font_size_82: clamp(55 * 1px, 27 / 806 * (100vw - 474 * 1px) + 55 * 1px, 82 * 1px);
   --fc_font_size_120: clamp(40 * 1px, 80 / 806 * (100vw - 474 * 1px) + 40 * 1px, 120 * 1px);
   --fc_font_size_160: clamp(65 * 1px, 95 / 806 * (100vw - 474 * 1px) + 65 * 1px, 160 * 1px);
@@ -8721,11 +8721,30 @@ Mixin for transition
   .acf-block-preview .bottom-right {
     gap: 10px;
   }
+  .acf-block-preview .blog-sub-page .hero-slide-item {
+    min-height: 365px;
+  }
+  .acf-block-preview .blog-sub-page .heading-2 {
+    top: 0 !important;
+  }
+  .acf-block-preview .blog-sub-page p {
+    margin: 0 !important;
+  }
   .acf-block-preview .project-design .content {
     padding: 40px 30px;
   }
+  .acf-block-preview .images-items .single-image-card .service-title {
+    font-size: 30px;
+    color: var(--fc_white);
+  }
+  .acf-block-preview .images-items .single-image-card .plus-button {
+    margin-top: 40px;
+  }
+  .acf-block-preview .images-items .single-image-card .small-text {
+    font-size: 14px;
+  }
   .acf-block-preview .feature-block.apprentice-block {
-    min-height: 300px;
+    min-height: 330px;
     padding-top: 40px;
   }
   .acf-block-preview .applicants-image {
@@ -8885,11 +8904,11 @@ Mixin for transition
     width: 100%;
   }
   .acf-block-preview .stats-items {
-    row-gap: 60px;
+    row-gap: 130px;
   }
   .acf-block-preview .counter-background {
     left: calc(50% - 150px);
-    font-size: 110px;
+    font-size: 160px;
   }
   .acf-block-preview .stats-column {
     width: 100%;
@@ -9066,6 +9085,11 @@ Mixin for transition
   }
 }
 @media only screen and (max-width: 747px) {
+  .acf-block-preview .hero-inner-slider .banner-content .banner-content-inner,
+  .acf-block-preview .hero-project .banner-content .banner-content-inner {
+    position: relative;
+    top: 0;
+  }
   .acf-block-preview .jobs-items .category-image-card .single-image-content {
     padding: 16px;
   }
@@ -9457,10 +9481,116 @@ Mixin for transition
     min-height: 580px;
   }
   .acf-block-preview .section-head .heading-2 {
+    word-wrap: break-word;
     font-size: 40px;
+  }
+  .acf-block-preview .image-alongside-text .kicker {
+    font-size: 14px;
+  }
+  .acf-block-preview .image-alongside-text h2 {
+    font-size: 40px;
+  }
+  .acf-block-preview .blog-teaser-slider .blog-teaser-item {
+    margin-right: 0;
+  }
+  .acf-block-preview .blog-teaser-slider {
+    padding: 10px 0 190px 36px !important;
+    width: 110%;
+    margin-left: -4.7%;
+  }
+  .acf-block-preview .blog-teaser-item .testimonial-image-item img {
+    aspect-ratio: 522/319;
+    min-height: 319px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .acf-block-preview .blog-teaser-slider .blog-teaser-item p {
+    font-size: 18px;
+  }
+  .acf-block-preview .banner-content-inner .heading-2 {
+    font-size: 43px !important;
+  }
+  .acf-block-preview .feature-block.apprentice-block .heading-2 {
+    font-size: 45px;
+  }
+  .acf-block-preview .applicants-content .heading-3 {
+    font-size: 40px;
+  }
+  .acf-block-preview .what-we-offer-section::after {
+    display: none;
+  }
+  .acf-block-preview .what-we-offer {
+    padding: 86px 0;
+  }
+  .acf-block-preview .what-we-offer .three-columns {
+    gap: 58px;
+  }
+  .acf-block-preview .what-we-offer .column p {
+    font-size: 18px;
+  }
+  .acf-block-preview .what-we-offer .heading-4 {
+    font-size: 26px;
+  }
+  .acf-block-preview .what-we-offer .kicker-text {
+    font-size: 14px;
+  }
+  .acf-block-preview .what-we-offer .size-72 {
+    font-size: 40px;
+  }
+  .acf-block-preview .introduction-team-left .section-head .heading-2 {
+    font-size: 45px;
+  }
+  .acf-block-preview .introduction-team-left .section-head p {
+    font-size: 20px;
+  }
+  .acf-block-preview .banner-content-inner p {
+    font-size: 20px;
+  }
+  .acf-block-preview .blog-teaser-slider .slick-arrow {
+    top: auto;
+    bottom: 70px;
+    left: 0;
+  }
+  .acf-block-preview .blog-teaser-slider .slick-arrow.slick-prev {
+    left: 30px;
+  }
+  .acf-block-preview .blog-teaser-slider .slick-arrow.slick-next {
+    left: 30px;
+    right: 0;
+    bottom: 0;
+  }
+  .acf-block-preview .blog-teaser-item .testimonial-content-item .heading-3 {
+    font-size: 26px;
+  }
+  .acf-block-preview .image-alongside-text p {
+    font-size: 18px;
+  }
+  .acf-block-preview .image-alongside-text {
+    flex-direction: column-reverse;
+    gap: 57px;
+  }
+  .acf-block-preview .image-alongside-text .iat-image.column {
+    margin-top: 0;
+  }
+  .acf-block-preview .blog-teaser-slider {
+    position: relative;
+  }
+  .acf-block-preview .blog-teaser-slider::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 0;
+    display: block;
+    background-color: var(--fc_green_dark);
+    width: 10.7%;
+    height: 100%;
+    z-index: 2;
   }
   .acf-block-preview .faq-image-variation {
     width: 100%;
+  }
+  .acf-block-preview .testimonial-single-image.mobile-hide {
+    display: block !important;
   }
   .acf-block-preview .single-overview .banner-content .heading-2 {
     font-size: 30px;
@@ -9478,11 +9608,14 @@ Mixin for transition
   }
   .acf-block-preview .hero-inner-slider .hero-split-text,
   .acf-block-preview .hero-project .hero-split-text {
-    display: none;
+    top: -110px;
+    left: -1%;
+    font-size: 62px;
   }
   .acf-block-preview .hero-inner-slider .banner-content h1,
   .acf-block-preview .hero-project .banner-content h1 {
-    font-size: 36px;
+    top: -60px;
+    font-size: 48px;
   }
   .acf-block-preview .hero-inner-slider .banner-content p,
   .acf-block-preview .hero-project .banner-content p {
@@ -9586,6 +9719,31 @@ Mixin for transition
   }
   .acf-block-preview .size-26-m .heading-2 {
     font-size: 26px;
+  }
+  .acf-block-preview .post-box-meta .post-date {
+    font-size: 14px;
+  }
+  .acf-block-preview .highlight-quote {
+    font-size: 20px;
+    padding: 50px 53px 50px 15px;
+  }
+  .acf-block-preview .highlight-quote.tag-science p,
+  .acf-block-preview .highlight-quote.tag-science blockquote {
+    font-size: 20px;
+  }
+  .acf-block-preview .blog-subposts {
+    gap: 30px;
+  }
+  .acf-block-preview .blog-subpost-content {
+    margin-top: 20px;
+  }
+  .acf-block-preview .blog-subpost-content .heading-3 {
+    font-size: 26px !important;
+    line-height: 1.1;
+  }
+  .acf-block-preview .blog-subpost-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 500px) {

@@ -579,13 +579,35 @@
 	.bottom-right {
 		gap: 10px;
 	}
-
+	.blog-sub-page {
+		.hero-slide-item {
+			min-height: 365px;
+		}
+		.heading-2 {
+			top: 0 !important;
+		}
+		p {
+			margin: 0 !important;
+		}
+	}
 	.project-design .content {
 		padding: 40px 30px;
 	}
+	.images-items {
+		.single-image-card .service-title {
+			font-size: 30px;
+			color: var(--fc_white);
+		}
+		.single-image-card .plus-button {
+			margin-top: 40px;
+		}
+		.single-image-card .small-text {
+			font-size: 14px;
+		}
+	}
 
 	.feature-block.apprentice-block {
-		min-height: 300px;
+		min-height: 330px;
 		padding-top: 40px;
 	}
 
@@ -792,12 +814,12 @@
 	}
 
 	.stats-items {
-		row-gap: 60px;
+		row-gap: 130px;
 	}
 
 	.counter-background {
 		left: calc(50% - 150px);
-		font-size: 110px;
+		font-size: 160px;
 	}
 
 	.stats-column {
@@ -1034,6 +1056,11 @@
 }
 
 @media only screen and (max-width: 747px) {
+	.hero-inner-slider .banner-content .banner-content-inner,
+	.hero-project .banner-content .banner-content-inner {
+		position: relative;
+		top: 0;
+	}
 	.jobs-items .category-image-card .single-image-content {
 		padding: 16px;
 	}
@@ -1531,12 +1558,131 @@
 
 	.section-head {
 		.heading-2 {
+			word-wrap: break-word;
 			font-size: 40px;
 		}
 	}
+	.image-alongside-text .kicker {
+		font-size: 14px;
+	}
+	.image-alongside-text h2 {
+		font-size: 40px;
+	}
 
+	.blog-teaser-slider .blog-teaser-item {
+		margin-right: 0;
+	}
+	.blog-teaser-slider {
+		padding: 10px 0 190px 36px !important;
+		width: 110%;
+		margin-left: -4.7%;
+	}
+	.blog-teaser-item .testimonial-image-item img {
+		aspect-ratio: 522 / 319;
+		min-height: 319px;
+		object-fit: cover;
+	}
+	.blog-teaser-slider .blog-teaser-item p {
+		font-size: 18px;
+	}
+	.banner-content-inner .heading-2 {
+		font-size: 43px !important;
+	}
+	.feature-block.apprentice-block {
+		.heading-2 {
+			font-size: 45px;
+		}
+	}
+	.applicants-content {
+		.heading-3 {
+			font-size: 40px;
+		}
+	}
+	.what-we-offer-section {
+		&::after {
+			display: none;
+		}
+	}
+	.what-we-offer {
+		padding: 86px 0;
+		.three-columns {
+			gap: 58px;
+		}
+		.column {
+			p {
+				font-size: 18px;
+			}
+		}
+		.heading-4 {
+			font-size: 26px;
+		}
+		.kicker-text {
+			font-size: 14px;
+		}
+		.size-72 {
+			font-size: 40px;
+		}
+	}
+	.introduction-team-left {
+		.section-head {
+			.heading-2 {
+				font-size: 45px;
+			}
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+	.banner-content-inner p {
+		font-size: 20px;
+	}
+	.blog-teaser-slider .slick-arrow {
+		top: auto;
+		bottom: 70px;
+		left: 0;
+		&.slick-prev {
+			left: 30px;
+		}
+		&.slick-next {
+			left: 30px;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	.blog-teaser-item .testimonial-content-item .heading-3 {
+		font-size: 26px;
+	}
+	.image-alongside-text p {
+		font-size: 18px;
+	}
+	.image-alongside-text {
+		flex-direction: column-reverse;
+		gap: 57px;
+		.iat-image.column {
+			margin-top: 0;
+		}
+	}
+	.blog-teaser-slider {
+		position: relative;
+	}
+
+	.blog-teaser-slider::before {
+		content: "";
+		position: absolute;
+		left: -4px;
+		top: 0;
+		display: block;
+		background-color: var(--fc_green_dark);
+		width: 10.7%;
+
+		height: 100%;
+		z-index: 2;
+	}
 	.faq-image-variation {
 		width: 100%;
+	}
+	.testimonial-single-image.mobile-hide {
+		display: block !important;
 	}
 
 	.single-overview {
@@ -1564,12 +1710,15 @@
 	.hero-inner-slider,
 	.hero-project {
 		.hero-split-text {
-			display: none;
+			top: -110px;
+			left: -1%;
+			font-size: 62px;
 		}
 
 		.banner-content {
 			h1 {
-				font-size: 36px;
+				top: -60px;
+				font-size: 48px;
 			}
 
 			p {
@@ -1722,6 +1871,31 @@
 
 	.size-26-m .heading-2 {
 		font-size: 26px;
+	}
+	.post-box-meta .post-date {
+		font-size: 14px;
+	}
+	.highlight-quote {
+		font-size: 20px;
+		padding: 50px 53px 50px 15px;
+	}
+	.highlight-quote.tag-science p,
+	.highlight-quote.tag-science blockquote {
+		font-size: 20px;
+	}
+	.blog-subposts {
+		gap: 30px;
+	}
+	.blog-subpost-content {
+		margin-top: 20px;
+		.heading-3 {
+			font-size: 26px !important;
+			line-height: 1.1;
+		}
+		p {
+			font-size: 18px;
+			margin-bottom: 40px;
+		}
 	}
 }
 

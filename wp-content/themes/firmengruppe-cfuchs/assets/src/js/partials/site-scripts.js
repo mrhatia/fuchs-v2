@@ -147,19 +147,35 @@ jQuery( function() {
 	 * Slide Up/Down internal sub-menu when mobile menu arrow clicked
 	 */
 
-	jQuery( '.header-nav' ).on( 'click', '.submenu-icon', function() {
+	jQuery( '.header-nav' ).on( 'click', '.submenu-icon', function( e ) {
+		e.preventDefault();
+
 		const parentLi = jQuery( this ).closest( 'li' );
+		const submenu = parentLi.children( 'ul' );
+		const isActive = parentLi.hasClass( 'active' );
 
-		parentLi.siblings( '.active' ).removeClass( 'active' ).find( 'ul' ).slideUp();
-
+		// Close siblings
 		parentLi
-			.toggleClass( 'active' )
-			.find( 'ul' )
+			.siblings( '.active' )
+			.removeClass( 'active' )
+			.children( 'ul' )
 			.stop( true, true )
-			.slideToggle();
-		parentLi
-			.parents( 'ul' )
-			.toggleClass( 'disabled-menu', parentLi.hasClass( 'active' ) );
+			.slideUp( 300, function() {
+				jQuery( this ).removeAttr( 'style' );
+			} );
+
+		// Toggle current
+		if ( isActive ) {
+			parentLi.removeClass( 'active' );
+
+			submenu.stop( true, true ).slideUp( 300, function() {
+				jQuery( this ).removeAttr( 'style' );
+			} );
+		} else {
+			parentLi.addClass( 'active' );
+
+			submenu.stop( true, true ).slideDown( 300 );
+		}
 	} );
 
 	jQuery( '.submenu-icon' ).hover(
@@ -540,12 +556,25 @@ jQuery( function() {
 				{
 					breakpoint: 768,
 					settings: {
+						  adaptiveHeight: true,
 						slidesToShow: 1,
 					},
 				},
 			],
 		} );
 	}
+	jQuery( document ).ready( function() {
+		if ( window.innerWidth < 747 ) {
+			jQuery( '.images-items' ).slick( {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				dots: false,
+				infinite: true,
+				adaptiveHeight: true,
+			} );
+		}
+	} );
 
 	// jQuery( document ).ready( function() {
 	// 	if ( jQuery( '.tabbed-map-items' ).length ) {
