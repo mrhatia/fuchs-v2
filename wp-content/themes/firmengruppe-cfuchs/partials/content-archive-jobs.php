@@ -30,16 +30,8 @@ $terms_cat = get_the_terms( $bst_var_post_id, 'job-category' );
 			?>
 	</div>
 	<div class="single-image-content">
-		<div class="small-text">
-			<?php
-				if ( $terms_cat && ! is_wp_error( $terms_cat ) ) {
-					$term_names = wp_list_pluck( $terms_cat, 'name' );
-					echo esc_html( implode( ', ', $term_names ) );
-				}
 
-			?>
-		</div>
-		<div class="service-title">
+		<div class="service-title white_text">
 			<?php the_title(); ?>
 		</div>
 		<span class="plus-button">

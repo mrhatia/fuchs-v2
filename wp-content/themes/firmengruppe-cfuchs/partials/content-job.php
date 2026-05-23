@@ -22,9 +22,11 @@ $fh_var_osngl_job_video          = $bst_fields['fh_var_osngl_job_video'] ?? null
 
 $fh_var_osngl_job_box_title          = $bst_fields['fh_var_osngl_job_box_title'] ?? null;
 $fh_var_osngl_job_box_image          = $bst_fields['fh_var_osngl_job_box_image'] ?? null;
+$fh_var_osngl_job_box_video          = $bst_fields['fh_var_osngl_job_box_video'] ?? null;
 $fh_var_osngl_job_button          = $bst_fields['fh_var_osngl_job_button'] ?? null;
 $fh_var_osngl_job_sub_boxes_title          = $bst_fields['fh_var_osngl_job_sub_boxes_title'] ?? null;
 $fh_var_osngl_job_sub_boxes          = $bst_fields['fh_var_osngl_job_sub_boxes'] ?? null;
+$fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_media_type'] ?? null;
 
 
 
@@ -73,138 +75,231 @@ $fh_var_osngl_job_sub_boxes          = $bst_fields['fh_var_osngl_job_sub_boxes']
 	</div>
 </section>
 
+<div class="page-section">
+	<?php get_template_part( 'partials/content' ); ?>
+</div>
+<div class="gl-s96"></div>
+
+
 <section class="ctn-full-width">
-			<div class="wrapper">
-				<div class="category-main">
+	<div class="wrapper">
+		<div class="category-main">
 
-					<div class="category-items jobs-items">
-						<div class="category-single-item">
-							<div class="category-single-left">
-								<div class="category-image-card">
+			<div class="category-items jobs-items">
+				<div class="category-single-item">
+					<div class="category-single-left">
+						<div class="category-image-card">
+							<div class="single-image">
 
-									<?php if ( $fh_var_osngl_job_box_image ) { ?>
-										<div class="single-image">
-											<?php BaseTheme::the_attachment_image( $fh_var_osngl_job_box_image, 500 ); ?>
-										</div>
-									<?php } ?>
-									<div class="single-image-content">
-										<?php if ( $fh_var_osngl_job_box_title ) { ?>
-											<div class="service-title-right">
-												<?php echo esc_html( $fh_var_osngl_job_box_title ); ?>
-											</div>
-										<?php } ?>
+								<?php if ( $fh_var_osngl_job_box_media_type === 'video' && $fh_var_osngl_job_box_video ) { ?>
+
+									<div class="video-wrapper" style="height: 100%; position: relative;">
+										<video
+											class="scroll-play-video"
+											src="<?php echo esc_url($fh_var_osngl_job_box_video); ?>"
+											playsinline
+											muted
+											preload="metadata"
+										></video>
+
 
 									</div>
-								</div>
-								<?php if($fh_var_osngl_job_button){ ?>
-									<div class="category-single-button">
-										<?php echo BaseTheme::button( $fh_var_osngl_job_button, 'button white-button' ); ?>
+
+								<?php } elseif ( $fh_var_osngl_job_box_image ) { ?>
+
+									<?php BaseTheme::the_attachment_image( $fh_var_osngl_job_box_image, 1000 ); ?>
+
+								<?php } ?>
+							</div>
+
+							<div class="single-image-content">
+								<?php if ( $fh_var_osngl_job_box_title ) { ?>
+									<div class="service-title-right">
+										<?php echo esc_html( $fh_var_osngl_job_box_title ); ?>
 									</div>
 								<?php } ?>
 
 							</div>
-							<div class="category-single-right">
-								<?php if($fh_var_osngl_job_sub_boxes_title){ ?>
-									<div class="project-heading job-single-cards-heading">
-										<p tabindex="0">
-											<?php echo html_entity_decode( $fh_var_osngl_job_sub_boxes_title ); ?>
-										</p>
-									</div>
-								<?php } ?>
+							<button class="video-replay-btn" aria-label="Replay Video">
+								Play Again
+							</button>
+						</div>
+						<?php if($fh_var_osngl_job_button){ ?>
+							<div class="category-single-button">
+								<?php echo BaseTheme::button( $fh_var_osngl_job_button, 'button white-button' ); ?>
+							</div>
+						<?php } ?>
 
-								<?php if ( $fh_var_osngl_job_sub_boxes ) { ?>
-									<div class="category-single-inne-items">
-										<?php foreach ( $fh_var_osngl_job_sub_boxes as $box ) {
-											$box_type = $box['box_type'] ?? 'simple';
-											?>
-											<?php if ( $box_type === 'simple' ) { ?>
-												<div class="category-image-card">
-													<?php if ( ! empty( $box['image'] ) ) { ?>
-														<div class="single-image">
-															<?php BaseTheme::the_attachment_image( $box['image'], 1000 ); ?>
-														</div>
-													<?php } ?>
-													<div class="single-image-content">
+					</div>
+					<div class="category-single-right">
+						<?php if($fh_var_osngl_job_sub_boxes_title){ ?>
+							<div class="project-heading job-single-cards-heading">
+								<p tabindex="0">
+									<?php echo html_entity_decode( $fh_var_osngl_job_sub_boxes_title ); ?>
+								</p>
+							</div>
+						<?php } ?>
 
-														<?php if ( ! empty( $box['title'] ) ) { ?>
-															<div class="service-title">
-																<?php echo esc_html( $box['title'] ); ?>
-															</div>
-														<?php } ?>
-
-														<?php if ( ! empty( $box['text'] ) ) { ?>
-															<div class="service-text">
-																<?php echo html_entity_decode( $box['text'] ); ?>
-															</div>
-														<?php } ?>
-													</div>
-												</div>
-											<?php } else { ?>
-
-												<div class="category-image-card">
-													<?php if ( ! empty( $box['image'] ) ) { ?>
-														<div class="single-image">
-															<?php BaseTheme::the_attachment_image( $box['image'], 1000 ); ?>
-														</div>
-													<?php } ?>
-													<div class="single-image-content">
-
-														<?php if ( ! empty( $box['title'] ) ) { ?>
-															<div class="small-text">
-																<?php echo esc_html( $box['title'] ); ?>
-															</div>
-														<?php } ?>
-														<?php if ( ! empty( $box['name'] ) ) { ?>
-															<div class="service-title">
-																<?php echo esc_html( $box['name'] ); ?>
-															</div>
-														<?php } ?>
-
-														<?php if ( ! empty( $box['text'] ) ) { ?>
-															<div class="service-text">
-																<?php echo html_entity_decode( $box['text'] ); ?>
-															</div>
-														<?php } ?>
-
-
-															<div class="member-contact-info contact-person-card d-flex align-content-center">
-																<?php if($box['email']) { ?>
-																	<div class="email white-icon link-green">
-																		<a href="mailto:<?php echo html_entity_decode( $box['email'] ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""> <?php echo $box['email']; ?></a>
-																	</div>
-																<?php } ?>
-																<?php if($box['phone']) { ?>
-																	<div class="phone white-icon link-green">
-																		<a href="tel:<?php echo html_entity_decode( $box['phone'] ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""> <?php echo $box['phone']; ?></a>
-																	</div>
-																<?php } ?>
-															</div>
-
-
-
-
-													</div>
+						<?php if ( $fh_var_osngl_job_sub_boxes ) { ?>
+							<div class="category-single-inne-items">
+								<?php foreach ( $fh_var_osngl_job_sub_boxes as $box ) {
+									$box_type = $box['box_type'] ?? 'simple';
+									?>
+									<?php if ( $box_type === 'simple' ) { ?>
+										<div class="category-image-card">
+											<?php if ( ! empty( $box['image'] ) ) { ?>
+												<div class="single-image">
+													<?php BaseTheme::the_attachment_image( $box['image'], 1000 ); ?>
 												</div>
 											<?php } ?>
+											<div class="single-image-content">
 
-										<?php } ?>
-									</div>
+												<?php if ( ! empty( $box['title'] ) ) { ?>
+													<div class="service-title">
+														<?php echo esc_html( $box['title'] ); ?>
+													</div>
+												<?php } ?>
+
+												<?php if ( ! empty( $box['text'] ) ) { ?>
+													<div class="service-text">
+														<?php echo html_entity_decode( $box['text'] ); ?>
+													</div>
+												<?php } ?>
+											</div>
+										</div>
+									<?php } else { ?>
+
+										<div class="category-image-card">
+											<?php if ( ! empty( $box['image'] ) ) { ?>
+												<div class="single-image">
+													<?php BaseTheme::the_attachment_image( $box['image'], 1000 ); ?>
+												</div>
+											<?php } ?>
+											<div class="single-image-content">
+
+												<?php if ( ! empty( $box['title'] ) ) { ?>
+													<div class="small-text">
+														<?php echo esc_html( $box['title'] ); ?>
+													</div>
+												<?php } ?>
+												<?php if ( ! empty( $box['name'] ) ) { ?>
+													<div class="service-title">
+														<?php echo esc_html( $box['name'] ); ?>
+													</div>
+												<?php } ?>
+
+												<?php if ( ! empty( $box['text'] ) ) { ?>
+													<div class="service-text">
+														<?php echo html_entity_decode( $box['text'] ); ?>
+													</div>
+												<?php } ?>
+
+
+													<div class="member-contact-info contact-person-card d-flex align-content-center">
+														<?php if($box['email']) { ?>
+															<div class="email white-icon link-green">
+																<a href="mailto:<?php echo html_entity_decode( $box['email'] ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""> <?php echo $box['email']; ?></a>
+															</div>
+														<?php } ?>
+														<?php if($box['phone']) { ?>
+															<div class="phone white-icon link-green">
+																<a href="tel:<?php echo html_entity_decode( $box['phone'] ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""> <?php echo $box['phone']; ?></a>
+															</div>
+														<?php } ?>
+													</div>
+
+
+
+
+											</div>
+										</div>
+									<?php } ?>
+
 								<?php } ?>
-
 							</div>
-						</div>
-
+						<?php } ?>
 
 					</div>
 				</div>
 
+
 			</div>
-		</section>
-		<div class="gl-s96"></div>
+		</div>
+
+	</div>
+</section>
+<div class="gl-s96"></div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+
+	const videos = document.querySelectorAll('.scroll-play-video');
+
+	const observer = new IntersectionObserver((entries) => {
+
+		entries.forEach(entry => {
+
+			const video = entry.target;
+			const card = video.closest('.category-image-card');
+
+			// autoplay first time only
+			if (entry.isIntersecting && !video.dataset.started) {
+
+				video.dataset.started = 'true';
+
+				card.classList.add('is-playing');
+				card.classList.remove('is-ended');
+
+				video.play().catch(function(error) {
+					console.log(error);
+				});
+
+			}
+
+		});
+
+	}, {
+		threshold: 0.5
+	});
+
+	videos.forEach(video => {
+
+		const card = video.closest('.category-image-card');
+		const replayBtn = card.querySelector('.video-replay-btn');
+
+		observer.observe(video);
+
+		// video playing
+		video.addEventListener('play', function () {
+
+			card.classList.add('is-playing');
+			card.classList.remove('is-ended');
+
+		});
+
+		// video ended
+		video.addEventListener('ended', function () {
+
+			card.classList.remove('is-playing');
+			card.classList.add('is-ended');
+
+		});
+
+		// replay click
+		replayBtn.addEventListener('click', function () {
+
+			video.currentTime = 0;
+
+			video.play().catch(function(error) {
+				console.log(error);
+			});
+
+		});
+
+	});
+
+});
+</script>
 
 
 
-<div class="page-section">
-	<div class="gl-s96"></div>
-	<?php get_template_part( 'partials/content' ); ?>
-</div>

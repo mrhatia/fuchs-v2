@@ -49,7 +49,7 @@
 	color: #f5f6f7;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #dedfe0;
+	-webkit-text-stroke-color: #dedfe04f;
 	height: 1em;
 	display: inline-block !important;
 	vertical-align: middle;
@@ -96,14 +96,10 @@
 				inset: 0;
 				border-radius: 50%;
 				border: 4px solid var(--fc_color_primary);
-				mask: conic-gradient(
-					var(--fc_color_primary) calc(var(--percent) * 1%),
-					transparent 0
-				);
-				-webkit-mask: conic-gradient(
-					var(--fc_color_primary) calc(var(--percent) * 1%),
-					transparent 0
-				);
+				mask: conic-gradient(var(--fc_color_primary) calc(var(--percent) * 1%),
+						transparent 0);
+				-webkit-mask: conic-gradient(var(--fc_color_primary) calc(var(--percent) * 1%),
+						transparent 0);
 				transition:
 					mask 1s linear,
 					-webkit-mask 1s linear;

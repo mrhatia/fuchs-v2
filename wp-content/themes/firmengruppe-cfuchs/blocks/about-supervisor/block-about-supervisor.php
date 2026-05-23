@@ -25,6 +25,9 @@ BaseTheme::block(
 		$bst_var_blk_asup_img_location = $bst_block_fields['bst_var_blk_asup_img_position'] ?? null;
 		$bst_var_blk_asup_img_location        = ("left" == $bst_var_blk_asup_img_location) ? " image-at-left " : " image-at-right ";
 
+		$bst_var_blk_asup_name        = $bst_block_fields['bst_var_blk_asup_name'] ?? null;
+		$bst_var_blk_asup_designation        = $bst_block_fields['bst_var_blk_asup_designation'] ?? null;
+		$bst_var_blk_asup_bio        = $bst_block_fields['bst_var_blk_asup_bio'] ?? null;
 		?>
 
 			<section>
@@ -41,45 +44,63 @@ BaseTheme::block(
 							<?php if ( $bst_var_blk_asup_text ) {  ?>
 								<?php echo html_entity_decode( $bst_var_blk_asup_text ); ?>
 							<?php } ?>
-							<!-- <div class="member-contact-info d-flex align-content-center">
-								<?php if ( $bst_var_blk_asup_email ) {  ?>
-									<div class="email white-icon link-green">
-										<a href="mailto:<?php echo html_entity_decode( $bst_var_blk_asup_email ); ?>" class="gmail">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt="">
-										</a>
-									</div>
-								<?php } ?>
-								<?php if ( $bst_var_blk_asup_phone ) {  ?>
-									<div class="phone white-icon link-green">
-										<a href="tel:<?php echo html_entity_decode( $bst_var_blk_asup_phone ); ?>" class="phone">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt="">
-										</a>
-									</div>
-								<?php } ?>
-
-							</div> -->
-
-
 						</div>
 						<div class="iat-image column">
 							<?php if ( $bst_var_blk_asup_image ) { ?>
 							<div class="iat-single-image image-cover">
-									<?php if ( $bst_var_blk_asup_button ) { ?>
-										<a href="<?php echo esc_url( $bst_var_blk_asup_button['url'] ); ?>" title="<?php echo html_entity_decode( $bst_var_blk_asup_button['title'] ); ?>" aria-label="<?php echo html_entity_decode( $bst_var_blk_asup_button['title'] ); ?>" class="image-link">
-											<?php BaseTheme::the_attachment_image( $bst_var_blk_asup_image, 1000 ); ?>
-											<div class="reveal-content">
-												<span class="button white-button" tabindex="0"><?php echo html_entity_decode( $bst_var_blk_asup_button['title'] ); ?></span>
-											</div>
-										</a>
-									<?php } else { ?>
+
+									<a href="#member-about-supervisor" class="popup-link image-link" >
 										<?php BaseTheme::the_attachment_image( $bst_var_blk_asup_image, 1000 ); ?>
-									<?php } ?>
+										<div class="reveal-content">
+											<span class="button white-button" tabindex="0"><?php echo html_entity_decode( $bst_var_blk_asup_button ); ?></span>
+										</div>
+									</a>
 								</div>
 							<?php } ?>
 						</div>
 					</div>
 				</div>
 			</section>
+
+				<div class="member-popup mfp-hide" id="member-about-supervisor">
+					<div class="member-popup-inner">
+						<div class="member-popup-left">
+							<div class="member-popup-image image-cover" tabindex="0">
+								<?php if ( $bst_var_blk_asup_image ) {
+									 BaseTheme::the_attachment_image( $bst_var_blk_asup_image, 1000 );
+								} ?>
+							</div>
+						</div>
+						<div class="member-popup-right">
+							<div class="close-icon mfp-close" role="button" tabindex="0">
+							</div>
+							<div class="member-popup-right-inner">
+								<h2 class="heading-2" tabindex="0"><?php echo $bst_var_blk_asup_name; ?> </h2>
+								<?php if($bst_var_blk_asup_designation){ ?>
+									<div class="team-member-designation" tabindex="0"><?php echo html_entity_decode($bst_var_blk_asup_designation); ?></div>
+								<?php } ?>
+								<?php if($bst_var_blk_asup_bio){ ?>
+									<div class="team-member-text">
+										<?php echo html_entity_decode($bst_var_blk_asup_bio); ?>
+									</div>
+								<?php } ?>
+								<div class="member-contact-info d-flex align-content-center">
+									<?php if($bst_var_blk_asup_email) { ?>
+										<div class="email link-green">
+											<a href="mailto:<?php echo $bst_var_blk_asup_email; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/email-icon-green.svg" alt=""> <?php echo $bst_var_blk_asup_email; ?></a>
+										</div>
+									<?php } ?>
+									<?php if($bst_var_blk_asup_phone) { ?>
+										<div class="phone link-green">
+											<a href="tel:<?php echo $bst_var_blk_asup_phone; ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/phone-icon-green.png" alt=""> <?php echo $bst_var_blk_asup_phone; ?></a>
+										</div>
+									<?php } ?>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
 
 
 		<?php

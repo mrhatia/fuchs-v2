@@ -4102,10 +4102,6 @@ header {
   padding-top: var(--fc_space_30);
   box-sizing: border-box;
 }
-.hero-inner-slider .banner-content h1,
-.hero-project .banner-content h1 {
-  text-transform: uppercase;
-}
 .hero-inner-slider .banner-content .banner-content-inner,
 .hero-project .banner-content .banner-content-inner {
   position: relative;
@@ -7271,6 +7267,23 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .post-box .post-box-img:hover img {
   transform: scale(1.05);
 }
+.video-replay-btn {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+}
+/* show only when video completed */
+.category-image-card.is-ended .video-replay-btn {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 .post-content {
   margin-top: 15px;
 }
@@ -7547,7 +7560,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   width: 100%;
   z-index: -1;
 }
-.category-image-card .single-image img {
+.category-image-card .single-image img,
+.category-image-card .single-image video {
   width: 100%;
   height: 100%;
   display: block;
@@ -7634,7 +7648,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   opacity: 1;
   transform: translateY(0);
 }
-.category-single-right .single-image img {
+.category-single-right .single-image img,
+.category-single-right .single-image video {
   aspect-ratio: 600/450;
 }
 @media (max-width: 1024px) {
@@ -10440,7 +10455,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   color: #f5f6f7;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #dedfe0;
+  -webkit-text-stroke-color: rgba(222, 223, 224, 0.3098039216);
   height: 1em;
   display: inline-block !important;
   vertical-align: middle;
@@ -10881,7 +10896,6 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   font-size: 22px;
   font-weight: 600;
   transition: all 0.5s ease 0.5s;
-  color: var(--fc_color_primary);
   transform: translateY(10px);
 }
 .single-image-card .plus-button {
@@ -12632,9 +12646,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     left: 30px;
   }
   .blog-teaser-slider .slick-arrow.slick-next {
-    left: 30px;
-    right: 0;
-    bottom: 0;
+    right: 30px;
   }
   .blog-teaser-item .testimonial-content-item .heading-3 {
     font-size: 26px;

@@ -6596,7 +6596,7 @@ Mixin for transition
   color: #f5f6f7;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #dedfe0;
+  -webkit-text-stroke-color: rgba(222, 223, 224, 0.3098039216);
   height: 1em;
   display: inline-block !important;
   vertical-align: middle;
@@ -7043,7 +7043,6 @@ Mixin for transition
   font-size: 22px;
   font-weight: 600;
   transition: all 0.5s ease 0.5s;
-  color: var(--fc_color_primary);
   transform: translateY(10px);
 }
 .acf-block-preview .single-image-card .plus-button {
@@ -9555,9 +9554,7 @@ Mixin for transition
     right: 30px;
   }
   .acf-block-preview .blog-teaser-slider .slick-arrow.slick-next {
-    right: 30px;
-    left: 0;
-    bottom: 0;
+    left: 30px;
   }
   .acf-block-preview .blog-teaser-item .testimonial-content-item .heading-3 {
     font-size: 26px;
