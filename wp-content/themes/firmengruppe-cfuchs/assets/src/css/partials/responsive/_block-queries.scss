@@ -1083,6 +1083,74 @@
 }
 
 @media only screen and (max-width: 747px) {
+	section:has(.filter__form.listings__form):not(
+			:has(section .filter__form.listings__form)
+		) {
+		position: sticky;
+		top: 70px;
+		z-index: 1;
+	}
+	.filter__form.listings__form {
+		.filter__col {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 20px;
+		}
+		.filter__header {
+			display: block;
+			margin-bottom: 0px;
+		}
+		.filter__inner--tags {
+			display: flex;
+			gap: 1rem;
+			overflow-x: auto;
+			overflow-y: hidden;
+			padding-bottom: 0.5rem;
+			scroll-behavior: smooth;
+			-webkit-overflow-scrolling: touch;
+			scroll-snap-type: x proximity;
+
+			&::-webkit-scrollbar {
+				height: 4px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: transparent;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: rgba(0, 0, 0, 0.2);
+				border-radius: 20px;
+			}
+
+			.filter__col {
+				flex: 0 0 auto;
+				min-width: max-content;
+				scroll-snap-align: start;
+			}
+
+			.filter__pills {
+				display: flex;
+				flex-wrap: nowrap;
+				gap: 0.75rem;
+				overflow-x: auto;
+				overflow-y: hidden;
+				padding-bottom: 0.25rem;
+				scroll-behavior: smooth;
+				-webkit-overflow-scrolling: touch;
+				margin: 0 0 10px 0;
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				li {
+					flex: 0 0 auto;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
 	.hero-inner-slider .banner-content .banner-content-inner,
 	.hero-project .banner-content .banner-content-inner {
 		position: relative;
