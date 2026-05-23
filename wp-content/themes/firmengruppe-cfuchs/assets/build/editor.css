@@ -8723,6 +8723,9 @@ Mixin for transition
   .acf-block-preview .blog-sub-page .hero-slide-item {
     min-height: 365px;
   }
+  .acf-block-preview .blog-sub-page .hero-slide-item .banner-content-inner {
+    top: -10px !important;
+  }
   .acf-block-preview .blog-sub-page .heading-2 {
     top: 0 !important;
   }
@@ -9087,7 +9090,7 @@ Mixin for transition
   .acf-block-preview .hero-inner-slider .banner-content .banner-content-inner,
   .acf-block-preview .hero-project .banner-content .banner-content-inner {
     position: relative;
-    top: 0;
+    top: -50px;
   }
   .acf-block-preview .jobs-items .category-image-card .single-image-content {
     padding: 16px;
@@ -9605,13 +9608,13 @@ Mixin for transition
   }
   .acf-block-preview .hero-inner-slider .hero-split-text,
   .acf-block-preview .hero-project .hero-split-text {
-    top: -110px;
+    top: -50px;
     left: -1%;
     font-size: 62px;
   }
   .acf-block-preview .hero-inner-slider .banner-content h1,
   .acf-block-preview .hero-project .banner-content h1 {
-    top: -60px;
+    top: 0px;
     font-size: 48px;
   }
   .acf-block-preview .hero-inner-slider .banner-content p,
