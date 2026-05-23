@@ -9086,65 +9086,47 @@ Mixin for transition
     opacity: 0.4;
   }
 }
-@media only screen and (max-width: 747px) {
-  .acf-block-preview section:has(.filter__form.listings__form):not(:has(section .filter__form.listings__form)) {
-    position: sticky;
-    top: 70px;
-    z-index: 1;
-  }
-  .acf-block-preview .filter__form.listings__form .filter__col {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-  }
+@media (max-width: 767px) {
   .acf-block-preview .filter__form.listings__form .filter__header {
     display: block;
-    margin-bottom: 0px;
+    margin-bottom: 0.5rem;
   }
   .acf-block-preview .filter__form.listings__form .filter__inner--tags {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
-    overflow-x: auto;
+  }
+  .acf-block-preview .filter__form.listings__form .filter__col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    overflow-x: scroll;
     overflow-y: hidden;
     padding-bottom: 0.5rem;
-    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  .acf-block-preview .filter__form.listings__form .filter__inner--tags::-webkit-scrollbar {
-    height: 4px;
-  }
-  .acf-block-preview .filter__form.listings__form .filter__inner--tags::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .acf-block-preview .filter__form.listings__form .filter__inner--tags::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-  }
-  .acf-block-preview .filter__form.listings__form .filter__inner--tags .filter__col {
-    flex: 0 0 auto;
-    min-width: -moz-max-content;
-    min-width: max-content;
-    scroll-snap-align: start;
-  }
-  .acf-block-preview .filter__form.listings__form .filter__inner--tags .filter__pills {
+  .acf-block-preview .filter__form.listings__form .filter__pills {
     display: flex;
     flex-wrap: nowrap;
     gap: 0.75rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 0.25rem;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    margin: 0 0 10px 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
-  .acf-block-preview .filter__form.listings__form .filter__inner--tags .filter__pills::-webkit-scrollbar {
+  .acf-block-preview .filter__form.listings__form .filter__pills::-webkit-scrollbar {
     display: none;
   }
-  .acf-block-preview .filter__form.listings__form .filter__inner--tags .filter__pills li {
+  .acf-block-preview .filter__form.listings__form .filter__pills li {
     flex: 0 0 auto;
     white-space: nowrap;
   }
+}
+@media only screen and (max-width: 747px) {
   .acf-block-preview .hero-inner-slider .banner-content .banner-content-inner,
   .acf-block-preview .hero-project .banner-content .banner-content-inner {
     position: relative;
