@@ -34,46 +34,47 @@ jQuery( function() {
 	/**
 	 * Search Script
 	 */
+	if ( window.innerWidth > 1003 ) {
+		jQuery( '.header-nav ul li' ).hover(
+			function() {
+				const $submenu = jQuery( this ).children( 'ul' );
 
-	jQuery( '.header-nav ul li' ).hover(
-		function() {
-			const $submenu = jQuery( this ).children( 'ul' );
+				if ( $submenu.length ) {
+					$submenu.stop( true, true );
 
-			if ( $submenu.length ) {
-				$submenu.stop( true, true );
+					// get natural height
+					const fullHeight = $submenu.get( 0 ).scrollHeight;
 
-				// get natural height
-				const fullHeight = $submenu.get( 0 ).scrollHeight;
+					$submenu
+						.css( {
+							visibility: 'visible',
+							opacity: 1,
+							overflow: 'hidden',
+							height: 0,
+						} )
+						.animate( {
+							height: fullHeight,
+						}, 300 );
+				}
+			},
+			function() {
+				const $submenu = jQuery( this ).children( 'ul' );
 
-				$submenu
-					.css( {
-						visibility: 'visible',
-						opacity: 1,
-						overflow: 'hidden',
+				if ( $submenu.length ) {
+					$submenu.stop( true, true );
+
+					$submenu.animate( {
 						height: 0,
-					} )
-					.animate( {
-						height: fullHeight,
-					}, 300 );
-			}
-		},
-		function() {
-			const $submenu = jQuery( this ).children( 'ul' );
-
-			if ( $submenu.length ) {
-				$submenu.stop( true, true );
-
-				$submenu.animate( {
-					height: 0,
-				}, 250, function() {
-					$submenu.css( {
-						visibility: 'hidden',
-						opacity: 0,
+					}, 250, function() {
+						$submenu.css( {
+							visibility: 'hidden',
+							opacity: 0,
+						} );
 					} );
-				} );
+				}
 			}
-		}
-	);
+		);
+	}
 
 	jQuery( '.menu-btn-desktop' ).on( 'click', function() {
 		jQuery( 'body' ).toggleClass( 'side-menu-opened' );
@@ -563,18 +564,18 @@ jQuery( function() {
 			],
 		} );
 	}
-	jQuery( document ).ready( function() {
-		if ( window.innerWidth < 747 ) {
-			jQuery( '.images-items' ).slick( {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				dots: false,
-				infinite: true,
-				adaptiveHeight: true,
-			} );
-		}
-	} );
+	// jQuery( document ).ready( function() {
+	// 	if ( window.innerWidth < 747 ) {
+	// 		jQuery( '.images-items' ).slick( {
+	// 			slidesToShow: 1,
+	// 			slidesToScroll: 1,
+	// 			arrows: false,
+	// 			dots: false,
+	// 			infinite: true,
+	// 			adaptiveHeight: true,
+	// 		} );
+	// 	}
+	// } );
 
 	// jQuery( document ).ready( function() {
 	// 	if ( jQuery( '.tabbed-map-items' ).length ) {
