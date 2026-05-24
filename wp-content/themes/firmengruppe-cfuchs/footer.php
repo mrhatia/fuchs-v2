@@ -42,6 +42,8 @@ $bst_var_social_profiles = $bst_option_fields['bst_var_social_profiles'] ?? null
 
 ?>
 </main>
+
+
 <footer id="footer-section" class="footer-section">
 	<!-- Footer Start -->
 	<div class="footer-ctn">

@@ -177,6 +177,14 @@
 	}
 }
 
+.hero-inner-slider.slick-slider:not(.slider-disable) {
+
+
+	.hero-slide-image {
+		height: calc(100vh - 130px);
+	}
+}
+
 .hero-inner-slider.archive-hero {
 	height: 600px;
 

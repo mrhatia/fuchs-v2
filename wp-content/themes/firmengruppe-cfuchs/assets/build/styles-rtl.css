@@ -4241,6 +4241,9 @@ header {
      object-fit: cover;
   z-index: -1;
 }
+.hero-inner-slider.slick-slider:not(.slider-disable) .hero-slide-image {
+  height: calc(100vh - 130px);
+}
 .hero-inner-slider.archive-hero {
   height: 600px;
 }
@@ -12228,6 +12231,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 24px 16px 24px 0;
   }
   .filter__form.listings__form .filter__col {
     width: 100%;
@@ -12235,9 +12239,12 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
+    padding-bottom: 0.5rem;
+  }
+  .filter__form.listings__form .select-dropdown {
+    width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding-bottom: 0.5rem;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
@@ -12267,6 +12274,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
   .jobs-items .category-image-card .single-image-content {
     padding: 16px;
+    width: 100%;
   }
   .service-text ul {
     margin-top: 10px;
@@ -12388,6 +12396,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
   .single-image-card {
     aspect-ratio: 340/340;
+    width: 100%;
   }
   .single-image-card .single-image {
     width: 100%;
