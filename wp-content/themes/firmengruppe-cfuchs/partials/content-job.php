@@ -121,7 +121,8 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 
 							</div>
 							<button class="video-replay-btn" aria-label="Replay Video">
-								Play Again
+							</button>
+							<button class="video-sound-btn" aria-label="Enable Sound">
 							</button>
 						</div>
 						<?php if($fh_var_osngl_job_button){ ?>
@@ -240,15 +241,11 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 		entries.forEach(entry => {
 
 			const video = entry.target;
-			const card = video.closest('.category-image-card');
 
-			// autoplay first time only
+			// autoplay only first time
 			if (entry.isIntersecting && !video.dataset.started) {
 
 				video.dataset.started = 'true';
-
-				card.classList.add('is-playing');
-				card.classList.remove('is-ended');
 
 				video.play().catch(function(error) {
 					console.log(error);
@@ -266,10 +263,14 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 
 		const card = video.closest('.category-image-card');
 		const replayBtn = card.querySelector('.video-replay-btn');
+		const soundBtn = card.querySelector('.video-sound-btn');
 
 		observer.observe(video);
 
-		// video playing
+		/* =========================
+		   VIDEO PLAYING
+		========================= */
+
 		video.addEventListener('play', function () {
 
 			card.classList.add('is-playing');
@@ -277,16 +278,64 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 
 		});
 
-		// video ended
+		/* =========================
+		   VIDEO ENDED
+		========================= */
+
 		video.addEventListener('ended', function () {
 
 			card.classList.remove('is-playing');
 			card.classList.add('is-ended');
 
+			// remove sound active state
+			if (soundBtn) {
+				soundBtn.classList.remove('is-playing');
+			}
+
 		});
 
-		// replay click
-		replayBtn.addEventListener('click', function () {
+		/* =========================
+		   SOUND TOGGLE
+		========================= */
+
+		if (soundBtn) {
+
+			soundBtn.addEventListener('click', function () {
+
+				// currently muted -> unmute
+				if (video.muted) {
+
+					video.muted = false;
+
+					soundBtn.classList.add('is-playing');
+
+				} else {
+
+					// mute again
+					video.muted = true;
+
+					soundBtn.classList.remove('is-playing');
+
+				}
+
+			});
+
+		}
+
+		/* =========================
+		   REPLAY
+		========================= */
+
+		/* =========================
+   PLAY / PAUSE / REPLAY
+========================= */
+
+if (replayBtn) {
+
+	replayBtn.addEventListener('click', function () {
+
+		// VIDEO ENDED → replay
+		if (video.ended) {
 
 			video.currentTime = 0;
 
@@ -294,7 +343,32 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 				console.log(error);
 			});
 
-		});
+			card.classList.remove('is-ended');
+
+			return;
+		}
+
+		// VIDEO PAUSED → play
+		if (video.paused) {
+
+			video.play().catch(function(error) {
+				console.log(error);
+			});
+
+			card.classList.add('is-playing');
+
+		} else {
+
+			// VIDEO PLAYING → pause
+			video.pause();
+
+			card.classList.remove('is-playing');
+
+		}
+
+	});
+
+}
 
 	});
 
