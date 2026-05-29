@@ -130,7 +130,55 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 								<?php echo BaseTheme::button( $fh_var_osngl_job_button, 'button white-button' ); ?>
 							</div>
 						<?php } ?>
+						<div class="job-share-wrapper">
+							<?php
+								$current_url   = urlencode( get_permalink() );
+								$current_title = urlencode( get_the_title() );
 
+								$whatsapp_share = "https://wa.me/?text={$current_title}%20{$current_url}";
+								$linkedin_share = "https://www.linkedin.com/sharing/share-offsite/?url={$current_url}";
+								$email_share    = "mailto:?subject={$current_title}&body={$current_title}%20{$current_url}";
+							?>
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+
+							<div class="job-share-label">
+								Share Job
+							</div>
+
+							<div class="job-share-buttons">
+
+								<a
+									href="<?php echo esc_url( $whatsapp_share ); ?>"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="share-btn whatsapp-share"
+									aria-label="Share on WhatsApp"
+								>
+									<i class="fab fa-whatsapp"></i>
+								</a>
+
+								<a
+									href="<?php echo esc_url( $linkedin_share ); ?>"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="share-btn linkedin-share"
+									aria-label="Share on LinkedIn"
+								>
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+
+								<a
+									href="<?php echo esc_url( $email_share ); ?>"
+									class="share-btn email-share"
+									aria-label="Share via Email"
+								>
+									<i class="fas fa-envelope"></i>
+								</a>
+
+							</div>
+
+						</div>
 					</div>
 					<div class="category-single-right">
 						<?php if($fh_var_osngl_job_sub_boxes_title){ ?>

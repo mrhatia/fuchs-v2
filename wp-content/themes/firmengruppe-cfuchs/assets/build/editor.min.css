@@ -6453,6 +6453,46 @@ Mixin for transition
 .acf-block-preview .jobs-items .category-single-right .category-image-card:nth-child(n+2) {
   margin-top: 30px;
 }
+.acf-block-preview .job-share-wrapper {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.acf-block-preview .job-share-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+.acf-block-preview .job-share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.acf-block-preview .share-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.acf-block-preview .share-btn:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+.acf-block-preview .share-btn i {
+  line-height: 1;
+}
 .acf-block-preview .contact-person-card .link-green img,
 .acf-block-preview .contact-person-card .link-green.phone img {
   max-width: 28px;

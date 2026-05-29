@@ -10358,6 +10358,46 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
 .jobs-items .category-single-right .category-image-card:nth-child(n+2) {
   margin-top: 30px;
 }
+.job-share-wrapper {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.job-share-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+.job-share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.share-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.share-btn:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+.share-btn i {
+  line-height: 1;
+}
 .contact-person-card .link-green img,
 .contact-person-card .link-green.phone img {
   max-width: 28px;
