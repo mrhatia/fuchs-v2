@@ -2163,3 +2163,17 @@ body {
 		display: none;
 	}
 }
+
+
+.map-section-head {
+	margin: 100px 0 50px;
+}
+
+
+.fancybox__carousel .f-button {
+	background-color: var(--fc_color_primary);
+
+	svg {
+		margin: 0;
+	}
+}

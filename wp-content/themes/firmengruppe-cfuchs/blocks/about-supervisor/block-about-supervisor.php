@@ -18,6 +18,7 @@ BaseTheme::block(
 		$bst_var_blk_asup_kicker        = $bst_block_fields['bst_var_blk_asup_kicker'] ?? null;
 		$bst_var_blk_asup_title        = $bst_block_fields['bst_var_blk_asup_title'] ?? null;
 		$bst_var_blk_asup_text        = $bst_block_fields['bst_var_blk_asup_text'] ?? null;
+		$bst_var_blk_asup_main_button        = $bst_block_fields['bst_var_blk_asup_main_button'] ?? null;
 		$bst_var_blk_asup_phone        = $bst_block_fields['bst_var_blk_asup_phone'] ?? null;
 		$bst_var_blk_asup_email        = $bst_block_fields['bst_var_blk_asup_email'] ?? null;
 		$bst_var_blk_asup_button        = $bst_block_fields['bst_var_blk_asup_button'] ?? null;
@@ -44,18 +45,29 @@ BaseTheme::block(
 							<?php if ( $bst_var_blk_asup_text ) {  ?>
 								<?php echo html_entity_decode( $bst_var_blk_asup_text ); ?>
 							<?php } ?>
+							<?php if ( $bst_var_blk_asup_main_button ) { ?>
+								<?php echo BaseTheme::button( $bst_var_blk_asup_main_button, 'button orange-button' ); ?>
+							<?php } ?>
 						</div>
 						<div class="iat-image column">
-							<?php if ( $bst_var_blk_asup_image ) { ?>
-							<div class="iat-single-image image-cover">
+							<?php if($bst_var_blk_asup_button){ ?>
+								<?php if ( $bst_var_blk_asup_image ) { ?>
+									<div class="iat-single-image image-cover">
 
-									<a href="#member-about-supervisor" class="popup-link image-link" >
+										<a href="#member-about-supervisor" class="popup-link image-link" >
+											<?php BaseTheme::the_attachment_image( $bst_var_blk_asup_image, 1000 ); ?>
+											<div class="reveal-content">
+												<span class="button white-button" tabindex="0"><?php echo html_entity_decode( $bst_var_blk_asup_button ); ?></span>
+											</div>
+										</a>
+									</div>
+								<?php } ?>
+							<?php } else { ?>
+								<?php if ( $bst_var_blk_asup_image ) { ?>
+									<div class="iat-single-image image-cover">
 										<?php BaseTheme::the_attachment_image( $bst_var_blk_asup_image, 1000 ); ?>
-										<div class="reveal-content">
-											<span class="button white-button" tabindex="0"><?php echo html_entity_decode( $bst_var_blk_asup_button ); ?></span>
-										</div>
-									</a>
-								</div>
+									</div>
+								<?php } ?>
 							<?php } ?>
 						</div>
 					</div>

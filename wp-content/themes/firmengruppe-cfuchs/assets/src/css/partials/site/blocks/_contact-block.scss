@@ -81,7 +81,6 @@
 		font-weight: 500;
 		margin: 0 0px 4px 0;
 		color: var(--fc_white);
-		text-transform: uppercase;
 
 		a,
 		a:visited {
@@ -121,6 +120,105 @@
 					top: 0;
 					left: 0;
 					background-image: url('../images/phone-icon.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 8px;
+					display: inline-block;
+					filter: brightness(0) invert(1);
+				}
+			}
+
+			&.link.fax {
+				position: relative;
+				padding-left: 28px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 0;
+					left: 0;
+					background-image: url('../images/fax.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 8px;
+					display: inline-block;
+					filter: brightness(0) invert(1);
+				}
+			}
+
+			&:hover,
+			&:focus-visible {
+				border-bottom: none;
+				color: var(--fc_orange_dark);
+			}
+		}
+	}
+}
+
+.wp-block-media-text__content {
+	p {
+
+
+		a,
+		a:visited {
+			color: var(--fc_white);
+			border-bottom: none;
+
+			&.link.email {
+				position: relative;
+				padding-left: 28px;
+				// letter-spacing: -0.5px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 2px;
+					left: 0;
+					background-image: url('../images/email-icon.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 8px;
+					display: inline-block;
+					filter: brightness(0) invert(1);
+				}
+			}
+
+			&.link.phone {
+				position: relative;
+				padding-left: 28px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 0;
+					left: 0;
+					background-image: url('../images/phone-icon.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin-right: 8px;
+					display: inline-block;
+					filter: brightness(0) invert(1);
+				}
+			}
+
+			&.link.fax {
+				position: relative;
+				padding-left: 28px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 0;
+					left: 0;
+					background-image: url('../images/fax.svg');
 					background-size: contain;
 					background-repeat: no-repeat;
 					margin-right: 8px;

@@ -1,11 +1,32 @@
 {
     "key": "group_62148f5093a14",
-    "title": "Options - Related Projects",
+    "title": "Options - Related References",
     "fields": [
+        {
+            "key": "field_6a1994b8a49bd",
+            "label": "Kicker",
+            "name": "bst_var_sngl_related_ref_kicker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
         {
             "key": "field_62148f6d8a381",
             "label": "Title",
-            "name": "bst_var_sngl_related_title",
+            "name": "bst_var_sngl_related_ref_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -26,7 +47,7 @@
         {
             "key": "field_68e45606b8c13",
             "label": "",
-            "name": "bst_var_sngl_variation",
+            "name": "bst_var_sngl_related_ref_variation",
             "aria-label": "",
             "type": "button_group",
             "instructions": "",
@@ -50,7 +71,7 @@
         {
             "key": "field_68e455dab8c12",
             "label": "Select Related Projects \/ Overview",
-            "name": "bst_var_sngl_related_projects",
+            "name": "bst_var_sngl_related_references",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -70,7 +91,7 @@
                 "id": ""
             },
             "post_type": [
-                "project"
+                "reference"
             ],
             "post_status": [
                 "publish"
@@ -109,7 +130,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Projects will be displayed automatically based on the most recently added.",
+            "message": "Refenrences will be displayed automatically based on the most recently added.",
             "new_lines": "wpautop",
             "esc_html": 0
         }
@@ -119,14 +140,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "project"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "overview"
+                "value": "reference"
             }
         ]
     ],
@@ -139,5 +153,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1760043921
+    "display_title": "",
+    "modified": 1780061699
 }

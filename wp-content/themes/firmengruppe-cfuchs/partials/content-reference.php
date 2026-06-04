@@ -15,9 +15,10 @@ $bst_var_post_categories = get_categories( $bst_var_post_id );
 
 
 $bst_var_post_title = get_the_title();
-$bst_var_sngl_related_title = $bst_fields['bst_var_sngl_related_title'] ?? "Referenzen";
-$bst_var_sngl_variation = $bst_fields['bst_var_sngl_variation'] ?? null;
-$bst_var_sngl_related_projects = $bst_fields['bst_var_sngl_related_projects'] ?? null;
+$bst_var_sngl_related_ref_kicker = $bst_fields['bst_var_sngl_related_ref_kicker'] ?? "Latest";
+$bst_var_sngl_related_ref_title = $bst_fields['bst_var_sngl_related_ref_title'] ?? "Referenzen";
+$bst_var_sngl_related_ref_variation = $bst_fields['bst_var_sngl_related_ref_variation'] ?? null;
+$bst_var_sngl_related_references = $bst_fields['bst_var_sngl_related_references'] ?? null;
 
 // Hero Section Variables.
 
@@ -127,10 +128,17 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 
 			<div class="section-head d-flex justify-content-between align-items-start">
 				<div class="head-left-section">
-					<div class="hero-split-text">Latest</div>
-					<h2 class="heading-2">
-						Referenzen
-					</h2>
+
+					<?php if($bst_var_sngl_related_ref_kicker){ ?>
+						<div class="hero-split-text">
+							<?php echo esc_html( $bst_var_sngl_related_ref_kicker ); ?>
+						</div>
+					<?php } ?>
+					<?php if($bst_var_sngl_related_ref_title){ ?>
+						<h2 class="heading-2">
+							<?php echo esc_html( $bst_var_sngl_related_ref_title ); ?>
+						</h2>
+					<?php } ?>
 				</div>
 				<div class="head-right-section">
 					<a href="<?php echo esc_url( home_url('/referenzen/') ); ?>" class="button white-button">
@@ -139,16 +147,16 @@ $bst_var_pagetitle          = $bst_fields['bst_var_trcho_title'] ?? get_the_titl
 				</div>
 			</div>
 			<?php
-			if($bst_var_sngl_variation === "manual"){
+			if($bst_var_sngl_related_ref_variation === "manual"){
 				?>
 
 				<div class="post-archive three-columns">
 					<?php
-						if ( $bst_var_sngl_related_projects ) {
+						if ( $bst_var_sngl_related_references ) {
 						?>
 							<?php
-								foreach( $bst_var_sngl_related_projects as $key =>  $project_id ){
-									list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($project_id);
+								foreach( $bst_var_sngl_related_references as $key =>  $reference_id ){
+									list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($reference_id);
 									$terms = get_the_terms( $bst_var_post_id, 'category' );
 
 
