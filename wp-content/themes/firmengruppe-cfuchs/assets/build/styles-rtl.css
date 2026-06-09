@@ -9015,10 +9015,10 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     padding: 0;
   }
   div.pie-container #pieText .panel #segmentTitle {
-    padding: 4px;
+    padding: 0 5%;
   }
   div.pie-container #pieText .panel #segmentText {
-    padding: 4px;
+    padding: 0 5%;
     line-height: 18px;
   }
 }
@@ -12495,6 +12495,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   .home .hero-inner-slider .banner-content .banner-content-inner .hero-split-text {
     right: 0 !important;
     left: 0;
+    width: 100%;
   }
   .hero-inner-slider .banner-content .banner-content-inner,
   .hero-project .banner-content .banner-content-inner {

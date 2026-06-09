@@ -5077,10 +5077,10 @@ Mixin for transition
     padding: 0;
   }
   .acf-block-preview div.pie-container #pieText .panel #segmentTitle {
-    padding: 4px;
+    padding: 0 5%;
   }
   .acf-block-preview div.pie-container #pieText .panel #segmentText {
-    padding: 4px;
+    padding: 0 5%;
     line-height: 18px;
   }
 }
@@ -9350,6 +9350,7 @@ Mixin for transition
   .acf-block-preview .home .hero-inner-slider .banner-content .banner-content-inner .hero-split-text {
     right: 0 !important;
     left: 0;
+    width: 100%;
   }
   .acf-block-preview .hero-inner-slider .banner-content .banner-content-inner,
   .acf-block-preview .hero-project .banner-content .banner-content-inner {
