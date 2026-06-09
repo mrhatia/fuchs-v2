@@ -3164,6 +3164,10 @@ Mixin for transition
   background-color: var(--fc_color_primary);
   color: var(--fc_white);
 }
+.acf-block-preview .single-service.service-detail-single .main-section {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
 .acf-block-preview .single-service.service-detail-single .search-icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
 }
@@ -5366,7 +5370,7 @@ Mixin for transition
   .acf-block-preview .testimonial-variation.swiper .swiper-pagination .swiper-pagination-bullet {
     width: 7px;
     height: 7px;
-    background-color: var(--fc_orange);
+    background-color: #ffffff;
     border-radius: 50%;
     opacity: 1;
     transition: transform 0.3s ease;
@@ -5480,6 +5484,8 @@ Mixin for transition
 }
 .acf-block-preview .blog-teaser-item .testimonial-image-item img {
   aspect-ratio: 533/350;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .acf-block-preview {
   /*-------------------------------------------------
@@ -5741,6 +5747,12 @@ Mixin for transition
 .acf-block-preview .company-value-chart .item.content-main p {
   font-size: var(--fc_font_size_16);
 }
+.acf-block-preview .dark-orange-bg {
+  background-color: var(--fc_orange_dark);
+}
+.acf-block-preview .white-bg {
+  background-color: var(--fc_white);
+}
 .acf-block-preview .project-management-block {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
@@ -5780,7 +5792,6 @@ Mixin for transition
 .acf-block-preview .project-management-block .item:nth-child(4) {
   grid-column: 2/3;
   grid-row: 2/3;
-  background: #0b2d5c;
   display: flex;
   align-items: center;
   padding: 60px;
@@ -5814,6 +5825,10 @@ Mixin for transition
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.acf-block-preview .item.content-main .content {
+  padding: 30px;
+  box-sizing: border-box;
 }
 .acf-block-preview .project-design {
   display: grid;
@@ -5862,7 +5877,6 @@ Mixin for transition
   box-sizing: border-box;
   color: var(--fc_white);
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
 }
 .acf-block-preview .project-design .content .kicker-text {
@@ -6817,7 +6831,7 @@ Mixin for transition
   line-height: 2em;
   letter-spacing: 0.1em;
   font-weight: 500;
-  margin: 0 0 4px 0px;
+  margin: 0 0 20px 0px;
   color: var(--fc_white);
 }
 .acf-block-preview .contact-block-content p a,
@@ -9666,6 +9680,12 @@ Mixin for transition
   }
   .acf-block-preview .hero-slide-image {
     min-height: 580px;
+  }
+  .acf-block-preview .hero-slide-image.desktop-view {
+    display: none !important;
+  }
+  .acf-block-preview .hero-slide-image.mobile-view {
+    display: block !important;
   }
   .acf-block-preview .section-head .heading-2 {
     word-wrap: break-word;

@@ -83,15 +83,27 @@ BaseTheme::block(
 							</div>
 						<?php } ?>
 
-						<?php if($design === 'content'){ ?>
-							<div class="item content-main animation-item">
+						<?php if($design === 'content'){
+							$box_color = $box['bst_var_blk_about_box_color'] ?? 'green';
+							$color_class = '';
+							$button_color = 'button dark-orange-button';
+							if($box_color === 'orange'){
+								$color_class = 'dark-orange-bg';
+								$button_color = 'button white-button';
+							} elseif($box_color === 'white'){
+								$color_class = 'white-bg';
+								$button_color = 'button dark-orange-button';
+
+							}
+							?>
+							<div class="item content-main animation-item <?php echo $color_class; ?>">
 								<div class="content">
 									<?php if($title){ ?>
 										<h2 class="heading-4"><?php echo html_entity_decode($title); ?></h2>
 									<?php } ?>
 									<?php if($text){ echo html_entity_decode($text); } ?>
 									<?php if($button){
-										echo BaseTheme::button($button, 'button dark-orange-button');
+										echo BaseTheme::button($button, $button_color);
 									} ?>
 								</div>
 							</div>
@@ -119,8 +131,20 @@ BaseTheme::block(
 								</div>
 							</div>
 						<?php } ?>
-						<?php if($design === 'icon-text'){ ?>
-							<div class="item content-main animation-item active d-flex flex-column align-items-center justify-content-center">
+						<?php if($design === 'icon-text'){
+							$box_color = $box['bst_var_blk_about_box_color'] ?? 'green';
+							$color_class = '';
+							$button_color = 'button dark-orange-button';
+							if($box_color === 'orange'){
+								$color_class = 'dark-orange-bg';
+								$button_color = 'button white-button';
+							} elseif($box_color === 'white'){
+								$color_class = 'white-bg';
+								$button_color = 'button dark-orange-button';
+
+							}
+							?>
+							<div class="item content-main animation-item active d-flex flex-column align-items-center justify-content-center <?php echo $color_class; ?>">
 								<div class="content center-align">
 									<?php if($icon){ ?>
 										<div class="icon">
@@ -143,8 +167,20 @@ BaseTheme::block(
 							</div>
 						<?php } ?>
 
-						<?php if($design === 'about'){ ?>
-							<div class="item about-us-box">
+						<?php if($design === 'about'){
+							$box_color = $box['bst_var_blk_about_box_color'] ?? 'green';
+							$color_class = '';
+							$button_color = 'button dark-orange-button';
+							if($box_color === 'orange'){
+								$color_class = 'dark-orange-bg';
+								$button_color = 'button white-button';
+							} elseif($box_color === 'white'){
+								$color_class = 'white-bg';
+								$button_color = 'button dark-orange-button';
+
+							}
+							?>
+							<div class="item about-us-box <?php echo $color_class; ?>">
 								<div class="content">
 									<?php if($title){ ?>
 										<h2 class="heading-3"><?php echo html_entity_decode($title); ?></h2>

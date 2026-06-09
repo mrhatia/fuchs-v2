@@ -1038,6 +1038,11 @@ body {
 	background-color: var(--fc_color_primary);
 	color: var(--fc_white);
 
+	.main-section {
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+
 	.search-icon {
 		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);
 	}

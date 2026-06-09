@@ -1684,6 +1684,14 @@
 
 	.hero-slide-image {
 		min-height: 580px;
+
+		&.desktop-view {
+			display: none !important;
+		}
+
+		&.mobile-view {
+			display: block !important;
+		}
 	}
 
 	.section-head {

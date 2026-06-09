@@ -158,6 +158,15 @@
 	position: relative;
 	min-height: 655px;
 
+	&.desktop-view {
+		display: block;
+	}
+
+	&.mobile-view {
+		display: none;
+	}
+
+
 	&::before {
 		content: "";
 		background-color: black;

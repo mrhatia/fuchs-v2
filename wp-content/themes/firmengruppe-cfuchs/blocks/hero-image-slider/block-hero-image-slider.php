@@ -36,11 +36,21 @@ BaseTheme::block(
 								$slide_button_one = $slide['button_one'] ?? null;
 								$slide_button_two = $slide['button_two'] ?? null;
 								$slide_image       = $slide['image'] ?? null;
+								$image_mobile       = $slide['image_mobile'] ?? null;
 
 								?>
 									<div class="hero-slide-item">
 										<?php if ( $slide_image ) { ?>
-											<div class="hero-slide-image" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
+											<div class="hero-slide-image desktop-view" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
+												<?php BaseTheme::the_attachment_image( $slide_image, 2000 ); ?>
+											</div>
+										<?php } ?>
+										<?php if ( $image_mobile ) { ?>
+											<div class="hero-slide-image mobile-view" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
+												<?php BaseTheme::the_attachment_image( $image_mobile, 2000 ); ?>
+											</div>
+										<?php } else { ?>
+											<div class="hero-slide-image mobile-view" tabindex="0" role="img" aria-label="Image illustrating the content of this block">
 												<?php BaseTheme::the_attachment_image( $slide_image, 2000 ); ?>
 											</div>
 										<?php } ?>

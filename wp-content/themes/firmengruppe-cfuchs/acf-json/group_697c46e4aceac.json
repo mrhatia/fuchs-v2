@@ -111,6 +111,54 @@
                     "parent_repeater": "field_69f0641ad6b2b"
                 },
                 {
+                    "key": "field_6a27bb5928435",
+                    "label": "Select Box Color",
+                    "name": "bst_var_blk_about_box_color",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_69f06539d6b2c",
+                                "operator": "==",
+                                "value": "content"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_69f06539d6b2c",
+                                "operator": "==",
+                                "value": "about"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_69f06539d6b2c",
+                                "operator": "==",
+                                "value": "icon-text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "green": "Green",
+                        "white": "White",
+                        "orange": "Orange"
+                    },
+                    "default_value": "green",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "layout": "horizontal",
+                    "parent_repeater": "field_69f0641ad6b2b"
+                },
+                {
                     "key": "field_69f0662ed6b2d",
                     "label": "Image",
                     "name": "image",
@@ -434,5 +482,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777370942
+    "modified": 1780990424
 }
