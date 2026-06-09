@@ -9157,6 +9157,56 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .single-image .iat-single-image {
   width: 100% !important;
 }
+@media (max-width: 767px) {
+  .chart-center {
+    width: 100px;
+    height: 100px;
+  }
+  .pie-container {
+    padding: 0 !important;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #pieChart {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+  }
+  #pieChart svg {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+  .pie-label {
+    font-size: 10px !important;
+  }
+  .panel {
+    width: 100%;
+    min-height: auto;
+    padding: 20px 15px;
+  }
+  .content-wrapper {
+    padding: 0;
+    text-align: center;
+  }
+  #segmentTitle {
+    font-size: 24px !important;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  #segmentText {
+    font-size: 14px !important;
+    line-height: 1.6;
+  }
+  #segmentImage {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+  }
+}
 /*-------------------------------------------------
 >> Basic styles for Image Alongside Text Block
 -------------------------------------------------*/
@@ -12230,6 +12280,10 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   .media-with-text-image-text {
     bottom: 5%;
   }
+  .stats-items {
+    padding-bottom: 50px;
+    box-sizing: border-box;
+  }
   .testimonial-variation.swiper {
     padding: 0 0 60px;
   }
@@ -12429,6 +12483,19 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
 }
 @media only screen and (max-width: 747px) {
+  .home .hero-inner-slider .banner-content {
+    justify-content: center;
+    text-align: center;
+  }
+  .home .hero-inner-slider .banner-content .banner-content-inner {
+    justify-content: center;
+    text-align: center;
+    top: -25px;
+  }
+  .home .hero-inner-slider .banner-content .banner-content-inner .hero-split-text {
+    right: 0 !important;
+    left: 0;
+  }
   .hero-inner-slider .banner-content .banner-content-inner,
   .hero-project .banner-content .banner-content-inner {
     position: relative;
@@ -12547,6 +12614,9 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   figure.wp-block-media-text__media {
     width: 100%;
   }
+  .blog-subposts .blog-subpost .blog-slider-image-slider .item img {
+    width: 100%;
+  }
   .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -12556,9 +12626,14 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     width: 100%;
     margin: 0;
   }
+  .images-items.four-columns {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .single-image-card {
-    aspect-ratio: 340/340;
+    aspect-ratio: 1/1;
     width: 100%;
+    height: 100%;
   }
   .single-image-card .single-image {
     width: 100%;
@@ -12744,7 +12819,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     font-size: 18px;
   }
   .testimonial-single-content p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .testimonial-variation.swiper::before {
     display: none;
@@ -12842,6 +12917,12 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   .image-alongside-text h2 {
     font-size: 40px;
   }
+  .single-image-card a {
+    border-bottom: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
   .blog-teaser-slider .blog-teaser-item {
     margin-left: 0;
   }
@@ -12893,10 +12974,10 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     font-size: 45px;
   }
   .introduction-team-left .section-head p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .banner-content-inner p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .blog-teaser-slider .slick-arrow {
     top: auto;
@@ -12928,7 +13009,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   .blog-teaser-slider::before {
     content: "";
     position: absolute;
-    right: -4px;
+    right: clamp(-2.625rem, -10.484vw + 2.27rem, -0.187rem);
     top: 0;
     display: block;
     background-color: var(--fc_green_dark);
@@ -12969,7 +13050,7 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
   .hero-inner-slider .banner-content p,
   .hero-project .banner-content p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .hero-inner-slider .slick-prev,
   .hero-inner-slider .slick-next {
