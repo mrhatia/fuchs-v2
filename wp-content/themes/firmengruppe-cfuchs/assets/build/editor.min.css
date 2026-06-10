@@ -3160,13 +3160,13 @@ Mixin for transition
   background-color: white;
   z-index: -1;
 }
+.acf-block-preview .main-section {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
 .acf-block-preview .single-service.service-detail-single {
   background-color: var(--fc_color_primary);
   color: var(--fc_white);
-}
-.acf-block-preview .single-service.service-detail-single .main-section {
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 .acf-block-preview .single-service.service-detail-single .search-icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(107%) contrast(103%);

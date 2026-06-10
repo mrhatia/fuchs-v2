@@ -19,7 +19,7 @@ $bst_var_post_tag = get_the_tags( get_the_ID() );
 	<div class="post-date">
 		<?php echo strtolower( get_the_date('j. F. Y') ); ?>
 	</div>
-	<?php
+<?php
 	// Categories
 	$categories = get_the_category();
 
@@ -28,6 +28,9 @@ $bst_var_post_tag = get_the_tags( get_the_ID() );
 
 			<?php
 				foreach ( $categories as $category ) {
+					if($category->name == 'Uncategorized') {
+						continue;
+					}
 					echo ' / <span>' . esc_html( $category->name ) . '</span>';
 				}
 			?>
