@@ -184,7 +184,7 @@
 // Responsive Text Mixin
 
 @function strip-unit($number) {
-	@if type-of($number)=="number" and not unitless($number) {
+	@if type-of($number) == "number" and not unitless($number) {
 		@return $number / ($number * 0 + 1);
 	}
 
@@ -192,16 +192,21 @@
 }
 
 // Responsive text mixin
-@mixin responsiveText($minSize,
+@mixin responsiveText(
+	$minSize,
 	$maxSize: 28px,
 	$minWidth: 450px,
-	$maxWidth: 900px) {
+	$maxWidth: 900px
+) {
 	$mxS: strip-unit($maxSize);
 	$mnS: strip-unit($minSize);
 	$mxW: strip-unit($maxWidth);
 	$mnW: strip-unit($minWidth);
 
-	font-size: calc(#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW}));
+	font-size: calc(
+		#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) /
+			(#{$mxW} - #{$mnW})
+	);
 
 	@media screen and (max-width: $minWidth) {
 		font-size: $minSize;
@@ -291,11 +296,11 @@
 				padding: 0;
 
 				#segmentTitle {
-					padding: 4px;
+					padding: 0 5%;
 				}
 
 				#segmentText {
-					padding: 4px;
+					padding: 0 5%;
 					line-height: 18px;
 				}
 			}
@@ -482,5 +487,61 @@
 .single-image {
 	.iat-single-image {
 		width: 100% !important;
+	}
+}
+@media (max-width: 767px) {
+	.chart-center {
+		width: 100px;
+		height: 100px;
+	}
+	.pie-container {
+		padding: 0 !important;
+		width: 90%;
+		margin: 0 auto;
+	}
+	#pieChart {
+		width: 100%;
+		max-width: 100%;
+		aspect-ratio: 1/1;
+		margin: 0 auto;
+	}
+
+	#pieChart svg {
+		width: 100% !important;
+		height: auto !important;
+		display: block;
+	}
+	.pie-label {
+		font-size: 10px !important;
+	}
+
+	.panel {
+		width: 100%;
+		min-height: auto;
+		padding: 20px 15px;
+	}
+
+	.content-wrapper {
+		padding: 0;
+		text-align: center;
+	}
+
+	#segmentTitle {
+		font-size: 24px !important;
+		line-height: 1.2;
+		margin-bottom: 15px;
+	}
+
+	#segmentText {
+		font-size: 14px !important;
+		line-height: 1.6;
+	}
+
+	#segmentImage {
+		width: 100%;
+		max-width: 180px;
+		height: auto;
+		margin: 0 auto 20px;
+		display: block;
 	}
 }
