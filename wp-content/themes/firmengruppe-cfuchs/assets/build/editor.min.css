@@ -2566,8 +2566,8 @@ Mixin for transition
 .acf-block-preview a.button:visited.dark-orange-button,
 .acf-block-preview span.button.dark-orange-button,
 .acf-block-preview .is-style-mycustomstyle .wp-element-button.dark-orange-button {
-  background-color: #ff5f14;
-  border-color: #ff5f14;
+  background-color: var(--fc_orange_dark);
+  border-color: var(--fc_orange_dark);
 }
 .acf-block-preview a.button.dark-orange-button:hover,
 .acf-block-preview a.button:visited.dark-orange-button:hover,
@@ -3160,7 +3160,7 @@ Mixin for transition
   background-color: white;
   z-index: -1;
 }
-.acf-block-preview .main-section {
+.acf-block-preview body:not(.page-template-template-einblicke) .main-section {
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -4302,6 +4302,9 @@ Mixin for transition
 .acf-block-preview .faq-items {
   width: 55.8%;
 }
+.acf-block-preview .faq-items.only-one-faq-style {
+  background-color: rgba(0, 0, 0, 0.1294117647);
+}
 .acf-block-preview .faq-items.only-one-faq-style .faq-number {
   opacity: 0 !important;
 }
@@ -5056,7 +5059,6 @@ Mixin for transition
   }
   .acf-block-preview div.pie-container #pieText .panel #segmentText {
     padding: 2px 4px 4px;
-    line-height: 16px;
   }
 }
 @media (min-width: 360.02px) and (max-width: 442px) {
@@ -5073,8 +5075,8 @@ Mixin for transition
     margin-top: 15px;
   }
   .acf-block-preview div.pie-container #pieText .panel {
-    height: 250px;
-    padding: 0;
+    height: auto;
+    padding: 35px 0;
   }
   .acf-block-preview div.pie-container #pieText .panel #segmentTitle {
     padding: 0 5%;
@@ -5258,14 +5260,14 @@ Mixin for transition
     margin-bottom: 15px;
   }
   .acf-block-preview #segmentText {
-    font-size: 14px !important;
-    line-height: 1.6;
+    font-size: 16px !important;
+    line-height: 1.3;
   }
   .acf-block-preview #segmentImage {
     width: 100%;
     max-width: 180px;
     height: auto;
-    margin: 0 auto 20px;
+    padding: 0 5%;
     display: block;
   }
 }
@@ -5803,6 +5805,14 @@ Mixin for transition
 .acf-block-preview .white-bg {
   background-color: var(--fc_white);
 }
+.acf-block-preview .white-bg .heading-3,
+.acf-block-preview .white-bg .heading-2,
+.acf-block-preview .white-bg .heading-4,
+.acf-block-preview .white-bg .heading-5,
+.acf-block-preview .white-bg p,
+.acf-block-preview .white-bg span {
+  color: var(--fc_color_primary);
+}
 .acf-block-preview .project-management-block {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
@@ -5897,7 +5907,6 @@ Mixin for transition
 .acf-block-preview .project-design .item:nth-child(2) {
   grid-column: 2/3;
   grid-row: 1/2;
-  background: #f36a21;
   display: flex;
   align-items: center;
 }

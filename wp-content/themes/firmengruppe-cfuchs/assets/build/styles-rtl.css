@@ -5744,8 +5744,8 @@ a.button.dark-orange-button,
 a.button:visited.dark-orange-button,
 span.button.dark-orange-button,
 .is-style-mycustomstyle .wp-element-button.dark-orange-button {
-  background-color: #ff5f14;
-  border-color: #ff5f14;
+  background-color: var(--fc_orange_dark);
+  border-color: var(--fc_orange_dark);
 }
 a.button.dark-orange-button:hover,
 a.button:visited.dark-orange-button:hover,
@@ -6334,7 +6334,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   background-color: white;
   z-index: -1;
 }
-.main-section {
+body:not(.page-template-template-einblicke) .main-section {
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -8244,6 +8244,9 @@ body #daextlwcnf-cookie-settings-button-2:hover {
 .faq-items {
   width: 55.8%;
 }
+.faq-items.only-one-faq-style {
+  background-color: rgba(0, 0, 0, 0.1294117647);
+}
 .faq-items.only-one-faq-style .faq-number {
   opacity: 0 !important;
 }
@@ -8994,7 +8997,6 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   }
   div.pie-container #pieText .panel #segmentText {
     padding: 2px 4px 4px;
-    line-height: 16px;
   }
 }
 @media (min-width: 360.02px) and (max-width: 442px) {
@@ -9011,8 +9013,8 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     margin-top: 15px;
   }
   div.pie-container #pieText .panel {
-    height: 250px;
-    padding: 0;
+    height: auto;
+    padding: 35px 0;
   }
   div.pie-container #pieText .panel #segmentTitle {
     padding: 0 5%;
@@ -9196,14 +9198,14 @@ body #daextlwcnf-cookie-settings-button-2:hover {
     margin-bottom: 15px;
   }
   #segmentText {
-    font-size: 14px !important;
-    line-height: 1.6;
+    font-size: 16px !important;
+    line-height: 1.3;
   }
   #segmentImage {
     width: 100%;
     max-width: 180px;
     height: auto;
-    margin: 0 auto 20px;
+    padding: 0 5%;
     display: block;
   }
 }
@@ -9731,6 +9733,14 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 .white-bg {
   background-color: var(--fc_white);
 }
+.white-bg .heading-3,
+.white-bg .heading-2,
+.white-bg .heading-4,
+.white-bg .heading-5,
+.white-bg p,
+.white-bg span {
+  color: var(--fc_color_primary);
+}
 .project-management-block {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
@@ -9825,7 +9835,6 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 .project-design .item:nth-child(2) {
   grid-column: 2/3;
   grid-row: 1/2;
-  background: #f36a21;
   display: flex;
   align-items: center;
 }
@@ -11500,6 +11509,12 @@ body.shrink .single-service-hero-section .service-logo.left-side {
 @media only screen and (max-width: 747px) {
   .top-bar.center-align {
     text-align: right;
+  }
+  .pie-container .content-wrapper {
+    padding: 0 10px;
+  }
+  .video-hero .banner-content .hero-split-text {
+    top: -58px;
   }
   .hero-single {
     padding: 40px 0 30px;

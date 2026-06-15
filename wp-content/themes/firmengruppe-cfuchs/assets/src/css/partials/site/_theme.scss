@@ -369,8 +369,8 @@ span.button,
 	}
 
 	&.dark-orange-button {
-		background-color: #ff5f14;
-		border-color: #ff5f14;
+		background-color: var(--fc_orange_dark);
+		border-color: var(--fc_orange_dark);
 
 		&:hover {
 			background-color: transparent;
@@ -1034,7 +1034,7 @@ body {
 	z-index: -1;
 }
 
-.main-section {
+body:not(.page-template-template-einblicke) .main-section {
 	overflow-x: hidden;
 	overflow-y: visible;
 }

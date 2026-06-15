@@ -25,7 +25,6 @@ $bst_var_tblgho_text = $bst_fields['bst_var_tblgho_text'] ?? null;
 $bst_var_author_avatar       = $bst_fields['bst_var_author_avatar'] ?? null;
 $blog_posts_preference       = $bst_fields['bst_var_tblgho_posts_preference'] ?? null;
 $bst_var_tblgho_posts       = $bst_fields['bst_var_tblgho_posts'] ?? null;
-
 $bst_var_post_catagories = get_categories( $bst_var_post_id );
 
 ?>

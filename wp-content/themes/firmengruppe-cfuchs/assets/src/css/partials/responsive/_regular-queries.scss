@@ -3,6 +3,14 @@
 		text-align: left;
 	}
 
+	.pie-container .content-wrapper {
+		padding: 0 10px;
+	}
+
+	.video-hero .banner-content .hero-split-text {
+		top: -58px;
+	}
+
 	// masthead
 	.hero-single {
 		padding: 40px 0 30px;
@@ -80,6 +88,7 @@
 		font-size: 16px;
 		margin-top: 20px;
 	}
+
 	.footer-bottom {
 		flex-wrap: wrap;
 		padding: 35px 0 30px;

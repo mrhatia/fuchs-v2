@@ -28,13 +28,22 @@ BaseTheme::block(
 		<section class="ctn-full-width">
 			<div class="wrapper">
 				<div class="pie-container">
+					<div class="mobile-tabs">
+						<?php foreach( $fh_var_blk_pie_chart_tabs as $index => $item ) : ?>
+							<button
+								class="mobile-tab <?php echo $index === 0 ? 'active' : ''; ?>"
+								data-index="<?php echo $index; ?>">
+								<?php echo esc_html( $item['title'] ?: $item['label'] ); ?>
+							</button>
+						<?php endforeach; ?>
+					</div>
 					<div class="row">
 						<div class="col-md-5" id="pieChart">
 							<?php if ( $fh_var_blk_pie_logo ) { ?>
-						<div class="chart-center">
-							<?php BaseTheme::the_attachment_image( $fh_var_blk_pie_logo, 2000 ); ?>
-						</div>
-					<?php } ?>
+								<div class="chart-center">
+									<?php BaseTheme::the_attachment_image( $fh_var_blk_pie_logo, 2000 ); ?>
+								</div>
+							<?php } ?>
 						</div>
 						<div id="pieText" class="col-md-7 text-container">
 							<div class="panel">
@@ -60,6 +69,58 @@ BaseTheme::block(
 			.color-black { color: #000000; }
 			.color-green { color: #f2976a; }
 			.color-orange { color: #e27602; }
+
+
+			.mobile-tabs{
+	display:none;
+	gap:12px;
+	overflow-x:auto;
+	white-space:nowrap;
+	-webkit-overflow-scrolling:touch;
+}
+
+.mobile-tabs::-webkit-scrollbar{
+	display:none;
+}
+
+.mobile-tab{
+	flex-shrink:0;
+	padding:10px 20px;
+	border:none;
+	background:#eee;
+	border-radius:30px;
+	cursor:pointer;
+	font-size:14px;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+}
+
+.mobile-tab.active{
+	background-color:#e37806;
+	border-color:#e37806;
+	color:#fff;
+}
+
+@media(max-width:767px){
+
+	#pieChart{
+		display:none;
+	}
+
+	.mobile-tabs{
+		display:flex;
+	}
+
+	#pieText{
+		width:100%;
+		max-width:100%;
+		flex:0 0 100%;
+	}
+
+	.panel{
+		width:100%;
+	}
+}
 		</style>
 
 				<script>
@@ -91,147 +152,199 @@ BaseTheme::block(
 					<?php endforeach; ?>
 				<?php endif; ?>
 				];
+				window.pieData = data;
+
+				if(window.innerWidth >= 768){
+					const width=parseInt(d3.select('#pieChart').style('width'),10);
+					const height=width;
+					const radius=(Math.min(width,height)-15)/2;
+					const total=data.reduce((sum,d)=>sum+d.Amount,0);
+					const titles=data.map(d=>d.Title);
+					const innerRadius=jQuery('#pieChart').css('counter-reset').split(' ')[1];
+
+					const arc=d3.arc().outerRadius(radius-10).innerRadius(innerRadius);
+					const arcOver=d3.arc().outerRadius(radius+10).innerRadius(innerRadius);
+
+					const color=d3.scaleOrdinal()
+					.domain(titles)
+					.range(data.map(d=>d.Class==='color-white'?'#e1831e':d.Class==='color-green'?'#e37806':'#be6200'));
+
+					const pie=d3.pie().sort(null).value(d=>+d.Amount);
+					let prevSegment=null;
+
+					const root=d3.select('#pieChart').append('svg')
+					.attr('width','100%')
+					.attr('height','100%')
+					.attr('viewBox',`0 0 ${Math.min(width,height)} ${Math.min(width,height)}`)
+					.attr('preserveAspectRatio','xMinYMin');
+
+					const svg=root.append('g')
+					.attr('transform',`translate(${radius},${height/2})`);
+
+					const defs=root.append('defs');
+					const filter=defs.append('filter').attr('id','drop-shadow').attr('height','130%');
+					filter.append('feGaussianBlur').attr('in','SourceAlpha').attr('stdDeviation',5.5).attr('result','blur');
+					filter.append('feOffset').attr('in','blur').attr('dx',0).attr('dy',0).attr('result','offsetBlur');
+					const feMerge=filter.append('feMerge');
+					feMerge.append('feMergeNode').attr('in','offsetBlur');
+					feMerge.append('feMergeNode').attr('in','SourceGraphic');
+
+					let buttonToggle=true;
+					const switchToggle=()=>setTimeout(()=>buttonToggle=true,1500);
+
+					const change=(d,el)=>{
+					d3.select(prevSegment).transition().attr('d',arc).style('filter','');
+					prevSegment=el;
+					d3.select(el).transition().duration(1000).attr('d',arcOver).style('filter','url(#drop-shadow)');
+					};
+
+					const timeline=new TimelineLite();
+
+					svg.selectAll('path')
+					.data(pie(data))
+					.enter().append('path')
+					.attr('d',arc)
+					.style('fill',d=>color(d.data.Title))
+					.on('click',function(d){
+						if(!buttonToggle){return;}
+						buttonToggle=false;
+						switchToggle();
+						change(d,this);
 
 
-				const width=parseInt(d3.select('#pieChart').style('width'),10);
-				const height=width;
-				const radius=(Math.min(width,height)-15)/2;
-				const total=data.reduce((sum,d)=>sum+d.Amount,0);
-				const titles=data.map(d=>d.Title);
-				const innerRadius=jQuery('#pieChart').css('counter-reset').split(' ')[1];
+						const tl=new TimelineLite();
+						tl.to('.content-wrapper',0.5,{rotationX:'90deg',opacity:0,onComplete:()=>jQuery('.content-wrapper').hide()})
+						.to('.panel',0.5,{
+						width:'0%',
+						opacity:0.05,
+						onComplete:()=>{
+						const sliceColor=color(d.data.Title);
+						const textColor=(sliceColor.toLowerCase()==='#ffffff')?'color-black':'color-white';
+						const textHex=(sliceColor.toLowerCase()==='#ffffff')?'#000000':'#ffffff';
+						jQuery('#segmentTitle').replaceWith(`<h1 id="segmentTitle" class="${textColor}" style="color:${textHex}">${d.data.Title} </h1>`);
+						jQuery('#segmentText').replaceWith(`<p id="segmentText" class="${textColor}" style="color:${textHex}">${d.data.Description}</p>`);
+						// update image
+						const imgEl = jQuery('#segmentImage');
 
-				const arc=d3.arc().outerRadius(radius-10).innerRadius(innerRadius);
-				const arcOver=d3.arc().outerRadius(radius+10).innerRadius(innerRadius);
+						if (d.data.Image) {
+							imgEl.attr('src', d.data.Image).show();
+						} else {
+							imgEl.attr('src', '').hide(); // hide if no image
+						}
 
-				const color=d3.scaleOrdinal()
-				.domain(titles)
-				.range(data.map(d=>d.Class==='color-white'?'#e1831e':d.Class==='color-green'?'#e37806':'#be6200'));
+						jQuery('.panel').css('background-color',ColorLuminance(sliceColor));
+						}}).to('.panel',0.5,{width:'100%',opacity:1,onComplete:()=>jQuery('.content-wrapper').show()})
+						.to('.content-wrapper',0.5,{rotationX:'0deg',opacity:1});
+					});
 
-				const pie=d3.pie().sort(null).value(d=>+d.Amount);
-				let prevSegment=null;
+					// ✅ Auto select first slice on load
+					setTimeout(() => {
+						const first = svg.selectAll('path').nodes()[0];
+						const firstData = pie(data)[0];
 
-				const root=d3.select('#pieChart').append('svg')
-				.attr('width','100%')
-				.attr('height','100%')
-				.attr('viewBox',`0 0 ${Math.min(width,height)} ${Math.min(width,height)}`)
-				.attr('preserveAspectRatio','xMinYMin');
+						if (first) {
+							change(firstData, first);
 
-				const svg=root.append('g')
-				.attr('transform',`translate(${radius},${height/2})`);
+							const sliceColor = color(firstData.data.Title);
+							const textColor = (sliceColor.toLowerCase() === '#ffffff') ? 'color-black' : 'color-white';
+							const textHex = (sliceColor.toLowerCase() === '#ffffff') ? '#000000' : '#ffffff';
 
-				const defs=root.append('defs');
-				const filter=defs.append('filter').attr('id','drop-shadow').attr('height','130%');
-				filter.append('feGaussianBlur').attr('in','SourceAlpha').attr('stdDeviation',5.5).attr('result','blur');
-				filter.append('feOffset').attr('in','blur').attr('dx',0).attr('dy',0).attr('result','offsetBlur');
-				const feMerge=filter.append('feMerge');
-				feMerge.append('feMergeNode').attr('in','offsetBlur');
-				feMerge.append('feMergeNode').attr('in','SourceGraphic');
+							jQuery('#segmentTitle').html(
+								`${firstData.data.Title}`
+							).attr('class', textColor).css('color', textHex);
 
-				let buttonToggle=true;
-				const switchToggle=()=>setTimeout(()=>buttonToggle=true,1500);
+							jQuery('#segmentText').html(firstData.data.Description)
+								.attr('class', textColor).css('color', textHex);
 
-				const change=(d,el)=>{
-				d3.select(prevSegment).transition().attr('d',arc).style('filter','');
-				prevSegment=el;
-				d3.select(el).transition().duration(1000).attr('d',arcOver).style('filter','url(#drop-shadow)');
-				};
+							jQuery('#segmentImage').attr('src', firstData.data.Image);
 
-				const timeline=new TimelineLite();
+							jQuery('.panel').css('background-color', ColorLuminance(sliceColor));
+						}
+					}, 500);
 
-				svg.selectAll('path')
-				.data(pie(data))
-				.enter().append('path')
-				.attr('d',arc)
-				.style('fill',d=>color(d.data.Title))
-				.on('click',function(d){
-					if(!buttonToggle){return;}
-					buttonToggle=false;
-					switchToggle();
-					change(d,this);
+					svg.selectAll('.pie-label')
+					.data(pie(data))
+					.enter()
+					.append('text')
+					.attr('class','pie-label')
+					.attr('transform',d=>{
+					const[x,y]=arc.centroid(d);
+					return`translate(${x},${y})`;
+					})
+					.attr('text-anchor','middle')
+					.attr('dominant-baseline','middle')
+					.style('fill',d=>color(d.data.Title).toLowerCase()==='#ffffff'?'#000000':'#ffffff')
+					.style('font-size','14px')
+					.style('font-weight','600')
+					.style('pointer-events','none')
+					.text(d=>d.data.Title);
 
+					timeline.from('#pieChart',0.5,{rotation:'-120deg',scale:0.1,opacity:0})
+					.from('.panel',0.75,{width:'0%',opacity:0},'+=.55')
+					.from('.content-wrapper',0.75,{rotationX:'-90deg',opacity:0});
 
-					const tl=new TimelineLite();
-					tl.to('.content-wrapper',0.5,{rotationX:'90deg',opacity:0,onComplete:()=>jQuery('.content-wrapper').hide()})
-					.to('.panel',0.5,{
-					width:'0%',
-					opacity:0.05,
-					onComplete:()=>{
-					const sliceColor=color(d.data.Title);
-					const textColor=(sliceColor.toLowerCase()==='#ffffff')?'color-black':'color-white';
-					const textHex=(sliceColor.toLowerCase()==='#ffffff')?'#000000':'#ffffff';
-					jQuery('#segmentTitle').replaceWith(`<h1 id="segmentTitle" class="${textColor}" style="color:${textHex}">${d.data.Title} </h1>`);
-					jQuery('#segmentText').replaceWith(`<p id="segmentText" class="${textColor}" style="color:${textHex}">${d.data.Description}</p>`);
-					// update image
-					const imgEl = jQuery('#segmentImage');
+					function ColorLuminance(hex,lum=0){
+					hex=String(hex).replace(/[^0-9a-f]/gi,'');
+					if(hex.length<6){hex=hex.split('').map(x=>x+x).join('');}
+					let rgb='#';
+					for(let i=0;i<3;i++){
+					let c=parseInt(hex.substr(i*2,2),16);
+					c=Math.round(Math.min(Math.max(0,c+(c*lum)),255)).toString(16);
+					rgb+=('00'+c).slice(-2);
+					}
+					return rgb;
+					}
+				}
+			</script>
 
-					if (d.data.Image) {
-						imgEl.attr('src', d.data.Image).show();
-					} else {
-						imgEl.attr('src', '').hide(); // hide if no image
+			<script>
+				jQuery(document).ready(function(jQuery){
+
+					function updateMobileContent(index){
+
+						const item = pieData[index];
+
+						const colors = {
+							'color-white':'#e1831e',
+							'color-green':'#e37806',
+							'color-orange':'#be6200'
+						};
+
+						const bgColor = colors[item.Class];
+
+						jQuery('#segmentTitle')
+							.text(item.Title)
+							.css('color','#fff');
+
+						jQuery('#segmentText')
+							.text(item.Description)
+							.css('color','#fff');
+
+						if(item.Image){
+							jQuery('#segmentImage').attr('src',item.Image).show();
+						}else{
+							jQuery('#segmentImage').hide();
+						}
+
+						jQuery('.panel').css('background-color',bgColor);
 					}
 
-					jQuery('.panel').css('background-color',ColorLuminance(sliceColor));
-					}}).to('.panel',0.5,{width:'100%',opacity:1,onComplete:()=>jQuery('.content-wrapper').show()})
-					.to('.content-wrapper',0.5,{rotationX:'0deg',opacity:1});
+					jQuery('.mobile-tab').on('click',function(){
+
+						const index = jQuery(this).data('index');
+
+						jQuery('.mobile-tab').removeClass('active');
+						jQuery(this).addClass('active');
+
+						updateMobileContent(index);
+					});
+
+					if(window.innerWidth < 768){
+						updateMobileContent(0);
+					}
 				});
-
-				// ✅ Auto select first slice on load
-				setTimeout(() => {
-					const first = svg.selectAll('path').nodes()[0];
-					const firstData = pie(data)[0];
-
-					if (first) {
-						change(firstData, first);
-
-						const sliceColor = color(firstData.data.Title);
-						const textColor = (sliceColor.toLowerCase() === '#ffffff') ? 'color-black' : 'color-white';
-						const textHex = (sliceColor.toLowerCase() === '#ffffff') ? '#000000' : '#ffffff';
-
-						jQuery('#segmentTitle').html(
-							`${firstData.data.Title}`
-						).attr('class', textColor).css('color', textHex);
-
-						jQuery('#segmentText').html(firstData.data.Description)
-							.attr('class', textColor).css('color', textHex);
-
-						jQuery('#segmentImage').attr('src', firstData.data.Image);
-
-						jQuery('.panel').css('background-color', ColorLuminance(sliceColor));
-					}
-				}, 500);
-
-				svg.selectAll('.pie-label')
-				.data(pie(data))
-				.enter()
-				.append('text')
-				.attr('class','pie-label')
-				.attr('transform',d=>{
-				const[x,y]=arc.centroid(d);
-				return`translate(${x},${y})`;
-				})
-				.attr('text-anchor','middle')
-				.attr('dominant-baseline','middle')
-				.style('fill',d=>color(d.data.Title).toLowerCase()==='#ffffff'?'#000000':'#ffffff')
-				.style('font-size','14px')
-				.style('font-weight','600')
-				.style('pointer-events','none')
-				.text(d=>d.data.Title);
-
-				timeline.from('#pieChart',0.5,{rotation:'-120deg',scale:0.1,opacity:0})
-				.from('.panel',0.75,{width:'0%',opacity:0},'+=.55')
-				.from('.content-wrapper',0.75,{rotationX:'-90deg',opacity:0});
-
-				function ColorLuminance(hex,lum=0){
-				hex=String(hex).replace(/[^0-9a-f]/gi,'');
-				if(hex.length<6){hex=hex.split('').map(x=>x+x).join('');}
-				let rgb='#';
-				for(let i=0;i<3;i++){
-				let c=parseInt(hex.substr(i*2,2),16);
-				c=Math.round(Math.min(Math.max(0,c+(c*lum)),255)).toString(16);
-				rgb+=('00'+c).slice(-2);
-				}
-				return rgb;
-				}
 			</script>
 	<?php }
 );
+
+

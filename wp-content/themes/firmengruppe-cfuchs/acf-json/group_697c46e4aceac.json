@@ -139,6 +139,13 @@
                                 "operator": "==",
                                 "value": "icon-text"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_69f06539d6b2c",
+                                "operator": "==",
+                                "value": "title"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -482,5 +489,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1780990424
+    "modified": 1781241802
 }

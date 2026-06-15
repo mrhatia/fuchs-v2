@@ -184,7 +184,7 @@
 // Responsive Text Mixin
 
 @function strip-unit($number) {
-	@if type-of($number) == "number" and not unitless($number) {
+	@if type-of($number)=="number" and not unitless($number) {
 		@return $number / ($number * 0 + 1);
 	}
 
@@ -192,21 +192,16 @@
 }
 
 // Responsive text mixin
-@mixin responsiveText(
-	$minSize,
+@mixin responsiveText($minSize,
 	$maxSize: 28px,
 	$minWidth: 450px,
-	$maxWidth: 900px
-) {
+	$maxWidth: 900px) {
 	$mxS: strip-unit($maxSize);
 	$mnS: strip-unit($minSize);
 	$mxW: strip-unit($maxWidth);
 	$mnW: strip-unit($minWidth);
 
-	font-size: calc(
-		#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) /
-			(#{$mxW} - #{$mnW})
-	);
+	font-size: calc(#{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW}));
 
 	@media screen and (max-width: $minWidth) {
 		font-size: $minSize;
@@ -269,7 +264,6 @@
 
 				#segmentText {
 					padding: 2px 4px 4px;
-					line-height: 16px;
 				}
 			}
 		}
@@ -292,8 +286,8 @@
 			margin-top: 15px;
 
 			.panel {
-				height: 250px;
-				padding: 0;
+				height: auto;
+				padding: 35px 0;
 
 				#segmentTitle {
 					padding: 0 5%;
@@ -489,16 +483,19 @@
 		width: 100% !important;
 	}
 }
+
 @media (max-width: 767px) {
 	.chart-center {
 		width: 100px;
 		height: 100px;
 	}
+
 	.pie-container {
 		padding: 0 !important;
 		width: 90%;
 		margin: 0 auto;
 	}
+
 	#pieChart {
 		width: 100%;
 		max-width: 100%;
@@ -511,6 +508,7 @@
 		height: auto !important;
 		display: block;
 	}
+
 	.pie-label {
 		font-size: 10px !important;
 	}
@@ -533,15 +531,15 @@
 	}
 
 	#segmentText {
-		font-size: 14px !important;
-		line-height: 1.6;
+		font-size: 16px !important;
+		line-height: 1.3;
 	}
 
 	#segmentImage {
 		width: 100%;
 		max-width: 180px;
 		height: auto;
-		margin: 0 auto 20px;
+		padding: 0 5%;
 		display: block;
 	}
 }

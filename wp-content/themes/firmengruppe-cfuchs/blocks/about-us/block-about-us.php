@@ -75,8 +75,20 @@ BaseTheme::block(
 							</div>
 						<?php } ?>
 
-						<?php if($design === 'title' && $title){ ?>
-							<div class="item simple-text animation-item" style="background-color: #ff5f14;">
+						<?php if($design === 'title' && $title){
+							$box_color = $box['bst_var_blk_about_box_color'] ?? 'green';
+							$color_class = '';
+							$button_color = 'button dark-orange-button';
+							if($box_color === 'orange'){
+								$color_class = 'dark-orange-bg';
+								$button_color = 'button white-button';
+							} elseif($box_color === 'white'){
+								$color_class = 'white-bg';
+								$button_color = 'button ';
+
+							}
+							?>
+							<div class="item simple-text animation-item <?php echo $color_class; ?>">
 								<h2 class="heading-2">
 									<?php echo html_entity_decode($title); ?>
 								</h2>
@@ -92,7 +104,7 @@ BaseTheme::block(
 								$button_color = 'button white-button';
 							} elseif($box_color === 'white'){
 								$color_class = 'white-bg';
-								$button_color = 'button dark-orange-button';
+								$button_color = 'button ';
 
 							}
 							?>
