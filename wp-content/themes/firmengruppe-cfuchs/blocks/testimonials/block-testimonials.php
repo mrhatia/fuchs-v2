@@ -86,9 +86,8 @@ BaseTheme::block(
 									<div class="swiper-slide testimonial-single">
 										<div class="testimonial-single-image image-cover  mobile-hide">
 											<?php if ( $image ) { ?>
-												<?php BaseTheme::the_attachment_image( $image, 500 ); ?>
+												<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo html_entity_decode( $column_title ); ?>" />
 											<?php } ?>
-
 										</div>
 										<div class="testimonial-single-content">
 											<?php if ( $column_text ) {  ?>
@@ -134,10 +133,10 @@ BaseTheme::block(
 							slidesPerView: 1,
 							speed: 1000,
 							autoHeight: false,
-							autoplay: {
-								delay: 7000,
-								disableOnInteraction: false
-							},
+							// autoplay: {
+							// 	delay: 7000,
+							// 	disableOnInteraction: false
+							// },
 							pagination: {
 								el: ".swiper-pagination",
 								clickable: true

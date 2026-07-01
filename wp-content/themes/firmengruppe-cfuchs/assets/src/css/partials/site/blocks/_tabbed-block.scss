@@ -256,7 +256,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 		grid-row: 2 / 3;
 		display: flex;
 		align-items: center;
-		padding: 60px;
+		// padding: 60px;
 		color: #fff;
 	}
 
@@ -298,6 +298,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 	.content {
 		padding: 30px;
 		box-sizing: border-box;
+		text-align: center;
 	}
 }
 

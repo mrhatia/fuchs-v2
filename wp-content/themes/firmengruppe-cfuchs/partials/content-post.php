@@ -19,6 +19,10 @@ $bst_var_osngl_kicker 	= $bst_fields['bst_var_osngl_kicker'] ?? null;
 $bst_var_post_text 		= $bst_fields['bst_var_post_text'] ?? null;
 
 
+$bst_var_post_single_date_visibility = $bst_fields['bst_var_post_single_date_visibility'] ?? null;
+
+$is_date_disabled = ! empty( $bst_var_post_single_date_visibility[0] ) && 'disable' === $bst_var_post_single_date_visibility[0];
+
 ?>
 
 <section class="ctn-full-width">
@@ -32,10 +36,10 @@ $bst_var_post_text 		= $bst_fields['bst_var_post_text'] ?? null;
 							<div class="kicker"><?php echo esc_html( $bst_var_osngl_kicker ); ?></div>
 						<?php } ?>
 
-						<h1 class="heading-2"><?php echo esc_html( $bst_var_posttitle ); ?></h1>
+						<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_posttitle ); ?></h1>
 
 						<?php if($bst_var_post_text){ ?>
-							<p><?php echo esc_html( $bst_var_post_text ); ?></p>
+							<p><?php echo html_entity_decode( $bst_var_post_text ); ?></p>
 						<?php } ?>
 
 					</div>
@@ -105,12 +109,14 @@ $bst_var_post_text 		= $bst_fields['bst_var_post_text'] ?? null;
 				?>
 			</div>
 			<div class="blog-single-post-content">
-				<div class="blog-publish-date">
-					<?php the_date('j. F. Y'); ?>
-				</div>
+				<?php if ( ! $is_date_disabled ){ ?>
+					<div class="blog-publish-date">
+						<?php the_date('j. F. Y'); ?>
+					</div>
+				<?php } ?>
 
 				<div class="blog-content-title">
-					<h2 class="heading-3"></h2>
+					<h2 class="heading-3"><?php echo html_entity_decode( $bst_var_posttitle ); ?></h2>
 				</div>
 
 				<div class="blog-content-text">

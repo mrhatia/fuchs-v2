@@ -131,6 +131,19 @@
 	// .category-single-right .single-image img{
 	// 	aspect-ratio: initial;
 	// }
+	.single-image-content .service-text {
+
+		a,
+		a:visited {
+
+			color: var(--fc_white);
+			border-bottom: 1px solid var(--fc_white);
+
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
 }
 
 .job-share-wrapper {

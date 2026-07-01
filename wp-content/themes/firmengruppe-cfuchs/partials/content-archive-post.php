@@ -14,6 +14,7 @@ list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults(
 $bst_var_osngl_images = $bst_fields['bst_var_osngl_images'] ?? null;
 
 $bst_var_post_single_visibility = $bst_fields['bst_var_post_single_visibility'] ?? null;
+
 $is_disabled = ! empty( $bst_var_post_single_visibility[0] ) && 'disable' === $bst_var_post_single_visibility[0];
 ?>
 

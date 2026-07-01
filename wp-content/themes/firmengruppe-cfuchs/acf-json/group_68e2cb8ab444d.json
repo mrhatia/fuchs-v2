@@ -43,29 +43,21 @@
             "label": "Quote",
             "name": "fh_var_blk_quote_quotetext",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_68e2cb8ab592e",
-                        "operator": "==",
-                        "value": "simple"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
             "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -86,5 +78,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759693900
+    "display_title": "",
+    "modified": 1781522584
 }

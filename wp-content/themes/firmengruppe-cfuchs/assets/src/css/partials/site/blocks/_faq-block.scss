@@ -177,7 +177,11 @@
 	width: 55.8%;
 
 	&.only-one-faq-style {
-		background-color: #00000021;
+
+		// background-color: #00000021;
+		.faq {
+			border: 1px solid #978c63;
+		}
 
 		.faq-number {
 			opacity: 0 !important;

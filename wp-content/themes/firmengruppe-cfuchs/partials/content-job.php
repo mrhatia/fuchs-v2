@@ -32,7 +32,6 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 
 ?>
 
-
 <section class="ctn-full-width single-service-hero-section">
 	<div class="wrapper">
 		<div class="hero-inner-slider slider-disable">
@@ -120,10 +119,12 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 								<?php } ?>
 
 							</div>
-							<button class="video-replay-btn" aria-label="Replay Video">
-							</button>
-							<button class="video-sound-btn" aria-label="Enable Sound">
-							</button>
+							<?php if ( $fh_var_osngl_job_box_media_type === 'video' && $fh_var_osngl_job_box_video ) { ?>
+								<button class="video-replay-btn" aria-label="Replay Video">
+								</button>
+								<button class="video-sound-btn" aria-label="Enable Sound">
+								</button>
+							<?php } ?>
 						</div>
 						<?php if($fh_var_osngl_job_button){ ?>
 							<div class="category-single-button">
@@ -205,7 +206,7 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 
 												<?php if ( ! empty( $box['title'] ) ) { ?>
 													<div class="service-title">
-														<?php echo esc_html( $box['title'] ); ?>
+														<?php echo html_entity_decode( $box['title'] ); ?>
 													</div>
 												<?php } ?>
 
@@ -228,12 +229,12 @@ $fh_var_osngl_job_box_media_type          = $bst_fields['fh_var_osngl_job_box_me
 
 												<?php if ( ! empty( $box['title'] ) ) { ?>
 													<div class="small-text">
-														<?php echo esc_html( $box['title'] ); ?>
+														<?php echo html_entity_decode( $box['title'] ); ?>
 													</div>
 												<?php } ?>
 												<?php if ( ! empty( $box['name'] ) ) { ?>
 													<div class="service-title">
-														<?php echo esc_html( $box['name'] ); ?>
+														<?php echo html_entity_decode( $box['name'] ); ?>
 													</div>
 												<?php } ?>
 

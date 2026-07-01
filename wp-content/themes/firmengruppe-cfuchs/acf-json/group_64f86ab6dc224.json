@@ -3,6 +3,27 @@
     "title": "Template - Default Options",
     "fields": [
         {
+            "key": "field_6a411a32e89ef",
+            "label": "Background Text",
+            "name": "bst_var_tmp_def_background_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64f86ab6e0cd6",
             "label": "Title",
             "name": "bst_var_tmp_def_title",
@@ -21,43 +42,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_64f86b3a9ed57",
-            "label": "Text",
-            "name": "bst_var_tmp_def_text",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "wysiwyg_height": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_64f86bc59ed58",
-            "label": "Button",
-            "name": "bst_var_tmp_def_button",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         }
     ],
     "location": [
@@ -78,5 +62,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694002138
+    "display_title": "",
+    "modified": 1782651647
 }

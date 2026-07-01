@@ -4302,8 +4302,8 @@ Mixin for transition
 .acf-block-preview .faq-items {
   width: 55.8%;
 }
-.acf-block-preview .faq-items.only-one-faq-style {
-  background-color: rgba(0, 0, 0, 0.1294117647);
+.acf-block-preview .faq-items.only-one-faq-style .faq {
+  border: 1px solid #978c63;
 }
 .acf-block-preview .faq-items.only-one-faq-style .faq-number {
   opacity: 0 !important;
@@ -5442,7 +5442,6 @@ Mixin for transition
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3px;
-  aspect-ratio: 193/193;
 }
 .acf-block-preview .testimonial-single-content {
   flex: 1;
@@ -5854,7 +5853,6 @@ Mixin for transition
   grid-row: 2/3;
   display: flex;
   align-items: center;
-  padding: 60px;
   color: #fff;
 }
 .acf-block-preview .project-management-block .image-cover {
@@ -5889,6 +5887,7 @@ Mixin for transition
 .acf-block-preview .item.content-main .content {
   padding: 30px;
   box-sizing: border-box;
+  text-align: center;
 }
 .acf-block-preview .project-design {
   display: grid;
@@ -6535,6 +6534,15 @@ Mixin for transition
 .acf-block-preview .jobs-items .category-single-right .category-image-card:nth-child(n+2) {
   margin-top: 30px;
 }
+.acf-block-preview .jobs-items .single-image-content .service-text a,
+.acf-block-preview .jobs-items .single-image-content .service-text a:visited {
+  color: var(--fc_white);
+  border-bottom: 1px solid var(--fc_white);
+}
+.acf-block-preview .jobs-items .single-image-content .service-text a:hover,
+.acf-block-preview .jobs-items .single-image-content .service-text a:visited:hover {
+  border-color: transparent;
+}
 .acf-block-preview .job-share-wrapper {
   margin-top: 24px;
   display: flex;
@@ -7056,7 +7064,6 @@ Mixin for transition
 .acf-block-preview .services-block .section-head .heading-2 {
   font-size: var(--fc_font_size_80);
   margin-bottom: 0;
-  text-transform: uppercase;
 }
 .acf-block-preview .service-single-item a,
 .acf-block-preview .service-single-item a:visited {
@@ -9418,7 +9425,13 @@ Mixin for transition
     margin-top: 30px !important;
   }
   .acf-block-preview .cfuchs-heading-ghost {
-    font-size: 68px !important;
+    font-size: 62px !important;
+    bottom: auto !important;
+    top: -28px !important;
+    right: 25px !important;
+  }
+  .acf-block-preview .about-us-box {
+    text-align: center;
   }
   .acf-block-preview .services-block .section-head {
     gap: 20px;

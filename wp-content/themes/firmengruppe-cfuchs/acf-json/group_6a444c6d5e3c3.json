@@ -1,37 +1,11 @@
 {
-    "key": "group_6a2950fc90ab6",
-    "title": "Detail Page - Visibility",
+    "key": "group_6a444c6d5e3c3",
+    "title": "Archive Page - Settings",
     "fields": [
         {
-            "key": "field_6a29511a67d71",
+            "key": "field_6a444c6d5fddc",
             "label": "",
-            "name": "bst_var_post_single_visibility",
-            "aria-label": "",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "disable": "Check to Disable"
-            },
-            "default_value": [],
-            "return_format": "value",
-            "allow_custom": 0,
-            "allow_in_bindings": 1,
-            "layout": "vertical",
-            "toggle": 0,
-            "save_custom": 0,
-            "custom_choice_button_text": "Add new choice"
-        },
-        {
-            "key": "field_6a412509659c1",
-            "label": "",
-            "name": "bst_var_post_single_date_visibility",
+            "name": "bst_var_post_archive_date_visibility",
             "aria-label": "",
             "type": "checkbox",
             "instructions": "",
@@ -58,9 +32,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post_template",
                 "operator": "==",
-                "value": "post"
+                "value": "templates\/template-blog.php"
             }
         ]
     ],
@@ -74,5 +48,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1782654407
+    "modified": 1782861966
 }
