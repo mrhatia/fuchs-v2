@@ -25,6 +25,7 @@ $bst_var_tblgho_text = $bst_fields['bst_var_tblgho_text'] ?? null;
 $bst_var_author_avatar       = $bst_fields['bst_var_author_avatar'] ?? null;
 $blog_posts_preference       = $bst_fields['bst_var_tblgho_posts_preference'] ?? null;
 $bst_var_tblgho_posts       = $bst_fields['bst_var_tblgho_posts'] ?? null;
+$bst_var_tblgho_arch_button_label       = $bst_fields['bst_var_tblgho_arch_button_label'] ?? "Read More";
 $bst_var_post_catagories = get_categories( $bst_var_post_id );
 
 ?>
@@ -67,7 +68,13 @@ $bst_var_post_catagories = get_categories( $bst_var_post_id );
 
 						setup_postdata( $post );
 
-						get_template_part( 'partials/content', 'archive-post' );
+						get_template_part(
+							'partials/content',
+							'archive-post',
+							array(
+								'button_label' => $bst_var_tblgho_arch_button_label,
+							)
+						);
 					}
 
 					wp_reset_postdata();
@@ -104,7 +111,13 @@ $bst_var_post_catagories = get_categories( $bst_var_post_id );
 					while ( $bst_query->have_posts() ) {
 						$bst_query->the_post();
 						// Include specific template for the content.
-						get_template_part( 'partials/content', 'archive-post' );
+						get_template_part(
+							'partials/content',
+							'archive-post',
+							array(
+								'button_label' => $bst_var_tblgho_arch_button_label,
+							)
+						);
 					}
 					?>
 					<?php

@@ -12,8 +12,9 @@ list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults(
 
 
 $bst_var_osngl_images = $bst_fields['bst_var_osngl_images'] ?? null;
+$bst_var_tblgho_arch_button_label = $bst_fields['bst_var_tblgho_arch_button_label'] ?? 'Read More';
 
-$bst_var_post_single_visibility = $bst_fields['bst_var_post_single_visibility'] ?? null;
+$button_label = $args['button_label'] ?? 'Read More';
 
 $is_disabled = ! empty( $bst_var_post_single_visibility[0] ) && 'disable' === $bst_var_post_single_visibility[0];
 ?>
@@ -71,7 +72,7 @@ $is_disabled = ! empty( $bst_var_post_single_visibility[0] ) && 'disable' === $b
 				<div class="blog-subpost-bottom">
 					<div class="bottom-section-button">
 						<span>
-							Read more
+							<?php echo html_entity_decode( $button_label ); ?>
 						</span>
 						<span class="plus-button">
 							+

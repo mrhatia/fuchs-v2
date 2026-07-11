@@ -7,6 +7,7 @@
 	border-left: 1px solid var(--fc_border_3);
 	border-right: 1px solid var(--fc_border_3);
 	padding: 50px 100px 50px 40px;
+
 	blockquote {
 		max-width: 887px;
 		color: var(--fc_white);
@@ -14,33 +15,40 @@
 		border: none;
 		margin: 0;
 	}
+
 	&.orange-bg {
 		background-color: var(--fc_orange_dark);
 		border-color: var(--fc_orange_dark);
+
 		&::after {
 			bottom: 90px;
 		}
+
 		p,
 		blockquote {
 			color: var(--fc_white);
 			font-size: var(--fc_font_size_26);
 			text-align: initial;
 		}
+
 		cite {
 			font-size: var(--fc_font_size_12);
 			color: var(--fc_white);
 			font-style: normal;
 			text-transform: initial;
+
 			&::after,
 			&::before {
 				display: none !important;
 			}
 		}
 	}
+
 	&.tag-science {
 		&::after {
 			background-image: url(../images/link.svg);
 		}
+
 		p,
 		blockquote {
 			color: var(--fc_white);
@@ -48,6 +56,7 @@
 			text-align: initial;
 		}
 	}
+
 	&::after {
 		position: absolute;
 		content: "";
@@ -58,15 +67,15 @@
 		background-repeat: no-repeat;
 		width: 70px;
 		height: 57px;
-		filter: brightness(0) saturate(100%) invert(82%) sepia(94%)
-			saturate(31%) hue-rotate(140deg) brightness(115%) contrast(100%);
+		filter: brightness(0) saturate(100%) invert(82%) sepia(94%) saturate(31%) hue-rotate(140deg) brightness(115%) contrast(100%);
 	}
 
 	p {
 		font-size: 18px;
-		text-align: justify;
+		// text-align: justify;
 	}
 }
+
 .map-block {
 	.wp-block-media-text__media {
 		width: 100%;
@@ -80,15 +89,18 @@
 		height: 50px;
 		margin: 0;
 	}
+
 	.column {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 20px;
 	}
 }
+
 .icons-grid-content {
 	width: 80%;
 }
+
 body.logged-in {
 	.category-nav {
 		top: 99px;

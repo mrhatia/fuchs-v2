@@ -810,9 +810,22 @@
 	align-items: center;
 	gap: 10px;
 
+	button {
+		font-size: var(--fc_font_size_16);
+		padding: 0;
+		border: none;
+		height: auto;
+		margin: 0;
+
+		&:hover {
+			background-color: transparent;
+			color: rgb(200, 200, 200);
+		}
+	}
+
 	svg {
-		width: 17px;
-		height: 17px;
+		width: 30px;
+		height: 30px;
 		margin: 0;
 	}
 }

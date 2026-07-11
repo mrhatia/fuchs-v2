@@ -557,8 +557,10 @@ jQuery( function() {
 				{
 					breakpoint: 768,
 					settings: {
-						  adaptiveHeight: true,
+						adaptiveHeight: true,
 						slidesToShow: 1,
+						arrows: false,
+						dots: true,
 					},
 				},
 			],

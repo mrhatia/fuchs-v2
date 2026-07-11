@@ -175,7 +175,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 		&.content-main {
 			display: flex;
 			align-items: center;
-			padding: 50px;
+			padding: var(--fc_space_50);
 
 			.heading-4 {
 				font-size: var(--fc_font_size_38);
@@ -296,7 +296,7 @@ section:has(.feature-block.variation):not(:has(section .feature-block.variation)
 
 .item.content-main {
 	.content {
-		padding: 30px;
+		padding: var(--fc_space_30);
 		box-sizing: border-box;
 		text-align: center;
 	}

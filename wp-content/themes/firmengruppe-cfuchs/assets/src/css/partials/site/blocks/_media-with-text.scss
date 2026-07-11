@@ -64,7 +64,6 @@
 		min-height: 711px;
 		aspect-ratio: 1278/711;
 	}
-
 }
 
 .media-with-text {
@@ -74,6 +73,13 @@
 	&.variation {
 		.media-with-text-image {
 			margin-left: auto;
+
+			video {
+				margin-bottom: 0;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
 		}
 
 		.media-with-text-content-box {

@@ -201,7 +201,10 @@
 	p {
 		font-size: var(--fc_font_size_20);
 		@include font(sour, reg);
-		margin: 0;
+
+		&:last-child {
+			margin: 0;
+		}
 	}
 }
 

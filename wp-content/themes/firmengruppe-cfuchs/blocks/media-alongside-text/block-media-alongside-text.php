@@ -22,13 +22,18 @@ BaseTheme::block(
 		$bst_var_blk_mat_button        = $bst_block_fields['bst_var_blk_mat_button'] ?? null;
 		$bst_var_blk_mat_image        = $bst_block_fields['bst_var_blk_mat_image'] ?? null;
 		$bst_var_blk_mat_image_two        = $bst_block_fields['bst_var_blk_mat_image_two'] ?? null;
+
+		$bst_var_blk_mat_video        = $bst_block_fields['bst_var_blk_mat_video'] ?? null;
+		$bst_var_blk_mat_video_two        = $bst_block_fields['bst_var_blk_mat_video_two'] ?? null;
 		$bst_var_blk_mat_img_location = $bst_block_fields['bst_var_blk_mat_img_position'] ?? null;
+		$bst_var_blk_mat_media_type = $bst_block_fields['bst_var_blk_mat_media_type'] ?? null;
+
 
 		?>
 
 		<?php if($bst_var_blk_mat_design_variation === "regular"){
 			$bst_var_blk_mat_img_location        = ("left" == $bst_var_blk_mat_img_location) ? " image-at-left " : " image-at-right ";
-			$bst_var_blk_mat_has_two_images        = ($bst_var_blk_mat_image_two) ? " iat-two-image " : "";
+			$bst_var_blk_mat_has_two_images        = ($bst_var_blk_mat_image_two || $bst_var_blk_mat_video_two ) ? " iat-two-image " : "";
 
 			?>
 			<section>
@@ -50,18 +55,37 @@ BaseTheme::block(
 								<?php echo BaseTheme::button( $bst_var_blk_mat_button, 'button orange-button' ); ?>
 							<?php } ?>
 						</div>
-						<div class="iat-image column">
-							<?php if ( $bst_var_blk_mat_image ) { ?>
-								<div class="iat-single-image image-cover">
-									<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
-								</div>
-							<?php } ?>
-							<?php if ( $bst_var_blk_mat_image_two ) { ?>
-								<div class="iat-single-image image-cover">
-									<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image_two, 1000 ); ?>
-								</div>
-							<?php } ?>
-						</div>
+						<?php if($bst_var_blk_mat_media_type === "video") { ?>
+							<div class="iat-image column">
+								<?php if ( $bst_var_blk_mat_video ) { ?>
+									<div class="iat-single-image image-cover">
+										<video autoplay muted loop playsinline>
+											<source src="<?php echo esc_url( $bst_var_blk_mat_video ); ?>" type="video/mp4">
+										</video>
+									</div>
+								<?php } ?>
+								<?php if ( $bst_var_blk_mat_video_two ) { ?>
+									<div class="iat-single-image image-cover">
+										<video autoplay muted loop playsinline>
+											<source src="<?php echo esc_url( $bst_var_blk_mat_video_two ); ?>" type="video/mp4">
+										</video>
+									</div>
+								<?php } ?>
+							</div>
+						<?php } else { ?>
+							<div class="iat-image column">
+								<?php if ( $bst_var_blk_mat_image ) { ?>
+									<div class="iat-single-image image-cover">
+										<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
+									</div>
+								<?php } ?>
+								<?php if ( $bst_var_blk_mat_image_two ) { ?>
+									<div class="iat-single-image image-cover">
+										<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image_two, 1000 ); ?>
+									</div>
+								<?php } ?>
+							</div>
+						<?php } ?>
 					</div>
 				</div>
 			</section>
@@ -71,11 +95,18 @@ BaseTheme::block(
 			<section class="ctn-full-width">
 				<div class="wrapper">
 					<div class="media-with-text <?php echo $bst_var_blk_mat_img_location; ?>">
-
-						<?php if ( $bst_var_blk_mat_image ) { ?>
+						<?php if($bst_var_blk_mat_media_type === "video") { ?>
 							<div class="media-with-text-image image-cover">
-								<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
+								<video autoplay muted loop playsinline>
+									<source src="<?php echo esc_url( $bst_var_blk_mat_video ); ?>" type="video/mp4">
+								</video>
 							</div>
+						<?php } else { ?>
+							<?php if ( $bst_var_blk_mat_image ) { ?>
+								<div class="media-with-text-image image-cover">
+									<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
+								</div>
+							<?php } ?>
 						<?php } ?>
 						<div class="media-with-text-content-box iat-image-appear">
 							<?php if ( $bst_var_blk_mat_kicker ) {  ?>
@@ -101,10 +132,20 @@ BaseTheme::block(
 			<section class="ctn-full-width">
 				<div class="wrapper">
 					<div class="applicants-questions">
-						<?php if ( $bst_var_blk_mat_image ) { ?>
+
+
+						<?php if($bst_var_blk_mat_media_type === "video") { ?>
 							<div class="applicants-image image-cover">
-								<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
+								<video autoplay muted loop playsinline>
+									<source src="<?php echo esc_url( $bst_var_blk_mat_video ); ?>" type="video/mp4">
+								</video>
 							</div>
+						<?php } else { ?>
+							<?php if ( $bst_var_blk_mat_image ) { ?>
+								<div class="applicants-image image-cover">
+									<?php BaseTheme::the_attachment_image( $bst_var_blk_mat_image, 1000 ); ?>
+								</div>
+							<?php } ?>
 						<?php } ?>
 						<div class="applicants-content">
 							<?php if ( $bst_var_blk_mat_kicker ) {  ?>

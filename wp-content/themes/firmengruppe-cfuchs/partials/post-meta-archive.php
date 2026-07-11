@@ -15,24 +15,19 @@ list($bst_var_author_avatar,$bst_var_author_name) = BaseTheme::get_author_data( 
 // Post Tags & Categories.
 $bst_var_post_tag = get_the_tags( get_the_ID() );
 
+$bst_var_post_single_date_visibility = $bst_fields['bst_var_post_single_date_visibility'] ?? null;
 
-
-
-$bst_var_post_archive_date_visibility = $bst_fields['bst_var_post_archive_date_visibility'] ?? null;
-
-$is_date_disabled = ! empty( $bst_var_post_archive_date_visibility[0] ) && 'disable' === $bst_var_post_archive_date_visibility[0];
-
+$is_date_disabled = ! empty( $bst_var_post_single_date_visibility[0] ) && 'disable' === $bst_var_post_single_date_visibility[0];
 
 ?>
 
 
 <div class="post-box-meta news-meta-archive">
 
-				<?php if ( ! $is_date_disabled ){ ?>
-
-		<div class="post-date">
-			<?php echo strtolower( get_the_date('j. F. Y') ); ?>
-		</div>
+		<?php if ( ! $is_date_disabled ){ ?>
+			<div class="post-date">
+				<?php echo strtolower( get_the_date('j. F. Y') ); ?> /
+			</div>
 		<?php } ?>
 
 <?php
@@ -47,7 +42,7 @@ $is_date_disabled = ! empty( $bst_var_post_archive_date_visibility[0] ) && 'disa
 					if($category->name == 'Uncategorized') {
 						continue;
 					}
-					echo ' / <span>' . esc_html( $category->name ) . '</span>';
+					echo '<span>' . esc_html( $category->name ) . '</span>';
 				}
 			?>
 		</div>

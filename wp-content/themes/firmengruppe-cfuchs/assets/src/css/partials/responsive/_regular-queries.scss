@@ -1,4 +1,32 @@
 @media only screen and (max-width: 747px) {
+
+
+
+	.faq-head {
+		flex-wrap: wrap;
+		gap: 10px;
+
+		.faq-number {
+			width: 30px;
+		}
+
+		h3.heading-5 {
+			width: 80%;
+		}
+	}
+
+	.only-one-faq-style {
+		.faq-head {
+
+			.faq-number {
+				width: 0;
+				display: none;
+			}
+
+
+		}
+	}
+
 	.top-bar.center-align {
 		text-align: left;
 	}
@@ -53,6 +81,10 @@
 		.post-shares a {
 			margin: 0 8px 0 0;
 		}
+	}
+
+	.testimonial-variation.swiper .swiper-pagination .swiper-pagination-bullet {
+		background-color: var(--fc_white);
 	}
 
 	// footer section styling
@@ -153,6 +185,12 @@
 // }
 
 @media only screen and (max-width: 577px) {
+
+	.blog-slider-image-slider {
+		width: calc(100vw - 30px);
+		left: -15px;
+	}
+
 	.icons-grid {
 		.four-columns {
 			row-gap: 35px;
@@ -170,20 +208,45 @@
 			font-size: 52px;
 		}
 
+
 		.hero-split-text {
 			position: absolute;
 			left: 5%;
-			top: -35px;
+			top: -22px;
 			width: 100%;
 			opacity: 0.4;
-			word-break: break-all;
+			/* word-break: break-all; */
 			line-height: 1;
-			font-size: 60px;
+			font-size: 50px;
 		}
+	}
+
+	.single-service.service-detail-single .faq-head .heading-5,
+	.single-service.service-detail-single .faq-head .faq-number {
+		line-height: 1.25;
+		word-break: break-all;
 	}
 }
 
 @media only screen and (max-width: 480px) {
+	.blog-sub-page.hero-inner-slider .banner-content {
+
+		position: initial;
+
+		padding: 115px 0 40px;
+
+		h1,
+		.heading-2 {
+			font-size: 36px;
+			word-break: break-word;
+		}
+	}
+
+
+	#breadcrumbs span {
+		font-size: 14px;
+	}
+
 	.single-widget.d-flex.flex-column {
 		h4 {
 			font-size: 14px;

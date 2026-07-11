@@ -132,7 +132,7 @@ BaseTheme::block(
 							loop: true,
 							slidesPerView: 1,
 							speed: 1000,
-							autoHeight: false,
+							autoHeight: true,
 							// autoplay: {
 							// 	delay: 7000,
 							// 	disableOnInteraction: false
@@ -148,7 +148,13 @@ BaseTheme::block(
 								slideChangeTransitionEnd() {
 									updateHeight(this);
 								}
+							},
+							breakpoints: {
+								748: {
+									autoHeight: false
+								}
 							}
+
 						});
 					}
 

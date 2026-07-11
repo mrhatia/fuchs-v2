@@ -408,6 +408,7 @@ Mixin for transition
   --fc_space_30: clamp(24 * 1px, 6 / 806 * (100vw - 474 * 1px) + 24 * 1px, 30 * 1px);
   --fc_space_36: clamp(30 * 1px, 6 / 806 * (100vw - 474 * 1px) + 30 * 1px, 36 * 1px);
   --fc_space_48: clamp(36 * 1px, 12 / 806 * (100vw - 474 * 1px) + 36 * 1px, 48 * 1px);
+  --fc_space_50: clamp(25 * 1px, 25 / 806 * (100vw - 474 * 1px) + 25 * 1px, 50 * 1px);
   --fc_space_58: clamp(40 * 1px, 18 / 806 * (100vw - 474 * 1px) + 40 * 1px, 58 * 1px);
   --fc_space_72: clamp(44 * 1px, 28 / 806 * (100vw - 474 * 1px) + 44 * 1px, 72 * 1px);
   --fc_space_96: clamp(52 * 1px, 44 / 806 * (100vw - 474 * 1px) + 52 * 1px, 96 * 1px);
@@ -4885,7 +4886,8 @@ Mixin for transition
   font-size: 12px;
 }
 .acf-block-preview .image-alongside-text h2 {
-  font-size: var(--fc_font_size_60);
+  font-size: var(--fc_font_size_48);
+  word-break: break-word;
 }
 .acf-block-preview .image-alongside-text .iat-image img {
   width: 100%;
@@ -4906,6 +4908,13 @@ Mixin for transition
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+.acf-block-preview .iat-two-image .iat-image video {
+  margin-bottom: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .acf-block-preview .iat-two-image .iat-image::before, .acf-block-preview .iat-two-image .iat-image::after {
   display: none;
@@ -4975,14 +4984,15 @@ Mixin for transition
   justify-content: center;
 }
 .acf-block-preview #pieText .panel {
+  border: 1px solid #e8e8e9;
+  border-bottom: 3px solid var(--fc_white);
   background-color: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 100% !important;
   height: 60%;
-  border-radius: 7px;
   box-sizing: border-box;
-  padding: 30px 20px;
+  padding: 30px 35px;
   float: left;
   transition: height 0.7s ease, padding 0.7s ease;
   perspective: 650px;
@@ -5221,6 +5231,13 @@ Mixin for transition
 .acf-block-preview .single-image .iat-single-image {
   width: 100% !important;
 }
+.acf-block-preview .single-image .iat-single-image video {
+  margin-bottom: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (max-width: 767px) {
   .acf-block-preview .chart-center {
     width: 100px;
@@ -5229,7 +5246,7 @@ Mixin for transition
   .acf-block-preview .pie-container {
     padding: 0 !important;
     width: 90%;
-    margin: 0 auto;
+    margin: 30px auto 0;
   }
   .acf-block-preview #pieChart {
     width: 100%;
@@ -5453,6 +5470,8 @@ Mixin for transition
   font-family: "Source Sans 3", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.acf-block-preview .testimonial-single-content p:last-child {
   margin: 0;
 }
 .acf-block-preview .testimonial-slider {
@@ -5790,7 +5809,7 @@ Mixin for transition
 .acf-block-preview .company-value-chart .item.content-main {
   display: flex;
   align-items: center;
-  padding: 50px;
+  padding: var(--fc_space_50);
 }
 .acf-block-preview .company-value-chart .item.content-main .heading-4 {
   font-size: var(--fc_font_size_38);
@@ -5885,7 +5904,7 @@ Mixin for transition
      object-fit: cover;
 }
 .acf-block-preview .item.content-main .content {
-  padding: 30px;
+  padding: var(--fc_space_30);
   box-sizing: border-box;
   text-align: center;
 }
@@ -6175,6 +6194,13 @@ Mixin for transition
 .acf-block-preview .media-with-text.variation .media-with-text-image {
   margin-left: auto;
 }
+.acf-block-preview .media-with-text.variation .media-with-text-image video {
+  margin-bottom: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .acf-block-preview .media-with-text.variation .media-with-text-content-box {
   right: auto;
   left: 15.9%;
@@ -6248,6 +6274,13 @@ Mixin for transition
 }
 .acf-block-preview .applicants-image {
   width: 60.3%;
+}
+.acf-block-preview .applicants-image video {
+  margin-bottom: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .acf-block-preview .applicants-content {
   width: 38%;
@@ -6326,7 +6359,6 @@ Mixin for transition
 }
 .acf-block-preview .highlight-quote p {
   font-size: 18px;
-  text-align: justify;
 }
 .acf-block-preview .map-block .wp-block-media-text__media {
   width: 100%;
@@ -8509,6 +8541,27 @@ Mixin for transition
 .acf-block-preview {
   /* Responsive */
 }
+@media only screen and (min-width: 1600px) and (max-width: 1690px) {
+  .acf-block-preview .company-value-chart .item.content-main {
+    padding: 40px;
+  }
+}
+@media only screen and (min-width: 1520px) and (max-width: 1599px) {
+  .acf-block-preview .company-value-chart .item.content-main {
+    padding: 30px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main .heading-4 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1519px) {
+  .acf-block-preview .company-value-chart .item.content-main {
+    padding: 25px;
+  }
+  .acf-block-preview .company-value-chart .item.content-main .heading-4 {
+    font-size: 35px;
+  }
+}
 @media only screen and (min-width: 1300px) and (max-width: 1440px) {
   .acf-block-preview .blog-subposts {
     gap: 20px;
@@ -8940,10 +8993,10 @@ Mixin for transition
     gap: 10px;
   }
   .acf-block-preview .blog-sub-page .hero-slide-item {
-    min-height: 365px;
+    min-height: 300px;
   }
   .acf-block-preview .blog-sub-page .hero-slide-item .banner-content-inner {
-    top: -10px !important;
+    top: 5px !important;
   }
   .acf-block-preview .blog-sub-page .heading-2 {
     top: 0 !important;
@@ -9099,10 +9152,13 @@ Mixin for transition
     min-height: 130px;
   }
   .acf-block-preview .stats-column .stats-number {
-    font-size: 60px;
+    font-size: 50px;
   }
   .acf-block-preview .stats-column span {
-    font-size: 35px;
+    font-size: 20px;
+  }
+  .acf-block-preview .stats-column .small-text {
+    font-size: 12px;
   }
   .acf-block-preview .stats-variation .stats-column {
     width: 100%;
@@ -9125,19 +9181,18 @@ Mixin for transition
     width: 100%;
   }
   .acf-block-preview .stats-items {
-    row-gap: 130px;
+    row-gap: 90px;
   }
   .acf-block-preview .counter-background {
-    left: calc(50% - 150px);
-    font-size: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 120px;
+    bottom: -25px;
   }
   .acf-block-preview .stats-column {
     width: 100%;
     justify-content: center;
     gap: 15px;
-  }
-  .acf-block-preview .faq-head {
-    gap: 20px;
   }
   .acf-block-preview .iat-two-image .iat-image {
     gap: 20px;
@@ -9204,7 +9259,18 @@ Mixin for transition
     min-height: 374px;
   }
 }
+@media only screen and (max-width: 1003px) {
+  .acf-block-preview .blog-teaser-slider.slick-slider .slick-dots li {
+    background-color: var(--fc_white);
+  }
+  .acf-block-preview .blog-teaser-slider.slick-slider .slick-dots {
+    left: 0;
+  }
+}
 @media only screen and (min-width: 748px) and (max-width: 1003px) {
+  .acf-block-preview .faq-head {
+    gap: 20px;
+  }
   .acf-block-preview .about-us-box p:last-of-type {
     margin: 0;
   }
@@ -9368,6 +9434,16 @@ Mixin for transition
     right: 0;
     width: 100%;
   }
+  .acf-block-preview .testimonial-single-image {
+    margin-bottom: 30px;
+  }
+  .acf-block-preview .blog-single-post .blog-subpost-bottom,
+  .acf-block-preview .blog-single-post .blog-publish-date {
+    display: none !important;
+  }
+  .acf-block-preview .blog-single-post-content .blog-content-title .heading-3 {
+    font-size: 36px;
+  }
   .acf-block-preview .hero-inner-slider .banner-content .banner-content-inner,
   .acf-block-preview .hero-project .banner-content .banner-content-inner {
     position: relative;
@@ -9501,8 +9577,7 @@ Mixin for transition
     gap: 10px;
   }
   .acf-block-preview .hero-buttons .button {
-    width: 100%;
-    margin: 0;
+    margin: 0 auto !important;
   }
   .acf-block-preview .images-items.four-columns {
     display: flex;
@@ -9703,7 +9778,7 @@ Mixin for transition
     display: none;
   }
   .acf-block-preview .testimonial-variation.swiper .swiper-slide {
-    gap: 20px;
+    display: block;
   }
   .acf-block-preview .testimonial-variation.swiper .swiper-slide .testimonial-meta .testimonial-name {
     font-size: 26px;
@@ -9803,11 +9878,15 @@ Mixin for transition
   }
   .acf-block-preview .blog-teaser-slider .blog-teaser-item {
     margin-right: 0;
+    padding: 0 10px;
   }
   .acf-block-preview .blog-teaser-slider {
-    padding: 10px 0 190px 36px !important;
+    padding: 10px 0 100px 36px !important;
     width: 110%;
     margin-left: -4.7%;
+  }
+  .acf-block-preview .blog-teaser-slider .slick-track {
+    left: -30px;
   }
   .acf-block-preview .blog-teaser-item .testimonial-image-item img {
     aspect-ratio: 522/319;
@@ -9819,7 +9898,19 @@ Mixin for transition
     font-size: 18px;
   }
   .acf-block-preview .banner-content-inner .heading-2 {
-    font-size: 43px !important;
+    font-size: 36px !important;
+  }
+  .acf-block-preview .hero-inner-slider.slider-disable .banner-content h1 {
+    font-size: 35px !important;
+  }
+  .acf-block-preview .hero-inner-slider.slider-disable .banner-content {
+    padding-top: 100px;
+  }
+  .acf-block-preview .hero-inner-slider.slider-disable .banner-content .hero-split-text {
+    font-size: 54px !important;
+  }
+  .acf-block-preview .hero-inner-slider.slider-disable .banner-content .hero-buttons a.button {
+    margin: 0 !important;
   }
   .acf-block-preview .feature-block.apprentice-block .heading-2 {
     font-size: 45px;
@@ -9884,17 +9975,6 @@ Mixin for transition
   .acf-block-preview .blog-teaser-slider {
     position: relative;
   }
-  .acf-block-preview .blog-teaser-slider::before {
-    content: "";
-    position: absolute;
-    left: clamp(-2.625rem, -10.484vw + 2.27rem, -0.187rem);
-    top: 0;
-    display: block;
-    background-color: var(--fc_green_dark);
-    width: 10.7%;
-    height: 100%;
-    z-index: 2;
-  }
   .acf-block-preview .faq-image-variation {
     width: 100%;
   }
@@ -9917,14 +9997,13 @@ Mixin for transition
   }
   .acf-block-preview .hero-inner-slider .hero-split-text,
   .acf-block-preview .hero-project .hero-split-text {
-    top: -50px;
+    top: -44px;
     left: -1%;
     font-size: 62px;
   }
   .acf-block-preview .hero-inner-slider .banner-content h1,
   .acf-block-preview .hero-project .banner-content h1 {
     top: 0px;
-    font-size: 48px;
   }
   .acf-block-preview .hero-inner-slider .banner-content p,
   .acf-block-preview .hero-project .banner-content p {

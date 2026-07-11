@@ -109,6 +109,7 @@ BaseTheme::block(
 
 	.mobile-tabs{
 		display:flex;
+		width:100vh;
 	}
 
 	#pieText{
