@@ -101,34 +101,43 @@ jQuery(function () {
 	   FILTERS
 	====================== */
 	jQuery(document).on('click', '.categories-select-item', function () {
-		currentCategory = jQuery(this).data('value') || '';
-		currentPage = 1;
-		jQuery('.categories-select-item').removeClass('active');
-		jQuery(this).addClass('active');
-		updateURL();
-		toggleSectionVisibility();
-		fetchJobs(true);
-	});
+	const selectedValue = jQuery(this).data('value');
 
-	jQuery(document).on('click', '.regions-select-item', function () {
-		currentRegion = jQuery(this).data('value') || '';
-		currentPage = 1;
-		jQuery('.regions-select-item').removeClass('active');
-		jQuery(this).addClass('active');
-		updateURL();
-		toggleSectionVisibility();
-		fetchJobs(true);
-	});
+	currentCategory = selectedValue === 'all' ? '' : selectedValue;
+	currentPage = 1;
 
-	jQuery(document).on('click', '.status-select-item', function () {
-		currentStatus = jQuery(this).data('value') || '';
-		currentPage = 1;
-		jQuery('.status-select-item').removeClass('active');
-		jQuery(this).addClass('active');
-		updateURL();
-		toggleSectionVisibility();
-		fetchJobs(true);
-	});
+	jQuery('.categories-select-item').removeClass('active');
+	jQuery(this).addClass('active');
+
+	updateURL();
+	fetchJobs(true);
+});
+
+jQuery(document).on('click', '.regions-select-item', function () {
+	const selectedValue = jQuery(this).data('value');
+
+	currentRegion = selectedValue === 'all' ? '' : selectedValue;
+	currentPage = 1;
+
+	jQuery('.regions-select-item').removeClass('active');
+	jQuery(this).addClass('active');
+
+	updateURL();
+	fetchJobs(true);
+});
+
+jQuery(document).on('click', '.status-select-item', function () {
+	const selectedValue = jQuery(this).data('value');
+
+	currentStatus = selectedValue === 'all' ? '' : selectedValue;
+	currentPage = 1;
+
+	jQuery('.status-select-item').removeClass('active');
+	jQuery(this).addClass('active');
+
+	updateURL();
+	fetchJobs(true);
+});
 
 	jQuery('#filter').on('submit', function (e) {
 		e.preventDefault();

@@ -59,7 +59,7 @@ BaseTheme::block(
 											?>
 											<?php if($cat_column_one_option['clear_button_label']){ ?>
 												<li class="pill select-dropdown__checkbox select-sort-item categories-select-item active"
-													data-value="">
+													data-value="all">
 													<div class="select-inner-title"><?php echo html_entity_decode($cat_column_one_option['clear_button_label']); ?></div>
 												</li>
 											<?php } ?>
@@ -107,7 +107,7 @@ BaseTheme::block(
 											?>
 												<?php if($cat_column_two_option['clear_button_label']){ ?>
 													<li class="pill select-dropdown__checkbox select-sort-item regions-select-item active"
-														data-value="">
+														data-value="all">
 														<div class="select-inner-title"><?php echo html_entity_decode($cat_column_two_option['clear_button_label']); ?></div>
 													</li>
 												<?php } ?>
@@ -153,7 +153,7 @@ BaseTheme::block(
 											?>
 											<?php if($cat_column_three_option['clear_button_label']){ ?>
 												<li class="pill select-dropdown__checkbox select-sort-item status-select-item active"
-													data-value="">
+													data-value="all">
 													<div class="select-inner-title"><?php echo html_entity_decode($cat_column_three_option['clear_button_label']); ?></div>
 												</li>
 											<?php } ?>
