@@ -4466,6 +4466,9 @@ header {
 .hero-home.slides .slide:nth-child(3n+2) .bottom-section .slide-tagline {
   color: var(--fc_color_primary);
 }
+.hero-home.slides .slide:nth-child(3n+2) .bottom-section h4 {
+  color: var(--fc_color_primary);
+}
 .hero-home.slides .slide:nth-child(3n+2) .home-hero-slide::before {
   background-color: var(--fc_white);
   left: auto;
@@ -6335,7 +6338,7 @@ body #daextlwcnf-cookie-settings-button-2:hover {
   background-color: white;
   z-index: -1;
 }
-body:not(.page-template-template-einblicke) .main-section {
+body:not(.page-template-template-einblicke, .page-template-template-references) .main-section {
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -7889,6 +7892,8 @@ body:not(.page-template-template-einblicke) .main-section {
   border: none;
   height: auto;
   margin: 0;
+  font-weight: 400;
+  margin-top: 5px;
 }
 .blog-like button:hover {
   background-color: transparent;
@@ -10372,6 +10377,9 @@ body.logged-in .category-nav {
 .blog-teaser-slider .blog-teaser-item {
   margin-right: 20px;
 }
+.blog-teaser-slider .blog-teaser-item .testimonial-image-item {
+  margin-bottom: 30px;
+}
 .blog-teaser-slider .blog-teaser-item h2,
 .blog-teaser-slider .blog-teaser-item p {
   color: var(--fc_white);
@@ -10380,7 +10388,7 @@ body.logged-in .category-nav {
   width: 90%;
 }
 .blog-teaser-slider .blog-teaser-item h2 {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .blog-teaser-slider .blog-teaser-item h2 a {
   color: inherit;
@@ -11191,7 +11199,7 @@ section:has(.blog-teaser-slider):not(:has(section .blog-teaser-slider)) {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.55s ease-in-out;
   opacity: 1;
@@ -11678,11 +11686,19 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   .testimonial-item-content {
     width: 100%;
   }
+  .blog-subposts .blog-subpost {
+    max-width: 100%;
+  }
+  .testimonial-variation .swiper-wrapper .swiper-slide {
+    height: 0 !important;
+  }
+  .testimonial-variation .swiper-wrapper .swiper-slide.swiper-slide-active {
+    height: auto !important;
+  }
 }
 @media only screen and (max-width: 577px) {
   .blog-slider-image-slider {
-    width: calc(100vw - 30px);
-    left: -15px;
+    width: 100%;
   }
   .icons-grid .four-columns {
     row-gap: 35px;
@@ -12352,10 +12368,10 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     min-height: 130px;
   }
   .stats-column .stats-number {
-    font-size: 50px;
+    font-size: 38px;
   }
   .stats-column span {
-    font-size: 20px;
+    font-size: 16px;
   }
   .stats-column .small-text {
     font-size: 12px;
@@ -12381,12 +12397,12 @@ body.shrink .single-service-hero-section .service-logo.left-side {
     width: 100%;
   }
   .stats-items {
-    row-gap: 90px;
+    row-gap: 70px;
   }
   .counter-background {
     left: 50%;
     transform: translateX(-50%);
-    font-size: 120px;
+    font-size: 80px;
     bottom: -25px;
   }
   .stats-column {
@@ -12666,9 +12682,6 @@ body.shrink .single-service-hero-section .service-logo.left-side {
   }
   .cfuchs-tl-node[data-type=secondary] .cfuchs-tl-label {
     top: calc(50% + 16px) !important;
-  }
-  .cfuchs-tl-node[data-type=main] .cfuchs-tl-label {
-    top: -49px !important;
   }
   .cfuchs-tl-node[data-type=secondary] .cfuchs-tl-year {
     margin-top: -43px !important;
@@ -13395,6 +13408,15 @@ body.shrink .single-service-hero-section .service-logo.left-side {
 @media (max-width: 747px) {
   .faq-head.active {
     padding: 30px 70px 25px 0;
+  }
+  .only-one-faq-style .faq-head.active {
+    padding: 30px 55px 25px 20px;
+  }
+  .only-one-faq-style .faq-content {
+    padding: 0 20px 30px;
+  }
+  .only-one-faq-style .faq-content p {
+    margin-bottom: 20px;
   }
   .section-head-simple .shd-text h2 {
     font-size: 42px;

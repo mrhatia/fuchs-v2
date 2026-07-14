@@ -832,11 +832,11 @@
 	}
 
 	.stats-column .stats-number {
-		font-size: 50px;
+		font-size: 38px;
 	}
 
 	.stats-column span {
-		font-size: 20px;
+		font-size: 16px;
 	}
 
 	.stats-column .small-text {
@@ -869,13 +869,13 @@
 	}
 
 	.stats-items {
-		row-gap: 90px;
+		row-gap: 70px;
 	}
 
 	.counter-background {
 		left: 50%;
 		transform: translateX(-50%);
-		font-size: 120px;
+		font-size: 80px;
 		bottom: -25px;
 	}
 
@@ -1265,10 +1265,6 @@
 
 	.cfuchs-tl-node[data-type="secondary"] .cfuchs-tl-label {
 		top: calc(50% + 16px) !important;
-	}
-
-	.cfuchs-tl-node[data-type="main"] .cfuchs-tl-label {
-		top: -49px !important;
 	}
 
 	.cfuchs-tl-node[data-type="secondary"] .cfuchs-tl-year {
@@ -2295,6 +2291,23 @@
 	.faq-head.active {
 		padding: 30px 70px 25px 0;
 	}
+
+	.only-one-faq-style {
+
+		.faq-head.active {
+			padding: 30px 55px 25px 20px;
+		}
+
+		.faq-content {
+			padding: 0 20px 30px;
+
+			p {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+
 
 	.section-head-simple {
 		.shd-text {

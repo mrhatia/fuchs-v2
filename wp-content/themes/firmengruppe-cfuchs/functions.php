@@ -151,3 +151,16 @@ add_action('wp_enqueue_scripts', 'fuchs_enqueue_ajax_scripts');
 
 
 
+/**
+ * Remove the title attribute from WordPress attachment images.
+ */
+function mytheme_remove_image_title_attribute( $attr ) {
+	unset( $attr['title'] );
+
+	return $attr;
+}
+
+add_filter(
+	'wp_get_attachment_image_attributes',
+	'mytheme_remove_image_title_attribute'
+);

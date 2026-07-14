@@ -3161,7 +3161,7 @@ Mixin for transition
   background-color: white;
   z-index: -1;
 }
-.acf-block-preview body:not(.page-template-template-einblicke) .main-section {
+.acf-block-preview body:not(.page-template-template-einblicke, .page-template-template-references) .main-section {
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -6445,6 +6445,9 @@ Mixin for transition
 .acf-block-preview .blog-teaser-slider .blog-teaser-item {
   margin-right: 20px;
 }
+.acf-block-preview .blog-teaser-slider .blog-teaser-item .testimonial-image-item {
+  margin-bottom: 30px;
+}
 .acf-block-preview .blog-teaser-slider .blog-teaser-item h2,
 .acf-block-preview .blog-teaser-slider .blog-teaser-item p {
   color: var(--fc_white);
@@ -6453,7 +6456,7 @@ Mixin for transition
   width: 90%;
 }
 .acf-block-preview .blog-teaser-slider .blog-teaser-item h2 {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .acf-block-preview .blog-teaser-slider .blog-teaser-item h2 a {
   color: inherit;
@@ -7274,7 +7277,7 @@ Mixin for transition
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.55s ease-in-out;
   opacity: 1;
@@ -9152,10 +9155,10 @@ Mixin for transition
     min-height: 130px;
   }
   .acf-block-preview .stats-column .stats-number {
-    font-size: 50px;
+    font-size: 38px;
   }
   .acf-block-preview .stats-column span {
-    font-size: 20px;
+    font-size: 16px;
   }
   .acf-block-preview .stats-column .small-text {
     font-size: 12px;
@@ -9181,12 +9184,12 @@ Mixin for transition
     width: 100%;
   }
   .acf-block-preview .stats-items {
-    row-gap: 90px;
+    row-gap: 70px;
   }
   .acf-block-preview .counter-background {
     left: 50%;
     transform: translateX(-50%);
-    font-size: 120px;
+    font-size: 80px;
     bottom: -25px;
   }
   .acf-block-preview .stats-column {
@@ -9466,9 +9469,6 @@ Mixin for transition
   }
   .acf-block-preview .cfuchs-tl-node[data-type=secondary] .cfuchs-tl-label {
     top: calc(50% + 16px) !important;
-  }
-  .acf-block-preview .cfuchs-tl-node[data-type=main] .cfuchs-tl-label {
-    top: -49px !important;
   }
   .acf-block-preview .cfuchs-tl-node[data-type=secondary] .cfuchs-tl-year {
     margin-top: -43px !important;
@@ -10195,6 +10195,15 @@ Mixin for transition
 @media (max-width: 747px) {
   .acf-block-preview .faq-head.active {
     padding: 30px 70px 25px 0;
+  }
+  .acf-block-preview .only-one-faq-style .faq-head.active {
+    padding: 30px 55px 25px 20px;
+  }
+  .acf-block-preview .only-one-faq-style .faq-content {
+    padding: 0 20px 30px;
+  }
+  .acf-block-preview .only-one-faq-style .faq-content p {
+    margin-bottom: 20px;
   }
   .acf-block-preview .section-head-simple .shd-text h2 {
     font-size: 42px;

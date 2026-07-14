@@ -75,6 +75,10 @@
 	.blog-teaser-item {
 		margin-right: 20px;
 
+		.testimonial-image-item {
+			margin-bottom: 30px;
+		}
+
 		h2,
 		p {
 			color: var(--fc_white);
@@ -85,7 +89,7 @@
 		}
 
 		h2 {
-			margin-top: 30px;
+			margin-top: 10px;
 
 			a {
 				color: inherit;

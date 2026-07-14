@@ -1034,7 +1034,7 @@ body {
 	z-index: -1;
 }
 
-body:not(.page-template-template-einblicke) .main-section {
+body:not(.page-template-template-einblicke, .page-template-template-references) .main-section {
 	overflow-x: hidden;
 	overflow-y: visible;
 }

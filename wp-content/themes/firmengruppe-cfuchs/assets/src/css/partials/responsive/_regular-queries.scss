@@ -170,6 +170,25 @@
 	.testimonial-item-content {
 		width: 100%;
 	}
+
+	.blog-subposts .blog-subpost {
+		max-width: 100%;
+	}
+
+
+	.testimonial-variation .swiper-wrapper {
+
+
+		.swiper-slide {
+			height: 0 !important;
+		}
+
+		.swiper-slide.swiper-slide-active {
+			height: auto !important;
+		}
+	}
+
+
 }
 
 // @media only screen and (max-height: 747px) {
@@ -187,9 +206,10 @@
 @media only screen and (max-width: 577px) {
 
 	.blog-slider-image-slider {
-		width: calc(100vw - 30px);
-		left: -15px;
+		width: 100%;
 	}
+
+
 
 	.icons-grid {
 		.four-columns {

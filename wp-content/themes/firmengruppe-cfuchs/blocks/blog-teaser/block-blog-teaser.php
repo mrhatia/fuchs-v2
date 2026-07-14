@@ -39,6 +39,7 @@ BaseTheme::block(
 						<?php foreach( $bst_var_blk_bltsr_blog_posts as $key =>  $post_id ){
 									list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults($post_id);
 										$terms = get_the_terms( $bst_var_post_id, 'category' );
+										$bst_var_osngl_kicker = $bst_fields['bst_var_osngl_kicker'] ?? null;
 								?>
 
 								<div class="blog-teaser-item">
@@ -55,6 +56,11 @@ BaseTheme::block(
 										?>
 									</div>
 									<div class="testimonial-content-item">
+										<?php if($bst_var_osngl_kicker){ ?>
+											<div class="kicker">
+												<?php echo html_entity_decode( $bst_var_osngl_kicker ); ?>
+											</div>
+										<?php } ?>
 										<h2 class="heading-3"><a href="<?php the_permalink($bst_var_post_id); ?>"><?php echo get_the_title($bst_var_post_id); ?></a> </h2>
 										<?php if(has_excerpt($bst_var_post_id)){ ?>
 											<p><?php echo html_entity_decode(get_the_excerpt($bst_var_post_id)) ?></p>
@@ -111,6 +117,7 @@ BaseTheme::block(
 							if ( $bst_query->have_posts() ) :
 								while ( $bst_query->have_posts() ) : $bst_query->the_post();
 								list( $bst_var_post_id, $bst_fields, $bst_option_fields ) = BaseTheme::defaults();
+								$bst_var_osngl_kicker = $bst_fields['bst_var_osngl_kicker'] ?? null;
 
 								?>
 									<div class="blog-teaser-item">
@@ -127,6 +134,11 @@ BaseTheme::block(
 											?>
 										</div>
 										<div class="testimonial-content-item">
+											<?php if($bst_var_osngl_kicker){ ?>
+												<div class="kicker">
+													<?php echo html_entity_decode( $bst_var_osngl_kicker ); ?>
+												</div>
+											<?php } ?>
 											<h2 class="heading-3"><a href="<?php the_permalink($bst_var_post_id); ?>"><?php echo get_the_title($bst_var_post_id); ?></a> </h2>
 											<?php if(has_excerpt($bst_var_post_id)){ ?>
 												<p><?php echo html_entity_decode(get_the_excerpt($bst_var_post_id)) ?></p>

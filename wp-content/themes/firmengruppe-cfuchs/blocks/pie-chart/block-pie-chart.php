@@ -56,6 +56,20 @@ BaseTheme::block(
 							</div>
 						</div>
 					</div>
+
+					<?php if ( $fh_var_blk_pie_chart_tabs ) : ?>
+						<div class="mobile-dots" aria-label="Panel navigation">
+							<?php foreach ( $fh_var_blk_pie_chart_tabs as $index => $item ) : ?>
+								<button
+									type="button"
+									class="mobile-dot <?php echo 0 === $index ? 'active' : ''; ?>"
+									data-index="<?php echo esc_attr( $index ); ?>"
+									aria-label="<?php echo esc_attr( sprintf( 'Show panel %d', $index + 1 ) ); ?>"
+									aria-current="<?php echo 0 === $index ? 'true' : 'false'; ?>">
+								</button>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>
@@ -101,25 +115,72 @@ BaseTheme::block(
 	color:#fff;
 }
 
-@media(max-width:767px){
+.mobile-dots {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 18px;
+}
 
-	#pieChart{
-		display:none;
+.mobile-dot {
+	width: 10px;
+	height: 10px;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background-color: rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	transition: width 200ms ease, background-color 200ms ease;
+}
+
+.mobile-dot.active {
+	background-color: #e37806;
+}
+
+.mobile-dot:focus-visible {
+	outline: 2px solid #e37806;
+	outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+
+	#pieChart {
+		display: none;
 	}
 
-	.mobile-tabs{
-		display:flex;
-		width:100vh;
+	.mobile-tabs {
+		display: flex;
+		width: 100%;
+		max-width: 100%;
+		overflow-x: auto;
+		scroll-behavior: smooth;
 	}
 
-	#pieText{
-		width:100%;
-		max-width:100%;
-		flex:0 0 100%;
+	.mobile-dots {
+		display: flex;
 	}
 
-	.panel{
-		width:100%;
+	#pieText {
+		width: 100%;
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+
+	#pieText .panel {
+		width: 100%;
+		overflow: hidden;
+
+		/* Allow vertical page scrolling, but handle horizontal swipe ourselves */
+		touch-action: pan-y;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+
+	#pieText .content-wrapper {
+		transform: translateX(0);
+		opacity: 1;
+		will-change: transform, opacity;
 	}
 }
 		</style>
@@ -298,54 +359,214 @@ BaseTheme::block(
 				}
 			</script>
 
-			<script>
-				jQuery(document).ready(function(jQuery){
+		<script>
+	jQuery(document).ready(function ($) {
 
-					function updateMobileContent(index){
+		if (window.innerWidth >= 768 || !window.pieData || !window.pieData.length) {
+			return;
+		}
 
-						const item = pieData[index];
+		const mobileData = window.pieData;
+		const $panel = jQuery('#pieText .panel');
+		const $content = $panel.find('.content-wrapper');
+		const $tabs = jQuery('.mobile-tab');
+		const $dots = jQuery('.mobile-dot');
 
-						const colors = {
-							'color-white':'#e1831e',
-							'color-green':'#e37806',
-							'color-orange':'#be6200'
-						};
+		let currentIndex = 0;
+		let touchStartX = 0;
+		let touchStartY = 0;
+		let isAnimating = false;
 
-						const bgColor = colors[item.Class];
+		const swipeThreshold = 50;
 
-						jQuery('#segmentTitle')
-							.text(item.Title)
-							.css('color','#fff');
+		const colors = {
+			'color-white': '#e1831e',
+			'color-green': '#e37806',
+			'color-orange': '#be6200'
+		};
 
-						jQuery('#segmentText')
-							.text(item.Description)
-							.css('color','#fff');
+		/**
+		 * Update panel content and active tab.
+		 */
+		function updateMobileContent(index) {
 
-						if(item.Image){
-							jQuery('#segmentImage').attr('src',item.Image).show();
-						}else{
-							jQuery('#segmentImage').hide();
-						}
+			if (!mobileData[index]) {
+				return;
+			}
 
-						jQuery('.panel').css('background-color',bgColor);
-					}
+			const item = mobileData[index];
+			const bgColor = colors[item.Class] || '#e37806';
 
-					jQuery('.mobile-tab').on('click',function(){
+			jQuery('#segmentTitle')
+				.text(item.Title)
+				.css('color', '#ffffff');
 
-						const index = jQuery(this).data('index');
+			jQuery('#segmentText')
+				.text(item.Description)
+				.css('color', '#ffffff');
 
-						jQuery('.mobile-tab').removeClass('active');
-						jQuery(this).addClass('active');
+			if (item.Image) {
+				jQuery('#segmentImage')
+					.attr('src', item.Image)
+					.attr('alt', item.Title)
+					.show();
+			} else {
+				jQuery('#segmentImage')
+					.attr('src', '')
+					.attr('alt', '')
+					.hide();
+			}
 
-						updateMobileContent(index);
-					});
+			$panel.css('background-color', bgColor);
 
-					if(window.innerWidth < 768){
-						updateMobileContent(0);
-					}
+			// Update active tab.
+			$tabs.removeClass('active');
+
+			const $activeTab = $tabs.filter(
+				'[data-index="' + index + '"]'
+			);
+
+			$activeTab.addClass('active');
+
+			// Update active dot.
+			$dots
+				.removeClass('active')
+				.attr('aria-current', 'false');
+
+			$dots
+				.filter('[data-index="' + index + '"]')
+				.addClass('active')
+				.attr('aria-current', 'true');
+
+			// Automatically bring active tab into view.
+			if ($activeTab.length && $activeTab[0].scrollIntoView) {
+				$activeTab[0].scrollIntoView({
+					behavior: 'smooth',
+					block: 'nearest',
+					inline: 'center'
 				});
-			</script>
+			}
+		}
+
+		/**
+		 * Change panel with horizontal animation.
+		 *
+		 * direction:
+		 *  1 = next
+		 * -1 = previous
+		 */
+		function changeMobilePanel(newIndex, direction) {
+
+			if (
+				isAnimating ||
+				newIndex < 0 ||
+				newIndex >= mobileData.length ||
+				newIndex === currentIndex
+			) {
+				return;
+			}
+
+			isAnimating = true;
+
+			const exitPosition = direction === 1 ? '-45px' : '45px';
+			const enterPosition = direction === 1 ? '45px' : '-45px';
+
+			$content.css({
+				transition: 'transform 180ms ease, opacity 180ms ease',
+				transform: 'translateX(' + exitPosition + ')',
+				opacity: 0
+			});
+
+			window.setTimeout(function () {
+
+				currentIndex = newIndex;
+				updateMobileContent(currentIndex);
+
+				// Place new content on the opposite side.
+				$content.css({
+					transition: 'none',
+					transform: 'translateX(' + enterPosition + ')',
+					opacity: 0
+				});
+
+				// Animate the new content into position.
+				window.requestAnimationFrame(function () {
+					window.requestAnimationFrame(function () {
+
+						$content.css({
+							transition: 'transform 220ms ease, opacity 220ms ease',
+							transform: 'translateX(0)',
+							opacity: 1
+						});
+
+						window.setTimeout(function () {
+							isAnimating = false;
+						}, 220);
+					});
+				});
+
+			}, 180);
+		}
+
+		/**
+		 * Keep tab buttons and dot navigation synchronized.
+		 */
+		$tabs.add($dots).on('click', function () {
+
+			const newIndex = Number(jQuery(this).data('index'));
+
+			if (newIndex === currentIndex) {
+				return;
+			}
+
+			const direction = newIndex > currentIndex ? 1 : -1;
+
+			changeMobilePanel(newIndex, direction);
+		});
+
+		/**
+		 * Record swipe starting position.
+		 */
+		$panel.on('touchstart', function (event) {
+
+			const touch = event.originalEvent.touches[0];
+
+			touchStartX = touch.clientX;
+			touchStartY = touch.clientY;
+		});
+
+		/**
+		 * Detect swipe direction.
+		 */
+		$panel.on('touchend', function (event) {
+
+			const touch = event.originalEvent.changedTouches[0];
+
+			const distanceX = touch.clientX - touchStartX;
+			const distanceY = touch.clientY - touchStartY;
+
+			// Ignore small movements and vertical scrolling.
+			if (
+				Math.abs(distanceX) < swipeThreshold ||
+				Math.abs(distanceX) <= Math.abs(distanceY)
+			) {
+				return;
+			}
+
+			// Swipe left: next panel.
+			if (distanceX < 0) {
+				changeMobilePanel(currentIndex + 1, 1);
+			}
+
+			// Swipe right: previous panel.
+			if (distanceX > 0) {
+				changeMobilePanel(currentIndex - 1, -1);
+			}
+		});
+
+		// Initially display the first item.
+		updateMobileContent(currentIndex);
+	});
+</script>
 	<?php }
 );
-
-

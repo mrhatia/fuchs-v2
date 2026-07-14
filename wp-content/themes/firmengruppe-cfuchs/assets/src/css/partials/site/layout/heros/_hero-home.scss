@@ -15,6 +15,7 @@
 		transform: translateX(-100%);
 		transition: all 0.75s ease;
 	}
+
 	.home-hero-image {
 		position: absolute;
 		right: 0;
@@ -53,11 +54,13 @@
 	.slide {
 		&:nth-child(3n + 1) {
 			background-color: var(--fc_orange_dark);
+
 			.home-hero-slide {
 				&::before {
 					background-color: var(--fc_orange_dark);
 				}
 			}
+
 			.split-text-right {
 				.heading-1 {
 					color: var(--fc_white);
@@ -76,11 +79,17 @@
 
 		&:nth-child(3n + 2) {
 			background-color: var(--fc_white);
+
 			.bottom-section {
 				.slide-tagline {
 					color: var(--fc_color_primary);
 				}
+
+				h4 {
+					color: var(--fc_color_primary);
+				}
 			}
+
 			.home-hero-slide {
 				&::before {
 					background-color: var(--fc_white);
@@ -90,6 +99,7 @@
 					transition: all 0.75s ease;
 				}
 			}
+
 			&.active {
 				.home-hero-slide {
 					&::before {
@@ -97,6 +107,7 @@
 					}
 				}
 			}
+
 			.home-hero-slide .home-hero-image {
 				right: auto;
 				left: 0;
@@ -259,6 +270,7 @@
 		}
 
 		.bottom-section {
+
 			a,
 			a:visited {
 				span {
@@ -402,6 +414,7 @@
 }
 
 .bottom-section-button {
+
 	a,
 	a:visited {
 		padding: 0;
@@ -442,6 +455,7 @@
 
 .post-archive-box {
 	.bottom-section-button {
+
 		a,
 		a:visited {
 			span {
@@ -463,9 +477,7 @@
 	}
 }
 
-section:has(.slide.has-green-bg.active):not(
-		:has(section .slide.has-green-bg.active)
-	) {
+section:has(.slide.has-green-bg.active):not(:has(section .slide.has-green-bg.active)) {
 	.dot {
 		background-color: var(--fc_white);
 	}
@@ -477,6 +489,7 @@ section:has(.slide.has-green-bg.active):not(
 }
 
 .bottom-section {
+
 	p,
 	.slide-tagline,
 	.mkdf-ss-bottom-content,
@@ -500,18 +513,17 @@ section:has(.slide.has-green-bg.active):not(
 	}
 
 	.bottom-section {
+
 		p,
 		.slide-tagline,
 		.mkdf-ss-bottom-content,
 		.bottom-section-button {
-			animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1)
-				forwards 1.3s;
+			animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 1.3s;
 		}
 	}
 
 	.top-section {
-		animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards
-			1.3s;
+		animation: mkdfUncoverRight 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 1.3s;
 	}
 }
 
@@ -543,8 +555,7 @@ section:has(.slide.has-green-bg.active):not(
 .slide {
 	&.active {
 		.home-hero-slide-overlay {
-			animation: overlayEnter 1.3s cubic-bezier(0.85, 0, 0.15, 1) 0.2s
-				forwards;
+			animation: overlayEnter 1.3s cubic-bezier(0.85, 0, 0.15, 1) 0.2s forwards;
 		}
 	}
 
@@ -634,6 +645,7 @@ section:has(.slide.has-green-bg.active):not(
 	width: 100%;
 	height: 100%;
 }
+
 .slide.has-image.active {
 	.home-hero-slide {
 		&::before {
