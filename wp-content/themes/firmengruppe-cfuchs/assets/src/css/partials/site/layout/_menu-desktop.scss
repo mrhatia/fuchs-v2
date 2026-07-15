@@ -17,6 +17,16 @@
 	// }
 }
 
+// Preload the pattern image.
+body::before {
+	content: url("../images/default_pattern-shape.png");
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
 .header-navigation {
 	width: calc(100% - 201px);
 }
@@ -53,22 +63,41 @@
 			a,
 			a:visited,
 			span.menu-link {
-				padding: 0 0;
+				// padding: 0 0;
+				// display: block;
+				// line-height: 1;
+				// border: 0;
+				// position: relative;
+				// color: var(--fc_white);
+				// font-size: var(--fc_font_size_16);
+				// @include font(sour, sbold);
+				// letter-spacing: -0.02em;
+				// line-height: 1.33em;
+				// text-transform: capitalize;
+				// padding: 20px 28px;
+				// box-sizing: border-box;
+				// background-position: 520px 0;
+				// transition: 15s linear;
+				// background-repeat: repeat;
+
 				display: block;
-				line-height: 1;
-				border: 0;
 				position: relative;
+				padding: 20px 28px;
+				border: 0;
+				box-sizing: border-box;
+
 				color: var(--fc_white);
 				font-size: var(--fc_font_size_16);
 				@include font(sour, sbold);
 				letter-spacing: -0.02em;
 				line-height: 1.33em;
 				text-transform: capitalize;
-				padding: 20px 28px;
-				box-sizing: border-box;
-				background-position: 520px 0;
-				transition: 15s linear;
+
 				background-repeat: repeat;
+				background-position: 0 0;
+				transition: none;
+				will-change: background-position;
+
 			}
 
 			&:nth-child(1) {
@@ -80,15 +109,21 @@
 			}
 
 			&.menu-item-has-children>a {
-				padding-right: 35px;
-				background-position: center right calc(50% - 40px);
-				background-repeat: no-repeat;
-				background-size: 9px;
-				// background-image: url(../images/submenu-icon.svg);
 
 				&::after {
 					width: calc(100% - 15px);
 				}
+			}
+
+			&.current-menu-item>a,
+			&.current-menu-parent>a {
+				background-image: url("../images/default_pattern-shape.png");
+			}
+
+			&.main-menu-item>a:hover,
+			&.main-menu-item>span.menu-link:hover {
+				background-image: url("../images/default_pattern-shape.png");
+				animation: menu-pattern-move 20s linear 0s infinite;
 			}
 
 			&.current-menu-item>a,
@@ -97,10 +132,10 @@
 			span.menu-link:hover {
 				color: var(--fc_white);
 				// background-image: url(../images/default_pattern-shape.png);
-				// transition: 15s linear;
+				// animation: menu-pattern-move 15s linear infinite;
 
 				&::after {
-					transform-origin: bottom left;
+					transform-origin: top right;
 					transform: scaleX(1);
 				}
 			}
@@ -227,6 +262,16 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes menu-pattern-move {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 500px 500px;
 	}
 }
 

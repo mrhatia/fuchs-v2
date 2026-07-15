@@ -27,29 +27,30 @@ jQuery(function () {
 	   URL
 	====================== */
 	function updateURL() {
-		const params = new URLSearchParams();
+	const params = new URLSearchParams();
 
-		if (
-			currentSearch !== '' ||
-			currentCategory ||
-			currentRegion ||
-			currentStatus
-		) {
-			params.set('s', currentSearch);
-		}
-
-		if (currentCategory) params.set('category', currentCategory);
-		if (currentRegion) params.set('region', currentRegion);
-		if (currentStatus) params.set('status', currentStatus);
-
-		history.pushState(
-			null,
-			'',
-			params.toString()
-				? `${location.pathname}?${params}`
-				: location.pathname
-		);
+	if (currentSearch) {
+		params.set('s', currentSearch);
 	}
+
+	if (currentCategory) {
+		params.set('category', currentCategory);
+	}
+
+	if (currentRegion) {
+		params.set('region', currentRegion);
+	}
+
+	if (currentStatus) {
+		params.set('status', currentStatus);
+	}
+
+	const newURL = params.toString()
+		? `${window.location.pathname}?${params.toString()}`
+		: window.location.pathname;
+
+	window.history.pushState(null, '', newURL);
+}
 
 	function toggleSectionVisibility() {
 		const params = new URLSearchParams(window.location.search);
@@ -144,7 +145,7 @@ jQuery(document).on('click', '.status-select-item', function () {
 		currentSearch = jQuery('#s').val() || '';
 		currentPage = 1;
 		updateURL();
-		toggleSectionVisibility();
+		// toggleSectionVisibility();
 		fetchJobs(true);
 	});
 

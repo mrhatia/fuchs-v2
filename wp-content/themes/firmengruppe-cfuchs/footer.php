@@ -123,7 +123,7 @@ $bst_var_social_profiles = $bst_option_fields['bst_var_social_profiles'] ?? null
 
 <?php wp_footer(); ?>
 
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/src/js/vendors/chart.min.js"></script>
 
 	<script>
 		const ctx = document.getElementById('fuchsChart');

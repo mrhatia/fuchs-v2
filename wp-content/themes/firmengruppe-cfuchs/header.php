@@ -106,14 +106,15 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 		}
 	});
 	</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/src/css/vendors/swiper-bundle.min.css" />
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/src/js/vendors/swiper-bundle.min.js"></script>
 
 
 </head>
 
-<body <?php body_class(); ?>> <?php wp_body_open(); ?>
+<body <?php body_class( ( is_front_page() || is_home() ) ? 'is-loading' : '' ); ?>>
+	<?php wp_body_open(); ?>
 	<?php
 	if ( BaseTheme::if_live() ) {
 		if ( '' !== $bst_var_bscripts ) {
@@ -127,6 +128,15 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 
 	<a class="skip-link screen-reader-text"
 		href="#page-section"><?php esc_html_e( 'Skip to content', 'basetheme_td' ); ?></a>
+
+		<?php if ( is_front_page() || is_home() ) : ?>
+		<div class="loader">
+			<div class="loader-inner">
+				<div class="spinner-text" data-title="CFuchs">CFuchs</div>
+			</div>
+			<div class="loader-wipe"></div>
+		</div>
+	<?php endif; ?>
 
 	<header id="header-section" class="header-section">
 		<!-- Header Start -->
@@ -240,7 +250,7 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 
 			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
 				<span class="mkdf-icon-element mkdf-custom-image">
-					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-04.png"
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/footer-icon-img-04.png"
 						alt="icon_widget_image">
 				</span>
 				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_timings ); ?></span>
@@ -251,7 +261,7 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 		<?php if ( $bst_var_hdrwo_address ) {  ?>
 			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
 				<span class="mkdf-icon-element mkdf-custom-image">
-					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-01.png"
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/footer-icon-img-01.png"
 						alt="icon_widget_image">
 				</span>
 				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_address ); ?></span>
@@ -261,7 +271,7 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 		<?php if ( $bst_var_hdrwo_contact_details ) {  ?>
 			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
 				<span class="mkdf-icon-element mkdf-custom-image">
-					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-03.png"
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/footer-icon-img-03.png"
 						alt="icon_widget_image">
 				</span>
 				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_contact_details ); ?></span>
@@ -271,7 +281,7 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 		<?php if ( $bst_var_hdrwo_email_address ) {  ?>
 			<div class="mkdf-icon-widget-holder mkdf-icon-has-hover" style="color: rgb(156, 165, 175);">
 				<span class="mkdf-icon-element mkdf-custom-image">
-					<img src="https://wilmer.qodeinteractive.com/wp-content/uploads/2018/12/footer-icon-img-02.png"
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/footer-icon-img-02.png"
 						alt="icon_widget_image">
 				</span>
 				<span class="mkdf-icon-text "><?php echo html_entity_decode( $bst_var_hdrwo_email_address ); ?></span>

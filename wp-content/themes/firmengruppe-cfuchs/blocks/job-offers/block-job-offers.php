@@ -52,14 +52,14 @@ BaseTheme::block(
 										$terms = get_terms(
 											array(
 												'taxonomy'   => 'job-category',
-												'hide_empty' => true, // Set to true to hide empty terms.
+												'hide_empty' => false, // Set to true to hide empty terms.
 											)
 										);
 										if ( $terms ) {
 											?>
 											<?php if($cat_column_one_option['clear_button_label']){ ?>
 												<li class="pill select-dropdown__checkbox select-sort-item categories-select-item active"
-													data-value="all">
+													data-value="">
 													<div class="select-inner-title"><?php echo html_entity_decode($cat_column_one_option['clear_button_label']); ?></div>
 												</li>
 											<?php } ?>
@@ -100,14 +100,14 @@ BaseTheme::block(
 										$terms = get_terms(
 											array(
 												'taxonomy'   => 'job-region',
-												'hide_empty' => true, // Set to true to hide empty terms.
+												'hide_empty' => false, // Set to true to hide empty terms.
 											)
 										);
 										if ( $terms ) {
 											?>
 												<?php if($cat_column_two_option['clear_button_label']){ ?>
 													<li class="pill select-dropdown__checkbox select-sort-item regions-select-item active"
-														data-value="all">
+														data-value="">
 														<div class="select-inner-title"><?php echo html_entity_decode($cat_column_two_option['clear_button_label']); ?></div>
 													</li>
 												<?php } ?>
@@ -146,14 +146,14 @@ BaseTheme::block(
 										$terms = get_terms(
 											array(
 												'taxonomy'   => 'job-status',
-												'hide_empty' => true, // Set to true to hide empty terms.
+												'hide_empty' => false, // Set to true to hide empty terms.
 											)
 										);
 										if ( $terms ) {
 											?>
 											<?php if($cat_column_three_option['clear_button_label']){ ?>
 												<li class="pill select-dropdown__checkbox select-sort-item status-select-item active"
-													data-value="all">
+													data-value="">
 													<div class="select-inner-title"><?php echo html_entity_decode($cat_column_three_option['clear_button_label']); ?></div>
 												</li>
 											<?php } ?>
@@ -191,8 +191,10 @@ BaseTheme::block(
 
 			$args = array(
 				'post_type'      => 'job',
+				'post_status'    => 'publish',
 				'posts_per_page' => 8,
-				'paged'          => $paged,
+				'orderby'        => 'date',
+				'order'          => 'DESC',
 			);
 
 			$bst_query = new WP_Query($args);
@@ -215,7 +217,7 @@ BaseTheme::block(
 
 			<?php wp_reset_postdata(); ?>
 
-			<?php if ($bst_query->found_posts > 9) : ?>
+			<?php if ($bst_query->found_posts > 8) : ?>
 				<div class="load-more load-more-button d-flex justify-content-center">
 					<a href="#" class="button white-button" id="load-more-jobs" data-page="1">Mehr</a>
 				</div>

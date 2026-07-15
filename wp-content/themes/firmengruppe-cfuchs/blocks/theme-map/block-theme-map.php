@@ -2,7 +2,7 @@
 /**
  * Block Name: Theme Map
  *
- * The template for displaying the custom gutenberg block named Theme Map.
+ * The template for displaying the custom Gutenberg block named Theme Map.
  *
  * @link https://www.advancedcustomfields.com/resources/blocks/
  *
@@ -12,79 +12,171 @@
 
 BaseTheme::block(
 	$block,
-	function ( $bst_block_id, $bst_block_name, $bst_block_fields, $bst_option_fields ) {
+	function (
+		$bst_block_id,
+		$bst_block_name,
+		$bst_block_fields,
+		$bst_option_fields
+	) {
 
 		// Block variables.
+		$bst_var_blk_map_latitude =
+			$bst_block_fields['bst_var_blk_map_latitude'] ?? null;
 
-		$bst_var_blk_map_latitude = $bst_block_fields['bst_var_blk_map_latitude'] ?? null;
-		$bst_var_blk_map_longitude = $bst_block_fields['bst_var_blk_map_longitude'] ?? null;
+		$bst_var_blk_map_longitude =
+			$bst_block_fields['bst_var_blk_map_longitude'] ?? null;
+
+		/*
+		 * Validate coordinates before passing them to JavaScript.
+		 */
+		$map_latitude = is_numeric( $bst_var_blk_map_latitude )
+			? (float) $bst_var_blk_map_latitude
+			: null;
+
+		$map_longitude = is_numeric( $bst_var_blk_map_longitude )
+			? (float) $bst_var_blk_map_longitude
+			: null;
+
+		$has_map =
+			null !== $map_latitude &&
+			null !== $map_longitude;
+
+		/*
+		 * Unique map ID allows both map block variations
+		 * to work on the same page.
+		 */
+		$map_id = 'cfuchs-theme-map-' . sanitize_html_class(
+			$bst_block_id ?: wp_unique_id()
+		);
+
+		$map_icon_url = get_template_directory_uri()
+			. '/assets/src/images/map-c-icon.svg';
+
+		$google_maps_api_key = defined(
+			'CFUCHS_GOOGLE_MAPS_API_KEY'
+		)
+			? CFUCHS_GOOGLE_MAPS_API_KEY
+			: '';
+
+		/*
+		 * Load the same consent-based Google Maps JavaScript
+		 * used by the Media With Map block.
+		 */
+		if ( $has_map ) {
+			$map_script_relative_path =
+				'/assets/src/js/cfuchs-google-map-consent.js';
+
+			$map_script_absolute_path =
+				get_template_directory()
+				. $map_script_relative_path;
+
+			wp_enqueue_script(
+				'cfuchs-google-map-consent',
+				get_template_directory_uri()
+					. $map_script_relative_path,
+				[],
+				file_exists( $map_script_absolute_path )
+					? filemtime( $map_script_absolute_path )
+					: '1.0.0',
+				true
+			);
+		}
+
 		?>
 
-		<section class=" ctn-full-width ">
+		<section class="ctn-full-width">
 			<div class="wrapper">
+
 				<div class="theme-map-section">
 
-					<figure class="theme-map" tabindex="0">
-								<?php if ( $bst_var_blk_map_latitude && $bst_var_blk_map_longitude ){ ?>
-								<style>
-									#map {
-									height: 500px;
-									width: 100%;
-									}
-								</style>
-								<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCSzbkGtpx5S-09kZIWth_6GLlrwllKXM"></script> -->
-								<script>
-									function initMap() {
-										const styledMap = [
-											{ elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
-											{ elementType: "labels.icon", stylers: [{ visibility: "off" }] },
-											{ elementType: "labels.text.fill", stylers: [{ color: "#616161" }] },
-											{ elementType: "labels.text.stroke", stylers: [{ color: "#f5f5f5" }] },
-											{ featureType: "administrative.land_parcel", elementType: "labels.text.fill", stylers: [{ color: "#bdbdbd" }] },
-											{ featureType: "poi", elementType: "geometry", stylers: [{ color: "#eeeeee" }] },
-											{ featureType: "poi", elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
-											{ featureType: "poi.park", elementType: "geometry", stylers: [{ color: "#e5e5e5" }] },
-											{ featureType: "poi.park", elementType: "labels.text.fill", stylers: [{ color: "#9e9e9e" }] },
-											{ featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
-											{ featureType: "road.arterial", elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
-											{ featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#dadada" }] },
-											{ featureType: "road.highway", elementType: "labels.text.fill", stylers: [{ color: "#616161" }] },
-											{ featureType: "road.local", elementType: "labels.text.fill", stylers: [{ color: "#9e9e9e" }] },
-											{ featureType: "transit.line", elementType: "geometry", stylers: [{ color: "#e5e5e5" }] },
-											{ featureType: "transit.station", elementType: "geometry", stylers: [{ color: "#eeeeee" }] },
-											{ featureType: "water", elementType: "geometry", stylers: [{ color: "#c9c9c9" }] },
-											{ featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#9e9e9e" }] }
-										];
+					<figure
+						class="theme-map"
+						tabindex="0"
+					>
 
-										const clientLocation = { lat: <?php echo ($bst_var_blk_map_latitude) ?? ""; ?>, lng: <?php echo ($bst_var_blk_map_longitude) ?? ""; ?> };
+						<?php if ( $has_map ) { ?>
 
-										const map = new google.maps.Map(document.getElementById("map"), {
-										center: clientLocation,
-										zoom: 12,
-										styles: styledMap
-										});
+							<div
+								class="
+									gdpr-google-map
+									gdpr-google-map--theme
+								"
+								data-cfuchs-google-map
+								data-map-id="<?php echo esc_attr(
+									$map_id
+								); ?>"
+								data-latitude="<?php echo esc_attr(
+									(string) $map_latitude
+								); ?>"
+								data-longitude="<?php echo esc_attr(
+									(string) $map_longitude
+								); ?>"
+								data-marker-icon="<?php echo esc_url(
+									$map_icon_url
+								); ?>"
+								data-api-key="<?php echo esc_attr(
+									$google_maps_api_key
+								); ?>"
+								data-zoom="12"
+								style="--cfuchs-map-height: 500px;"
+							>
 
-										// 🔴 Red default marker
-										new google.maps.Marker({
-										position: clientLocation,
-										map: map,
-										title: "Client Location", // shows tooltip on hover
-										icon: {
-											url: "<?php echo get_template_directory_uri(); ?>/assets/src/images/map-c-icon.svg" // default red marker
-										}
-										});
-									}
-									window.initMap = initMap;
-								</script>
+								<div
+									class="
+										gdpr-google-map__placeholder
+									"
+									aria-live="polite"
+								>
+									<div
+										class="
+											gdpr-google-map__placeholder-inner
+										"
+									>
+										<p>
+											<?php
+											esc_html_e(
+												'Google Maps ist aufgrund Ihrer Datenschutzeinstellungen blockiert.',
+												'basetheme'
+											);
+											?>
+										</p>
 
-								<!-- Load map and call initMap when ready -->
-								<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFMhCgstBslEOAzj77X5dX5aKXkoRBue8&callback=initMap" async defer></script>
-								<div id="map"></div>
+										<p>
+											<?php
+											esc_html_e(
+												'Bitte lassen Sie Cookies von Drittanbietern zu, um die Karte anzuzeigen.',
+												'basetheme'
+											);
+											?>
+										</p>
+									</div>
+								</div>
 
-							<?php } ?>
+								<div
+									id="<?php echo esc_attr(
+										$map_id
+									); ?>"
+									class="
+										cfuchs-google-map__canvas
+									"
+									aria-label="<?php esc_attr_e(
+										'Client location map',
+										'basetheme'
+									); ?>"
+									aria-hidden="true"
+								></div>
+
+							</div>
+
+						<?php } ?>
+
 					</figure>
+
 				</div>
+
 			</div>
 		</section>
-<?php
-					});
+
+		<?php
+	}
+);

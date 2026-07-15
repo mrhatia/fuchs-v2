@@ -5,18 +5,18 @@
 	"class-prefix":"BaseTheme",
 	"description": "A wordpress custom theme",
 	"scripts": {
-		"build": "bash nvm.sh && wp-scripts build",
-		"start": "bash nvm.sh && wp-scripts start",
-		"setup": "bash nvm.sh && npm i && composer install",
-		"build:blocks": "bash nvm.sh && wp-scripts build --config ./webpack.config.blocks.js",
-		"start:blocks": "bash nvm.sh && wp-scripts start --config ./webpack.config.blocks.js",
+		"build": ". ./nvm.sh && wp-scripts build",
+		"start": ". ./nvm.sh && wp-scripts start",
+		"setup": ". ./nvm.sh && npm i && composer install",
+		"build:blocks": ". ./nvm.sh && wp-scripts build --config ./webpack.config.blocks.js",
+		"start:blocks": ". ./nvm.sh && wp-scripts start --config ./webpack.config.blocks.js",
 		"phpcs:report": "./vendor/bin/phpcs --report=summary",
-		"npm:install": "bash nvm.sh && npm i",
+		"npm:install": ". ./nvm.sh && npm i",
 		"composer:clean": "composer install --no-dev",
-		"lint:css": "bash nvm.sh && wp-scripts lint-style",
-		"lint:js": "bash nvm.sh && wp-scripts lint-js",
-		"format:css": "bash nvm.sh && npm run lint:css -- --fix",
-		"format:js": "bash nvm.sh && npm run lint:js -- --fix"
+		"lint:css": ". ./nvm.sh && wp-scripts lint-style",
+		"lint:js": ". ./nvm.sh && wp-scripts lint-js",
+		"format:css": ". ./nvm.sh && npm run lint:css -- --fix",
+		"format:js": ". ./nvm.sh && npm run lint:js -- --fix"
 	},
 	"devDependencies": {
 		"@wordpress/compose": "^7.0.0",

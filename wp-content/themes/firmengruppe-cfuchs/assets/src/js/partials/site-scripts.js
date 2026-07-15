@@ -21,13 +21,60 @@ jQuery( document ).on( 'scroll', function() {
 
 jQuery( window ).on( 'load', function() {
 	const loader = jQuery( '.loader' );
-	const spinner = jQuery( '.spinner-text' );
+	const spinner = loader.find( '.spinner-text' );
+	const wipe = loader.find( '.loader-wipe' );
+
+	if ( ! loader.length || ! wipe.length ) {
+		return;
+	}
 
 	spinner.addClass( 'spinner-loaded' );
 
+	// Allow the text fill animation to complete.
 	setTimeout( function() {
-		loader.addClass( 'hide-loader' );
-	}, 3000 );
+
+		// Stage 1: Orange layer enters from the left.
+		loader.addClass( 'wipe-in' );
+
+		wipe.one( 'transitionend', function( event ) {
+			if ( event.originalEvent.propertyName !== 'transform' ) {
+				return;
+			}
+
+			// Orange now covers the whole screen.
+			// Make the original loader transparent behind it.
+			loader.addClass( 'loader-covered' );
+
+			// Two frames ensure the browser registers the next transform.
+			requestAnimationFrame( function() {
+				requestAnimationFrame( function() {
+
+					// Stage 2: Orange layer exits towards the right.
+					loader
+						.removeClass( 'wipe-in' )
+						.addClass( 'wipe-out' );
+
+					wipe.one( 'transitionend', function( exitEvent ) {
+						if (
+							exitEvent.originalEvent.propertyName !==
+							'transform'
+						) {
+							return;
+						}
+
+						loader.addClass( 'loader-finished' );
+						jQuery( 'body' ).removeClass( 'is-loading' );
+
+						// Start the hero slider now.
+						jQuery( document ).trigger( 'loaderFinished' );
+
+						// Completely remove it after the animation.
+						loader.remove();
+					} );
+				} );
+			} );
+		} );
+	}, 3500 );
 } );
 
 jQuery( function() {
@@ -262,19 +309,19 @@ jQuery( function() {
 	}
 
 	// Menu animation
-	if ( jQuery( '.header-nav li' ).length ) {
-		jQuery( function() {
-			const base = 470;
-			const step = 70;
+	// if ( jQuery( '.header-nav li' ).length ) {
+	// 	jQuery( function() {
+	// 		const base = 470;
+	// 		const step = 70;
 
-			jQuery( '.header-nav li ' ).each( function( i ) {
-				const delay = base + i * step;
-				jQuery( this )
-					.find( 'a' )
-					.css( 'animation-delay', delay + 'ms' );
-			} );
-		} );
-	}
+	// 		jQuery( '.header-nav li ' ).each( function( i ) {
+	// 			const delay = base + i * step;
+	// 			jQuery( this )
+	// 				.find( 'a' )
+	// 				.css( 'animation-delay', delay + 'ms' );
+	// 		} );
+	// 	} );
+	// }
 	gsap.registerPlugin( ScrollTrigger );
 
 	gsap.utils.toArray( '.hero-home.slides .slide' ).forEach( ( slide ) => {
@@ -440,23 +487,31 @@ jQuery( function() {
 	// 		}
 	// 	} );
 	// }
-	if ( jQuery( '.hero-inner-slider' ).length ) {
-		jQuery( '.hero-inner-slider' ).slick( {
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: true,
-			arrows: true,
-			infinite: true,
-			autoplay: true,
-			autoplaySpeed: 4000,
-			speed: 1200,
-			fade: true,
-			cssEase: 'ease-in-out',
-			pauseOnHover: false,
-			pauseOnFocus: false,
-			swipe: false,
-		} );
-	}
+	const heroSlider = jQuery( '.hero-inner-slider' );
+
+if ( heroSlider.length ) {
+	const hasLoader = jQuery( '.loader' ).length > 0;
+
+	heroSlider.slick( {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		infinite: true,
+		autoplay: ! hasLoader,
+		autoplaySpeed: 4000,
+		speed: 1200,
+		fade: true,
+		cssEase: 'ease-in-out',
+		pauseOnHover: false,
+		pauseOnFocus: false,
+		swipe: true,
+	} );
+
+	jQuery( document ).on( 'loaderFinished', function() {
+		heroSlider.slick( 'slickPlay' );
+	} );
+}
 	if ( jQuery( '.blog-slider-image-slider' ).length ) {
 		jQuery( '.blog-slider-image-slider' ).slick( {
 			slidesToShow: 1,
@@ -875,44 +930,44 @@ jQuery( function() {
 		startAutoplay();
 	}
 	// Chart
-	jQuery( document ).ready( function() {
-		jQuery( '.header-nav li a, .header-nav li span.menu-link' ).hover(
-			function() {
-				jQuery( this )
-					.stop()
-					.animate(
-						{ bgX: 0 },
-						{
-							duration: 15000,
-							easing: 'linear',
-							step( now ) {
-								jQuery( this ).css(
-									'background-position',
-									now + 'px 0',
-								);
-							},
-						},
-					);
-			},
-			function() {
-				jQuery( this )
-					.stop()
-					.animate(
-						{ bgX: 520 },
-						{
-							duration: 15000,
-							easing: 'linear',
-							step( now ) {
-								jQuery( this ).css(
-									'background-position',
-									now + 'px 0',
-								);
-							},
-						},
-					);
-			},
-		);
-	} );
+	// jQuery( document ).ready( function() {
+	// 	jQuery( '.header-nav li a, .header-nav li span.menu-link' ).hover(
+	// 		function() {
+	// 			jQuery( this )
+	// 				.stop()
+	// 				.animate(
+	// 					{ bgX: 0 },
+	// 					{
+	// 						duration: 15000,
+	// 						easing: 'linear',
+	// 						step( now ) {
+	// 							jQuery( this ).css(
+	// 								'background-position',
+	// 								now + 'px 0',
+	// 							);
+	// 						},
+	// 					},
+	// 				);
+	// 		},
+	// 		function() {
+	// 			jQuery( this )
+	// 				.stop()
+	// 				.animate(
+	// 					{ bgX: 520 },
+	// 					{
+	// 						duration: 15000,
+	// 						easing: 'linear',
+	// 						step( now ) {
+	// 							jQuery( this ).css(
+	// 								'background-position',
+	// 								now + 'px 0',
+	// 							);
+	// 						},
+	// 					},
+	// 				);
+	// 		},
+	// 	);
+	// } );
 	gsap.utils.toArray( '.opacity-item' ).forEach( ( item ) => {
 		gsap.fromTo(
 			item,

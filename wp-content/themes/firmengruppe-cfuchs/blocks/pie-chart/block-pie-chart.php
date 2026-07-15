@@ -74,9 +74,9 @@ BaseTheme::block(
 			</div>
 		</section>
 
-			<script src="https://d3js.org/d3.v5.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineLite.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/src/js/vendors/d3.v5.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/src/js/vendors/TweenMax.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/src/js/vendors/TimelineLite.min.js"></script>
 
 		<style>
 			.color-white { color: #ffffff; }
@@ -124,18 +124,21 @@ BaseTheme::block(
 }
 
 .mobile-dot {
-	width: 10px;
-	height: 10px;
+	width: 7px;
+	height: 7px;
 	padding: 0;
+	margin: 0;
 	border: 0;
 	border-radius: 999px;
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgb(255, 255, 255);
 	cursor: pointer;
 	transition: width 200ms ease, background-color 200ms ease;
 }
 
 .mobile-dot.active {
-	background-color: #e37806;
+	background-color: #ffffff;
+	width: 12px;
+	height: 12px;
 }
 
 .mobile-dot:focus-visible {

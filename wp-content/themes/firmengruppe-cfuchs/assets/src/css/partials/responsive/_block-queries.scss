@@ -946,6 +946,7 @@
 
 	.company-value-chart .item.content-main {
 		padding: 30px 24px;
+		justify-content: center;
 	}
 
 	.project-management-block .item:nth-child(1) {
@@ -1420,14 +1421,24 @@
 		flex-wrap: wrap;
 	}
 
+
 	.single-image-card {
-		aspect-ratio: 1/1;
+		aspect-ratio: 1/0.6;
 		width: 100%;
 		height: 100%;
 
 		.single-image {
 			width: 100%;
 			height: 100%;
+		}
+
+		.service-title {
+			font-size: 22px !important;
+
+		}
+
+		.plus-button {
+			margin-top: 0 !important;
 		}
 	}
 
@@ -1873,7 +1884,7 @@
 
 	.applicants-content {
 		.heading-3 {
-			font-size: 40px;
+			font-size: 44px;
 		}
 	}
 
@@ -1887,7 +1898,7 @@
 		padding: 86px 0;
 
 		.three-columns {
-			gap: 58px;
+			gap: 15px;
 		}
 
 		.column {
@@ -1898,6 +1909,7 @@
 
 		.heading-4 {
 			font-size: 26px;
+			margin-bottom: 10px;
 		}
 
 		.kicker-text {
@@ -2329,6 +2341,25 @@
 
 	.bottom-section {
 		bottom: 100px;
+
+	}
+
+	.hero-home.slides .slide:nth-child(3n+2) .bottom-section {
+		width: 60% !important;
+		bottom: 0 !important;
+		left: calc(50% - 25px) !important;
+
+		h4 {
+			left: 63px;
+			position: relative;
+		}
+
+		.bottom-section-button a,
+		.bottom-section-button a:visited {
+
+			flex-direction: row-reverse;
+			justify-content: left;
+		}
 	}
 
 	.style-for-mac .bottom-section {
