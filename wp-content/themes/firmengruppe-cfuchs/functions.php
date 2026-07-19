@@ -164,3 +164,57 @@ add_filter(
 	'wp_get_attachment_image_attributes',
 	'mytheme_remove_image_title_attribute'
 );
+
+
+
+/**
+ * Generate the PWA manifest dynamically using the WordPress Site Icon.
+ */
+function basetheme_output_pwa_manifest() {
+
+	if ( ! isset( $_GET['theme-pwa-manifest'] ) ) {
+		return;
+	}
+
+	$site_name   = get_bloginfo( 'name' );
+	$theme_color = '#007857';
+	$icons       = array();
+
+	foreach ( array( 192, 512 ) as $size ) {
+		$icon_url = get_site_icon_url( $size );
+
+		if ( $icon_url ) {
+			$icons[] = array(
+				'src'     => esc_url_raw( $icon_url ),
+				'sizes'   => $size . 'x' . $size,
+				'purpose' => 'any',
+			);
+		}
+	}
+
+	$manifest = array(
+		'id'               => home_url( '/' ),
+		'name'             => $site_name,
+		'short_name'       => wp_html_excerpt( $site_name, 20, '' ),
+		'description'      => get_bloginfo( 'description' ),
+		'start_url'        => home_url( '/' ),
+		'scope'            => home_url( '/' ),
+		'display'          => 'standalone',
+		'background_color' => '#ffffff',
+		'theme_color'      => $theme_color,
+		'icons'            => $icons,
+	);
+
+	nocache_headers();
+
+	header( 'Content-Type: application/manifest+json; charset=' . get_option( 'blog_charset' ) );
+	header( 'X-Robots-Tag: noindex, nofollow', true );
+
+	echo wp_json_encode(
+		$manifest,
+		JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+	);
+
+	exit;
+}
+add_action( 'template_redirect', 'basetheme_output_pwa_manifest' );

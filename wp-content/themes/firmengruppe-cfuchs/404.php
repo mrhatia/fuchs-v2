@@ -22,15 +22,19 @@ $bst_var_error_menu_bottom_text = $bst_option_fields['bst_var_error_menu_bottom_
 $bst_var_error_search           = $bst_option_fields['bst_var_error_search'] ?? false;
 
 ?>
-<section id="hero-section" class="hero-section hero-section-default">
+<section id="hero-section" class="hero-section hero-section-default ">
+			<div class="ts-80"></div>
+
 	<!-- Hero Start -->
 	<section class="m-section">
-		<div class="hero-ctn center-align error-page-hero">
+		<div class="hero-ctn hero-404 center-align error-page-hero">
 			<div class="wrapper">
-				<h1><?php echo html_entity_decode( $bst_var_error_headline ); ?></h1>
+				<h1 class="heading-2"><?php echo html_entity_decode( $bst_var_error_headline ); ?></h1>
+				<?php if($bst_var_error_sub_headline){ ?>
 				<div class="banner-text">
 					<p><?php echo html_entity_decode( $bst_var_error_sub_headline ); ?></p>
 				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</section>
@@ -46,21 +50,17 @@ $bst_var_error_search           = $bst_option_fields['bst_var_error_search'] ?? 
 					if ( $bst_var_error_text ) {
 						echo html_entity_decode( $bst_var_error_text );
 					}
-					if ( $bst_var_error_menu ) {
-						?>
-					<div class="error">
-						<?php echo html_entity_decode( $bst_var_error_menu ); ?> </div>
-						<?php
-					}
+
 					?>
 					<div class="form-404">
 
 						<?php
-						if ( $bst_var_error_menu_bottom_text ) {
-							echo html_entity_decode( $bst_var_error_menu_bottom_text );
-						}
+
 						if ( ! $bst_var_error_search ) {
 							get_search_form();
+						}
+							if ( $bst_var_error_menu_bottom_text ) {
+							echo html_entity_decode( $bst_var_error_menu_bottom_text );
 						}
 						?>
 					</div>

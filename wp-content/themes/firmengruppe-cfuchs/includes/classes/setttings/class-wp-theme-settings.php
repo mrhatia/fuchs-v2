@@ -143,7 +143,7 @@ class WP_Theme_Settings {
 		echo '
 			<style type="text/css">
 				.login h1 a {
-					background-image: url(' . esc_url( get_stylesheet_directory_uri() ) . '/assets/build/images/site-logo.png) !important;
+					background-image: url(' . esc_url( get_stylesheet_directory_uri() ) . '/assets/src/images/site-logo-login.png) !important;
 					background-position: center center;
 					color:rgba(0, 0, 0, 0);
 					background-size: contain;
@@ -152,7 +152,7 @@ class WP_Theme_Settings {
 					margin: 0;
 				}
 				.login h1 {
-				    background-color: #016c50;
+				    background-color: #d8d8d8;
     				padding: 20px 42px;
 				}
 			</style>

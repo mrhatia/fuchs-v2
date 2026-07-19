@@ -56,29 +56,35 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 		}
 	}
 	?>
-	<link rel="apple-touch-icon" sizes="180x180"
-		href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/pwa/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/pwa/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/pwa/favicon-16x16.png">
-	<link rel="icon" sizes="any"
-		href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/pwa/favicon.ico">
-	<link rel="icon" type="image/svg+xml"
-		href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/pwa/icon.svg">
-	<link rel="manifest"
-		href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/pwa/site.webmanifest">
-	<meta name="theme-color" content="#007857">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="FUCHS Package">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton_color" content="#007857">
-	<meta name="msapplication-TileColor" content="#007857">
-	<meta name="msapplication-tap-highlight" content="no">
-	<meta name="msapplication-TileImage"
-		content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/build/images/pwa/pwa-icon-144.png">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#007857">
+	<?php
+		$pwa_theme_color = '#007857';
+		$pwa_manifest_url = add_query_arg(
+			'theme-pwa-manifest',
+			'1',
+			home_url( '/' )
+		);
+		?>
+
+		<link rel="manifest" href="<?php echo esc_url( $pwa_manifest_url ); ?>">
+
+		<meta name="theme-color" content="<?php echo esc_attr( $pwa_theme_color ); ?>">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<meta
+			name="application-name"
+			content="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"
+		>
+
+		<meta
+			name="apple-mobile-web-app-title"
+			content="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"
+		>
+
+		<meta name="msapplication-navbutton_color" content="<?php echo esc_attr( $pwa_theme_color ); ?>">
+		<meta name="msapplication-TileColor" content="<?php echo esc_attr( $pwa_theme_color ); ?>">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	<?php
 		// Tracking Code.
 	if ( '' !== $bst_var_tracking ) {

@@ -757,11 +757,11 @@
             "delay": 0
         },
         {
-            "key": "field_5ef592f877325",
-            "label": "Select Menu",
-            "name": "bst_var_error_menu",
+            "key": "field_5ef5930e77326",
+            "label": "Hide Search",
+            "name": "bst_var_error_search",
             "aria-label": "",
-            "type": "nav_menu",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -770,9 +770,11 @@
                 "class": "",
                 "id": ""
             },
-            "save_format": "menu",
-            "container": "div",
-            "allow_null": 0
+            "message": "Check this if you want to hide search",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5ef5934c77327",
@@ -794,26 +796,6 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 0
-        },
-        {
-            "key": "field_5ef5930e77326",
-            "label": "Hide Search",
-            "name": "bst_var_error_search",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Check this if you want to hide search",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
         },
         {
             "key": "field_57d84a298fe0f",
@@ -1442,5 +1424,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1769133701
+    "modified": 1784177410
 }

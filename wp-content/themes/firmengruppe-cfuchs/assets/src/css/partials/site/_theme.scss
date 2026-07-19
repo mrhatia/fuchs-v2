@@ -444,6 +444,8 @@ button[disabled]:hover {
 .error-404 {
 	text-align: center;
 	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
 
 	.menu {
 		margin: 0;
@@ -479,7 +481,16 @@ button[disabled]:hover {
 	max-width: 720px;
 
 	form {
-		margin: 0;
+		margin: 0 0 30px;
+
+		input[type=search] {
+			height: 50px;
+			color: #ffffff;
+
+			&::placeholder {
+				color: #ffffff;
+			}
+		}
 
 		label {
 			margin: 0;
@@ -1810,17 +1821,17 @@ body:not(.page-template-template-einblicke, .page-template-template-references) 
 	}
 }
 
-.search-results {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	max-width: 1280px;
-	width: 90%;
-	margin: 0 auto;
-	padding: var(--fc_space_30) 0;
-	box-sizing: border-box;
-}
+// .search-results {
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	max-width: 1280px;
+// 	width: 90%;
+// 	margin: 0 auto;
+// 	padding: var(--fc_space_30) 0;
+// 	box-sizing: border-box;
+// }
 
 .short-filter {
 	display: flex;
@@ -2240,5 +2251,17 @@ body:not(.page-template-template-einblicke, .page-template-template-references) 
 
 	svg {
 		margin: 0;
+	}
+}
+
+
+.search-results {
+
+	.pagination .pagination-first,
+	.pagination .pagination-prev,
+	.pagination .pagination-last,
+	.pagination .pagination-next {
+		display: none !important;
+
 	}
 }
