@@ -11,6 +11,19 @@ import Lity from '../vendors/lity.js';
 import masonry from '../vendors/masonry.min';
 import imagesLoaded from '../vendors/imagesloaded.pkgd.min';
 
+
+const initialPageHash = window.location.hash;
+
+if ( 'scrollRestoration' in history ) {
+	history.scrollRestoration = 'manual';
+}
+
+// Reset immediately when opening the homepage without a hash.
+if ( ! initialPageHash ) {
+	window.scrollTo( 0, 0 );
+}
+
+
 jQuery( document ).on( 'scroll', function() {
 	if ( jQuery( document ).scrollTop() > 0 ) {
 		jQuery( 'header, body' ).addClass( 'shrink' );
@@ -70,6 +83,20 @@ jQuery( window ).on( 'load', function() {
 
 						// Completely remove it after the animation.
 						loader.remove();
+
+						// The loader and sliders can cause a mobile layout shift.
+						// Reset to the top only when no anchor exists in the URL.
+						if ( ! window.location.hash ) {
+							requestAnimationFrame( function() {
+								requestAnimationFrame( function() {
+									window.scrollTo( {
+										top: 0,
+										left: 0,
+										behavior: 'instant',
+									} );
+								} );
+							} );
+						}
 					} );
 				} );
 			} );
@@ -255,13 +282,13 @@ jQuery( function() {
 	/**
 	 * Script for Accessibility of html Tags
 	 */
-	jQuery(
-		'h1, h2, h3, h4, h5, h6,p,li,blockquote,cite,strong,dt,dd,th,td,b,i,u,s,em,small,sup,del,ins,abbr,mark,details,pre,kbd,samp,var,address,code,q,figure,figcaption,caption,.top-bar-text,.top-bar-cross,.copy-right,.post-author-img,.post-author-name,.post-meta-date,.post-date',
-	).each( function() {
-		jQuery( this ).attr( {
-			tabindex: 0,
-		} );
-	} );
+	// jQuery(
+	// 	'h1, h2, h3, h4, h5, h6,p,li,blockquote,cite,strong,dt,dd,th,td,b,i,u,s,em,small,sup,del,ins,abbr,mark,details,pre,kbd,samp,var,address,code,q,figure,figcaption,caption,.top-bar-text,.top-bar-cross,.copy-right,.post-author-img,.post-author-name,.post-meta-date,.post-date',
+	// ).each( function() {
+	// 	jQuery( this ).attr( {
+	// 		tabindex: 0,
+	// 	} );
+	// } );
 	jQuery( '.header-nav li, .blog-nav li, .footer-nav li, .legal-nav li' ).each(
 		function() {
 			const link = jQuery( this ).find( 'a' );
@@ -1101,18 +1128,29 @@ jQuery( document ).ready( function() {
 	} );
 } );
 
-document.addEventListener( 'DOMContentLoaded', function() {
-	if ( window.location.hash === '#einblicke-section' ) {
-		const el = document.querySelector( '#einblicke-section' );
+window.addEventListener( 'load', function() {
+	const hash = window.location.hash;
 
-		if ( el ) {
-			setTimeout( () => {
-				el.scrollIntoView( {
+	if ( hash === '#einblicke-section' ) {
+		const section = document.querySelector( '#einblicke-section' );
+
+		if ( section ) {
+			setTimeout( function() {
+				section.scrollIntoView( {
 					behavior: 'smooth',
 					block: 'start',
 				} );
-			}, 200 ); // delay helps when content loads late
+			}, 200 );
 		}
+
+		return;
+	}
+
+	// Clean homepage URL must always start at the top.
+	if ( ! hash ) {
+		requestAnimationFrame( function() {
+			window.scrollTo( 0, 0 );
+		} );
 	}
 } );
 
