@@ -119,7 +119,7 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 
 </head>
 
-<body <?php body_class( ( is_front_page() || is_home() ) ? 'is-loading' : '' ); ?>>
+<body <?php body_class( ); ?>>
 	<?php wp_body_open(); ?>
 	<?php
 	if ( BaseTheme::if_live() ) {
@@ -135,14 +135,6 @@ $bst_var_hdrwo_email_address = $header_drawer_options['email_address'] ?? null;
 	<a class="skip-link screen-reader-text"
 		href="#page-section"><?php esc_html_e( 'Skip to content', 'basetheme_td' ); ?></a>
 
-		<?php if ( is_front_page() || is_home() ) : ?>
-		<div class="loader">
-			<div class="loader-inner">
-				<div class="spinner-text" data-title="CFuchs">CFuchs</div>
-			</div>
-			<div class="loader-wipe"></div>
-		</div>
-	<?php endif; ?>
 
 	<header id="header-section" class="header-section">
 		<!-- Header Start -->
