@@ -219,3 +219,66 @@ function basetheme_output_pwa_manifest() {
 	exit;
 }
 add_action( 'template_redirect', 'basetheme_output_pwa_manifest' );
+
+
+
+add_action( 'wp_head', function() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+	?>
+	<style>
+		html.force-home-top {
+			overflow: hidden !important;
+			overflow-anchor: none !important;
+		}
+
+		html.force-home-top body {
+			position: fixed !important;
+			inset: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			overflow: hidden !important;
+		}
+	</style>
+
+	<script>
+		(function () {
+			if (window.location.hash) {
+				return;
+			}
+
+			if ('scrollRestoration' in history) {
+				history.scrollRestoration = 'manual';
+			}
+
+			document.documentElement.classList.add('force-home-top');
+			window.scrollTo(0, 0);
+
+			function releasePage() {
+				document.documentElement.classList.remove('force-home-top');
+
+				if (document.body) {
+					document.body.classList.remove('is-loading');
+				}
+
+				window.scrollTo(0, 0);
+
+				requestAnimationFrame(function () {
+					window.scrollTo(0, 0);
+				});
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				requestAnimationFrame(releasePage);
+			}, { once: true });
+
+			window.addEventListener('pageshow', function () {
+				if (!window.location.hash) {
+					window.scrollTo(0, 0);
+				}
+			});
+		})();
+	</script>
+	<?php
+}, 0 );
